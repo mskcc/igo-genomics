@@ -1,0 +1,101 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.header {
+  grid-area: header;
+  background-color: #4a6572;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header img.igo-logo {
+  height: 4em;
+  width: auto;
+  margin: 20px 30px 20px 0px;
+}
+
+.nav-links {
+  margin: 20px 0px 20px 30px;
+}
+
+.msk-logo {
+  margin: 10px 0px;
+}
+
+.main {
+  grid-area: main;
+  padding: 1%;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #344955;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-rows: 0.75fr 5fr 0.5fr;
+  grid-template-areas:
+    "header "
+    "main"
+    "footer";
+}
+
+.news-container {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+}
+
+.news-card {
+  width: 320px;
+  margin: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.team-image {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.md-content {
+  width: 500px;
+  margin: 24px;
+}
+
+.prices-container {
+  display: grid;
+  /* height: 100vh; */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.15fr 1fr;
+}
+
+/* #bulk-header {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+} */
+
+/* .md-list {
+  display: inline-grid;
+  justify-items: center;
+} */
+
+.md-table-content {
+  width: 100%;
+}
+
+/* .md-table-head {
+  text-align: left;
+} */
