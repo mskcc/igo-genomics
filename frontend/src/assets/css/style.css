@@ -1,79 +1,79 @@
 :root {
-    --mskcc-blue: #007cba;
-    --mskcc-orange: #df4602;
-    --mskcc-dark-blue: #006098;
-    --mskcc-medium-blue: #40b4e5;
-    --mskcc-light-blue: #8fc7e8;
-    --mskcc-dark-orange: #c24d00;
-    --mskcc-medium-orange: #f29934;
-    --mskcc-light-orange: #f6c65b;
-    --mskcc-dark-violet: #83276b;
-    --mskcc-light-violet: #b687b8;
-    --mskcc-dark-magenta: #e92076;
-    --mskcc-light-magenta: #efb3cb;
-    --mskcc-red: #b1132d;
-    --mskcc-dark-green: #4c8b2b;
-    --mskcc-light-green: #a6ce39;
-    --mskcc-dark-turquoise: #006c68;
-    --mskcc-light-turquoise: #009490;
-    --mskcc-dark-yellow: #ffc20e;
-    --mskcc-light-yellow: #ffe100;
-    --mskcc-dark-gray: #9e9e98;
-    --mskcc-light-gray: #d5d4c7;
-    --material-gray: #eceff1;
+  --mskcc-blue: #007cba;
+  --mskcc-orange: #df4602;
+  --mskcc-dark-blue: #006098;
+  --mskcc-medium-blue: #40b4e5;
+  --mskcc-light-blue: #8fc7e8;
+  --mskcc-dark-orange: #c24d00;
+  --mskcc-medium-orange: #f29934;
+  --mskcc-light-orange: #f6c65b;
+  --mskcc-dark-violet: #83276b;
+  --mskcc-light-violet: #b687b8;
+  --mskcc-dark-magenta: #e92076;
+  --mskcc-light-magenta: #efb3cb;
+  --mskcc-red: #b1132d;
+  --mskcc-dark-green: #4c8b2b;
+  --mskcc-light-green: #a6ce39;
+  --mskcc-dark-turquoise: #006c68;
+  --mskcc-light-turquoise: #009490;
+  --mskcc-dark-yellow: #ffc20e;
+  --mskcc-light-yellow: #ffe100;
+  --mskcc-dark-gray: #9e9e98;
+  --mskcc-light-gray: #d5d4c7;
+  --material-gray: #eceff1;
 }
 
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
 
 [v-cloak] {
-    display: none;
+  display: none;
 }
 
 .header {
-    grid-area: header;
-    background-color: #4a6572;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  grid-area: header;
+  background-color: #4a6572;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .nav {
-    width: 80vw;
-    display: flex;
-    align-items: flex-start;
+  width: 80vw;
+  display: flex;
+  align-items: flex-start;
 
-    /* prevent right click red behavior from material */
-    user-select: none;
+  /* prevent right click red behavior from material */
+  user-select: none;
 }
 
 /* navigations buttons should not have a gap on hover */
 .nav .md-ripple.nav-button {
-    margin: 0;
+  margin: 0;
 }
 
 .header .nav-button {
-    text-transform: uppercase;
-    font-size: 1.5em;
-    color: white !important;
-    text-decoration: unset;
-    min-width: 120px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: white !important;
+  text-decoration: unset;
+  min-width: 120px;
 }
 
 .router-link-active {
-    border-bottom: solid var(--mskcc-orange) 2px;
+  border-bottom: solid var(--mskcc-orange) 2px;
 }
 
 .router-link-active .nav-button {
-    color: var(--mskcc-orange) !important;
+  color: var(--mskcc-orange) !important;
 }
 
 .md-list-item-content .md-button {
-    margin: 0;
+  margin: 0;
 }
 
 /* .nav .md-theme-default :not(input):not(textarea)::selection {
@@ -81,68 +81,68 @@
 } */
 
 .header img.igo-logo {
-    height: 4em;
-    width: auto;
-    margin: 20px 30px 20px 0px;
+  height: 4em;
+  width: auto;
+  margin: 20px 30px 20px 0px;
 }
 
 .nav-links {
-    margin: 20px 0px 20px 30px;
+  margin: 20px 0px 20px 30px;
 }
 
 .msk-logo {
-    margin: 10px 0px;
+  margin: 10px 0px;
 }
 
 .main {
-    grid-area: main;
-    padding: 1%;
+  grid-area: main;
+  padding: 1%;
 }
 
 .footer {
-    grid-area: footer;
-    background-color: #344955;
+  grid-area: footer;
+  background-color: #344955;
 }
 
 .container {
-    display: grid;
-    height: 100vh;
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    grid-template-rows: 0.75fr 5fr 0.5fr;
-    grid-template-areas:
-        'header '
-        'main'
-        'footer';
+  display: grid;
+  height: 100vh;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-rows: 0.75fr 5fr 0.5fr;
+  grid-template-areas:
+    "header "
+    "main"
+    "footer";
 }
 
 .news-container {
-    display: flex;
-    grid-template-columns: 1fr 1fr;
+  display: flex;
+  grid-template-columns: 1fr 1fr;
 }
 
 .news-card {
-    width: 320px;
-    margin: 20px;
-    display: inline-block;
-    vertical-align: top;
+  width: 320px;
+  margin: 20px;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .team-image {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.md-content {
-    width: 500px;
-    margin: 24px;
-}
+/* .md-content {
+  width: 500px;
+  margin: 24px;
+} */
 
 .prices-container {
-    display: grid;
-    /* height: 100vh; */
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.15fr 1fr;
+  display: grid;
+  /* height: 100vh; */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.15fr 1fr;
 }
 
 /* #bulk-header {
@@ -156,9 +156,64 @@
 } */
 
 .md-table-content {
-    width: 100%;
+  width: 100%;
 }
 
 /* .md-table-head {
   text-align: left;
 } */
+
+/* ddpcr */
+.controls-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+#search-form {
+  grid-column-start: 2;
+}
+
+.md-card.legend {
+  display: inline-block;
+  height: fit-content;
+  grid-column-start: 3;
+  place-self: center;
+}
+
+.legend-label {
+  text-align: left;
+  font-size: 80%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex-container .md-card {
+  /* display: inline-block; */
+  /* max-width: 300px; */
+
+  height: 400px;
+  /* overflow: auto; */
+  padding: 10px;
+  margin: 5px;
+}
+
+.flex-container .md-content {
+  width: 300px;
+  height: 200px;
+  overflow: auto;
+}
+
+.category-name {
+  text-transform: capitalize;
+}
+
+.assay-list {
+  margin: 0px 15px;
+}
