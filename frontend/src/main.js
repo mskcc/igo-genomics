@@ -46,6 +46,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
+  base: '/genomics',
   routes: routes,
   mode: "history",
 });

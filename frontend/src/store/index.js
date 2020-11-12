@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 
 import * as app from "./../app.js";
+import { API_URL } from "./../config.js"
 
 Vue.use(Vuex);
 
@@ -39,7 +40,7 @@ export default new Vuex.Store({
       app.axios
         // .get(process.env.VUE_APP_API_ROOT + "/api/getAssaysFromMongo")
         // .get("http://localhost:8801/api/getAssaysFromMongo")
-        .get("http://localhost:8801/api/getAssayFromLims")
+        .get(API_URL)
         .then((response) => {
           let assays = response.data;
 

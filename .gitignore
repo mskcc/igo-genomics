@@ -46,3 +46,4 @@ yarn-error.log
 
 
 backend/.env
+frontend/src/config.js
