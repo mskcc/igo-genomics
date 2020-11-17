@@ -133,10 +133,10 @@
   justify-content: center;
 }
 
-/* .md-content {
-  width: 500px;
+.md-content.lab-photo {
+  max-width: 900px;
   margin: 24px;
-} */
+}
 
 .prices-container {
   display: grid;

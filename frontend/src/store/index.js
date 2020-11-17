@@ -2,7 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 
 import * as app from "./../app.js";
-import { API_URL } from "./../config.js"
+import { API_URL } from "./../config.js";
 
 Vue.use(Vuex);
 
@@ -14,6 +14,16 @@ export default new Vuex.Store({
     assaysToUpdate: [],
     newCategory: [],
     assayTableObject: {},
+    teamNamesInIgo: [
+      "leadership",
+      "lab support",
+      "sample & project management",
+      "expand",
+      "library preparation",
+      "data team",
+      "research & development",
+      "sequencing team",
+    ],
   },
   mutations: {
     setOutOfStockAssays(state, payload) {

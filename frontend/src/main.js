@@ -31,9 +31,12 @@ Vue.config.productionTip = false;
 
 const routes = [
   { path: "/", component: HomePage, name: "home" },
-  { path: "/about", component: AboutPage, name: "about" },
-  { path: "/about/:team", component: TeamPage, name: "team" },
-  { path: "/ddpcr", component: ddpcrAssaysPage, name: "ddpcr" },
+  { path: "/about", component: AboutPage, name: "about", children: [{ path: "/about/:id", component: TeamPage, name: "team" }] },
+  {
+    path: "/ddpcr",
+    component: ddpcrAssaysPage,
+    name: "ddpcr",
+  },
   {
     path: "/services",
     component: ServicesPricesPage,
@@ -46,7 +49,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  base: '/genomics',
+  base: "/genomics",
   routes: routes,
   mode: "history",
 });

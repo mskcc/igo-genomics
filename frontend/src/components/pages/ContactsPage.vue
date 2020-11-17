@@ -2,12 +2,8 @@
   <div>
     <span class="md-display-3">Contact Us</span>
     <div class="team-image">
-      <md-content class="md-elevation-24">
-        <img
-          class="lab-photos"
-          src="../../images/lab/Viale_190612_150.jpg"
-          alt="At the bench"
-        />
+      <md-content class="md-elevation-24 lab-photo">
+        <img src="../../images/lab/Viale_190612_150.jpg" alt="At the bench" />
       </md-content>
     </div>
     <div>
