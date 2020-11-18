@@ -2,7 +2,7 @@
   <div>
     <span class="md-display-3">Who We Are</span>
     <md-tabs md-alignment="centered">
-      <md-tab id="tab-general" md-label="General" href.prevent="/about">
+      <md-tab id="tab-general" md-label="General" ref="generalButtonParent">
         <div id="team-container">
           <div id="team-description">
             <p>
@@ -77,6 +77,22 @@ export default {
     teamNamesInIgo: function() {
       return this.$store.state.teamNamesInIgo;
     },
+  },
+  methods: {
+    // prevents tabs other than 'general' from being highlighted when navigating back to general tab
+    // resetTabs: function() {
+    //   this.$router.push({ name: "about" });
+    // },
+    // whenClick: function() {
+    //   const generalTabElement = this.$refs.generalButtonParent;
+    //   generalTabElement.addEventListener(click, () => console.log());
+    // },
+  },
+  mounted: function() {
+    const navTabs = this.$el.querySelector(".md-tabs-navigation");
+    console.log(navTabs);
+    const buttons = navTabs.querySelector("button");
+    console.log(buttons);
   },
 };
 </script>
