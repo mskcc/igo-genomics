@@ -1,21 +1,52 @@
 <template>
-  <div>
+  <div class="team-div">
     <!-- <div v-for="member in members" :key="member.id">{{ member.name }}</div> -->
-    Team: {{ team }}
+    <!-- Team: {{ igoteam }} -->
+    <!-- <div class="md-headline">{{ igoTeamObject[0].name }}</div> -->
+    <span class="md-body-1">{{ igoTeamObject[0].description }}</span>
+    <div class="members-container" v-for="(member, index) in igoTeamObject[0].members" :key="index">
+      <div class="member-container">
+        <img class="lab-member-image" :src="member.photoName | memberImage" :alt="member.photoName" />
+        <span class="md-body-2">{{ member.name }}</span>
+        <span class="md-body-1">{{ member.role }}</span>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-// import { members } from "./../../data.js";
+import { teams } from "./../../data.js";
 
 export default {
   name: "TeamPage",
   props: ["team"],
   data: function() {
-    return { id: this.$route.params.id };
+    return {
+      igoteam: this.team,
+      teamsArray: teams,
+    };
   },
-  // mounted() {
-  //   this.teamOnPage = this.team;
+  computed: {
+    igoTeamObject: function() {
+      return this.teamsArray.filter((object) => {
+        return object.name === this.igoteam;
+      });
+    },
+  },
+  filters: {
+    memberImage: function(photoName) {
+      // try {
+      // console.log(photoName);
+      return require("../../assets/images/members/" + photoName + ".jpg");
+      // } catch (e) {
+      //   return require("./assets/images/image-not-available.jpg");
+    },
+  },
+  // teamMembers: function() {
+  //   return this.igoTeamObject.filter((object) => {
+  //     return ob
+  //   })
+  // }
   // },
 };
 </script>

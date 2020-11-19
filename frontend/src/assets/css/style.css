@@ -96,7 +96,7 @@
 
 .main {
   grid-area: main;
-  padding: 1%;
+  padding: 2%;
 }
 
 .footer {
@@ -216,4 +216,26 @@
 
 .assay-list {
   margin: 0px 15px;
+}
+
+.team-div {
+  width: 60%;
+  margin: auto;
+  text-align: justify;
+}
+
+.members-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 300px;
+}
+
+.member-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.lab-member-image {
+  max-width: 300px;
+  height: auto;
 }

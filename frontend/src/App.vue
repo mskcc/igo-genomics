@@ -3,7 +3,14 @@
     <div class="container">
       <div class="header">
         <div class="nav">
-          <router-link exact v-for="link in links" :key="link" :to="{ name: link }" class="nav-link">
+          <router-link
+            exact
+            v-for="link in links"
+            :key="link"
+            :to="{ name: link }"
+            class="nav-link"
+            v-bind:class="{ 'router-link-active': teamIsActive && link === 'about' }"
+          >
             <md-button class="md-ripple nav-button">{{ link }}</md-button></router-link
           >
           <md-menu md-size="medium" md-align-trigger class="nav-link" v-bind:class="{ 'router-link-active': toolsIsActive }">
@@ -42,13 +49,19 @@ export default {
       links: ["home", "about", "services and prices", "samples", "contacts", "faqs"],
       toolLinks: ["criteria", "ddpcr", "services and prices"],
       toolsIsActive: ["criteria", "ddpcr", "services and prices"].includes(this.$route.name),
+      teamIsActive: function() {
+        return this.$route.path.includes("about");
+      },
     };
   },
+  computed: {},
+  methods: {},
   watch: {
     $route() {
       this.toolsIsActive = this.toolLinks.includes(this.$route.name);
-      console.log(this.toolsIsActive);
-      console.log(this.$route.name);
+      this.teamIsActive = this.$route.path.includes("about");
+      // console.log(this.toolsIsActive);
+      // console.log(this.$route);
     },
   },
 };

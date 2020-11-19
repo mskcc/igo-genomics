@@ -2,9 +2,9 @@
   <div>
     <span class="md-display-3">Who We Are</span>
     <md-tabs md-alignment="centered">
-      <md-tab id="tab-general" md-label="General" ref="generalButtonParent">
-        <div id="team-container">
-          <div id="team-description">
+      <md-tab :to="{ name: 'about' }" id="tab-general" md-label="General" exact md-sync-route>
+        <div class="team-div">
+          <span class="md-body-1">
             <p>
               The Integrated Genomics Operation (IGO) core enables basic, clinical, and translational science by providing a broad range of
               services and expertise to investigators interested in evaluating gene expression, chromosome structure, and nucleotide
@@ -18,10 +18,10 @@
               learn more about the various platforms currently supported by IGO. We comprise six main groups, under the leadership of Dr.
               Agnes Viale. We are located on the 3rd floor of the Zuckerman Building.
             </p>
-          </div>
+          </span>
           <div class="team-image">
             <md-content class="md-elevation-24 lab-photo">
-              <img src="../../images/lab/Viale_190612_104.jpg" alt="At the bench" />
+              <img src="../../assets/images/lab/Viale_190612_104.jpg" alt="At the bench" />
             </md-content>
           </div></div
       ></md-tab>
@@ -66,33 +66,28 @@
 
 <script>
 import TeamPage from "./TeamPage.vue";
+import { teams } from "./../../data.js";
 
 export default {
   name: "AboutPage",
   components: { TeamPage },
   data: function() {
-    return {};
+    return { teams: teams };
   },
   computed: {
     teamNamesInIgo: function() {
       return this.$store.state.teamNamesInIgo;
     },
-  },
-  methods: {
-    // prevents tabs other than 'general' from being highlighted when navigating back to general tab
-    // resetTabs: function() {
-    //   this.$router.push({ name: "about" });
-    // },
-    // whenClick: function() {
-    //   const generalTabElement = this.$refs.generalButtonParent;
-    //   generalTabElement.addEventListener(click, () => console.log());
+    // teamIsActive: function() {
+    //   return this.$route.path.includes("about");
     // },
   },
-  mounted: function() {
-    const navTabs = this.$el.querySelector(".md-tabs-navigation");
-    console.log(navTabs);
-    const buttons = navTabs.querySelector("button");
-    console.log(buttons);
+  watch: {
+    // $route() {
+    //   this.teamisActive = this.$route.path.includes("about");
+    //   console.log(this.teamisActive);
+    //   console.log(this.$route);
+    // },
   },
 };
 </script>
