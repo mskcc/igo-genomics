@@ -22,6 +22,7 @@
   --mskcc-light-gray: #d5d4c7;
   --material-gray: #eceff1;
 }
+/* main CSS, affects all pages */
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -35,24 +36,37 @@
   display: none;
 }
 
-.header {
+.app-container {
+  display: grid;
+  height: 100vh;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-rows: 0.75fr 5fr 0.5fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.app-header {
   grid-area: header;
   background-color: #4a6572;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.nav {
-  width: 80vw;
+
+.app-nav {
+  width: auto;
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
 
   /* prevent right click red behavior from material */
   user-select: none;
 }
 
 /* navigations buttons should not have a gap on hover */
-.nav .md-ripple.nav-button {
+.app-nav .md-ripple.nav-button {
   margin: 0;
 }
 
@@ -80,52 +94,42 @@
   background-color: unset;
 } */
 
-.header img.igo-logo {
+.app-header img.igo-logo {
   height: 4em;
   width: auto;
-  margin: 20px 30px 20px 0px;
-}
-
-.nav-links {
-  margin: 20px 0px 20px 30px;
+  /* margin: 20px 30px 20px 0px; */
+  margin: 1% 2%;
 }
 
 .msk-logo {
   margin: 10px 0px;
 }
 
-.main {
+.app-main {
   grid-area: main;
-  padding: 2%;
+  padding: 0.5% 2%;
 }
 
-.footer {
+.app-footer {
   grid-area: footer;
   background-color: #344955;
 }
 
-.container {
-  display: grid;
-  height: 100vh;
-  /* grid-template-columns: 1fr 1fr 1fr; */
-  grid-template-rows: 0.75fr 5fr 0.5fr;
-  grid-template-areas:
-    "header "
-    "main"
-    "footer";
-}
+/* Home Page */
 
 .news-container {
   display: flex;
-  grid-template-columns: 1fr 1fr;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .news-card {
   width: 320px;
   margin: 20px;
-  display: inline-block;
-  vertical-align: top;
 }
+
+/* Images on all pages */
 
 .team-image {
   display: flex;
@@ -138,6 +142,8 @@
   margin: 24px;
 }
 
+/* Services and Prices */
+
 .prices-container {
   display: grid;
   /* height: 100vh; */
@@ -145,25 +151,11 @@
   grid-template-rows: 0.15fr 1fr;
 }
 
-/* #bulk-header {
-  grid-column: 1 / span 1;
-  grid-row: 1 / span 1;
-} */
-
-/* .md-list {
-  display: inline-grid;
-  justify-items: center;
-} */
-
 .md-table-content {
   width: 100%;
 }
 
-/* .md-table-head {
-  text-align: left;
-} */
-
-/* ddpcr */
+/* ddPCR Page */
 .controls-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -218,24 +210,72 @@
   margin: 0px 15px;
 }
 
-.team-div {
+/* About page */
+
+.about-body {
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-template-areas:
+    "description"
+    "image";
+}
+
+.about-description {
+  grid-area: description;
+  place-self: center;
   width: 60%;
-  margin: auto;
-  text-align: justify;
+}
+
+.about-image-container {
+  grid-area: image;
+  place-self: center;
+}
+
+/* Team page */
+
+.team-body {
+  display: grid;
+  /* grid-template-rows: auto; */
+  grid-template-areas:
+    "team-description"
+    "members";
+}
+
+.team-description {
+  grid-area: team-description;
+  place-self: center;
+  width: 60%;
 }
 
 .members-container {
+  grid-area: members;
+  place-self: center;
   display: flex;
-  flex-direction: row;
-  max-width: 300px;
+  flex-flow: row wrap;
+  max-width: 60%;
+  justify-content: center;
 }
 
 .member-container {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 200px;
+  align-content: center;
+  margin: 0px 10px 0px;
+}
+
+.member-image-container {
+  display: flex;
+  min-width: 150px;
+  max-width: 150px;
+  min-height: 150px;
+  max-height: 150px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 .lab-member-image {
-  max-width: 300px;
-  height: auto;
+  object-fit: cover;
 }

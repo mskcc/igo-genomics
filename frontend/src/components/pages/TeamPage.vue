@@ -1,14 +1,13 @@
 <template>
-  <div class="team-div">
-    <!-- <div v-for="member in members" :key="member.id">{{ member.name }}</div> -->
-    <!-- Team: {{ igoteam }} -->
-    <!-- <div class="md-headline">{{ igoTeamObject[0].name }}</div> -->
-    <span class="md-body-1">{{ igoTeamObject[0].description }}</span>
-    <div class="members-container" v-for="(member, index) in igoTeamObject[0].members" :key="index">
-      <div class="member-container">
-        <img class="lab-member-image" :src="member.photoName | memberImage" :alt="member.photoName" />
-        <span class="md-body-2">{{ member.name }}</span>
-        <span class="md-body-1">{{ member.role }}</span>
+  <div class="team-body">
+    <div class="team-description md-body-1">{{ igoTeamObject[0].description }}</div>
+    <div class="members-container">
+      <div class="member-container" v-for="(member, index) in igoTeamObject[0].members" :key="index">
+        <div class="member-image-container">
+          <img class="lab-member-image" :src="member.photoName | memberImage" :alt="member.photoName" />
+        </div>
+        <div class="md-body-2">{{ member.name }}</div>
+        <div class="md-body-1">{{ member.role }}</div>
       </div>
     </div>
   </div>
