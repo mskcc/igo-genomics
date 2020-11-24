@@ -263,6 +263,7 @@
   max-width: 200px;
   align-content: center;
   margin: 0px 10px 0px;
+  align-items: center;
 }
 
 .member-image-container {
@@ -274,8 +275,11 @@
   position: relative;
   overflow: hidden;
   border-radius: 50%;
+  margin-top: 5%;
 }
 
 .lab-member-image {
   object-fit: cover;
+
+  /* top: 20%; */
 }

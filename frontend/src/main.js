@@ -35,7 +35,7 @@ const routes = [
   {
     path: "/ddpcr",
     component: ddpcrAssaysPage,
-    name: "ddpcr",
+    name: "ddpcr assays",
   },
   {
     path: "/services",

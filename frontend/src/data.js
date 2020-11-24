@@ -54,7 +54,7 @@ export const teams = [
   {
     id: 2,
     name: "Sample & Project Management",
-    description: "manages projects\nsecondlinestarthere",
+    description: "manages projects",
     members: [
       { name: "Marisa Dunigan", role: "Group Leader", photoName: "Dunigan_Marisa" },
       { name: "Meghanne Lomibao", role: "Project Coordinator", photoName: "Lomibao_Meghanne" },
@@ -109,11 +109,11 @@ export const teams = [
     description: "programming support",
     members: [
       { name: "David Mcmanamon", role: "Group Leader", photoName: "Mcmanamon_David" },
-      { name: "Lisa Wagner", role: "Bioinformatics Software Engineer", photoName: "Wagner_Lisa" },
-      { name: "Ajay Sharma", role: "Bioinformatics Software Engineer", photoName: "Sharma_Ajay" },
+      { name: "Lisa Wagner", role: "BioInf. Software Engineer", photoName: "Wagner_Lisa" },
+      { name: "Ajay Sharma", role: "BioInf. Software Engineer", photoName: "Sharma_Ajay" },
       { name: "Anna Patruno", role: "Application Analyst", photoName: "Patruno_Anna" },
-      { name: "Darrell Nabors", role: "Bioinformatics Software Engineer", photoName: "Nabors_Darrell" },
-      { name: "David Streid", role: "Bioinformatics Software Engineer", photoName: "Streid_David" },
+      { name: "Darrell Nabors", role: "BioInf. Software Engineer", photoName: "Nabors_Darrell" },
+      { name: "David Streid", role: "BioInf. Software Engineer", photoName: "Streid_David" },
     ],
   },
   {

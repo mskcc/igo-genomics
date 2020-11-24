@@ -10,18 +10,26 @@
             :to="{ name: link }"
             v-bind:class="{ 'router-link-active': teamIsActive && link === 'about' }"
           >
-            <md-button class="md-ripple nav-button">{{ link }}</md-button></router-link
-          >
+            <md-button class="md-ripple nav-button">{{ link }}</md-button>
+          </router-link>
           <md-menu md-size="medium" md-align-trigger v-bind:class="{ 'router-link-active': toolsIsActive }">
             <md-button md-menu-trigger class="md-ripple nav-button">Tools</md-button>
             <md-menu-content>
               <md-menu-item v-for="toolLink in toolLinks" :key="toolLink"
                 ><router-link :to="{ name: toolLink }">
-                  <md-button class="md-ripple nav-button">{{ toolLink }}</md-button></router-link
-                ></md-menu-item
-              >
-            </md-menu-content></md-menu
-          >
+                  <md-button class="md-ripple nav-button">{{ toolLink }}</md-button>
+                  <md-tooltip v-if="toolTips[toolLink]" md-direction="bottom">{{ toolTips[toolLink] }}</md-tooltip>
+                </router-link>
+              </md-menu-item>
+              <md-menu-item class="md-ripple nav-button" href="https://igo.mskcc.org/">
+                <md-button>IGO Marketplace</md-button>
+                <md-tooltip md-direction="bottom"
+                  >A series of modules aimed at easing data access. Currently home to the Sample Submission Webform and Sample QC
+                  website.</md-tooltip
+                >
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
         </div>
 
         <img class="igo-logo" alt="IGO logo" src="./assets/logoWhiteOnTransp.png" />
@@ -42,14 +50,17 @@ export default {
   name: "App",
   mounted() {
     this.$store.dispatch("setAssays");
+    console.log(this.teamIsActive);
   },
   data: function() {
     return {
       links: ["home", "about", "services and prices", "samples", "contacts", "faqs"],
-      toolLinks: ["criteria", "ddpcr", "services and prices"],
-      toolsIsActive: ["criteria", "ddpcr", "services and prices"].includes(this.$route.name),
-      teamIsActive: function() {
-        return this.$route.path.includes("about");
+      toolLinks: ["criteria", "ddpcr assays"],
+      toolsIsActive: ["criteria", "ddpcr assays"].includes(this.$route.name),
+      teamIsActive: this.$route.path.includes("about"),
+      toolTips: {
+        criteria: "A comprehensive guide to quality and quantity requirements",
+        // "ddpcr assays": "Available ddPPCR assays",
       },
     };
   },

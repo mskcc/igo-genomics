@@ -20,9 +20,9 @@ export default new Vuex.Store({
       "Sample & Project Management",
       "EXPAND",
       "Library Preparation",
+      "Sequencing Team",
       "Data Team",
       "Research & Development",
-      "Sequencing Team",
     ],
   },
   mutations: {
