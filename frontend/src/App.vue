@@ -18,12 +18,12 @@
               <md-menu-item v-for="toolLink in toolLinks" :key="toolLink"
                 ><router-link :to="{ name: toolLink }">
                   <md-button class="md-ripple nav-button">{{ toolLink }}</md-button>
-                  <md-tooltip v-if="toolTips[toolLink]" md-direction="bottom">{{ toolTips[toolLink] }}</md-tooltip>
+                  <md-tooltip v-if="toolTips[toolLink]" md-direction="right">{{ toolTips[toolLink] }}</md-tooltip>
                 </router-link>
               </md-menu-item>
-              <md-menu-item class="md-ripple nav-button" href="https://igo.mskcc.org/">
-                <md-button>IGO Marketplace</md-button>
-                <md-tooltip md-direction="bottom"
+              <md-menu-item class="md-ripple nav-button">
+                <md-button href="https://igo.mskcc.org/">IGO Marketplace <i class="fas fa-external-link-alt"></i></md-button>
+                <md-tooltip md-direction="right"
                   >A series of modules aimed at easing data access. Currently home to the Sample Submission Webform and Sample QC
                   website.</md-tooltip
                 >
@@ -50,7 +50,6 @@ export default {
   name: "App",
   mounted() {
     this.$store.dispatch("setAssays");
-    console.log(this.teamIsActive);
   },
   data: function() {
     return {

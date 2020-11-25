@@ -70,7 +70,7 @@
   margin: 0;
 }
 
-.header .nav-button {
+.app-nav .nav-button {
   text-transform: uppercase;
   font-size: 1.5em;
   color: white !important;
@@ -108,6 +108,7 @@
 .app-main {
   grid-area: main;
   padding: 0.5% 2%;
+  max-width: 100vw;
 }
 
 .app-footer {
@@ -149,9 +150,19 @@
   /* height: 100vh; */
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.15fr 1fr;
+  /* max-width: 100vw; */
 }
 
-.md-table-content {
+/* .md-table-content {
+  width: 100%;
+} */
+
+/* .full-control {
+  max-width: 80%;
+} */
+
+.services-table {
+  table-layout: fixed;
   width: 100%;
 }
 
@@ -198,7 +209,7 @@
 
 .flex-container .md-content {
   width: 300px;
-  height: 200px;
+  height: 280px;
   overflow: auto;
 }
 
