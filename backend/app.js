@@ -6,6 +6,9 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
 
+
+
+
 app.set('port', process.env.PORT || 8801);
 
 app.use(bodyParser.json());
@@ -17,8 +20,12 @@ app.use(express.static('static'));
 
 app.use(morgan('dev'));
 
-app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/../public/index.html'));
+let publicDir = path.join(__dirname, 'public');
+app.get('/', function (req, res) {
+  res.sendFile(path.join(publicDir, 'index.html'));
+});
+app.get('/favicon.ico', function (req, res) {
+  res.sendFile(path.join(publicDir, 'favicon.ico'));
 });
 
 app.use(function (req, res) {
