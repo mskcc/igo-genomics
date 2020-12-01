@@ -146,7 +146,7 @@
         <div class="full-control">
           <div class="list">
             <md-list>
-              <md-list-item v-for="(service, index) in bulkServices" :key="index" md-expand>
+              <md-list-item v-for="(service, index) in singleServices" :key="index" md-expand>
                 <span class="md-list-item-text">{{ service.name }}</span>
                 <md-list slot="md-expand">
                   <md-list-item>
@@ -159,14 +159,11 @@
                         <th>Starting Material:</th>
                         <td>{{ service.startingMaterial }}</td>
                       </tr>
-                      <tr>
+                      <tr v-if="service.libraryChemistry">
                         <th>Library Chemistry:</th>
                         <td>{{ service.libraryChemistry }}</td>
                       </tr>
-                      <tr>
-                        <th>Capture Chemistry:</th>
-                        <td>{{ service.captureChemistry }}</td>
-                      </tr>
+
                       <tr>
                         <th>Sequencing Read Length:</th>
                         <td>{{ service.sequencingReadLength }}</td>
@@ -179,22 +176,41 @@
                         <th>Deliverable:</th>
                         <td>{{ service.deliverable }}</td>
                       </tr>
+                      <tr v-if="service.tissueOptimizationCost">
+                        <th>Tissue Optimization Cost:</th>
+                        <td>{{ service.tissueOptimizationCost }}</td>
+                      </tr>
+                      <tr v-if="service.libraryCost">
+                        <th>Library Cost:</th>
+                        <td>{{ service.libraryCost }}</td>
+                      </tr>
+                      <tr v-if="service.sequencingCost">
+                        <th>Sequencing Cost:</th>
+                        <td>{{ service.sequencingCost }}</td>
+                      </tr>
+                      <tr v-if="service.cost">
+                        <th>Cost:</th>
+                        <td>{{ service.cost }}</td>
+                      </tr>
                     </table></md-list-item
                   >
                   <md-list-item
                     ><md-table>
                       <md-table-row>
-                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('panel')">Panel</md-table-head>
-                        <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCoverage')"
-                          >Sample Coverage (X)</md-table-head
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('xGenomicsPlatform')"
+                          >10X Genomics Platform</md-table-head
                         >
-                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('sampleCost')"
-                          >Cost Per Sample</md-table-head
+                        <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostLibrary')"
+                          >Library Cost Per Sample</md-table-head
+                        >
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostSequencing')"
+                          >Sequencing Cost Per Sample</md-table-head
                         >
                       </md-table-row>
                       <md-table-row v-for="(row, j) in service.table" :key="j">
-                        <md-table-cell md-numeric>{{ row.sampleCoverage }}</md-table-cell>
-                        <md-table-cell>${{ row.sampleCost }}</md-table-cell>
+                        <md-table-cell>{{ row.xGenomicsPlatform }}</md-table-cell>
+                        <md-table-cell>${{ row.sampleCostLibrary }}</md-table-cell>
+                        <md-table-cell>${{ row.sampleCostSequencing }}</md-table-cell>
                       </md-table-row>
                     </md-table>
                   </md-list-item>
@@ -208,7 +224,7 @@
         <div class="full-control">
           <div class="list">
             <md-list>
-              <md-list-item v-for="(service, index) in bulkServices" :key="index" md-expand>
+              <md-list-item v-for="(service, index) in otherServices" :key="index" md-expand>
                 <span class="md-list-item-text">{{ service.name }}</span>
                 <md-list slot="md-expand">
                   <md-list-item>
@@ -217,27 +233,23 @@
                         <th>Description:</th>
                         <td>{{ service.description }}</td>
                       </tr>
-                      <tr>
+                      <tr v-if="service.startingMaterial">
                         <th>Starting Material:</th>
                         <td>{{ service.startingMaterial }}</td>
                       </tr>
-                      <tr>
-                        <th>Library Chemistry:</th>
-                        <td>{{ service.libraryChemistry }}</td>
+                      <tr v-if="service.kitChemistry">
+                        <th>Kit Chemistry:</th>
+                        <td>{{ service.kitChemistry }}</td>
                       </tr>
-                      <tr>
-                        <th>Capture Chemistry:</th>
-                        <td>{{ service.captureChemistry }}</td>
-                      </tr>
-                      <tr>
+                      <tr v-if="service.sequencingReadLength">
                         <th>Sequencing Read Length:</th>
                         <td>{{ service.sequencingReadLength }}</td>
                       </tr>
-                      <tr>
+                      <tr v-if="service.sequencingCoverage">
                         <th>Sequencing Coverage:</th>
                         <td>{{ service.sequencingCoverage }}</td>
                       </tr>
-                      <tr>
+                      <tr v-if="service.deliverable">
                         <th>Deliverable:</th>
                         <td>{{ service.deliverable }}</td>
                       </tr>
@@ -246,15 +258,70 @@
                   <md-list-item
                     ><md-table>
                       <md-table-row>
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('service')">Service</md-table-head>
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('species')">Species</md-table-head>
                         <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('cost')">Cost</md-table-head>
-
-                        <!-- {{ service.tableHeaders }} -->
-                        <!-- <md-table-head md-numeric>Sample Coverage (X)</md-table-head> -->
-                        <md-table-head>Cost Per Sample</md-table-head>
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('startingMaterial')"
+                          >Starting Material</md-table-head
+                        >
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('extractionOutput')"
+                          >Extraction Output</md-table-head
+                        >
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('sampleCost')"
+                          >Sample Cost</md-table-head
+                        >
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('totalReads')"
+                          >Total Reads</md-table-head
+                        >
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('pe50')">PE50</md-table-head>
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('pe100')">PE100</md-table-head>
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('pe150')">PE150</md-table-head>
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('special28')">28/8/91</md-table-head>
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('serviceType')"
+                          >Service Type</md-table-head
+                        >
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('serviceSubType')"
+                          >Service Subtype</md-table-head
+                        >
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('price')">Price</md-table-head>
                       </md-table-row>
                       <md-table-row v-for="(row, j) in service.table" :key="j">
-                        <md-table-cell md-numeric>{{ row.coverage }}</md-table-cell>
-                        <md-table-cell>${{ row.cost }}</md-table-cell>
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('service')">{{
+                          row.service
+                        }}</md-table-cell>
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('species')">{{
+                          row.species
+                        }}</md-table-cell>
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('cost')">${{ row.cost }}</md-table-cell>
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('startingMaterial')">{{
+                          row.startingMaterial
+                        }}</md-table-cell>
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('extractionOutput')">{{
+                          row.extractionOutput
+                        }}</md-table-cell>
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('sampleCost')"
+                          >${{ row.sampleCost }}</md-table-cell
+                        >
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('totalReads')">{{
+                          row.totalReads
+                        }}</md-table-cell>
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('pe50')">${{ row.pe50 }}</md-table-cell>
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('pe100')"
+                          >${{ row.pe100 }}</md-table-cell
+                        >
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('pe150')"
+                          >${{ row.pe150 }}</md-table-cell
+                        >
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('special28')"
+                          >${{ row.special28 }}</md-table-cell
+                        >
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('serviceType')">{{
+                          row.serviceType
+                        }}</md-table-cell>
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('serviceSubType')">{{
+                          row.serviceSubType
+                        }}</md-table-cell>
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('price')">{{ row.price }}</md-table-cell>
                       </md-table-row>
                     </md-table>
                   </md-list-item>
@@ -271,12 +338,12 @@
 </template>
 
 <script>
-import { bulkServices } from "./../../data.js";
+import { bulkServices, singleServices, otherServices } from "./../../data.js";
 
 export default {
   name: "ServicesPricesPage",
   data: function() {
-    return { bulkServices: bulkServices };
+    return { bulkServices: bulkServices, singleServices: singleServices, otherServices: otherServices };
   },
 };
 </script>
