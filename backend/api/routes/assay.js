@@ -21,7 +21,14 @@ module.exports = function (router) {
       })
       .then((limsResponse) => {
         let limsAssays = limsResponse.data.assays;
-        response.status(200).json(limsAssays);
+        // only send assays that are not hidden
+        let unhiddenAssays = [];
+        limsAssays.forEach((limsAssay) => {
+          if (!limsAssay.hideFromUser) {
+            unhiddenAssays.push(limsAssay);
+          }
+        });
+        response.status(200).json(unhiddenAssays);
       })
       .catch((error) => {
         console.log(error);

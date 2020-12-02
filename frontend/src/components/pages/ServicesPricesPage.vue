@@ -2,20 +2,20 @@
   <div>
     <!-- <span class="md-display-3">Services and Prices</span> -->
     <div class="prices-container">
-      <div>
+      <div class="bulk-header">
         <img src="http://genomics.mskcc.org/wp-content/uploads/2020/01/services1.png" alt="bulk logo" />
-        <h3>Bulk Tissue and Cell-Free Sequencing</h3>
+        <h2>Bulk Tissue and Cell-Free Sequencing</h2>
       </div>
-      <div>
+      <div class="single-header">
         <img src="http://genomics.mskcc.org/wp-content/uploads/2020/01/services2.png" alt="bulk logo" />
-        <h3>Single Cell Sequencing</h3>
+        <h2>Single Cell Sequencing</h2>
       </div>
-      <div>
+      <div class="other-header">
         <img src="http://genomics.mskcc.org/wp-content/uploads/2020/01/services3.png" alt="bulk logo" />
-        <h3>Other Services and Platforms</h3>
+        <h2>Other Services and Platforms</h2>
       </div>
 
-      <div>
+      <div class="bulk-data">
         <div class="full-control">
           <div class="list">
             <md-list>
@@ -23,7 +23,7 @@
                 <span class="md-list-item-text">{{ service.name }}</span>
                 <md-list slot="md-expand">
                   <md-list-item>
-                    <table class="services-table">
+                    <table class="prices-table services-general-table">
                       <tr>
                         <th>Description:</th>
                         <td>{{ service.description }}</td>
@@ -54,7 +54,7 @@
                       </tr>
                     </table></md-list-item
                   >
-                  <md-list-item
+                  <md-list-item v-if="service.table"
                     ><md-table>
                       <md-table-row
                         ><md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('libraryType')"
@@ -142,7 +142,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="single-data">
         <div class="full-control">
           <div class="list">
             <md-list>
@@ -150,7 +150,7 @@
                 <span class="md-list-item-text">{{ service.name }}</span>
                 <md-list slot="md-expand">
                   <md-list-item>
-                    <table class="services-table">
+                    <table class="prices-table services-general-table">
                       <tr>
                         <th>Description:</th>
                         <td>{{ service.description }}</td>
@@ -194,7 +194,7 @@
                       </tr>
                     </table></md-list-item
                   >
-                  <md-list-item
+                  <md-list-item v-if="service.table"
                     ><md-table>
                       <md-table-row>
                         <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('xGenomicsPlatform')"
@@ -220,7 +220,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="other-data">
         <div class="full-control">
           <div class="list">
             <md-list>
@@ -228,7 +228,7 @@
                 <span class="md-list-item-text">{{ service.name }}</span>
                 <md-list slot="md-expand">
                   <md-list-item>
-                    <table class="services-table">
+                    <table class="prices-table services-general-table">
                       <tr>
                         <th>Description:</th>
                         <td>{{ service.description }}</td>
@@ -255,7 +255,7 @@
                       </tr>
                     </table></md-list-item
                   >
-                  <md-list-item
+                  <md-list-item v-if="service.table"
                     ><md-table>
                       <md-table-row>
                         <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('service')">Service</md-table-head>

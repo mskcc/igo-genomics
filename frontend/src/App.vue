@@ -21,12 +21,52 @@
                   <md-tooltip v-if="toolTips[toolLink]" md-direction="right">{{ toolTips[toolLink] }}</md-tooltip>
                 </router-link>
               </md-menu-item>
+
               <md-menu-item class="md-ripple nav-button">
-                <md-button href="https://igo.mskcc.org/">IGO Marketplace <i class="fas fa-external-link-alt"></i></md-button>
-                <md-tooltip md-direction="right"
-                  >A series of modules aimed at easing data access. Currently home to the Sample Submission Webform and Sample QC
-                  website.</md-tooltip
-                >
+                <md-menu md-size="medium" :md-offset-x="400" :md-offset-y="-36">
+                  <md-button md-menu-trigger>IGO Marketplace <i class="fas fa-external-link-alt"></i></md-button>
+                  <md-menu-content>
+                    <md-menu-item>
+                      <md-button href="https://igo.mskcc.org/sample-submission">
+                        <i class="fas fa-upload"></i> Sample Submission
+                        <md-tooltip md-direction="right">
+                          A series of modules aimed at easing data access. Currently home to the Sample Submission Webform and Sample QC
+                          website.
+                        </md-tooltip>
+                      </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                      <md-button href="https://igo.mskcc.org/request-tracker">
+                        <i class="fas fa-tasks"></i> Request Tracker
+                        <md-tooltip md-direction="right">
+                          A series of modules aimed at easing data access. Currently home to the Sample Submission Webform and Sample QC
+                          website.
+                        </md-tooltip>
+                      </md-button>
+                    </md-menu-item>
+
+                    <md-menu-item>
+                      <md-button href="https://igo.mskcc.org/sample-qc">
+                        <i class="fas fa-check"></i>
+                        Sample QC
+                        <md-tooltip md-direction="right">
+                          A series of modules aimed at easing data access. Currently home to the Sample Submission Webform and Sample QC
+                          website.
+                        </md-tooltip>
+                      </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                      <md-button href="https://igo.mskcc.org/swabnseq">
+                        <i class="fas fa-dna"></i>
+                        Swab 'n Seq Results
+                        <md-tooltip md-direction="right">
+                          A series of modules aimed at easing data access. Currently home to the Sample Submission Webform and Sample QC
+                          website.
+                        </md-tooltip>
+                      </md-button>
+                    </md-menu-item>
+                  </md-menu-content>
+                </md-menu>
               </md-menu-item>
             </md-menu-content>
           </md-menu>
