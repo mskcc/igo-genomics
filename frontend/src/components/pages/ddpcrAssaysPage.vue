@@ -2,7 +2,7 @@
   <div>
     <span class="md-display-3">ddPCR Assay List</span>
     <div class="controls-container">
-      <div id="search-form">
+      <div class="search-form">
         <form>
           <md-field>
             <label>Search for an assay</label>

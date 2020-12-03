@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <span class="md-display-3">Services and Prices</span> -->
     <div class="prices-container">
       <div class="bulk-header">
         <img src="http://genomics.mskcc.org/wp-content/uploads/2020/01/services1.png" alt="bulk logo" />

@@ -36,6 +36,10 @@
   display: none;
 }
 
+.md-theme-default {
+  background-color: white;
+}
+
 .app-container {
   display: grid;
   height: 100vh;
@@ -49,16 +53,31 @@
 
 .app-header {
   grid-area: header;
-  background-color: #4a6572;
+  /* background-color: #4a6572; */
   display: flex;
+  /* flex-direction: column; */
   justify-content: space-between;
+  padding: 1% 10%;
   align-items: center;
 }
 
-.app-nav {
+.logo-header {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.right-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav {
   width: auto;
   display: flex;
-  align-items: flex-start;
+  justify-content: flex-end;
+  /* align-items: flex-start; */
   flex-wrap: wrap;
 
   /* prevent right click red behavior from material */
@@ -66,16 +85,36 @@
 }
 
 /* navigations buttons should not have a gap on hover */
-.app-nav .md-ripple.nav-button {
+.main-nav .md-ripple.nav-button {
   margin: 0;
 }
 
-.app-nav .nav-button {
+.main-nav .nav-button {
   text-transform: uppercase;
   font-size: 1.5em;
-  color: white !important;
+  /* color: white !important; */
   text-decoration: unset;
   min-width: 120px;
+}
+
+.pre-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* .pre-nav .md-button,
+.md-field {
+  color: white !important;
+} */
+
+.pre-nav a,
+form {
+  margin: 0px 4px;
+}
+
+.pre-nav .search-form {
+  margin-left: 10px;
 }
 
 .router-link-active {
@@ -98,8 +137,13 @@
   height: 4em;
   width: auto;
   /* margin: 20px 30px 20px 0px; */
-  margin: 1% 2%;
+  /* margin: 0% 0.5%; */
+  margin-right: 10px;
 }
+
+/* .app-header .md-title {
+  color: white;
+} */
 
 .msk-logo {
   margin: 10px 0px;
@@ -202,7 +246,7 @@
   justify-items: center;
 }
 
-#search-form {
+.search-form {
   grid-column-start: 2;
 }
 

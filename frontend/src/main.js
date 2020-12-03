@@ -40,10 +40,10 @@ const routes = [
   {
     path: "/services",
     component: ServicesPricesPage,
-    name: "services and prices",
+    name: "platforms & pricing",
   },
-  { path: "/samples", component: SamplesPage, name: "samples" },
-  { path: "/contacts", component: ContactsPage, name: "contacts" },
+  { path: "/samples", component: SamplesPage, name: "submit" },
+  { path: "/contacts", component: ContactsPage, name: "contact us" },
   { path: "/faqs", component: FaqsPage, name: "faqs" },
   { path: "/criteria", component: CriteriaPage, name: "criteria" },
 ];
