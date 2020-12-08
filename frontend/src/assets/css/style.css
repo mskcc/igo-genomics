@@ -59,6 +59,11 @@
   justify-content: space-between;
   padding: 1% 10%;
   align-items: center;
+  /* keeps header fixed at the top of the screen */
+  /* position: fixed;
+  width: 100vw;
+  z-index: 200;
+  background-color: white; */
 }
 
 .logo-header {
@@ -151,7 +156,7 @@ form {
 
 .app-main {
   grid-area: main;
-  padding: 0.5% 2%;
+  padding: 2% 2%;
   max-width: 100vw;
 }
 
@@ -161,6 +166,24 @@ form {
 }
 
 /* Home Page */
+
+/* .home-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.carousel-div {
+  max-width: 100vw;
+  /* background-color: wheat; */
+  /* display: flex; */
+  /* text-align: center; */
+}
+
+.VueCarousel img {
+  max-width: 50%;
+  /* align-self: center; */
+}
 
 .news-container {
   display: flex;

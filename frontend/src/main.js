@@ -14,6 +14,9 @@ import CriteriaPage from "./components/pages/CriteriaPage.vue";
 import { MdButton, MdCard, MdContent, MdField, MdList, MdIcon, MdMenu, MdTable, MdTabs, MdTooltip } from "vue-material/dist/components";
 import "vue-material/dist/vue-material.min.css";
 import "vue-material/dist/theme/default.css";
+import VueCarousel from "vue-carousel";
+
+Vue.use(VueCarousel);
 
 Vue.use(VueRouter);
 Vue.use(MdButton);

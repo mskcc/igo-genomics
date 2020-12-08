@@ -21,7 +21,7 @@
           </div>
           <div class="about-image-container">
             <md-content class="md-elevation-24 lab-photo">
-              <img src="../../assets/images/lab/Viale_190612_104.jpg" alt="At the bench" />
+              <img src="../../assets/images/lab/Viale_190612_066.jpg" alt="At the bench" />
             </md-content>
           </div></div
       ></md-tab>
