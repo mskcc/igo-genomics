@@ -11,10 +11,7 @@
                 <md-list>
                   <md-list-item md-expand class="md-inset">
                     <md-icon>add</md-icon>
-                    <span class="md-list-item-text"
-                      >I can’t get into the sample intake website. Who do I talk
-                      to?</span
-                    >
+                    <span class="md-list-item-text">I can’t get into the sample intake website. Who do I talk to?</span>
                     <md-list slot="md-expand">
                       <!-- <md-list-item class="md-inset"
                         >IGO’s Sample and Project Management Team team is
@@ -27,10 +24,7 @@
                   </md-list-item>
                   <md-list-item md-expand class="md-inset">
                     <md-icon>add</md-icon>
-                    <span class="md-list-item-text"
-                      >I have one sample. Do I really need to submit on a
-                      plate?</span
-                    >
+                    <span class="md-list-item-text">I have one sample. Do I really need to submit on a plate?</span>
                     <md-list slot="md-expand">
                       <!-- <md-list-item class="md-inset"
                         >Yes. Even if it is just for one sample, IGO requires
@@ -58,9 +52,7 @@
                 <md-list>
                   <md-list-item md-expand class="md-inset">
                     <md-icon>add</md-icon>
-                    <span class="md-list-item-text"
-                      >How should I submit my samples for RNA extraction?</span
-                    >
+                    <span class="md-list-item-text">How should I submit my samples for RNA extraction?</span>
                     <md-list slot="md-expand">
                       <!-- <md-list-item class="md-inset"> -->
                       <!-- <p>
@@ -77,10 +69,7 @@
                   </md-list-item>
                   <md-list-item md-expand class="md-inset">
                     <md-icon>add</md-icon>
-                    <span class="md-list-item-text"
-                      >I have one sample. Do I really need to submit on a
-                      plate?</span
-                    >
+                    <span class="md-list-item-text">I have one sample. Do I really need to submit on a plate?</span>
                     <md-list slot="md-expand">
                       <!-- <md-list-item class="md-inset"
                         >Yes. Even if it is just for one sample, IGO requires

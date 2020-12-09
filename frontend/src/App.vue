@@ -1,6 +1,6 @@
 <template>
   <div id="app" v-cloak>
-    <div class="app-container">
+    <div class="app-body">
       <div class="app-header md-elevation-7">
         <div class="logo-header">
           <img class="igo-logo" alt="IGO logo" src="./assets/logoDarkGrayOnTransp.png" />

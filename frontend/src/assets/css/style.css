@@ -32,6 +32,7 @@
   color: #2c3e50;
   background-color: var(--mskcc-medium-orange);
   /* background-color: lightgray; */
+  height: 100%;
 }
 
 [v-cloak] {
@@ -42,9 +43,9 @@
   background-color: white;
 } */
 
-.app-container {
+.app-body {
   display: grid;
-  height: 100vh;
+  /* height: 100vh; */
   /* grid-template-columns: 1fr 1fr 1fr; */
   grid-template-rows: 0.75fr 5fr 0.5fr;
   grid-template-areas:
@@ -62,10 +63,10 @@
   padding: 1% 10%;
   align-items: center;
   /* keeps header fixed at the top of the screen */
-  /* position: fixed;
-  width: 100vw; */
+  position: fixed;
+  max-height: 100%;
+  width: 100vw;
   z-index: 200;
-
   background-color: white;
 }
 
@@ -189,7 +190,7 @@ form {
 .igo-description {
   width: 60%;
   margin: 0 auto;
-  padding: 20px 0px;
+  padding: 40px 0px;
 }
 
 .news-container {
@@ -209,6 +210,15 @@ form {
   margin: 4px 10px;
   display: inline-block;
   vertical-align: top;
+}
+
+.news-headline {
+  margin: 1%;
+}
+
+.news {
+  background-color: var(--material-gray);
+  padding: 1%;
 }
 
 /* .news-card img {
