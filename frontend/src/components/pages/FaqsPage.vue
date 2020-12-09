@@ -13,13 +13,10 @@
                     <md-icon>add</md-icon>
                     <span class="md-list-item-text">I can’t get into the sample intake website. Who do I talk to?</span>
                     <md-list slot="md-expand">
-                      <!-- <md-list-item class="md-inset"
-                        >IGO’s Sample and Project Management Team team is
-                        standing by, ready to help. Just send us an e-mail ! If
-                        we can’t resolve it immediately, we will get in touch
-                        with our Data Team to look deeper into the
-                        issue.</md-list-item
-                      > -->
+                      <md-list-item class="md-inset"
+                        >IGO’s Sample and Project Management Team team is standing by, ready to help. Just send us an e-mail ! If we can’t
+                        resolve it immediately, we will get in touch with our Data Team to look deeper into the issue.</md-list-item
+                      >
                     </md-list>
                   </md-list-item>
                   <md-list-item md-expand class="md-inset">

@@ -32,21 +32,15 @@
   color: #2c3e50;
   background-color: var(--mskcc-medium-orange);
   /* background-color: lightgray; */
-  height: 100%;
+  min-height: 100vh;
 }
 
 [v-cloak] {
   display: none;
 }
 
-/* .md-theme-default {
-  background-color: white;
-} */
-
 .app-body {
   display: grid;
-  /* height: 100vh; */
-  /* grid-template-columns: 1fr 1fr 1fr; */
   grid-template-rows: 0.75fr 5fr 0.5fr;
   grid-template-areas:
     "header"
@@ -56,15 +50,13 @@
 
 .app-header {
   grid-area: header;
-  /* background-color: #4a6572; */
   display: flex;
-  /* flex-direction: column; */
   justify-content: space-between;
-  padding: 1% 10%;
+  padding: 1.5% 10%;
   align-items: center;
   /* keeps header fixed at the top of the screen */
   position: fixed;
-  max-height: 100%;
+  /* max-height: 100%; */
   width: 100vw;
   z-index: 200;
   background-color: white;
@@ -174,12 +166,6 @@ form {
 
 /* Home Page */
 
-/* .home-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
 .VueCarousel img {
   width: 60%;
   /* min-width: 100%; */
@@ -212,18 +198,33 @@ form {
   vertical-align: top;
 }
 
+.news-card img {
+  cursor: pointer;
+}
+
 .news-headline {
   margin: 1%;
 }
 
-.news {
-  background-color: var(--material-gray);
-  padding: 1%;
+.news-card .md-card-content {
+  text-align: left;
 }
 
-/* .news-card img {
-  max-width: 320px;
-} */
+.news {
+  background-color: var(--material-gray);
+  padding: 1% 16%;
+}
+
+#read-more {
+  text-align: right;
+}
+
+/* News Page */
+
+#news-page .md-card {
+  width: 60%;
+  margin: 1% auto;
+}
 
 /* Images on all pages */
 

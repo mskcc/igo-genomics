@@ -111,8 +111,22 @@ export default {
   data: function() {
     return {
       links: ["home", "about", "platforms & pricing", "submit", "faqs"],
-      toolLinks: ["criteria", "ddpcr assays"],
-      toolsIsActive: ["criteria", "ddpcr assays"].includes(this.$route.name),
+      toolLinks: [
+        "criteria",
+        "ddpcr assays",
+        "single cell platforms",
+        "accessing your data",
+        "covid submission instructions",
+        "10x genomics visium",
+      ],
+      toolsIsActive: [
+        "criteria",
+        "ddpcr assays",
+        "single cell platforms",
+        "accessing your data",
+        "covid submission instructions",
+        "10x genomics visium",
+      ].includes(this.$route.name),
       teamIsActive: this.$route.path.includes("about"),
       toolTips: {
         criteria: "A comprehensive guide to quality and quantity requirements",

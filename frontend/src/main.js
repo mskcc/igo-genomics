@@ -11,6 +11,13 @@ import SamplesPage from "./components/pages/SamplesPage.vue";
 import ContactsPage from "./components/pages/ContactsPage.vue";
 import FaqsPage from "./components/pages/FaqsPage.vue";
 import CriteriaPage from "./components/pages/CriteriaPage.vue";
+import SingleCellPage from "./components/pages/SingleCellPage.vue";
+import DataDeliveryPage from "./components/pages/DataDeliveryPage.vue";
+import CovidInstructionsPage from "./components/pages/CovidInstructionsPage.vue";
+import GenomicsVisiumPage from "./components/pages/GenomicsVisiumPage.vue";
+import NewsPage from "./components/pages/NewsPage.vue";
+import ReopenFaqPage from "./components/pages/ReopenFaqPage.vue";
+import IgoHomePage from "./components/pages/IgoHomePage.vue";
 import {
   MdButton,
   MdCard,
@@ -62,6 +69,13 @@ const routes = [
   { path: "/contacts", component: ContactsPage, name: "contact us" },
   { path: "/faqs", component: FaqsPage, name: "faqs" },
   { path: "/criteria", component: CriteriaPage, name: "criteria" },
+  { path: "/single-cell-platforms", component: SingleCellPage, name: "single cell platforms" },
+  { path: "/accessing-your-data", component: DataDeliveryPage, name: "accessing your data" },
+  { path: "/covid-instructions", component: CovidInstructionsPage, name: "covid submission instructions" },
+  { path: "/10x-genomics-visium", component: GenomicsVisiumPage, name: "10x genomics visium" },
+  { path: "/news", component: NewsPage, name: "news" },
+  { path: "/reopen-faq", component: ReopenFaqPage, name: "reopen faq" },
+  { path: "/igo-home", component: IgoHomePage, name: "igo home" },
 ];
 
 const router = new VueRouter({

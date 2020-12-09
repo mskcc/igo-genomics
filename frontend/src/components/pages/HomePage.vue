@@ -13,7 +13,7 @@
         </slide>
       </carousel>
     </div>
-    <!-- <span class="md-display-3">News</span> -->
+
     <div class="md-layout-item igo-description md-headline">
       <span>
         {{ igoDescription }}
@@ -30,11 +30,11 @@
       </md-card>
     </div> -->
     <div class="news">
-      <div class="news-headline md-headline md-inset">In the News</div>
+      <div class="news-headline md-headline md-inset">News at the IGO</div>
 
       <md-card class="news-card">
         <md-card-media>
-          <img src="../../assets/images/news/Viale_190612_111.jpg" @mouseover="showDialogMethod" />
+          <img src="../../assets/images/news/Viale_190612_111.jpg" @click="showDialogMethod" />
         </md-card-media>
 
         <md-card-header>
@@ -53,19 +53,28 @@
 
           <md-card-expand-content>
             <md-card-content>
-              IGO’s Data Team is pleased to roll out a new request tracking application. Use this tool for real-time visualization of IGO’s
-              progress on your project, with detail to the sample level. Try it out in the IGO Marketplace today! As demand for single cell
-              sequencing rises, IGO continues to invest in platforms to cover a wide variety of sample types and data needs. See which
-              application is right for your sample set here. Currently, IGO’s data delivery consists of FASTQ files separated by sample,
-              sequencer run, and read (forward vs reverse). Starting in January, there will be an additional layer of separation: by
-              sequencer lane. For more information, see our explanation and examples here.
+              <p>
+                IGO’s Data Team is pleased to roll out a new
+                <a href="https://igo.mskcc.org/login/request-tracker"> request tracking application</a>. Use this tool for real-time
+                visualization of IGO’s progress on your project, with detail to the sample level. Try it out in the IGO Marketplace today!
+              </p>
+              <p>
+                As demand for single cell sequencing rises, IGO continues to invest in platforms to cover a wide variety of sample types and
+                data needs. See which application is right for your sample set
+                <router-link :to="{ name: 'single cell platforms' }">here</router-link>.
+              </p>
+              <p>
+                Currently, IGO’s data delivery consists of FASTQ files separated by sample, sequencer run, and read (forward vs reverse).
+                <strong>Starting in January, there will be an additional layer of separation: by sequencer lane. </strong>
+                <router-link :to="{ name: 'accessing your data' }">Click here for more information.</router-link>
+              </p>
             </md-card-content>
           </md-card-expand-content>
         </md-card-expand>
       </md-card>
       <md-card class="news-card">
         <md-card-media>
-          <img src="../../assets/images/news/Viale_190612_078.jpg" @mouseover="showDialogMethod" />
+          <img src="../../assets/images/news/Viale_190612_078.jpg" @click="showDialogMethod" />
         </md-card-media>
 
         <md-card-header>
@@ -84,17 +93,20 @@
 
           <md-card-expand-content>
             <md-card-content>
-              For investigators who make their own sequencing libraries to submit to IGO, we now have easy-to-understand block pricing for
-              our most commonly-requested read lengths and throughputs. We accept both individual user libraries and pre-pooled libraries to
-              occupy a full flow cell or lane. Custom read lengths and coverages outside the block pricing will still be accepted; contact
-              us for more information.
+              <p>
+                For investigators who make their own sequencing libraries to submit to IGO, we now have
+                <router-link :to="{ name: 'platforms & pricing' }">easy-to-understand block pricing</router-link> for our most
+                commonly-requested read lengths and throughputs. We accept both individual user libraries and pre-pooled libraries to occupy
+                a full flow cell or lane. Custom read lengths and coverages outside the block pricing will still be accepted;
+                <router-link :to="{ name: 'contact us' }">contact us for more information.</router-link>
+              </p>
             </md-card-content>
           </md-card-expand-content>
         </md-card-expand>
       </md-card>
       <md-card class="news-card">
         <md-card-media>
-          <img src="../../assets/images/news/COVIDInfographic_080720.jpg" @mouseover="showDialogMethod" />
+          <img src="../../assets/images/news/COVIDInfographic_080720.jpg" @click="showDialogMethod" />
         </md-card-media>
 
         <md-card-header>
@@ -113,30 +125,37 @@
 
           <md-card-expand-content>
             <md-card-content>
-              After more than 6 months and over 46,000 samples, Friday, October 9 will be the last day of COVID-19 testing in IGO. While the
-              core jumped at the opportunity to support our colleagues and city through the ongoing pandemic, we also look forward to
-              turning our full attention back to our mission of supporting and enabling a broad range of research efforts at MSK. We will
-              continue to provide COVID-19 testing of research samples. In addition to the new 10X Genomics Visium platform, we are
-              improving our website resources for investigators. A searchable, comprehensive list of our ddPCR assays is now available and
-              stay tuned for a project tracker, currently in beta testing!
+              <p>
+                After more than 6 months and over 46,000 samples, Friday, October 9 will be the last day of COVID-19 testing in IGO. While
+                the core jumped at the opportunity to support our colleagues and city through the ongoing pandemic, we also look forward to
+                turning our full attention back to our mission of supporting and enabling a broad range of research efforts at MSK. We will
+                continue to provide
+                <router-link :to="{ name: 'covid submission instructions' }">COVID-19 testing of research samples.</router-link>
+              </p>
+              <p>
+                In addition to the
+                <router-link :to="{ name: '10x genomics visium' }">new 10X Genomics Visium platform</router-link>, we are improving our
+                website resources for investigators. A searchable,
+                <router-link :to="{ name: 'ddpcr assays' }">comprehensive list of our ddPCR assays</router-link> is now available and stay
+                tuned for a project tracker, currently in beta testing!
+              </p>
             </md-card-content>
           </md-card-expand-content>
         </md-card-expand>
       </md-card>
+      <div id="read-more">
+        <md-button class="md-primary" :to="{ name: 'news' }">read more</md-button>
+      </div>
     </div>
     <md-dialog :md-active.sync="showDialog">
       <md-dialog-content md-dynamic-height><img :src="enlargedImage"/></md-dialog-content>
-
-      <!-- <md-dialog-actions>
-        <md-button class="md-primary" @mouseover="showDialog = false">Close</md-button>
-      </md-dialog-actions> -->
     </md-dialog>
   </div>
 </template>
 
 <script>
 import { Carousel, Slide } from "vue-carousel";
-import { news } from "./../../data.js";
+// import { news } from "./../../data.js";
 export default {
   name: "HomePage",
   components: {
@@ -145,7 +164,7 @@ export default {
   },
   data: function() {
     return {
-      news: news,
+      // news: news,
       igoDescription:
         "The Integrated Genomics Operation (IGO) core enables basic, clinical, and translational science by providing a broad range of services and expertise to investigators interested in evaluating gene expression, chromosome structure, and nucleotide sequence. Our services are comprehensive, rapid, and user-friendly. Through the centralized management of all sequencing activities at MSK, the core empowers scientists with an array of technological options and the most efficient and cost-effective means of performing high-throughput genomics.",
       showDialog: false,
@@ -158,7 +177,6 @@ export default {
       const imageSrc = imageElement.getAttribute("src");
       const cleanedImageSrc = imageSrc.split("/").pop();
       this.enlargedImage = "http://localhost:8081/img/" + cleanedImageSrc;
-      console.log(this.enlargedImage);
       this.showDialog = true;
     },
   },
