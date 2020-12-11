@@ -4,14 +4,14 @@
       <div class="app-header md-elevation-7">
         <div class="logo-header">
           <img class="igo-logo" alt="IGO logo" src="./assets/logoDarkGrayOnTransp.png" />
-          <div class="md-headline">Integrated Genomics Operation</div>
+          <div>Integrated Genomics Operation</div>
         </div>
         <div class="right-header">
           <div class="pre-nav">
             <md-button :md-ripple="false" @click="$router.push('about')">About</md-button>
             <md-button :md-ripple="false" @click="$router.push('contacts')">Contact Us</md-button>
-            <a href="https://twitter.com/genomics212?lang=en" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
-            <a href="https://www.instagram.com/genomics212/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://twitter.com/genomics212?lang=en" target="_blank"><i class="fab fa-twitter fa-1x"></i></a>
+            <a href="https://www.instagram.com/genomics212/" target="_blank"><i class="fab fa-instagram fa-1x"></i></a>
             <div class="search-form">
               <form>
                 <md-field md-inline>
@@ -34,7 +34,7 @@
             <md-menu md-size="auto" md-align-trigger v-bind:class="{ 'router-link-active': toolsIsActive }">
               <md-button md-menu-trigger class="md-ripple nav-button">Tools <i class="fas fa-angle-down"></i></md-button>
               <md-menu-content>
-                <md-menu-item v-for="toolLink in toolLinks" :key="toolLink"
+                <md-menu-item v-for="toolLink in toolLinks" :key="toolLink" class="tools-menu"
                   ><router-link :to="{ name: toolLink }">
                     <md-button class="md-ripple nav-button">{{ toolLink }}</md-button>
                     <md-tooltip v-if="toolTips[toolLink]" md-direction="right">{{ toolTips[toolLink] }}</md-tooltip>
@@ -126,6 +126,8 @@ export default {
         "accessing your data",
         "covid submission instructions",
         "10x genomics visium",
+        "rna",
+        "other",
       ].includes(this.$route.name),
       teamIsActive: this.$route.path.includes("about"),
       toolTips: {

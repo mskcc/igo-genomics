@@ -41,7 +41,8 @@
 
 .app-body {
   display: grid;
-  grid-template-rows: 0.75fr 5fr 0.5fr;
+  /* grid-template-rows: 0.75fr 5fr 0.5fr; */
+  grid-template-rows: 150px 5fr 100px;
   grid-template-areas:
     "header"
     "main"
@@ -52,10 +53,10 @@
   grid-area: header;
   display: flex;
   justify-content: space-between;
-  padding: 1.5% 10%;
+  padding: 0% 4%;
   align-items: center;
   /* keeps header fixed at the top of the screen */
-  position: fixed;
+  /* position: fixed; */
   /* max-height: 100%; */
   width: 100vw;
   z-index: 200;
@@ -80,6 +81,7 @@
   justify-content: flex-end;
   /* align-items: flex-start; */
   flex-wrap: wrap;
+  padding-bottom: 1%;
 
   /* prevent right click red behavior from material */
   user-select: none;
@@ -92,10 +94,10 @@
 
 .main-nav .nav-button {
   text-transform: uppercase;
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
   /* color: white !important; */
   text-decoration: unset;
-  min-width: 120px;
+  min-width: 100px;
 }
 
 .pre-nav {
@@ -104,10 +106,11 @@
   align-items: center;
 }
 
-/* .pre-nav .md-button,
+.pre-nav .md-button,
 .md-field {
-  color: white !important;
-} */
+  /* color: white !important; */
+  font-size: 80%;
+}
 
 .pre-nav a,
 form {
@@ -135,16 +138,12 @@ form {
 } */
 
 .app-header img.igo-logo {
-  height: 6em;
+  height: 4em;
   width: auto;
   /* margin: 20px 30px 20px 0px; */
-  /* margin: 0% 0.5%; */
-  margin-right: 10px;
+  margin: 0% 0.1%;
+  /* margin-right: 10px; */
 }
-
-/* .app-header .md-title {
-  color: white;
-} */
 
 .msk-logo {
   margin: 10px 0px;
@@ -153,15 +152,25 @@ form {
 .app-main {
   grid-area: main;
   padding: 2% 2%;
-  max-width: 97vw;
+  width: 97vw;
   background-color: white;
   margin: 0 auto;
+  min-height: fit-content;
 }
 
 .app-footer {
   grid-area: footer;
-  /* background-color: #344955; */
-  /* background-color: var(--mskcc-medium-orange); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tools-menu {
+  z-index: 300;
+}
+
+.md-display-1 {
+  padding: 1%;
 }
 
 /* Home Page */
@@ -174,7 +183,7 @@ form {
 }
 
 .igo-description {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   padding: 40px 0px;
 }
@@ -192,7 +201,7 @@ form {
   /* width: 350px; */
   /* height: 400px; */
   /* margin: 20px; */
-  max-width: 400px;
+  max-width: 300px;
   margin: 4px 10px;
   display: inline-block;
   vertical-align: top;
@@ -212,7 +221,7 @@ form {
 
 .news {
   background-color: var(--material-gray);
-  padding: 1% 16%;
+  padding: 1% 12%;
 }
 
 #read-more {
@@ -224,6 +233,7 @@ form {
 #news-page .md-card {
   width: 60%;
   margin: 1% auto;
+  margin-bottom: 2%;
 }
 
 /* Images on all pages */
@@ -235,7 +245,7 @@ form {
 }
 
 .md-content.lab-photo {
-  max-width: 900px;
+  max-width: 600px;
   margin: 24px;
 }
 
@@ -250,6 +260,10 @@ form {
   grid-template-areas:
     "bulk-header single-header other-header"
     "bulk-data single-data other-data";
+}
+
+.prices-image {
+  margin: 2%;
 }
 
 .single-header {
@@ -349,22 +363,38 @@ form {
 /* About page */
 
 .about-body {
-  display: grid;
-  grid-template-rows: 20% 80%;
+  /* display: grid; */
+  grid-template-rows: 25% 75%;
   grid-template-areas:
     "description"
     "image";
+  /* position: absolute; */
 }
 
 .about-description {
   grid-area: description;
-  place-self: center;
+  /* place-self: center; */
   width: 60%;
+  /* text-align: left; */
+}
+
+.about-description,
+.team-description {
+  text-align: left;
 }
 
 .about-image-container {
   grid-area: image;
   place-self: center;
+}
+
+.md-tabs-navigation.md-elevation-0 {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.md-tabs.md-alignment-centered.md-theme-default {
+  text-align: -webkit-center;
 }
 
 /* Team page */
@@ -418,4 +448,40 @@ form {
   object-fit: cover;
 
   /* top: 20%; */
+}
+
+/* FAQ Page */
+
+#faq-page .md-list-item-content {
+  white-space: pre-wrap;
+}
+
+/* archer fusion gene page */
+
+.md-table#gene-table .md-table-cell {
+  border: 1px solid black;
+}
+
+/* criteria page */
+
+.criteria-table {
+  max-width: 85%;
+}
+
+.md-table-cell {
+  height: -webkit-fill-available;
+}
+
+.pass {
+  /* background-color: var(--mskcc-light-green); */
+  background-color: #b3ffb3;
+}
+
+.try {
+  /* background-color: var(--mskcc-light-yellow); */
+  background-color: #ffffb3;
+}
+
+.fail {
+  background-color: #ffb3b3;
 }

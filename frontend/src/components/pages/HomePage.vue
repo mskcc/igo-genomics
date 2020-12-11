@@ -14,7 +14,7 @@
       </carousel>
     </div>
 
-    <div class="md-layout-item igo-description md-headline">
+    <div class="md-layout-item igo-description md-title">
       <span>
         {{ igoDescription }}
       </span>

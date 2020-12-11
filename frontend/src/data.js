@@ -407,3 +407,27 @@ export const otherServices = [
     ],
   },
 ];
+
+export const archerFusionGenes = [
+  ["ACVR2A", "AKT1", "ALK", "AR", "ARAF"],
+  ["ARHGAP26", "BCOR", "BCORL1", "BRAF", "BRD4"],
+  ["CAMTA1", "CCNB3", "CIC", "CSF1", "DNAJB1"],
+  ["EGFR", "EPC1", "ERBB2", "ERBB3", "ERBB4"],
+  ["ERG", "ESR1", "ETV1", "ETV4", "ETV5"],
+  ["ETV6", "EWSR1", "FGF1", "FGFR1", "FGFR2"],
+  ["FGFR3", "FGFR4", "FGR", "FLT1", "FLT3"],
+  ["FOS", "FOSB", "FOXO1", "FOXR2", "FUS"],
+  ["NCOA1", "NCOA2", "NCOA3", "NFATC2", "NFE2L2"],
+  ["NOTCH1", "NOTCH2", "NR4A3", "NRG1", "NTRK1"],
+  ["NTRK2", "NTRK3", "NUTM1", "NUTM2A", "NUTM2B"],
+  ["PAX3", "PAX5", "PAX7", "PDGFB", "PDGFD"],
+  ["PDGFRA", "PDGFRB", "PGR", "PHF1", "PIK3CA"],
+  ["PLAG1", "PPARG", "PRB3", "PRKACA", "PRKACB"],
+  ["PRKCA", "PRKCB", "PRKD1", "PRKD2", "PRKD3"],
+  ["PTCH1", "PTPN1", "RAD51B", "RAF1", "RELA"],
+  ["RET", "RLF", "ROS1", "RSPO2", "RSPO3"],
+  ["SRF", "SS18", "SS18L1", "STAT6", "TAF15"],
+  ["TCF12", "TERT", "TFE3", "TFEB", "TFG"],
+  ["THADA", "TMPRSS2", "USP6", "VGLL2", "VGLL3"],
+  ["WWTR1", "YAP1", "YWHAE"],
+];

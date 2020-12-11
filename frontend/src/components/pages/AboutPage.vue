@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <span class="md-display-3">Who We Are</span>
-    <md-tabs md-alignment="centered">
-      <md-tab :to="{ name: 'about' }" id="tab-general" md-label="General" exact md-sync-route>
+  <div id="about-page">
+    <div class="md-display-1">Who We Are</div>
+    <md-tabs md-alignment="centered" md-sync-route>
+      <md-tab :to="{ name: 'about' }" id="tab-general" md-label="General" exact>
         <div class="about-body">
-          <div class="about-description md-body-1">
+          <div class="about-description">
             <p>
               The Integrated Genomics Operation (IGO) core enables basic, clinical, and translational science by providing a broad range of
               services and expertise to investigators interested in evaluating gene expression, chromosome structure, and nucleotide
@@ -33,7 +33,6 @@
         :to="{ name: 'team', params: { id: index } }"
         :md-label="team"
         exact
-        md-sync-route
       >
         <team-page :team="team"></team-page>
       </md-tab>
@@ -49,7 +48,7 @@ export default {
   name: "AboutPage",
   components: { TeamPage },
   data: function() {
-    return { teams: teams };
+    return { teams: teams, windowWidth: "" };
   },
   computed: {
     teamNamesInIgo: function() {
@@ -65,6 +64,40 @@ export default {
     //   console.log(this.teamisActive);
     //   console.log(this.$route);
     // },
+  },
+  methods: {
+    getWindowWidth(event) {
+      this.windowWidth = document.documentElement.clientWidth;
+      if (event) {
+        if (event.type == "resize") {
+          this.checkSpan();
+        }
+      }
+    },
+    beforeDestroy() {
+      window.removeEventListener("resize", this.getWindowWidth);
+    },
+    checkSpan() {
+      if (document.querySelector("#about-page")) {
+        const tabsContainerSize = document.querySelector(".md-tabs-navigation.md-elevation-0").offsetTop;
+        const spanElement = document.querySelector("span");
+        if (tabsContainerSize < 251) {
+          // remove span element that displays as underline under active button
+          spanElement.hidden = true;
+        } else {
+          spanElement.hidden = false;
+        }
+      }
+    },
+    // },
+  },
+  mounted: function() {
+    this.$nextTick(function() {
+      window.addEventListener("resize", this.getWindowWidth);
+      //Init
+      this.getWindowWidth();
+    });
+    this.checkSpan();
   },
 };
 </script>

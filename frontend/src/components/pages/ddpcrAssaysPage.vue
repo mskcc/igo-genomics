@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="md-display-3">ddPCR Assay List</span>
+    <div class="md-display-1">ddPCR Assay List</div>
     <div class="controls-container">
       <div class="search-form">
         <form>

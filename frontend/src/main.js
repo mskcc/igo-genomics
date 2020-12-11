@@ -18,6 +18,9 @@ import GenomicsVisiumPage from "./components/pages/GenomicsVisiumPage.vue";
 import NewsPage from "./components/pages/NewsPage.vue";
 import ReopenFaqPage from "./components/pages/ReopenFaqPage.vue";
 import IgoHomePage from "./components/pages/IgoHomePage.vue";
+import ArcherFusionPage from "./components/pages/ArcherFusionPage.vue";
+import RnaCriteria from "./components/RnaCriteria.vue";
+import OtherCriteria from "./components/OtherCriteria.vue";
 import {
   MdButton,
   MdCard,
@@ -68,7 +71,15 @@ const routes = [
   { path: "/samples", component: SamplesPage, name: "submit" },
   { path: "/contacts", component: ContactsPage, name: "contact us" },
   { path: "/faqs", component: FaqsPage, name: "faqs" },
-  { path: "/criteria", component: CriteriaPage, name: "criteria" },
+  {
+    path: "/criteria/dna",
+    component: CriteriaPage,
+    name: "criteria",
+    children: [
+      { path: "/criteria/rna", component: RnaCriteria, name: "rna" },
+      { path: "/criteria/other", component: OtherCriteria, name: "other" },
+    ],
+  },
   { path: "/single-cell-platforms", component: SingleCellPage, name: "single cell platforms" },
   { path: "/accessing-your-data", component: DataDeliveryPage, name: "accessing your data" },
   { path: "/covid-instructions", component: CovidInstructionsPage, name: "covid submission instructions" },
@@ -76,6 +87,7 @@ const routes = [
   { path: "/news", component: NewsPage, name: "news" },
   { path: "/reopen-faq", component: ReopenFaqPage, name: "reopen faq" },
   { path: "/igo-home", component: IgoHomePage, name: "igo home" },
+  { path: "/archer-fusion", component: ArcherFusionPage, name: "archer fusion" },
 ];
 
 const router = new VueRouter({
