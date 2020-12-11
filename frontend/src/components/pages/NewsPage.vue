@@ -1,6 +1,6 @@
 <template>
   <div id="news-page">
-    <span class="md-display-1">News</span>
+    <div class="md-display-1">News</div>
     <md-card>
       <md-card-header>
         <div class="md-title">COVID-19 testing continues in IGO</div>
@@ -27,7 +27,7 @@
           our normal operations, IGO has brought into production a new spatial transcriptomics platform in collaboration with the
           <a href="https://one.mskcc.org/sites/pub/ski/CoreFacilities/Pages/Molecular-Cytology.aspx"> Molecular Cytology Core</a>.
           <router-link :to="{ name: '10x genomics visium' }"> Learn more</router-link> or
-          <router-link :to="{ name: 'contact' }">contact us</router-link> set up a meeting about your project.
+          <router-link :to="{ name: 'contact us' }">contact us</router-link> set up a meeting about your project.
         </p>
       </md-card-content>
     </md-card>
