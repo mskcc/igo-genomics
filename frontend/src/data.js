@@ -64,7 +64,7 @@ export const teams = [
   },
   {
     id: 3,
-    name: "EXPAND",
+    name: "Extraction",
     description:
       "As the name implies, we are an eclectic, multidisciplinary team responsible for a diverse number of platforms. EXPAND stands for: Extraction, 10X Genomics, pathology, Archer DX, Nanostring, and digital droplet PCR, but also literally refers to our interest in integrating new platforms and advancing research technology to remain at the cutting edge for our users. \n EXPAND team extracts DNA and RNA from a variety of sample types, following validated manual and automated protocols. We work closely with our investigators to provide meaningful advice on the amount of material to submit, optimal preservation methods, and storage techniques for every sample type and desired downstream application. IGO offers a vast selection of digital PCR assays; the EXPAND team performs the processing and analysis of samples with one or more of our off-the-shelf assays, or we can help you design a new, custom assay. The digital PCR, Nanostring and Archer DX platforms aim to detect rare mutations, unknown gene rearrangements or VDJ recombination, small variations in copy number and changes in gene expression. Recently we “EXPANDed” into the single cell territory, offering the 10X Genomics platforms: cell-to-cell differences, that are often missed in bulk analysis, can be revealed at the single cell resolution. We offer all the available 10X platforms (CNV, ATAC, gene expression, TCR-seq, feature barcoding and cell hashing).The EXPAND team draws upon IGO’s philosophy of constant and open communication. It is our goal to join you in detailed, scientific discussions about your projects, to meet your needs and to work together to advance science, building long-term, trusting relationships in the process.",
     members: [
@@ -93,7 +93,7 @@ export const teams = [
   },
   {
     id: 5,
-    name: "Sequencing Team",
+    name: "Sequencing",
     description: "sequences libraries",
     members: [
       { name: "Liping Sun", role: "Group Leader", photoName: "Sun_Liping" },
@@ -105,7 +105,7 @@ export const teams = [
   },
   {
     id: 6,
-    name: "Data Team",
+    name: "Data",
     description: "programming support",
     members: [
       { name: "David Mcmanamon", role: "Group Leader", photoName: "Mcmanamon_David" },

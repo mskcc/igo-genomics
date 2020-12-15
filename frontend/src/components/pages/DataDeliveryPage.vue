@@ -3,7 +3,7 @@
     <div class="md-display-1">Data Delivery</div>
     <md-card class="data-delivery-card">
       <md-card-header>
-        <div class="md-title">Instructions on accessing your FAST files</div>
+        <div class="md-title">Instructions on accessing your FASTQ files</div>
       </md-card-header>
       <md-card-content
         ><div>

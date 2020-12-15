@@ -97,6 +97,7 @@
       </div>
       <div class="app-footer">
         <img class="msk-logo" alt="MSK logo" src="./assets/icon2.png" />
+        <div>ZRC 3rd floor</div>
       </div>
     </div>
   </div>
@@ -110,7 +111,7 @@ export default {
   },
   data: function() {
     return {
-      links: ["home", "about", "platforms & pricing", "submit", "faqs"],
+      links: ["home", "about", "platforms & pricing", "submission guidelines", "faqs"],
       toolLinks: [
         "criteria",
         "ddpcr assays",
@@ -118,6 +119,7 @@ export default {
         "accessing your data",
         "covid submission instructions",
         "10x genomics visium",
+        "metrics and throughput",
       ],
       toolsIsActive: [
         "criteria",
@@ -128,6 +130,7 @@ export default {
         "10x genomics visium",
         "rna",
         "other",
+        "metricsa and throughput",
       ].includes(this.$route.name),
       teamIsActive: this.$route.path.includes("about"),
       toolTips: {

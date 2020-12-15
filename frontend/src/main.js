@@ -7,7 +7,7 @@ import AboutPage from "./components/pages/AboutPage.vue";
 import ddpcrAssaysPage from "./components/pages/ddpcrAssaysPage.vue";
 import TeamPage from "./components/pages/TeamPage.vue";
 import ServicesPricesPage from "./components/pages/ServicesPricesPage.vue";
-import SamplesPage from "./components/pages/SamplesPage.vue";
+import SubmissionGuidelinesPage from "./components/pages/SubmissionGuidelinesPage.vue";
 import ContactsPage from "./components/pages/ContactsPage.vue";
 import FaqsPage from "./components/pages/FaqsPage.vue";
 import CriteriaPage from "./components/pages/CriteriaPage.vue";
@@ -16,11 +16,12 @@ import DataDeliveryPage from "./components/pages/DataDeliveryPage.vue";
 import CovidInstructionsPage from "./components/pages/CovidInstructionsPage.vue";
 import GenomicsVisiumPage from "./components/pages/GenomicsVisiumPage.vue";
 import NewsPage from "./components/pages/NewsPage.vue";
-import ReopenFaqPage from "./components/pages/ReopenFaqPage.vue";
+
 import IgoHomePage from "./components/pages/IgoHomePage.vue";
 import ArcherFusionPage from "./components/pages/ArcherFusionPage.vue";
 import RnaCriteria from "./components/RnaCriteria.vue";
 import OtherCriteria from "./components/OtherCriteria.vue";
+import MetricsAndThroughputPage from "./components/pages/MetricsAndThroughputPage.vue";
 import {
   MdButton,
   MdCard,
@@ -64,11 +65,11 @@ const routes = [
     name: "ddpcr assays",
   },
   {
-    path: "/services",
+    path: "/platforms",
     component: ServicesPricesPage,
     name: "platforms & pricing",
   },
-  { path: "/samples", component: SamplesPage, name: "submit" },
+  { path: "/submission-guidelines", component: SubmissionGuidelinesPage, name: "submission guidelines" },
   { path: "/contacts", component: ContactsPage, name: "contact us" },
   { path: "/faqs", component: FaqsPage, name: "faqs" },
   {
@@ -85,9 +86,9 @@ const routes = [
   { path: "/covid-instructions", component: CovidInstructionsPage, name: "covid submission instructions" },
   { path: "/10x-genomics-visium", component: GenomicsVisiumPage, name: "10x genomics visium" },
   { path: "/news", component: NewsPage, name: "news" },
-  { path: "/reopen-faq", component: ReopenFaqPage, name: "reopen faq" },
   { path: "/igo-home", component: IgoHomePage, name: "igo home" },
   { path: "/archer-fusion", component: ArcherFusionPage, name: "archer fusion" },
+  { path: "/metrics-and-throughput", component: MetricsAndThroughputPage, name: "metrics and throughput" },
 ];
 
 const router = new VueRouter({

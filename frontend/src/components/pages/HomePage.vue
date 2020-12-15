@@ -65,7 +65,7 @@
               </p>
               <p>
                 Currently, IGO’s data delivery consists of FASTQ files separated by sample, sequencer run, and read (forward vs reverse).
-                <strong>Starting in January, there will be an additional layer of separation: by sequencer lane. </strong>
+                <strong>Starting January 2021, there will be an additional layer of separation: by sequencer lane. </strong>
                 <router-link :to="{ name: 'accessing your data' }">Click here for more information.</router-link>
               </p>
             </md-card-content>

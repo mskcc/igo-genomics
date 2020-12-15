@@ -1,5 +1,5 @@
 <template>
-  <span class="md-display-3">covid instructions</span>
+  <div class="md-display-1">COVID19 Submission Instructions</div>
 </template>
 
 <script>

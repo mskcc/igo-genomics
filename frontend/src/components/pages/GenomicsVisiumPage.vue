@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="md-display-3">10x genomics visium </span>
+    <div class="md-display-1">10x genomics visium</div>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="md-title">Sample Pass/Fail Criteria</div>
+    <div class="md-display-1">Sample Pass/Fail Criteria</div>
     <md-tabs md-alignment="centered" md-sync-route>
       <md-tab id="tab-dna" md-label="dna" :to="{ name: 'criteria' }" exact>
         <dna-criteria></dna-criteria>
