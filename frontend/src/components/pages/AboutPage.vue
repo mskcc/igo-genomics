@@ -80,16 +80,16 @@ export default {
     checkSpan() {
       if (document.querySelector("#about-page")) {
         const tabsContainerSize = document.querySelector(".md-tabs-navigation.md-elevation-0").offsetTop;
+
         const spanElement = document.querySelector("span");
         if (tabsContainerSize < 251) {
-          // remove span element that displays as underline under active button
-          spanElement.hidden = true;
+          // hide span element that displays as underline under active button
+          spanElement.style.display = "none";
         } else {
-          spanElement.hidden = false;
+          spanElement.style.display = "block";
         }
       }
     },
-    // },
   },
   mounted: function() {
     this.$nextTick(function() {
@@ -97,7 +97,7 @@ export default {
       //Init
       this.getWindowWidth();
     });
-    this.checkSpan();
+    this.checkSpan(event);
   },
 };
 </script>

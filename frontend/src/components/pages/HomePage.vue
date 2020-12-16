@@ -11,6 +11,12 @@
         <slide>
           <img src="../../assets/images/lab/Viale_190612_030.jpg" />
         </slide>
+        <!-- <slide>
+          <iframe
+            id="seq-capacity"
+            src="https://splunkp/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Sequencer_Capacity&oid=sqUFRzpFTM0Kx9UKPGZhtEcJxn0yLHFUxa2lXd4V0q4gchgRxRt%5EevDN9MFLjZ50vQjBPVtGmFMm2MqaJRLu52y2Zj_5TLhJY0Sel%5EheZWkaHvALYiFW_XKWSgiGfofu0m90pAvTq49Vu88jTpicq%5ETdoXRyfg5ZgExoGQ0"
+          ></iframe>
+        </slide> -->
       </carousel>
     </div>
 
@@ -18,6 +24,20 @@
       <span>
         {{ igoDescription }}
       </span>
+    </div>
+    <div>
+      <iframe
+        height="96"
+        width="480"
+        frameborder="0"
+        src="https://splunkp/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Requests_SingleValue&oid=Q2WAJ0bUU5H6VvrvNWX4je81RBL6FpBswMl34LeDjwftbntREU86md93n1rleLhEogXprs8%5E_B8WrnYTtGEnIy1kv8JKzvgSyfGo3kdiBB4GiX7KHvamfqfKwWgYNk_Uv8g_Tj7LFzZJ9q4F3%5E8eH_f3DmgVRY6uvGdM6EC_sJLA"
+      ></iframe>
+      <iframe
+        height="96"
+        width="480"
+        frameborder="0"
+        src="https://splunkp/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Samples_SingleValue&oid=7wKarMvR1CyTn6ycX5yp7bY2GW7gINgA5wlwS3QVnSOplfnMZ%5EBpktUHUwg7VfRQsORWL3ajbtcMgviYZ7Kq4rH8XgNoMjkIlzK%5ELAOBiKNRNKQ1IbIw9C%5EcrSJfZy8O%5EvOH%5E%5EwAN%5E8zH4dVlMtAgnaTIa63bme3S7FIK6Jr"
+      ></iframe>
     </div>
 
     <!-- <div class="news-container">
@@ -130,7 +150,7 @@
                 the core jumped at the opportunity to support our colleagues and city through the ongoing pandemic, we also look forward to
                 turning our full attention back to our mission of supporting and enabling a broad range of research efforts at MSK. We will
                 continue to provide
-                <router-link :to="{ name: 'covid submission instructions' }">COVID-19 testing of research samples.</router-link>
+                <router-link :to="{ name: 'submission guidelines' }">COVID-19 testing of research samples.</router-link>
               </p>
               <p>
                 In addition to the

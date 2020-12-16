@@ -43,11 +43,11 @@
           <a href="https://one.mskcc.org/sites/pub/ski/CoreFacilities/Pages/Molecular-Cytology.aspx"> Molecular Cytology Core</a> using the
           <router-link :to="{ name: '10x genomics visium' }">10X Genomics Visium platform</router-link>.
         </p>
-        <md-button class="md-raised md-primary" :to="{ name: 'covid submission instructions' }">
+        <md-button class="md-raised md-primary" :to="{ name: 'submission guidelines' }">
           Submit for COVID19
         </md-button>
-        <md-button class="md-raised md-primary" :to="{ name: 'reopen faq' }">Reopen FAQs</md-button>
-        <md-button class="md-raised md-primary">IGO @ Home</md-button>
+        <!-- <md-button class="md-raised md-primary" :to="{ name: 'reopen faq' }">Reopen FAQs</md-button> -->
+        <md-button class="md-raised md-primary" :to="{ name: 'igo at home' }">IGO @ Home</md-button>
       </md-card-content>
     </md-card>
   </div>

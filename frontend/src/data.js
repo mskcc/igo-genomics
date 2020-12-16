@@ -291,7 +291,7 @@ export const singleServices = [
   },
   {
     id: 1,
-    name: "10x Genomics Visium (More info)",
+    name: "10x Genomics Visium",
     description: "Transcriptome sequencing of 1-10 cells along with spatial information.",
     startingMaterial: "Fresh tissue",
     libraryChemistry: "Visium Spatial Gene Expression",

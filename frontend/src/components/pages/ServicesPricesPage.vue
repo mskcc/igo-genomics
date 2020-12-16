@@ -27,27 +27,27 @@
                         <th>Description:</th>
                         <td>{{ service.description }}</td>
                       </tr>
-                      <tr>
+                      <tr v-if="service.startingMaterial">
                         <th>Starting Material:</th>
                         <td>{{ service.startingMaterial }}</td>
                       </tr>
-                      <tr>
+                      <tr v-if="service.libraryChemistry">
                         <th>Library Chemistry:</th>
                         <td>{{ service.libraryChemistry }}</td>
                       </tr>
-                      <tr>
+                      <tr v-if="service.captureChemistry">
                         <th>Capture Chemistry:</th>
                         <td>{{ service.captureChemistry }}</td>
                       </tr>
-                      <tr>
+                      <tr v-if="service.sequencingReadLength">
                         <th>Sequencing Read Length:</th>
                         <td>{{ service.sequencingReadLength }}</td>
                       </tr>
-                      <tr>
+                      <tr v-if="service.sequencingCoverage">
                         <th>Sequencing Coverage:</th>
                         <td>{{ service.sequencingCoverage }}</td>
                       </tr>
-                      <tr>
+                      <tr v-if="service.deliverable">
                         <th>Deliverable:</th>
                         <td>{{ service.deliverable }}</td>
                       </tr>
@@ -147,6 +147,9 @@
             <md-list>
               <md-list-item v-for="(service, index) in singleServices" :key="index" md-expand>
                 <span class="md-list-item-text">{{ service.name }}</span>
+                <span v-if="service.name == '10x Genomics Visium'"
+                  ><router-link :to="{ name: '10x genomics visium' }">more info</router-link></span
+                >
                 <md-list slot="md-expand">
                   <md-list-item>
                     <table class="prices-table services-general-table">
@@ -209,7 +212,7 @@
                       <md-table-row v-for="(row, j) in service.table" :key="j">
                         <md-table-cell>{{ row.xGenomicsPlatform }}</md-table-cell>
                         <md-table-cell>${{ row.sampleCostLibrary }}</md-table-cell>
-                        <md-table-cell>${{ row.sampleCostSequencing }}</md-table-cell>
+                        <md-table-cell>{{ row.sampleCostSequencing }}</md-table-cell>
                       </md-table-row>
                     </md-table>
                   </md-list-item>

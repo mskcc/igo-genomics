@@ -109,7 +109,7 @@
 .pre-nav .md-button,
 .md-field {
   /* color: white !important; */
-  font-size: 80%;
+  font-size: 0.8em;
 }
 
 .pre-nav a,
@@ -133,6 +133,14 @@ form {
   margin: 0;
 }
 
+.tools-menu .md-button {
+  font-size: 0.8em;
+}
+
+/* .md-menu-content-container {
+  height: 100%;
+} */
+
 /* .nav .md-theme-default :not(input):not(textarea)::selection {
   background-color: unset;
 } */
@@ -155,7 +163,8 @@ form {
   width: 97vw;
   background-color: white;
   margin: 0 auto;
-  min-height: fit-content;
+  /* min-height: fit-content; */
+  min-height: 100vh;
 }
 
 .app-footer {
@@ -165,8 +174,12 @@ form {
   align-items: center;
 }
 
-.tools-menu {
+/* .tools-menu {
   z-index: 300;
+} */
+
+.md-menu-content-bottom-start.md-menu-content-auto.md-menu-content.md-theme-default {
+  z-index: 250;
 }
 
 .md-display-1 {
@@ -326,7 +339,7 @@ form {
 
 .legend-label {
   text-align: left;
-  font-size: 80%;
+  font-size: 0.8em;
 }
 
 .flex-container {
@@ -453,6 +466,10 @@ form {
 
 /* FAQ Page */
 
+#faq-page {
+  margin: 0 5%;
+}
+
 #faq-page .md-list-item-content {
   white-space: pre-wrap;
 }
@@ -512,4 +529,14 @@ sup {
   /* margin: 0 auto; */
   text-align: left;
   margin: 1% auto;
+}
+
+#seq-capacity {
+  height: 450px;
+  width: 1000px;
+}
+
+video {
+  max-width: 50%;
+  /* height: auto; */
 }

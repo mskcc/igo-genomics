@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="md-display-1">Metrics and Throughput</div>
+
     <div id="wrap">
       <iframe
         id="scaled-frame"
@@ -17,18 +18,18 @@
       ></iframe>
     </div>
 
-    <!-- <div class="metrics-iframe left-align-grid">
-      <iframe
-        style="height:150;width:480;"
-        src="https://splunkp/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Requests_SingleValue&oid=K65TjnRQLqSpLH1XYtSViudKUv9njZtgbDx_TzIWmn9WldkQgKUpOt5wZSbPsqvCwOpm92h_I9cn_MkyympLv1pzl243MR8YyitZTXn%5EiU3yBqgYDOzLHgIgrIE4mM6LeZ7vRjW7W0mro4RpYd4DiQGp7Nbjd8CLW90ukf94weDONo0"
-      ></iframe
-      ><br /><iframe
+    <iframe
+      height="96"
+      width="480"
+      frameborder="0"
+      src="https://splunkp/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Requests_SingleValue&oid=gGFqSkXJq1IZJcPZcofDLPfJOJZlBD_H%5EqLCoa%5EKguiGiodASlGxWapyDHFHBusCE3W35qeEdNvsRrXey9l%5EvcPKiPQrJaKiJI0pZN0Gg1l62PMtVgdQTDEXeq8Bwnq2cAr4SM3%5E5Avp70MxjsdD8JI8Nvkbx9EjGNr9caL1"
+    ></iframe>
+    <!-- <br /><iframe
         style="height:150;width:480;"
         src="https://splunkp/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Samples_SingleValue&oid=33UcBahl9XrtsjYIzSln9Y9uGFL11Jw3EodwbSMKslQq_gSpxZ%5EUas7Kphiegvww7xoi5tkVVWyaCxwZZ35MKra4Yn1xyzI%5Eo65a5x%5EnJ0wBLmd3rdk6ZilDTyyE8jkzgHZIvNVJumJJcvPvcNbFQl5QLtGtvwSMUJGgjrxLmC"
-      ></iframe>
-    </div>
+      ></iframe> -->
 
-    <div class="metrics-text right-align-text" style="text-align:center;">Requests (top) and samples (bottom) to date 2020 vs 2019</div> -->
+    <div class="metrics-text right-align-text" style="text-align:center;">Requests (top) and samples (bottom) to date 2020 vs 2019</div>
 
     <div>
       <iframe

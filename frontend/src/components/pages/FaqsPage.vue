@@ -1,89 +1,9 @@
 <template>
   <div>
-    <!-- <div>
-      <md-card class="data-delivery-card">
-        <md-card-header>
-          <div class="md-title">Reopening FAQ</div>
-        </md-card-header>
-        <md-card-content>
-          <div class="md-subheading">What platforms will IGO offer?</div>
-          <div>
-            Currently IGO is offering all of our normal platforms except for Nanostring.
-          </div>
-        </md-card-content>
-
-        <md-card-content>
-          <div class="md-subheading">How do I submit samples?</div>
-          <div>
-            Our guidelines for sample submission during Phase III re-opening can be found
-            <router-link :to="{ name: 'submission guidelines' }">here</router-link>. Plates for samples can be picked up outside ZRC320 at
-            any time, but please do not enter the lab space for any reason.
-          </div>
-        </md-card-content>
-
-        <md-card-content>
-          <div class="md-subheading">Can my project be rushed? I have a publication/grant/deadline…</div>
-          <div>
-            Sadly, until we are operating at 100% capacity, we will not be able to rush your project. Everything will be processed on a
-            first-come, first-serve basis. For any other questions, please
-            <a href="mailto:genomics@mskcc.org?subject=Question about IGO reopening">contact us</a>.
-          </div>
-        </md-card-content>
-      </md-card>
-    </div> -->
-    <reopen-faq></reopen-faq>
+    <!-- <reopen-faq></reopen-faq> -->
     <div id="faq-page" class="full-control">
       <div class="list">
         <md-list>
-          <!-- <md-list-item md-expand>
-            <md-icon>add</md-icon>
-            <span class="md-list-item-text md-title">Reopening FAQ</span>
-            <md-list slot="md-expand">
-              <div class="full-control">
-                <div class="list">
-                  <md-list>
-                    <md-list-item md-expand class="md-inset">
-                      <md-icon>add</md-icon>
-                      <span class="md-list-item-text">What platforms will IGO offer?</span>
-                      <md-list slot="md-expand">
-                        <md-list-item>
-                          <div>
-                            Currently IGO is offering all of our normal platforms except for Nanostring.
-                          </div>
-                        </md-list-item>
-                      </md-list>
-                    </md-list-item>
-                    <md-list-item md-expand class="md-inset">
-                      <md-icon>add</md-icon>
-                      <span class="md-list-item-text">How do I submit samples?</span>
-                      <md-list slot="md-expand">
-                        <md-list-item>
-                          <div>
-                            Our guidelines for sample submission during Phase III re-opening can be found
-                            <router-link :to="{ name: 'submission guidelines' }">here</router-link>. Plates for samples can be picked up
-                            outside ZRC320 at any time, but please do not enter the lab space for any reason.
-                          </div>
-                        </md-list-item>
-                      </md-list>
-                    </md-list-item>
-                    <md-list-item md-expand class="md-inset">
-                      <md-icon>add</md-icon>
-                      <span class="md-list-item-text">Can my project be rushed? I have a publication/grant/deadline…</span>
-                      <md-list slot="md-expand">
-                        <md-list-item>
-                          <div>
-                            Sadly, until we are operating at 100% capacity, we will not be able to rush your project. Everything will be
-                            processed on a first-come, first-serve basis. For any other questions, please
-                            <a href="mailto:genomics@mskcc.org?subject=Question about IGO reopening">contact us</a>.
-                          </div>
-                        </md-list-item>
-                      </md-list>
-                    </md-list-item>
-                  </md-list>
-                </div>
-              </div>
-            </md-list>
-          </md-list-item> -->
           <md-list-item md-expand>
             <md-icon>add</md-icon>
             <span class="md-list-item-text md-title">Sample Submission</span>
@@ -175,7 +95,7 @@
                             We cannot accept human samples collected after December 2019 unless the patient has been screened for COVID19.
                             We offer RNA extraction specifically for COVID19 testing, which you can submit to determine status before
                             starting your project. Submission instructions are
-                            <router-link :to="{ name: 'covid submission instructions' }">here</router-link>.
+                            <router-link :to="{ name: 'submission guidelines' }">here</router-link>.
                           </div>
                         </md-list-item>
                       </md-list>
@@ -533,10 +453,10 @@
 </template>
 
 <script>
-import ReopenFaq from "../ReopenFaq.vue";
+// import ReopenFaq from "../ReopenFaq.vue";
 
 export default {
-  components: { ReopenFaq },
+  // components: { ReopenFaq },
   name: "FaqsPage",
 };
 </script>
