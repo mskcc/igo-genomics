@@ -4,7 +4,7 @@
       <div class="app-header md-elevation-7">
         <div class="logo-header">
           <img class="igo-logo" alt="IGO logo" src="./assets/logoDarkGrayOnTransp.png" />
-          <div class="md-title">Integrated Genomics Operation</div>
+          <div class="md-headline">Integrated Genomics Operation</div>
         </div>
         <div class="right-header">
           <div class="pre-nav">

@@ -431,3 +431,35 @@ export const archerFusionGenes = [
   ["THADA", "TMPRSS2", "USP6", "VGLL2", "VGLL3"],
   ["WWTR1", "YAP1", "YWHAE"],
 ];
+
+export const tutorials = [
+  {
+    slug: "ilabs_sample_sub",
+    title: "IGO’s iLab and Sample Submission Process",
+    speakers: "Marisa Dunigan and Lisa Wagner",
+    date: "May 5, 2020",
+    screenshot: "ilab_sample_submission",
+  },
+  // { slug: "cellranger", title: "Data Analysis with CellRanger", speakers: "Sarah Parsons from 10X Genomics", date: "May 7, 2020" },
+  {
+    slug: "splunk_webinar",
+    title: "Splunk: a Data Visualization Tool used for Operational Insight",
+    speakers: "Anna Patruno",
+    date: "May 12, 2020",
+    screenshot: "splunk",
+  },
+  {
+    slug: "why_igo_says_no",
+    title: "Why IGO says ‘No!’",
+    speakers: "Liping Sun and Ruchi Patel",
+    date: "May 21, 2020",
+    screenshot: "igo_alternatives",
+  },
+  {
+    slug: "DRAGEN",
+    title: "DRAGEN platform: accurate, ultra-rapid secondary analysis of sequencing data",
+    speakers: "Rami Mehio from Illumina",
+    date: "May 28, 2020",
+    screenshot: "dragen",
+  },
+];
