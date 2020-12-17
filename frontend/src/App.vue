@@ -4,7 +4,7 @@
       <div class="app-header md-elevation-7">
         <div class="logo-header">
           <img class="igo-logo" alt="IGO logo" src="./assets/logoDarkGrayOnTransp.png" />
-          <div>Integrated Genomics Operation</div>
+          <div class="md-title">Integrated Genomics Operation</div>
         </div>
         <div class="right-header">
           <div class="pre-nav">
@@ -13,12 +13,12 @@
             <a href="https://twitter.com/genomics212?lang=en" target="_blank"><i class="fab fa-twitter fa-1x"></i></a>
             <a href="https://www.instagram.com/genomics212/" target="_blank"><i class="fab fa-instagram fa-1x"></i></a>
             <div class="search-form">
-              <form>
+              <!-- <form>
                 <md-field md-inline>
                   <label>Search</label>
                   <md-input v-model="search"></md-input>
                 </md-field>
-              </form>
+              </form> -->
             </div>
           </div>
           <div class="main-nav">
@@ -140,7 +140,7 @@ export default {
         // "ddpcr assays": "Available ddPPCR assays",
       },
       trigger: false,
-      search: null,
+      // search: null,
     };
   },
   computed: {},

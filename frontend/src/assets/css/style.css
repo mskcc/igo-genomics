@@ -146,11 +146,16 @@ form {
 } */
 
 .app-header img.igo-logo {
-  height: 4em;
+  height: 5.5em;
   width: auto;
   /* margin: 20px 30px 20px 0px; */
-  margin: 0% 0.1%;
+  margin: 0% 10px;
   /* margin-right: 10px; */
+}
+
+.app-header .md-header {
+  width: 200px;
+  text-align: left;
 }
 
 .msk-logo {
@@ -534,9 +539,4 @@ sup {
 #seq-capacity {
   height: 450px;
   width: 1000px;
-}
-
-video {
-  max-width: 50%;
-  /* height: auto; */
 }
