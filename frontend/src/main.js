@@ -23,11 +23,13 @@ import ArcherFusionPage from "./components/pages/ArcherFusionPage.vue";
 import RnaCriteria from "./components/RnaCriteria.vue";
 import OtherCriteria from "./components/OtherCriteria.vue";
 import MetricsAndThroughputPage from "./components/pages/MetricsAndThroughputPage.vue";
+import SchedulePage from "./components/pages/SchedulePage.vue";
 
 import {
   MdButton,
   MdCard,
   MdContent,
+  MdDatepicker,
   MdDialog,
   MdField,
   MdList,
@@ -49,6 +51,7 @@ Vue.use(VueRouter);
 Vue.use(MdButton);
 Vue.use(MdCard);
 Vue.use(MdContent);
+Vue.use(MdDatepicker);
 Vue.use(MdDialog);
 Vue.use(MdField);
 Vue.use(MdIcon);
@@ -94,6 +97,7 @@ const routes = [
   { path: "/igo-at-home/:name", component: ShowVideoPage, name: "show video", props: true },
   { path: "/archer-fusion", component: ArcherFusionPage, name: "archer fusion" },
   { path: "/metrics-and-throughput", component: MetricsAndThroughputPage, name: "metrics and throughput" },
+  { path: "/schedule", component: SchedulePage, name: "schedule" },
 ];
 
 const router = new VueRouter({
