@@ -539,3 +539,7 @@ sup {
   height: 450px;
   width: 1000px;
 }
+
+.md-layout-item {
+  max-width: 50%;
+}
