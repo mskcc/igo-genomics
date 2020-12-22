@@ -2,8 +2,9 @@ import Vue from "vue";
 import App from "./App.vue";
 import VueRouter from "vue-router";
 import store from "./store";
-
 import VueCoreVideoPlayer from "vue-core-video-player";
+import DatePicker from "v-calendar";
+
 import HomePage from "./components/pages/HomePage.vue";
 import AboutPage from "./components/pages/AboutPage.vue";
 import ddpcrAssaysPage from "./components/pages/ddpcrAssaysPage.vue";
@@ -61,6 +62,11 @@ Vue.use(MdMenu);
 Vue.use(MdTable);
 Vue.use(MdTabs);
 Vue.use(MdTooltip);
+
+// Use v-calendar & v-date-picker components
+Vue.use(DatePicker, {
+  componentPrefix: "vc", // Use <vc-calendar /> instead of <v-calendar />
+});
 
 Vue.config.productionTip = false;
 
