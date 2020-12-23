@@ -17,7 +17,7 @@ module.exports = function (router) {
       timeslot: form.timeslot,
       details: {
         chemistry: form.chemistry,
-        cellNumber: form.cellNumber,
+        sampleNumber: form.sampleNumber,
       },
     });
     appointment.save(function (err) {
