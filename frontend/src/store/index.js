@@ -50,7 +50,7 @@ export default new Vuex.Store({
       app.axios
         // .get(process.env.VUE_APP_API_ROOT + "/api/getAssaysFromMongo")
         // .get("http://localhost:8801/api/getAssaysFromMongo")
-        .get(API_URL)
+        .get(`${API_URL}/getAssayFromLims`)
         .then((response) => {
           let assays = response.data;
 

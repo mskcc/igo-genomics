@@ -8,6 +8,24 @@ const path = require('path');
 
 app.set('port', process.env.PORT || 8801);
 
+// DB connection
+var MONGODB_URL = process.env.MONGODB_URL;
+var mongoose = require('mongoose');
+mongoose
+    .connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        //don't show the log when it is test
+        if (process.env.NODE_ENV !== 'test') {
+            console.log('Connec  ted to %s', MONGODB_URL);
+            console.log('App is running ... \n');
+            console.log('Press CTRL + C to stop the process. \n');
+        }
+    })
+    .catch((err) => {
+        console.error('App starting error:', err.message);
+        process.exit(1);
+    });
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
