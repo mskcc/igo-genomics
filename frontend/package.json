@@ -16,6 +16,9 @@
     "vue-core-video-player": "^0.2.0",
     "vue-material": "^1.0.0-beta-15",
     "vue-router": "^3.4.8",
+    "vue-sweetalert2": "^4.1.1",
+    "vue2-timepicker": "^1.1.5",
+    "vuelidate": "^0.7.6",
     "vuex": "^3.5.1"
   },
   "devDependencies": {

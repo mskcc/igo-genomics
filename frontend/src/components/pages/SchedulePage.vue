@@ -16,42 +16,53 @@
       </div>
       <form style="width: 600px" @submit.prevent="book()">
         <md-card class="md-layout-item">
-          <md-card-header>
-            <div class="md-title">Book</div>
+          <md-card-header v-show="!daySelected">
+            <div class="md-title">Please select a day</div>
           </md-card-header>
-          <md-card-content v-if="timeSlots">
-            <md-field>
-              <label>Selected date</label>
-              <md-input v-model="dateSelected.id" readonly>{{ dateSelected.id }}</md-input>
-            </md-field>
-            <md-field>
-              <label>Full Name</label>
-              <md-input v-model="form.name" required />
-            </md-field>
-            <md-field>
-              <label>Email</label>
-              <md-input v-model="form.email" required />
-            </md-field>
-            <md-field>
-              <label>Estimated Number of Cells</label>
-              <md-input v-model="form.sampleNumber" required />
-            </md-field>
+          <span v-show="daySelected">
+            <md-card-header>
+              <div class="md-title">Book</div>
+            </md-card-header>
+            <md-card-content>
+              <vue-timepicker format="hh A" v-model="form.time" @change="changeHandler" placeholder="Dropoff Time" close-on-complete>
+                <template v-slot:icon> <i class="far fa-clock"></i> </template
+              ></vue-timepicker>
+              <span v-show="timeSelected">
+                <md-field>
+                  <label>Selected date</label>
+                  <md-input v-model="dateSelected.id" readonly>{{ dateSelected.id }}</md-input>
+                </md-field>
 
-            <md-field>
-              <label>Chemistry</label>
-              <md-select v-model="form.chemistry" required>
-                <md-option value="10x 3'">10x 3'</md-option>
-                <md-option value="10x 5'">10x 5'</md-option>
-              </md-select>
-            </md-field>
-            <div>
-              <md-radio v-for="time in timeSlots" :key="time" v-model="form.timeslot" :value="time">{{ time }} </md-radio>
-              {{ form.timeslot }}
-            </div>
-          </md-card-content>
-          <md-card-actions>
-            <md-button type="submit" class="md-primary">Submit</md-button>
-          </md-card-actions>
+                <md-field :class="getValidationClass('name')">
+                  <label>Full Name</label>
+                  <md-input v-model="form.name" />
+                  <span class="md-error" v-if="!$v.form.name.required">Name is required</span>
+                </md-field>
+                <md-field :class="getValidationClass('email')">
+                  <label>Email</label>
+                  <md-input v-model="form.email" />
+                  <span class="md-error" v-if="!$v.form.email.required">Email is required</span>
+                </md-field>
+                <md-field :class="getValidationClass('sampleNumber')">
+                  <label>Estimated Number of Cells</label>
+                  <md-input v-model="form.sampleNumber" />
+                  <span class="md-error" v-if="!$v.form.sampleNumber.required">Number of samples is required</span>
+                </md-field>
+
+                <md-field :class="getValidationClass('chemistry')">
+                  <label>Chemistry</label>
+                  <md-select v-model="form.chemistry">
+                    <md-option value="10x 3'">10x 3'</md-option>
+                    <md-option value="10x 5'">10x 5'</md-option>
+                  </md-select>
+                  <span class="md-error" v-if="!$v.form.chemistry.required">Chemistry is required</span>
+                </md-field>
+              </span>
+            </md-card-content>
+            <md-card-actions>
+              <md-button type="submit" class="md-primary">Submit</md-button>
+            </md-card-actions>
+          </span>
         </md-card>
       </form>
     </div>
@@ -59,17 +70,24 @@
 </template>
 
 <script>
-import * as app from './../../app.js';
-import { API_URL } from './../../config.js';
+import * as app from "./../../app.js";
+import { API_URL } from "./../../config.js";
+import VueTimepicker from "vue2-timepicker";
+import "vue2-timepicker/dist/VueTimepicker.css";
+import { required, email } from "vuelidate/lib/validators";
+
 export default {
+  components: { VueTimepicker },
   data: function() {
     return {
+      daySelected: false,
+      timeSelected: false,
       form: {
-        name: 'lisa',
-        email: 'lisa',
+        name: null,
+        email: null,
         sampleNumber: 4,
-        chemistry: 'whatev',
-        timeslot: null,
+        chemistry: null,
+        time: { A: null, HH: null },
       },
       timeSlots: null,
       //   radio: false,
@@ -78,26 +96,68 @@ export default {
       attrs: [
         {
           highlight: {
-            fillMode: 'solid',
+            fillMode: "solid",
           },
-          //   dates: new Date(),
         },
       ],
+      formHasErrors: false,
     };
   },
+  validations: {
+    form: {
+      name: { required },
+      email: { required, email },
+      sampleNumber: { required },
+      chemistry: { required },
+    },
+  },
+  //   watch: {
+  //     //   for global errors
+  //     "$v.$invalid": function() {
+  //       this.formHasErrors = this.$v.$invalid;
+  //     },
+  //   },
   methods: {
     dayClick(date) {
+      this.daySelected = true;
       this.dateSelected = date;
-      console.log(this.dateSelected);
+
       app.axios
         .get(`${API_URL}/availableSlots/${this.dateSelected.weekday}/${this.dateSelected.id}`)
         .then((response) => (this.timeSlots = response.data));
     },
-    book() {
-      // validation
+    getValidationClass(fieldName) {
+      const field = this.$v.form[fieldName];
 
-      app.axios.post(`${API_URL}/bookTime`, { data: { ...this.form, date: this.dateSelected.id } });
-      // console.log(form);
+      if (field) {
+        return {
+          "md-invalid": field.$invalid && field.$dirty,
+        };
+      }
+    },
+    book() {
+      //   if (!this.form.time || this.form.time.A === "" || this.form.time.HH === "") {
+      //     this.$swal("Invalid time");
+      //     return;
+      //   }
+      // stop here if form is invalid
+      this.$v.$touch();
+      if (this.$v.$invalid) {
+        this.formHasErrors = true;
+        return;
+      }
+      if (!this.formHasErrors) {
+        app.axios.post(`${API_URL}/bookTime`, { data: { ...this.form, date: this.dateSelected.id, start: this.form.time.HH } });
+      }
+    },
+    changeHandler(eventData) {
+      // eventData -> {data: {HH:..., mm:...}, displayTime: 'HH:mm'}
+
+      if (eventData.data.A && eventData.data.HH) {
+        this.timeSelected = true;
+      } else {
+        this.timeSelected = false;
+      }
     },
   },
 };
