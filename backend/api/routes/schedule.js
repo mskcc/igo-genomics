@@ -1,12 +1,13 @@
 const https = require('https');
 const _ = require('lodash');
-const util = require('./util');
+const helpers = require('../util/helpers');
+const mailer = require('../util/mailer');
+const scheduleConfig = require('../util/scheduleConfig');
 const AppointmentModel = require('../models/AppointmentModel');
 // LIMS is authorized. Avoids certificate verification & "unable to verify the first certificate in nodejs" errors
 const agent = new https.Agent({
   rejectUnauthorized: false,
 });
-const scheduleConfig = require('./scheduleConfig');
 
 module.exports = function (router) {
   router.post('/bookTime', function (req, response) {
@@ -33,6 +34,7 @@ module.exports = function (router) {
           .status(500)
           .json({ message: 'Appointment could not be saved.' });
       }
+      mailer.sendNotification(appointment);
       return response.status(200).json({
         message: 'Appointment saved! Please check for a confirmation email.',
       });
@@ -64,7 +66,7 @@ module.exports = function (router) {
         // if appointments exist on this date:  for every startTime on that day, run getAvailableTimes
         let range = defaultHourRange;
         appointments.forEach((appointment) => {
-          range = util.getAvailableHours(appointment.startTime, range);
+          range = helpers.getAvailableHours(appointment.startTime, range);
         });
 
         if (_.isEmpty(range)) {
