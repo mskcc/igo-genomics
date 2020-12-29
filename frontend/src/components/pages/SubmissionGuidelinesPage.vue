@@ -119,12 +119,14 @@
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset">
                     <ol>
-                      <li>
-                        <strong> If submitting fresh cells:</strong> e-mail patelr1@mskcc.org to schedule a time to bring your samples
-                      </li>
+                      <li><strong>If submitting fresh cells:</strong> e-mail patelr1@mskcc.org to schedule a time to bring your samples</li>
                       <li>Fill out an iLab form for “Epigenetic Library Prep + Sequencing”</li>
-                      <li>Submit the sample webform</li>
-                      <li><strong>If submitting viably frozen cells:</strong> e-mail SPM to set up a time to bring your samples to IGO</li>
+                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
+                      <li>
+                        <strong>If submitting viably frozen cells:</strong>
+                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> email SPM </a>to set up a time to bring your
+                        samples to IGO
+                      </li>
                     </ol>
                   </md-list-item>
                 </md-list>
@@ -133,9 +135,278 @@
                 <md-icon>add</md-icon>
                 <span class="md-list-item-text md-title">Cells for 10X Genomics single cell sequencing</span>
                 <md-list slot="md-expand">
-                  <md-list-item class="md-inset">World</md-list-item>
-                  <md-list-item class="md-inset">Europe</md-list-item>
-                  <md-list-item class="md-inset">South America</md-list-item>
+                  <md-list-item class="md-inset">
+                    <ol>
+                      <li>
+                        Make a reservation in iLab for a time to bring your samples – the system will block off three hours for
+                        processing<br /><strong>Note:</strong> 10X ATAC projects should select morning drop-offs only
+                      </li>
+                      <li>Fill out an iLab request for “Single Cell Library Prep + Sequencing”</li>
+                      <li>
+                        Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting the appropriate 10X
+                        Genomics application
+                        <ul>
+                          <li>10X_Genomics-Expression+VDJ</li>
+                          <li>10X_Genomics-GeneExpression-5</li>
+                          <li>10X_Genomics-GeneExpression-3</li>
+                          <li>10X_Genomics-ATAC</li>
+                        </ul>
+                      </li>
+                      <li>Bring your single-cell or single-nuclei suspension to IGO at the designated time</li>
+                    </ol>
+                  </md-list-item>
+                </md-list>
+              </md-list-item>
+              <md-list-item md-expand>
+                <md-icon>add</md-icon>
+                <span class="md-list-item-text md-title">Tissue for 10X Genomics Visium</span>
+                <md-list slot="md-expand">
+                  <md-list-item class="md-inset"
+                    ><ol>
+                      <li>Contact MCC to discuss your needs to schedule your sample drop off</li>
+                      <li>Fill out an iLab form for “10x Visium – Spatial Transcriptomics”</li>
+                      <li>
+                        Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> with “10_Genomics-Visium” as your
+                        application
+                      </li>
+                      <li>Drop off your sample at MCC at the agreed-upon time</li>
+                    </ol></md-list-item
+                  >
+                </md-list>
+              </md-list-item>
+              <md-list-item md-expand>
+                <md-icon>add</md-icon>
+                <span class="md-list-item-text md-title">DNA for WES or Human/Mouse WGS</span>
+                <md-list slot="md-expand">
+                  <md-list-item class="md-inset"
+                    ><ol>
+                      <li>
+                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Samples to be moved downstream">
+                          Email SPM
+                        </a>
+                        to get micronic tubes for your DNA
+                      </li>
+                      <li>
+                        Fill out an iLab request for the appropriate application
+                        <ul>
+                          <li>Whole Exome Capture and Sequencing</li>
+                          <li>Human or Mouse – Whole Genome Sequencing</li>
+                        </ul>
+                      </li>
+                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
+                      <li>
+                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> Email SPM </a>to schedule a time to bring
+                        your samples
+                      </li>
+                    </ol></md-list-item
+                  >
+                </md-list>
+              </md-list-item>
+              <md-list-item md-expand>
+                <md-icon>add</md-icon>
+                <span class="md-list-item-text md-title">DNA for other applications</span>
+                <md-list slot="md-expand">
+                  <md-list-item class="md-inset"
+                    ><ol>
+                      <li>
+                        Pick up a 96-well plate from the door of ZRC 320
+                        <ul>
+                          <li>MSK-DNA-XX#### for DNA (red)</li>
+                          <li>CRISPR-XX#### for CRISPR amplicons (green)</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Fill out an iLab request for the appropriate application
+                        <ul>
+                          <li>Adaptive immunoSEQ</li>
+                          <li>CRISPR Sequencing</li>
+                          <li>EPIC MethylCapture Seq</li>
+                          <li>Epigenetic Library Prep + Sequencing</li>
+                          <li>IMPACT/HemePACT/Custom Capture and Sequencing</li>
+                          <li>Library Prep and Illumina Next-Gen Sequencing</li>
+                          <li>Mouse-IMPACT</li>
+                          <li>Shallow Whole Genome Sequencing for Copy Number</li>
+                          <li>Digital PCR</li>
+                          <li>Fragment Analysis</li>
+                        </ul>
+                      </li>
+                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
+                      <li>
+                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> Email SPM </a>to schedule a time to bring
+                        your samples
+                      </li>
+                    </ol></md-list-item
+                  >
+                </md-list>
+              </md-list-item>
+              <md-list-item md-expand>
+                <md-icon>add</md-icon>
+                <span class="md-list-item-text md-title">RNA for sequencing applications</span>
+                <md-list slot="md-expand">
+                  <md-list-item class="md-inset"
+                    ><ol>
+                      <li>Pick up a yellow 96-well plate from the door of ZRC 320 with barcode MSK-RNA-X####X</li>
+                      <li>
+                        Fill out an iLab request for the appropriate application
+                        <ul>
+                          <li>Archer Panel Sequencing</li>
+                          <li>RNA Library Prep and Sequencing</li>
+                        </ul>
+                      </li>
+                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
+                      <li>
+                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> Email SPM </a>to schedule a time to bring
+                        your samples
+                      </li>
+                    </ol></md-list-item
+                  >
+                </md-list>
+              </md-list-item>
+              <md-list-item md-expand>
+                <md-icon>add</md-icon>
+                <span class="md-list-item-text md-title">Individual libraries for sequencing</span>
+                <md-list slot="md-expand">
+                  <md-list-item class="md-inset"
+                    ><ol>
+                      <li>
+                        <strong>If you are submitting for the first time or submitting a new construct:</strong> e-mail genomics@mskcc.org
+                        with your protocol, a link to your reference, your primer barcodes, or a schematic of your construct
+                      </li>
+                      <li>Pick up a 96-well plate from the door of ZRC 320 with barcode MSK-LIB-####XX</li>
+                      <li>Fill out an iLab request for “User Libraries for Sequencing”</li>
+                      <li>
+                        Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting “DNA Library” as your
+                        material
+                      </li>
+                      <li>
+                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> Email SPM </a>to schedule a time to bring
+                        your samples
+                      </li>
+                    </ol></md-list-item
+                  >
+                </md-list>
+              </md-list-item>
+              <md-list-item md-expand>
+                <md-icon>add</md-icon>
+                <span class="md-list-item-text md-title">Pooled libraries for sequencing</span>
+                <md-list slot="md-expand">
+                  <md-list-item class="md-inset">
+                    <ol>
+                      <li>
+                        <strong>If you are submitting for the first time or submitting a new construct:</strong> e-mail genomics@mskcc.org
+                        with your protocol, a link to your reference, your primer barcodes, or a schematic of your construct
+                      </li>
+                      <li>
+                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> Email SPM </a>to get a micronic tube for
+                        your pool
+                      </li>
+                      <li>Fill out an iLab request for “User Libraries for Sequencing”</li>
+                      <li>
+                        Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting “Pooled Library” as your
+                        material
+                      </li>
+                      <li>
+                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> Email SPM </a>to schedule a time to bring
+                        your samples
+                      </li>
+                    </ol>
+                  </md-list-item>
+                </md-list>
+              </md-list-item>
+              <md-list-item md-expand>
+                <md-icon>add</md-icon>
+                <span class="md-list-item-text md-title">DMP libraries for capture</span>
+                <md-list slot="md-expand">
+                  <md-list-item class="md-inset"
+                    ><ol>
+                      <li>
+                        Fill out an iLab form
+                        <ul>
+                          <li>IMPACT/HemePACT/Custom Capture and Sequencing</li>
+                          <li>Whole Exome Capture and Sequencing</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting DNA Library” as your
+                        material
+                      </li>
+                      <li>E-mail your CMO Project Manager to initiate sample transfer from the DMP</li>
+                    </ol></md-list-item
+                  >
+                </md-list>
+              </md-list-item>
+              <md-list-item md-expand>
+                <md-icon>add</md-icon>
+                <span class="md-list-item-text md-title">Design or order a new assay for ddPCR</span>
+                <md-list slot="md-expand">
+                  <md-list-item class="md-inset"
+                    ><ol>
+                      <li>
+                        Fill out an iLab request for “Digital PCR Assay Design”, listing the assay(s) needed and/or attaching the
+                        appropriate design file
+                      </li>
+                      <li>
+                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org">Email SPM</a> to get a micronic tube for your
+                        positive control(s)
+                      </li>
+                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> for your positive control</li>
+                      <li>E-mail farinaa@mskcc.org to coordinate sample drop off for your assay optimization</li>
+                      <li>
+                        Follow the instructions under “DNA or RNA for ddPCR” <strong>or</strong> “Tissue, cells, slides, or other material
+                        for nucleic acid extraction”
+                      </li>
+                    </ol></md-list-item
+                  >
+                </md-list>
+              </md-list-item>
+              <md-list-item md-expand>
+                <md-icon>add</md-icon>
+                <span class="md-list-item-text md-title">DNA/RNA for ddPCR</span>
+                <md-list slot="md-expand">
+                  <md-list-item class="md-inset"
+                    ><ol>
+                      <li>Make sure that your desired assay is in stock</li>
+                      <li>
+                        Pick up a 96-well plate from the door of ZRC 320
+                        <ul>
+                          <li>MSK-RNA-X####X (yellow)</li>
+                          <li>MSK-DNA-XX#### for DNA (red)</li>
+                        </ul>
+                      </li>
+                      <li>Fill out an iLab request for “Digital PCR”</li>
+                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
+                      <li>
+                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> Email SPM </a>to schedule a time to bring
+                        your samples
+                      </li>
+                    </ol></md-list-item
+                  >
+                </md-list>
+              </md-list-item>
+              <md-list-item md-expand>
+                <md-icon>add</md-icon>
+                <span class="md-list-item-text md-title"
+                  >DNA/RNA/Library for quality control by Quant-it or Agilent BioAnalyzer or TapeStation</span
+                >
+                <md-list slot="md-expand">
+                  <md-list-item class="md-inset"
+                    ><ol>
+                      <li>
+                        Pick up a 96-well plate from the door of ZRC 320
+                        <ul>
+                          <li>MSK-RNA-X####X (yellow)</li>
+                          <li>MSK-DNA-XX#### for DNA (red)</li>
+                          <li>MSK-LIB-####XX (white or red)</li>
+                        </ul>
+                      </li>
+                      <li>Fill out an iLab request for “Quality Control for Nucleic Acids”</li>
+                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
+                      <li>
+                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> Email SPM </a>to schedule a time to bring
+                        your samples
+                      </li>
+                    </ol></md-list-item
+                  >
                 </md-list>
               </md-list-item>
             </md-list>

@@ -10,6 +10,7 @@
           :attributes="attrs"
           :disabled-dates="disabledDates"
           :min-date="new Date()"
+          :max-date="getMaxDate()"
           :value="dateSelected"
           @dayclick="(event) => dayClick(event)"
         />
@@ -83,11 +84,11 @@
 </template>
 
 <script>
-import * as app from './../../app.js';
-import { API_URL } from './../../config.js';
-import VueTimepicker from 'vue2-timepicker';
-import 'vue2-timepicker/dist/VueTimepicker.css';
-import { required, email, numeric } from 'vuelidate/lib/validators';
+import * as app from "./../../app.js";
+import { API_URL } from "./../../config.js";
+import VueTimepicker from "vue2-timepicker";
+import "vue2-timepicker/dist/VueTimepicker.css";
+import { required, email, numeric } from "vuelidate/lib/validators";
 
 export default {
   components: { VueTimepicker },
@@ -106,11 +107,20 @@ export default {
       hourRange: null,
 
       dateSelected: new Date(),
-      disabledDates: [new Date(2020, 12, 31), { weekdays: [1, 7] }],
+      disabledDates: [
+        new Date("1/1/2021"),
+        new Date("1/18/2021"),
+        new Date("5/31/2021"),
+        new Date("7/5/2021"),
+        new Date("9/6/2021"),
+        new Date("11/25/2021"),
+        new Date("12/24/2021"),
+        { weekdays: [1, 7] },
+      ],
       attrs: [
         {
           highlight: {
-            fillMode: 'solid',
+            fillMode: "solid",
           },
         },
       ],
@@ -131,9 +141,10 @@ export default {
   //       this.formHasErrors = this.$v.$invalid;
   //     },
   //   },
+
   methods: {
     dayClick(date) {
-      // console.log(date);
+      console.log(date);
       // console.log('form', this.form);
       this.daySelected = true;
       this.dateSelected = date;
@@ -152,7 +163,7 @@ export default {
 
       if (field) {
         return {
-          'md-invalid': field.$invalid && field.$dirty,
+          "md-invalid": field.$invalid && field.$dirty,
         };
       }
     },
@@ -165,8 +176,11 @@ export default {
       if (!this.formHasErrors) {
         app.axios
           .post(`${API_URL}/bookTime`, { data: { ...this.form, date: this.dateSelected.id } })
-          .then((response) => this.$swal({ title: 'Booked', text: response.data.message, animation: false, icon: 'success' }))
-          .catch((error) => this.$swal({ title: 'Unable to book', text: error.response.data.message, animation: false, icon: 'error' }));
+          .then((response) => {
+            this.$swal({ title: "Booked", text: response.data.message, animation: false, icon: "success" });
+            this.daySelected = false;
+          })
+          .catch((error) => this.$swal({ title: "Unable to book", text: error.response.data.message, animation: false, icon: "error" }));
       }
     },
     changeHandler(eventData) {
@@ -178,6 +192,11 @@ export default {
       } else {
         this.timeSelected = false;
       }
+    },
+    getMaxDate() {
+      var today = new Date();
+      var newdate = new Date();
+      return newdate.setDate(today.getDate() + 90);
     },
   },
 };
