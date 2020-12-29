@@ -24,7 +24,7 @@
             <md-card-header>
               <div class="md-title">Book</div>
             </md-card-header>
-            <span v-show="!timesAvailable">There are no available times for this day. You can join the waitlist HERE.</span>
+            <span v-show="!timesAvailable">There are no available times for this day. You can join the waitlist HERE.  If you are looking to cancel an existing appointment, please refer to your confirmation email.</span>
             <span v-show="timesAvailable">
               <md-card-content>
                 <vue-timepicker

@@ -1,5 +1,7 @@
 const https = require('https');
 const _ = require('lodash');
+var mongoose = require('mongoose');
+var ObjectId = mongoose.Types.ObjectId;
 const helpers = require('../util/helpers');
 const mailer = require('../util/mailer');
 const scheduleConfig = require('../util/scheduleConfig');
@@ -35,7 +37,7 @@ module.exports = function (router) {
           .status(500)
           .json({ message: 'Appointment could not be saved.' });
       }
-      mailer.sendNotification(appointment);
+      mailer.sendBookingNotification(appointment);
       return response.status(200).json({
         message: 'Appointment saved! Please check for a confirmation email.',
       });
@@ -80,5 +82,35 @@ module.exports = function (router) {
         // Appointments exist on this date, adjust hourRange accordingly
         // Grab all start times and use them as input for
       });
+  });
+
+  //  using get because this link will be clicked from notification emails
+  router.get('/cancelAppointment/:id', function (req, response) {
+    let appointmentId = req.params.id;
+    AppointmentModel.findByIdAndDelete(ObjectId(appointmentId)).exec(function (
+      err,
+      appointment
+    ) {
+      if (appointment) {
+        mailer.sendCancellationNotification(appointment);
+        return response
+          .status(200)
+          .send(
+            '<p style=" text-align: center; font-size: larger;">Appointment cancelled!</p><p style=" text-align: center;" ><img style="width:50px; margin:auto 0;" src="https://igodev.mskcc.org/img/logoDarkGrayOnTransp.f0d9e455.png"></p>'
+          );
+      }
+      if (err) {
+        return response.status(500).json({
+          message: 'Could not cancel appointment',
+        });
+      }
+      // send cancellation email
+
+      return response
+        .status(200)
+        .send(
+          '<p style=" text-align: center; font-size: larger;">Appointment not found.</p><p style=" text-align: center;" ><img style="width:50px; margin:auto 0;" src="https://igodev.mskcc.org/img/logoDarkGrayOnTransp.f0d9e455.png"></p>'
+        );
+    });
   });
 };
