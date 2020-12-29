@@ -5,7 +5,6 @@ import store from "./store";
 import VueCoreVideoPlayer from "vue-core-video-player";
 import DatePicker from "v-calendar";
 import VueTimepicker from "vue2-timepicker";
-import VueSweetalert2 from "vue-sweetalert2";
 import Vuelidate from "vuelidate";
 
 import HomePage from "./components/pages/HomePage.vue";
@@ -51,7 +50,6 @@ import VueCarousel from "vue-carousel";
 
 Vue.use(VueCarousel);
 Vue.use(VueCoreVideoPlayer);
-Vue.use(VueSweetalert2);
 Vue.use(Vuelidate);
 
 Vue.use(VueRouter);

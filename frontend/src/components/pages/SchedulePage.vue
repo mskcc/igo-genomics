@@ -42,11 +42,13 @@
                   <label>Email</label>
                   <md-input v-model="form.email" />
                   <span class="md-error" v-if="!$v.form.email.required">Email is required</span>
+                  <span class="md-error" v-else-if="!$v.form.sampleNumber.email">Please enter a valid email</span>
                 </md-field>
                 <md-field :class="getValidationClass('sampleNumber')">
                   <label>Estimated Number of Cells</label>
                   <md-input v-model="form.sampleNumber" />
                   <span class="md-error" v-if="!$v.form.sampleNumber.required">Number of samples is required</span>
+                  <span class="md-error" v-else-if="!$v.form.sampleNumber.numeric">Please enter a number</span>
                 </md-field>
 
                 <md-field :class="getValidationClass('chemistry')">
@@ -74,7 +76,7 @@ import * as app from "./../../app.js";
 import { API_URL } from "./../../config.js";
 import VueTimepicker from "vue2-timepicker";
 import "vue2-timepicker/dist/VueTimepicker.css";
-import { required, email } from "vuelidate/lib/validators";
+import { required, email, numeric } from "vuelidate/lib/validators";
 
 export default {
   components: { VueTimepicker },
@@ -85,7 +87,7 @@ export default {
       form: {
         name: null,
         email: null,
-        sampleNumber: 4,
+        sampleNumber: null,
         chemistry: null,
         time: { A: null, HH: null },
       },
@@ -107,7 +109,7 @@ export default {
     form: {
       name: { required },
       email: { required, email },
-      sampleNumber: { required },
+      sampleNumber: { required, numeric },
       chemistry: { required },
     },
   },
@@ -119,11 +121,12 @@ export default {
   //   },
   methods: {
     dayClick(date) {
+      console.log(date);
       this.daySelected = true;
       this.dateSelected = date;
 
       app.axios
-        .get(`${API_URL}/availableSlots/${this.dateSelected.weekday}/${this.dateSelected.id}`)
+        .get(`${API_URL}/availableSlots/${this.dateSelected.weekday}/${this.dateSelected}`)
         .then((response) => (this.timeSlots = response.data));
     },
     getValidationClass(fieldName) {
