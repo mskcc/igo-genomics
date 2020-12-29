@@ -23,47 +23,58 @@
             <md-card-header>
               <div class="md-title">Book</div>
             </md-card-header>
-            <md-card-content>
-              <vue-timepicker format="hh A" v-model="form.time" @change="changeHandler" placeholder="Dropoff Time" close-on-complete>
-                <template v-slot:icon> <i class="far fa-clock"></i> </template
-              ></vue-timepicker>
-              <span v-show="timeSelected">
-                <md-field>
-                  <label>Selected date</label>
-                  <md-input v-model="dateSelected.id" readonly>{{ dateSelected.id }}</md-input>
-                </md-field>
+            <span v-show="!timesAvailable">There are no available times for this day. You can join the waitlist HERE.</span>
+            <span v-show="timesAvailable">
+              <md-card-content>
+                <vue-timepicker
+                  format="hh A"
+                  v-model="form.time"
+                  :hour-range="hourRange"
+                  hide-disabled-items
+                  @change="changeHandler"
+                  placeholder="Dropoff Time"
+                  close-on-complete
+                >
+                  <template v-slot:icon> <i class="far fa-clock"></i> </template
+                ></vue-timepicker>
+                <span v-show="timeSelected">
+                  <md-field>
+                    <label>Selected date</label>
+                    <md-input v-model="dateSelected.id" readonly>{{ dateSelected.id }}</md-input>
+                  </md-field>
 
-                <md-field :class="getValidationClass('name')">
-                  <label>Full Name</label>
-                  <md-input v-model="form.name" />
-                  <span class="md-error" v-if="!$v.form.name.required">Name is required</span>
-                </md-field>
-                <md-field :class="getValidationClass('email')">
-                  <label>Email</label>
-                  <md-input v-model="form.email" />
-                  <span class="md-error" v-if="!$v.form.email.required">Email is required</span>
-                  <span class="md-error" v-else-if="!$v.form.sampleNumber.email">Please enter a valid email</span>
-                </md-field>
-                <md-field :class="getValidationClass('sampleNumber')">
-                  <label>Estimated Number of Cells</label>
-                  <md-input v-model="form.sampleNumber" />
-                  <span class="md-error" v-if="!$v.form.sampleNumber.required">Number of samples is required</span>
-                  <span class="md-error" v-else-if="!$v.form.sampleNumber.numeric">Please enter a number</span>
-                </md-field>
+                  <md-field :class="getValidationClass('name')">
+                    <label>Full Name</label>
+                    <md-input v-model="form.name" />
+                    <span class="md-error" v-if="!$v.form.name.required">Name is required</span>
+                  </md-field>
+                  <md-field :class="getValidationClass('email')">
+                    <label>Email</label>
+                    <md-input v-model="form.email" />
+                    <span class="md-error" v-if="!$v.form.email.required">Email is required</span>
+                    <span class="md-error" v-else-if="!$v.form.sampleNumber.email">Please enter a valid email</span>
+                  </md-field>
+                  <md-field :class="getValidationClass('sampleNumber')">
+                    <label>Estimated Number of Cells</label>
+                    <md-input v-model="form.sampleNumber" />
+                    <span class="md-error" v-if="!$v.form.sampleNumber.required">Number of samples is required</span>
+                    <span class="md-error" v-else-if="!$v.form.sampleNumber.numeric">Please enter a number</span>
+                  </md-field>
 
-                <md-field :class="getValidationClass('chemistry')">
-                  <label>Chemistry</label>
-                  <md-select v-model="form.chemistry">
-                    <md-option value="10x 3'">10x 3'</md-option>
-                    <md-option value="10x 5'">10x 5'</md-option>
-                  </md-select>
-                  <span class="md-error" v-if="!$v.form.chemistry.required">Chemistry is required</span>
-                </md-field>
-              </span>
-            </md-card-content>
-            <md-card-actions>
-              <md-button type="submit" class="md-primary">Submit</md-button>
-            </md-card-actions>
+                  <md-field :class="getValidationClass('chemistry')">
+                    <label>Chemistry</label>
+                    <md-select v-model="form.chemistry">
+                      <md-option value="10x 3'">10x 3'</md-option>
+                      <md-option value="10x 5'">10x 5'</md-option>
+                    </md-select>
+                    <span class="md-error" v-if="!$v.form.chemistry.required">Chemistry is required</span>
+                  </md-field>
+                </span>
+              </md-card-content>
+              <md-card-actions>
+                <md-button type="submit" class="md-primary">Submit</md-button>
+              </md-card-actions>
+            </span>
           </span>
         </md-card>
       </form>
@@ -84,15 +95,16 @@ export default {
     return {
       daySelected: false,
       timeSelected: false,
+      timesAvailable: true,
       form: {
-        name: 'lisa',
-        email: 'lisa@da.com',
-        sampleNumber: 5,
-        chemistry: "10x 3'",
-        time: { A: 'AM', hh: '12', militaryTime: null },
+        name: null,
+        email: null,
+        sampleNumber: null,
+        chemistry: null,
+        time: { A: null, hh: null, militaryTime: null },
       },
-      timeSlots: null,
-      //   radio: false,
+      hourRange: null,
+
       dateSelected: new Date(),
       disabledDates: [new Date(2020, 12, 31), { weekdays: [1, 7] }],
       attrs: [
@@ -121,14 +133,19 @@ export default {
   //   },
   methods: {
     dayClick(date) {
-      console.log(date);
-      console.log('form', this.form);
+      // console.log(date);
+      // console.log('form', this.form);
       this.daySelected = true;
       this.dateSelected = date;
 
-      app.axios
-        .get(`${API_URL}/availableSlots/${this.dateSelected.weekday}/${this.dateSelected}`)
-        .then((response) => (this.timeSlots = response.data));
+      app.axios.get(`${API_URL}/availableSlots/${this.dateSelected.weekday}/${this.dateSelected.id}`).then((response) => {
+        if (response.status === 204) {
+          this.timesAvailable = false;
+        } else {
+          this.timesAvailable = true;
+          this.hourRange = response.data.hourRange;
+        }
+      });
     },
     getValidationClass(fieldName) {
       const field = this.$v.form[fieldName];
@@ -140,17 +157,11 @@ export default {
       }
     },
     book() {
-      //   if (!this.form.time || this.form.time.A === "" || this.form.time.HH === "") {
-      //     this.$swal("Invalid time");
-      //     return;
-      //   }
-      // stop here if form is invalid
       this.$v.$touch();
       if (this.$v.$invalid) {
         this.formHasErrors = true;
         return;
       }
-      // console.log(this.form.time);
       if (!this.formHasErrors) {
         app.axios
           .post(`${API_URL}/bookTime`, { data: { ...this.form, date: this.dateSelected.id } })
@@ -163,7 +174,7 @@ export default {
 
       if (eventData.data.A && eventData.data.HH) {
         this.timeSelected = true;
-        this.form.time.militaryTime = eventData.data.HH;
+        this.form.time.militaryTime = parseInt(eventData.data.HH);
       } else {
         this.timeSelected = false;
       }

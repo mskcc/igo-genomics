@@ -1,3 +1,54 @@
+
+// if (dayMin + d <= start) priorR = [min..start]
+// if (dayMax - end >= d) afterR = [end..max]
+// return priorR+afterR
+const _ = require('lodash');
+const duration = 3;
+export function getAvailableHours(
+  startTime,
+  range = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+) {
+  if (!range.includes(startTime)) return [];
+  const start = startTime;
+  const end = start + duration;
+
+  const dayMin = range[0];
+  const dayMax = range[range.length - 1];
+
+  let priorRange = [];
+  let afterRange = [];
+  // can someone book prior to this appointment?
+  if (dayMin + duration <= start) {
+    // create times between minimum for that day and start time of appointment
+    priorRange = _.range(dayMin, startTime - 2);
+    // only keep times that still exist in the current range
+    priorRange = _.intersection(priorRange, range);
+  }
+  if (dayMax - end >= duration) {
+    afterRange = _.range(end, dayMax + 1);
+    afterRange = _.intersection(afterRange, range);
+  }
+  //  remove times after 6pm
+  let result = [...priorRange, ...afterRange].filter(
+    (element) => element <= 18
+  );
+  return result;
+}
+// console.log('18', getAvailableHours(15));
+// console.log('10', getAvailableHours(14));
+// console.log('11', getAvailableHours(11));
+// console.log(
+//   'existing booking at 13, next booking at 10',
+//   getAvailableHours(10, [10, 16, 17, 18, 19, 20, 21])
+// );
+
+// // [13, 14, 15]
+// console.log(
+//   'existing booking at 10, next booking at 18',
+//   getAvailableHours(18, [13, 14, 15, 16, 17, 18, 19, 20, 21])
+// );
+
+
 // range: [10..21]
 // start: 17
 // end: 20
@@ -38,53 +89,3 @@ function getRemainingTimes(startTime) {
 }
 const { after } = require('lodash');
 // console.log(getRemainingTimes(17));
-
-// if (dayMin + d <= start) priorR = [min..start]
-// if (dayMax - end >= d) afterR = [end..max]
-// return priorR+afterR
-
-var _ = require('lodash');
-const duration = 3;
-function getAvailableHours(
-  startTime,
-  range = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
-) {
-  if (!range.includes(startTime)) return []
-  const start = startTime;
-  const end = start + duration;
-  const dayMin = range[0];
-  const dayMax = range[range.length - 1];
-
-  let priorRange = [];
-  let afterRange = [];
-  // can someone book prior to this appointment?
-  if (dayMin + duration <= start) {
-    // create times between minimum for that day and start time of appointment
-    priorRange = _.range(dayMin, startTime - 2);
-    // only keep times that still exist in the current range
-    priorRange = _.intersection(priorRange, range)
-  }
-  if (dayMax - end >= duration) {
-    afterRange = _.range(end, dayMax + 1);
-    afterRange = _.intersection(afterRange, range)
-  }
-  //  remove times after 6pm
-  let result = [...priorRange, ...afterRange].filter(
-    (element) => element <= 18
-  );
-  return result;
-
-}
-console.log('15', getAvailableHours(15));
-console.log('14', getAvailableHours(14));
-console.log('11', getAvailableHours(11));
-console.log(
-  'existing booking at 13, next booking at 10',
-  getAvailableHours(10, [10, 16, 17, 18, 19, 20, 21])
-);
-
-// [13, 14, 15]
-console.log(
-  'existing booking at 10, next booking at 18',
-  getAvailableHours(18, [13, 14, 15, 16, 17, 18, 19, 20, 21])
-);
