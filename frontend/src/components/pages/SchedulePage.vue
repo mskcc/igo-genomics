@@ -101,7 +101,7 @@ export default {
         email: null,
         sampleNumber: null,
         chemistry: null,
-        time: { A: null, hh: null, militaryTime: null },
+        time: { A: null, hh: null, h: null, militaryTime: null },
       },
       hourRange: null,
 
@@ -171,10 +171,10 @@ export default {
     },
     changeHandler(eventData) {
       // eventData -> {data: {HH:..., mm:...}, displayTime: 'HH:mm'}
-
       if (eventData.data.A && eventData.data.HH) {
         this.timeSelected = true;
         this.form.time.militaryTime = parseInt(eventData.data.HH);
+        this.form.time.h = eventData.data.h;
       } else {
         this.timeSelected = false;
       }

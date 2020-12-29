@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer');
 
 const emailConfig = {
   notificationSender: 'igoski@mskcc.org',
-  recipients: 'wagnerl@mskcc.org, patrunoa@mskcc.org, lisa.wagner91@gmail.com',
+  notificationRecipients: 'wagnerl@mskcc.org, patrunoa@mskcc.org, lisa.wagner91@gmail.com',
   subject: 'Your 10x booking, ',
   footer:
     '<br><br><br>Thank you, <br><br><a href="http://cmo.mskcc.org/cmo/igo/">Integrated Genomics Operation</a><br><a href="https://www.mskcc.org">Memorial Sloan Kettering Cancer Center</a><br>T 646.888.3765<br>Follow us on <a href="https://www.instagram.com/genomics212/?hl=en">Instagram</a> and <a href="https://twitter.com/genomics212?lang=en">Twitter</a>!<br>',
@@ -30,11 +30,12 @@ exports.sendNotification = function (appointment) {
 
  
   let email = {
-    subject: `${emailConfig.subject} ${appointment.date} Drop-off at: ${appointment.startTime}`,
+    subject: `${emailConfig.subject} ${appointment.date} Drop-off at: ${appointment.emailTime}`,
     content: `You booked sth. You can cancel it. `,
     footer: emailConfig.footer,
   };
   console.log(email);
+  console.log(recipients);
 
 //   logger.log('info', `${email} sent to recipients.`);
   transporter

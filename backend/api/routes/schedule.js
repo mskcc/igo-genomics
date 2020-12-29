@@ -17,6 +17,7 @@ module.exports = function (router) {
       email: form.email,
       date: form.date,
       startTime: form.time.militaryTime,
+      emailTime: `${form.time.h}${form.time.A}`,
       details: {
         chemistry: form.chemistry,
         sampleNumber: form.sampleNumber,
