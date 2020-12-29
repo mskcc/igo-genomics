@@ -5,7 +5,7 @@ const agent = new https.Agent({
   rejectUnauthorized: false,
 });
 const scheduleConfig = require('./scheduleConfig');
-// const req = require('request');
+
 
 module.exports = function (router) {
   router.post('/bookTime', function (req, response) {
@@ -14,7 +14,7 @@ module.exports = function (router) {
       fullName: form.name,
       email: form.email,
       date: form.date,
-      timeslot: form.timeslot,
+      startTime: form.time.hh,
       details: {
         chemistry: form.chemistry,
         sampleNumber: form.sampleNumber,
@@ -23,14 +23,23 @@ module.exports = function (router) {
     appointment.save(function (err) {
       if (err) {
         console.log(err);
-        return response.status(500).json('Appointment could not be saved.');
+        if (err.code === 11000) {
+          return response.status(409).json({
+            message:
+              'An appointment for this email, time and date is already booked.',
+          });
+        }
+        return response
+          .status(500)
+          .json({ message: 'Appointment could not be saved.' });
       }
-      return response.status(200).json('Appointment saved.');
+      return response
+        .status(200)
+        .json({
+          message: 'Appointment saved! Please check for a confirmation email.',
+        });
     });
   });
-};
-
-module.exports = function (router) {
   router.get('/availableSlots/:weekday/:date', function (req, response) {
     // for this day, which slots are taken if any
     console.log(req.params);

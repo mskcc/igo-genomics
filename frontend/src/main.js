@@ -28,6 +28,9 @@ import OtherCriteria from "./components/OtherCriteria.vue";
 import MetricsAndThroughputPage from "./components/pages/MetricsAndThroughputPage.vue";
 import SchedulePage from "./components/pages/SchedulePage.vue";
 
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+
 import {
   MdButton,
   MdCard,
@@ -51,6 +54,7 @@ import VueCarousel from "vue-carousel";
 Vue.use(VueCarousel);
 Vue.use(VueCoreVideoPlayer);
 Vue.use(Vuelidate);
+Vue.use(VueSweetalert2);
 
 Vue.use(VueRouter);
 Vue.use(MdButton);

@@ -72,11 +72,11 @@
 </template>
 
 <script>
-import * as app from "./../../app.js";
-import { API_URL } from "./../../config.js";
-import VueTimepicker from "vue2-timepicker";
-import "vue2-timepicker/dist/VueTimepicker.css";
-import { required, email, numeric } from "vuelidate/lib/validators";
+import * as app from './../../app.js';
+import { API_URL } from './../../config.js';
+import VueTimepicker from 'vue2-timepicker';
+import 'vue2-timepicker/dist/VueTimepicker.css';
+import { required, email, numeric } from 'vuelidate/lib/validators';
 
 export default {
   components: { VueTimepicker },
@@ -85,11 +85,11 @@ export default {
       daySelected: false,
       timeSelected: false,
       form: {
-        name: null,
-        email: null,
-        sampleNumber: null,
-        chemistry: null,
-        time: { A: null, HH: null },
+        name: 'lisa',
+        email: 'lisa@da.com',
+        sampleNumber: 5,
+        chemistry: "10x 3'",
+        time: { A: 'AM', hh: '12' },
       },
       timeSlots: null,
       //   radio: false,
@@ -98,7 +98,7 @@ export default {
       attrs: [
         {
           highlight: {
-            fillMode: "solid",
+            fillMode: 'solid',
           },
         },
       ],
@@ -122,6 +122,7 @@ export default {
   methods: {
     dayClick(date) {
       console.log(date);
+      console.log('form', this.form);
       this.daySelected = true;
       this.dateSelected = date;
 
@@ -134,7 +135,7 @@ export default {
 
       if (field) {
         return {
-          "md-invalid": field.$invalid && field.$dirty,
+          'md-invalid': field.$invalid && field.$dirty,
         };
       }
     },
@@ -150,7 +151,10 @@ export default {
         return;
       }
       if (!this.formHasErrors) {
-        app.axios.post(`${API_URL}/bookTime`, { data: { ...this.form, date: this.dateSelected.id, start: this.form.time.HH } });
+        app.axios
+          .post(`${API_URL}/bookTime`, { data: { ...this.form, date: this.dateSelected.id, start: this.form.time.hh } })
+          .then((response) => this.$swal({ title: 'Booked', text: response.data.message, animation: false, icon: 'success' }))
+          .catch((error) => this.$swal({ title: 'Unable to book', text: error.response.data.message, animation: false, icon: 'error' }));
       }
     },
     changeHandler(eventData) {
