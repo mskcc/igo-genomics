@@ -89,7 +89,7 @@ export default {
         email: 'lisa@da.com',
         sampleNumber: 5,
         chemistry: "10x 3'",
-        time: { A: 'AM', hh: '12' },
+        time: { A: 'AM', hh: '12', militaryTime: null },
       },
       timeSlots: null,
       //   radio: false,
@@ -150,9 +150,10 @@ export default {
         this.formHasErrors = true;
         return;
       }
+      // console.log(this.form.time);
       if (!this.formHasErrors) {
         app.axios
-          .post(`${API_URL}/bookTime`, { data: { ...this.form, date: this.dateSelected.id, start: this.form.time.hh } })
+          .post(`${API_URL}/bookTime`, { data: { ...this.form, date: this.dateSelected.id } })
           .then((response) => this.$swal({ title: 'Booked', text: response.data.message, animation: false, icon: 'success' }))
           .catch((error) => this.$swal({ title: 'Unable to book', text: error.response.data.message, animation: false, icon: 'error' }));
       }
@@ -162,6 +163,7 @@ export default {
 
       if (eventData.data.A && eventData.data.HH) {
         this.timeSelected = true;
+        this.form.time.militaryTime = eventData.data.HH;
       } else {
         this.timeSelected = false;
       }
