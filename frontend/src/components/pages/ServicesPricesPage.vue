@@ -1,5 +1,6 @@
 <template>
   <div>
+    <gantt-page></gantt-page>
     <div class="prices-container">
       <div class="bulk-header">
         <img class="prices-image" src="http://genomics.mskcc.org/wp-content/uploads/2020/01/services1.png" alt="bulk logo" />
@@ -340,10 +341,12 @@
 </template>
 
 <script>
+import GanttPage from "./GanttPage.vue";
 import { bulkServices, singleServices, otherServices } from "./../../data.js";
 
 export default {
   name: "ServicesPricesPage",
+  components: { GanttPage },
   data: function() {
     return { bulkServices: bulkServices, singleServices: singleServices, otherServices: otherServices };
   },

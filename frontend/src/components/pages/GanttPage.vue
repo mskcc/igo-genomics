@@ -14,16 +14,17 @@
       :data="timeline.rows"
       :readOnly="true"
       :disableVisualSelection="true"
-      stretchH='all'
+      stretchH="all"
       licenseKey="non-commercial-and-evaluation"
     ></hot-table>
   </div>
 </template>
 
 <script>
-import { HotTable } from '@handsontable/vue';
+import { HotTable } from "@handsontable/vue";
 
 export default {
+  name: "GanttPage",
   components: { HotTable },
   data() {
     return {};
@@ -37,4 +38,3 @@ export default {
 </script>
 
 <style src="../../../node_modules/handsontable/dist/handsontable.full.css"></style>
-

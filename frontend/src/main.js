@@ -115,7 +115,7 @@ const routes = [
   { path: "/igo-at-home/:name", component: ShowVideoPage, name: "show video", props: true },
   { path: "/archer-fusion", component: ArcherFusionPage, name: "archer fusion" },
   { path: "/metrics-and-throughput", component: MetricsAndThroughputPage, name: "metrics and throughput" },
-  { path: "/schedule", component: SchedulePage, name: "schedule" },
+  { path: "/schedule", component: SchedulePage, name: "schedule 10x dropoff" },
   { path: "/gantt", component: GanttPage, name: "gantt" },
 ];
 
