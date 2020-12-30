@@ -44,9 +44,9 @@
   /* grid-template-rows: 0.75fr 5fr 0.5fr; */
   grid-template-rows: 150px 5fr 100px;
   grid-template-areas:
-    "header"
-    "main"
-    "footer";
+    'header'
+    'main'
+    'footer';
 }
 
 .app-header {
@@ -277,8 +277,8 @@ form {
   grid-column-gap: 10px;
   grid-template-rows: 200px 1fr;
   grid-template-areas:
-    "bulk-header single-header other-header"
-    "bulk-data single-data other-data";
+    'bulk-header single-header other-header'
+    'bulk-data single-data other-data';
 }
 
 .prices-image {
@@ -384,8 +384,8 @@ form {
   /* display: grid; */
   grid-template-rows: 25% 75%;
   grid-template-areas:
-    "description"
-    "image";
+    'description'
+    'image';
   /* position: absolute; */
 }
 
@@ -421,8 +421,8 @@ form {
   display: grid;
   /* grid-template-rows: auto; */
   grid-template-areas:
-    "team-description"
-    "members";
+    'team-description'
+    'members';
 }
 
 .team-description {
@@ -543,4 +543,20 @@ sup {
 
 .md-layout-item {
   max-width: 50%;
+}
+
+/* GANTT CHART  */
+.ht_master tr:nth-of-type(even) > td {
+  background-color: hsl(240, 2%, 95%);
+}
+.handsontable .htDimmed {
+  padding: 0;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  border: 0;
+  color: black !important;
+}
+
+.handsontable td:first-of-type {
+  border-left: 0 !important;
 }

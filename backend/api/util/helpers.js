@@ -1,5 +1,8 @@
 // if (dayMin + d <= start) priorR = [min..start]
 // if (dayMax - end >= d) afterR = [end..max]
+
+import moment from 'moment';
+
 // return priorR+afterR
 const _ = require('lodash');
 const duration = 3;
@@ -102,10 +105,14 @@ var months = [
   'December',
 ];
 export function last12Months() {
-  var dates = [];
   let d = new Date();
   let y = d.getFullYear();
   let m = d.getMonth();
+
+  let monthNumber, monthName, year, data;
+  let columns = [];
+
+  // add zeros to single digit months to keep them valid Date months
   function padMonth(month) {
     if (month < 10) {
       return '0' + month;
@@ -115,29 +122,77 @@ export function last12Months() {
   }
   if (m === 11) {
     for (var i = 1; i < 13; i++) {
-      let month = parseInt(padMonth(i));
-      let data = months[month - 1];
-      dates.push({
-        year: y,
-        month: parseInt(padMonth(i)),
-        columnHeader: data,
-        data: data,
+      monthNumber = padMonth(i);
+      monthName = months[monthNumber - 1];
+      year = y;
+      columns.push({
+        columnHeader: `${monthName.substring(0, 3)} ${year}`,
+        data: `${monthNumber}-01-${y}`,
+        renderer: 'html',
       });
     }
   } else {
     for (var i = m + 1; i < m + 13; i++) {
       if (i % 12 > m) {
-        let month = parseInt(padMonth(i + 1));
-        let data = months[month - 1];
-        dates.push({ year: y - 1, month: m, columnHeader: data, data: data });
+        monthNumber = padMonth(i + 1);
+        monthName = months[monthNumber - 1];
+        year = y - 1;
       } else {
-        let month = parseInt(padMonth((i % 12) + 1));
-        let data = months[month - 1];
-        dates.push({ year: y, month: month, columnHeader: data, data: data });
+        monthNumber = padMonth((i % 12) + 1);
+        monthName = months[monthNumber - 1];
+        year = y;
       }
+      columns.push({
+        columnHeader: `${monthName.substring(0, 3)} ${year}`,
+        data: `${monthNumber}-01-${year}`,
+        renderer: 'html',
+      });
     }
   }
-
-  return dates;
+  return columns;
 }
-console.log(last12Months());
+
+export function generateChemistryRows(columns, chemistries) {
+  let rows = [];
+  let timeWindow = columns.map((element) => element.data);
+
+  // filter chemistries where endDate outside of current time window/last 12 months
+  chemistries = chemistries.filter(
+    (chemistry) =>
+      timeWindow.includes(chemistry.stop) || chemistry.stop === 'present'
+  );
+
+  chemistries.forEach((chemistry) => {
+    // choose timeline start date by checking which ones more recent: the time window's first month or the chemistry start month?
+    let periodStart =
+      new Date(timeWindow[0]) > new Date(chemistry.start)
+        ? timeWindow[0]
+        : chemistry.start;
+    var dateStart = moment(new Date(periodStart));
+    var dateEnd;
+    // if chemistry.stop = present, stop the timeline with the current date, else use the chemistry's stop date
+    if (chemistry.stop === 'present') {
+      dateEnd = moment(new Date());
+    } else {
+      dateEnd = moment(new Date(chemistry.stop));
+    }
+
+    var timeValues = [];
+    let color = chemistry.color ? chemistry.color : '#006098';
+    let row = { name: chemistry.name, color: color };
+
+    while (
+      dateEnd > dateStart ||
+      dateStart.format('M') === dateEnd.format('M')
+    ) {
+      row[
+        dateStart.format('MM-DD-YYYY')
+      ] = `<div style='background-color:${color};color:${color};'>_</div>`;
+
+      timeValues.push(dateStart.format('MM-DD-YYYY'));
+      dateStart.add(1, 'month');
+    }
+    rows.push(row);
+  });
+  return rows;
+}
