@@ -20,7 +20,7 @@ import SingleCellPage from "./components/pages/SingleCellPage.vue";
 import DataDeliveryPage from "./components/pages/DataDeliveryPage.vue";
 import GenomicsVisiumPage from "./components/pages/GenomicsVisiumPage.vue";
 import NewsPage from "./components/pages/NewsPage.vue";
-import IgoAtHomePage from "./components/pages/IgoAtHomePage.vue";
+import IgoTutorialsPage from "./components/pages/IgoTutorialsPage.vue";
 import ShowVideoPage from "./components/pages/ShowVideoPage.vue";
 import ArcherFusionPage from "./components/pages/ArcherFusionPage.vue";
 import RnaCriteria from "./components/RnaCriteria.vue";
@@ -111,8 +111,8 @@ const routes = [
   { path: "/accessing-your-data", component: DataDeliveryPage, name: "accessing your data" },
   { path: "/10x-genomics-visium", component: GenomicsVisiumPage, name: "10x genomics visium" },
   { path: "/news", component: NewsPage, name: "news" },
-  { path: "/igo-at-home", component: IgoAtHomePage, name: "igo at home" },
-  { path: "/igo-at-home/:name", component: ShowVideoPage, name: "show video", props: true },
+  { path: "/igo-tutorials", component: IgoTutorialsPage, name: "igo tutorials" },
+  { path: "/igo-tutorials/:name", component: ShowVideoPage, name: "show video", props: true },
   { path: "/archer-fusion", component: ArcherFusionPage, name: "archer fusion" },
   { path: "/metrics-and-throughput", component: MetricsAndThroughputPage, name: "metrics and throughput" },
   { path: "/schedule", component: SchedulePage, name: "schedule 10x dropoff" },

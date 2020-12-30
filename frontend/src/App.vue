@@ -119,7 +119,7 @@ export default {
         "10x genomics visium",
         "accessing your data",
         "ddpcr assays",
-        "igo at home",
+        "igo tutorials",
         "metrics and throughput",
         "sample criteria",
         "schedule 10x dropoff",
@@ -128,7 +128,7 @@ export default {
       toolsIsActive: [
         "sample criteria",
         "ddpcr assays",
-        "igo at home",
+        "igo tutorials",
         "single cell platforms",
         "accessing your data",
         "10x genomics visium",
@@ -150,9 +150,9 @@ export default {
   methods: {},
   watch: {
     $route() {
-      this.toolsIsActive = this.toolLinks.includes(this.$route.name);
+      this.toolsIsActive = this.toolLinks.includes(this.$route.name) || this.$route.path.includes("criteria");
       this.teamIsActive = this.$route.path.includes("about");
-      // console.log(this.toolsIsActive);
+
       // console.log(this.$route);
     },
   },

@@ -65,37 +65,39 @@ export default {
     //   console.log(this.$route);
     // },
   },
-  methods: {
-    getWindowWidth(event) {
-      this.windowWidth = document.documentElement.clientWidth;
-      if (event) {
-        if (event.type == "resize") {
-          this.checkSpan();
-        }
-      }
-    },
-    beforeDestroy() {
-      window.removeEventListener("resize", this.getWindowWidth);
-    },
-    checkSpan() {
-      if (document.querySelector("#about-page")) {
-        const tabsContainerSize = document.querySelector(".md-tabs-navigation.md-elevation-0").offsetTop;
+  // methods: {
+  //   getWindowWidth(event) {
+  //     this.windowWidth = document.documentElement.clientWidth;
+  //     if (event) {
+  //       if (event.type == "resize") {
+  //         this.checkSpan();
+  //       }
+  //     }
+  //   },
+  //   beforeDestroy() {
+  //     window.removeEventListener("resize", this.getWindowWidth);
+  //   },
+  //   checkSpan() {
+  //     if (document.querySelector("#about-page")) {
+  //       const tabsContainerSize = document.querySelector(".md-tabs-navigation.md-elevation-0").offsetTop;
 
-        const spanElement = document.querySelector("span");
-        if (tabsContainerSize < 251) {
-          // hide span element that displays as underline under active button
-          spanElement.style.display = "none";
-        } else {
-          spanElement.style.display = "block";
-        }
-      }
-    },
-  },
+  //       const spanElement = document.querySelector("span");
+  //       if (tabsContainerSize < 251) {
+  //         // hide span element that displays as underline under active button
+  //         spanElement.style.display = "none";
+  //       } else {
+  //         spanElement.style.display = "block";
+  //       }
+  //     }
+  //   },
+  // },
   mounted: function() {
     this.$nextTick(function() {
-      window.addEventListener("resize", this.getWindowWidth);
-      //Init
-      this.getWindowWidth();
+      // window.addEventListener("resize", this.getWindowWidth);
+      // //Init
+      // this.getWindowWidth();
+      const spanElement = document.querySelector("span");
+      spanElement.style.display = "none";
     });
     this.checkSpan(event);
   },
