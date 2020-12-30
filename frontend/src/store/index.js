@@ -24,8 +24,12 @@ export default new Vuex.Store({
       "Data",
       "Research & Development",
     ],
+    timeline: [],
   },
   mutations: {
+    setTimeline(state, payload) {
+      state.timeline = payload;
+    },
     setOutOfStockAssays(state, payload) {
       state.outOfStockAssays = payload;
     },
@@ -46,6 +50,13 @@ export default new Vuex.Store({
     },
   },
   actions: {
+    setLastTwelveMonths(context) {
+      app.axios.get(`${API_URL}/chemistryTimeline`).then((response) => {
+        let timeline = response.data;
+        console.log(response);
+        context.commit("setTimeline", timeline);
+      });
+    },
     setAssays(context) {
       app.axios
         // .get(process.env.VUE_APP_API_ROOT + "/api/getAssaysFromMongo")

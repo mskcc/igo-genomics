@@ -110,6 +110,7 @@ export default {
   name: "App",
   mounted() {
     this.$store.dispatch("setAssays");
+    this.$store.dispatch("setLastTwelveMonths");
   },
   data: function() {
     return {

@@ -27,9 +27,10 @@ import RnaCriteria from "./components/RnaCriteria.vue";
 import OtherCriteria from "./components/OtherCriteria.vue";
 import MetricsAndThroughputPage from "./components/pages/MetricsAndThroughputPage.vue";
 import SchedulePage from "./components/pages/SchedulePage.vue";
+import GanttPage from "./components/pages/GanttPage.vue";
 
-import VueSweetalert2 from 'vue-sweetalert2';
-import 'sweetalert2/dist/sweetalert2.min.css';
+import VueSweetalert2 from "vue-sweetalert2";
+import "sweetalert2/dist/sweetalert2.min.css";
 
 import {
   MdButton,
@@ -115,6 +116,7 @@ const routes = [
   { path: "/archer-fusion", component: ArcherFusionPage, name: "archer fusion" },
   { path: "/metrics-and-throughput", component: MetricsAndThroughputPage, name: "metrics and throughput" },
   { path: "/schedule", component: SchedulePage, name: "schedule" },
+  { path: "/gantt", component: GanttPage, name: "gantt" },
 ];
 
 const router = new VueRouter({
