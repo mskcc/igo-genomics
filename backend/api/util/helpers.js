@@ -1,4 +1,3 @@
-
 // if (dayMin + d <= start) priorR = [min..start]
 // if (dayMax - end >= d) afterR = [end..max]
 // return priorR+afterR
@@ -48,7 +47,6 @@ export function getAvailableHours(
 //   getAvailableHours(18, [13, 14, 15, 16, 17, 18, 19, 20, 21])
 // );
 
-
 // range: [10..21]
 // start: 17
 // end: 20
@@ -89,3 +87,57 @@ function getRemainingTimes(startTime) {
 }
 const { after } = require('lodash');
 // console.log(getRemainingTimes(17));
+var months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+export function last12Months() {
+  var dates = [];
+  let d = new Date();
+  let y = d.getFullYear();
+  let m = d.getMonth();
+  function padMonth(month) {
+    if (month < 10) {
+      return '0' + month;
+    } else {
+      return month;
+    }
+  }
+  if (m === 11) {
+    for (var i = 1; i < 13; i++) {
+      let month = parseInt(padMonth(i));
+      let data = months[month - 1];
+      dates.push({
+        year: y,
+        month: parseInt(padMonth(i)),
+        columnHeader: data,
+        data: data,
+      });
+    }
+  } else {
+    for (var i = m + 1; i < m + 13; i++) {
+      if (i % 12 > m) {
+        let month = parseInt(padMonth(i + 1));
+        let data = months[month - 1];
+        dates.push({ year: y - 1, month: m, columnHeader: data, data: data });
+      } else {
+        let month = parseInt(padMonth((i % 12) + 1));
+        let data = months[month - 1];
+        dates.push({ year: y, month: month, columnHeader: data, data: data });
+      }
+    }
+  }
+
+  return dates;
+}
+console.log(last12Months());
