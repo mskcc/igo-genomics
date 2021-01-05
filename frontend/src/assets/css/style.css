@@ -44,9 +44,9 @@
   /* grid-template-rows: 0.75fr 5fr 0.5fr; */
   grid-template-rows: 150px 5fr 100px;
   grid-template-areas:
-    'header'
-    'main'
-    'footer';
+    "header"
+    "main"
+    "footer";
 }
 
 .app-header {
@@ -277,8 +277,8 @@ form {
   grid-column-gap: 10px;
   grid-template-rows: 200px 1fr;
   grid-template-areas:
-    'bulk-header single-header other-header'
-    'bulk-data single-data other-data';
+    "bulk-header single-header other-header"
+    "bulk-data single-data other-data";
 }
 
 .prices-image {
@@ -384,8 +384,8 @@ form {
   /* display: grid; */
   grid-template-rows: 25% 75%;
   grid-template-areas:
-    'description'
-    'image';
+    "description"
+    "image";
   /* position: absolute; */
 }
 
@@ -421,8 +421,8 @@ form {
   display: grid;
   /* grid-template-rows: auto; */
   grid-template-areas:
-    'team-description'
-    'members';
+    "team-description"
+    "members";
 }
 
 .team-description {
@@ -551,12 +551,39 @@ sup {
 }
 .handsontable .htDimmed {
   padding: 0;
-  padding-top: .5em;
-  padding-bottom: .5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   border: 0;
   color: black !important;
 }
 
 .handsontable td:first-of-type {
   border-left: 0 !important;
+}
+
+/* metrics and througput */
+
+#top-requests,
+#top-requests-2 {
+  width: 520px;
+  height: 500px;
+  padding: 0 1%;
+}
+
+.wrap {
+  width: 1200px;
+  height: 650px;
+  overflow: hidden;
+}
+
+#top-requests-graph,
+#top-requests-graph-2 {
+  /* width: 1200px;
+  height: 200px; */
+  width: 100% !important;
+  height: 100% !important;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transform-origin: 0 0;
+  transform-origin: center;
 }
