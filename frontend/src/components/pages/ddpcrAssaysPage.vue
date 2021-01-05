@@ -40,7 +40,7 @@
             <md-card-header>
               <md-card-header-text>
                 <div class="md-title category-name">{{ category }}</div>
-                <div class="md-subhead">{{ descriptions[category] || "–" }}</div>
+                <!-- <div class="md-subhead">{{ descriptions[category] || "–" }}</div> -->
               </md-card-header-text>
             </md-card-header>
             <md-content class="md-scrollbar">
@@ -65,7 +65,10 @@
 export default {
   name: "ddpcrAssaysPage",
   data() {
-    return { search: "", descriptions: { Mutation: "mutation description", CNV: "cnv description" } };
+    return {
+      search: "",
+      // descriptions: { Mutation: "mutation description", CNV: "cnv description" }
+    };
   },
   computed: {
     assaysByCategory: function() {

@@ -89,7 +89,7 @@ export default new Vuex.Store({
             ],
           };
           let outOfStockAssayList = assays.filter((assay) => {
-            if (assay.assayVolume <= 0) {
+            if (assay.assayVolume === 0) {
               return assay.assayName;
             }
           });
