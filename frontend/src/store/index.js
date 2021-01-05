@@ -1,8 +1,8 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from 'vue';
+import Vuex from 'vuex';
 
-import * as app from "./../app.js";
-import { API_URL } from "./../config.js";
+import * as app from './../app.js';
+import { API_URL } from './../config.js';
 
 Vue.use(Vuex);
 
@@ -15,14 +15,14 @@ export default new Vuex.Store({
     newCategory: [],
     assayTableObject: {},
     teamNamesInIgo: [
-      "Leadership",
-      "Lab Support",
-      "Sample & Project Management",
-      "Extraction",
-      "Library Preparation",
-      "Sequencing",
-      "Data",
-      "Research & Development",
+      'Leadership',
+      'Lab Support',
+      'Sample & Project Management',
+      'Extraction',
+      'Library Preparation',
+      'Sequencing',
+      'Data',
+      'Research & Development',
     ],
     timeline: [],
   },
@@ -54,7 +54,7 @@ export default new Vuex.Store({
       app.axios.get(`${API_URL}/chemistryTimeline`).then((response) => {
         let timeline = response.data;
         console.log(response);
-        context.commit("setTimeline", timeline);
+        context.commit('setTimeline', timeline);
       });
     },
     setAssays(context) {
@@ -71,20 +71,20 @@ export default new Vuex.Store({
             rows: assays,
             columns: [
               {
-                columnHeader: "Assay Name",
-                data: "assayName",
+                columnHeader: 'Assay Name',
+                data: 'assayName',
               },
               {
-                columnHeader: "Active",
-                data: "assayType",
+                columnHeader: 'Active',
+                data: 'assayType',
               },
               {
-                columnHeader: "Volume",
-                data: "assayVolume",
+                columnHeader: 'Volume',
+                data: 'assayVolume',
               },
               {
-                columnHeader: "Expiration Date",
-                data: "expirationDate",
+                columnHeader: 'Expiration Date',
+                data: 'expirationDate',
               },
             ],
           };
@@ -96,7 +96,7 @@ export default new Vuex.Store({
           let outOfStockAssayNames = outOfStockAssayList.map((assay) => assay.assayName);
 
           let mouseAssayList = assays.filter((assay) => {
-            if (assay.species === "Mouse") {
+            if (assay.species === 'Mouse') {
               return assay.assayName;
             }
           });
@@ -118,10 +118,10 @@ export default new Vuex.Store({
               assaysByCategory.uncategorized.push(assays[i].assayName);
             }
           }
-          context.commit("setAssayTableObject", assayTableObject);
-          context.commit("setAssaysByCategory", assaysByCategory);
-          context.commit("setOutOfStockAssays", outOfStockAssayNames);
-          context.commit("setMouseAssays", mouseAssayNames);
+          context.commit('setAssayTableObject', assayTableObject);
+          context.commit('setAssaysByCategory', assaysByCategory);
+          context.commit('setOutOfStockAssays', outOfStockAssayNames);
+          context.commit('setMouseAssays', mouseAssayNames);
         });
     },
   },

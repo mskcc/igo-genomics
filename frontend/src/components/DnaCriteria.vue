@@ -203,7 +203,7 @@
 </template>
 
 <script>
-export default { name: "DnaCriteria" };
+export default { name: 'DnaCriteria' };
 </script>
 
 <style></style>

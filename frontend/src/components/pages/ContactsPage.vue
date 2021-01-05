@@ -29,7 +29,7 @@
 </template>
 
 <script>
-export default { name: "ContactsPage" };
+export default { name: 'ContactsPage' };
 </script>
 
 <style></style>

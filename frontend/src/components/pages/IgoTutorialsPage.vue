@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { tutorials } from "./../../data.js";
+import { tutorials } from './../../data.js';
 
 export default {
   data: function() {
@@ -30,7 +30,7 @@ export default {
   },
   filters: {
     returnScreenshot: function(screenshot) {
-      return require("../../assets/images/screenshots/" + screenshot + ".png");
+      return require('../../assets/images/screenshots/' + screenshot + '.png');
     },
   },
 };

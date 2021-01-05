@@ -24,7 +24,10 @@
             <md-card-header>
               <div class="md-title">Book</div>
             </md-card-header>
-            <span v-show="!timesAvailable">There are no available times for this day. You can join the waitlist HERE.  If you are looking to cancel an existing appointment, please refer to your confirmation email.</span>
+            <span v-show="!timesAvailable"
+              >There are no available times for this day. You can join the waitlist HERE. If you are looking to cancel an existing
+              appointment, please refer to your confirmation email.</span
+            >
             <span v-show="timesAvailable">
               <md-card-content>
                 <vue-timepicker
@@ -84,11 +87,11 @@
 </template>
 
 <script>
-import * as app from "./../../app.js";
-import { API_URL } from "./../../config.js";
-import VueTimepicker from "vue2-timepicker";
-import "vue2-timepicker/dist/VueTimepicker.css";
-import { required, email, numeric } from "vuelidate/lib/validators";
+import * as app from './../../app.js';
+import { API_URL } from './../../config.js';
+import VueTimepicker from 'vue2-timepicker';
+import 'vue2-timepicker/dist/VueTimepicker.css';
+import { required, email, numeric } from 'vuelidate/lib/validators';
 
 export default {
   components: { VueTimepicker },
@@ -108,19 +111,19 @@ export default {
 
       dateSelected: new Date(),
       disabledDates: [
-        new Date("1/1/2021"),
-        new Date("1/18/2021"),
-        new Date("5/31/2021"),
-        new Date("7/5/2021"),
-        new Date("9/6/2021"),
-        new Date("11/25/2021"),
-        new Date("12/24/2021"),
+        new Date('1/1/2021'),
+        new Date('1/18/2021'),
+        new Date('5/31/2021'),
+        new Date('7/5/2021'),
+        new Date('9/6/2021'),
+        new Date('11/25/2021'),
+        new Date('12/24/2021'),
         { weekdays: [1, 7] },
       ],
       attrs: [
         {
           highlight: {
-            fillMode: "solid",
+            fillMode: 'solid',
           },
         },
       ],
@@ -163,7 +166,7 @@ export default {
 
       if (field) {
         return {
-          "md-invalid": field.$invalid && field.$dirty,
+          'md-invalid': field.$invalid && field.$dirty,
         };
       }
     },
@@ -177,10 +180,10 @@ export default {
         app.axios
           .post(`${API_URL}/bookTime`, { data: { ...this.form, date: this.dateSelected.id } })
           .then((response) => {
-            this.$swal({ title: "Booked", text: response.data.message, animation: false, icon: "success" });
+            this.$swal({ title: 'Booked', text: response.data.message, animation: false, icon: 'success' });
             this.daySelected = false;
           })
-          .catch((error) => this.$swal({ title: "Unable to book", text: error.response.data.message, animation: false, icon: "error" }));
+          .catch((error) => this.$swal({ title: 'Unable to book', text: error.response.data.message, animation: false, icon: 'error' }));
       }
     },
     changeHandler(eventData) {

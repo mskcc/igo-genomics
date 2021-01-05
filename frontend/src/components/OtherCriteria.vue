@@ -54,7 +54,7 @@
 </template>
 
 <script>
-export default { name: "OtherCriteria" };
+export default { name: 'OtherCriteria' };
 </script>
 
 <style></style>

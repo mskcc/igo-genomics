@@ -63,10 +63,10 @@
 
 <script>
 export default {
-  name: "ddpcrAssaysPage",
+  name: 'ddpcrAssaysPage',
   data() {
     return {
-      search: "",
+      search: '',
       // descriptions: { Mutation: "mutation description", CNV: "cnv description" }
     };
   },
@@ -80,7 +80,7 @@ export default {
       // delete uncategorized assays to avoid empty card div in v-for
       delete filteredAssays.uncategorized;
 
-      if (this.search != "") {
+      if (this.search != '') {
         let searchResults = [];
         Object.keys(filteredAssays).forEach((category) => {
           // search results for this category are filtered, assign result of filtering to searchResults

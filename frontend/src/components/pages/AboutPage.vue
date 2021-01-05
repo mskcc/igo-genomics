@@ -41,14 +41,14 @@
 </template>
 
 <script>
-import TeamPage from "./TeamPage.vue";
-import { teams } from "./../../data.js";
+import TeamPage from './TeamPage.vue';
+import { teams } from './../../data.js';
 
 export default {
-  name: "AboutPage",
+  name: 'AboutPage',
   components: { TeamPage },
   data: function() {
-    return { teams: teams, windowWidth: "" };
+    return { teams: teams, windowWidth: '' };
   },
   computed: {
     teamNamesInIgo: function() {
@@ -96,8 +96,8 @@ export default {
       // window.addEventListener("resize", this.getWindowWidth);
       // //Init
       // this.getWindowWidth();
-      const spanElement = document.querySelector("span");
-      spanElement.style.display = "none";
+      const spanElement = document.querySelector('span');
+      spanElement.style.display = 'none';
     });
     this.checkSpan(event);
   },

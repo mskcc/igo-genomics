@@ -16,13 +16,13 @@
 </template>
 
 <script>
-import DnaCriteria from "../DnaCriteria.vue";
-import RnaCriteria from "../RnaCriteria.vue";
-import OtherCriteria from "../OtherCriteria.vue";
+import DnaCriteria from '../DnaCriteria.vue';
+import RnaCriteria from '../RnaCriteria.vue';
+import OtherCriteria from '../OtherCriteria.vue';
 
 export default {
   components: { DnaCriteria, RnaCriteria, OtherCriteria },
-  name: "CriteriaPage",
+  name: 'CriteriaPage',
 };
 </script>
 

@@ -94,39 +94,39 @@
 
 <script>
 export default {
-  name: "App",
+  name: 'App',
   mounted() {
-    this.$store.dispatch("setAssays");
-    this.$store.dispatch("setLastTwelveMonths");
+    this.$store.dispatch('setAssays');
+    this.$store.dispatch('setLastTwelveMonths');
   },
   data: function() {
     return {
-      links: ["home", "about", "platforms & pricing", "submission guidelines", "faqs"],
+      links: ['home', 'about', 'platforms & pricing', 'submission guidelines', 'faqs'],
       toolLinks: [
-        "10x genomics visium",
-        "accessing your data",
-        "ddpcr assays",
-        "igo tutorials",
-        "metrics and throughput",
-        "sample criteria",
-        "schedule 10x dropoff",
-        "single cell platforms",
+        '10x genomics visium',
+        'accessing your data',
+        'ddpcr assays',
+        'igo tutorials',
+        'metrics and throughput',
+        'sample criteria',
+        'schedule 10x dropoff',
+        'single cell platforms',
       ],
       toolsIsActive: [
-        "sample criteria",
-        "ddpcr assays",
-        "igo tutorials",
-        "single cell platforms",
-        "accessing your data",
-        "10x genomics visium",
-        "rna",
-        "other",
-        "metrics and throughput",
-        "schedule 10x dropoff",
+        'sample criteria',
+        'ddpcr assays',
+        'igo tutorials',
+        'single cell platforms',
+        'accessing your data',
+        '10x genomics visium',
+        'rna',
+        'other',
+        'metrics and throughput',
+        'schedule 10x dropoff',
       ].includes(this.$route.name),
-      teamIsActive: this.$route.path.includes("about"),
+      teamIsActive: this.$route.path.includes('about'),
       toolTips: {
-        "sample criteria": "A comprehensive guide to quality and quantity requirements",
+        'sample criteria': 'A comprehensive guide to quality and quantity requirements',
         // "ddpcr assays": "Available ddPPCR assays",
       },
       trigger: false,
@@ -137,8 +137,8 @@ export default {
   methods: {},
   watch: {
     $route() {
-      this.toolsIsActive = this.toolLinks.includes(this.$route.name) || this.$route.path.includes("criteria");
-      this.teamIsActive = this.$route.path.includes("about");
+      this.toolsIsActive = this.toolLinks.includes(this.$route.name) || this.$route.path.includes('criteria');
+      this.teamIsActive = this.$route.path.includes('about');
 
       // console.log(this.$route);
     },
@@ -147,5 +147,5 @@ export default {
 </script>
 
 <style lang="css">
-@import "./assets/css/style.css";
+@import './assets/css/style.css';
 </style>

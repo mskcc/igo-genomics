@@ -60,7 +60,7 @@
 </template>
 
 <script>
-export default { name: "ReopenFaq" };
+export default { name: 'ReopenFaq' };
 </script>
 
 <style></style>

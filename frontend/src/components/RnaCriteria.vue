@@ -98,7 +98,7 @@
 </template>
 
 <script>
-export default { name: "RnaCriteria" };
+export default { name: 'RnaCriteria' };
 </script>
 
 <style></style>

@@ -457,7 +457,7 @@
 
 export default {
   // components: { ReopenFaq },
-  name: "FaqsPage",
+  name: 'FaqsPage',
 };
 </script>
 

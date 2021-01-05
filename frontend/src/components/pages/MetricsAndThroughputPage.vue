@@ -123,7 +123,7 @@
 
 <script>
 export default {
-  name: "MetricsAndThroughputPage",
+  name: 'MetricsAndThroughputPage',
 };
 </script>
 

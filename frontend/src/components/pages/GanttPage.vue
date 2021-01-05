@@ -21,10 +21,10 @@
 </template>
 
 <script>
-import { HotTable } from "@handsontable/vue";
+import { HotTable } from '@handsontable/vue';
 
 export default {
-  name: "GanttPage",
+  name: 'GanttPage',
   components: { HotTable },
   data() {
     return {};

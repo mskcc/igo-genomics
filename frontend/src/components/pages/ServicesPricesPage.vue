@@ -341,11 +341,11 @@
 </template>
 
 <script>
-import GanttPage from "./GanttPage.vue";
-import { bulkServices, singleServices, otherServices } from "./../../data.js";
+import GanttPage from './GanttPage.vue';
+import { bulkServices, singleServices, otherServices } from './../../data.js';
 
 export default {
-  name: "ServicesPricesPage",
+  name: 'ServicesPricesPage',
   components: { GanttPage },
   data: function() {
     return { bulkServices: bulkServices, singleServices: singleServices, otherServices: otherServices };

@@ -10,9 +10,9 @@
 </template>
 
 <script>
-import { archerFusionGenes } from "./../../data.js";
+import { archerFusionGenes } from './../../data.js';
 export default {
-  name: "ArcherFusionPage",
+  name: 'ArcherFusionPage',
   data: function() {
     return { archerFusionGenes: archerFusionGenes };
   },

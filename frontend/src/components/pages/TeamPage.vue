@@ -14,11 +14,11 @@
 </template>
 
 <script>
-import { teams } from "./../../data.js";
+import { teams } from './../../data.js';
 
 export default {
-  name: "TeamPage",
-  props: ["team"],
+  name: 'TeamPage',
+  props: ['team'],
   data: function() {
     return {
       igoteam: this.team,
@@ -36,7 +36,7 @@ export default {
     memberImage: function(photoName) {
       // try {
       // console.log(photoName);
-      return require("../../assets/images/members/" + photoName + ".jpg");
+      return require('../../assets/images/members/' + photoName + '.jpg');
       // } catch (e) {
       //   return require("./assets/images/image-not-available.jpg");
     },

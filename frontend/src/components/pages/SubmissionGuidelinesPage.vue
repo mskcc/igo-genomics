@@ -418,17 +418,15 @@
 </template>
 
 <script>
-// import CovidInstructionsPage from "./CovidInstructionsPage.vue";
-
 export default {
-  name: "SubmissionGuidelinesPage",
+  name: 'SubmissionGuidelinesPage',
   data: function() {
     return {};
   },
   components: {},
   methods: {
     whatIsthis() {
-      if (document.querySelector("#this-page")) {
+      if (document.querySelector('#this-page')) {
         console.log(this);
       }
     },

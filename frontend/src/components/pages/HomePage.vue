@@ -174,10 +174,10 @@
 </template>
 
 <script>
-import { Carousel, Slide } from "vue-carousel";
+import { Carousel, Slide } from 'vue-carousel';
 // import { news } from "./../../data.js";
 export default {
-  name: "HomePage",
+  name: 'HomePage',
   components: {
     Carousel,
     Slide,
@@ -186,17 +186,17 @@ export default {
     return {
       // news: news,
       igoDescription:
-        "The Integrated Genomics Operation (IGO) core enables basic, clinical, and translational science by providing a broad range of services and expertise to investigators interested in evaluating gene expression, chromosome structure, and nucleotide sequence. Our services are comprehensive, rapid, and user-friendly. Through the centralized management of all sequencing activities at MSK, the core empowers scientists with an array of technological options and the most efficient and cost-effective means of performing high-throughput genomics.",
+        'The Integrated Genomics Operation (IGO) core enables basic, clinical, and translational science by providing a broad range of services and expertise to investigators interested in evaluating gene expression, chromosome structure, and nucleotide sequence. Our services are comprehensive, rapid, and user-friendly. Through the centralized management of all sequencing activities at MSK, the core empowers scientists with an array of technological options and the most efficient and cost-effective means of performing high-throughput genomics.',
       showDialog: false,
-      enlargedImage: "",
+      enlargedImage: '',
     };
   },
   methods: {
     showDialogMethod: function(event) {
       const imageElement = event.target;
-      const imageSrc = imageElement.getAttribute("src");
-      const cleanedImageSrc = imageSrc.split("/").pop();
-      this.enlargedImage = "http://localhost:8081/img/" + cleanedImageSrc;
+      const imageSrc = imageElement.getAttribute('src');
+      const cleanedImageSrc = imageSrc.split('/').pop();
+      this.enlargedImage = 'http://localhost:8081/img/' + cleanedImageSrc;
       this.showDialog = true;
     },
   },
