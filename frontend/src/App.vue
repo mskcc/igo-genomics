@@ -48,40 +48,22 @@
                       <md-menu-item>
                         <md-button href="https://igo.mskcc.org/sample-submission">
                           <i class="fas fa-upload"></i> Sample Submission
-                          <md-tooltip md-direction="right">
-                            A series of modules aimed at easing data access. Currently home to the Sample Submission Webform and Sample QC
-                            website.
-                          </md-tooltip>
                         </md-button>
                       </md-menu-item>
                       <md-menu-item>
-                        <md-button href="https://igo.mskcc.org/request-tracker">
-                          <i class="fas fa-tasks"></i> Request Tracker
-                          <md-tooltip md-direction="right">
-                            A series of modules aimed at easing data access. Currently home to the Sample Submission Webform and Sample QC
-                            website.
-                          </md-tooltip>
-                        </md-button>
+                        <md-button href="https://igo.mskcc.org/request-tracker"> <i class="fas fa-tasks"></i> Request Tracker </md-button>
                       </md-menu-item>
 
                       <md-menu-item>
                         <md-button href="https://igo.mskcc.org/sample-qc">
                           <i class="fas fa-check"></i>
                           Sample QC
-                          <md-tooltip md-direction="right">
-                            A series of modules aimed at easing data access. Currently home to the Sample Submission Webform and Sample QC
-                            website.
-                          </md-tooltip>
                         </md-button>
                       </md-menu-item>
                       <md-menu-item>
                         <md-button href="https://igo.mskcc.org/swabnseq">
                           <i class="fas fa-dna"></i>
                           Swab 'n Seq Results
-                          <md-tooltip md-direction="right">
-                            A series of modules aimed at easing data access. Currently home to the Sample Submission Webform and Sample QC
-                            website.
-                          </md-tooltip>
                         </md-button>
                       </md-menu-item>
                     </md-menu-content>
@@ -98,8 +80,13 @@
       <div class="app-footer">
         <!-- <img class="msk-logo" alt="MSK logo" src="./assets/icon2.png" />
         <div>ZRC 3rd floor</div> -->
+        <div></div>
         <img src="./assets/svg/msk-logo.svg" />
-        <div>ZRC 3rd floor</div>
+        <div class="md-body-2">
+          Sample receiving hours:<br />
+          Mon-Fri 8:30a-3:30p <br />ZRC-320 North<br />
+          Tel: 646-888-3765
+        </div>
       </div>
     </div>
   </div>
@@ -139,7 +126,7 @@ export default {
       ].includes(this.$route.name),
       teamIsActive: this.$route.path.includes("about"),
       toolTips: {
-        criteria: "A comprehensive guide to quality and quantity requirements",
+        "sample criteria": "A comprehensive guide to quality and quantity requirements",
         // "ddpcr assays": "Available ddPPCR assays",
       },
       trigger: false,

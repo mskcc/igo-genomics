@@ -25,7 +25,7 @@
             <tr>
               <td class="fa-icon fas fa-minus-circle fa-1x" style="color: Tomato"></td>
               <td class="legend-label">
-                Out of stock; addt'l ordering fee
+                Out of stock; addt'l ordering time
               </td>
             </tr>
           </tbody>
@@ -49,7 +49,7 @@
                 <span v-if="mouseAssays.includes(assay)"> &#128000;<md-tooltip md-direction="top">Mouse assay</md-tooltip></span>
                 <span v-if="outOfStockAssays.includes(assay)" style="color: Tomato"
                   ><i class="fa-icon fas fa-minus-circle fa-1x">
-                    <md-tooltip md-direction="top">Out of stock; addt'l ordering fee</md-tooltip>
+                    <md-tooltip md-direction="top">Out of stock; addt'l ordering time</md-tooltip>
                   </i></span
                 >
               </div>
