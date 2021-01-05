@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+
 // const { logger } = require('../util/winston');
 // const { emailConfig } = require('./constants');
 
@@ -26,7 +27,7 @@ let transporter = nodemailer.createTransport({
   // }
 });
 
-exports.sendBookingNotification = function (appointment) {
+exports.sendBookingNotification = function (appointment, appointmentIcal) {
   let recipients = [emailConfig.notificationRecipients, appointment.email];
   let cancellationLink = `${process.env.API_ROOT}/cancelAppointment/${appointment._id}`;
 
@@ -44,6 +45,11 @@ exports.sendBookingNotification = function (appointment) {
       subject: email.subject, // Subject line e.g. 'Hello ✔'
       html: email.content + email.footer, // html body e.g. '<b>Hello world?</b>'
       //text: text, // plain text body e.g. Hello world?
+      icalEvent: {
+        filename: '10xBooking.ics',
+        method: 'request',
+        content: appointmentIcal
+    }
     })
     // .then((result) => console.log(result))
     .catch((error) => console.log(error));

@@ -1,9 +1,13 @@
 const https = require('https');
 const _ = require('lodash');
+const ical = require('ical-generator');
+
+import moment from 'moment';
 var mongoose = require('mongoose');
 var ObjectId = mongoose.Types.ObjectId;
 const helpers = require('../util/helpers');
 const mailer = require('../util/mailer');
+
 const scheduleConfig = require('../util/scheduleConfig');
 const AppointmentModel = require('../models/AppointmentModel');
 // LIMS is authorized. Avoids certificate verification & "unable to verify the first certificate in nodejs" errors
@@ -25,6 +29,33 @@ module.exports = function (router) {
         sampleNumber: form.sampleNumber,
       },
     });
+    let dateAndTime = moment(`${form.date} ${form.time.militaryTime}:00`);
+    let end = moment(`${form.date} ${form.time.militaryTime}:00`).add(
+      30,
+      'minutes'
+    );
+
+    let invite = ical({
+      domain: 'genomics.mskkcc.org',
+      // prodId: '//superman-industries.com//ical-generator//EN',
+      events: [
+        {
+          // create a new event
+          start: dateAndTime,
+          timestamp: dateAndTime,
+          end: end,
+          summary: '10x Sample Dropoff',
+          location: 'ZRC 320',
+          description: "Please don't be late.",
+          organizer:
+            'zzPDL_SKI_IGO_Pathextrdasdadaaction <zzPDL_SKI_IGO_Pathextdasdadaraction@mskcc.org>',
+        },
+      ],
+    }).toString();
+
+    // let string = cal.toString()
+    // console.log(invite);
+    // mailer.sendBookingNotification(appointment, invite);
     appointment.save(function (err) {
       if (err) {
         if (err.code === 11000) {
@@ -37,7 +68,8 @@ module.exports = function (router) {
           .status(500)
           .json({ message: 'Appointment could not be saved.' });
       }
-      mailer.sendBookingNotification(appointment);
+
+      mailer.sendBookingNotification(appointment, invite);
       return response.status(200).json({
         message: 'Appointment saved! Please check for a confirmation email.',
       });
