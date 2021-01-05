@@ -1,5 +1,5 @@
 <template>
-  <div id="sample-guidelines">
+  <div>
     <!-- <div class="md-display-1">Submitting a Project</div> -->
     <md-card class="data-delivery-card">
       <md-card-content>
@@ -53,12 +53,12 @@
         </div>
         <!-- <md-button @click="toggle">Instructions for submitting COVID19 Requests</md-button>
         <covid-instructions-page v-if="covid"></covid-instructions-page> -->
-        <div class="full-control">
+        <div id="sample-guidelines" class="full-control">
           <div class="list">
             <md-list>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text md-title">Tissue, cells, slides, or other material for nucleic acid extraction</span>
+                <span class="md-list-item-text ">Tissue, cells, slides, or other material for nucleic acid extraction</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset">
                     <ol>
@@ -91,7 +91,7 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text md-title">Tissue or cells for COVID screening</span>
+                <span class="md-list-item-text ">Tissue or cells for COVID screening</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset">
                     <ol>
@@ -115,7 +115,7 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text md-title">Cells for ATAC-Seq</span>
+                <span class="md-list-item-text ">Cells for ATAC-Seq</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset">
                     <ol>
@@ -133,7 +133,7 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text md-title">Cells for 10X Genomics single cell sequencing</span>
+                <span class="md-list-item-text ">Cells for 10X Genomics single cell sequencing</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset">
                     <ol>
@@ -159,7 +159,7 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text md-title">Tissue for 10X Genomics Visium</span>
+                <span class="md-list-item-text ">Tissue for 10X Genomics Visium</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset"
                     ><ol>
@@ -176,7 +176,7 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text md-title">DNA for WES or Human/Mouse WGS</span>
+                <span class="md-list-item-text ">DNA for WES or Human/Mouse WGS</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset"
                     ><ol>
@@ -204,7 +204,7 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text md-title">DNA for other applications</span>
+                <span class="md-list-item-text ">DNA for other applications</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset"
                     ><ol>
@@ -241,7 +241,7 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text md-title">RNA for sequencing applications</span>
+                <span class="md-list-item-text ">RNA for sequencing applications</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset"
                     ><ol>
@@ -264,7 +264,7 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text md-title">Individual libraries for sequencing</span>
+                <span class="md-list-item-text ">Individual libraries for sequencing</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset"
                     ><ol>
@@ -288,7 +288,7 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text md-title">Pooled libraries for sequencing</span>
+                <span class="md-list-item-text ">Pooled libraries for sequencing</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset">
                     <ol>
@@ -315,7 +315,7 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text md-title">DMP libraries for capture</span>
+                <span class="md-list-item-text ">DMP libraries for capture</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset"
                     ><ol>
@@ -337,7 +337,7 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text md-title">Design or order a new assay for ddPCR</span>
+                <span class="md-list-item-text ">Design or order a new assay for ddPCR</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset"
                     ><ol>
@@ -361,7 +361,7 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text md-title">DNA/RNA for ddPCR</span>
+                <span class="md-list-item-text ">DNA/RNA for ddPCR</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset"
                     ><ol>
@@ -385,7 +385,7 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text md-title"
+                <span class="md-list-item-text "
                   >DNA/RNA/Library for quality control by Quant-it or Agilent BioAnalyzer or TapeStation</span
                 >
                 <md-list slot="md-expand">

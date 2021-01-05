@@ -99,7 +99,7 @@ export default {
       const spanElement = document.querySelector('span');
       spanElement.style.display = 'none';
     });
-    this.checkSpan(event);
+    // this.checkSpan(event);
   },
 };
 </script>
