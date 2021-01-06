@@ -45,11 +45,12 @@ exports.sendBookingNotification = function (appointment, appointmentIcal) {
       subject: email.subject, // Subject line e.g. 'Hello ✔'
       html: email.content + email.footer, // html body e.g. '<b>Hello world?</b>'
       //text: text, // plain text body e.g. Hello world?
-      icalEvent: {
-        filename: '10xBooking.ics',
-        method: 'request',
-        content: appointmentIcal
-    }
+      // TODO commented until we learn how to send iCal files through the MSK mailer
+    //   icalEvent: {
+    //     filename: '10xBooking.ics',
+    //     method: 'request',
+    //     content: appointmentIcal
+    // }
     })
     // .then((result) => console.log(result))
     .catch((error) => console.log(error));
