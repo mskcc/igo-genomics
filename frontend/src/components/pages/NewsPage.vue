@@ -47,7 +47,7 @@
           Submit for COVID19
         </md-button>
         <!-- <md-button class="md-raised md-primary" :to="{ name: 'reopen faq' }">Reopen FAQs</md-button> -->
-        <md-button class="md-raised md-primary" :to="{ name: 'igo at home' }">IGO @ Home</md-button>
+        <md-button class="md-raised md-primary" :to="{ name: 'igo tutorials' }">IGO Tutorials</md-button>
       </md-card-content>
     </md-card>
   </div>

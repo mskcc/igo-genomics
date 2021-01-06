@@ -3,13 +3,13 @@
     <div class="app-body">
       <div class="app-header md-elevation-7">
         <div class="logo-header">
-          <img class="igo-logo" alt="IGO logo" src="./assets/logoDarkGrayOnTransp.png" />
+          <md-button :to="{ name: 'home' }"> <img class="igo-logo" alt="IGO logo" src="./assets/logoDarkGrayOnTransp.png"/></md-button>
           <div class="md-headline">Integrated Genomics Operation</div>
         </div>
         <div class="right-header">
           <div class="pre-nav">
-            <md-button :md-ripple="false" @click="$router.push('about')">About</md-button>
-            <md-button :md-ripple="false" @click="$router.push('contacts')">Contact Us</md-button>
+            <md-button :md-ripple="false" :to="{ name: 'about' }">About</md-button>
+            <md-button :md-ripple="false" :to="{ name: 'contact us' }">Contact Us</md-button>
             <a href="https://twitter.com/genomics212?lang=en" target="_blank"><i class="fab fa-twitter fa-1x"></i></a>
             <a href="https://www.instagram.com/genomics212/" target="_blank"><i class="fab fa-instagram fa-1x"></i></a>
             <div class="search-form">
@@ -78,10 +78,8 @@
         <router-view></router-view>
       </div>
       <div class="app-footer">
-        <!-- <img class="msk-logo" alt="MSK logo" src="./assets/icon2.png" />
-        <div>ZRC 3rd floor</div> -->
         <div></div>
-        <img src="./assets/svg/msk-logo.svg" />
+        <img src="./assets/svg/msk-logo.svg" alt="MSK logo" />
         <div class="md-body-2">
           Sample receiving hours:<br />
           Mon-Fri 8:30a-3:30p <br />ZRC-320 North<br />

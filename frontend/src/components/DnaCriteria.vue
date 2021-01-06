@@ -10,6 +10,7 @@
         <md-table-head>Quality to Try</md-table-head>
         <md-table-head>Maximum Submission Volume</md-table-head>
       </md-table-row>
+
       <md-table-row>
         <md-table-cell rowspan="5">Adaptive immunoSEQ<sup>1</sup></md-table-cell>
         <md-table-cell>Lymphoid tissue</md-table-cell>
@@ -38,6 +39,7 @@
         <md-table-cell class="pass">3&#181;g</md-table-cell>
         <md-table-cell class="try">1&#181;g</md-table-cell>
       </md-table-row>
+
       <md-table-row>
         <md-table-cell>AmpliconSeq</md-table-cell>
         <md-table-cell></md-table-cell>

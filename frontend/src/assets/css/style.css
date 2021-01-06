@@ -44,9 +44,9 @@
   /* grid-template-rows: 0.75fr 5fr 0.5fr; */
   grid-template-rows: 150px 5fr 100px;
   grid-template-areas:
-    "header"
-    "main"
-    "footer";
+    'header'
+    'main'
+    'footer';
 }
 
 .app-header {
@@ -68,6 +68,10 @@
   flex-direction: row;
   /* justify-content: space-between; */
   align-items: center;
+}
+
+.logo-header .md-button {
+  height: auto;
 }
 
 .right-header {
@@ -121,7 +125,7 @@ form {
   margin-left: 10px;
 }
 
-.router-link-active {
+.main-nav .router-link-active {
   border-bottom: solid var(--mskcc-orange) 2px;
 }
 
@@ -172,7 +176,7 @@ form {
   grid-area: footer;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 1%;
+  padding: 1% 0%;
 }
 
 .app-footer .md-body-2 {
@@ -181,7 +185,7 @@ form {
 }
 
 .app-footer img {
-  max-width: 70%;
+  max-height: 100%;
   place-self: center;
 }
 
@@ -283,8 +287,8 @@ form {
   grid-column-gap: 10px;
   grid-template-rows: 200px 1fr;
   grid-template-areas:
-    "bulk-header single-header other-header"
-    "bulk-data single-data other-data";
+    'bulk-header single-header other-header'
+    'bulk-data single-data other-data';
 }
 
 .prices-image {
@@ -390,8 +394,8 @@ form {
   /* display: grid; */
   grid-template-rows: 25% 75%;
   grid-template-areas:
-    "description"
-    "image";
+    'description'
+    'image';
   /* position: absolute; */
 }
 
@@ -427,8 +431,8 @@ form {
   display: grid;
   /* grid-template-rows: auto; */
   grid-template-areas:
-    "team-description"
-    "members";
+    'team-description'
+    'members';
 }
 
 .team-description {

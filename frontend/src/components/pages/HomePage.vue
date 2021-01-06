@@ -3,6 +3,9 @@
     <div class="carousel-div">
       <carousel :per-page="1" :autoplay="true" :scrollPerPage="true" paginationActiveColor="#f29934" :paginationSize="13">
         <slide>
+          <img src="../../assets/images/lab/where_science_goes.png" />
+        </slide>
+        <slide>
           <img src="../../assets/images/lab/Viale_190612_104.jpg" />
         </slide>
         <slide>
@@ -40,15 +43,6 @@
       ></iframe>
     </div>
 
-    <!-- <div class="news-container">
-      <md-card class="news-card" md-with-hover v-for="entry in news" :key="entry.id">
-        <md-card-header>
-          <div class="md-title">{{ entry.name }}</div>
-          <div class="md-subhead">{{ entry.date }}</div>
-        </md-card-header>
-        <md-card-content>{{ entry.body }}</md-card-content>
-      </md-card>
-    </div> -->
     <div class="news">
       <div class="news-headline md-headline md-inset">News at the IGO</div>
 
@@ -175,7 +169,7 @@
 
 <script>
 import { Carousel, Slide } from 'vue-carousel';
-// import { news } from "./../../data.js";
+
 export default {
   name: 'HomePage',
   components: {
@@ -184,7 +178,6 @@ export default {
   },
   data: function() {
     return {
-      // news: news,
       igoDescription:
         'The Integrated Genomics Operation (IGO) core enables basic, clinical, and translational science by providing a broad range of services and expertise to investigators interested in evaluating gene expression, chromosome structure, and nucleotide sequence. Our services are comprehensive, rapid, and user-friendly. Through the centralized management of all sequencing activities at MSK, the core empowers scientists with an array of technological options and the most efficient and cost-effective means of performing high-throughput genomics.',
       showDialog: false,

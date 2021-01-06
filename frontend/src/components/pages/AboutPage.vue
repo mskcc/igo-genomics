@@ -96,7 +96,8 @@ export default {
       // window.addEventListener("resize", this.getWindowWidth);
       // //Init
       // this.getWindowWidth();
-      const spanElement = document.querySelector('span');
+      const aboutPage = document.querySelector('#about-page');
+      const spanElement = aboutPage.querySelector('span');
       spanElement.style.display = 'none';
     });
     // this.checkSpan(event);

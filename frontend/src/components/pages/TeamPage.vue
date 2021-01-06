@@ -32,15 +32,7 @@ export default {
       });
     },
   },
-  filters: {
-    memberImage: function(photoName) {
-      // try {
-      // console.log(photoName);
-      return require('../../assets/images/members/' + photoName + '.jpg');
-      // } catch (e) {
-      //   return require("./assets/images/image-not-available.jpg");
-    },
-  },
+
   // teamMembers: function() {
   //   return this.igoTeamObject.filter((object) => {
   //     return ob

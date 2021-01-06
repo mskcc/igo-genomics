@@ -7,6 +7,7 @@ import DatePicker from 'v-calendar';
 import VueTimepicker from 'vue2-timepicker';
 import Vuelidate from 'vuelidate';
 
+import './filters.js';
 import HomePage from './components/pages/HomePage.vue';
 import AboutPage from './components/pages/AboutPage.vue';
 import ddpcrAssaysPage from './components/pages/ddpcrAssaysPage.vue';
@@ -33,11 +34,13 @@ import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
 
 import {
+  MdAvatar,
   MdButton,
   MdCard,
   MdContent,
   MdDatepicker,
   MdDialog,
+  MdDivider,
   MdField,
   MdList,
   MdIcon,
@@ -58,10 +61,12 @@ Vue.use(Vuelidate);
 Vue.use(VueSweetalert2);
 
 Vue.use(VueRouter);
+Vue.use(MdAvatar);
 Vue.use(MdButton);
 Vue.use(MdCard);
 Vue.use(MdContent);
 Vue.use(MdDatepicker);
+Vue.use(MdDivider);
 Vue.use(MdDialog);
 Vue.use(MdField);
 Vue.use(MdIcon);

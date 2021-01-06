@@ -48,7 +48,7 @@ export const teams = [
       { name: 'Alan Li', role: 'Automation Engineer', photoName: 'Li_Alan' },
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
       { name: 'Magali Cavatore', role: 'Lab Manager', photoName: 'Cavatore_Magali' },
-      // { name: "Mary Betancor", role: "Assistant", photoName: "Betancor_Mary" },
+      { name: 'Mary Betancor', role: 'SKI Admin Assistant II' },
     ],
   },
   {
@@ -59,6 +59,8 @@ export const teams = [
       { name: 'Marisa Dunigan', role: 'Group Leader', photoName: 'Dunigan_Marisa' },
       { name: 'Meghanne Lomibao', role: 'Project Coordinator', photoName: 'Lomibao_Meghanne' },
       { name: 'Michael Pantano', role: 'Senior Project Assistant', photoName: 'Pantano_Michael' },
+      { name: 'Tressa Octave', role: 'Research Technician' },
+      { name: 'Valerie Patritti', role: 'Project Manager' },
       { name: 'Zoe Steinsnyder', role: 'Senior Project Assistant', photoName: 'Steinsnyder_Zoe' },
     ],
   },

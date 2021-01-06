@@ -59,7 +59,7 @@
                     <span class="md-error" v-else-if="!$v.form.sampleNumber.email">Please enter a valid email</span>
                   </md-field>
                   <md-field :class="getValidationClass('sampleNumber')">
-                    <label>Estimated Number of Cells</label>
+                    <label>Estimated Number of Samples</label>
                     <md-input v-model="form.sampleNumber" />
                     <span class="md-error" v-if="!$v.form.sampleNumber.required">Number of samples is required</span>
                     <span class="md-error" v-else-if="!$v.form.sampleNumber.numeric">Please enter a number</span>
