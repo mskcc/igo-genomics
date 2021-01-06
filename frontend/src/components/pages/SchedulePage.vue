@@ -68,14 +68,14 @@
                   <md-field :class="getValidationClass('chemistry')">
                     <label>Chemistry</label>
                     <md-select v-model="form.chemistry">
-                      <md-option value="10x 3'">10x 3'</md-option>
-                      <md-option value="10x 5'">10x 5'</md-option>
+                      <md-option value="10x 5’ RNA seq'">10x 5’ RNA seq</md-option>
+                      <md-option value="10x 3’ RNA seq'">10x 3’ RNA seq</md-option>
                     </md-select>
                     <span class="md-error" v-if="!$v.form.chemistry.required">Chemistry is required</span>
                   </md-field>
                 </span>
               </md-card-content>
-              <md-card-actions>
+              <md-card-actions v-show="timeSelected">
                 <md-button type="submit" class="md-primary">Submit</md-button>
               </md-card-actions>
             </span>

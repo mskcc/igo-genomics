@@ -1,5 +1,13 @@
 <template>
   <div>
+    <div v-if="announcement" class="announcement-bubble">
+      <span class="material-icons"> priority_high </span>
+      <span class="announcement-content">
+        IGO will not receive samples between Monday, 12/28 and Thursday, 12/31. Standard, scheduled sample drop off will resume Monday,
+        January 4th. We will be closed Friday, 12/25 and Friday, 1/1. We will still be available to answer any project-related questions you
+        have at genomics@mskcc.org. Please feel free to email vialea@mskcc.org with any other concerns.
+      </span>
+    </div>
     <div class="carousel-div">
       <carousel :per-page="1" :autoplay="true" :scrollPerPage="true" paginationActiveColor="#f29934" :paginationSize="13">
         <slide>
@@ -182,6 +190,7 @@ export default {
         'The Integrated Genomics Operation (IGO) core enables basic, clinical, and translational science by providing a broad range of services and expertise to investigators interested in evaluating gene expression, chromosome structure, and nucleotide sequence. Our services are comprehensive, rapid, and user-friendly. Through the centralized management of all sequencing activities at MSK, the core empowers scientists with an array of technological options and the most efficient and cost-effective means of performing high-throughput genomics.',
       showDialog: false,
       enlargedImage: '',
+      announcement: true,
     };
   },
   methods: {

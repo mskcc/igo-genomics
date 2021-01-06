@@ -108,7 +108,8 @@ export const teams = [
   {
     id: 6,
     name: 'Data',
-    description: 'programming support',
+    description:
+      "The IGO Data Team is a group of bioinformaticians, software engineers and computer scientists.  They work closely with IGO's customers and wet-lab technicians to write multiple software applications from sample receiving and LIMS processing to post-sequencing stats tracking and data delivery.",
     members: [
       { name: 'David Mcmanamon', role: 'Group Leader', photoName: 'Mcmanamon_David' },
       { name: 'Lisa Wagner', role: 'BioInf. Software Engineer', photoName: 'Wagner_Lisa' },
