@@ -25,8 +25,9 @@
               <div class="md-title">Book</div>
             </md-card-header>
             <span v-show="!timesAvailable"
-              >There are no available times for this day. You can join the waitlist HERE. If you are looking to cancel an existing
-              appointment, please refer to your confirmation email.</span
+              >There are no available times for this day. You can join the waitlist
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">here</a>. If you
+              are looking to cancel an existing appointment, please refer to your confirmation email.</span
             >
             <span v-show="timesAvailable">
               <md-card-content>
@@ -38,9 +39,17 @@
                   @change="changeHandler"
                   placeholder="Dropoff Time"
                   close-on-complete
+                  ref="timePicker"
                 >
                   <template v-slot:icon> <i class="far fa-clock"></i> </template
                 ></vue-timepicker>
+                <div v-if="waitListMessage">
+                  If your desired time slot is not available please complete
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform"
+                    >this waitlist form</a
+                  >
+                </div>
+                <div v-show="invalidTimeSelected">Invalid time slot, please correct</div>
                 <span v-show="timeSelected">
                   <md-field>
                     <label>Selected date</label>
@@ -99,6 +108,8 @@ export default {
     return {
       daySelected: false,
       timeSelected: false,
+      waitListMessage: true,
+      invalidTimeSelected: false,
       timesAvailable: true,
       form: {
         name: null,
@@ -189,7 +200,22 @@ export default {
     changeHandler(eventData) {
       // eventData -> {data: {HH:..., mm:...}, displayTime: 'HH:mm'}
       if (eventData.data.A && eventData.data.HH) {
-        this.timeSelected = true;
+        // check if the time selected is valid
+        if (this.$refs.timePicker.hasInvalidInput) {
+          this.waitListMessage = false;
+          this.invalidTimeSelected = true;
+          this.timeSelected = false;
+        } else {
+          this.waitListMessage = true;
+          this.invalidTimeSelected = false;
+          this.timeSelected = true;
+        }
+
+        // const input = document.getElementsByClassName('vue__time-picker time-picker')[0].querySelector('input');
+        // this.invalidTimeSelected = input.classList.contains('invalid');
+        // console.log(input);
+        // this.validTimeSelected = true;
+
         this.form.time.militaryTime = parseInt(eventData.data.HH);
         this.form.time.h = eventData.data.h;
       } else {

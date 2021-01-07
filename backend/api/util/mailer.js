@@ -33,7 +33,7 @@ exports.sendBookingNotification = function (appointment, appointmentIcal) {
 
   let email = {
     subject: `${emailConfig.subject} Drop-off samples at: ${appointment.emailTime} on ${appointment.date} `,
-    content: `You booked a 10x processing on ${appointment.date}. Your drop-off time is ${appointment.emailTime}.  You can cancel this appointment by clicking on: ${cancellationLink} 
+    content: `You booked a 10x processing on ${appointment.date}. Your drop-off time is ${appointment.emailTime}. Please call 646-888-3765 before dropping off your samples. You can cancel this appointment by clicking on: ${cancellationLink} 
     \n If you have any questions, please reach out to zzPDL_SKI_IGO_Pathextraction@mskcc.org.`,
     footer: emailConfig.footer,
   };
@@ -46,36 +46,34 @@ exports.sendBookingNotification = function (appointment, appointmentIcal) {
       html: email.content + email.footer, // html body e.g. '<b>Hello world?</b>'
       //text: text, // plain text body e.g. Hello world?
       // TODO commented until we learn how to send iCal files through the MSK mailer
-    //   icalEvent: {
-    //     filename: '10xBooking.ics',
-    //     method: 'request',
-    //     content: appointmentIcal
-    // }
+      //   icalEvent: {
+      //     filename: '10xBooking.ics',
+      //     method: 'request',
+      //     content: appointmentIcal
+      // }
     })
     // .then((result) => console.log(result))
     .catch((error) => console.log(error));
 };
 
-
 exports.sendCancellationNotification = function (appointment) {
-    let recipients = [emailConfig.notificationRecipients, appointment.email];
-    
-    let email = {
-      subject: `${emailConfig.subject} Cancelled ${appointment.emailTime} on ${appointment.date} `,
-      content: `Appointment on ${appointment.date}, ${appointment.emailTime} is cancelled.
+  let recipients = [emailConfig.notificationRecipients, appointment.email];
+
+  let email = {
+    subject: `${emailConfig.subject} Cancelled ${appointment.emailTime} on ${appointment.date} `,
+    content: `Appointment on ${appointment.date}, ${appointment.emailTime} is cancelled.
       \n If you have any questions, please reach out to zzPDL_SKI_IGO_Pathextraction@mskcc.org.`,
-      footer: emailConfig.footer,
-    };
-    //   logger.log('info', `${email} sent to recipients.`);
-    transporter
-      .sendMail({
-        from: emailConfig.notificationSender, // sender address e.g. no-reply@xyz.com or "Fred Foo 👻" <foo@example.com>
-        to: recipients.join(','), // list of receivers e.g. bar@example.com, baz@example.com
-        subject: email.subject, // Subject line e.g. 'Hello ✔'
-        html: email.content + email.footer, // html body e.g. '<b>Hello world?</b>'
-        //text: text, // plain text body e.g. Hello world?
-      })
-      // .then((result) => console.log(result))
-      .catch((error) => console.log(error));
+    footer: emailConfig.footer,
   };
-  
+  //   logger.log('info', `${email} sent to recipients.`);
+  transporter
+    .sendMail({
+      from: emailConfig.notificationSender, // sender address e.g. no-reply@xyz.com or "Fred Foo 👻" <foo@example.com>
+      to: recipients.join(','), // list of receivers e.g. bar@example.com, baz@example.com
+      subject: email.subject, // Subject line e.g. 'Hello ✔'
+      html: email.content + email.footer, // html body e.g. '<b>Hello world?</b>'
+      //text: text, // plain text body e.g. Hello world?
+    })
+    // .then((result) => console.log(result))
+    .catch((error) => console.log(error));
+};

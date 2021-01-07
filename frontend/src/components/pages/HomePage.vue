@@ -11,7 +11,7 @@
     <div class="carousel-div">
       <carousel :per-page="1" :autoplay="true" :scrollPerPage="true" paginationActiveColor="#f29934" :paginationSize="13">
         <slide>
-          <img src="../../assets/images/lab/where_science_goes.png" />
+          <img src="../../assets/images/lab/wheresciencegoesigo.jpeg" />
         </slide>
         <slide>
           <img src="../../assets/images/lab/Viale_190612_104.jpg" />
