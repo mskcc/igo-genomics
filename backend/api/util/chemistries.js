@@ -23,4 +23,10 @@ module.exports = [
     stop: 'present',
     color: '#40b4e5',
   },
+   {
+    name: 'IMPACT 506',
+    start: '08-01-2020',
+    stop: 'present',
+    color: '#40b4e5',
+  },
 ];
