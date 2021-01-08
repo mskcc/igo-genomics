@@ -13,11 +13,16 @@
 
       <md-table-row>
         <md-table-cell rowspan="5">Adaptive immunoSEQ<sup>1</sup></md-table-cell>
+        <md-table-cell>FFPE</md-table-cell>
+        <md-table-cell class="pass">25&#181;m</md-table-cell>
+        <md-table-cell class="try">&lt;5 curls</md-table-cell>
+        <md-table-cell rowspan="5" colspan="2">No quality requirements</md-table-cell>
+        <md-table-cell rowspan="5">50&#181;L</md-table-cell>
+      </md-table-row>
+      <md-table-row>
         <md-table-cell>Lymphoid tissue</md-table-cell>
         <md-table-cell class="pass">650ng</md-table-cell>
         <md-table-cell class="try">175ng</md-table-cell>
-        <md-table-cell rowspan="5" colspan="2">No quality requirements</md-table-cell>
-        <md-table-cell rowspan="5">50&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>PBMCs</md-table-cell>
@@ -62,7 +67,7 @@
           ><a href="https://my.ilabsolutions.com/service_center/3276/?tab=services" target="__blank">CRISPRSeq</a></md-table-cell
         >
         <md-table-cell></md-table-cell>
-        <md-table-cell class="pass">1&#181;g<sup>2</sup></md-table-cell>
+        <md-table-cell class="pass">1&#181;g</md-table-cell>
         <md-table-cell class="try">400ng</md-table-cell>
         <md-table-cell class="pass">200-280bp</md-table-cell>
         <md-table-cell class="fail">No try range</md-table-cell>

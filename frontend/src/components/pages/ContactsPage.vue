@@ -41,7 +41,7 @@
         </md-avatar> -->
         <md-icon class="md-primary">email</md-icon>
         <div class="md-list-item-text">
-          <span>Dr. Neeman Mohibullah</span><span>Associate Director, R&D Manager</span><span>mohibuln@mskcc.org</span>
+          <span>Dr. Neeman Mohibullah</span><span>Associate Director</span><span>mohibuln@mskcc.org</span>
         </div>
       </md-list-item>
       <md-divider class="md-inset"></md-divider>
@@ -71,7 +71,7 @@
         </md-avatar> -->
         <md-icon class="md-primary">email</md-icon>
         <div class="md-list-item-text">
-          <span>Marisa Dunigan</span><span>Project Manager</span><span>duniganm@mskcc.org</span>
+          <span>Marisa Dunigan</span><span>Group Leader, Sample & Project Management</span><span>duniganm@mskcc.org</span>
         </div></md-list-item
       >
     </md-list>
