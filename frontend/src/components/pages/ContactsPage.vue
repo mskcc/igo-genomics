@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="contacts-page">
     <div class="md-display-1">Contact Us</div>
     <div class="team-image">
       <md-content class="md-elevation-24 lab-photo">

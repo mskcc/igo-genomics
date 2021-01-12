@@ -33,7 +33,8 @@ export const teams = [
   {
     id: 0,
     name: 'Leadership',
-    description: 'The leadership team oversees 40 full-time staff from entry-level research technicians to senior experts. They not only ensure that everyone is working in concert to process thousands of projects each year, but also continue to bring on new technologies to keep IGO on the cutting edge of genome science.',
+    description:
+      'The leadership team oversees 40 full-time staff from entry-level research technicians to senior experts. They not only ensure that everyone is working in concert to process thousands of projects each year, but also continue to bring on new technologies to keep IGO on the cutting edge of genome science.',
     members: [
       { name: 'Agnes Viale', role: 'Director', photoName: 'Viale_Agnes' },
       { name: 'Neeman Mohibullah', role: 'Associate Director', photoName: 'Mohibullah_Neeman' },
@@ -43,7 +44,8 @@ export const teams = [
   {
     id: 1,
     name: 'Lab Support',
-    description: 'As a large, high-throughput facility constantly striving for technical excellence and exemplary customer service, IGO has several employees who work between and among teams and directly with investigators.',
+    description:
+      'As a large, high-throughput facility constantly striving for technical excellence and exemplary customer service, IGO has several employees who work between and among teams and directly with investigators.',
     members: [
       { name: 'Alan Li', role: 'Automation Engineer', photoName: 'Li_Alan' },
       { name: 'Amanda Haye', role: 'Temporary Technician ' },
@@ -56,7 +58,8 @@ export const teams = [
   {
     id: 2,
     name: 'Sample & Project Management',
-    description: 'The SPM team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
+    description:
+      'The SPM team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
     members: [
       { name: 'Marisa Dunigan', role: 'Supervisor, IGO', photoName: 'Dunigan_Marisa' },
       { name: 'Meghanne Lomibao', role: 'Project Coordinator', photoName: 'Lomibao_Meghanne' },
@@ -84,7 +87,8 @@ export const teams = [
   {
     id: 4,
     name: 'Library Preparation',
-    description: "The Nucleic Acid team handles the bulk of IGO's sample processing, utilizing liquid-handling robots to automate many platforms." ,
+    description:
+      "The Nucleic Acid team handles the bulk of IGO's sample processing, utilizing liquid-handling robots to automate many platforms.",
     members: [
       { name: 'Ruchi Patel', role: 'Manager, IGO', photoName: 'Patel_Ruchi' },
       { name: 'Alber Michaeel', role: 'Automation Engineer', photoName: 'Michaeel_Alber' },
@@ -98,7 +102,8 @@ export const teams = [
   {
     id: 5,
     name: 'Sequencing',
-    description: "The Sequencing Team performs all activities related to Illumina sequencing, including quantity and quality assessment of libraries, pooling, and preparation for sequencing. The team is also responsible for the care & feeding of IGO's 12 sequencing instruments.",
+    description:
+      "The Sequencing Team performs all activities related to Illumina sequencing, including quantity and quality assessment of libraries, pooling, and preparation for sequencing. The team is also responsible for the care & feeding of IGO's 12 sequencing instruments.",
     members: [
       { name: 'Liping Sun', role: 'Manager, IGO', photoName: 'Sun_Liping' },
       { name: 'Cuijie Lu', role: 'Research Assistant', photoName: 'Lu_Cuijie' },
@@ -124,7 +129,8 @@ export const teams = [
   {
     id: 7,
     name: 'Research & Development',
-    description: "The R&D team engages with investigators at MSKCC and peruses journals to take the pulse of the scientific community. They test new kits, protocols, and methods to keep IGO's production team on the cutting edge of genomic, transcriptomic, and single-cell technology.",
+    description:
+      "The R&D team engages with investigators at MSKCC and peruses journals to take the pulse of the scientific community. They test new kits, protocols, and methods to keep IGO's production team on the cutting edge of genomic, transcriptomic, and single-cell technology.",
     members: [
       { name: 'Neeman Mohibullah', role: 'Group Leader', photoName: 'Mohibullah_Neeman' },
       { name: 'Juan Li', role: 'Manager, IGO', photoName: 'Li_Juan' },
