@@ -48,7 +48,7 @@ export const teams = [
       'As a large, high-throughput facility constantly striving for technical excellence and exemplary customer service, IGO has several employees who work between and among teams and directly with investigators.',
     members: [
       { name: 'Alan Li', role: 'Automation Engineer', photoName: 'Li_Alan' },
-      { name: 'Amanda Haye', role: 'Temporary Technician ' },
+      { name: 'Amanda Haye', role: 'Temporary Technician ', photoName: 'Haye_Amanda' },
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
       { name: 'Jules Lomibao', role: 'Temporary Technician' },
       { name: 'Magali Cavatore', role: 'Lab Manager', photoName: 'Cavatore_Magali' },
@@ -132,7 +132,7 @@ export const teams = [
     description:
       "The R&D team engages with investigators at MSKCC and peruses journals to take the pulse of the scientific community. They test new kits, protocols, and methods to keep IGO's production team on the cutting edge of genomic, transcriptomic, and single-cell technology.",
     members: [
-      { name: 'Neeman Mohibullah', role: 'Group Leader', photoName: 'Mohibullah_Neeman' },
+      { name: 'Neeman Mohibullah', role: 'Associate Director, IGO', photoName: 'Mohibullah_Neeman' },
       { name: 'Juan Li', role: 'Manager, IGO', photoName: 'Li_Juan' },
       { name: 'Justin Clarke', role: 'Research Technician', photoName: 'Clarke_Justin' },
       { name: 'Taylor Allen', role: 'Research Technician', photoName: 'Allen_Taylor' },
