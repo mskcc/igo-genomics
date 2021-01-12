@@ -3,9 +3,7 @@
     <div v-if="announcement" class="announcement-bubble">
       <span class="material-icons"> priority_high </span>
       <span class="announcement-content">
-        IGO will not receive samples between Monday, 12/28 and Thursday, 12/31. Standard, scheduled sample drop off will resume Monday,
-        January 4th. We will be closed Friday, 12/25 and Friday, 1/1. We will still be available to answer any project-related questions you
-        have at genomics@mskcc.org. Please feel free to email vialea@mskcc.org with any other concerns.
+        IGO will be closed Monday, 1/18 in observance of Martin Luther King Jr. Day.
       </span>
     </div>
     <div class="carousel-div">

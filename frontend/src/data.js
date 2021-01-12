@@ -33,7 +33,8 @@ export const teams = [
   {
     id: 0,
     name: 'Leadership',
-    description: 'leaders in igo',
+    description:
+      'The leadership team oversees 40 full-time staff from entry-level research technicians to senior experts. They not only ensure that everyone is working in concert to process thousands of projects each year, but also continue to bring on new technologies to keep IGO on the cutting edge of genome science.',
     members: [
       { name: 'Agnes Viale', role: 'Director', photoName: 'Viale_Agnes' },
       { name: 'Neeman Mohibullah', role: 'Associate Director', photoName: 'Mohibullah_Neeman' },
@@ -43,20 +44,24 @@ export const teams = [
   {
     id: 1,
     name: 'Lab Support',
-    description: 'supports lab',
+    description:
+      'As a large, high-throughput facility constantly striving for technical excellence and exemplary customer service, IGO has several employees who work between and among teams and directly with investigators.',
     members: [
       { name: 'Alan Li', role: 'Automation Engineer', photoName: 'Li_Alan' },
+      { name: 'Amanda Haye', role: 'Temporary Technician ' },
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
+      { name: 'Jules Lomibao', role: 'Temporary Technician' },
       { name: 'Magali Cavatore', role: 'Lab Manager', photoName: 'Cavatore_Magali' },
-      { name: 'Mary Betancor', role: 'SKI Admin Assistant II' },
+      { name: 'Mary Betancor', role: 'SKI Administrative Assistant II' },
     ],
   },
   {
     id: 2,
     name: 'Sample & Project Management',
-    description: 'manages projects',
+    description:
+      'The SPM team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
     members: [
-      { name: 'Marisa Dunigan', role: 'Group Leader', photoName: 'Dunigan_Marisa' },
+      { name: 'Marisa Dunigan', role: 'Supervisor, IGO', photoName: 'Dunigan_Marisa' },
       { name: 'Meghanne Lomibao', role: 'Project Coordinator', photoName: 'Lomibao_Meghanne' },
       { name: 'Michael Pantano', role: 'Senior Project Assistant', photoName: 'Pantano_Michael' },
       { name: 'Tressa Octave', role: 'Research Technician' },
@@ -68,9 +73,9 @@ export const teams = [
     id: 3,
     name: 'Extraction',
     description:
-      'As the name implies, we are an eclectic, multidisciplinary team responsible for a diverse number of platforms. EXPAND stands for: Extraction, 10X Genomics, pathology, Archer DX, Nanostring, and digital droplet PCR, but also literally refers to our interest in integrating new platforms and advancing research technology to remain at the cutting edge for our users. \n EXPAND team extracts DNA and RNA from a variety of sample types, following validated manual and automated protocols. We work closely with our investigators to provide meaningful advice on the amount of material to submit, optimal preservation methods, and storage techniques for every sample type and desired downstream application. IGO offers a vast selection of digital PCR assays; the EXPAND team performs the processing and analysis of samples with one or more of our off-the-shelf assays, or we can help you design a new, custom assay. The digital PCR, Nanostring and Archer DX platforms aim to detect rare mutations, unknown gene rearrangements or VDJ recombination, small variations in copy number and changes in gene expression. Recently we “EXPANDed” into the single cell territory, offering the 10X Genomics platforms: cell-to-cell differences, that are often missed in bulk analysis, can be revealed at the single cell resolution. We offer all the available 10X platforms (CNV, ATAC, gene expression, TCR-seq, feature barcoding and cell hashing).The EXPAND team draws upon IGO’s philosophy of constant and open communication. It is our goal to join you in detailed, scientific discussions about your projects, to meet your needs and to work together to advance science, building long-term, trusting relationships in the process.',
+      'EXPAND stands for: Extraction, 10X Genomics, pathology, Archer DX, and digital droplet PCR, but also literally refers to their interest in integrating new platforms and advancing research technology to remain at the cutting edge for our users. The EXPAND team draws upon IGO’s philosophy of constant and open communication and aims to join you in detailed, scientific discussions about your projects, to meet your needs and to work together to advance science, building long-term, trusting relationships in the process.',
     members: [
-      { name: 'Andrea Farina', role: 'Group Leader', photoName: 'Farina_Andrea' },
+      { name: 'Andrea Farina', role: 'Manager, IGO', photoName: 'Farina_Andrea' },
       { name: 'Aminah Lawal', role: 'Research Assistant', photoName: 'Lawal_Aminah' },
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
       { name: "Josie D'Angelo", role: 'Research Technician', photoName: 'Dangelo_Josie' },
@@ -82,9 +87,10 @@ export const teams = [
   {
     id: 4,
     name: 'Library Preparation',
-    description: 'prepares libraries',
+    description:
+      "The Nucleic Acid team handles the bulk of IGO's sample processing, utilizing liquid-handling robots to automate many platforms.",
     members: [
-      { name: 'Ruchi Patel', role: 'Group Leader', photoName: 'Patel_Ruchi' },
+      { name: 'Ruchi Patel', role: 'Manager, IGO', photoName: 'Patel_Ruchi' },
       { name: 'Alber Michaeel', role: 'Automation Engineer', photoName: 'Michaeel_Alber' },
       { name: 'Elevit Perez', role: 'Research Technician', photoName: 'Perez_Elevit' },
       { name: 'Jane Chan', role: 'Research Assistant', photoName: 'Chan_Jane' },
@@ -96,9 +102,10 @@ export const teams = [
   {
     id: 5,
     name: 'Sequencing',
-    description: 'sequences libraries',
+    description:
+      "The Sequencing Team performs all activities related to Illumina sequencing, including quantity and quality assessment of libraries, pooling, and preparation for sequencing. The team is also responsible for the care & feeding of IGO's 12 sequencing instruments.",
     members: [
-      { name: 'Liping Sun', role: 'Group Leader', photoName: 'Sun_Liping' },
+      { name: 'Liping Sun', role: 'Manager, IGO', photoName: 'Sun_Liping' },
       { name: 'Cuijie Lu', role: 'Research Assistant', photoName: 'Lu_Cuijie' },
       { name: 'Jim Chen', role: 'Senior Research Technician', photoName: 'Chen_Jim' },
       { name: 'Keumsil Hwang', role: 'Senior Research Assistant', photoName: 'Hwang_Keumsil' },
@@ -109,23 +116,24 @@ export const teams = [
     id: 6,
     name: 'Data',
     description:
-      "The IGO Data Team is a group of bioinformaticians, software engineers and computer scientists.  They work closely with IGO's customers and wet-lab technicians to write multiple software applications from sample receiving and LIMS processing to post-sequencing stats tracking and data delivery.",
+      "The IGO Data Team is a group of bioinformaticians, software engineers and computer scientists.  They work closely with IGO's investigators and wet-lab technicians to write multiple software applications from sample receiving and LIMS processing to post-sequencing stats tracking and data delivery.",
     members: [
-      { name: 'David Mcmanamon', role: 'Group Leader', photoName: 'Mcmanamon_David' },
-      { name: 'Lisa Wagner', role: 'BioInf. Software Engineer', photoName: 'Wagner_Lisa' },
-      { name: 'Ajay Sharma', role: 'BioInf. Software Engineer', photoName: 'Sharma_Ajay' },
+      { name: 'David Mcmanamon', role: 'Manager, IGO', photoName: 'Mcmanamon_David' },
+      { name: 'Lisa Wagner', role: 'Bioinfo. Software Engineer IV', photoName: 'Wagner_Lisa' },
+      { name: 'Ajay Sharma', role: 'Bioinfo. Software Engineer I', photoName: 'Sharma_Ajay' },
       { name: 'Anna Patruno', role: 'Application Analyst', photoName: 'Patruno_Anna' },
-      { name: 'Darrell Nabors', role: 'BioInf. Software Engineer', photoName: 'Nabors_Darrell' },
-      { name: 'David Streid', role: 'BioInf. Software Engineer', photoName: 'Streid_David' },
+      { name: 'Darrell Nabors', role: 'Bioinformatics Engineer V', photoName: 'Nabors_Darrell' },
+      { name: 'David Streid', role: 'Bioinfo. Software Engineer II', photoName: 'Streid_David' },
     ],
   },
   {
     id: 7,
     name: 'Research & Development',
-    description: 'researches new applications',
+    description:
+      "The R&D team engages with investigators at MSKCC and peruses journals to take the pulse of the scientific community. They test new kits, protocols, and methods to keep IGO's production team on the cutting edge of genomic, transcriptomic, and single-cell technology.",
     members: [
       { name: 'Neeman Mohibullah', role: 'Group Leader', photoName: 'Mohibullah_Neeman' },
-      { name: 'Juan Li', role: 'Manager', photoName: 'Li_Juan' },
+      { name: 'Juan Li', role: 'Manager, IGO', photoName: 'Li_Juan' },
       { name: 'Justin Clarke', role: 'Research Technician', photoName: 'Clarke_Justin' },
       { name: 'Taylor Allen', role: 'Research Technician', photoName: 'Allen_Taylor' },
     ],
@@ -139,10 +147,10 @@ export const bulkServices = [
     description: 'A capture-based assay to assess the entire exome.',
     startingMaterial: 'DNA or DMP Library',
     libraryChemistry: 'KAPA Hyper',
-    captureChemistry: 'xGen v1.0 from IDT (human) SureSelectXT from Agilent (mouse)',
+    captureChemistry: 'xGen v1.0 from IDT (human) SinglePlex Mouse Exome from Twist (mouse)',
     sequencingReadLength: 'PE100',
     sequencingCoverage: 'Varies (see below)',
-    deliverable: 'FASTQ; analysis options available from CMO or BIC',
+    deliverable: 'FASTQ; Pipeline analysis options available from CMO or BIC with additional charges',
     tableHeaders: ['sampleCoverage', 'sampleCost'],
     table: [
       { sampleCoverage: 30, sampleCost: 458 },
@@ -243,6 +251,20 @@ export const bulkServices = [
   },
   {
     id: 5,
+    name: 'TCR Sequencing',
+    description: 'Methods to enrich T-cell receptor sequences',
+    startingMaterial: 'DNA - 12 sample minimum (Adaptive), RNA - 7 sample minimum (Archer), Cells (10X Genomics)',
+    deliverable: 'Pipeline output (Adaptive & Archer)',
+    tableHeaders: ['platform', 'sampleCost'],
+    table: [
+      { platform: 'Adaptive immunoSEQ (survey)', sampleCost: 350 },
+      { platform: 'Adaptive immunoSEQ (deep)', sampleCost: 850 },
+      { platform: 'Archer immunoverse', sampleCost: 494 },
+      { platform: '10X Genomics V(D)J Enrichment', sampleCost: 2279 },
+    ],
+  },
+  {
+    id: 6,
     name: 'Other Services',
     description: 'Please email us if your sequencing needs do not fit in one of these categories.',
     tableHeaders: ['platform', 'sequencingDetails', 'deliverable', 'cost'],
@@ -260,13 +282,13 @@ export const bulkServices = [
         platform: 'Archer FusionPlex',
         sequencingDetails: 'Solid Tumor Panel',
         deliverable: 'Archer portal access',
-        cost: '$820 + sequencing',
+        cost: '$820',
       },
       {
         platform: 'Archer FusionPlex',
         sequencingDetails: 'Heme Panel',
         deliverable: 'Archer portal access',
-        cost: '$610 + sequencing',
+        cost: '$610',
       },
     ],
   },
@@ -280,15 +302,14 @@ export const singleServices = [
       'Single-cell platforms to interrogate gene expression, immune repertoire, epigenetic factors, copy number, and/or protein expression.',
     startingMaterial: 'Single cell or nuclei suspension',
     libraryChemistry: 'Chromium Single Cell',
-    sequencingReadLength: 'PE28/91 (3’GEX), PE26/91 (5’GEX), PE150 (V(D)J), PE50 (ATAC), PE100 or PE150 (CNV)',
-    sequencingCoverage: '20K reads/cell (GEX), 5K reads/cell (V(D)J & cell hashing), 25K reads/cell (ATAC), 750K reads/cell (CNV)',
+    sequencingReadLength: 'PE28/91 (3’GEX), PE26/91 (5’GEX), PE150 (V(D)J), PE50 (ATAC)',
+    sequencingCoverage: '20K reads/cell (GEX), 5K reads/cell (V(D)J & cell hashing), 25K reads/cell (ATAC)',
     deliverable: 'FASTQ, CellRanger output',
     tableHeaders: ['xGenomicsPlatform', 'sampleCostLibrary', 'sampleCostSequencing'],
     table: [
       { xGenomicsPlatform: '5′ OR 3′ Gene Expression', sampleCostLibrary: 2068, sampleCostSequencing: '$0.07-$0.13' },
       { xGenomicsPlatform: '5′ Gene Expression + V(D)J Enrichment', sampleCostLibrary: 2279, sampleCostSequencing: '$0.12-$0.20' },
       { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 116, sampleCostSequencing: '$0.05-$0.07' },
-      { xGenomicsPlatform: 'Copy Number Variation', sampleCostLibrary: 2191, sampleCostSequencing: '$3' },
       { xGenomicsPlatform: 'ATAC-Seq', sampleCostLibrary: 2075, sampleCostSequencing: '$0.06-$0.17' },
     ],
   },
@@ -328,6 +349,18 @@ export const singleServices = [
     libraryCost: '$1,680/plate',
     sequencingCost: '$17.50/cell',
   },
+  {
+    id: 4,
+    name: 'DLP',
+    description: 'A method to detect CNV in single cells.',
+    startingMaterial: 'Single cell suspension',
+    libraryChemistry: 'Custom protocol',
+    sequencingReadLength: 'PE150',
+    sequencingCoverage: '1M reads/cell',
+    deliverable: 'FASTQ',
+    libraryCost: '$2,300/up to 800 cells',
+    sequencingCost: '$7/cell',
+  },
 ];
 
 export const otherServices = [
@@ -340,7 +373,7 @@ export const otherServices = [
     deliverable: 'Report',
     tableHeaders: ['service', 'cost'],
     table: [
-      { service: 'New Assay Design & Optimization', cost: 400 },
+      { service: 'New Assay Design & Optimization', cost: 200 },
       { service: 'New Assay Order (CNV)', cost: 200 },
       { service: 'New Assay Order (mutation)', cost: 375 },
       { service: 'Digital PCR (per reaction)', cost: 9.5 },
