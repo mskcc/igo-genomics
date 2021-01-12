@@ -94,9 +94,15 @@ module.exports = function (router) {
         }
 
         if (_.isEmpty(appointments)) {
-          return response.status(200).json({
-            hourRange: defaultHourRange.filter((element) => element <= 18),
-          });
+          if (!defaultHourRange) {
+            return response.status(200).json({
+              hourRange: [],
+            });
+          } else {
+            return response.status(200).json({
+              hourRange: defaultHourRange.filter((element) => element <= 18),
+            });
+          }
         }
         // if appointments exist on this date:  for every startTime on that day, run getAvailableTimes
         let range = defaultHourRange;
