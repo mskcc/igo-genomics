@@ -203,6 +203,24 @@ form {
 
 /* Home Page */
 
+.announcement-bubble {
+  align-items: center;
+  background: rgba(0, 105, 255, 0.05);
+  border: 1px solid #0069ff;
+  border-radius: 3px;
+  margin: 0 0 16px;
+  padding: 16px 24px;
+  display: flex;
+}
+
+.announcement-bubble .material-icons {
+  margin-right: 1%;
+}
+
+.announcement-content {
+  text-align: left;
+}
+
 .VueCarousel img {
   width: 60%;
   /* min-width: 100%; */
@@ -597,4 +615,10 @@ sup {
   transform: scale(0.8);
   -webkit-transform-origin: 0 0;
   transform-origin: center;
+}
+
+/* contacts page */
+
+#contacts-page .md-list-item-container {
+  width: 120%;
 }

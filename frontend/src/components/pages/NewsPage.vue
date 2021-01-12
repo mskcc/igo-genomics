@@ -33,7 +33,7 @@
     </md-card>
     <md-card>
       <md-card-header>
-        <div class="md-title">Archer & Adaptive resumed; two new platforms now available</div>
+        <div class="md-title">Nanostring platform discontinued</div>
         <div class="md-subheading">July 20, 2020</div>
       </md-card-header>
       <md-card-content>

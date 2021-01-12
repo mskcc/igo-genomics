@@ -3,15 +3,15 @@
     <gantt-page></gantt-page>
     <div class="prices-container">
       <div class="bulk-header">
-        <img class="prices-image" src="http://genomics.mskcc.org/wp-content/uploads/2020/01/services1.png" alt="bulk logo" />
+        <img class="prices-image" src="../../assets/services1.png" alt="bulk logo" />
         <div class="md-title">Bulk Tissue and Cell-Free Sequencing</div>
       </div>
       <div class="single-header">
-        <img class="prices-image" src="http://genomics.mskcc.org/wp-content/uploads/2020/01/services2.png" alt="bulk logo" />
+        <img class="prices-image" src="../../assets/services2.png" alt="bulk logo" />
         <div class="md-title">Single Cell Sequencing</div>
       </div>
       <div class="other-header">
-        <img class="prices-image" src="http://genomics.mskcc.org/wp-content/uploads/2020/01/services3.png" alt="bulk logo" />
+        <img class="prices-image" src="../../assets/services3.png" alt="bulk logo" />
         <div class="md-title">Other Services and Platforms</div>
       </div>
 
