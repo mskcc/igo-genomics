@@ -103,6 +103,7 @@ export default {
       toolLinks: [
         '10x genomics visium',
         'accessing your data',
+        'chemistry timeline',
         'ddpcr assays',
         'igo tutorials',
         'metrics and throughput',
@@ -111,6 +112,7 @@ export default {
         'single cell platforms',
       ],
       toolsIsActive: [
+        'chemistry timeline',
         'sample criteria',
         'ddpcr assays',
         'igo tutorials',

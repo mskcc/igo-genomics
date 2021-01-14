@@ -24,7 +24,7 @@
 import { HotTable } from '@handsontable/vue';
 
 export default {
-  name: 'GanttPage',
+  name: 'ChemistryTimelinePage',
   components: { HotTable },
   data() {
     return {};

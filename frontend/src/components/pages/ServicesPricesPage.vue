@@ -1,6 +1,6 @@
 <template>
   <div>
-    <gantt-page></gantt-page>
+    <!-- <chemistry-timeline-page></chemistry-timeline-page> -->
     <div class="prices-container">
       <div class="bulk-header">
         <img class="prices-image" src="../../assets/services1.png" alt="bulk logo" />
@@ -341,12 +341,12 @@
 </template>
 
 <script>
-import GanttPage from './GanttPage.vue';
+// import ChemistryTimelinePage from './ChemistryTimelinePage.vue';
 import { bulkServices, singleServices, otherServices } from './../../data.js';
 
 export default {
   name: 'ServicesPricesPage',
-  components: { GanttPage },
+  // components: { ChemistryTimelinePage },
   data: function() {
     return { bulkServices: bulkServices, singleServices: singleServices, otherServices: otherServices };
   },
