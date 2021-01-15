@@ -24,8 +24,8 @@ module.exports = [
   },
   {
     name: 'Agilent Mouse Exome',
-    start: '01-01-2020',
-    stop: '12-31-2020',
+    start: '12-01-2020',
+    stop: '12-01-2020',
     color: '#8fc7e8',
   },
   {

@@ -95,7 +95,7 @@ module.exports = function (router) {
         }
 
         if (_.isEmpty(appointments)) {
-          if (!defaultHourRange) {
+          if (_.isEmpty(defaultHourRange)) {
             return response.status(200).json({
               hourRange: [],
             });

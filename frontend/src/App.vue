@@ -103,14 +103,16 @@ export default {
       toolLinks: [
         '10x genomics visium',
         'accessing your data',
+        'chemistry timeline',
         'ddpcr assays',
         'igo tutorials',
         'metrics and throughput',
         'sample criteria',
-        'schedule 10x dropoff',
+        // 'schedule 10x dropoff',
         'single cell platforms',
       ],
       toolsIsActive: [
+        'chemistry timeline',
         'sample criteria',
         'ddpcr assays',
         'igo tutorials',
@@ -120,7 +122,7 @@ export default {
         'rna',
         'other',
         'metrics and throughput',
-        'schedule 10x dropoff',
+        // 'schedule 10x dropoff',
       ].includes(this.$route.name),
       teamIsActive: this.$route.path.includes('about'),
       toolTips: {

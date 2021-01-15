@@ -27,8 +27,8 @@ import ArcherFusionPage from './components/pages/ArcherFusionPage.vue';
 import RnaCriteria from './components/RnaCriteria.vue';
 import OtherCriteria from './components/OtherCriteria.vue';
 import MetricsAndThroughputPage from './components/pages/MetricsAndThroughputPage.vue';
-import SchedulePage from './components/pages/SchedulePage.vue';
-import GanttPage from './components/pages/GanttPage.vue';
+// import SchedulePage from './components/pages/SchedulePage.vue';
+import ChemistryTimelinePage from './components/pages/ChemistryTimelinePage.vue';
 
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
@@ -120,8 +120,8 @@ const routes = [
   { path: '/igo-tutorials/:name', component: ShowVideoPage, name: 'show video', props: true },
   { path: '/archer-fusion', component: ArcherFusionPage, name: 'archer fusion' },
   { path: '/metrics-and-throughput', component: MetricsAndThroughputPage, name: 'metrics and throughput' },
-  { path: '/schedule', component: SchedulePage, name: 'schedule 10x dropoff' },
-  { path: '/gantt', component: GanttPage, name: 'gantt' },
+  // { path: '/schedule', component: SchedulePage, name: 'schedule 10x dropoff' },
+  { path: '/chemistry-timeline', component: ChemistryTimelinePage, name: 'chemistry timeline' },
 ];
 
 const router = new VueRouter({

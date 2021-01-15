@@ -502,9 +502,9 @@ form {
   margin: 0 5%;
 }
 
-#faq-page,
+#faq-page .md-list-item-content,
 #sample-guidelines .md-list-item-content {
-  white-space: pre-wrap;
+  white-space: normal;
 }
 
 /* archer fusion gene page */
