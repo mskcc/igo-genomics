@@ -51,7 +51,7 @@
 
     <div class="news">
       <div class="news-headline md-headline md-inset">News at the IGO</div>
-      <md-card class="news_card">
+      <md-card class="news-card">
         <md-card-media>
           <img src="../../assets/images/lab/wheresciencegoesigo.jpeg" @click="showDialogMethod" />
         </md-card-media>
@@ -73,13 +73,15 @@
           <md-card-expand-content>
             <md-card-content>
               <p>
-                In support of our ongoing efforts to provide excellent customer service alongside our cutting-edge technologies, IGO's Data Team has worked to upgrade our genomics.mskcc.org site. Executed in just over a month, the new site provides easier access to tools and information while increasing functionality. Please feel free to contact us at genomics@mskcc.org if you have any questions, comments, or suggestions for the website.
+                In support of our ongoing efforts to provide excellent customer service alongside our cutting-edge technologies, IGO's Data
+                Team has worked to upgrade our genomics.mskcc.org site. Executed in just over a month, the new site provides easier access
+                to tools and information while increasing functionality. Please feel free to contact us at genomics@mskcc.org if you have
+                any questions, comments, or suggestions for the website.
               </p>
             </md-card-content>
           </md-card-expand-content>
         </md-card-expand>
       </md-card>
-
 
       <md-card class="news-card">
         <md-card-media>
