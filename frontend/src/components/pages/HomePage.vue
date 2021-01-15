@@ -52,6 +52,37 @@
 
     <div class="news">
       <div class="news-headline md-headline md-inset">News at the IGO</div>
+      <md-card class="news-card">
+        <md-card-media>
+          <img src="../../assets/images/lab/wheresciencegoesigo.jpeg" @click="showDialogMethod" />
+        </md-card-media>
+
+        <md-card-header>
+          <div class="md-title">Welcome to the new IGO website!</div>
+          <div class="md-subhead">January 15, 2021</div>
+        </md-card-header>
+
+        <md-card-expand>
+          <md-card-actions md-alignment="space-between">
+            <md-card-expand-trigger>
+              <md-button class="md-icon-button">
+                <md-icon>keyboard_arrow_down</md-icon>
+              </md-button>
+            </md-card-expand-trigger>
+          </md-card-actions>
+
+          <md-card-expand-content>
+            <md-card-content>
+              <p>
+                In support of our ongoing efforts to provide excellent customer service alongside our cutting-edge technologies, IGO's Data
+                Team has worked to upgrade our genomics.mskcc.org site. Executed in just over a month, the new site provides easier access
+                to tools and information while increasing functionality. Please feel free to contact us at genomics@mskcc.org if you have
+                any questions, comments, or suggestions for the website.
+              </p>
+            </md-card-content>
+          </md-card-expand-content>
+        </md-card-expand>
+      </md-card>
 
       <md-card class="news-card">
         <md-card-media>
@@ -120,45 +151,6 @@
                 commonly-requested read lengths and throughputs. We accept both individual user libraries and pre-pooled libraries to occupy
                 a full flow cell or lane. Custom read lengths and coverages outside the block pricing will still be accepted;
                 <router-link :to="{ name: 'contact us' }">contact us for more information.</router-link>
-              </p>
-            </md-card-content>
-          </md-card-expand-content>
-        </md-card-expand>
-      </md-card>
-      <md-card class="news-card">
-        <md-card-media>
-          <img src="../../assets/images/news/COVIDInfographic_080720.jpg" @click="showDialogMethod" />
-        </md-card-media>
-
-        <md-card-header>
-          <div class="md-title">End of era in IGO + new website features</div>
-          <div class="md-subhead">October 8, 2020</div>
-        </md-card-header>
-
-        <md-card-expand>
-          <md-card-actions md-alignment="space-between">
-            <md-card-expand-trigger>
-              <md-button class="md-icon-button">
-                <md-icon>keyboard_arrow_down</md-icon>
-              </md-button>
-            </md-card-expand-trigger>
-          </md-card-actions>
-
-          <md-card-expand-content>
-            <md-card-content>
-              <p>
-                After more than 6 months and over 46,000 samples, Friday, October 9 will be the last day of COVID-19 testing in IGO. While
-                the core jumped at the opportunity to support our colleagues and city through the ongoing pandemic, we also look forward to
-                turning our full attention back to our mission of supporting and enabling a broad range of research efforts at MSK. We will
-                continue to provide
-                <router-link :to="{ name: 'submission guidelines' }">COVID-19 testing of research samples.</router-link>
-              </p>
-              <p>
-                In addition to the
-                <router-link :to="{ name: '10x genomics visium' }">new 10X Genomics Visium platform</router-link>, we are improving our
-                website resources for investigators. A searchable,
-                <router-link :to="{ name: 'ddpcr assays' }">comprehensive list of our ddPCR assays</router-link> is now available and stay
-                tuned for a project tracker, currently in beta testing!
               </p>
             </md-card-content>
           </md-card-expand-content>

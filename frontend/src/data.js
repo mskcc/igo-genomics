@@ -130,7 +130,7 @@ export const teams = [
     id: 7,
     name: 'Research & Development',
     description:
-      "The R&D team engages with investigators at MSKCC and peruses journals to take the pulse of the scientific community. They test new kits, protocols, and methods to keep IGO's production team on the cutting edge of genomic, transcriptomic, and single-cell technology.",
+      'The R&D team develops, tests and implements new genomics platforms for the MSKCC community. In addition to testing off-the-shelf assays, our group works with MSK investigators to bring customized platforms to IGO.',
     members: [
       { name: 'Neeman Mohibullah', role: 'Associate Director, IGO', photoName: 'Mohibullah_Neeman' },
       { name: 'Juan Li', role: 'Manager, IGO', photoName: 'Li_Juan' },

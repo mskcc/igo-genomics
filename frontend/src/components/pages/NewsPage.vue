@@ -3,19 +3,35 @@
     <div class="md-display-1">News</div>
     <md-card>
       <md-card-header>
+        <div class="md-title">Welcome to the new IGO website!</div>
+        <div class="md-subhead">January 15, 2021</div>
+      </md-card-header>
+
+      <md-card-content>
+        <p>
+          In support of our ongoing efforts to provide excellent customer service alongside our cutting-edge technologies, IGO's Data Team
+          has worked to upgrade our genomics.mskcc.org site. Executed in just over a month, the new site provides easier access to tools and
+          information while increasing functionality. Please feel free to contact us at genomics@mskcc.org if you have any questions,
+          comments, or suggestions for the website.
+        </p>
+      </md-card-content>
+    </md-card>
+
+    <md-card>
+      <md-card-header>
         <div class="md-title">New project tracker, guidance for single cell applications, and changes to data delivery</div>
         <div class="md-subhead">December 3, 2020</div>
       </md-card-header>
-      
+
       <md-card-content>
         <p>
           IGO’s Data Team is pleased to roll out a new
-          <a href="https://igo.mskcc.org/login/request-tracker"> request tracking application</a>. Use this tool for real-time
-          visualization of IGO’s progress on your project, with detail to the sample level. Try it out in the IGO Marketplace today!
+          <a href="https://igo.mskcc.org/login/request-tracker"> request tracking application</a>. Use this tool for real-time visualization
+          of IGO’s progress on your project, with detail to the sample level. Try it out in the IGO Marketplace today!
         </p>
         <p>
-          As demand for single cell sequencing rises, IGO continues to invest in platforms to cover a wide variety of sample types and
-          data needs. See which application is right for your sample set
+          As demand for single cell sequencing rises, IGO continues to invest in platforms to cover a wide variety of sample types and data
+          needs. See which application is right for your sample set
           <router-link :to="{ name: 'single cell platforms' }">here</router-link>.
         </p>
         <p>
@@ -33,9 +49,9 @@
       <md-card-content>
         <p>
           For investigators who make their own sequencing libraries to submit to IGO, we now have
-          <router-link :to="{ name: 'platforms & pricing' }">easy-to-understand block pricing</router-link> for our most
-          commonly-requested read lengths and throughputs. We accept both individual user libraries and pre-pooled libraries to occupy
-          a full flow cell or lane. Custom read lengths and coverages outside the block pricing will still be accepted;
+          <router-link :to="{ name: 'platforms & pricing' }">easy-to-understand block pricing</router-link> for our most commonly-requested
+          read lengths and throughputs. We accept both individual user libraries and pre-pooled libraries to occupy a full flow cell or
+          lane. Custom read lengths and coverages outside the block pricing will still be accepted;
           <router-link :to="{ name: 'contact us' }">contact us for more information.</router-link>
         </p>
       </md-card-content>
@@ -48,25 +64,25 @@
 
       <md-card-content>
         <p>
-          After more than 6 months and over 46,000 samples, Friday, October 9 will be the last day of COVID-19 testing in IGO. While
-          the core jumped at the opportunity to support our colleagues and city through the ongoing pandemic, we also look forward to
-          turning our full attention back to our mission of supporting and enabling a broad range of research efforts at MSK. We will
-          continue to provide
+          After more than 6 months and over 46,000 samples, Friday, October 9 will be the last day of COVID-19 testing in IGO. While the
+          core jumped at the opportunity to support our colleagues and city through the ongoing pandemic, we also look forward to turning
+          our full attention back to our mission of supporting and enabling a broad range of research efforts at MSK. We will continue to
+          provide
           <router-link :to="{ name: 'submission guidelines' }">COVID-19 testing of research samples.</router-link>
         </p>
         <p>
           In addition to the
-          <router-link :to="{ name: '10x genomics visium' }">new 10X Genomics Visium platform</router-link>, we are improving our
-          website resources for investigators. A searchable,
-          <router-link :to="{ name: 'ddpcr assays' }">comprehensive list of our ddPCR assays</router-link> is now available and stay
-          tuned for a project tracker, currently in beta testing!
+          <router-link :to="{ name: '10x genomics visium' }">new 10X Genomics Visium platform</router-link>, we are improving our website
+          resources for investigators. A searchable,
+          <router-link :to="{ name: 'ddpcr assays' }">comprehensive list of our ddPCR assays</router-link> is now available and stay tuned
+          for a project tracker, currently in beta testing!
         </p>
       </md-card-content>
     </md-card>
     <md-card>
       <md-card-header>
         <div class="md-title">COVID-19 testing continues in IGO</div>
-        <div class="md-subheading">August 10, 2020</div>
+        <div class="md-subhead">August 10, 2020</div>
       </md-card-header>
 
       <md-card-content>
@@ -81,7 +97,7 @@
     <md-card>
       <md-card-header>
         <div class="md-title">NEW at IGO: 10X Genomics Visium Spatial Transcriptomics</div>
-        <div class="md-subheading">July 30, 2020</div>
+        <div class="md-subhead">July 30, 2020</div>
       </md-card-header>
       <md-card-content>
         <p>
@@ -96,7 +112,7 @@
     <md-card>
       <md-card-header>
         <div class="md-title">Nanostring platform discontinued</div>
-        <div class="md-subheading">July 20, 2020</div>
+        <div class="md-subhead">July 20, 2020</div>
       </md-card-header>
       <md-card-content>
         <p>
