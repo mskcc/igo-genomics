@@ -158,19 +158,22 @@ export default {
 
   methods: {
     dayClick(date) {
-      console.log(date);
-      // console.log('form', this.form);
-      this.daySelected = true;
-      this.dateSelected = date;
+      if (date.isDisabled === false) {
+        // console.log(date.isDisabled);
+        this.daySelected = true;
+        this.dateSelected = date;
 
-      app.axios.get(`${API_URL}/availableSlots/${this.dateSelected.weekday}/${this.dateSelected.id}`).then((response) => {
-        if (response.status === 204) {
-          this.timesAvailable = false;
-        } else {
-          this.timesAvailable = true;
-          this.hourRange = response.data.hourRange;
-        }
-      });
+        app.axios.get(`${API_URL}/availableSlots/${this.dateSelected.weekday}/${this.dateSelected.id}`).then((response) => {
+          if (response.status === 204) {
+            this.timesAvailable = false;
+          } else {
+            this.timesAvailable = true;
+            this.hourRange = response.data.hourRange;
+          }
+        });
+      }
+
+      // console.log('form', this.form);
     },
     getValidationClass(fieldName) {
       const field = this.$v.form[fieldName];

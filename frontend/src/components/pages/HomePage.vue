@@ -11,15 +11,16 @@
         <slide>
           <img src="../../assets/images/lab/wheresciencegoesigo.jpeg" />
         </slide>
-        <slide>
+        <!-- <slide>
           <img src="../../assets/images/lab/Viale_190612_104.jpg" />
+        </slide> -->
+        <slide>
+          <img src="../../assets/images/lab/Viale_190612_030.jpg" />
         </slide>
         <slide>
           <img src="../../assets/images/lab/Viale_190612_005.jpg" />
         </slide>
-        <slide>
-          <img src="../../assets/images/lab/Viale_190612_030.jpg" />
-        </slide>
+
         <!-- <slide>
           <iframe
             id="seq-capacity"
@@ -167,6 +168,7 @@
 
 <script>
 import { Carousel, Slide } from 'vue-carousel';
+import { IMAGE_URL } from './../../config.js';
 
 export default {
   name: 'HomePage',
@@ -188,7 +190,7 @@ export default {
       const imageElement = event.target;
       const imageSrc = imageElement.getAttribute('src');
       const cleanedImageSrc = imageSrc.split('/').pop();
-      this.enlargedImage = 'http://localhost:8081/img/' + cleanedImageSrc;
+      this.enlargedImage = IMAGE_URL + cleanedImageSrc;
       this.showDialog = true;
     },
   },

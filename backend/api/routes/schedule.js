@@ -2,7 +2,7 @@ const https = require('https');
 const _ = require('lodash');
 const ical = require('ical-generator');
 
-import moment from 'moment';
+const moment = require( 'moment');
 var mongoose = require('mongoose');
 var ObjectId = mongoose.Types.ObjectId;
 const helpers = require('../util/helpers');
@@ -95,9 +95,15 @@ module.exports = function (router) {
         }
 
         if (_.isEmpty(appointments)) {
-          return response.status(200).json({
-            hourRange: defaultHourRange.filter((element) => element <= 18),
-          });
+          if (_.isEmpty(defaultHourRange)) {
+            return response.status(200).json({
+              hourRange: [],
+            });
+          } else {
+            return response.status(200).json({
+              hourRange: defaultHourRange.filter((element) => element <= 18),
+            });
+          }
         }
         // if appointments exist on this date:  for every startTime on that day, run getAvailableTimes
         let range = defaultHourRange;
