@@ -108,7 +108,7 @@ export default {
         'igo tutorials',
         'metrics and throughput',
         'sample criteria',
-        'schedule 10x dropoff',
+        // 'schedule 10x dropoff',
         'single cell platforms',
       ],
       toolsIsActive: [
@@ -122,7 +122,7 @@ export default {
         'rna',
         'other',
         'metrics and throughput',
-        'schedule 10x dropoff',
+        // 'schedule 10x dropoff',
       ].includes(this.$route.name),
       teamIsActive: this.$route.path.includes('about'),
       toolTips: {
