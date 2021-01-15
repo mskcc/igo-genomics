@@ -1,15 +1,15 @@
 // if (dayMin + d <= start) priorR = [min..start]
 // if (dayMax - end >= d) afterR = [end..max]
 
-import moment from 'moment';
+const moment = require('moment');
 
 // return priorR+afterR
 const _ = require('lodash');
 const duration = 3;
-export function getAvailableHours(
+exports.getAvailableHours = (
   startTime,
   range = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
-) {
+) => {
   if (!range.includes(startTime)) return [];
   const start = startTime;
   const end = start + duration;
@@ -35,7 +35,7 @@ export function getAvailableHours(
     (element) => element <= 18
   );
   return result;
-}
+};
 // console.log('18', getAvailableHours(15));
 // console.log('10', getAvailableHours(14));
 // console.log('11', getAvailableHours(11));
@@ -104,7 +104,7 @@ var months = [
   'November',
   'December',
 ];
-export function last12Months() {
+exports.last12Months = () => {
   let d = new Date();
   let y = d.getFullYear();
   let m = d.getMonth();
@@ -150,9 +150,9 @@ export function last12Months() {
     }
   }
   return columns;
-}
+};
 
-export function generateChemistryRows(columns, chemistries) {
+exports.generateChemistryRows = (columns, chemistries) => {
   let rows = [];
   let timeWindow = columns.map((element) => element.data);
 
@@ -195,4 +195,4 @@ export function generateChemistryRows(columns, chemistries) {
     rows.push(row);
   });
   return rows;
-}
+};
