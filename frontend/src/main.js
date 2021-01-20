@@ -33,6 +33,8 @@ import ChemistryTimelinePage from './components/pages/ChemistryTimelinePage.vue'
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
 
+import { BASE_LOCATION } from './config.js';
+
 import {
   MdAvatar,
   MdButton,
@@ -125,7 +127,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  base: '/genomics',
+  base: BASE_LOCATION,
   routes: routes,
   mode: 'history',
 });
