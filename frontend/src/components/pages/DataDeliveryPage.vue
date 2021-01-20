@@ -53,14 +53,15 @@
           runs. An example of the structure below shows a PI data folder with multiple sequencing projects. In the selected project, there
           are data from two separate sequencing runs, JAX_0416 and PITT_0483.
         </p>
-        <img src="http://genomics.mskcc.org/wp-content/uploads/2020/12/current-file-structure.jpg" alt="current file path screenshot" />
+        <img src="../../assets/images/screenshots/current-file-structure.jpg" alt="current file path screenshot" />
+
         <br /><br />
         <div class="md-subheading">New Data Structure</div>
         <p>
           Beginning 01/01/2021, IGO will no longer combine reads from different lanes of a sequencing run into a single file. Instead of
           just R1 and R2, for samples that were sequenced in multiple lanes, there will be a separate FASTQ file for each read and lane.
         </p>
-        <img src="http://genomics.mskcc.org/wp-content/uploads/2020/12/future-file-structure.jpg" alt="future file path screenshot" />
+        <img src="../../assets/images/screenshots/future-file-structure.jpg" alt="future file path screenshot" />
         <br /><br />
         <div class="md-subheading">What Does This Mean?</div>
         <p>
