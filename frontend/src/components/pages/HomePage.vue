@@ -182,7 +182,7 @@ export default {
         'The Integrated Genomics Operation (IGO) core enables basic, clinical, and translational science by providing a broad range of services and expertise to investigators interested in evaluating gene expression, chromosome structure, and nucleotide sequence. Our services are comprehensive, rapid, and user-friendly. Through the centralized management of all sequencing activities at MSK, the core empowers scientists with an array of technological options and the most efficient and cost-effective means of performing high-throughput genomics.',
       showDialog: false,
       enlargedImage: '',
-      announcement: true,
+      announcement: false,
     };
   },
   methods: {
