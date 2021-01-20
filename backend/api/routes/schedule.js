@@ -72,7 +72,7 @@ module.exports = function (router) {
       mailer.sendBookingNotification(appointment, invite);
       return response.status(200).json({
         message:
-          'Appointment saved! Please check for a confirmation email and remember to call 646-888-3765 before sample dropoff.',
+          'Appointment saved! Please check for a confirmation email and remember to call 646-888-3856 before sample dropoff.',
       });
     });
   });

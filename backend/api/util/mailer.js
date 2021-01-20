@@ -9,7 +9,7 @@ const emailConfig = {
     'wagnerl@mskcc.org, patrunoa@mskcc.org, lisa.wagner91@gmail.com',
   subject: '[IGO Booking] ',
   footer:
-    '<br><br><br>Thank you, <br><br><a href="http://cmo.mskcc.org/cmo/igo/">Integrated Genomics Operation</a><br><a href="https://www.mskcc.org">Memorial Sloan Kettering Cancer Center</a><br>T 646.888.3765<br>Follow us on <a href="https://www.instagram.com/genomics212/?hl=en">Instagram</a> and <a href="https://twitter.com/genomics212?lang=en">Twitter</a>!<br>',
+    '<br><br><br>Thank you, <br><br><a href="http://cmo.mskcc.org/cmo/igo/">Integrated Genomics Operation</a><br><a href="https://www.mskcc.org">Memorial Sloan Kettering Cancer Center</a><br>T 646-888-3856<br>Follow us on <a href="https://www.instagram.com/genomics212/?hl=en">Instagram</a> and <a href="https://twitter.com/genomics212?lang=en">Twitter</a>!<br>',
   //   recipients: 'zzPDL_SKI_IGO_Pathextraction@mskcc.org, zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org',
 };
 
@@ -33,7 +33,7 @@ exports.sendBookingNotification = function (appointment, appointmentIcal) {
 
   let email = {
     subject: `${emailConfig.subject} Drop-off samples at: ${appointment.emailTime} on ${appointment.date} `,
-    content: `You booked a 10x processing on ${appointment.date}. Your drop-off time is ${appointment.emailTime}. Please call 646-888-3765 before dropping off your samples. You can cancel this appointment by clicking on: ${cancellationLink} 
+    content: `You booked a 10x processing on ${appointment.date}. Your drop-off time is ${appointment.emailTime}. Please call 646-888-3856 before dropping off your samples. You can cancel this appointment by clicking on: ${cancellationLink} 
     \n If you have any questions, please reach out to zzPDL_SKI_IGO_Pathextraction@mskcc.org.`,
     footer: emailConfig.footer,
   };
