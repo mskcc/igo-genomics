@@ -33,7 +33,7 @@ import ChemistryTimelinePage from './components/pages/ChemistryTimelinePage.vue'
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
 
-import { BASE_LOCATION } from './config.js';
+import { HOME_PAGE_PATH } from './config.js';
 
 import {
   MdAvatar,
@@ -128,7 +128,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  base: BASE_LOCATION,
+  base: HOME_PAGE_PATH,
   routes: routes,
   mode: 'history',
 });

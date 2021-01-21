@@ -360,7 +360,7 @@
 
 <script>
 // import ChemistryTimelinePage from './ChemistryTimelinePage.vue';
-import { BASE_LOCATION } from './../../config.js';
+import { HOME_PAGE_PATH } from './../../config.js';
 import { bulkServices, singleServices, otherServices } from './../../data.js';
 
 export default {
@@ -378,7 +378,7 @@ export default {
     expandList(service) {
       // this.$route.params.name = service;
       // console.log(this.$router);
-      history.pushState(service, '', `${BASE_LOCATION}/platforms/${service.replace(/ /g, '').toLowerCase()}`);
+      history.pushState(service, '', `${HOME_PAGE_PATH}/platforms/${service.replace(/ /g, '').toLowerCase()}`);
     },
   },
   // computed: {
