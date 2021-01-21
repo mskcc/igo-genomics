@@ -12,7 +12,7 @@
             <li>Open File Explorer from the taskbar or the Start menu, or press the Windows logo key + E.</li>
             <li>Select This PC from the left pane. Then, on the Computer tab, select Map network drive.</li>
             <li>In the Drive list, select a drive letter. Any available letter will do.</li>
-            <li>In the Folder box, type \\bic.mskcc.org\[LABNAME]</li>
+            <li>In the Folder box, type \\igo-share03.mskcc.org\igo_delivery\share\[LABNAME]</li>
             <li>When prompted enter your MSKCC username & password</li>
             <li>Select Finish</li>
           </ul>
@@ -20,7 +20,7 @@
           <ul>
             <li>Click the Finder icon in the Dock to open a Finder window</li>
             <li>From the menu bar at the top select “Go” and then “Connect to Server”</li>
-            <li>Enter the server address smb://bic.mskcc.org</li>
+            <li>Enter the server address smb://igo-share04.mskcc.org/igo_delivery/share/[LABNAME]</li>
             <li>From the popup select the share for your lab</li>
             <li>When prompted enter your MSKCC username & password</li>
           </ul>
