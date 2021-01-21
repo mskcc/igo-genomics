@@ -49,9 +49,11 @@
       <md-card-content>
         <p>
           For investigators who make their own sequencing libraries to submit to IGO, we now have
-          <router-link :to="{ name: 'platforms & pricing' }">easy-to-understand block pricing</router-link> for our most commonly-requested
-          read lengths and throughputs. We accept both individual user libraries and pre-pooled libraries to occupy a full flow cell or
-          lane. Custom read lengths and coverages outside the block pricing will still be accepted;
+          <router-link :to="{ name: 'platforms & pricing', params: { name: 'userlibrarysequencing' } }"
+            >easy-to-understand block pricing</router-link
+          >
+          for our most commonly-requested read lengths and throughputs. We accept both individual user libraries and pre-pooled libraries to
+          occupy a full flow cell or lane. Custom read lengths and coverages outside the block pricing will still be accepted;
           <router-link :to="{ name: 'contact us' }">contact us for more information.</router-link>
         </p>
       </md-card-content>
