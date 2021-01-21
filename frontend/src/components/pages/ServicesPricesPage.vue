@@ -19,7 +19,13 @@
         <div class="full-control">
           <div class="list">
             <md-list>
-              <md-list-item v-for="(service, index) in bulkServices" :key="index" md-expand>
+              <md-list-item
+                v-for="(service, index) in bulkServices"
+                :key="index"
+                md-expand
+                :md-expanded="platformName.replace(/ /g, '').toLowerCase() === service.name.replace(/ /g, '').toLowerCase()"
+                @click="expandList(service.name)"
+              >
                 <span class="md-list-item-text">{{ service.name }}</span>
                 <md-list slot="md-expand">
                   <md-list-item>
@@ -146,7 +152,13 @@
         <div class="full-control">
           <div class="list">
             <md-list>
-              <md-list-item v-for="(service, index) in singleServices" :key="index" md-expand>
+              <md-list-item
+                v-for="(service, index) in singleServices"
+                :key="index"
+                md-expand
+                :md-expanded="platformName.replace(/ /g, '').toLowerCase() === service.name.replace(/ /g, '').toLowerCase()"
+                @click="expandList(service.name)"
+              >
                 <span class="md-list-item-text">{{ service.name }}</span>
                 <span v-if="service.name == '10x Genomics Visium'"
                   ><router-link :to="{ name: '10x genomics visium' }">more info</router-link></span
@@ -227,7 +239,13 @@
         <div class="full-control">
           <div class="list">
             <md-list>
-              <md-list-item v-for="(service, index) in otherServices" :key="index" md-expand>
+              <md-list-item
+                v-for="(service, index) in otherServices"
+                :key="index"
+                md-expand
+                :md-expanded="platformName.replace(/ /g, '').toLowerCase() === service.name.replace(/ /g, '').toLowerCase()"
+                @click="expandList(service.name)"
+              >
                 <span class="md-list-item-text">{{ service.name }}</span>
                 <md-list slot="md-expand">
                   <md-list-item>
@@ -342,14 +360,32 @@
 
 <script>
 // import ChemistryTimelinePage from './ChemistryTimelinePage.vue';
+import { BASE_LOCATION } from './../../config.js';
 import { bulkServices, singleServices, otherServices } from './../../data.js';
 
 export default {
   name: 'ServicesPricesPage',
   // components: { ChemistryTimelinePage },
+  props: ['name'],
   data: function() {
-    return { bulkServices: bulkServices, singleServices: singleServices, otherServices: otherServices };
+    return { bulkServices: bulkServices, singleServices: singleServices, otherServices: otherServices, platformName: '' };
   },
+  mounted: function() {
+    this.platformName = this.$route.params.name || '';
+    // console.log(this.platformName);
+  },
+  methods: {
+    expandList(service) {
+      // this.$route.params.name = service;
+      // console.log(this.$router);
+      history.pushState(service, '', `${BASE_LOCATION}/platforms/${service.replace(/ /g, '').toLowerCase()}`);
+    },
+  },
+  // computed: {
+  //   updateExpandedProperty: function() {
+  //     return this.
+  //   }
+  // }
 };
 </script>
 

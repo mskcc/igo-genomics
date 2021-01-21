@@ -87,7 +87,7 @@ export default {
           searchResults = filteredAssays[category].filter((assayElement) => {
             return assayElement.toLowerCase().match(this.search.toLowerCase());
           });
-          console.log(searchResults);
+          // console.log(searchResults);
           filteredAssays[category] = searchResults;
         });
         return filteredAssays;

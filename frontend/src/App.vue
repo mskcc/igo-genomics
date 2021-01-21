@@ -27,7 +27,9 @@
               v-for="link in links"
               :key="link"
               :to="{ name: link }"
-              v-bind:class="{ 'router-link-active': teamIsActive && link === 'about' }"
+              v-bind:class="{
+                'router-link-active': (teamIsActive && link === 'about') || (platformsIsActive && link === 'platforms & pricing'),
+              }"
             >
               <md-button class="md-ripple nav-button">{{ link }}</md-button>
             </router-link>
@@ -125,6 +127,7 @@ export default {
         // 'schedule 10x dropoff',
       ].includes(this.$route.name),
       teamIsActive: this.$route.path.includes('about'),
+      platformsIsActive: this.$route.path.includes('platforms'),
       toolTips: {
         'sample criteria': 'A comprehensive guide to quality and quantity requirements',
         // "ddpcr assays": "Available ddPPCR assays",
@@ -139,7 +142,7 @@ export default {
     $route() {
       this.toolsIsActive = this.toolLinks.includes(this.$route.name) || this.$route.path.includes('criteria');
       this.teamIsActive = this.$route.path.includes('about');
-
+      this.platformsIsActive = this.$route.path.includes('platform');
       // console.log(this.$route);
     },
   },

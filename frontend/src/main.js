@@ -98,9 +98,10 @@ const routes = [
     name: 'ddpcr assays',
   },
   {
-    path: '/platforms',
+    path: '/platforms/:name?',
     component: ServicesPricesPage,
     name: 'platforms & pricing',
+    props: true,
   },
   { path: '/submission-guidelines', component: SubmissionGuidelinesPage, name: 'submission guidelines' },
   { path: '/contacts', component: ContactsPage, name: 'contact us' },
