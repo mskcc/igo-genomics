@@ -44,7 +44,7 @@
               </md-card-header-text>
             </md-card-header>
             <md-content class="md-scrollbar">
-              <div v-for="assay in assayArray" :key="assay" class="assay-list">
+              <div v-for="(assay, index) in assayArray" :key="index" class="assay-list">
                 {{ assay }}
                 <span v-if="mouseAssays.includes(assay)"> &#128000;<md-tooltip md-direction="top">Mouse assay</md-tooltip></span>
                 <span v-if="outOfStockAssays.includes(assay)" style="color: Tomato"
