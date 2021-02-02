@@ -86,7 +86,7 @@
 
       <md-card class="news-card">
         <md-card-media>
-          <img src="../../assets/images/news/Viale_190612_111.jpg" @click="showDialogMethod" />
+          <img src="../../assets/images/news/Viale_190612_083.jpg" @click="showDialogMethod" />
         </md-card-media>
 
         <md-card-header>
