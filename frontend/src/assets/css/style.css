@@ -42,7 +42,7 @@
 .app-body {
   display: grid;
   /* grid-template-rows: 0.75fr 5fr 0.5fr; */
-  grid-template-rows: 150px 5fr 100px;
+  grid-template-rows: 150px 5fr auto;
   grid-template-areas:
     'header'
     'main'
@@ -185,7 +185,7 @@ form {
 }
 
 .app-footer img {
-  max-height: 100%;
+  max-height: 60%;
   place-self: center;
 }
 
