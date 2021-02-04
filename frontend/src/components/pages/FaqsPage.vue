@@ -294,9 +294,8 @@
                       <md-list slot="md-expand">
                         <md-list-item>
                           <div>
-                            Yes. We can go forward but cannot guarantee downstream success at either library prep or sequencing.We are
-                            always happy to discuss your results and our recommendations. Reach out to us either by commenting on your QC
-                            report.
+                            Yes. We can go forward but cannot guarantee downstream success at either library prep or sequencing. We are
+                            always happy to discuss your results and our recommendations. Reach out to us by commenting on your QC report.
                           </div>
                         </md-list-item>
                       </md-list>
