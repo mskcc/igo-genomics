@@ -48,6 +48,7 @@ import {
   MdIcon,
   MdMenu,
   MdRadio,
+  // MdSelect,
   MdSteppers,
   MdTable,
   MdTabs,
@@ -74,6 +75,7 @@ Vue.use(MdField);
 Vue.use(MdIcon);
 Vue.use(MdList);
 Vue.use(MdRadio);
+// Vue.use(MdSelect);
 Vue.use(MdSteppers);
 Vue.use(MdMenu);
 Vue.use(MdTable);
@@ -131,6 +133,16 @@ const router = new VueRouter({
   base: HOME_PAGE_PATH,
   routes: routes,
   mode: 'history',
+});
+
+// scrolls to top of window on route change
+router.beforeEach((to, from, next) => {
+  // don't do it for these pages
+  if (to.name !== 'about' && to.name !== 'team') {
+    window.scrollTo(0, 0);
+  }
+
+  next();
 });
 
 new Vue({
