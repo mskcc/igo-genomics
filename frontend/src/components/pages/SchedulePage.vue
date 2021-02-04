@@ -1,11 +1,17 @@
 <template>
   <div>
-    <div class="md-display-1">Schedule 10x appointment</div>
+    <div class="md-display-1">Schedule an appointment</div>
     <!-- <vc-date-picker v-model="date" :rows="1" :disabled-dates="{ weekdays: [1, 7] }"  /> -->
     <!-- <vc-calendar></vc-calendar> -->
-
-    <div class="md-layout">
-      <div class="md-layout-item">
+    <div class="md-layout md-gutter md-alignment-center-space-around">
+      <md-card class="md-layout-item">
+        <!-- <md-card-header>
+        <div class="md-title">Request Type</div>
+      </md-card-header> -->
+      </md-card>
+    </div>
+    <div class="md-layout md-alignment-top-center">
+      <div class="md-layout-item" v-if="requestType">
         <vc-date-picker
           :attributes="attrs"
           :disabled-dates="disabledDates"
@@ -17,13 +23,25 @@
       </div>
       <form style="width: 600px" @submit.prevent="book()">
         <md-card class="md-layout-item">
-          <md-card-header v-show="!daySelected">
-            <div class="md-title">Please select a day</div>
-          </md-card-header>
-          <span v-show="daySelected">
-            <md-card-header>
-              <div class="md-title">Book</div>
+          <md-card-content>
+            <md-field>
+              <label>Request Type</label>
+              <md-select v-model="requestType" name="requestType" id="requestType" :disabled="daySelected">
+                <md-option value="10xGenomics">10x Genomics</md-option>
+                <md-option value="atacSeq">ATAC Seq (Thursdays only)</md-option>
+                <md-option value="missionBio" disabled>MissionBio</md-option>
+              </md-select>
+            </md-field>
+          </md-card-content>
+          <span v-if="requestType">
+            <md-card-header v-show="!daySelected">
+              <div class="md-title">Please select a day</div>
             </md-card-header>
+          </span>
+          <span v-show="daySelected">
+            <!-- <md-card-header>
+              <div class="md-title">Book</div>
+            </md-card-header> -->
             <span v-show="!timesAvailable"
               >There are no available times for this day. You can join the waitlist
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">here</a>. If you
@@ -41,8 +59,10 @@
                   close-on-complete
                   ref="timePicker"
                 >
-                  <template v-slot:icon> <i class="far fa-clock"></i> </template
-                ></vue-timepicker>
+                  <template v-slot:icon>
+                    <i class="far fa-clock"></i>
+                  </template>
+                </vue-timepicker>
                 <div v-if="waitListMessage">
                   If your desired time slot is not available please complete
                   <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform"
@@ -72,20 +92,34 @@
                     <md-input v-model="form.sampleNumber" />
                     <span class="md-error" v-if="!$v.form.sampleNumber.required">Number of samples is required</span>
                     <span class="md-error" v-else-if="!$v.form.sampleNumber.numeric">Please enter a number</span>
+                    <!-- <span class="md-error" v-else-if="!$v.form.sampleNumber.maxValue">We cannot accept more than 25 samples/day</span> -->
                   </md-field>
 
-                  <md-field :class="getValidationClass('chemistry')">
+                  <!-- <md-field :class="getValidationClass('chemistry')">
                     <label>Chemistry</label>
                     <md-select v-model="form.chemistry">
                       <md-option value="10x 5’ RNA seq'">10x 5’ RNA seq</md-option>
                       <md-option value="10x 3’ RNA seq'">10x 3’ RNA seq</md-option>
                     </md-select>
                     <span class="md-error" v-if="!$v.form.chemistry.required">Chemistry is required</span>
-                  </md-field>
+                  </md-field> -->
+                  <span v-if="requestType === '10xGenomics'">
+                    <md-field :class="getValidationClass('chemistry')">
+                      <label>Chemistry</label>
+                      <md-select v-model="form.chemistry">
+                        <md-option value="10x 5’ RNA seq'">10x 5’ RNA seq</md-option>
+                        <md-option value="10x 3’ RNA seq'">10x 3’ RNA seq</md-option>
+                      </md-select>
+                      <span class="md-error" v-if="!$v.form.chemistry.required">Chemistry is required</span>
+                    </md-field>
+                  </span>
                 </span>
               </md-card-content>
-              <md-card-actions v-show="timeSelected">
-                <md-button type="submit" class="md-primary">Submit</md-button>
+              <md-card-actions>
+                <md-button class="md-primary" @click="reset">Clear</md-button>
+                <span v-show="timeSelected">
+                  <md-button type="submit" class="md-primary">Submit</md-button>
+                </span>
               </md-card-actions>
             </span>
           </span>
@@ -100,7 +134,7 @@ import * as app from './../../app.js';
 import { API_URL } from './../../config.js';
 import VueTimepicker from 'vue2-timepicker';
 import 'vue2-timepicker/dist/VueTimepicker.css';
-import { required, email, numeric } from 'vuelidate/lib/validators';
+import { required, email, numeric, requiredIf } from 'vuelidate/lib/validators';
 
 export default {
   components: { VueTimepicker },
@@ -111,6 +145,7 @@ export default {
       waitListMessage: true,
       invalidTimeSelected: false,
       timesAvailable: true,
+      requestType: null,
       form: {
         name: null,
         email: null,
@@ -141,13 +176,28 @@ export default {
       formHasErrors: false,
     };
   },
-  validations: {
-    form: {
-      name: { required },
-      email: { required, email },
-      sampleNumber: { required, numeric },
-      chemistry: { required },
-    },
+  validations() {
+    return {
+      form: {
+        name: { required },
+        email: { required, email },
+        sampleNumber: {
+          required,
+          numeric,
+          // maxValue: maxValue(function() {
+          //   if (this.requestType === 'atacSeq') {
+          //     return 25;
+          //   }
+          // }),
+          // between: between(1, 25),
+        },
+        chemistry: {
+          required: requiredIf(function() {
+            return this.requestType === '10xGenomics';
+          }),
+        },
+      },
+    };
   },
   //   watch: {
   //     //   for global errors
@@ -157,20 +207,38 @@ export default {
   //   },
 
   methods: {
+    reset() {
+      this.requestType = null;
+      this.daySelected = false;
+      this.timeSelected = false;
+      this.form.name = null;
+      this.form.email = null;
+      this.form.sampleNumber = null;
+      this.form.chemistry = null;
+      this.form.time.A = null;
+      this.form.time.hh = null;
+      this.form.time.h = null;
+      this.form.time.militaryTime = null;
+
+      // time: { A: null, hh: null, h: null, militaryTime: null },
+    },
     dayClick(date) {
+      // user clicked on a valid day
       if (date.isDisabled === false) {
         // console.log(date.isDisabled);
         this.daySelected = true;
         this.dateSelected = date;
 
-        app.axios.get(`${API_URL}/availableSlots/${this.dateSelected.weekday}/${this.dateSelected.id}`).then((response) => {
-          if (response.status === 204) {
-            this.timesAvailable = false;
-          } else {
-            this.timesAvailable = true;
-            this.hourRange = response.data.hourRange;
-          }
-        });
+        app.axios
+          .get(`${API_URL}/availableSlots/${this.requestType}/${this.dateSelected.weekday}/${this.dateSelected.id}`)
+          .then((response) => {
+            if (response.status === 204) {
+              this.timesAvailable = false;
+            } else {
+              this.timesAvailable = true;
+              this.hourRange = response.data.hourRange;
+            }
+          });
       }
 
       // console.log('form', this.form);
@@ -185,20 +253,22 @@ export default {
       }
     },
     book() {
+      console.log(this.requestType);
       this.$v.$touch();
       if (this.$v.$invalid) {
         this.formHasErrors = true;
         return;
       }
-      if (!this.formHasErrors) {
-        app.axios
-          .post(`${API_URL}/bookTime`, { data: { ...this.form, date: this.dateSelected.id } })
-          .then((response) => {
-            this.$swal({ title: 'Booked', text: response.data.message, animation: false, icon: 'success' });
-            this.daySelected = false;
-          })
-          .catch((error) => this.$swal({ title: 'Unable to book', text: error.response.data.message, animation: false, icon: 'error' }));
-      }
+      // if (!this.formHasErrors) {
+      //   app.axios
+      //     .post(`${API_URL}/bookTime`, { data: { ...this.form, date: this.dateSelected.id, requestType: this.requestType } })
+      //     .then((response) => {
+      //       this.$swal({ title: 'Booked', text: response.data.message, animation: false, icon: 'success' });
+      //       // this.daySelected = false;
+      //       this.reset();
+      //     })
+      //     .catch((error) => this.$swal({ title: 'Unable to book', text: error.response.data.message, animation: false, icon: 'error' }));
+      // }
     },
     changeHandler(eventData) {
       // eventData -> {data: {HH:..., mm:...}, displayTime: 'HH:mm'}
