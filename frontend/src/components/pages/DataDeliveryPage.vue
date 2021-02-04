@@ -24,6 +24,15 @@
             <li>From the popup select the share for your lab</li>
             <li>When prompted enter your MSKCC username & password</li>
           </ul>
+          <div class="md_subhead">On Juno:</div>
+          <ul>
+            <li>Navigate to /igo/delivery/share/[LABNAME]</li>
+          </ul>
+          <div class="md_subhead">On Lilac:</div>
+          <ul>
+            <li>On lilac-xfer01.mskcc.org, navigate to /igo/delivery/share/[LABNAME]</li>
+            <li>Rsync the data to its final destination</li>
+          </ul>
           <br />
           If you cannot log in, want to understand about the data storage structure, or are having difficulties locating your data,
           <a href="mailto:zzPDL_SKI_IGO_DATA@mskcc.org?subject=Trouble accessing data">contact the Data Team.</a>
