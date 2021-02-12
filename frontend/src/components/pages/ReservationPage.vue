@@ -3,24 +3,8 @@
     <div class="md-display-1">Schedule an appointment</div>
     <!-- <vc-date-picker v-model="date" :rows="1" :disabled-dates="{ weekdays: [1, 7] }"  /> -->
     <!-- <vc-calendar></vc-calendar> -->
-    <div class="md-layout md-gutter md-alignment-center-space-around">
-      <md-card class="md-layout-item">
-        <!-- <md-card-header>
-        <div class="md-title">Request Type</div>
-      </md-card-header> -->
-      </md-card>
-    </div>
+
     <div class="md-layout md-alignment-top-center">
-      <div class="md-layout-item" v-if="requestType">
-        <vc-date-picker
-          :attributes="attrs"
-          :disabled-dates="disabledDates"
-          :min-date="new Date()"
-          :max-date="getMaxDate()"
-          :value="dateSelected"
-          @dayclick="(event) => dayClick(event)"
-        />
-      </div>
       <form style="width: 600px" @submit.prevent="book()">
         <md-card class="md-layout-item">
           <md-card-content>
@@ -33,20 +17,18 @@
               </md-select>
             </md-field>
           </md-card-content>
-          <span v-if="requestType">
-            <md-card-header v-show="!daySelected">
-              <div class="md-title">Please select a day</div>
-            </md-card-header>
-          </span>
+          <div v-show="requestType">
+            <span v-html="message"> </span>
+          </div>
           <span v-show="daySelected">
             <!-- <md-card-header>
               <div class="md-title">Book</div>
             </md-card-header> -->
-            <span v-show="!timesAvailable"
+            <!-- <span v-show="!timesAvailable"
               >There are no available times for this day. You can join the waitlist
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">here</a>. If you
               are looking to cancel an existing appointment, please refer to your confirmation email.</span
-            >
+            > -->
             <span v-show="timesAvailable">
               <md-card-content>
                 <vue-timepicker
@@ -63,12 +45,13 @@
                     <i class="far fa-clock"></i>
                   </template>
                 </vue-timepicker>
-                <div v-if="waitListMessage">
+
+                <!-- <div v-if="waitListMessage">
                   If your desired time slot is not available please complete
                   <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform"
                     >this waitlist form</a
                   >
-                </div>
+                </div> -->
                 <div v-show="invalidTimeSelected">Invalid time slot, please correct</div>
                 <span v-show="timeSelected">
                   <md-field>
@@ -125,6 +108,16 @@
           </span>
         </md-card>
       </form>
+      <div>
+        <vc-date-picker
+          :attributes="attrs"
+          :disabled-dates="disabledDates"
+          :min-date="new Date()"
+          :max-date="getMaxDate()"
+          :value="dateSelected"
+          @dayclick="(event) => dayClick(event)"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -137,21 +130,23 @@ import 'vue2-timepicker/dist/VueTimepicker.css';
 import { required, email, numeric, requiredIf } from 'vuelidate/lib/validators';
 
 export default {
+  name: 'ReservationPage',
   components: { VueTimepicker },
   data: function() {
     return {
+      message: 'Please select a day.',
       daySelected: false,
       timeSelected: false,
       waitListMessage: true,
       invalidTimeSelected: false,
-      timesAvailable: true,
+      timesAvailable: false,
       requestType: null,
       form: {
         name: null,
         email: null,
         sampleNumber: null,
         chemistry: null,
-        time: { A: null, hh: null, h: null, militaryTime: null },
+        time: { A: null, hh: null, h: null, militaryTime: null, weekday: null },
       },
       hourRange: null,
 
@@ -199,12 +194,23 @@ export default {
       },
     };
   },
-  //   watch: {
-  //     //   for global errors
-  //     "$v.$invalid": function() {
-  //       this.formHasErrors = this.$v.$invalid;
-  //     },
-  //   },
+  watch: {
+    //   for global errors
+    // "$v.$invalid": function() {
+    //   this.formHasErrors = this.$v.$invalid;
+    // },
+
+    dateSelected: function() {
+      console.log(this.form.time);
+      if (this.requestType === 'atacSeq' && this.form.time.weekday !== '6') {
+        this.message = 'At this time ATAC Seq reservations can only be made on Thursdays';
+        this.timesAvailable = false;
+      } else {
+        this.message =
+          'If your desired time slot is not available please complete <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">this waitlist form</a>';
+      }
+    },
+  },
 
   methods: {
     reset() {
@@ -223,22 +229,30 @@ export default {
       // time: { A: null, hh: null, h: null, militaryTime: null },
     },
     dayClick(date) {
+      this.form.time.weekday = date.weekday;
+      console.log(date);
       // user clicked on a valid day
       if (date.isDisabled === false) {
         // console.log(date.isDisabled);
-        this.daySelected = true;
-        this.dateSelected = date;
-
-        app.axios
-          .get(`${API_URL}/availableSlots/${this.requestType}/${this.dateSelected.weekday}/${this.dateSelected.id}`)
-          .then((response) => {
-            if (response.status === 204) {
-              this.timesAvailable = false;
-            } else {
-              this.timesAvailable = true;
-              this.hourRange = response.data.hourRange;
-            }
-          });
+        if (!this.requestType) {
+          this.message = 'Please select a Request Type';
+        }
+        if (this.requestType) {
+          this.daySelected = true;
+          this.dateSelected = date;
+          app.axios
+            .get(`${API_URL}/availableSlots/${this.requestType}/${this.dateSelected.weekday}/${this.dateSelected.id}`)
+            .then((response) => {
+              if (response.status === 204) {
+                this.timesAvailable = false;
+                this.message =
+                  'There are no available times for this day. You can join the waitlist<a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">here</a>. If you are looking to cancel an existing appointment, please refer to your confirmation email.';
+              } else {
+                this.timesAvailable = true;
+                this.hourRange = response.data.hourRange;
+              }
+            });
+        }
       }
 
       // console.log('form', this.form);

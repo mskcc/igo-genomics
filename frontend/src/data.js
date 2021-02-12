@@ -499,3 +499,7 @@ export const tutorials = [
     screenshot: 'dragen',
   },
 ];
+
+export const bookingDetails = [
+  { application: '10x Genomics,', formPrompts: { name: null, email: null, sampleNumber: null, chemustry: null } },
+];

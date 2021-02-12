@@ -101,7 +101,7 @@ export default {
   },
   data: function() {
     return {
-      links: ['home', 'about', 'platforms & pricing', 'submission guidelines', 'faqs'],
+      links: ['home', 'about', 'platforms & pricing', 'submission guidelines', 'reservations', 'faqs'],
       toolLinks: [
         '10x genomics visium',
         'accessing your data',
@@ -110,7 +110,6 @@ export default {
         'igo tutorials',
         'metrics and throughput',
         'sample criteria',
-        'schedule 10x dropoff',
         'single cell platforms',
       ],
       toolsIsActive: [
@@ -124,10 +123,9 @@ export default {
         'rna',
         'other',
         'metrics and throughput',
-        'schedule 10x dropoff',
       ].includes(this.$route.name),
       teamIsActive: this.$route.path.includes('about'),
-      platformsIsActive: this.$route.path.includes('platforms'),
+      platformsIsActive: this.$route.path === '/platforms',
       toolTips: {
         'sample criteria': 'A comprehensive guide to quality and quantity requirements',
         // "ddpcr assays": "Available ddPPCR assays",
@@ -142,7 +140,7 @@ export default {
     $route() {
       this.toolsIsActive = this.toolLinks.includes(this.$route.name) || this.$route.path.includes('criteria');
       this.teamIsActive = this.$route.path.includes('about');
-      this.platformsIsActive = this.$route.path.includes('platform');
+      this.platformsIsActive = this.$route.path === '/platforms';
       // console.log(this.$route);
     },
   },
