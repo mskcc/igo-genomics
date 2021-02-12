@@ -6,13 +6,11 @@ const moment = require('moment');
 // return priorR+afterR
 const _ = require('lodash');
 const duration = 3;
-exports.getAvailableHours = (
-  startTime,
-  range = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
-) => {
-  if (!range.includes(startTime)) return [];
-  const start = startTime;
-  const end = start + duration;
+exports.getAvailableHours = (startTime, range) => {
+  console.log(range);
+  // if (!range.includes(startTime)) return [];
+  const existingApptStartTime = startTime;
+  const existingApptEndTime = existingApptStartTime + duration;
 
   const dayMin = range[0];
   const dayMax = range[range.length - 1];
@@ -20,14 +18,14 @@ exports.getAvailableHours = (
   let priorRange = [];
   let afterRange = [];
   // can someone book prior to this appointment?
-  if (dayMin + duration <= start) {
+  if (dayMin + duration <= existingApptStartTime) {
     // create times between minimum for that day and start time of appointment
     priorRange = _.range(dayMin, startTime - 2);
     // only keep times that still exist in the current range
     priorRange = _.intersection(priorRange, range);
   }
-  if (dayMax - end >= duration) {
-    afterRange = _.range(end, dayMax + 1);
+  if (dayMax - existingApptEndTime >= duration) {
+    afterRange = _.range(existingApptEndTime, dayMax + 1);
     afterRange = _.intersection(afterRange, range);
   }
   //  remove times after 6pm

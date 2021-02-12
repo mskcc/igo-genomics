@@ -15,7 +15,7 @@ module.exports = {
     6: [10, 11, 12, 13, 14, 15], // Friday process until 6pm, last booking time is 3
   },
   atacSeq: {
-    1: [],
+    // 1: [],
     2: [],
     3: [],
     4: [],

@@ -1,9 +1,6 @@
 <template>
   <div>
     <div class="md-display-1">Schedule an appointment</div>
-    <!-- <vc-date-picker v-model="date" :rows="1" :disabled-dates="{ weekdays: [1, 7] }"  /> -->
-    <!-- <vc-calendar></vc-calendar> -->
-
     <div class="md-layout md-alignment-top-center">
       <form style="width: 600px" @submit.prevent="book()">
         <md-card class="md-layout-item">
@@ -21,14 +18,6 @@
             <span v-html="message"> </span>
           </div>
           <span v-show="daySelected">
-            <!-- <md-card-header>
-              <div class="md-title">Book</div>
-            </md-card-header> -->
-            <!-- <span v-show="!timesAvailable"
-              >There are no available times for this day. You can join the waitlist
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">here</a>. If you
-              are looking to cancel an existing appointment, please refer to your confirmation email.</span
-            > -->
             <span v-show="timesAvailable">
               <md-card-content>
                 <vue-timepicker
@@ -45,13 +34,6 @@
                     <i class="far fa-clock"></i>
                   </template>
                 </vue-timepicker>
-
-                <!-- <div v-if="waitListMessage">
-                  If your desired time slot is not available please complete
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform"
-                    >this waitlist form</a
-                  >
-                </div> -->
                 <div v-show="invalidTimeSelected">Invalid time slot, please correct</div>
                 <span v-show="timeSelected">
                   <md-field>
@@ -108,7 +90,7 @@
           </span>
         </md-card>
       </form>
-      <div>
+      <div v-if="requestType">
         <vc-date-picker
           :attributes="attrs"
           :disabled-dates="disabledDates"
@@ -119,6 +101,43 @@
         />
       </div>
     </div>
+    <div v-if="requestType && existingReservations">
+      <!-- <hot-table
+        v-if="existingReservations.columns"
+        :columns="existingReservations.columns"
+        :colHeaders="existingReservations.columnsHeaders"
+        :data="existingReservations.rows"
+        :readOnly="true"
+        :disableVisualSelection="true"
+        stretchH="all"
+        licenseKey="non-commercial-and-evaluation"
+      ></hot-table> -->
+
+      <hot-table
+        :data="existingReservations.data"
+        :columns="existingReservations.columnDefinitions"
+        :rowHeaders="true"
+        :readOnly="true"
+        :colHeaders="existingReservations.columnHeaders"
+        licenseKey="non-commercial-and-evaluation"
+      ></hot-table>
+      <!-- <hot-table></hot-table>
+      <span>Existing Reservations</span>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Request Type</th>
+        </tr>
+        <tr v-for="(reservation, index) in existingReservations" :key="index">
+          <td>{{ reservation.fullName }}</td>
+          <td>{{ reservation.date }}</td>
+          <td>{{ reservation.emailTime }}</td>
+          <td>{{ reservation.requestType }}</td>
+        </tr>
+      </table> -->
+    </div>
   </div>
 </template>
 
@@ -128,16 +147,16 @@ import { API_URL } from './../../config.js';
 import VueTimepicker from 'vue2-timepicker';
 import 'vue2-timepicker/dist/VueTimepicker.css';
 import { required, email, numeric, requiredIf } from 'vuelidate/lib/validators';
+import { HotTable } from '@handsontable/vue';
 
 export default {
   name: 'ReservationPage',
-  components: { VueTimepicker },
+  components: { VueTimepicker, HotTable },
   data: function() {
     return {
       message: 'Please select a day.',
       daySelected: false,
       timeSelected: false,
-      waitListMessage: true,
       invalidTimeSelected: false,
       timesAvailable: false,
       requestType: null,
@@ -149,7 +168,9 @@ export default {
         time: { A: null, hh: null, h: null, militaryTime: null, weekday: null },
       },
       hourRange: null,
-
+      formHasErrors: false,
+      existingReservations: null,
+      // for vc-date-picker
       dateSelected: new Date(),
       disabledDates: [
         new Date('1/1/2021'),
@@ -168,7 +189,6 @@ export default {
           },
         },
       ],
-      formHasErrors: false,
     };
   },
   validations() {
@@ -210,6 +230,12 @@ export default {
           'If your desired time slot is not available please complete <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">this waitlist form</a>';
       }
     },
+    requestType: function() {
+      app.axios.get(`${API_URL}/existingAppointments/${this.requestType}`).then((response) => {
+        this.existingReservations = response.data;
+        console.log(this.existingReservations);
+      });
+    },
   },
 
   methods: {
@@ -229,7 +255,6 @@ export default {
       // time: { A: null, hh: null, h: null, militaryTime: null },
     },
     dayClick(date) {
-      this.form.time.weekday = date.weekday;
       console.log(date);
       // user clicked on a valid day
       if (date.isDisabled === false) {
@@ -238,6 +263,7 @@ export default {
           this.message = 'Please select a Request Type';
         }
         if (this.requestType) {
+          this.form.time.weekday = date.weekday;
           this.daySelected = true;
           this.dateSelected = date;
           app.axios
@@ -246,7 +272,7 @@ export default {
               if (response.status === 204) {
                 this.timesAvailable = false;
                 this.message =
-                  'There are no available times for this day. You can join the waitlist<a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">here</a>. If you are looking to cancel an existing appointment, please refer to your confirmation email.';
+                  'There are no available times for this day. You can join the waitlist <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">here</a>. If you are looking to cancel an existing appointment, please refer to your confirmation email.';
               } else {
                 this.timesAvailable = true;
                 this.hourRange = response.data.hourRange;
@@ -267,33 +293,31 @@ export default {
       }
     },
     book() {
-      console.log(this.requestType);
       this.$v.$touch();
       if (this.$v.$invalid) {
         this.formHasErrors = true;
         return;
       }
-      // if (!this.formHasErrors) {
-      //   app.axios
-      //     .post(`${API_URL}/bookTime`, { data: { ...this.form, date: this.dateSelected.id, requestType: this.requestType } })
-      //     .then((response) => {
-      //       this.$swal({ title: 'Booked', text: response.data.message, animation: false, icon: 'success' });
-      //       // this.daySelected = false;
-      //       this.reset();
-      //     })
-      //     .catch((error) => this.$swal({ title: 'Unable to book', text: error.response.data.message, animation: false, icon: 'error' }));
-      // }
+      if (!this.formHasErrors) {
+        console.log('no errors');
+        app.axios
+          .post(`${API_URL}/bookTime`, { data: { ...this.form, date: this.dateSelected.id, requestType: this.requestType } })
+          .then((response) => {
+            this.$swal({ title: 'Booked', text: response.data.message, animation: false, icon: 'success' });
+            // this.daySelected = false;
+            this.reset();
+          })
+          .catch((error) => this.$swal({ title: 'Unable to book', text: error.response.data.message, animation: false, icon: 'error' }));
+      }
     },
     changeHandler(eventData) {
       // eventData -> {data: {HH:..., mm:...}, displayTime: 'HH:mm'}
       if (eventData.data.A && eventData.data.HH) {
         // check if the time selected is valid
         if (this.$refs.timePicker.hasInvalidInput) {
-          this.waitListMessage = false;
           this.invalidTimeSelected = true;
           this.timeSelected = false;
         } else {
-          this.waitListMessage = true;
           this.invalidTimeSelected = false;
           this.timeSelected = true;
         }
@@ -318,4 +342,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style src="../../../node_modules/handsontable/dist/handsontable.full.css"></style>

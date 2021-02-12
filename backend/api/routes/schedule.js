@@ -16,6 +16,12 @@ const agent = new https.Agent({
   rejectUnauthorized: false,
 });
 
+const columns = [
+  { columnHeader: 'Name', data: 'fullName' },
+  { columnHeader: 'Date', data: 'date' },
+  { columnHeader: 'Reservation Time', data: 'emailTime' },
+];
+
 module.exports = function (router) {
   router.post('/bookTime', function (req, response) {
     let form = req.body.data;
@@ -72,12 +78,36 @@ module.exports = function (router) {
           .json({ message: 'Appointment could not be saved.' });
       }
 
-      mailer.sendBookingNotification(appointment, invite);
+      // mailer.sendBookingNotification(appointment, invite);
       return response.status(200).json({
         message:
           'Appointment saved! Please check for a confirmation email and remember to call 646-888-3856 before sample dropoff.',
       });
     });
+  });
+
+  router.get('/existingAppointments/:requestType', function (req, response) {
+    let requestType = req.params.requestType;
+
+    let headers = [];
+    columns.forEach((column) => {
+      headers.push(column.columnHeader);
+    });
+    let result = { columnDefinitions: columns, columnHeaders: headers };
+    // todo sort by time asc
+    AppointmentModel.find({ requestType: requestType })
+      .lean()
+      .exec(function (err, appointments) {
+        if (err) {
+          return response
+            .status(500)
+            .json({ message: 'Error retrieving existing reservations.' });
+        }
+        if (appointments) {
+          result.data = appointments;
+          return response.status(200).send(result);
+        }
+      });
   });
 
   router.get('/availableSlots/:requestType/:weekday/:date', function (
@@ -89,11 +119,14 @@ module.exports = function (router) {
     let requestType = req.params.requestType;
     let weekday = req.params.weekday;
     let date = req.params.date;
-    // let requestTypeHourRange = scheduleConfig['10xGenomics'][weekday];
-    // console.log(requestTypeHourRange);
+
     let defaultHourRange = scheduleConfig[requestType][weekday];
-    // select from mongo this date
-    // empty just send all slots
+
+    // if there are no times for that requestType on that day just return
+    if (_.isEmpty(defaultHourRange)) {
+      return response.status(204).send();
+    }
+    // check for existing appointments
     AppointmentModel.find({ date: date, requestType: requestType })
       .lean()
       .exec(function (err, appointments) {
@@ -103,44 +136,34 @@ module.exports = function (router) {
             .json({ message: 'Backend encountered a fatal error.' });
         }
 
-        if (requestType === 'atacSeq') {
-          if (!_.isEmpty(appointments)) {
-            return response.status(200).json({
-              hourRange: [],
-            });
-          } else {
-            return response.status(200).json({
-              hourRange: defaultHourRange,
-            });
-          }
-        }
         if (_.isEmpty(appointments)) {
-          if (_.isEmpty(defaultHourRange)) {
-            return response.status(200).json({
-              hourRange: [],
-            });
+          return response.status(200).json({
+            // no appointments already but trim hours later in day
+            hourRange: defaultHourRange.filter((element) => element <= 18),
+          });
+        } else {
+          console.log(appointments);
+          // atac is easy bc only have 1 time slot per Thursday
+          if (requestType === 'atacSeq') {
+            return response.status(204).send();
           } else {
-            return response.status(200).json({
-              // no appointments already but trim hours later in day
-              hourRange: defaultHourRange.filter((element) => element <= 18),
+            // we need to filter existing appointments
+            let range = defaultHourRange;
+
+            appointments.forEach((appointment) => {
+              range = helpers.getAvailableHours(appointment.startTime, range);
             });
+            // that day is fully booked
+            if (_.isEmpty(range)) {
+              return response.status(204).send();
+            } else {
+              // console.log(range);
+              return response.status(200).json({
+                hourRange: range,
+              });
+            }
           }
         }
-        // if appointments exist on this date:  for every startTime on that day, run getAvailableTimes
-        let range = defaultHourRange;
-        appointments.forEach((appointment) => {
-          range = helpers.getAvailableHours(appointment.startTime, range);
-        });
-
-        if (_.isEmpty(range)) {
-          return response.status(204).send();
-        }
-        return response.status(200).json({
-          hourRange: range,
-        });
-
-        // Appointments exist on this date, adjust hourRange accordingly
-        // Grab all start times and use them as input for
       });
   });
 
