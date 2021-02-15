@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div id="reservation-page">
     <div class="md-display-1">Schedule an appointment</div>
-    <div class="md-layout md-alignment-top-center">
-      <form style="width: 600px" @submit.prevent="book()">
-        <md-card class="md-layout-item">
+    <div class="md-layout ">
+      <form class="md-layout-item" @submit.prevent="book()">
+        <md-card>
           <md-card-content>
             <md-field>
               <label>Request Type</label>
@@ -90,7 +90,7 @@
           </span>
         </md-card>
       </form>
-      <div v-if="requestType">
+      <div class="md-layout-item" v-if="requestType">
         <vc-date-picker
           :attributes="attrs"
           :disabled-dates="disabledDates"
@@ -101,7 +101,7 @@
         />
       </div>
     </div>
-    <div v-if="requestType && existingReservations">
+    <div class="md-layout-item" v-if="requestType && existingReservations">
       <!-- <hot-table
         v-if="existingReservations.columns"
         :columns="existingReservations.columns"

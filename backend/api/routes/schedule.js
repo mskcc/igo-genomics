@@ -53,7 +53,8 @@ module.exports = function (router) {
           start: dateAndTime,
           timestamp: dateAndTime,
           end: end,
-          summary: '10x Sample Dropoff',
+          // summary: '10x Sample Dropoff',
+          summary: `${form.requestType} Sample Dropoff`,
           location: 'ZRC 320',
           description: "Please don't be late.",
           organizer:
@@ -64,7 +65,7 @@ module.exports = function (router) {
 
     // let string = cal.toString()
     // console.log(invite);
-    // mailer.sendBookingNotification(appointment, invite);
+    mailer.sendBookingNotification(appointment, invite);
     appointment.save(function (err) {
       if (err) {
         if (err.code === 11000) {
