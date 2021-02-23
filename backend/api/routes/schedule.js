@@ -11,6 +11,7 @@ const mailer = require('../util/mailer');
 // const scheduleConfig = require('../util/scheduleConfig');
 const scheduleConfig = require('../util/scheduleConfig');
 const AppointmentModel = require('../models/AppointmentModel');
+const { time } = require('console');
 // LIMS is authorized. Avoids certificate verification & "unable to verify the first certificate in nodejs" errors
 const agent = new https.Agent({
   rejectUnauthorized: false,
@@ -25,7 +26,7 @@ const columns = [
 module.exports = function (router) {
   router.post('/bookTime', function (req, response) {
     let form = req.body.data;
-    console.log(form);
+    // console.log(form);
     let appointment = new AppointmentModel({
       fullName: form.name,
       email: form.email,
@@ -88,15 +89,16 @@ module.exports = function (router) {
   });
 
   router.get('/existingAppointments/:requestType', function (req, response) {
+    let today = moment().startOf('day').valueOf();
     let requestType = req.params.requestType;
-
     let headers = [];
     columns.forEach((column) => {
       headers.push(column.columnHeader);
     });
     let result = { columnDefinitions: columns, columnHeaders: headers };
-    // todo sort by time asc
+
     AppointmentModel.find({ requestType: requestType })
+      .sort('date')
       .lean()
       .exec(function (err, appointments) {
         if (err) {
@@ -105,7 +107,14 @@ module.exports = function (router) {
             .json({ message: 'Error retrieving existing reservations.' });
         }
         if (appointments) {
-          result.data = appointments;
+          let futureAppointments = [];
+          appointments.forEach((appointment) => {
+            let appointmentDate = moment(appointment.date).valueOf();
+            if (appointmentDate > today) {
+              futureAppointments.push(appointment);
+            }
+          });
+          result.data = futureAppointments;
           return response.status(200).send(result);
         }
       });
@@ -143,7 +152,6 @@ module.exports = function (router) {
             hourRange: defaultHourRange.filter((element) => element <= 18),
           });
         } else {
-          console.log(appointments);
           // atac is easy bc only have 1 time slot per Thursday
           if (requestType === 'atacSeq') {
             return response.status(204).send();
