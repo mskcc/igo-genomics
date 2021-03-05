@@ -26,11 +26,12 @@ const columns = [
 module.exports = function (router) {
   router.post('/bookTime', function (req, response) {
     let form = req.body.data;
-    // console.log(form);
+
     let appointment = new AppointmentModel({
       fullName: form.name,
       email: form.email,
       date: form.date,
+      notificationDate: form.notificationDate,
       requestType: form.requestType,
       startTime: form.time.militaryTime,
       emailTime: `${form.time.h}${form.time.A}`,
@@ -66,7 +67,7 @@ module.exports = function (router) {
 
     // let string = cal.toString()
     // console.log(invite);
-    mailer.sendBookingNotification(appointment, invite);
+    // mailer.sendBookingNotification(appointment, invite);
     appointment.save(function (err) {
       if (err) {
         if (err.code === 11000) {
@@ -80,10 +81,10 @@ module.exports = function (router) {
           .json({ message: 'Appointment could not be saved.' });
       }
 
-      // mailer.sendBookingNotification(appointment, invite);
+      mailer.sendBookingNotification(appointment, invite);
       return response.status(200).json({
         message:
-          'Appointment saved! Please check for a confirmation email and remember to call 646-888-3856 before sample dropoff.',
+          'Please check for a confirmation email and remember to call (646)888-3856 before sample dropoff.',
       });
     });
   });

@@ -292,7 +292,14 @@ export default {
       }
       if (!this.formHasErrors) {
         app.axios
-          .post(`${API_URL}/bookTime`, { data: { ...this.form, date: this.dateSelected.id, requestType: this.requestType } })
+          .post(`${API_URL}/bookTime`, {
+            data: {
+              ...this.form,
+              date: this.dateSelected.id,
+              requestType: this.requestType,
+              notificationDate: this.dateSelected.ariaLabel,
+            },
+          })
           .then((response) => {
             this.$swal({ title: 'Booked', text: response.data.message, animation: false, icon: 'success' });
             // this.daySelected = false;
