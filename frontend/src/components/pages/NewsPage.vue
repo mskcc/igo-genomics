@@ -3,6 +3,30 @@
     <div class="md-display-1">News</div>
     <md-card>
       <md-card-header>
+        <div class="md-title">New "Reservations" module for 10X Genomics & ATAC-Seq sample drop off</div>
+        <div class="md-subhead">March 9, 2021</div>
+      </md-card-header>
+
+      <md-card-content>
+        <p>
+           IGO's Data Team is happy to announce that a new website module, the Reservations app, is now live!
+
+                To book your appointment to drop off fresh samples for 10X Genomics or ATAC-Seq (Thursdays only), please visit the Reservations tab in the navigation bar above. 
+                
+                Instructions:
+                
+                Select your request type from the dropdown menu
+                Pick the desired appointment day
+                Pick AM or PM and then select the hour of drop offering
+                Fill out the short form, including whether you are requesting 3' or 5' 10X chemistry, and submit
+
+                You will receive a confirmation e-mail; don't forget to fill out your iLab request and the sample webform before your appointment.
+        </p>
+      </md-card-content>
+    </md-card>
+
+    <md-card>
+      <md-card-header>
         <div class="md-title">Welcome to the new IGO website!</div>
         <div class="md-subhead">January 15, 2021</div>
       </md-card-header>
