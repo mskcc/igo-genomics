@@ -151,7 +151,7 @@ export default {
       timeSelected: false,
       invalidTimeSelected: false,
       timesAvailable: false,
-      requestType: '',
+      requestType: '10xGenomics',
       form: {
         name: '',
         email: '',
