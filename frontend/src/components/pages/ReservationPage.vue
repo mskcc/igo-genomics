@@ -159,7 +159,7 @@ export default {
         chemistry: '',
         time: { A: '', hh: '', h: '', militaryTime: '', weekday: '' },
       },
-      hourRange: null,
+      hourRange: [],
       formHasErrors: false,
       existingReservations: '',
       // for vc-date-picker
@@ -231,17 +231,17 @@ export default {
 
   methods: {
     reset() {
-      this.requestType = null;
+      this.requestType = '';
       this.daySelected = false;
       this.timeSelected = false;
-      this.form.name = null;
-      this.form.email = null;
-      this.form.sampleNumber = null;
-      this.form.chemistry = null;
-      this.form.time.A = null;
-      this.form.time.hh = null;
-      this.form.time.h = null;
-      this.form.time.militaryTime = null;
+      this.form.name = '';
+      this.form.email = '';
+      this.form.sampleNumber = '';
+      this.form.chemistry = '';
+      this.form.time.A = '';
+      this.form.time.hh = '';
+      this.form.time.h = '';
+      this.form.time.militaryTime = '';
 
       // time: { A: null, hh: null, h: null, militaryTime: null },
     },
