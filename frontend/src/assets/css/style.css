@@ -622,3 +622,9 @@ sup {
 #contacts-page .md-list-item-container {
   width: 120%;
 }
+
+/* reservations page */
+
+#reservation-page .md-table {
+  margin-top: 2%;
+}

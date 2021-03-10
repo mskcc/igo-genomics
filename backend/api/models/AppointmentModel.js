@@ -6,8 +6,10 @@ var AppointmentSchema = new mongoose.Schema(
     fullName: { type: String, required: true },
     email: { type: String, required: true },
     date: { type: String, required: true },
+    notificationDate: { type: String, required: true },
     startTime: { type: Number, required: true },
     emailTime: { type: String, required: true },
+    requestType: { type: String, required: true },
     details: { type: Object, required: true }, // [ {cellNumber: 6, chemistry: ''} ]
   },
   { timestamps: true }

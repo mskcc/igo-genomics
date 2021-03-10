@@ -27,7 +27,7 @@ import ArcherFusionPage from './components/pages/ArcherFusionPage.vue';
 import RnaCriteria from './components/RnaCriteria.vue';
 import OtherCriteria from './components/OtherCriteria.vue';
 import MetricsAndThroughputPage from './components/pages/MetricsAndThroughputPage.vue';
-// import SchedulePage from './components/pages/SchedulePage.vue';
+import ReservationPage from './components/pages/ReservationPage.vue';
 import ChemistryTimelinePage from './components/pages/ChemistryTimelinePage.vue';
 
 import VueSweetalert2 from 'vue-sweetalert2';
@@ -48,7 +48,6 @@ import {
   MdIcon,
   MdMenu,
   MdRadio,
-  // MdSelect,
   MdSteppers,
   MdTable,
   MdTabs,
@@ -75,7 +74,6 @@ Vue.use(MdField);
 Vue.use(MdIcon);
 Vue.use(MdList);
 Vue.use(MdRadio);
-// Vue.use(MdSelect);
 Vue.use(MdSteppers);
 Vue.use(MdMenu);
 Vue.use(MdTable);
@@ -125,7 +123,7 @@ const routes = [
   { path: '/igo-tutorials/:name', component: ShowVideoPage, name: 'show video', props: true },
   { path: '/archer-fusion', component: ArcherFusionPage, name: 'archer fusion' },
   { path: '/metrics-and-throughput', component: MetricsAndThroughputPage, name: 'metrics and throughput' },
-  // { path: '/schedule', component: SchedulePage, name: 'schedule 10x dropoff' },
+  { path: '/reservations', component: ReservationPage, name: 'reservations' },
   { path: '/chemistry-timeline', component: ChemistryTimelinePage, name: 'chemistry timeline' },
 ];
 
