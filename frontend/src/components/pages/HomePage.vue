@@ -3,7 +3,7 @@
     <div v-if="announcement" class="announcement-bubble">
       <span class="material-icons"> priority_high </span>
       <span class="announcement-content">
-        IGO will be closed Monday, 1/18 in observance of Martin Luther King Jr. Day.
+        All 10X Genomics and ATAC-Seq appointment requests will now be made through the Reservations tab above.
       </span>
     </div>
     <div class="carousel-div">
@@ -52,6 +52,40 @@
 
     <div class="news">
       <div class="news-headline md-headline md-inset">News at the IGO</div>
+      <md-card class="news-card">
+        <md-card-media>
+          <img src="../../assets/images/news/Viale_190612_078.jpg" @click="showDialogMethod" />
+        </md-card-media>
+
+        <md-card-header>
+          <div class="md-title">New "Reservations" feature for 10X Genomics & ATAC-Seq sample drop off</div>
+          <div class="md-subhead">March 9, 2021</div>
+        </md-card-header>
+
+        <md-card-expand>
+          <md-card-actions md-alignment="space-between">
+            <md-card-expand-trigger>
+              <md-button class="md-icon-button">
+                <md-icon>keyboard_arrow_down</md-icon>
+              </md-button>
+            </md-card-expand-trigger>
+          </md-card-actions>
+
+          <md-card-expand-content>
+            <md-card-content>
+              <p>
+                IGO is happy to announce the launch of a new website feature to
+                <router-link :to="{ name: 'reservations' }">book drop off appointments</router-link> of fresh samples for 10X Genomics (M-F)
+                and ATAC-Seq (Th only)! Simply select your request type from the dropdown menu, desired appointment day, AM or PM and then
+                select the hour of drop offering. Fill out the short form, including whether you are requesting 3' or 5' 10X chemistry, and
+                submit! You will receive a confirmation e-mail; don't forget to fill out your iLab request and the sample webform before
+                your appointment.
+              </p>
+            </md-card-content>
+          </md-card-expand-content>
+        </md-card-expand>
+      </md-card>
+
       <md-card class="news-card">
         <md-card-media>
           <img src="../../assets/images/lab/wheresciencegoesigo.jpeg" @click="showDialogMethod" />
@@ -124,41 +158,7 @@
           </md-card-expand-content>
         </md-card-expand>
       </md-card>
-      <md-card class="news-card">
-        <md-card-media>
-          <img src="../../assets/images/news/Viale_190612_078.jpg" @click="showDialogMethod" />
-        </md-card-media>
 
-        <md-card-header>
-          <div class="md-title">New pricing for block sequencing</div>
-          <div class="md-subhead">October 26, 2020</div>
-        </md-card-header>
-
-        <md-card-expand>
-          <md-card-actions md-alignment="space-between">
-            <md-card-expand-trigger>
-              <md-button class="md-icon-button">
-                <md-icon>keyboard_arrow_down</md-icon>
-              </md-button>
-            </md-card-expand-trigger>
-          </md-card-actions>
-
-          <md-card-expand-content>
-            <md-card-content>
-              <p>
-                For investigators who make their own sequencing libraries to submit to IGO, we now have
-                <router-link :to="{ name: 'platforms & pricing', params: { name: 'userlibrarysequencing' } }"
-                  >easy-to-understand block pricing</router-link
-                >
-                for our most commonly-requested read lengths and throughputs. We accept both individual user libraries and pre-pooled
-                libraries to occupy a full flow cell or lane. Custom read lengths and coverages outside the block pricing will still be
-                accepted;
-                <router-link :to="{ name: 'contact us' }">contact us for more information.</router-link>
-              </p>
-            </md-card-content>
-          </md-card-expand-content>
-        </md-card-expand>
-      </md-card>
       <div id="read-more">
         <md-button class="md-primary" :to="{ name: 'news' }">read more</md-button>
       </div>
