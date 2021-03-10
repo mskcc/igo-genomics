@@ -140,7 +140,7 @@ export default {
     $route() {
       this.toolsIsActive = this.toolLinks.includes(this.$route.name) || this.$route.path.includes('criteria');
       this.teamIsActive = this.$route.path.includes('about');
-      this.platformsIsActive = this.$route.path === '/platforms';
+     this.platformsIsActive = this.$route.path === '/platforms';
       // console.log(this.$route);
     },
   },
