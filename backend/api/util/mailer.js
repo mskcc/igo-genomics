@@ -6,10 +6,12 @@ const nodemailer = require('nodemailer');
 const emailConfig = {
   notificationSender: 'igoski@mskcc.org',
   notificationRecipients: {
-    '10xGenomics': 'patrunoa@mskcc.org',
+    '10xGenomics':
+      'zzPDL_SKI_IGO_PathExtraction@mskcc.org,zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org,zzpdl_ski_igo_data@mskcc.org',
     // 'zzPDL_SKI_IGO_PathExtraction@mskcc.org,zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org,zzpdl_ski_igo_data@mskcc.org',
 
-    atacSeq: 'patrunoa@mskcc.org',
+    atacSeq:
+      'zzPDL_SKI_IGO_NA@mskcc.org,zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org,zzpdl_ski_igo_data@mskcc.org',
     // 'zzPDL_SKI_IGO_NA@mskcc.org,zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org,zzpdl_ski_igo_data@mskcc.org',
   },
   subject: '[IGO Reservation] ',
@@ -37,7 +39,7 @@ exports.sendBookingNotification = function (appointment, appointmentIcal) {
     appointment.email,
   ];
   let cancellationLink = `${process.env.API_ROOT}/cancelAppointment/${appointment._id}`;
-  console.log(recipients.join(','));
+
   let email = {
     subject: `${emailConfig.subject} Drop-off samples at: ${appointment.emailTime} on ${appointment.notificationDate} `,
     content: `Hello<br><br>Your ${
@@ -77,9 +79,13 @@ exports.sendCancellationNotification = function (appointment) {
   let recipients = [emailConfig.notificationRecipients, appointment.email];
 
   let email = {
-    subject: `${emailConfig.subject} Cancelled ${appointment.emailTime} on ${appointment.date} `,
-    content: `Appointment on ${appointment.date}, ${appointment.emailTime} is cancelled.
-      \n If you have any questions, please reach out to zzPDL_SKI_IGO_Pathextraction@mskcc.org.`,
+    subject: `${emailConfig.subject} Cancelled ${appointment.emailTime} on ${appointment.notificationDate} `,
+    content: `Appointment on ${appointment.notificationDate}, ${
+      appointment.emailTime
+    } is cancelled.
+      \n If you have any questions, please reach out to ${
+        emailConfig.notificationRecipients[appointment.requestType]
+      } `,
     footer: emailConfig.footer,
   };
   //   logger.log('info', `${email} sent to recipients.`);
