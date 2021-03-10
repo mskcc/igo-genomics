@@ -52,13 +52,13 @@
 
     <div class="news">
       <div class="news-headline md-headline md-inset">News at the IGO</div>
-       <md-card class="news-card">
+      <md-card class="news-card">
         <md-card-media>
           <img src="../../assets/images/news/Viale_190612_078.jpg" @click="showDialogMethod" />
         </md-card-media>
 
         <md-card-header>
-          <div class="md-title">New "Reservations" module for 10X Genomics & ATAC-Seq sample drop off</div>
+          <div class="md-title">New "Reservations" feature for 10X Genomics & ATAC-Seq sample drop off</div>
           <div class="md-subhead">March 9, 2021</div>
         </md-card-header>
 
@@ -74,24 +74,18 @@
           <md-card-expand-content>
             <md-card-content>
               <p>
-                IGO's Data Team is happy to announce that a new website module, the Reservations app, is now live!
-
-                To book your appointment to drop off fresh samples for 10X Genomics or ATAC-Seq (Thursdays only), please visit the Reservations tab in the navigation bar above. 
-                
-                Instructions:
-                
-                Select your request type from the dropdown menu
-                Pick the desired appointment day
-                Pick AM or PM and then select the hour of drop offering
-                Fill out the short form, including whether you are requesting 3' or 5' 10X chemistry, and submit
-
-                You will receive a confirmation e-mail; don't forget to fill out your iLab request and the sample webform before your appointment.
+                IGO is happy to announce the launch of a new website feature to
+                <router-link :to="{ name: 'reservations' }">book drop off appointments</router-link> of fresh samples for 10X Genomics (M-F)
+                and ATAC-Seq (Th only)! Simply select your request type from the dropdown menu, desired appointment day, AM or PM and then
+                select the hour of drop offering. Fill out the short form, including whether you are requesting 3' or 5' 10X chemistry, and
+                submit! You will receive a confirmation e-mail; don't forget to fill out your iLab request and the sample webform before
+                your appointment.
               </p>
             </md-card-content>
           </md-card-expand-content>
         </md-card-expand>
       </md-card>
-      
+
       <md-card class="news-card">
         <md-card-media>
           <img src="../../assets/images/lab/wheresciencegoesigo.jpeg" @click="showDialogMethod" />
@@ -164,7 +158,7 @@
           </md-card-expand-content>
         </md-card-expand>
       </md-card>
-     
+
       <div id="read-more">
         <md-button class="md-primary" :to="{ name: 'news' }">read more</md-button>
       </div>
