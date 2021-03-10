@@ -100,7 +100,7 @@
           @dayclick="(event) => dayClick(event)"
         />
 
-        <div v-if="requestType && existingReservations.data.length > 0">
+        <div v-if="requestType && existingReservations && existingReservations.data.length > 0">
           <!-- <hot-table
         :data="existingReservations.data"
         :columns="existingReservations.columnDefinitions"
@@ -151,17 +151,17 @@ export default {
       timeSelected: false,
       invalidTimeSelected: false,
       timesAvailable: false,
-      requestType: null,
+      requestType: '',
       form: {
-        name: null,
-        email: null,
-        sampleNumber: null,
-        chemistry: null,
-        time: { A: null, hh: null, h: null, militaryTime: null, weekday: null },
+        name: '',
+        email: '',
+        sampleNumber: '',
+        chemistry: '',
+        time: { A: '', hh: '', h: '', militaryTime: '', weekday: '' },
       },
       hourRange: null,
       formHasErrors: false,
-      existingReservations: null,
+      existingReservations: '',
       // for vc-date-picker
       dateSelected: new Date(),
       disabledDates: [
