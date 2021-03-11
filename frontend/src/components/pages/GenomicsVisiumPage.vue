@@ -10,7 +10,7 @@
       <md-table-row>
         <md-table-cell rowspan="2" style="background:#8fc7e8">MCC</md-table-cell>
         <md-table-cell>Tissue freeze & OCT embed</md-table-cell>
-        <md-table-cell rowspan="4">Sample Preparation and QC $186</md-table-cell>
+        <md-table-cell rowspan="4">QC $36*</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>Curls cut</md-table-cell>
@@ -25,7 +25,7 @@
       <md-table-row>
         <md-table-cell rowspan="2" style="background:#8fc7e8">MCC</md-table-cell>
         <md-table-cell>Preparation of tissue optimization slide</md-table-cell>
-        <md-table-cell rowspan="6">Permeabilization Optimization $1,345</md-table-cell>
+        <md-table-cell rowspan="6">Permeabilization Optimization $900*</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>H&E stain + imaging</md-table-cell>
@@ -46,7 +46,7 @@
       </md-table-row>
       <md-table-row>
         <md-table-cell>Experimental slide preparation</md-table-cell>
-        <md-table-cell rowspan="8">Spatial Transcriptomics $4,785/slide</md-table-cell>
+        <md-table-cell rowspan="8">Spatial Transcriptomics $4,400/slide*</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>H&E stain + imaging</md-table-cell>
@@ -76,6 +76,10 @@
       </md-table-row>
       <md-table-row>
         <md-table-cell>SpaceRanger</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell></md-table-cell>
+        <md-table-cell><strong>*price includes IGO charges only; MCC billed separately</strong></md-table-cell>
       </md-table-row>
     </md-table>
   </div>
