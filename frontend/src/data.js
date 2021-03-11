@@ -322,8 +322,8 @@ export const singleServices = [
     sequencingReadLength: 'PE28/90',
     sequencingCoverage: '50K reads/1-10 cells',
     deliverable: 'FASTQ, SpaceRanger output',
-    tissueOptimizationCost: '$1,345 (once/tissue)',
-    libraryCost: '$4,785/slide',
+    tissueOptimizationCost: '$982 (once/tissue)',
+    libraryCost: '$5,052/slide',
     sequencingCost: '$5,232 x %Area of squares covered',
   },
   {
