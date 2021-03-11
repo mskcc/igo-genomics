@@ -1,9 +1,10 @@
 <template>
   <div>
     <div v-if="announcement" class="announcement-bubble">
-      <span class="material-icons"> priority_high </span>
+      <!-- <span class="material-icons"> priority_high </span> -->
+      <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        All 10X Genomics and ATAC-Seq appointment requests will now be made through the
+        All 10X Genomics and ATAC-Seq appointment requests can now be made through the
         <router-link :to="{ name: 'reservations' }">Reservations tab</router-link> above.
       </span>
     </div>
