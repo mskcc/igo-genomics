@@ -126,6 +126,7 @@ export default {
       ].includes(this.$route.name),
       teamIsActive: this.$route.path.includes('about'),
       platformsIsActive: this.$route.path === '/platforms',
+      // platformsIsActive: this.$route.name.includes('platforms & pricing'),
       toolTips: {
         'sample criteria': 'A comprehensive guide to quality and quantity requirements',
         // "ddpcr assays": "Available ddPPCR assays",
@@ -140,7 +141,8 @@ export default {
     $route() {
       this.toolsIsActive = this.toolLinks.includes(this.$route.name) || this.$route.path.includes('criteria');
       this.teamIsActive = this.$route.path.includes('about');
-     this.platformsIsActive = this.$route.path === '/platforms';
+      this.platformsIsActive = this.$route.path === '/platforms';
+      // this.platformsIsActive = this.$route.name.includes('platforms & pricing');
       // console.log(this.$route);
     },
   },

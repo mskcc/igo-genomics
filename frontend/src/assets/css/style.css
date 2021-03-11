@@ -625,10 +625,6 @@ sup {
 
 /* reservations page */
 
-/* #reservation-page form {
-  width: 100%;
-} */
-
-/* #reservation-page .md-layout-item {
-  max-width: 100%;
-} */
+#reservation-page .md-table {
+  margin-top: 2%;
+}

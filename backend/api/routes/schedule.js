@@ -11,6 +11,7 @@ const mailer = require('../util/mailer');
 // const scheduleConfig = require('../util/scheduleConfig');
 const scheduleConfig = require('../util/scheduleConfig');
 const AppointmentModel = require('../models/AppointmentModel');
+const { time } = require('console');
 // LIMS is authorized. Avoids certificate verification & "unable to verify the first certificate in nodejs" errors
 const agent = new https.Agent({
   rejectUnauthorized: false,
@@ -25,11 +26,12 @@ const columns = [
 module.exports = function (router) {
   router.post('/bookTime', function (req, response) {
     let form = req.body.data;
-    console.log(form);
+
     let appointment = new AppointmentModel({
       fullName: form.name,
       email: form.email,
       date: form.date,
+      notificationDate: form.notificationDate,
       requestType: form.requestType,
       startTime: form.time.militaryTime,
       emailTime: `${form.time.h}${form.time.A}`,
@@ -65,7 +67,7 @@ module.exports = function (router) {
 
     // let string = cal.toString()
     // console.log(invite);
-    mailer.sendBookingNotification(appointment, invite);
+    // mailer.sendBookingNotification(appointment, invite);
     appointment.save(function (err) {
       if (err) {
         if (err.code === 11000) {
@@ -79,24 +81,25 @@ module.exports = function (router) {
           .json({ message: 'Appointment could not be saved.' });
       }
 
-      // mailer.sendBookingNotification(appointment, invite);
+      mailer.sendBookingNotification(appointment, invite);
       return response.status(200).json({
         message:
-          'Appointment saved! Please check for a confirmation email and remember to call 646-888-3856 before sample dropoff.',
+          'Please check for a confirmation email and remember to call (646)888-3856 before sample dropoff.',
       });
     });
   });
 
   router.get('/existingAppointments/:requestType', function (req, response) {
+    let today = moment().startOf('day').valueOf();
     let requestType = req.params.requestType;
-
     let headers = [];
     columns.forEach((column) => {
       headers.push(column.columnHeader);
     });
     let result = { columnDefinitions: columns, columnHeaders: headers };
-    // todo sort by time asc
+
     AppointmentModel.find({ requestType: requestType })
+      .sort('date')
       .lean()
       .exec(function (err, appointments) {
         if (err) {
@@ -105,7 +108,14 @@ module.exports = function (router) {
             .json({ message: 'Error retrieving existing reservations.' });
         }
         if (appointments) {
-          result.data = appointments;
+          let futureAppointments = [];
+          appointments.forEach((appointment) => {
+            let appointmentDate = moment(appointment.date).valueOf();
+            if (appointmentDate > today) {
+              futureAppointments.push(appointment);
+            }
+          });
+          result.data = futureAppointments;
           return response.status(200).send(result);
         }
       });
@@ -143,7 +153,6 @@ module.exports = function (router) {
             hourRange: defaultHourRange.filter((element) => element <= 18),
           });
         } else {
-          console.log(appointments);
           // atac is easy bc only have 1 time slot per Thursday
           if (requestType === 'atacSeq') {
             return response.status(204).send();

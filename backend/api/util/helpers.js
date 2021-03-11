@@ -7,7 +7,7 @@ const moment = require('moment');
 const _ = require('lodash');
 const duration = 3;
 exports.getAvailableHours = (startTime, range) => {
-  console.log(range);
+  // console.log(range);
   // if (!range.includes(startTime)) return [];
   const existingApptStartTime = startTime;
   const existingApptEndTime = existingApptStartTime + duration;

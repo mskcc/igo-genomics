@@ -1,7 +1,7 @@
 <template>
   <div id="reservation-page">
     <div class="md-display-1">Schedule an appointment</div>
-    <div class="md-layout ">
+    <div class="md-layout">
       <form class="md-layout-item" @submit.prevent="book()">
         <md-card>
           <md-card-content>
@@ -99,44 +99,36 @@
           :value="dateSelected"
           @dayclick="(event) => dayClick(event)"
         />
-      </div>
-    </div>
-    <div class="md-layout-item" v-if="requestType && existingReservations">
-      <!-- <hot-table
-        v-if="existingReservations.columns"
-        :columns="existingReservations.columns"
-        :colHeaders="existingReservations.columnsHeaders"
-        :data="existingReservations.rows"
-        :readOnly="true"
-        :disableVisualSelection="true"
-        stretchH="all"
-        licenseKey="non-commercial-and-evaluation"
-      ></hot-table> -->
 
-      <hot-table
+        <div v-if="requestType && existingReservations && existingReservations.data.length > 0">
+          <!-- <hot-table
         :data="existingReservations.data"
         :columns="existingReservations.columnDefinitions"
         :rowHeaders="true"
         :readOnly="true"
         :colHeaders="existingReservations.columnHeaders"
         licenseKey="non-commercial-and-evaluation"
-      ></hot-table>
-      <!-- <hot-table></hot-table>
-      <span>Existing Reservations</span>
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Date</th>
-          <th>Time</th>
-          <th>Request Type</th>
-        </tr>
-        <tr v-for="(reservation, index) in existingReservations" :key="index">
-          <td>{{ reservation.fullName }}</td>
-          <td>{{ reservation.date }}</td>
-          <td>{{ reservation.emailTime }}</td>
-          <td>{{ reservation.requestType }}</td>
-        </tr>
-      </table> -->
+      ></hot-table> -->
+
+          <md-table md-card>
+            <md-table-toolbar>
+              <h1 class="md-title">Existing {{ requestType }} Reservations</h1>
+            </md-table-toolbar>
+            <md-table-row>
+              <md-table-head>Row</md-table-head>
+              <md-table-head>Name</md-table-head>
+              <md-table-head>Date</md-table-head>
+              <md-table-head>Time</md-table-head>
+            </md-table-row>
+            <md-table-row v-for="(reservation, index) in existingReservations.data" :key="index">
+              <md-table-cell md-numeric>{{ index + 1 }}</md-table-cell>
+              <md-table-cell>{{ reservation.fullName }}</md-table-cell>
+              <md-table-cell>{{ reservation.date }}</md-table-cell>
+              <md-table-cell>{{ reservation.emailTime }}</md-table-cell>
+            </md-table-row>
+          </md-table>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -147,11 +139,11 @@ import { API_URL } from './../../config.js';
 import VueTimepicker from 'vue2-timepicker';
 import 'vue2-timepicker/dist/VueTimepicker.css';
 import { required, email, numeric, requiredIf } from 'vuelidate/lib/validators';
-import { HotTable } from '@handsontable/vue';
+// import { HotTable } from '@handsontable/vue';
 
 export default {
   name: 'ReservationPage',
-  components: { VueTimepicker, HotTable },
+  components: { VueTimepicker },
   data: function() {
     return {
       message: 'Please select a day.',
@@ -159,17 +151,17 @@ export default {
       timeSelected: false,
       invalidTimeSelected: false,
       timesAvailable: false,
-      requestType: null,
+      requestType: '',
       form: {
-        name: null,
-        email: null,
-        sampleNumber: null,
-        chemistry: null,
-        time: { A: null, hh: null, h: null, militaryTime: null, weekday: null },
+        name: '',
+        email: '',
+        sampleNumber: '',
+        chemistry: '',
+        time: { A: '', hh: '', h: '', militaryTime: '', weekday: '' },
       },
-      hourRange: null,
+      hourRange: [],
       formHasErrors: false,
-      existingReservations: null,
+      existingReservations: '',
       // for vc-date-picker
       dateSelected: new Date(),
       disabledDates: [
@@ -221,7 +213,7 @@ export default {
     // },
 
     dateSelected: function() {
-      console.log(this.form.time);
+      // console.log(this.form.time);
       if (this.requestType === 'atacSeq' && this.form.time.weekday !== '6') {
         this.message = 'At this time ATAC Seq reservations can only be made on Thursdays';
         this.timesAvailable = false;
@@ -233,29 +225,28 @@ export default {
     requestType: function() {
       app.axios.get(`${API_URL}/existingAppointments/${this.requestType}`).then((response) => {
         this.existingReservations = response.data;
-        console.log(this.existingReservations);
       });
     },
   },
 
   methods: {
     reset() {
-      this.requestType = null;
+      this.requestType = '';
       this.daySelected = false;
       this.timeSelected = false;
-      this.form.name = null;
-      this.form.email = null;
-      this.form.sampleNumber = null;
-      this.form.chemistry = null;
-      this.form.time.A = null;
-      this.form.time.hh = null;
-      this.form.time.h = null;
-      this.form.time.militaryTime = null;
+      this.form.name = '';
+      this.form.email = '';
+      this.form.sampleNumber = '';
+      this.form.chemistry = '';
+      this.form.time.A = '';
+      this.form.time.hh = '';
+      this.form.time.h = '';
+      this.form.time.militaryTime = '';
 
       // time: { A: null, hh: null, h: null, militaryTime: null },
     },
     dayClick(date) {
-      console.log(date);
+      // console.log(date);
       // user clicked on a valid day
       if (date.isDisabled === false) {
         // console.log(date.isDisabled);
@@ -269,7 +260,10 @@ export default {
           app.axios
             .get(`${API_URL}/availableSlots/${this.requestType}/${this.dateSelected.weekday}/${this.dateSelected.id}`)
             .then((response) => {
-              if (response.status === 204) {
+              if (response.status === 204 && this.requestType === 'atacSeq') {
+                this.timesAvailable = false;
+                this.message = 'At this time ATAC Seq reservations can only be made on Thursdays';
+              } else if (response.status === 204) {
                 this.timesAvailable = false;
                 this.message =
                   'There are no available times for this day. You can join the waitlist <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">here</a>. If you are looking to cancel an existing appointment, please refer to your confirmation email.';
@@ -280,8 +274,6 @@ export default {
             });
         }
       }
-
-      // console.log('form', this.form);
     },
     getValidationClass(fieldName) {
       const field = this.$v.form[fieldName];
@@ -299,9 +291,15 @@ export default {
         return;
       }
       if (!this.formHasErrors) {
-        console.log('no errors');
         app.axios
-          .post(`${API_URL}/bookTime`, { data: { ...this.form, date: this.dateSelected.id, requestType: this.requestType } })
+          .post(`${API_URL}/bookTime`, {
+            data: {
+              ...this.form,
+              date: this.dateSelected.id,
+              requestType: this.requestType,
+              notificationDate: this.dateSelected.ariaLabel,
+            },
+          })
           .then((response) => {
             this.$swal({ title: 'Booked', text: response.data.message, animation: false, icon: 'success' });
             // this.daySelected = false;

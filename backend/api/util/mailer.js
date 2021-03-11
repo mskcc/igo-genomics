@@ -5,12 +5,18 @@ const nodemailer = require('nodemailer');
 
 const emailConfig = {
   notificationSender: 'igoski@mskcc.org',
-  notificationRecipients:
-    'patrunoa@mskcc.org, apatruno618@gmail.com, cobbsc@mskcc.org',
+  notificationRecipients: {
+    '10xGenomics':
+      'zzPDL_SKI_IGO_PathExtraction@mskcc.org,zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org,zzpdl_ski_igo_data@mskcc.org',
+    // 'zzPDL_SKI_IGO_PathExtraction@mskcc.org,zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org,zzpdl_ski_igo_data@mskcc.org',
+
+    atacSeq:
+      'zzPDL_SKI_IGO_NA@mskcc.org,zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org,zzpdl_ski_igo_data@mskcc.org',
+    // 'zzPDL_SKI_IGO_NA@mskcc.org,zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org,zzpdl_ski_igo_data@mskcc.org',
+  },
   subject: '[IGO Reservation] ',
   footer:
     '<br><br><br>Thank you, <br><br><a href="http://cmo.mskcc.org/cmo/igo/">Integrated Genomics Operation</a><br><a href="https://www.mskcc.org">Memorial Sloan Kettering Cancer Center</a><br>T 646-888-3856<br>Follow us on <a href="https://www.instagram.com/genomics212/?hl=en">Instagram</a> and <a href="https://twitter.com/genomics212?lang=en">Twitter</a>!<br>',
-  //   recipients: 'zzPDL_SKI_IGO_Pathextraction@mskcc.org, zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org',
 };
 
 // create reusable transporter object using the default SMTP transport
@@ -28,15 +34,28 @@ let transporter = nodemailer.createTransport({
 });
 
 exports.sendBookingNotification = function (appointment, appointmentIcal) {
-  let recipients = [emailConfig.notificationRecipients, appointment.email];
+  let recipients = [
+    emailConfig.notificationRecipients[appointment.requestType],
+    appointment.email,
+  ];
   let cancellationLink = `${process.env.API_ROOT}/cancelAppointment/${appointment._id}`;
 
   let email = {
-    subject: `${emailConfig.subject} Drop-off samples at: ${appointment.emailTime} on ${appointment.date} `,
-    content: `You booked a ${appointment.requestType} processing on ${appointment.date}. Your drop-off time is ${appointment.emailTime}. Please call 646-888-3856 before dropping off your samples. You can cancel this appointment by clicking on: ${cancellationLink} 
-    \n If you have any questions, please reach out to zzPDL_SKI_IGO_Pathextraction@mskcc.org.`,
+    subject: `${emailConfig.subject} Drop-off samples at: ${appointment.emailTime} on ${appointment.notificationDate} `,
+    content: `Hello<br><br>Your ${
+      appointment.requestType
+    } reservation is confirmed. Please call (646)888-3856 before dropping off your samples. Cancellations can be made no less than 2 hours before your drop off time.<br><br>Appointment type: <strong>${
+      appointment.requestType
+    }</strong><br>Date: <strong>${appointment.notificationDate} at ${
+      appointment.emailTime
+    }</strong><br>Number of samples: <strong>${
+      appointment.details.sampleNumber
+    } samples</strong><br><br>You can cancel this appointment by clicking on: ${cancellationLink}<br>If you have any questions, please reach out to ${
+      emailConfig.notificationRecipients[appointment.requestType]
+    }.`,
     footer: emailConfig.footer,
   };
+
   //   logger.log('info', `${email} sent to recipients.`);
   transporter
     .sendMail({
@@ -60,9 +79,13 @@ exports.sendCancellationNotification = function (appointment) {
   let recipients = [emailConfig.notificationRecipients, appointment.email];
 
   let email = {
-    subject: `${emailConfig.subject} Cancelled ${appointment.emailTime} on ${appointment.date} `,
-    content: `Appointment on ${appointment.date}, ${appointment.emailTime} is cancelled.
-      \n If you have any questions, please reach out to zzPDL_SKI_IGO_Pathextraction@mskcc.org.`,
+    subject: `${emailConfig.subject} Cancelled ${appointment.emailTime} on ${appointment.notificationDate} `,
+    content: `Appointment on ${appointment.notificationDate}, ${
+      appointment.emailTime
+    } is cancelled.
+      \n If you have any questions, please reach out to ${
+        emailConfig.notificationRecipients[appointment.requestType]
+      } `,
     footer: emailConfig.footer,
   };
   //   logger.log('info', `${email} sent to recipients.`);
