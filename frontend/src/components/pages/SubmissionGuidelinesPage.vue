@@ -15,7 +15,10 @@
           <ol>
             <li><a href="https://my.ilabsolutions.com/account/saml/mskcc">Submit an iLabs request</a> for the desired application.</li>
             <li>
-              <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up">E-mail the Sample & Project Management team </a> or call 646-888-3856 to pick up a plate or micronic barcoded tubes outside Z320 for submission.
+              <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up"
+                >E-mail the Sample & Project Management team
+              </a>
+              or call 646-888-3856 to pick up a plate or micronic barcoded tubes outside Z320 for submission.
             </li>
             <li>
               Complete the <a href="https://igo.mskcc.org/sample-submission">sample submission form</a> indicating the sample specific
@@ -110,7 +113,10 @@
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset">
                     <ol>
-                      <li><strong>If submitting fresh cells:</strong> <a href="https://genomics.mskcc.org/reservations">Make a reservation</a> to bring your samples (Thursdays only)</li>
+                      <li>
+                        <strong>If submitting fresh cells:</strong>
+                        <router-link :to="{ name: 'reservations' }"> Make a reservation</router-link> to bring your samples (Thursdays only)
+                      </li>
                       <li>Fill out an iLab form for “Epigenetic Library Prep + Sequencing”</li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
                       <li>
@@ -129,8 +135,9 @@
                   <md-list-item class="md-inset">
                     <ol>
                       <li>
-                        <a href="https://genomics.mskcc.org/reservations">Make a reservation</a> for a time to bring your samples – the system will block off three hours for
-                        processing<br /><strong>Note:</strong> 10X ATAC projects should select morning drop-offs only
+                        <a href="https://genomics.mskcc.org/reservations">Make a reservation</a> for a time to bring your samples – the
+                        system will block off three hours for processing<br /><strong>Note:</strong> 10X ATAC projects should select morning
+                        drop-offs only
                       </li>
                       <li>Fill out an iLab request for “Single Cell Library Prep + Sequencing”</li>
                       <li>
@@ -172,7 +179,10 @@
                   <md-list-item class="md-inset"
                     ><ol>
                       <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up">E-mail the Sample & Project Management team </a> or call 646-888-3856 to pick up micronic barcoded tubes outside Z320 for submission.
+                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up"
+                          >E-mail the Sample & Project Management team
+                        </a>
+                        or call 646-888-3856 to pick up micronic barcoded tubes outside Z320 for submission.
                       </li>
                       <li>
                         Fill out an iLab request for the appropriate application
@@ -197,7 +207,9 @@
                   <md-list-item class="md-inset"
                     ><ol>
                       <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up">E-mail the Sample & Project Management team </a>or call 646-888-3856 to pick up a plate outside Z320 for submission.
+                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up"
+                          >E-mail the Sample & Project Management team </a
+                        >or call 646-888-3856 to pick up a plate outside Z320 for submission.
                       </li>
                       <li>
                         Fill out an iLab request for the appropriate application
@@ -229,7 +241,11 @@
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset"
                     ><ol>
-                      <li><a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up">E-mail the Sample & Project Management team </a>or call 646-888-3856 to pick up a plate outside Z320 for submission.</li>
+                      <li>
+                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up"
+                          >E-mail the Sample & Project Management team </a
+                        >or call 646-888-3856 to pick up a plate outside Z320 for submission.
+                      </li>
                       <li>
                         Fill out an iLab request for the appropriate application
                         <ul>
@@ -256,7 +272,11 @@
                         <strong>If you are submitting for the first time or submitting a new construct:</strong> e-mail genomics@mskcc.org
                         with your protocol, a link to your reference, your primer barcodes, or a schematic of your construct
                       </li>
-                      <li><a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up">E-mail the Sample & Project Management team </a>or call 646-888-3856 to pick up a plate outside Z320 for submission.
+                      <li>
+                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up"
+                          >E-mail the Sample & Project Management team </a
+                        >or call 646-888-3856 to pick up a plate outside Z320 for submission.
+                      </li>
                       <li>
                         Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting “DNA Library” as your
                         material
@@ -350,7 +370,9 @@
                     ><ol>
                       <li>Make sure that your desired assay is in stock</li>
                       <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up">E-mail the Sample & Project Management team </a>or call 646-888-3856 to pick up a plate outside Z320 for submission.
+                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up"
+                          >E-mail the Sample & Project Management team </a
+                        >or call 646-888-3856 to pick up a plate outside Z320 for submission.
                       </li>
                       <li>Fill out an iLab request for “Digital PCR”</li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
@@ -371,7 +393,9 @@
                   <md-list-item class="md-inset"
                     ><ol>
                       <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up">E-mail the Sample & Project Management team </a>or call 646-888-3856 to pick up a plate outside Z320 for submission.
+                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up"
+                          >E-mail the Sample & Project Management team </a
+                        >or call 646-888-3856 to pick up a plate outside Z320 for submission.
                       </li>
                       <li>Fill out an iLab request for “Quality Control for Nucleic Acids”</li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
