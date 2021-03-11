@@ -78,8 +78,8 @@
         <md-table-cell>SpaceRanger</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell></md-table-cell>
-        <md-table-cell><strong>*price includes IGO charges only; MCC billed separately</strong></md-table-cell>
+        <!-- <md-table-cell></md-table-cell> -->
+        <md-table-cell colspan="3"><strong>*Price includes IGO charges only; MCC billed separately</strong></md-table-cell>
       </md-table-row>
     </md-table>
   </div>
