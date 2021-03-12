@@ -119,12 +119,14 @@
               <md-table-head>Name</md-table-head>
               <md-table-head>Date</md-table-head>
               <md-table-head>Time</md-table-head>
+              <md-table-head v-if="requestType === '10xGenomics'">Chemistry</md-table-head>
             </md-table-row>
             <md-table-row v-for="(reservation, index) in existingReservations.data" :key="index">
               <md-table-cell md-numeric>{{ index + 1 }}</md-table-cell>
               <md-table-cell>{{ reservation.fullName }}</md-table-cell>
               <md-table-cell>{{ reservation.date }}</md-table-cell>
               <md-table-cell>{{ reservation.emailTime }}</md-table-cell>
+              <md-table-cell v-if="requestType === '10xGenomics'">{{ reservation.details.chemistry }}</md-table-cell>
             </md-table-row>
           </md-table>
         </div>
