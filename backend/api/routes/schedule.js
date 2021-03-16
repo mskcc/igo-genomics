@@ -111,7 +111,7 @@ module.exports = function (router) {
           let futureAppointments = [];
           appointments.forEach((appointment) => {
             let appointmentDate = moment(appointment.date).valueOf();
-            if (appointmentDate > today) {
+            if (appointmentDate >= today) {
               futureAppointments.push(appointment);
             }
           });
