@@ -100,33 +100,8 @@
           @dayclick="(event) => dayClick(event)"
         />
 
-        <div v-if="requestType && existingReservations.data.length > 0">
-          <!-- <hot-table
-        :data="existingReservations.data"
-        :columns="existingReservations.columnDefinitions"
-        :rowHeaders="true"
-        :readOnly="true"
-        :colHeaders="existingReservations.columnHeaders"
-        licenseKey="non-commercial-and-evaluation"
-      ></hot-table> -->
-
-          <md-table md-card>
-            <md-table-toolbar>
-              <h1 class="md-title">Existing {{ requestType }} Reservations</h1>
-            </md-table-toolbar>
-            <md-table-row>
-              <md-table-head>Row</md-table-head>
-              <md-table-head>Name</md-table-head>
-              <md-table-head>Date</md-table-head>
-              <md-table-head>Time</md-table-head>
-            </md-table-row>
-            <md-table-row v-for="(reservation, index) in existingReservations.data" :key="index">
-              <md-table-cell md-numeric>{{ index + 1 }}</md-table-cell>
-              <md-table-cell>{{ reservation.fullName }}</md-table-cell>
-              <md-table-cell>{{ reservation.date }}</md-table-cell>
-              <md-table-cell>{{ reservation.emailTime }}</md-table-cell>
-            </md-table-row>
-          </md-table>
+        <div v-if="requestType">
+          <existing-reservations></existing-reservations>
         </div>
       </div>
     </div>
@@ -140,10 +115,11 @@ import VueTimepicker from 'vue2-timepicker';
 import 'vue2-timepicker/dist/VueTimepicker.css';
 import { required, email, numeric, requiredIf } from 'vuelidate/lib/validators';
 // import { HotTable } from '@handsontable/vue';
+import ExistingReservations from '../ExistingReservations.vue';
 
 export default {
   name: 'ReservationPage',
-  components: { VueTimepicker },
+  components: { VueTimepicker, ExistingReservations },
   data: function() {
     return {
       message: 'Please select a day.',
@@ -151,17 +127,16 @@ export default {
       timeSelected: false,
       invalidTimeSelected: false,
       timesAvailable: false,
-      requestType: null,
+      requestType: '',
       form: {
-        name: null,
-        email: null,
-        sampleNumber: null,
-        chemistry: null,
-        time: { A: null, hh: null, h: null, militaryTime: null, weekday: null },
+        name: '',
+        email: '',
+        sampleNumber: '',
+        chemistry: '',
+        time: { A: '', hh: '', h: '', militaryTime: '', weekday: '' },
       },
-      hourRange: null,
+      hourRange: [],
       formHasErrors: false,
-      existingReservations: null,
       // for vc-date-picker
       dateSelected: new Date(),
       disabledDates: [
@@ -223,25 +198,24 @@ export default {
       }
     },
     requestType: function() {
-      app.axios.get(`${API_URL}/existingAppointments/${this.requestType}`).then((response) => {
-        this.existingReservations = response.data;
-      });
+      this.$store.commit('setRequestType', this.requestType);
+      this.$store.dispatch('setExistingReservations');
     },
   },
 
   methods: {
     reset() {
-      this.requestType = null;
+      this.requestType = '';
       this.daySelected = false;
       this.timeSelected = false;
-      this.form.name = null;
-      this.form.email = null;
-      this.form.sampleNumber = null;
-      this.form.chemistry = null;
-      this.form.time.A = null;
-      this.form.time.hh = null;
-      this.form.time.h = null;
-      this.form.time.militaryTime = null;
+      this.form.name = '';
+      this.form.email = '';
+      this.form.sampleNumber = '';
+      this.form.chemistry = '';
+      this.form.time.A = '';
+      this.form.time.hh = '';
+      this.form.time.h = '';
+      this.form.time.militaryTime = '';
 
       // time: { A: null, hh: null, h: null, militaryTime: null },
     },
