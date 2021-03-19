@@ -1,9 +1,11 @@
 <template>
   <div>
     <div v-if="announcement" class="announcement-bubble">
-      <span class="material-icons"> priority_high </span>
+      <!-- <span class="material-icons"> priority_high </span> -->
+      <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        IGO will be closed Monday, 1/18 in observance of Martin Luther King Jr. Day.
+        All 10X Genomics and ATAC-Seq appointment requests can now be made through the
+        <router-link :to="{ name: 'reservations' }">Reservations tab</router-link> above.
       </span>
     </div>
     <div class="carousel-div">
@@ -20,13 +22,6 @@
         <slide>
           <img src="../../assets/images/lab/Viale_190612_005.jpg" />
         </slide>
-
-        <!-- <slide>
-          <iframe
-            id="seq-capacity"
-            src="https://splunkp/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Sequencer_Capacity&oid=sqUFRzpFTM0Kx9UKPGZhtEcJxn0yLHFUxa2lXd4V0q4gchgRxRt%5EevDN9MFLjZ50vQjBPVtGmFMm2MqaJRLu52y2Zj_5TLhJY0Sel%5EheZWkaHvALYiFW_XKWSgiGfofu0m90pAvTq49Vu88jTpicq%5ETdoXRyfg5ZgExoGQ0"
-          ></iframe>
-        </slide> -->
       </carousel>
     </div>
 
@@ -49,9 +44,44 @@
         src="https://splunkp/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Samples_SingleValue&oid=7wKarMvR1CyTn6ycX5yp7bY2GW7gINgA5wlwS3QVnSOplfnMZ%5EBpktUHUwg7VfRQsORWL3ajbtcMgviYZ7Kq4rH8XgNoMjkIlzK%5ELAOBiKNRNKQ1IbIw9C%5EcrSJfZy8O%5EvOH%5E%5EwAN%5E8zH4dVlMtAgnaTIa63bme3S7FIK6Jr"
       ></iframe>
     </div>
+    <home-page-news></home-page-news>
 
-    <div class="news">
+    <!-- <div class="news">
       <div class="news-headline md-headline md-inset">News at the IGO</div>
+      <md-card class="news-card">
+        <md-card-media>
+          <img src="../../assets/images/news/Viale_190612_078.jpg" @click="showDialogMethod" />
+        </md-card-media>
+
+        <md-card-header>
+          <div class="md-title">New "Reservations" feature for 10X Genomics & ATAC-Seq sample drop off</div>
+          <div class="md-subhead">March 9, 2021</div>
+        </md-card-header>
+
+        <md-card-expand>
+          <md-card-actions md-alignment="space-between">
+            <md-card-expand-trigger>
+              <md-button class="md-icon-button">
+                <md-icon>keyboard_arrow_down</md-icon>
+              </md-button>
+            </md-card-expand-trigger>
+          </md-card-actions>
+
+          <md-card-expand-content>
+            <md-card-content>
+              <p>
+                IGO is happy to announce the launch of a new website feature to
+                <router-link :to="{ name: 'reservations' }">book drop off appointments</router-link> of fresh samples for 10X Genomics (M-F)
+                and ATAC-Seq (Th only)! Simply select your request type from the dropdown menu, desired appointment day, AM or PM and then
+                select the hour of drop offering. Fill out the short form, including whether you are requesting 3' or 5' 10X chemistry, and
+                submit! You will receive a confirmation e-mail; don't forget to fill out your iLab request and the sample webform before
+                your appointment.
+              </p>
+            </md-card-content>
+          </md-card-expand-content>
+        </md-card-expand>
+      </md-card>
+
       <md-card class="news-card">
         <md-card-media>
           <img src="../../assets/images/lab/wheresciencegoesigo.jpeg" @click="showDialogMethod" />
@@ -124,79 +154,47 @@
           </md-card-expand-content>
         </md-card-expand>
       </md-card>
-      <md-card class="news-card">
-        <md-card-media>
-          <img src="../../assets/images/news/Viale_190612_078.jpg" @click="showDialogMethod" />
-        </md-card-media>
 
-        <md-card-header>
-          <div class="md-title">New pricing for block sequencing</div>
-          <div class="md-subhead">October 26, 2020</div>
-        </md-card-header>
-
-        <md-card-expand>
-          <md-card-actions md-alignment="space-between">
-            <md-card-expand-trigger>
-              <md-button class="md-icon-button">
-                <md-icon>keyboard_arrow_down</md-icon>
-              </md-button>
-            </md-card-expand-trigger>
-          </md-card-actions>
-
-          <md-card-expand-content>
-            <md-card-content>
-              <p>
-                For investigators who make their own sequencing libraries to submit to IGO, we now have
-                <router-link :to="{ name: 'platforms & pricing', params: { name: 'userlibrarysequencing' } }"
-                  >easy-to-understand block pricing</router-link
-                >
-                for our most commonly-requested read lengths and throughputs. We accept both individual user libraries and pre-pooled
-                libraries to occupy a full flow cell or lane. Custom read lengths and coverages outside the block pricing will still be
-                accepted;
-                <router-link :to="{ name: 'contact us' }">contact us for more information.</router-link>
-              </p>
-            </md-card-content>
-          </md-card-expand-content>
-        </md-card-expand>
-      </md-card>
       <div id="read-more">
         <md-button class="md-primary" :to="{ name: 'news' }">read more</md-button>
       </div>
     </div>
     <md-dialog :md-active.sync="showDialog">
       <md-dialog-content md-dynamic-height><img :src="enlargedImage"/></md-dialog-content>
-    </md-dialog>
+    </md-dialog> -->
   </div>
 </template>
 
 <script>
 import { Carousel, Slide } from 'vue-carousel';
-import { IMAGE_URL } from './../../config.js';
+// import { IMAGE_URL } from './../../config.js';
+import HomePageNews from '../HomePageNews.vue';
 
 export default {
   name: 'HomePage',
   components: {
     Carousel,
     Slide,
+    HomePageNews,
   },
   data: function() {
     return {
       igoDescription:
         'The Integrated Genomics Operation (IGO) core enables basic, clinical, and translational science by providing a broad range of services and expertise to investigators interested in evaluating gene expression, chromosome structure, and nucleotide sequence. Our services are comprehensive, rapid, and user-friendly. Through the centralized management of all sequencing activities at MSK, the core empowers scientists with an array of technological options and the most efficient and cost-effective means of performing high-throughput genomics.',
-      showDialog: false,
-      enlargedImage: '',
-      announcement: false,
+      // showDialog: false,
+      // enlargedImage: '',
+      announcement: true,
     };
   },
-  methods: {
-    showDialogMethod: function(event) {
-      const imageElement = event.target;
-      const imageSrc = imageElement.getAttribute('src');
-      const cleanedImageSrc = imageSrc.split('/').pop();
-      this.enlargedImage = IMAGE_URL + cleanedImageSrc;
-      this.showDialog = true;
-    },
-  },
+  // methods: {
+  //   showDialogMethod: function(event) {
+  //     const imageElement = event.target;
+  //     const imageSrc = imageElement.getAttribute('src');
+  //     const cleanedImageSrc = imageSrc.split('/').pop();
+  //     this.enlargedImage = IMAGE_URL + cleanedImageSrc;
+  //     this.showDialog = true;
+  //   },
+  // },
 };
 </script>
 

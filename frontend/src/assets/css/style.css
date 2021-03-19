@@ -628,3 +628,7 @@ sup {
 #reservation-page .md-table {
   margin-top: 2%;
 }
+
+.existing-reservations-table .md-table-head {
+  text-align: center;
+}
