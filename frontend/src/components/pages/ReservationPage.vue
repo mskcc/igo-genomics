@@ -1,6 +1,13 @@
 <template>
   <div id="reservation-page">
     <div class="md-display-1">Schedule an appointment</div>
+    <div class="announcement-bubble">
+      <span class="material-icons"> warning </span>
+      <span class="announcement-content">
+        <strong>We require at least 48 hours notice for sample drop-off and at least 2 hours notice for cancellation.</strong> If you have
+        an emergency, please contact Genomics@mskcc.org as soon as possible.
+      </span>
+    </div>
     <div class="md-layout">
       <form class="md-layout-item" @submit.prevent="book()">
         <md-card>
@@ -311,6 +318,10 @@ export default {
       return newdate.setDate(today.getDate() + 90);
     },
   },
+  // mounted: function() {
+  //   let todaysDate = new Date();
+  //   console.log(todaysDate);
+  // },
 };
 </script>
 
