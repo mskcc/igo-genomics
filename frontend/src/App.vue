@@ -101,7 +101,7 @@ export default {
   },
   data: function() {
     return {
-      links: ['home', 'about', 'platforms & pricing', 'submission guidelines', 'reservations', 'faqs'],
+      links: ['news', 'about', 'platforms & pricing', 'submission guidelines', 'reservations', 'faqs'],
       toolLinks: [
         '10x genomics visium',
         'accessing your data',

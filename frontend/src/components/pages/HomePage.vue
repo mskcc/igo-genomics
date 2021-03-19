@@ -8,6 +8,7 @@
         <router-link :to="{ name: 'reservations' }">Reservations tab</router-link> above.
       </span>
     </div>
+    <home-page-news></home-page-news>
     <div class="carousel-div">
       <carousel :per-page="1" :autoplay="true" :scrollPerPage="true" paginationActiveColor="#f29934" :paginationSize="13">
         <slide>
@@ -44,7 +45,6 @@
         src="https://splunkp/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Samples_SingleValue&oid=7wKarMvR1CyTn6ycX5yp7bY2GW7gINgA5wlwS3QVnSOplfnMZ%5EBpktUHUwg7VfRQsORWL3ajbtcMgviYZ7Kq4rH8XgNoMjkIlzK%5ELAOBiKNRNKQ1IbIw9C%5EcrSJfZy8O%5EvOH%5E%5EwAN%5E8zH4dVlMtAgnaTIa63bme3S7FIK6Jr"
       ></iframe>
     </div>
-    <home-page-news></home-page-news>
 
     <!-- <div class="news">
       <div class="news-headline md-headline md-inset">News at the IGO</div>

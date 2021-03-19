@@ -1,15 +1,15 @@
 <template>
   <div class="news">
-    <div class="news-headline md-headline md-inset">News at the IGO</div>
+    <!-- <div class="news-headline md-headline md-inset">News at the IGO</div> -->
     <md-card class="news-card">
       <md-card-media>
         <img src="../assets/images/news/Viale_190612_078.jpg" @click="showDialogMethod" />
       </md-card-media>
 
-      <md-card-header>
+      <!-- <md-card-header>
         <div class="md-title">New "Reservations" feature for 10X Genomics & ATAC-Seq sample drop off</div>
         <div class="md-subhead">March 9, 2021</div>
-      </md-card-header>
+      </md-card-header> -->
 
       <md-card-expand>
         <md-card-actions md-alignment="space-between">
@@ -40,10 +40,10 @@
         <img src="../assets/images/lab/wheresciencegoesigo.jpeg" @click="showDialogMethod" />
       </md-card-media>
 
-      <md-card-header>
+      <!-- <md-card-header>
         <div class="md-title">Welcome to the new IGO website!</div>
         <div class="md-subhead">January 15, 2021</div>
-      </md-card-header>
+      </md-card-header> -->
 
       <md-card-expand>
         <md-card-actions md-alignment="space-between">
@@ -72,10 +72,10 @@
         <img src="../assets/images/news/Viale_190612_083.jpg" @click="showDialogMethod" />
       </md-card-media>
 
-      <md-card-header>
+      <!-- <md-card-header>
         <div class="md-title">New project tracker, guidance for single cell applications, and changes to data delivery</div>
         <div class="md-subhead">December 3, 2020</div>
-      </md-card-header>
+      </md-card-header> -->
 
       <md-card-expand>
         <md-card-actions md-alignment="space-between">
@@ -109,7 +109,7 @@
     </md-card>
 
     <div id="read-more">
-      <md-button class="md-primary" :to="{ name: 'news' }">read more</md-button>
+      <md-button class="md-primary" :to="{ name: 'all news' }">read more</md-button>
     </div>
 
     <md-dialog :md-active.sync="showDialog">

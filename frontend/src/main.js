@@ -90,7 +90,7 @@ Vue.use(VueTimepicker);
 Vue.config.productionTip = false;
 
 const routes = [
-  { path: '/', component: HomePage, name: 'home' },
+  { path: '/', component: HomePage, name: 'news' },
   { path: '/about', component: AboutPage, name: 'about', children: [{ path: '/about/:id', component: TeamPage, name: 'team' }] },
   {
     path: '/ddpcr',
@@ -118,7 +118,7 @@ const routes = [
   { path: '/single-cell-platforms', component: SingleCellPage, name: 'single cell platforms' },
   { path: '/accessing-your-data', component: DataDeliveryPage, name: 'accessing your data' },
   { path: '/10x-genomics-visium', component: GenomicsVisiumPage, name: '10x genomics visium' },
-  { path: '/news', component: NewsPage, name: 'news' },
+  { path: '/news', component: NewsPage, name: 'all news' },
   { path: '/igo-tutorials', component: IgoTutorialsPage, name: 'igo tutorials' },
   { path: '/igo-tutorials/:name', component: ShowVideoPage, name: 'show video', props: true },
   { path: '/archer-fusion', component: ArcherFusionPage, name: 'archer fusion' },
