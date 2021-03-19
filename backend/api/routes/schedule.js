@@ -206,4 +206,23 @@ module.exports = function (router) {
         );
     });
   });
+
+  router.get('/appointment/:id', function (req, response) {
+    let appointmentId = req.params.id;
+  
+    AppointmentModel.findById(appointmentId, function(error, appointment) {
+      if (error) {
+        return response.status(500).json({
+          message: 'Could not find appointment',
+        });
+      }
+
+      if (appointment) {
+        return response.status(200).json({appointment: appointment})
+      }
+    } )
+  });
+
 };
+
+
