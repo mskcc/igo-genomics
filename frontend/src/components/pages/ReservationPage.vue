@@ -101,7 +101,7 @@
         <vc-date-picker
           :attributes="attrs"
           :disabled-dates="disabledDates"
-          :min-date="new Date()"
+          :min-date="new Date().setDate(new Date().getDate() + 2)"
           :max-date="getMaxDate()"
           :value="dateSelected"
           @dayclick="(event) => dayClick(event)"
@@ -244,7 +244,7 @@ export default {
               if (response.status === 204 && this.requestType === 'atacSeq') {
                 this.timesAvailable = false;
                 this.message = 'At this time ATAC Seq reservations can only be made on Thursdays';
-              } else if (response.status === 204) {
+              } else if (response.status === 204 && this.requestType === '10xGenomics') {
                 this.timesAvailable = false;
                 this.message =
                   'There are no available times for this day. You can join the waitlist <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">here</a>. If you are looking to cancel an existing appointment, please refer to your confirmation email.';
@@ -319,8 +319,9 @@ export default {
     },
   },
   // mounted: function() {
-  //   let todaysDate = new Date();
+  //   let todaysDate = new Date().toLocaleString().split(',')[0];
   //   console.log(todaysDate);
+  //   this.disabledDates.push(new Date());
   // },
 };
 </script>
