@@ -22,13 +22,6 @@
         <slide>
           <img src="../../assets/images/lab/Viale_190612_005.jpg" />
         </slide>
-
-        <!-- <slide>
-          <iframe
-            id="seq-capacity"
-            src="https://splunkp/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Sequencer_Capacity&oid=sqUFRzpFTM0Kx9UKPGZhtEcJxn0yLHFUxa2lXd4V0q4gchgRxRt%5EevDN9MFLjZ50vQjBPVtGmFMm2MqaJRLu52y2Zj_5TLhJY0Sel%5EheZWkaHvALYiFW_XKWSgiGfofu0m90pAvTq49Vu88jTpicq%5ETdoXRyfg5ZgExoGQ0"
-          ></iframe>
-        </slide> -->
       </carousel>
     </div>
 
@@ -51,8 +44,9 @@
         src="https://splunkp/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Samples_SingleValue&oid=7wKarMvR1CyTn6ycX5yp7bY2GW7gINgA5wlwS3QVnSOplfnMZ%5EBpktUHUwg7VfRQsORWL3ajbtcMgviYZ7Kq4rH8XgNoMjkIlzK%5ELAOBiKNRNKQ1IbIw9C%5EcrSJfZy8O%5EvOH%5E%5EwAN%5E8zH4dVlMtAgnaTIa63bme3S7FIK6Jr"
       ></iframe>
     </div>
+    <home-page-news></home-page-news>
 
-    <div class="news">
+    <!-- <div class="news">
       <div class="news-headline md-headline md-inset">News at the IGO</div>
       <md-card class="news-card">
         <md-card-media>
@@ -167,38 +161,40 @@
     </div>
     <md-dialog :md-active.sync="showDialog">
       <md-dialog-content md-dynamic-height><img :src="enlargedImage"/></md-dialog-content>
-    </md-dialog>
+    </md-dialog> -->
   </div>
 </template>
 
 <script>
 import { Carousel, Slide } from 'vue-carousel';
-import { IMAGE_URL } from './../../config.js';
+// import { IMAGE_URL } from './../../config.js';
+import HomePageNews from '../HomePageNews.vue';
 
 export default {
   name: 'HomePage',
   components: {
     Carousel,
     Slide,
+    HomePageNews,
   },
   data: function() {
     return {
       igoDescription:
         'The Integrated Genomics Operation (IGO) core enables basic, clinical, and translational science by providing a broad range of services and expertise to investigators interested in evaluating gene expression, chromosome structure, and nucleotide sequence. Our services are comprehensive, rapid, and user-friendly. Through the centralized management of all sequencing activities at MSK, the core empowers scientists with an array of technological options and the most efficient and cost-effective means of performing high-throughput genomics.',
-      showDialog: false,
-      enlargedImage: '',
+      // showDialog: false,
+      // enlargedImage: '',
       announcement: true,
     };
   },
-  methods: {
-    showDialogMethod: function(event) {
-      const imageElement = event.target;
-      const imageSrc = imageElement.getAttribute('src');
-      const cleanedImageSrc = imageSrc.split('/').pop();
-      this.enlargedImage = IMAGE_URL + cleanedImageSrc;
-      this.showDialog = true;
-    },
-  },
+  // methods: {
+  //   showDialogMethod: function(event) {
+  //     const imageElement = event.target;
+  //     const imageSrc = imageElement.getAttribute('src');
+  //     const cleanedImageSrc = imageSrc.split('/').pop();
+  //     this.enlargedImage = IMAGE_URL + cleanedImageSrc;
+  //     this.showDialog = true;
+  //   },
+  // },
 };
 </script>
 

@@ -25,6 +25,8 @@ export default new Vuex.Store({
       'Research & Development',
     ],
     timeline: [],
+    requestType: '',
+    existingReservations: [],
   },
   mutations: {
     setTimeline(state, payload) {
@@ -47,6 +49,12 @@ export default new Vuex.Store({
     },
     setMouseAssays(state, payload) {
       state.mouseAssays = payload;
+    },
+    setRequestType(state, payload) {
+      state.requestType = payload;
+    },
+    setExistingReservations(state, payload) {
+      state.existingReservations = payload;
     },
   },
   actions: {
@@ -123,6 +131,12 @@ export default new Vuex.Store({
           context.commit('setOutOfStockAssays', outOfStockAssayNames);
           context.commit('setMouseAssays', mouseAssayNames);
         });
+    },
+    setExistingReservations(context) {
+      // console.log(state.requestType);
+      app.axios.get(`${API_URL}/existingAppointments/${context.state.requestType}`).then((response) => {
+        context.commit('setExistingReservations', response.data.data);
+      });
     },
   },
 });
