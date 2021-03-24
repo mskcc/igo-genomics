@@ -8,11 +8,11 @@ const emailConfig = {
   notificationRecipients: {
     '10xGenomics':
       'zzPDL_SKI_IGO_PathExtraction@mskcc.org,zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org,zzpdl_ski_igo_data@mskcc.org',
-    // 'zzPDL_SKI_IGO_PathExtraction@mskcc.org,zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org,zzpdl_ski_igo_data@mskcc.org',
+    // 'patrunoa@mskcc.org',
 
     atacSeq:
       'zzPDL_SKI_IGO_NA@mskcc.org,zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org,zzpdl_ski_igo_data@mskcc.org',
-    // 'zzPDL_SKI_IGO_NA@mskcc.org,zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org,zzpdl_ski_igo_data@mskcc.org',
+    // 'patrunoa@mskcc.org',
   },
   subject: '[IGO Reservation] ',
   footer:
