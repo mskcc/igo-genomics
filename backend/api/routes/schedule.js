@@ -179,18 +179,20 @@ module.exports = function (router) {
 
   //  using get because this link will be clicked from notification emails
   router.get('/cancelAppointment/:id', function (req, response) {
-    let appointmentId = req.params.id;
+    // let appointmentId = req.params.id;
+    let appointmentId = '604b7a8018af550f08df3aef'
     AppointmentModel.findByIdAndDelete(ObjectId(appointmentId)).exec(function (
       err,
       appointment
     ) {
       if (appointment) {
-        mailer.sendCancellationNotification(appointment);
-        return response
-          .status(200)
-          .send(
-            '<p style=" text-align: center; font-size: larger;">Appointment cancelled!</p><p style=" text-align: center;" ><img style="width:50px; margin:auto 0;" src="https://igodev.mskcc.org/img/logoDarkGrayOnTransp.f0d9e455.png"></p>'
-          );
+        // mailer.sendCancellationNotification(appointment);
+        // return response
+        //   .status(200)
+        //   .send(
+        //     '<p style=" text-align: center; font-size: larger;">Appointment cancelled!</p><p style=" text-align: center;" ><img style="width:50px; margin:auto 0;" src="https://igodev.mskcc.org/img/logoDarkGrayOnTransp.f0d9e455.png"></p>'
+        //   );
+        return response.status(200).json({message: 'Appointment cancelled!'})
       }
       if (err) {
         return response.status(500).json({
@@ -199,11 +201,11 @@ module.exports = function (router) {
       }
       // send cancellation email
 
-      return response
-        .status(200)
-        .send(
-          '<p style=" text-align: center; font-size: larger;">Appointment not found.</p><p style=" text-align: center;" ><img style="width:50px; margin:auto 0;" src="https://igodev.mskcc.org/img/logoDarkGrayOnTransp.f0d9e455.png"></p>'
-        );
+      // return response
+      //   .status(200)
+      //   .send(
+      //     '<p style=" text-align: center; font-size: larger;">Appointment not found.</p><p style=" text-align: center;" ><img style="width:50px; margin:auto 0;" src="https://igodev.mskcc.org/img/logoDarkGrayOnTransp.f0d9e455.png"></p>'
+      //   );
     });
   });
 
