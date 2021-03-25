@@ -67,6 +67,9 @@
                         analysis you’ll eventually need)
                       </li>
                       <li>
+                        E-mail <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Schedule Sample Dropoff">the Sample and Project Management Team</a> to schedule a time to bring your samples to IGO
+                      </li>
+                      <li>
                         Wait for the e-mail from <a href="https://igo.mskcc.org/sample-qc">Sample QC</a> indicating your extraction and QC
                         is complete
                       </li>
@@ -97,7 +100,7 @@
                       <li>
                         <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Samples to be moved downstream">
                           Email SPM </a
-                        >to schedule a time to bring your samples
+                        >to schedule a time to bring your samples -- note that COVID screening is only run on Wednesdays
                       </li>
                       <ul>
                         <li><strong>Cells</strong> should be suspended in >250µL 100% PBS and dropped off Wednesday before 10am</li>
@@ -113,16 +116,20 @@
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset">
                     <ol>
-                      <li>
-                        <strong>If submitting fresh cells:</strong>
-                        <router-link :to="{ name: 'reservations' }"> Make a reservation</router-link> to bring your samples (Thursdays only)
-                      </li>
                       <li>Fill out an iLab form for “Epigenetic Library Prep + Sequencing”</li>
-                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
+                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> indicating that you are submitting "Cells" for "ATACSeq"</li>
+                      <li><strong>If submitting fresh cells:</strong> 
+                      <ul>
+                        <li><router-link :to="{ name: 'reservations' }"> Make a reservation</router-link> to bring your samples (Thursdays only)</li>
+                        <li>Bring samples suspended in 1mL of their favored medium in a 1.5mL <strong>V-bottom</strong> Eppendorf tube</li>
+                      </ul>
+                      </li>
                       <li>
                         <strong>If submitting viably frozen cells:</strong>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> email SPM </a>to set up a time to bring your
-                        samples to IGO
+                      <ul>
+                        <li><a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> email SPM </a>to set up a time to bring your samples to IGO</li>
+                        <li>Freeze your samples in 1mL 10% DMSO in a 1.5mL <strong>V-bottom</strong> Eppendorf tube</li>
+                      </ul>
                       </li>
                     </ol>
                   </md-list-item>
