@@ -76,7 +76,7 @@ exports.sendBookingNotification = function (appointment, appointmentIcal) {
 };
 
 exports.sendCancellationNotification = function (appointment) {
-  let recipients = [emailConfig.notificationRecipients, appointment.email];
+  let recipients = [emailConfig.notificationRecipients[appointment.requestType], appointment.email];
 
   let email = {
     subject: `${emailConfig.subject} Cancelled ${appointment.emailTime} on ${appointment.notificationDate} `,
