@@ -177,16 +177,22 @@ module.exports = function (router) {
       });
   });
 
-  //  using get because this link will be clicked from notification emails
-  router.get('/cancelAppointment/:id', function (req, response) {
-    // let appointmentId = req.params.id;
-    let appointmentId = '604b7a8018af550f08df3aef'
-    AppointmentModel.findByIdAndDelete(ObjectId(appointmentId)).exec(function (
-      err,
+  // deletes an appointment
+  router.post('/cancelAppointment/:id', function (req, response) {
+    let appointmentId = req.params.id;
+  
+    AppointmentModel.findOneAndDelete({_id: appointmentId}, (function (
+      error,
       appointment
     ) {
+      // not a valid id
+      if (error) {
+        return response.status(500).json({
+          message: 'Appointment not found',
+        });
+      }
       if (appointment) {
-        // mailer.sendCancellationNotification(appointment);
+        mailer.sendCancellationNotification(appointment);
         // return response
         //   .status(200)
         //   .send(
@@ -194,11 +200,11 @@ module.exports = function (router) {
         //   );
         return response.status(200).json({message: 'Appointment cancelled!'})
       }
-      if (err) {
-        return response.status(500).json({
-          message: 'Could not cancel appointment',
-        });
-      }
+      // no appointment was found
+      return response.status(500).json({
+        message: 'Appointment not found',
+      });
+      
       // send cancellation email
 
       // return response
@@ -206,23 +212,27 @@ module.exports = function (router) {
       //   .send(
       //     '<p style=" text-align: center; font-size: larger;">Appointment not found.</p><p style=" text-align: center;" ><img style="width:50px; margin:auto 0;" src="https://igodev.mskcc.org/img/logoDarkGrayOnTransp.f0d9e455.png"></p>'
       //   );
-    });
+    }));
   });
 
   router.get('/appointment/:id', function (req, response) {
     let appointmentId = req.params.id;
   
     AppointmentModel.findById(appointmentId, function(error, appointment) {
+      // not a valid id
       if (error) {
         return response.status(500).json({
-          message: 'Could not find appointment',
+          message: 'Appointment not found',
         });
       }
-
       if (appointment) {
         return response.status(200).json({appointment: appointment})
       }
-    } )
+      // no appointment was found
+      return response.status(500).json({
+        message: 'Appointment not found',
+      });
+    })
   });
 
 };

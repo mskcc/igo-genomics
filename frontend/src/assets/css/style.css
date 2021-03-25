@@ -633,10 +633,11 @@ sup {
   text-align: center;
 }
 
+/* cancel reservation page */
+
 #cancel-reservation-page .md-card {
   width: 320px;
   margin: 4px;
   display: inline-block;
   vertical-align: top;
-  /* text-align: left; */
 }

@@ -7,12 +7,12 @@ const emailConfig = {
   notificationSender: 'igoski@mskcc.org',
   notificationRecipients: {
     '10xGenomics':
+    // 'patrunoa@mskcc.org',
       'zzPDL_SKI_IGO_PathExtraction@mskcc.org,zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org,zzpdl_ski_igo_data@mskcc.org',
-    // 'zzPDL_SKI_IGO_PathExtraction@mskcc.org,zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org,zzpdl_ski_igo_data@mskcc.org',
 
     atacSeq:
       'zzPDL_SKI_IGO_NA@mskcc.org,zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org,zzpdl_ski_igo_data@mskcc.org',
-    // 'zzPDL_SKI_IGO_NA@mskcc.org,zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org,zzpdl_ski_igo_data@mskcc.org',
+    // 'patrunoa@mskcc.org',
   },
   subject: '[IGO Reservation] ',
   footer:
@@ -38,7 +38,7 @@ exports.sendBookingNotification = function (appointment, appointmentIcal) {
     emailConfig.notificationRecipients[appointment.requestType],
     appointment.email,
   ];
-  let cancellationLink = `${process.env.API_ROOT}/cancelAppointment/${appointment._id}`;
+  let cancellationLink = `${process.env.API_ROOT}/reservations/cancel/${appointment._id}`;
 
   let email = {
     subject: `${emailConfig.subject} Drop-off samples at: ${appointment.emailTime} on ${appointment.notificationDate} `,
