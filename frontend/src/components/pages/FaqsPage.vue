@@ -62,10 +62,10 @@
                       <md-list slot="md-expand">
                         <md-list-item>
                           <div>
-                            This issue is most commonly associated with funding issues. Please contact your Research Fund Manager (RFM) to
+                            This issue is most commonly associated with funding problems. Please contact your Research Fund Manager (RFM) to
                             ensure the selected cost center/fund number (cc/fn) are available to you under the selected PI. IGO is not able
-                            to help or accept samples without the iLabs submitted under the correct cc/fn.Note: whatever cc/fn is selected
-                            at the time of iLabs submission, will be the cc/fn used for billing. So please make sure that the samples are
+                            to help or accept samples without the iLabs submitted under the correct cc/fn.
+                            Note: whatever cc/fn is selected at the time of iLabs submission, will be the cc/fn used for billing. So please make sure that the samples are
                             being submitted under the correct cc/fn in order to avoid delay of data and major funding issues downstream.
                           </div>
                         </md-list-item>
@@ -123,15 +123,14 @@
                               <li>Cell pellets</li>
                               <li>Frozen tissue</li>
                               <li>OCT blocks</li>
-                              <li>FFPE tissue</li>
+                              <li>FFPE tissue (slides, curls, or punches)</li>
                               <li>Cells in 1mL TRIzol</li>
                               <li>Cells in DMSO freezing media</li>
-                              <li>Cells in Qiagen RLT buffer</li>
-                              <li>Cells in Promega homogenization buffer</li>
                               <li>Cells sorted into 750μL TRIzol LS + 250μL PBS</li>
+                              <li>Blood in a PAXgene tube</li>
                             </ul>
                             <br />
-                            In all cases, samples should be quickly frozen in liquid nitrogen or on dry ice and kept frozen at -80 before
+                            In all cases (except FFPE), samples should be quickly frozen in liquid nitrogen or on dry ice and kept frozen at -80 before
                             submission to prevent RNA degradation.
                           </div>
                         </md-list-item>
@@ -144,7 +143,7 @@
                         <md-list-item>
                           <div>
                             Minimum cell numbers to achieve desired input for RNA-Seq applications can vary due to expression differences
-                            between cell types. We recommend 1M cells for most applications if cell number is not a constraint. We have
+                            between cell types. We recommend 200K cells for most applications if cell number is not a constraint. We have
                             experience handling samples as low as 500 cells; however, the final yield cannot be guaranteed. If your cell
                             number is very low, please contact us to discuss your options.
                           </div>
@@ -155,10 +154,24 @@
                       <md-icon>add</md-icon>
                       <span class="md-list-item-text">How should tissue/cells be submitted for DNA extraction?</span>
                       <md-list slot="md-expand">
-                        <md-list-item>
+                        <md-list-item class="md-inset">
                           <div>
-                            Tissue biopsies should be immediately frozen at -80 in a 1.5mL microcentrifuge tube; cells can be frozen in
-                            DMEM/DMSO or washed 2X in PBS and then frozen as a cell pellet.
+                            We accept:
+                            <ul>
+                              <li>Cell pellets</li>
+                              <li>Cells in DMSO/DMEM freezing medium</li>
+                              <li>Frozen tissue</li>
+                              <li>OCT tissue (blocks or curls)</li>
+                              <li>FFPE tissue (slides, blocks, curls, or punches)</li>
+                              <li>Blood in EDTA tubes</li>
+                              <li>Blood in Streck tubes (for cfDNA)</li>
+                              <li>PBMCs/buffy coats in micronic tubes</li>
+                              <li>Fingernails</li>
+                              <li>Saliva</li>
+                              <li>Bone marrow aspirate (tube or syringe)</li>
+                              <li>Plasma frozen in 1-5mL tubes</li>
+                              <li>Buccal swabs frozen in 1.5mL tubes</li>
+                            </ul>
                           </div>
                         </md-list-item>
                       </md-list>
@@ -169,9 +182,11 @@
                       <md-list slot="md-expand">
                         <md-list-item>
                           <div>
-                            We do not currently accept blood for RNA extraction, although we have a kit in testing.For DNA, the yield varies
-                            based on the white blood cell count, the extraction method, and the elution volume. Typically, the range is
-                            16-135μg/mL whole blood; 400mL is usually enough for downstream applications.
+                          <ul>
+                            <li>Blood in EDTA tubes for DNA extraction: 400&mu;L</li>
+                            <li>Blood in Streck tubes for cfDNA extraction: 4.5mL</li>
+                            <li>Blood in PAXgene tubes for RNA extraction: 10mL</li>
+                          </ul>
                           </div>
                         </md-list-item>
                       </md-list>
@@ -193,9 +208,14 @@
                       <md-list slot="md-expand">
                         <md-list-item>
                           <div>
-                            Yes. We recommend simultaneous extraction when samples are small and splitting them would decrease both RNA &
-                            DNA yields. If you have enough material to split for separate extractions, you may still submit for simultaneous
-                            and send the tissue in a single tube.
+                            Yes. We accept:
+                            <ul>
+                              <li>Cell pellets</li>
+                              <li>Cells in DMEM/DMSO freezing medium</li>
+                              <li>Frozen tissue</li>
+                              <li>OCT tissue</li>
+                              <li>FFPE tissue (slides, curls, or punches)</li>
+                            </ul>
                           </div>
                         </md-list-item>
                       </md-list>
@@ -242,8 +262,8 @@
                       <md-list slot="md-expand">
                         <md-list-item>
                           <div>
-                            Generally, a piece of tissue the size of a grain of rice is sufficient for all downstream applications,
-                            including IMPACT, WES, and WGS.
+                            Generally, a piece of tissue the size of a grain of rice (2-3mm; 10-15mg) is sufficient for all downstream applications,
+                            including IMPACT, WES, and WGS. Samples that need additonal cutting may incur additional charges.
                           </div>
                         </md-list-item>
                       </md-list>
@@ -255,7 +275,7 @@
                         <md-list-item>
                           <div>
                             IGO can process any of those. Our Pathology team can section, stain an H&E slide, facilitate pathology review,
-                            scrape slides, and/or macrodissect a region of tissue on a slide.
+                            scrape slides, and/or macrodissect a region of tissue on a slide. However, we do not extract RNA from blocks.
                           </div>
                         </md-list-item>
                       </md-list>
@@ -296,6 +316,8 @@
                           <div>
                             Yes. We can go forward but cannot guarantee downstream success at either library prep or sequencing. We are
                             always happy to discuss your results and our recommendations. Reach out to us by commenting on your QC report.
+
+                            You can find a reference range for pass/fail criteria <router-link :to="{ name: 'sample criteria' }">here.</router-link>
                           </div>
                         </md-list-item>
                       </md-list>
@@ -308,7 +330,7 @@
                       <md-list slot="md-expand">
                         <md-list-item>
                           <div>
-                            DNA and RNA is passed based on quantity and/or DIN and RIN alone, but there are other factors that could inhibit
+                            DNA and RNA are passed based on quantity and/or DIN and RIN alone, but there are other factors that could inhibit
                             adaptor ligation or PCR amplification. Common issues include: inhibitory contaminants (could be biological, such
                             as melanin, or external, such as paraffin), RNA/DNA contamination, or DNA damage.
                           </div>
@@ -381,28 +403,9 @@
                       <md-list slot="md-expand">
                         <md-list-item>
                           <div>
-                            To access your FASTQ files, follow these instructions.<br />
-                            From a PC:
-                            <ul>
-                              <li>Open File Explorer from the taskbar or the Start menu, or press the Windows logo key + E.</li>
-                              <li>Select This PC from the left pane. Then, on the Computer tab, select Map network drive.</li>
-                              <li>In the Drive list, select a drive letter. Any available letter will do.</li>
-                              <li>In the Folder box, type \\bic.mskcc.org\[LABNAME]</li>
-                              <li>When prompted enter your MSKCC username & password</li>
-                              <li>Select Finish</li>
-                            </ul>
-                            From a Mac:
-                            <ul>
-                              <li>Click the Finder icon in the Dock to open a Finder window</li>
-                              <li>From the menu bar at the top select “Go” and then “Connect to Server”</li>
-                              <li>Enter the server address smb://bic.mskcc.org</li>
-                              <li>From the popup select the share for your lab</li>
-                              <li>When prompted enter your MSKCC username & password</li>
-                            </ul>
+                            Please see our <router-link :to="{ name: 'accessing your data' }">data access instructions</router-link>.
                             <br />
-                            If you cannot log in, want to understand about the data storage structure, or are having difficulties locating
-                            your data,
-                            <a href="mailto:zzPDL_SKI_IGO_DATA@mskcc.org?subject=Trouble accessing data">contact the Data Team.</a>
+                            If you cannot log in or need access for a collaborator or data analyst, please fill out the "Data Access Request" <a href="https://my.ilabsolutions.com/service_center/3276/?tab=services">iLab form</a>
                           </div>
                         </md-list-item>
                       </md-list>
