@@ -28,6 +28,7 @@ import RnaCriteria from './components/RnaCriteria.vue';
 import OtherCriteria from './components/OtherCriteria.vue';
 import MetricsAndThroughputPage from './components/pages/MetricsAndThroughputPage.vue';
 import ReservationPage from './components/pages/ReservationPage.vue';
+import CancelReservationPage from './components/pages/CancelReservationPage.vue';
 import ChemistryTimelinePage from './components/pages/ChemistryTimelinePage.vue';
 
 import VueSweetalert2 from 'vue-sweetalert2';
@@ -124,6 +125,7 @@ const routes = [
   { path: '/archer-fusion', component: ArcherFusionPage, name: 'archer fusion' },
   { path: '/metrics-and-throughput', component: MetricsAndThroughputPage, name: 'metrics and throughput' },
   { path: '/reservations', component: ReservationPage, name: 'reservations' },
+  { path: '/reservations/cancel/:id', component: CancelReservationPage, name: 'cancel reservation', props: true },
   { path: '/chemistry-timeline', component: ChemistryTimelinePage, name: 'chemistry timeline' },
 ];
 

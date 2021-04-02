@@ -34,14 +34,16 @@
             <li>Rsync the data to its final destination</li>
           </ul>
           <br />
-          If you cannot log in, want to understand about the data storage structure, or are having difficulties locating your data,
-          <a href="mailto:zzPDL_SKI_IGO_DATA@mskcc.org?subject=Trouble accessing data">contact the Data Team.</a>
+          If you cannot access your data or need to grant access to a collaborator or data analyst (internal or external) or an MSKCC core, please fill out <a href="https://my.ilabsolutions.com/service_center/3276/?tab=services">the "Data Access Request" iLab form</a>
+          <br />
+          If you want to understand more about the data storage structure, are having difficulties locating your data, or have other questions
+          <a href="mailto:zzPDL_SKI_IGO_DATA@mskcc.org?subject=Data questions">contact the Data Team.</a>
         </div>
       </md-card-content>
     </md-card>
     <md-card class="data-delivery-card">
       <md-card-header>
-        <div class="md-title">General Information</div>
+        <div class="md-title">Data delivery structure</div>
       </md-card-header>
       <md-card-content>
         <div class="md-subheading">Background</div>

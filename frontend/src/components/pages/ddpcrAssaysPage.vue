@@ -3,7 +3,7 @@
     <div class="md-display-1">ddPCR Assay List</div>
     <div class="controls-container">
       <div class="search-form">
-        <form>
+        <form v-on:submit.prevent>
           <md-field>
             <label>Search for an assay</label>
             <md-input v-model.lazy="search"></md-input>
@@ -45,13 +45,19 @@
             </md-card-header>
             <md-content class="md-scrollbar">
               <div v-for="(assay, index) in assayArray" :key="index" class="assay-list">
-                {{ assay }}
-                <span v-if="mouseAssays.includes(assay)"> &#128000;<md-tooltip md-direction="top">Mouse assay</md-tooltip></span>
-                <span v-if="outOfStockAssays.includes(assay)" style="color: Tomato"
+                {{ assay.assayName }}
+                <!-- <span v-if="mouseAssays.includes(assay)"> &#128000;<md-tooltip md-direction="top">Mouse assay</md-tooltip></span> -->
+                <span v-if="assay.species === 'Mouse'"> &#128000;<md-tooltip md-direction="top">Mouse assay</md-tooltip></span>
+                <span v-if="assay.assayVolume === 0" style="color: Tomato"
                   ><i class="fa-icon fas fa-minus-circle fa-1x">
                     <md-tooltip md-direction="top">Out of stock; addt'l ordering time</md-tooltip>
                   </i></span
                 >
+                <!-- <span v-if="outOfStockAssays.includes(assay)" style="color: Tomato"
+                  ><i class="fa-icon fas fa-minus-circle fa-1x">
+                    <md-tooltip md-direction="top">Out of stock; addt'l ordering time</md-tooltip>
+                  </i></span
+                > -->
               </div>
             </md-content>
           </md-card>
@@ -77,6 +83,7 @@ export default {
     filteredAssaysByCategory() {
       // Make a copy of assaysByCategory
       let filteredAssays = JSON.parse(JSON.stringify(this.$store.state.assaysByCategory));
+
       // delete uncategorized assays to avoid empty card div in v-for
       delete filteredAssays.uncategorized;
 
@@ -85,9 +92,8 @@ export default {
         Object.keys(filteredAssays).forEach((category) => {
           // search results for this category are filtered, assign result of filtering to searchResults
           searchResults = filteredAssays[category].filter((assayElement) => {
-            return assayElement.toLowerCase().match(this.search.toLowerCase());
+            return assayElement.assayName.toLowerCase().match(this.search.toLowerCase());
           });
-          // console.log(searchResults);
           filteredAssays[category] = searchResults;
         });
         return filteredAssays;
@@ -95,12 +101,12 @@ export default {
         return filteredAssays;
       }
     },
-    outOfStockAssays: function() {
-      return this.$store.state.outOfStockAssays;
-    },
-    mouseAssays: function() {
-      return this.$store.state.mouseAssays;
-    },
+    // outOfStockAssays: function() {
+    //   return this.$store.state.outOfStockAssays;
+    // },
+    // mouseAssays: function() {
+    //   return this.$store.state.mouseAssays;
+    // },
   },
 };
 </script>
