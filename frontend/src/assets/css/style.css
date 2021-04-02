@@ -247,7 +247,7 @@ form {
   /* width: 350px; */
   /* height: 400px; */
   /* margin: 20px; */
-  max-width: 300px;
+  max-width: 350px;
   margin: 4px 10px;
   /* margin: 1% auto; */
   display: inline-block;
@@ -267,15 +267,20 @@ form {
 }
 
 .news {
-  background-color: var(--material-gray);
-  padding: 1% 12%;
+  /* background-color: var(--material-gray); */
+  padding: 0.5% 5%;
+  margin-bottom: 1%;
+}
+
+.md-card-area {
+  background: rgba(0, 0, 0, 0.7);
 }
 
 #read-more {
   text-align: right;
 }
 
-/* News Page */
+/*News  Page */
 
 #news-page .md-card {
   width: 60%;

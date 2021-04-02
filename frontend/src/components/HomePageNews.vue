@@ -2,24 +2,28 @@
   <div class="news">
     <!-- <div class="news-headline md-headline md-inset">News at the IGO</div> -->
     <md-card class="news-card">
-      <md-card-media>
-        <img src="../assets/images/news/Viale_190612_078.jpg" @click="showDialogMethod" />
-      </md-card-media>
+      <md-card-media-cover>
+        <md-card-media>
+          <img src="../assets/images/news/Viale_190612_078.jpg" @click="showDialogMethod" />
+        </md-card-media>
+        <md-card-area>
+          <md-card-header>
+            <span class="md-title">New "Reservations feature"</span>
+            <!-- <span class="md-title">New "Reservations feature for 10X Genomics & ATAC-Seq sample drop off"</span> -->
+            <span class="md-subhead">March 9, 2021</span>
+          </md-card-header>
 
-      <!-- <md-card-header>
-        <div class="md-title">New "Reservations" feature for 10X Genomics & ATAC-Seq sample drop off</div>
-        <div class="md-subhead">March 9, 2021</div>
-      </md-card-header> -->
+          <md-card-actions>
+            <md-card-expand-trigger>
+              <md-button class="md-icon-button">
+                <md-icon>keyboard_arrow_down</md-icon>
+              </md-button>
+            </md-card-expand-trigger>
+          </md-card-actions>
+        </md-card-area>
+      </md-card-media-cover>
 
       <md-card-expand>
-        <md-card-actions md-alignment="space-between">
-          <md-card-expand-trigger>
-            <md-button class="md-icon-button">
-              <md-icon>keyboard_arrow_down</md-icon>
-            </md-button>
-          </md-card-expand-trigger>
-        </md-card-actions>
-
         <md-card-expand-content>
           <md-card-content>
             <p>
@@ -36,24 +40,27 @@
     </md-card>
 
     <md-card class="news-card">
-      <md-card-media>
-        <img src="../assets/images/lab/wheresciencegoesigo.jpeg" @click="showDialogMethod" />
-      </md-card-media>
+      <md-card-media-cover>
+        <md-card-media>
+          <img src="../assets/images/lab/wheresciencegoesigo.jpeg" @click="showDialogMethod" />
+        </md-card-media>
+        <md-card-area>
+          <md-card-header>
+            <span class="md-title">Welcome to the new IGO website!</span>
+            <span class="md-subhead">January 15, 2021</span>
+          </md-card-header>
 
-      <!-- <md-card-header>
-        <div class="md-title">Welcome to the new IGO website!</div>
-        <div class="md-subhead">January 15, 2021</div>
-      </md-card-header> -->
+          <md-card-actions>
+            <md-card-expand-trigger>
+              <md-button class="md-icon-button">
+                <md-icon>keyboard_arrow_down</md-icon>
+              </md-button>
+            </md-card-expand-trigger>
+          </md-card-actions>
+        </md-card-area>
+      </md-card-media-cover>
 
       <md-card-expand>
-        <md-card-actions md-alignment="space-between">
-          <md-card-expand-trigger>
-            <md-button class="md-icon-button">
-              <md-icon>keyboard_arrow_down</md-icon>
-            </md-button>
-          </md-card-expand-trigger>
-        </md-card-actions>
-
         <md-card-expand-content>
           <md-card-content>
             <p>
@@ -68,24 +75,27 @@
     </md-card>
 
     <md-card class="news-card">
-      <md-card-media>
-        <img src="../assets/images/news/Viale_190612_083.jpg" @click="showDialogMethod" />
-      </md-card-media>
+      <md-card-media-cover>
+        <md-card-media>
+          <img src="../assets/images/news/Viale_190612_083.jpg" @click="showDialogMethod" />
+        </md-card-media>
+        <md-card-area>
+          <md-card-header>
+            <span class="md-title">New project tracker, guidance for single cell applications, and changes to data delivery</span>
+            <span class="md-subhead">December 3, 2020</span>
+          </md-card-header>
 
-      <!-- <md-card-header>
-        <div class="md-title">New project tracker, guidance for single cell applications, and changes to data delivery</div>
-        <div class="md-subhead">December 3, 2020</div>
-      </md-card-header> -->
+          <md-card-actions>
+            <md-card-expand-trigger>
+              <md-button class="md-icon-button">
+                <md-icon>keyboard_arrow_down</md-icon>
+              </md-button>
+            </md-card-expand-trigger>
+          </md-card-actions>
+        </md-card-area>
+      </md-card-media-cover>
 
       <md-card-expand>
-        <md-card-actions md-alignment="space-between">
-          <md-card-expand-trigger>
-            <md-button class="md-icon-button">
-              <md-icon>keyboard_arrow_down</md-icon>
-            </md-button>
-          </md-card-expand-trigger>
-        </md-card-actions>
-
         <md-card-expand-content>
           <md-card-content>
             <p>
@@ -109,7 +119,7 @@
     </md-card>
 
     <div id="read-more">
-      <md-button class="md-primary" :to="{ name: 'all news' }">read more</md-button>
+      <md-button class="md-primary" :to="{ name: 'all news' }">more news</md-button>
     </div>
 
     <md-dialog :md-active.sync="showDialog">
