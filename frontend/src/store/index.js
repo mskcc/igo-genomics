@@ -8,8 +8,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    outOfStockAssays: [],
-    mouseAssays: [],
+    // outOfStockAssays: [],
+    // mouseAssays: [],
     assaysByCategory: new Array(),
     assaysToUpdate: [],
     newCategory: [],
@@ -32,9 +32,9 @@ export default new Vuex.Store({
     setTimeline(state, payload) {
       state.timeline = payload;
     },
-    setOutOfStockAssays(state, payload) {
-      state.outOfStockAssays = payload;
-    },
+    // setOutOfStockAssays(state, payload) {
+    //   state.outOfStockAssays = payload;
+    // },
     setAssaysByCategory(state, payload) {
       state.assaysByCategory = payload;
     },
@@ -47,9 +47,9 @@ export default new Vuex.Store({
     setAssayTableObject(state, payload) {
       state.assayTableObject = payload;
     },
-    setMouseAssays(state, payload) {
-      state.mouseAssays = payload;
-    },
+    // setMouseAssays(state, payload) {
+    //   state.mouseAssays = payload;
+    // },
     setRequestType(state, payload) {
       state.requestType = payload;
     },
@@ -61,7 +61,6 @@ export default new Vuex.Store({
     setLastTwelveMonths(context) {
       app.axios.get(`${API_URL}/chemistryTimeline`).then((response) => {
         let timeline = response.data;
-        // console.log(response);
         context.commit('setTimeline', timeline);
       });
     },
@@ -96,19 +95,19 @@ export default new Vuex.Store({
               },
             ],
           };
-          let outOfStockAssayList = assays.filter((assay) => {
-            if (assay.assayVolume === 0) {
-              return assay.assayName;
-            }
-          });
-          let outOfStockAssayNames = outOfStockAssayList.map((assay) => assay.assayName);
+          // let outOfStockAssayList = assays.filter((assay) => {
+          //   if (assay.assayVolume === 0) {
+          //     return assay.assayName;
+          //   }
+          // });
+          // let outOfStockAssayNames = outOfStockAssayList.map((assay) => assay.assayName);
 
-          let mouseAssayList = assays.filter((assay) => {
-            if (assay.species === 'Mouse') {
-              return assay.assayName;
-            }
-          });
-          let mouseAssayNames = mouseAssayList.map((assay) => assay.assayName);
+          // let mouseAssayList = assays.filter((assay) => {
+          //   if (assay.species === 'Mouse') {
+          //     return assay.assayName;
+          //   }
+          // });
+          // let mouseAssayNames = mouseAssayList.map((assay) => assay.assayName);
 
           let assaysByCategory = { uncategorized: [] };
 
@@ -116,20 +115,20 @@ export default new Vuex.Store({
             if (assays[i].assayType) {
               // check if assaysbyCategory has a key and if it does then push
               if (assaysByCategory[assays[i].assayType]) {
-                assaysByCategory[assays[i].assayType].push(assays[i].assayName);
+                assaysByCategory[assays[i].assayType].push(assays[i]);
               } else {
                 // assaysByCategory at key of category is empty
                 assaysByCategory[assays[i].assayType] = [];
-                assaysByCategory[assays[i].assayType].push(assays[i].assayName);
+                assaysByCategory[assays[i].assayType].push(assays[i]);
               }
             } else {
-              assaysByCategory.uncategorized.push(assays[i].assayName);
+              assaysByCategory.uncategorized.push(assays[i]);
             }
           }
           context.commit('setAssayTableObject', assayTableObject);
           context.commit('setAssaysByCategory', assaysByCategory);
-          context.commit('setOutOfStockAssays', outOfStockAssayNames);
-          context.commit('setMouseAssays', mouseAssayNames);
+          // context.commit('setOutOfStockAssays', outOfStockAssayNames);
+          // context.commit('setMouseAssays', mouseAssayNames);
         });
     },
     setExistingReservations(context) {
