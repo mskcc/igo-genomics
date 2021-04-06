@@ -237,7 +237,7 @@ export const bulkServices = [
     id: 4,
     name: 'Epigenome Sequencing',
     description: 'Various methods to assess the epigenetic structure of the genome',
-    startingMaterial: 'Cells (ATAC), Transposed DNA (ChIP), DNA – samples in multiples of 4 (EPIC)',
+    startingMaterial: 'Cells - no more than 24 samples/batch (ATAC), Transposed DNA (ChIP), DNA – samples in multiples of 4 (EPIC)',
     libraryChemistry: 'Nextera XT (ATAC), KAPA HTP (ChIP), TruSeq Methyl Capture (EPIC)',
     sequencingReadLength: 'PE100',
     sequencingCoverage: '40-50M (ATAC), 30-40M (ChIP), 40M (EPIC)',

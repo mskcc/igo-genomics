@@ -114,6 +114,7 @@
                 <md-icon>add</md-icon>
                 <span class="md-list-item-text ">Cells for ATAC-Seq</span>
                 <md-list slot="md-expand">
+                  <md-list-item class="md-inset">Note: if you have never run ATAC-Seq on your cell type, please e-mail genomics@mskcc.org to discuss an optimization of the transposition conditions.</md-list-item>
                   <md-list-item class="md-inset">
                     <ol>
                       <li>Fill out an iLab form for “Epigenetic Library Prep + Sequencing”</li>
@@ -121,14 +122,14 @@
                       <li><strong>If submitting fresh cells:</strong> 
                       <ul>
                         <li><router-link :to="{ name: 'reservations' }"> Make a reservation</router-link> to bring your samples (Thursdays only)</li>
-                        <li>Bring samples suspended in 1mL of their favored medium in a 1.5mL <strong>V-bottom</strong> Eppendorf tube</li>
+                        <li>Bring 50K live cells suspended in 300-350&mu;L PBS or their favored medium in a 1.5mL <strong>V-bottom</strong> Eppendorf tube</li>
                       </ul>
                       </li>
                       <li>
                         <strong>If submitting viably frozen cells:</strong>
                       <ul>
                         <li><a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> email SPM </a>to set up a time to bring your samples to IGO</li>
-                        <li>Freeze your samples in 1mL 10% DMSO in a 1.5mL <strong>V-bottom</strong> Eppendorf tube</li>
+                        <li>Freeze your 50K cells in 300-500&mu;L 10% DMSO in a 1.5mL Eppendorf tube</li>
                       </ul>
                       </li>
                     </ol>
