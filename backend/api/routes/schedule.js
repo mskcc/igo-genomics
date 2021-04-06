@@ -177,33 +177,64 @@ module.exports = function (router) {
       });
   });
 
-  //  using get because this link will be clicked from notification emails
-  router.get('/cancelAppointment/:id', function (req, response) {
+  // deletes an appointment
+  router.post('/cancelAppointment/:id', function (req, response) {
     let appointmentId = req.params.id;
-    AppointmentModel.findByIdAndDelete(ObjectId(appointmentId)).exec(function (
-      err,
+  
+    AppointmentModel.findOneAndDelete({_id: appointmentId}, (function (
+      error,
       appointment
     ) {
-      if (appointment) {
-        mailer.sendCancellationNotification(appointment);
-        return response
-          .status(200)
-          .send(
-            '<p style=" text-align: center; font-size: larger;">Appointment cancelled!</p><p style=" text-align: center;" ><img style="width:50px; margin:auto 0;" src="https://igodev.mskcc.org/img/logoDarkGrayOnTransp.f0d9e455.png"></p>'
-          );
-      }
-      if (err) {
+      // not a valid id
+      if (error) {
         return response.status(500).json({
-          message: 'Could not cancel appointment',
+          message: 'Appointment not found',
         });
       }
+      if (appointment) {
+        mailer.sendCancellationNotification(appointment);
+        // return response
+        //   .status(200)
+        //   .send(
+        //     '<p style=" text-align: center; font-size: larger;">Appointment cancelled!</p><p style=" text-align: center;" ><img style="width:50px; margin:auto 0;" src="https://igodev.mskcc.org/img/logoDarkGrayOnTransp.f0d9e455.png"></p>'
+        //   );
+        return response.status(200).json({message: 'Appointment cancelled!'})
+      }
+      // no appointment was found
+      return response.status(500).json({
+        message: 'Appointment not found',
+      });
+      
       // send cancellation email
 
-      return response
-        .status(200)
-        .send(
-          '<p style=" text-align: center; font-size: larger;">Appointment not found.</p><p style=" text-align: center;" ><img style="width:50px; margin:auto 0;" src="https://igodev.mskcc.org/img/logoDarkGrayOnTransp.f0d9e455.png"></p>'
-        );
-    });
+      // return response
+      //   .status(200)
+      //   .send(
+      //     '<p style=" text-align: center; font-size: larger;">Appointment not found.</p><p style=" text-align: center;" ><img style="width:50px; margin:auto 0;" src="https://igodev.mskcc.org/img/logoDarkGrayOnTransp.f0d9e455.png"></p>'
+      //   );
+    }));
   });
+
+  router.get('/appointment/:id', function (req, response) {
+    let appointmentId = req.params.id;
+  
+    AppointmentModel.findById(appointmentId, function(error, appointment) {
+      // not a valid id
+      if (error) {
+        return response.status(500).json({
+          message: 'Appointment not found',
+        });
+      }
+      if (appointment) {
+        return response.status(200).json({appointment: appointment})
+      }
+      // no appointment was found
+      return response.status(500).json({
+        message: 'Appointment not found',
+      });
+    })
+  });
+
 };
+
+
