@@ -641,3 +641,9 @@ sup {
   display: inline-block;
   vertical-align: top;
 }
+
+/* job descriptions */
+
+#job-descriptions .md-card.news-card.md-theme-default {
+  border-left: 5px solid var(--mskcc-light-turquoise);
+}
