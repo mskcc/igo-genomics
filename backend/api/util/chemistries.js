@@ -1,11 +1,5 @@
 module.exports = [
   {
-    name: 'IDT xGen Exome Research Panel v1',
-    start: '01-01-2020',
-    stop: '03-01-2020',
-    color: '#83276b',
-  },
-  {
     name: 'IDT xGen Exome Research Panel v2',
     start: '04-01-2020',
     stop: 'present',
@@ -57,5 +51,29 @@ module.exports = [
     start: '01-01-2021',
     stop: 'present',
     color: '#9e9e98',
+  },
+  {
+    name: "HemePACT v4",
+    start: '01-01-2020',
+    stop: 'present',
+    color: '#008066',
+  },
+  {
+    name: "Mouse-IMPACT v1",
+    start: '01-01-2020',
+    stop: 'present',
+    color: '#ff6699',
+  },
+  {
+    name: 'PE50 RNA-Seq',
+    start: '01-01-2020',
+    stop: '04-01-2021',
+    color: '#33004d',
+  },
+  {
+    name: "PE100 RNA-Seq",
+    start: '04-01-2021',
+    stop: 'present',
+    color: '#77b300'
   },
 ];

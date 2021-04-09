@@ -106,6 +106,7 @@ exports.last12Months = () => {
   let d = new Date();
   let y = d.getFullYear();
   let m = d.getMonth();
+  // let m = 7;
 
   let monthNumber, monthName, year, data;
   let columns = [];
@@ -118,8 +119,9 @@ exports.last12Months = () => {
       return month;
     }
   }
-  if (m === 11) {
-    for (var i = 1; i < 13; i++) {
+  // If going back 8 months keeps you in the current year, this if statement is used
+    if (m >= 7) {
+      for (var i = m - 6; i < m + 2; i++) {
       monthNumber = padMonth(i);
       monthName = months[monthNumber - 1];
       year = y;
@@ -129,9 +131,11 @@ exports.last12Months = () => {
         renderer: 'html',
       });
     }
+    // Handles cases where going back 8 months spans the year boundary
   } else {
-    for (var i = m + 1; i < m + 13; i++) {
-      if (i % 12 > m) {
+    // To change the number of months back you go, reduce (to start earlier) or increase (to start later) the "4" added to m.
+      for (var i = m + 5; i < m + 13; i++) {
+        if (i < 12) {
         monthNumber = padMonth(i + 1);
         monthName = months[monthNumber - 1];
         year = y - 1;
