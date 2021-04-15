@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div id="contact-form">
     <md-dialog-content>
       <!-- <md-dialog-title> Pricing Inquiries</md-dialog-title> -->
 
-      <form id="pricing-inquiry" @submit.prevent="submitInqquiry">
+      <form id="pricing-inquiry" @submit.prevent="submitInquiry">
         <div>
           <div>
             <md-field>
@@ -11,6 +11,19 @@
               <md-input v-model="contactEmail" readonly></md-input>
             </md-field>
           </div>
+          <div>
+            <md-field>
+              <label>Name</label>
+              <md-input type="text" id="runLength" name="runLength" v-model="form.name"></md-input>
+            </md-field>
+          </div>
+          <div>
+            <md-field>
+              <label>Email</label>
+              <md-input type="text" id="runLength" name="runLength" v-model="form.email"></md-input>
+            </md-field>
+          </div>
+
           <div>
             <md-field>
               <label for="runLength">Run length (ex PE100, PE150)</label>
@@ -43,14 +56,19 @@
 </template>
 
 <script>
+import * as app from './../app.js';
+import { API_URL } from './../config.js';
+
 export default {
   name: 'ContactForm',
   data: function() {
     return {
       form: {
-        runLength: '',
-        totalReads: '',
-        projectDescription: '',
+        name: 'Anna',
+        email: 'patrunoa@mskcc.org',
+        runLength: 'PE50',
+        totalReads: '100M',
+        projectDescription: 'I have a pricing question',
       },
       contactEmail: 'genomics@mskcc.org',
     };
@@ -58,6 +76,13 @@ export default {
   methods: {
     submitInquiry: function() {
       console.log(this.form);
+      app.axios
+        .post(`${API_URL}/submitInquiry`, {
+          data: { ...this.form },
+        })
+        .then((response) => {
+          console.log(response);
+        });
     },
     cancelForm: function() {
       this.$emit('update:submittingPricingInquiry', false);
