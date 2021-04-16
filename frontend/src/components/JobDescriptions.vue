@@ -37,7 +37,7 @@
     <md-card class="news-card">
       <md-card-header>
         <div class="md-title">Research Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 4 } }">Nucleic Acid Team</router-link>
+        <router-link :to="{ name: 'team', params: { id: 4 } }">Library Preparation Team</router-link>
         <div class="md-body">Available soon!</div>
       </md-card-header>
       <md-card-actions>
@@ -71,7 +71,7 @@
 
     <md-dialog :md-active.sync="showJobDescription" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
-        <strong>As a Research Assistant in the Nucleic Acid Team, you will:</strong>
+        <strong>As a Research Assistant in the Library Preparation Team, you will:</strong>
         <ul>
           <li>Prepare DNA and RNA libraries for NGS following established SOPs.</li>
           <li>Prepare reagents and set up runs for robots.</li>
