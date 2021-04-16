@@ -6,7 +6,6 @@
         <router-link :to="{ name: 'team', params: { id: 7 } }">Research & Development</router-link>
         <div class="md-body">Open!</div>
       </md-card-header>
-
       <md-card-actions>
         <md-button @click="showJobDescription42947 = true" class="md-accent">Learn More</md-button>
         <md-button
@@ -24,41 +23,23 @@
         <router-link :to="{ name: 'team', params: { id: 3 } }">Extraction Team</router-link>
         <div class="md-body">Open!</div>
       </md-card-header>
-
       <md-card-actions>
-        <md-button @click="showJobDescription = true" class="md-accent">Learn More</md-button>
+        <md-button @click="showJobDescription42946 = true" class="md-accent">Learn More</md-button>
         <md-button
-          href="https://internaltalent-mskcc.icims.com/jobs/47699/senior-research-project-manager---center-for-molecular-oncology/job"
+          href="https://internaltalent-mskcc.icims.com/jobs/48368/research-assistant---integrated-genomics-operation/job"
           target="_blank"
           class="md-primary"
           >Apply
         </md-button>
       </md-card-actions>
     </md-card>
-    <md-card class="news-card">
-      <md-card-header>
-        <div class="md-title">Senior Project Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 2 } }">Sample & Project Mgmt Team</router-link>
-        <div class="md-body">Open!</div>
-      </md-card-header>
 
-      <md-card-actions>
-        <md-button @click="showJobDescription = true" class="md-accent">Learn More</md-button>
-        <md-button
-          href="https://internaltalent-mskcc.icims.com/jobs/47699/senior-research-project-manager---center-for-molecular-oncology/job"
-          target="_blank"
-          class="md-primary"
-          >Apply
-        </md-button>
-      </md-card-actions>
-    </md-card>
     <md-card class="news-card">
       <md-card-header>
         <div class="md-title">Research Assistant</div>
         <router-link :to="{ name: 'team', params: { id: 4 } }">Nucleic Acid Team</router-link>
         <div class="md-body">Available soon!</div>
       </md-card-header>
-
       <md-card-actions>
         <md-button @click="showJobDescription = true" class="md-accent">Learn More</md-button>
         <md-button
@@ -70,6 +51,23 @@
         </md-button>
       </md-card-actions>
     </md-card>
+
+    <!-- <md-card class="news-card">
+      <md-card-header>
+        <div class="md-title">Senior Project Assistant</div>
+        <router-link :to="{ name: 'team', params: { id: 2 } }">Sample & Project Mgmt Team</router-link>
+        <div class="md-body">Open!</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescription = true" class="md-accent">Learn More</md-button>
+        <md-button
+          href="https://internaltalent-mskcc.icims.com/jobs/47699/senior-research-project-manager---center-for-molecular-oncology/job"
+          target="_blank"
+          class="md-primary"
+          >Apply
+        </md-button>
+      </md-card-actions>
+    </md-card> -->
 
     <md-dialog :md-active.sync="showJobDescription" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -155,6 +153,38 @@
         <md-button class="md-primary" @click="showJobDescription42947 = false">Close</md-button>
       </md-dialog-actions>
     </md-dialog>
+
+    <md-dialog :md-active.sync="showJobDescription42946" :md-fullscreen="false" style="z-index: 400;">
+      <md-dialog-content md-dynamic-height>
+        <strong>You are:</strong>
+        <ul>
+          <li>An enthusiastic researcher, organized and detail oriented</li>
+          <li>Able to work independently while working in a large team</li>
+          <li>Able to work with a diverse group of colleagues</li>
+          <li>Comfortable with manual or automated processing</li>
+          <li>Someone who can handle a very fast paced environment and the pressure associated with deadlines.</li>
+          <li>An outstanding communicator</li>
+          <li>Someone who can multitask</li>
+        </ul>
+
+        <strong>You have:</strong>
+        <ul>
+          <li>
+            A Bachelor’s Degree in a Biological, Chemistry, or Science related field with at least 3 years of relevant full-time experience
+            or a master’s degree with 1-2 years full-time relevant experience.
+          </li>
+          <li>
+            Previous exposure to purifying nucleic acids for NGS platform, knowledge of digital PCR and experience with cells and FFPE
+            samples is preferable.
+          </li>
+          <li>Strong organizational, prioritization and time management skills.</li>
+        </ul>
+      </md-dialog-content>
+
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="showJobDescription42946 = false">Close</md-button>
+      </md-dialog-actions>
+    </md-dialog>
   </div>
 </template>
 
@@ -165,6 +195,7 @@ export default {
     return {
       showJobDescription: false,
       showJobDescription42947: false,
+      showJobDescription42946: false,
     };
   },
 };
