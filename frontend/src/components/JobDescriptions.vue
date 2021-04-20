@@ -41,7 +41,7 @@
         <div class="md-body">Available soon!</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescription = true" class="md-accent">Learn More</md-button>
+        <md-button @click="showJobDescriptionRA = true" class="md-accent">Learn More</md-button>
         <md-button
           disabled
           href="https://internaltalent-mskcc.icims.com/jobs/47699/senior-research-project-manager---center-for-molecular-oncology/job"
@@ -52,24 +52,25 @@
       </md-card-actions>
     </md-card>
 
-    <!-- <md-card class="news-card">
+    <md-card class="news-card">
       <md-card-header>
         <div class="md-title">Senior Project Assistant</div>
         <router-link :to="{ name: 'team', params: { id: 2 } }">Sample & Project Mgmt Team</router-link>
-        <div class="md-body">Open!</div>
+        <div class="md-body">Available soon!</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescription = true" class="md-accent">Learn More</md-button>
+        <md-button @click="showJobDescriptionSPA = true" class="md-accent">Learn More</md-button>
         <md-button
+          disabled
           href="https://internaltalent-mskcc.icims.com/jobs/47699/senior-research-project-manager---center-for-molecular-oncology/job"
           target="_blank"
           class="md-primary"
           >Apply
         </md-button>
       </md-card-actions>
-    </md-card> -->
+    </md-card>
 
-    <md-dialog :md-active.sync="showJobDescription" :md-fullscreen="false" style="z-index: 400;">
+    <md-dialog :md-active.sync="showJobDescriptionRA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Assistant in the Library Preparation Team, you will:</strong>
         <ul>
@@ -93,7 +94,43 @@
       </md-dialog-content>
 
       <md-dialog-actions>
-        <md-button class="md-primary" @click="showJobDescription = false">Close</md-button>
+        <md-button class="md-primary" @click="showJobDescriptionRA = false">Close</md-button>
+      </md-dialog-actions>
+    </md-dialog>
+
+    <md-dialog :md-active.sync="showJobDescriptionSPA" :md-fullscreen="false" style="z-index: 400;">
+      <md-dialog-content md-dynamic-height>
+        <strong>As a Senior Research Project Assistant, you will:</strong>
+        <ul>
+          <li>
+            Participate in meetings with investigators to understand the scope of projects and effectively communicate the services provided
+            by IGO
+          </li>
+          <li>
+            Review all submissions for correctness and completeness, and work with project managers to guide investigators through
+            processing decisions that are in line with the goals of their projects.
+          </li>
+          <li>Analyze quantity and quality of samples using various instruments and communicate results electronically.</li>
+          <li>
+            Utilize the LIMS (Laboratory Information Management System) effectively to ensure the downstream processing team has relevant
+            and up-to-date information.
+          </li>
+          <li>Investigate unexpected outputs and provide information to IGO leadership and investigators.</li>
+          <li>Receive samples from outside institutions and use liquid handling automation to aliquot nucleic acid materials.</li>
+          <li>Work closely with staff from IGO and the CMO and maintain open and proactive lines of communication.</li>
+        </ul>
+
+        <strong>You have:</strong>
+        <ul>
+          <li>
+            A Bachelor’s Degree in a Biological, Chemistry, or Science related field.
+          </li>
+          <li>Experience handling DNA/RNA preferred.</li>
+        </ul>
+      </md-dialog-content>
+
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="showJobDescriptionSPA = false">Close</md-button>
       </md-dialog-actions>
     </md-dialog>
 
@@ -156,7 +193,7 @@
 
     <md-dialog :md-active.sync="showJobDescription42946" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
-        <strong>You are:</strong>
+        <strong>As a Research Assistant in the Extraction Team, you will:</strong>
         <ul>
           <li>An enthusiastic researcher, organized and detail oriented</li>
           <li>Able to work independently while working in a large team</li>
@@ -193,7 +230,8 @@ export default {
   name: 'JobDescriptions',
   data: function() {
     return {
-      showJobDescription: false,
+      showJobDescriptionRA: false,
+      showJobDescriptionSPA: false,
       showJobDescription42947: false,
       showJobDescription42946: false,
     };

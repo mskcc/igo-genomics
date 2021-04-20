@@ -65,6 +65,7 @@ export const teams = [
       { name: 'Tressa Octave', role: 'Research Technician', photoName: 'Octave_Tressa' },
       { name: 'Valerie Patritti', role: 'Project Manager' },
       { name: 'Zoe Steinsnyder', role: 'Senior Project Assistant', photoName: 'Steinsnyder_Zoe' },
+      { name: 'Position Opening Soon!', role: 'Senior Project Assistant' },
     ],
   },
   {
@@ -206,7 +207,7 @@ export const bulkServices = [
       { libraryType: 'RiboDepletion', readNumber: '30-40', sampleCost: 400 },
       { libraryType: 'RiboDepletion', readNumber: '40-50', sampleCost: 450 },
       { libraryType: 'RiboDepletion', readNumber: '50-60', sampleCost: 500 },
-      { libraryType: 'RiboDepletion', readNumber: '60-80',sampleCost: 600 },
+      { libraryType: 'RiboDepletion', readNumber: '60-80', sampleCost: 600 },
       { libraryType: 'RiboDepletion', readNumber: '80-100', sampleCost: 700 },
       { libraryType: 'SMARTer', readNumber: '20-30', sampleCost: 390 },
       { libraryType: 'SMARTer', readNumber: '30-40', sampleCost: 440 },
