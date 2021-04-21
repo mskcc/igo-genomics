@@ -19,7 +19,7 @@
           </div>
           <div>
             <md-field>
-              <label>Email</label>
+              <label>Contact Email</label>
               <md-input type="text" id="runLength" name="runLength" v-model="form.contactInfo.email"></md-input>
             </md-field>
           </div>
