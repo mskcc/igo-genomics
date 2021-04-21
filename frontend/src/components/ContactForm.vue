@@ -13,35 +13,35 @@
           </div>
           <div>
             <md-field>
-              <label>Name</label>
-              <md-input type="text" id="runLength" name="runLength" v-model="form.name"></md-input>
+              <label>Full Name</label>
+              <md-input type="text" id="runLength" name="runLength" v-model="form.contactInfo.name"></md-input>
             </md-field>
           </div>
           <div>
             <md-field>
               <label>Email</label>
-              <md-input type="text" id="runLength" name="runLength" v-model="form.email"></md-input>
+              <md-input type="text" id="runLength" name="runLength" v-model="form.contactInfo.email"></md-input>
             </md-field>
           </div>
 
           <div>
             <md-field>
               <label for="runLength">Run length (ex PE100, PE150)</label>
-              <md-input type="text" id="runLength" name="runLength" v-model="form.runLength" :disabled="sending" />
+              <md-input type="text" id="runLength" name="runLength" v-model="form.body.runLength" :disabled="sending" />
             </md-field>
           </div>
 
           <div>
             <md-field>
               <label for="totalReads">Total reads needed in project (M)</label>
-              <md-input type="text" id="totalReads" name="totalReads" v-model="form.totalReads" :disabled="sending" />
+              <md-input type="text" id="totalReads" name="totalReads" v-model="form.body.totalReads" :disabled="sending" />
             </md-field>
           </div>
 
           <div>
             <md-field>
               <label>Describe your project</label>
-              <md-textarea v-model="form.projectDescription"></md-textarea>
+              <md-textarea v-model="form.body.projectDescription"></md-textarea>
             </md-field>
           </div>
         </div>
@@ -64,11 +64,15 @@ export default {
   data: function() {
     return {
       form: {
-        name: 'Anna',
-        email: 'patrunoa@mskcc.org',
-        runLength: 'PE50',
-        totalReads: '100M',
-        projectDescription: 'I have a pricing question',
+        contactInfo: {
+          name: 'Anna Patruno',
+          email: 'apatruno618@gmail.com',
+        },
+        body: {
+          runLength: 'PE50',
+          totalReads: '100',
+          projectDescription: 'I have a pricing question',
+        },
       },
       contactEmail: 'genomics@mskcc.org',
     };
