@@ -83,7 +83,7 @@ export const teams = [
       { name: 'Marisa Vanness', role: 'Research Technician', photoName: 'Vanness_Marisa' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
       { name: 'Tony Deblasio', role: 'Senior Research Assistant', photoName: 'Deblasio_Tony' },
-      { name: 'Open Position!', role: 'Research Assistant' },
+      { name: 'Position Opening Soon!', role: 'Research Assistant' },
     ],
   },
   {
@@ -99,7 +99,7 @@ export const teams = [
       { name: 'Katherine Allard', role: 'Research Assistant', photoName: 'Allard_Katherine' },
       { name: 'Satish Ramakrishnan', role: 'Research Assistant', photoName: 'Ramakrishnan_Satish' },
       { name: 'Satoko Murakami', role: 'Research Assistant', photoName: 'Murakami_Satoko' },
-      { name: 'Position Opening Soon!', role: 'Research Assistant' },
+      { name: 'Open Position!', role: 'Research Assistant' },
     ],
   },
   {

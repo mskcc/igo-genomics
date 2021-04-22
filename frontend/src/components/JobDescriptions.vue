@@ -5,28 +5,12 @@
         <div class="md-title">Supervisor</div>
         <router-link :to="{ name: 'team', params: { id: 7 } }">Research & Development</router-link>
         <div class="md-body">Open!</div>
+        <!-- <div>Ref: 2021-48309</div> -->
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescription42947 = true" class="md-accent">Learn More</md-button>
+        <md-button @click="showJobDescriptionRDM = true" class="md-accent">Learn More</md-button>
         <md-button
-          href="https://internaltalent-mskcc.icims.com/jobs/48309/manager%2c-r%26d-team-%2c-integrated-genomics-operations/job"
-          target="_blank"
-          class="md-primary"
-          >Apply
-        </md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="news-card">
-      <md-card-header>
-        <div class="md-title">Research Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 3 } }">Extraction Team</router-link>
-        <div class="md-body">Open!</div>
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescription42946 = true" class="md-accent">Learn More</md-button>
-        <md-button
-          href="https://internaltalent-mskcc.icims.com/jobs/48368/research-assistant---integrated-genomics-operation/job"
+          href="https://careers.mskcc.org/jobs/job-details/2021-48309-manager-integrated-genomics-operations/?returnUrl=%2fjobs%3fkeyword%3dintegrated%2bgenomics%2boperation%26department%3d%26location%3d"
           target="_blank"
           class="md-primary"
           >Apply
@@ -38,13 +22,31 @@
       <md-card-header>
         <div class="md-title">Research Assistant</div>
         <router-link :to="{ name: 'team', params: { id: 4 } }">Library Preparation Team</router-link>
+        <div class="md-body">Open!</div>
+        <!-- <div>Ref: 2021-48368</div> -->
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionERA = true" class="md-accent">Learn More</md-button>
+        <md-button
+          href="https://careers.mskcc.org/jobs/job-details/2021-48368-senior-research-technician-integrated-genomics-operation/?returnUrl=%2fjobs%3fkeyword%3dintegrated%2bgenomics%2boperation%26department%3d%26location%3d"
+          target="_blank"
+          class="md-primary"
+          >Apply
+        </md-button>
+      </md-card-actions>
+    </md-card>
+
+    <md-card class="news-card">
+      <md-card-header>
+        <div class="md-title">Research Assistant</div>
+        <router-link :to="{ name: 'team', params: { id: 3 } }">Extraction Team</router-link>
         <div class="md-body">Available soon!</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescriptionRA = true" class="md-accent">Learn More</md-button>
+        <md-button @click="showJobDescription42946 = true" class="md-accent">Learn More</md-button>
         <md-button
           disabled
-          href="https://internaltalent-mskcc.icims.com/jobs/47699/senior-research-project-manager---center-for-molecular-oncology/job"
+          href="https://internaltalent-mskcc.icims.com/jobs/48368/research-assistant---integrated-genomics-operation/job"
           target="_blank"
           class="md-primary"
           >Apply
@@ -70,7 +72,7 @@
       </md-card-actions>
     </md-card>
 
-    <md-dialog :md-active.sync="showJobDescriptionRA" :md-fullscreen="false" style="z-index: 400;">
+    <md-dialog :md-active.sync="showJobDescriptionERA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Assistant in the Library Preparation Team, you will:</strong>
         <ul>
@@ -94,7 +96,7 @@
       </md-dialog-content>
 
       <md-dialog-actions>
-        <md-button class="md-primary" @click="showJobDescriptionRA = false">Close</md-button>
+        <md-button class="md-primary" @click="showJobDescriptionERA = false">Close</md-button>
       </md-dialog-actions>
     </md-dialog>
 
@@ -134,7 +136,7 @@
       </md-dialog-actions>
     </md-dialog>
 
-    <md-dialog :md-active.sync="showJobDescription42947" :md-fullscreen="false" style="z-index: 400;">
+    <md-dialog :md-active.sync="showJobDescriptionRDM" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>You are:</strong>
         <ul>
@@ -187,7 +189,7 @@
       </md-dialog-content>
 
       <md-dialog-actions>
-        <md-button class="md-primary" @click="showJobDescription42947 = false">Close</md-button>
+        <md-button class="md-primary" @click="showJobDescriptionRDM = false">Close</md-button>
       </md-dialog-actions>
     </md-dialog>
 
@@ -195,13 +197,21 @@
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Assistant in the Extraction Team, you will:</strong>
         <ul>
-          <li>An enthusiastic researcher, organized and detail oriented</li>
-          <li>Able to work independently while working in a large team</li>
-          <li>Able to work with a diverse group of colleagues</li>
-          <li>Comfortable with manual or automated processing</li>
-          <li>Someone who can handle a very fast paced environment and the pressure associated with deadlines.</li>
-          <li>An outstanding communicator</li>
-          <li>Someone who can multitask</li>
+          <li>
+            Extract nucleic acids from a variety of biomaterial (fresh frozen and formalin-fixed paraffin embedded tissue, cell line, blood,
+            plasma, serum, saliva, nails, etc)
+          </li>
+          <li>Perform quality assurance and quality control of extracted material</li>
+          <li>
+            Process samples for droplet digital PCR projects. This includes assays design and optimization, sample processing and data
+            curation.
+          </li>
+          <li>Prepare DNA libraries for NGS following established SOPs</li>
+          <li>Work with your team to create workflow following LEAN principles.</li>
+          <li>Communicate with vendor technical support and sales representatives.</li>
+          <li>Operate liquid handlers and robotic instrument for high throughput processing</li>
+          <li>Maintain accurate and detailed records in a Laboratory Information Management System (Examplar Sapio LIMS)</li>
+          <li>Use iLAB for billing purposes</li>
         </ul>
 
         <strong>You have:</strong>
@@ -230,9 +240,9 @@ export default {
   name: 'JobDescriptions',
   data: function() {
     return {
-      showJobDescriptionRA: false,
+      showJobDescriptionERA: false,
       showJobDescriptionSPA: false,
-      showJobDescription42947: false,
+      showJobDescriptionRDM: false,
       showJobDescription42946: false,
     };
   },
