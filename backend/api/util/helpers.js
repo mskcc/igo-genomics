@@ -119,9 +119,10 @@ exports.last12Months = () => {
       return month;
     }
   }
-  // If going back 8 months keeps you in the current year, this if statement is used
-    if (m >= 7) {
-      for (var i = m - 6; i < m + 2; i++) {
+  // if its december
+  if (m === 11) {
+    // returns months 01, 02, 03 ...12 monthname Jan to Dec
+    for (var i = 6; i < 13; i++) {
       monthNumber = padMonth(i);
       monthName = months[monthNumber - 1];
       year = y;
@@ -133,9 +134,8 @@ exports.last12Months = () => {
     }
     // Handles cases where going back 8 months spans the year boundary
   } else {
-    // To change the number of months back you go, reduce (to start earlier) or increase (to start later) the "4" added to m.
-      for (var i = m + 5; i < m + 13; i++) {
-        if (i < 12) {
+    for (var i = m + 6; i < m + 13; i++) {
+      if (i % 12 > m) {
         monthNumber = padMonth(i + 1);
         monthName = months[monthNumber - 1];
         year = y - 1;
