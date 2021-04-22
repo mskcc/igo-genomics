@@ -31,6 +31,7 @@ import ReservationPage from './components/pages/ReservationPage.vue';
 import CancelReservationPage from './components/pages/CancelReservationPage.vue';
 import ChemistryTimelinePage from './components/pages/ChemistryTimelinePage.vue';
 import CareersPage from './components/pages/CareersPage.vue';
+import FeedbackPage from './components/pages/FeedbackPage.vue';
 
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
@@ -41,6 +42,7 @@ import {
   MdAvatar,
   MdButton,
   MdCard,
+  MdChips,
   MdContent,
   MdDatepicker,
   MdDialog,
@@ -69,6 +71,7 @@ Vue.use(VueRouter);
 Vue.use(MdAvatar);
 Vue.use(MdButton);
 Vue.use(MdCard);
+Vue.use(MdChips);
 Vue.use(MdContent);
 Vue.use(MdDatepicker);
 Vue.use(MdDivider);
@@ -131,6 +134,7 @@ const routes = [
   { path: '/reservations/cancel/:id', component: CancelReservationPage, name: 'cancel reservation', props: true },
   { path: '/chemistry-timeline', component: ChemistryTimelinePage, name: 'chemistry timeline' },
   { path: '/careers', component: CareersPage, name: 'careers' },
+  { path: '/feedback/:application', component: FeedbackPage, name: 'feedback', props: true },
 ];
 
 const router = new VueRouter({
