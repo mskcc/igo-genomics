@@ -647,3 +647,37 @@ sup {
 #job-descriptions .md-card.news-card.md-theme-default {
   border-left: 5px solid var(--mskcc-light-turquoise);
 }
+
+/* feedback */
+
+#feedback-page .md-card {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+#feedback-page i {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+#feedback-page table {
+  margin: 0 auto;
+}
+
+#feedback-page .md-field.md-theme-default.md-has-textarea {
+  /* max-width: 80%; */
+  margin: 0 auto;
+}
+
+.opinion-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.opinion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1%;
+}
