@@ -3,7 +3,10 @@ var mongoose = require('mongoose');
 // createdAt and updatedAt respond to loginFirst and loginLatest
 var FeedbackSchema = new mongoose.Schema(
   {
-    details: { type: Object, required: true }, // [ {cellNumber: 6, chemistry: ''} ]
+    application: { type: String, required: true },
+    opinionRating: { type: Number, required: true },
+    feedbackCategory: { type: String },
+    description: { type: String },
   },
   { timestamps: true }
 );

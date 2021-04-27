@@ -681,3 +681,7 @@ sup {
   align-items: center;
   margin: 0 1%;
 }
+
+.error {
+  color: #ff1744;
+}

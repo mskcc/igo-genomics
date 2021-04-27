@@ -8,7 +8,14 @@ const columns = [
 
 module.exports = function (router) {
   router.post('/submitFeedback', function (request, response) {
-    let feedback = new FeedbackModel({ details: request.body.data });
+    let form = request.body.data;
+    console.log(form);
+    let feedback = new FeedbackModel({
+      application: form.application,
+      opinionRating: form.opinionRating,
+      feedbackCategory: form.feedbackCategory,
+      description: form.description,
+    });
 
     feedback.save(function (err) {
       if (err) {
