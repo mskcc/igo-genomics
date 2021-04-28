@@ -8,6 +8,9 @@
       <md-tab id="tab-rna" md-label="rna" :to="{ name: 'rna' }">
         <rna-criteria></rna-criteria>
       </md-tab>
+      <md-tab id="tab-tissue" md-label="tissue" :to="{ name: 'tissue' }">
+         <tissue-criteria></tissue-criteria>
+      </md-tab>
       <md-tab id="tab-other" md-label="other" :to="{ name: 'other' }">
         <other-criteria></other-criteria>
       </md-tab>
@@ -18,10 +21,11 @@
 <script>
 import DnaCriteria from '../DnaCriteria.vue';
 import RnaCriteria from '../RnaCriteria.vue';
+import TissueCriteria from '../TissueCellCriteria.vue';
 import OtherCriteria from '../OtherCriteria.vue';
 
 export default {
-  components: { DnaCriteria, RnaCriteria, OtherCriteria },
+  components: { DnaCriteria, RnaCriteria, TissueCriteria, OtherCriteria },
   name: 'CriteriaPage',
 };
 </script>

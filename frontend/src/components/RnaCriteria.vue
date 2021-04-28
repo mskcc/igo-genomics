@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="md-subheading">Required quantities and qualities of RNA, either extracted by IGO or submitted by the investigator, for RNA-based applications</div>
+    <br />
+    <br />
     <md-table md-card class="criteria-table">
       <md-table-row>
         <md-table-head>Platform</md-table-head>
