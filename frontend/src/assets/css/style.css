@@ -655,11 +655,6 @@ sup {
   margin: 0 auto;
 }
 
-#feedback-page i {
-  pointer-events: all;
-  cursor: pointer;
-}
-
 #feedback-page table {
   margin: 0 auto;
 }
