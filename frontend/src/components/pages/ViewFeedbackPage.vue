@@ -22,6 +22,7 @@
         </md-table-row>
       </md-table>
     </span>
+    <span v-else>No feedback yet!</span>
   </div>
 </template>
 
