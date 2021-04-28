@@ -1,21 +1,21 @@
 module.exports = [
   {
     name: 'IDT xGen Exome Research Panel v1',
-    start: '01-01-2020',
-    stop: '03-01-2020',
-    color: '#83276b',
+    start: '07-01-2020',
+    stop: '04-01-2021',
+    color: '#c28cc0'
   },
   {
     name: 'IDT xGen Exome Research Panel v2',
-    start: '04-01-2020',
+    start: '03-01-2021',
     stop: 'present',
     color: '#4c8b2b',
   },
-  {
-    name: 'IMPACT 468',
-    start: '04-01-2019',
-    stop: '09-01-2020',
-  },
+  // {
+  //   name: 'IMPACT 468',
+  //   start: '04-01-2019',
+  //   stop: '09-01-2020',
+  // },
   {
     name: 'IMPACT 505',
     start: '08-01-2020',
@@ -37,7 +37,7 @@ module.exports = [
   {
     name: "10X 5' GEX v1",
     start: '01-01-2020',
-    stop: 'present',
+    stop: '03-01-2021',
     color: '#b687b8',
   },
   {
@@ -49,7 +49,7 @@ module.exports = [
   {
     name: "10X 3' GEX v3",
     start: '01-01-2020',
-    stop: 'present',
+    stop: '03-01-2021',
     color: '#009490',
   },
   {
@@ -57,5 +57,29 @@ module.exports = [
     start: '01-01-2021',
     stop: 'present',
     color: '#9e9e98',
+  },
+  {
+    name: "HemePACT v4",
+    start: '01-01-2020',
+    stop: 'present',
+    color: '#008066',
+  },
+  {
+    name: "Mouse-IMPACT v1",
+    start: '01-01-2020',
+    stop: 'present',
+    color: '#ff6699',
+  },
+  {
+    name: 'PE50 RNA-Seq',
+    start: '01-01-2020',
+    stop: '04-01-2021',
+    color: '#33004d',
+  },
+  {
+    name: "PE100 RNA-Seq",
+    start: '04-01-2021',
+    stop: 'present',
+    color: '#77b300'
   },
 ];
