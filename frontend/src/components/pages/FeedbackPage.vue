@@ -8,36 +8,36 @@
       <form @submit.prevent="submitFeedback">
         <md-card>
           <md-card-header>
-            <div class="md-title">What is your opinion of {{ application }}?</div>
+            <div class="md-title">Tell us about your experience with {{ validApplications[application] }}*</div>
           </md-card-header>
           <br />
           <md-card-content>
             <div>
               <div class="opinion-div">
                 <div class="opinion">
-                  <i class="far fa-tired fa-3x"></i>
+                  <i class="far fa-tired fa-3x" style="color: salmon;"></i>
                   <span>Very dissatisfied</span>
-                  <md-radio v-model="form.opinionRating" value="0"></md-radio>
-                </div>
-                <div class="opinion">
-                  <i class="far fa-frown fa-3x"></i>
-                  <span>Dissatisfied</span>
                   <md-radio v-model="form.opinionRating" value="1"></md-radio>
                 </div>
                 <div class="opinion">
-                  <i class="far fa-meh fa-3x"></i>
-                  <span>Neutral</span>
+                  <i class="far fa-frown fa-3x" style="color: #f29934;"></i>
+                  <span>Dissatisfied</span>
                   <md-radio v-model="form.opinionRating" value="2"></md-radio>
                 </div>
                 <div class="opinion">
-                  <i class="far fa-smile fa-3x"></i>
-                  <span>Satisfied</span>
+                  <i class="far fa-meh fa-3x" style="color: #ffc20e;"></i>
+                  <span>Neutral</span>
                   <md-radio v-model="form.opinionRating" value="3"></md-radio>
                 </div>
                 <div class="opinion">
-                  <i class="far fa-laugh-beam fa-3x"></i>
-                  <span>Very satisfied</span>
+                  <i class="far fa-smile fa-3x" style="color: #a6ce39;"></i>
+                  <span>Satisfied</span>
                   <md-radio v-model="form.opinionRating" value="4"></md-radio>
+                </div>
+                <div class="opinion">
+                  <i class="far fa-laugh-beam fa-3x" style="color: #4c8b2b;"></i>
+                  <span>Very satisfied</span>
+                  <md-radio v-model="form.opinionRating" value="5"></md-radio>
                 </div>
               </div>
               <span>
@@ -49,7 +49,7 @@
             <md-divider></md-divider>
             <br />
             <div>
-              <div>Please select your feedback category below</div>
+              <div>Please select your feedback category below (optional)</div>
               <md-radio v-model="form.feedbackCategory" value="suggestion">Suggestion</md-radio>
               <md-radio v-model="form.feedbackCategory" value="something not right">Something is not quite right</md-radio>
               <md-radio v-model="form.feedbackCategory" value="compliment">Compliment</md-radio>
@@ -86,7 +86,12 @@ export default {
   props: ['application'],
   data: function() {
     return {
-      validApplications: ['sample-qc', 'sample-submission', 'request-tracker', 'data-delivery'],
+      validApplications: {
+        'sample-qc': 'Sample QC',
+        'sample-submission': 'Sample Submission',
+        'request-tracker': 'Request Tracker',
+        'data-delivery': 'Data Delivery',
+      },
       form: {
         opinionRating: '',
         feedbackCategory: '',
@@ -104,7 +109,7 @@ export default {
   },
   computed: {
     valid: function() {
-      return this.validApplications.includes(this.application);
+      return this.application in this.validApplications;
     },
   },
   methods: {
@@ -119,7 +124,6 @@ export default {
       }
     },
     submitFeedback: function() {
-      console.log('trying to submit');
       this.$v.$touch();
       if (this.$v.$invalid) {
         this.formHasErrors = true;
