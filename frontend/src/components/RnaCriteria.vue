@@ -1,5 +1,10 @@
 <template>
   <div>
+    <div class="md-subheading">
+      Required quantities and qualities of RNA, either extracted by IGO or submitted by the investigator, for RNA-based applications
+    </div>
+    <br />
+    <br />
     <md-table md-card class="criteria-table">
       <md-table-row>
         <md-table-head>Platform</md-table-head>
@@ -9,6 +14,14 @@
         <md-table-head>Quality to Pass</md-table-head>
         <md-table-head>Quality to Try</md-table-head>
         <md-table-head>Maximum Submission Volume</md-table-head>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell>10X Genomics Visium</md-table-cell>
+        <md-table-cell>RNA</md-table-cell>
+        <md-table-cell colspan="2" class="pass center-page">No quantity requirements</md-table-cell>
+        <md-table-cell class="pass">RIN > 7</md-table-cell>
+        <md-table-cell class="fail">No try range</md-table-cell>
+        <md-table-cell>N/A</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell rowspan="2">Archer FusionPlex</md-table-cell>

@@ -26,11 +26,13 @@ import ShowVideoPage from './components/pages/ShowVideoPage.vue';
 import ArcherFusionPage from './components/pages/ArcherFusionPage.vue';
 import RnaCriteria from './components/RnaCriteria.vue';
 import OtherCriteria from './components/OtherCriteria.vue';
+import TissueCriteria from './components/TissueCellCriteria.vue';
 import MetricsAndThroughputPage from './components/pages/MetricsAndThroughputPage.vue';
 import ReservationPage from './components/pages/ReservationPage.vue';
 import CancelReservationPage from './components/pages/CancelReservationPage.vue';
 import ChemistryTimelinePage from './components/pages/ChemistryTimelinePage.vue';
 import CareersPage from './components/pages/CareersPage.vue';
+import SingleCellHub from './components/pages/SingleCellHub.vue';
 import FeedbackPage from './components/pages/FeedbackPage.vue';
 import ViewFeedbackPage from './components/pages/ViewFeedbackPage.vue';
 
@@ -123,6 +125,7 @@ const routes = [
     children: [
       { path: '/criteria/rna', component: RnaCriteria, name: 'rna' },
       { path: '/criteria/other', component: OtherCriteria, name: 'other' },
+      { path: '/criteria/tissue', component: TissueCriteria, name: 'tissue' },
     ],
   },
   { path: '/single-cell-platforms', component: SingleCellPage, name: 'single cell platforms' },
@@ -136,9 +139,12 @@ const routes = [
   { path: '/reservations', component: ReservationPage, name: 'reservations' },
   { path: '/reservations/cancel/:id', component: CancelReservationPage, name: 'cancel reservation', props: true },
   { path: '/chemistry-timeline', component: ChemistryTimelinePage, name: 'chemistry timeline' },
+
   { path: '/careers', component: CareersPage, name: 'careers' },
+  { path: '/single-cell-hub', component: SingleCellHub, name: 'single cell hub' },
   { path: '/feedback/:application', component: FeedbackPage, name: 'feedback', props: true },
   { path: '/view-feedback', component: ViewFeedbackPage, name: 'view feedback' },
+
 ];
 
 const router = new VueRouter({
