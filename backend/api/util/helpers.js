@@ -106,6 +106,7 @@ exports.last12Months = () => {
   let d = new Date();
   let y = d.getFullYear();
   let m = d.getMonth();
+  // let m = 7;
 
   let monthNumber, monthName, year, data;
   let columns = [];
@@ -118,8 +119,10 @@ exports.last12Months = () => {
       return month;
     }
   }
+  // if its december
   if (m === 11) {
-    for (var i = 1; i < 13; i++) {
+    // returns months 01, 02, 03 ...12 monthname Jan to Dec
+    for (var i = 6; i < 13; i++) {
       monthNumber = padMonth(i);
       monthName = months[monthNumber - 1];
       year = y;
@@ -129,8 +132,9 @@ exports.last12Months = () => {
         renderer: 'html',
       });
     }
+    // Handles cases where going back 8 months spans the year boundary
   } else {
-    for (var i = m + 1; i < m + 13; i++) {
+    for (var i = m + 6; i < m + 13; i++) {
       if (i % 12 > m) {
         monthNumber = padMonth(i + 1);
         monthName = months[monthNumber - 1];

@@ -73,21 +73,6 @@
                     </md-list-item>
                     <md-list-item md-expand class="md-inset">
                       <md-icon>add</md-icon>
-                      <span class="md-list-item-text"
-                        >We are planning to collect blood over a long study period. What is the best way to submit the samples?</span
-                      >
-                      <md-list slot="md-expand">
-                        <md-list-item>
-                          <div>
-                            IGO is equipped to handle either large batches of samples (i.e., you have stored your bloods and submit them all
-                            at once) or rolling extractions (you submit samples as they come and we store the extracted DNA until the set is
-                            complete).
-                          </div>
-                        </md-list-item>
-                      </md-list>
-                    </md-list-item>
-                    <md-list-item md-expand class="md-inset">
-                      <md-icon>add</md-icon>
                       <span class="md-list-item-text">I don’t know the COVID19 status of my human samples. Can I submit them?</span>
                       <md-list slot="md-expand">
                         <md-list-item>

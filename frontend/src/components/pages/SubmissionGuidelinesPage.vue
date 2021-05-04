@@ -172,7 +172,7 @@
                       <li>Contact MCC to discuss your needs to schedule your sample drop off</li>
                       <li>Fill out an iLab form for “10x Visium – Spatial Transcriptomics”</li>
                       <li>
-                        Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> with “10_Genomics-Visium” as your
+                        Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> with “10X_Genomics-Visium” as your
                         application
                       </li>
                       <li>Drop off your sample at MCC at the agreed-upon time</li>

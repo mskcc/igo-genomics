@@ -65,6 +65,7 @@ export const teams = [
       { name: 'Tressa Octave', role: 'Research Technician', photoName: 'Octave_Tressa' },
       { name: 'Valerie Patritti', role: 'Project Manager' },
       { name: 'Zoe Steinsnyder', role: 'Senior Project Assistant', photoName: 'Steinsnyder_Zoe' },
+      { name: 'Position Opening Soon!', role: 'Senior Project Assistant' },
     ],
   },
   {
@@ -75,13 +76,14 @@ export const teams = [
     members: [
       { name: 'Andrea Farina', role: 'Manager, IGO', photoName: 'Farina_Andrea' },
       { name: 'Amanda Haye', role: 'Temporary Technician ', photoName: 'Haye_Amanda' },
-      { name: 'Aminah Lawal', role: 'Research Assistant', photoName: 'Lawal_Aminah' },
+      // { name: 'Aminah Lawal', role: 'Research Assistant', photoName: 'Lawal_Aminah' },
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
       { name: "Josie D'Angelo", role: 'Research Technician', photoName: 'Dangelo_Josie' },
       { name: 'Jules Lomibao', role: 'Temporary Technician' },
       { name: 'Marisa Vanness', role: 'Research Technician', photoName: 'Vanness_Marisa' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
       { name: 'Tony Deblasio', role: 'Senior Research Assistant', photoName: 'Deblasio_Tony' },
+      { name: 'Position Opening Soon!', role: 'Research Assistant' },
     ],
   },
   {
@@ -97,6 +99,7 @@ export const teams = [
       { name: 'Katherine Allard', role: 'Research Assistant', photoName: 'Allard_Katherine' },
       { name: 'Satish Ramakrishnan', role: 'Research Assistant', photoName: 'Ramakrishnan_Satish' },
       { name: 'Satoko Murakami', role: 'Research Assistant', photoName: 'Murakami_Satoko' },
+      { name: 'Open Position!', role: 'Research Assistant' },
     ],
   },
   {
@@ -119,11 +122,10 @@ export const teams = [
       "The IGO Data Team is a group of bioinformaticians, software engineers and computer scientists.  They work closely with IGO's investigators and wet-lab technicians to write multiple software applications from sample receiving and LIMS processing to post-sequencing stats tracking and data delivery.",
     members: [
       { name: 'David Mcmanamon', role: 'Manager, IGO', photoName: 'Mcmanamon_David' },
-      // { name: 'Lisa Wagner', role: 'Bioinfo. Software Engineer IV', photoName: 'Wagner_Lisa' },
-      { name: 'Ajay Sharma', role: 'Bioinfo. Software Engineer I', photoName: 'Sharma_Ajay' },
       { name: 'Anna Patruno', role: 'Application Analyst', photoName: 'Patruno_Anna' },
       { name: 'Darrell Nabors', role: 'Bioinformatics Engineer V', photoName: 'Nabors_Darrell' },
       { name: 'David Streid', role: 'Bioinfo. Software Engineer II', photoName: 'Streid_David' },
+      { name: 'Shirley Xu', role: 'Temporary Engineer' },
     ],
   },
   {
@@ -136,6 +138,7 @@ export const teams = [
       { name: 'Juan Li', role: 'Manager, IGO', photoName: 'Li_Juan' },
       { name: 'Justin Clarke', role: 'Research Technician', photoName: 'Clarke_Justin' },
       { name: 'Taylor Allen', role: 'Research Technician', photoName: 'Allen_Taylor' },
+      { name: 'Open Position!', role: 'Supervisor' },
     ],
   },
 ];
@@ -147,7 +150,7 @@ export const bulkServices = [
     description: 'A capture-based assay to assess the entire exome.',
     startingMaterial: 'DNA or DMP Library',
     libraryChemistry: 'KAPA Hyper',
-    captureChemistry: 'xGen v1.0 from IDT (human) SinglePlex Mouse Exome from Twist (mouse)',
+    captureChemistry: 'xGen v2.0 from IDT (human) SinglePlex Mouse Exome from Twist (mouse)',
     sequencingReadLength: 'PE100',
     sequencingCoverage: 'Varies (see below)',
     deliverable: 'FASTQ; Pipeline analysis options available from CMO or BIC with additional charges',
@@ -203,7 +206,7 @@ export const bulkServices = [
       { libraryType: 'RiboDepletion', readNumber: '30-40', sampleCost: 400 },
       { libraryType: 'RiboDepletion', readNumber: '40-50', sampleCost: 450 },
       { libraryType: 'RiboDepletion', readNumber: '50-60', sampleCost: 500 },
-      { libraryType: 'RiboDepletion', readNumber: '60-80',sampleCost: 600 },
+      { libraryType: 'RiboDepletion', readNumber: '60-80', sampleCost: 600 },
       { libraryType: 'RiboDepletion', readNumber: '80-100', sampleCost: 700 },
       { libraryType: 'SMARTer', readNumber: '20-30', sampleCost: 390 },
       { libraryType: 'SMARTer', readNumber: '30-40', sampleCost: 440 },
@@ -269,7 +272,7 @@ export const bulkServices = [
     description: 'Please email us if your sequencing needs do not fit in one of these categories.',
     tableHeaders: ['platform', 'sequencingDetails', 'deliverable', 'cost'],
     table: [
-      { platform: 'Shallow WGS', sequencingDetails: 'PE100, 10M reads', deliverable: 'FASTQ + CNV analysis', cost: '$182' },
+      { platform: 'Shallow/bacterial WGS', sequencingDetails: 'PE100, 10M reads', deliverable: 'FASTQ + CNV analysis', cost: '$182' },
       { platform: 'Amplicon Sequencing', sequencingDetails: 'Varies', deliverable: 'FASTQ', cost: 'please inquire' },
       {
         platform: 'CRISPR Cut Site Sequencing',
@@ -277,7 +280,6 @@ export const bulkServices = [
         deliverable: 'FASTQ + CRISPRESSO analysis',
         cost: '$70',
       },
-      { platform: 'Library Sequencing', sequencingDetails: 'varies', deliverable: 'FASTQ', cost: 'please inquire' },
       {
         platform: 'Archer FusionPlex',
         sequencingDetails: 'Solid Tumor Panel',
@@ -302,7 +304,7 @@ export const singleServices = [
       'Single-cell platforms to interrogate gene expression, immune repertoire, epigenetic factors, copy number, and/or protein expression.',
     startingMaterial: 'Single cell or nuclei suspension',
     libraryChemistry: 'Chromium Single Cell',
-    sequencingReadLength: 'PE28/91 (3’GEX), PE26/91 (5’GEX), PE150 (V(D)J), PE50 (ATAC)',
+    sequencingReadLength: 'PE28/91 (GEX, VDJ, cell hashing), PE50 (ATAC)',
     sequencingCoverage: '20K reads/cell (GEX), 5K reads/cell (V(D)J & cell hashing), 25K reads/cell (ATAC)',
     deliverable: 'FASTQ, CellRanger output',
     tableHeaders: ['xGenomicsPlatform', 'sampleCostLibrary', 'sampleCostSequencing'],
@@ -389,7 +391,7 @@ export const otherServices = [
     tableHeaders: ['species', 'cost'],
     table: [
       { species: 'Human', cost: 36 },
-      { species: 'Mouse', cost: 44 },
+      { species: 'Mouse (coming soon)', cost: 44 },
     ],
   },
   {
