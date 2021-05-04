@@ -414,7 +414,7 @@ export const otherServices = [
   },
   {
     id: 3,
-    name: 'User Library Sequencing',
+    name: 'Investigator Prepared Libraries',
     description: 'Illumina sequencing of user-prepared libraries.',
     startingMaterial: 'DNA libraries',
     sequencingReadLength: 'Varies (see below); contact us for additional options',

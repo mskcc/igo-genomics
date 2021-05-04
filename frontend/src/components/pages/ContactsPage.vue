@@ -6,12 +6,7 @@
         <img src="../../assets/images/lab/Viale_190612_150.jpg" alt="At the bench" />
       </md-content>
     </div>
-    <md-button class="md-primary" @click="submittingPricingInquiry = true">Submit a pricing inquiry</md-button>
-    <div>
-      <md-dialog :md-active.sync="submittingPricingInquiry" :md-fullscreen="false" style="z-index: 200;">
-        <contact-form v-bind:submittingPricingInquiry.sync="submittingPricingInquiry"></contact-form>
-      </md-dialog>
-    </div>
+
     <md-list>
       <md-list-item>
         <div class="md-list-item-text">
@@ -85,14 +80,10 @@
 </template>
 
 <script>
-import ContactForm from '../ContactForm.vue';
 export default {
   name: 'ContactsPage',
-  components: { ContactForm },
   data: function() {
-    return {
-      submittingPricingInquiry: false,
-    };
+    return {};
   },
 };
 </script>

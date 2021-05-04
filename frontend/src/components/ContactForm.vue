@@ -65,13 +65,13 @@ export default {
     return {
       form: {
         contactInfo: {
-          name: 'Anna Patruno',
-          email: 'apatruno618@gmail.com',
+          name: '',
+          email: '',
         },
         body: {
-          runLength: 'PE50',
-          totalReads: '100',
-          projectDescription: 'I have a pricing question',
+          runLength: '',
+          totalReads: '',
+          projectDescription: '',
         },
       },
       contactEmail: 'genomics@mskcc.org',
