@@ -679,4 +679,15 @@ sup {
 
 .error {
   color: #ff1744;
+
+#pricing-inquiry {
+  min-width: 450px;
+}
+
+#contact-form .md-dialog-container {
+  overflow: auto;
+}
+
+.md-dialog .md-dialog-container.md-theme-default {
+  max-height: inherit;
 }

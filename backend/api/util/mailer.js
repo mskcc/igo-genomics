@@ -3,7 +3,6 @@ const nodemailer = require('nodemailer');
 // const { logger } = require('../util/winston');
 // const { emailConfig } = require('./constants');
 
-
 const emailConfig = {
   notificationSender: 'igoski@mskcc.org',
   notificationRecipients: {
@@ -35,15 +34,17 @@ exports.sendBookingNotification = function (appointment, appointmentIcal) {
   let recipients;
   let subject;
   if (process.env.ENV === 'development') {
-    recipients = ['patrunoa@mskcc.org,apatruno618@gmail.com', appointment.email]
-    subject = `[IGO Reservation TEST] Drop-off samples at: ${appointment.emailTime} on ${appointment.notificationDate}`
-  }
-  else {
-     recipients = [
+    recipients = [
+      'patrunoa@mskcc.org,apatruno618@gmail.com',
+      appointment.email,
+    ];
+    subject = `[IGO Reservation TEST] Drop-off samples at: ${appointment.emailTime} on ${appointment.notificationDate}`;
+  } else {
+    recipients = [
       emailConfig.notificationRecipients[appointment.requestType],
       appointment.email,
     ];
-    subject = `${emailConfig.subject} Drop-off samples at: ${appointment.emailTime} on ${appointment.notificationDate}`
+    subject = `${emailConfig.subject} Drop-off samples at: ${appointment.emailTime} on ${appointment.notificationDate}`;
   }
 
   let cancellationLink = `${process.env.API_ROOT}/reservations/cancel/${appointment._id}`;
@@ -87,28 +88,53 @@ exports.sendCancellationNotification = function (appointment) {
   let recipients;
   let subject;
   if (process.env.ENV === 'development') {
-    recipients = ['patrunoa@mskcc.org,apatruno618@gmail.com', appointment.email]
-    subject = `[IGO Reservation TEST] ${appointment.requestType} Reservation Cancelled`
-  }
-  else {
-     recipients = [
+    recipients = [
+      'patrunoa@mskcc.org,apatruno618@gmail.com',
+      appointment.email,
+    ];
+    subject = `[IGO Reservation TEST] ${appointment.requestType} Reservation Cancelled`;
+  } else {
+    recipients = [
       emailConfig.notificationRecipients[appointment.requestType],
       appointment.email,
     ];
-    subject = `${emailConfig.subject} Cancelled ${appointment.emailTime} on ${appointment.notificationDate} `
+    subject = `${emailConfig.subject} Cancelled ${appointment.emailTime} on ${appointment.notificationDate} `;
   }
-
 
   let email = {
     subject: subject,
     content: `Appointment on ${appointment.notificationDate}, ${
       appointment.emailTime
     } is cancelled.<br>If you have any questions, please reach out to ${
-        emailConfig.notificationRecipients[appointment.requestType]
-      } `,
+      emailConfig.notificationRecipients[appointment.requestType]
+    } `,
     footer: emailConfig.footer,
   };
   //   logger.log('info', `${email} sent to recipients.`);
+  transporter
+    .sendMail({
+      from: emailConfig.notificationSender, // sender address e.g. no-reply@xyz.com or "Fred Foo 👻" <foo@example.com>
+      to: recipients.join(','), // list of receivers e.g. bar@example.com, baz@example.com
+      subject: email.subject, // Subject line e.g. 'Hello ✔'
+      html: email.content + email.footer, // html body e.g. '<b>Hello world?</b>'
+      //text: text, // plain text body e.g. Hello world?
+    })
+    // .then((result) => console.log(result))
+    .catch((error) => console.log(error));
+};
+
+exports.sendInquiryNotification = function (inquiry) {
+  let recipients = ['genomics@mskcc.org', inquiry.contactInfo.email];
+  let subject = '[PRICING INQUIRY TEST] ';
+
+  let email = {
+    recipients: recipients,
+    subject: subject,
+    content: `Hello<br><br>
+    ${inquiry.contactInfo.name} is requesting a quote for <strong>${inquiry.body.runLength}</strong> for <strong>${inquiry.body.totalReads} M reads</strong>.<br><strong>Project Description: </strong>${inquiry.body.projectDescription}`,
+    footer: emailConfig.footer,
+  };
+
   transporter
     .sendMail({
       from: emailConfig.notificationSender, // sender address e.g. no-reply@xyz.com or "Fred Foo 👻" <foo@example.com>
