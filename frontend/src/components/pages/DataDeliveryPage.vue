@@ -53,23 +53,23 @@
           not able to be divided. Depending on the number of reads needed, a project may run on a single lane or across multiple lanes.
         </p>
         <p>
-          of our sequencers have names to distinguish them from one another for our databases, their servers, and ease of communication
+          All of our sequencers have names to distinguish them from one another for our databases, their servers, and ease of communication
           among lab members. The run ID, therefore, is the sequencer name followed by the run number; each run ID is unique. MiSeqs: TOMS,
           VIC, JOHNSAWYERS, AYYAN; NextSeq: SCOTT; HiSeq 2500: MOMO, KIM, LIZ; HiSeq 4000: PITT, JAX; NovaSeq: MICHELLE, DIANA.
         </p>
         <br />
-        <div class="md-subheading">Current Data Structure</div>
+        <div class="md-subheading">Former Data Structure</div>
         <p>
-          Currently, we deliver two FASTQ files per sample for each paired-end sequencing run (R1 and R2) and one FASTQ file for single-read
+          Traditionally, we delivered two FASTQ files per sample for each paired-end sequencing run (R1 and R2) and one FASTQ file for single-read
           runs. An example of the structure below shows a PI data folder with multiple sequencing projects. In the selected project, there
           are data from two separate sequencing runs, JAX_0416 and PITT_0483.
         </p>
         <img src="../../assets/images/screenshots/current-file-structure.jpg" alt="current file path screenshot" />
 
         <br /><br />
-        <div class="md-subheading">New Data Structure</div>
+        <div class="md-subheading">Current Data Structure</div>
         <p>
-          Beginning 01/01/2021, IGO will no longer combine reads from different lanes of a sequencing run into a single file. Instead of
+          As of 01/01/2021, IGO will no longer combine reads from different lanes of a sequencing run into a single file. Instead of
           just R1 and R2, for samples that were sequenced in multiple lanes, there will be a separate FASTQ file for each read and lane.
         </p>
         <img src="../../assets/images/screenshots/future-file-structure.jpg" alt="future file path screenshot" />

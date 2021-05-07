@@ -213,19 +213,19 @@
                     ><md-table>
                       <md-table-row>
                         <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('xGenomicsPlatform')"
-                          >10X Genomics Platform</md-table-head
+                          >10X Platform</md-table-head
                         >
                         <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostLibrary')"
-                          >Library Cost Per Sample</md-table-head
+                          >Library Cost/Sample</md-table-head
                         >
-                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostSequencing')"
-                          >Sequencing Cost Per Sample</md-table-head
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('cellCostSequencing')"
+                          >Sequencing Cost/Cell</md-table-head
                         >
                       </md-table-row>
                       <md-table-row v-for="(row, j) in service.table" :key="j">
                         <md-table-cell>{{ row.xGenomicsPlatform }}</md-table-cell>
                         <md-table-cell>${{ row.sampleCostLibrary }}</md-table-cell>
-                        <md-table-cell>{{ row.sampleCostSequencing }}</md-table-cell>
+                        <md-table-cell>{{ row.cellCostSequencing }}</md-table-cell>
                       </md-table-row>
                     </md-table>
                   </md-list-item>

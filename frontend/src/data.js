@@ -308,12 +308,12 @@ export const singleServices = [
     sequencingReadLength: 'PE28/91 (GEX, VDJ, cell hashing), PE50 (ATAC)',
     sequencingCoverage: '20K reads/cell (GEX), 5K reads/cell (V(D)J & cell hashing), 25K reads/cell (ATAC)',
     deliverable: 'FASTQ, CellRanger output',
-    tableHeaders: ['xGenomicsPlatform', 'sampleCostLibrary', 'sampleCostSequencing'],
+    tableHeaders: ['xGenomicsPlatform', 'sampleCostLibrary', 'cellCostSequencing'],
     table: [
-      { xGenomicsPlatform: '5′ OR 3′ Gene Expression', sampleCostLibrary: 2068, sampleCostSequencing: '$0.07-$0.13' },
-      { xGenomicsPlatform: '5′ Gene Expression + V(D)J Enrichment', sampleCostLibrary: 2279, sampleCostSequencing: '$0.12-$0.20' },
-      { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 116, sampleCostSequencing: '$0.05-$0.07' },
-      { xGenomicsPlatform: 'ATAC-Seq', sampleCostLibrary: 2075, sampleCostSequencing: '$0.06-$0.17' },
+      { xGenomicsPlatform: '5′ OR 3′ Gene Expression', sampleCostLibrary: 2068, cellCostSequencing: '$0.07-$0.13' },
+      { xGenomicsPlatform: '5′ Gene Expression + V(D)J Enrichment', sampleCostLibrary: 2279, cellCostSequencing: '$0.12-$0.20' },
+      { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 116, cellCostSequencing: '$0.05-$0.07' },
+      { xGenomicsPlatform: 'ATAC-Seq', sampleCostLibrary: 2075, cellCostSequencing: '$0.06-$0.17' },
     ],
   },
   {
