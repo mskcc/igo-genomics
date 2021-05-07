@@ -4,8 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        All 10X Genomics and ATAC-Seq appointment requests can now be made through the
-        <router-link :to="{ name: 'reservations' }">Reservations tab</router-link> above.
+        Beginning 4/28/21, all stats run for ACCESS, IMPACT, and WES projects will use GRCh38 as the reference genome for human samples. All other applications will soon convert.
       </span>
     </div>
     <div class="carousel-div">

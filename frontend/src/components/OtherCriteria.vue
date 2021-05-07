@@ -21,7 +21,7 @@
         <md-table-cell colspan="2">No quality requirements</md-table-cell>
         <md-table-cell>N/A</md-table-cell>
       </md-table-row>
-      <md-table-row>
+      <!-- <md-table-row>
         <md-table-cell>Libraries for Targeted Capture</md-table-cell>
         <md-table-cell>IGO or DMP libraries</md-table-cell>
         <md-table-cell class="pass"></md-table-cell>
@@ -38,7 +38,7 @@
         <md-table-cell class="pass"></md-table-cell>
         <md-table-cell class="try"></md-table-cell>
         <md-table-cell></md-table-cell>
-      </md-table-row>
+      </md-table-row> -->
       <md-table-row>
         <md-table-cell rowspan="2">Libraries for Sequencing</md-table-cell>
         <md-table-cell>Individual Libraries</md-table-cell>

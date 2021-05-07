@@ -121,7 +121,7 @@ const routes = [
   {
     path: '/criteria/dna',
     component: CriteriaPage,
-    name: 'sample criteria',
+    name: 'sample requirements',
     children: [
       { path: '/criteria/rna', component: RnaCriteria, name: 'rna' },
       { path: '/criteria/other', component: OtherCriteria, name: 'other' },

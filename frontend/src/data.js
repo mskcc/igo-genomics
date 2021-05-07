@@ -138,6 +138,7 @@ export const teams = [
       { name: 'Juan Li', role: 'Manager, IGO', photoName: 'Li_Juan' },
       { name: 'Justin Clarke', role: 'Research Technician', photoName: 'Clarke_Justin' },
       { name: 'Taylor Allen', role: 'Research Technician', photoName: 'Allen_Taylor' },
+      { name: 'Yushi Wu', role: 'Research Assistant' },
       { name: 'Open Position!', role: 'Supervisor' },
     ],
   },
