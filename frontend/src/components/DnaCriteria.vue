@@ -18,7 +18,7 @@
       </md-table-row>
 
       <md-table-row>
-        <md-table-cell rowspan="6">Adaptive immunoSEQ<sup>1</sup></md-table-cell>
+        <md-table-cell rowspan="6">Adaptive immunoSEQ<sup>a<md-tooltip v-if="footnotes.a" md-direction="right">{{ footnotes.a }}</md-tooltip></sup></md-table-cell>
         <md-table-cell>FFPE</md-table-cell>
         <md-table-cell class="pass">25&#181;m</md-table-cell>
         <md-table-cell class="try">&lt;5 curls</md-table-cell>
@@ -73,7 +73,7 @@
           ><a href="https://my.ilabsolutions.com/service_center/3276/?tab=services" target="__blank">CRISPRSeq</a></md-table-cell
         >
         <md-table-cell></md-table-cell>
-        <md-table-cell class="pass">1&#181;g</md-table-cell>
+        <md-table-cell class="pass">1&#181;g<sup>b<md-tooltip v-if="footnotes.b" md-direction="right">{{ footnotes.b }}</md-tooltip></sup></md-table-cell>
         <md-table-cell class="try">400ng</md-table-cell>
         <md-table-cell class="pass">200-280bp</md-table-cell>
         <md-table-cell class="fail">No try range</md-table-cell>
@@ -105,7 +105,7 @@
         <md-table-cell class="pass">500ng</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell rowspan="3">IMPACT/HemePACT<sup>3</sup></md-table-cell>
+        <md-table-cell rowspan="3">IMPACT/HemePACT<sup>c<md-tooltip v-if="footnotes.c" md-direction="right">{{ footnotes.c }}</md-tooltip></sup></md-table-cell>
         <md-table-cell>cfDNA</md-table-cell>
         <md-table-cell class="pass">100ng</md-table-cell>
         <md-table-cell class="try">5ng</md-table-cell>
@@ -206,9 +206,9 @@
       </md-table-row>
       <md-table-row>
         <md-table-cell colspan="7">
-          <sup>1</sup>Guidelines given are based on survey depth (two replicates). For six replicates, multiply input requirements by three.
-          <sup>2</sup>CRISPRSeq samples are <strong>not</strong> QC'd by IGO. Mass requirements are based on investigator QC.
-          <sup>3</sup>Requirements also apply to custom capture projects.
+          <sup>a</sup>Guidelines given are based on survey depth (two replicates). For four replicates, multiply input requirements by two.
+          <sup>b</sup>CRISPRSeq samples are <strong>not</strong> QC'd by IGO. Mass requirements are based on investigator QC.
+          <sup>c</sup>Requirements also apply to custom capture projects.
         </md-table-cell>
       </md-table-row>
     </md-table>
@@ -216,7 +216,14 @@
 </template>
 
 <script>
-export default { name: 'DnaCriteria' };
+export default { 
+  name: 'DnaCriteria',
+  data: function(){ return{
+    footnotes: { a: 'Guidelines given are based on survey depth (two replicates). For four replicates, multiply input requirements by two.',
+                 b: "CRISPRSeq samples are not QC'd by IGO. Mass requirements are based on investigator QC.",
+                 c: 'Requirements also apply to custom capture projects.' }}
+}};
+
 </script>
 
 <style></style>
