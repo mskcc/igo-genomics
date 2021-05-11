@@ -114,7 +114,6 @@ export default {
   },
   methods: {
     getValidationClass(fieldName) {
-      console.log(fieldName);
       const field = this.$v.form[fieldName];
 
       if (field) {

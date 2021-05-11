@@ -12,7 +12,7 @@
       </div>
       <div class="other-header">
         <img class="prices-image" src="../../assets/services3.png" alt="bulk logo" />
-        <div class="md-title">Other Services and Platforms</div>
+        <div class="md-title">Sequencing and Other Platforms</div>
       </div>
 
       <div class="bulk-data">
@@ -247,6 +247,7 @@
                 @click="expandList(service.name)"
               >
                 <span class="md-list-item-text">{{ service.name }}</span>
+
                 <md-list slot="md-expand">
                   <md-list-item>
                     <table class="prices-table services-general-table">
@@ -276,6 +277,14 @@
                       </tr>
                     </table></md-list-item
                   >
+                  <span v-if="service.name == 'Investigator Prepared Libraries'">
+                    <md-button class="md-primary" @click="submittingPricingInquiry = true">Submit a pricing inquiry</md-button>
+                    <div>
+                      <md-dialog :md-active.sync="submittingPricingInquiry" :md-fullscreen="false" style="z-index: 200;">
+                        <contact-form v-bind:submittingPricingInquiry.sync="submittingPricingInquiry"></contact-form>
+                      </md-dialog>
+                    </div>
+                  </span>
                   <md-list-item v-if="service.table"
                     ><md-table>
                       <md-table-row>
@@ -362,13 +371,21 @@
 // import ChemistryTimelinePage from './ChemistryTimelinePage.vue';
 import { HOME_PAGE_PATH } from './../../config.js';
 import { bulkServices, singleServices, otherServices } from './../../data.js';
+import ContactForm from '../ContactForm.vue';
 
 export default {
   name: 'ServicesPricesPage',
   // components: { ChemistryTimelinePage },
+  components: { ContactForm },
   props: ['name'],
   data: function() {
-    return { bulkServices: bulkServices, singleServices: singleServices, otherServices: otherServices, platformName: '' };
+    return {
+      bulkServices: bulkServices,
+      singleServices: singleServices,
+      otherServices: otherServices,
+      platformName: '',
+      submittingPricingInquiry: false,
+    };
   },
   mounted: function() {
     this.platformName = this.$route.params.name || '';
