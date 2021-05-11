@@ -125,7 +125,7 @@ exports.sendCancellationNotification = function (appointment) {
 
 exports.sendInquiryNotification = function (inquiry) {
   let recipients = ['genomics@mskcc.org', inquiry.contactInfo.email];
-  let subject = '[PRICING INQUIRY TEST] ';
+  let subject = '[PRICING INQUIRY] ';
 
   let email = {
     recipients: recipients,
