@@ -2,12 +2,7 @@
   <div>
     <div class="md-display-1">Sample Requirements</div>
     <md-tabs md-alignment="centered" md-sync-route>
-      <md-tab
-        id="tab-dna"
-        md-label="dna"
-        :to="{ name: 'sample requirements' }"
-        exact
-      >
+      <md-tab id="tab-dna" md-label="dna" :to="{ name: 'sample requirements' }" exact>
         <dna-criteria></dna-criteria>
       </md-tab>
       <md-tab id="tab-rna" md-label="rna" :to="{ name: 'rna' }">
@@ -24,14 +19,14 @@
 </template>
 
 <script>
-import DnaCriteria from "../DnaCriteria.vue";
-import RnaCriteria from "../RnaCriteria.vue";
-import TissueCriteria from "../TissueCellCriteria.vue";
-import OtherCriteria from "../OtherCriteria.vue";
+import DnaCriteria from '../DnaCriteria.vue';
+import RnaCriteria from '../RnaCriteria.vue';
+import TissueCriteria from '../TissueCellCriteria.vue';
+import OtherCriteria from '../OtherCriteria.vue';
 
 export default {
   components: { DnaCriteria, RnaCriteria, TissueCriteria, OtherCriteria },
-  name: "CriteriaPage",
+  name: 'CriteriaPage',
 };
 </script>
 
