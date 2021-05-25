@@ -69,7 +69,7 @@ export const teams = [
   },
   {
     id: 3,
-    name: 'Extraction',
+    name: 'EXPAND',
     description:
       'EXPAND stands for: Extraction, 10X Genomics, pathology, Archer DX, and digital droplet PCR, but also literally refers to their interest in integrating new platforms and advancing research technology to remain at the cutting edge for our users. The EXPAND team draws upon IGO’s philosophy of constant and open communication and aims to join you in detailed, scientific discussions about your projects, to meet your needs and to work together to advance science, building long-term, trusting relationships in the process.',
     members: [
@@ -85,7 +85,7 @@ export const teams = [
   },
   {
     id: 4,
-    name: 'Library Preparation',
+    name: 'Nucleic Acids',
     description:
       "The Nucleic Acid team handles the bulk of IGO's sample processing, utilizing liquid-handling robots to automate many platforms.",
     members: [
@@ -115,7 +115,7 @@ export const teams = [
     id: 6,
     name: 'Data',
     description:
-      "The IGO Data Team is a group of bioinformaticians, software engineers and computer scientists.  They work closely with IGO's investigators and wet-lab technicians to write multiple software applications from sample receiving and LIMS processing to post-sequencing stats tracking and data delivery.",
+      "The IGO Data Team is a group of bioinformaticians, software engineers, and computer scientists.  They work closely with IGO's investigators and wet-lab technicians to write multiple software applications from sample receiving and LIMS processing to post-sequencing stats tracking and data delivery.",
     members: [
       { name: 'David Mcmanamon', role: 'Manager, IGO', photoName: 'Mcmanamon_David' },
       { name: 'Anna Patruno', role: 'Application Analyst', photoName: 'Patruno_Anna' },
@@ -129,7 +129,7 @@ export const teams = [
     id: 7,
     name: 'Research & Development',
     description:
-      'The R&D team develops, tests and implements new genomics platforms for the MSKCC community. In addition to testing off-the-shelf assays, our group works with MSK investigators to bring customized platforms to IGO.',
+      'The R&D team develops, tests, and implements new genomics platforms for the MSKCC community. In addition to testing off-the-shelf assays, our group works with MSK investigators to bring customized platforms to IGO.',
     members: [
       { name: 'Neeman Mohibullah', role: 'Associate Director, IGO', photoName: 'Mohibullah_Neeman' },
       { name: 'Elijah Castro', role: 'Research Technician' },

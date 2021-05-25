@@ -55,7 +55,7 @@
         <p>
           All of our sequencers have names to distinguish them from one another for our databases, their servers, and ease of communication
           among lab members. The run ID, therefore, is the sequencer name followed by the run number; each run ID is unique. MiSeqs: TOMS,
-          VIC, JOHNSAWYERS, AYYAN; NextSeq: SCOTT; HiSeq 2500: MOMO, KIM, LIZ; HiSeq 4000: PITT, JAX; NovaSeq: MICHELLE, DIANA.
+          VIC, JOHNSAWYERS, AYYAN; NextSeq 500: SCOTT; NextSeq 2000: PEPE; HiSeq 2500: MOMO, KIM, LIZ; HiSeq 4000: PITT, JAX; NovaSeq: MICHELLE, DIANA.
         </p>
         <br />
         <div class="md-subheading">Former Data Structure</div>
@@ -89,6 +89,23 @@
         </p>
       </md-card-content>
     </md-card>
+    <md-card class="data-delivery-card">
+      <md-card-header>
+        <div class="md-title">10X Genomics & MissionBio pipeline output</div>
+      </md-card-header>
+      <md-card-content>
+        <div class="md-subheading">Now available on /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline</div>
+        <p>
+          For quality control purposes, IGO runs Cell Ranger (10X scRNA-Seq), Space Ranger (10X Visium), and the Tapestri pipeline (MissionBio) on data from projects initiated in IGO. We will now deliver output from those analytic pipelines to the project folder along with FASTQ files by default. Because of size constraints, pipeline data will remain available for <strong>3 months</strong> before being deleted.
+        </p>
+        <p>
+          Deliverables for Cell Ranger & Space Ranger: run summary metrics (HTML, CSV), alignment files (BAM), feature barcode matrices (if applicable), Loupe Browser visualization files (cloupe), QC images and position information (JPG, PNG, CSV, JSON; Visium only), V(D)J analysis files (if applicable)
+        </p>
+        <p>
+          Deliverables for MissionBio Tapestri: QC and metadata files (TXT, TSV, INFO, YAML, CSV, JSON), CellFinder plot (PDF), Tapestri Insights file (LOOM), alignment files (BAM), mapped reads by barcode (TXT), variant information (VCF)
+        </p>
+      </md-card-content>
+    </md-card> 
   </div>
 </template>
 

@@ -4,8 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        Beginning 4/28/21, all stats run for ACCESS, IMPACT, and WES projects will use GRCh38 as the reference genome for human samples. All
-        other applications will soon convert.
+        IGO's data team is now delivering analytical pipeline output for 10X scRNA-Seq, 10X Visium, and MissionBio Tapestri projects initiated in IGO. Data will remain on the igo-share server for 3 months.
       </span>
     </div>
     <div class="carousel-div">
