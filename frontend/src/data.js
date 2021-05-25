@@ -69,7 +69,7 @@ export const teams = [
   },
   {
     id: 3,
-    name: 'EXPAND',
+    name: 'Extraction',
     description:
       'EXPAND stands for: Extraction, 10X Genomics, pathology, Archer DX, and digital droplet PCR, but also literally refers to their interest in integrating new platforms and advancing research technology to remain at the cutting edge for our users. The EXPAND team draws upon IGO’s philosophy of constant and open communication and aims to join you in detailed, scientific discussions about your projects, to meet your needs and to work together to advance science, building long-term, trusting relationships in the process.',
     members: [
@@ -85,7 +85,7 @@ export const teams = [
   },
   {
     id: 4,
-    name: 'Nucleic Acids',
+    name: 'Library Preparation',
     description:
       "The Nucleic Acid team handles the bulk of IGO's sample processing, utilizing liquid-handling robots to automate many platforms.",
     members: [

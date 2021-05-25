@@ -10,7 +10,7 @@
       <md-card-actions>
         <md-button @click="showJobDescriptionRDM = true" class="md-accent">Learn More</md-button>
         <md-button
-          href="https://careers.mskcc.org/jobs/job-details/2021-48309-manager-integrated-genomics-operations/?returnUrl=%2fjobs%3fkeyword%3dintegrated%2bgenomics%2boperation%26department%3d%26location%3d"
+          href="https://careers.mskcc.org/jobs/job-details/2021-48309-manager-integrated-genomics-operation/?returnUrl=%2fjobs%3fkeyword%3digo%26department%3d%26location%3d"
           target="_blank"
           class="md-primary"
           >Apply
@@ -28,7 +28,7 @@
       <md-card-actions>
         <md-button @click="showJobDescriptionERA = true" class="md-accent">Learn More</md-button>
         <md-button
-          href="https://careers.mskcc.org/jobs/job-details/2021-48368-senior-research-technician-integrated-genomics-operation/?returnUrl=%2fjobs%3fkeyword%3dintegrated%2bgenomics%2boperation%26department%3d%26location%3d"
+          href="https://careers.mskcc.org/jobs/job-details/2021-48368-research-assistant-integrated-genomics-operation/?returnUrl=%2fjobs%3fkeyword%3digo%26department%3d%26location%3d"
           target="_blank"
           class="md-primary"
           >Apply
