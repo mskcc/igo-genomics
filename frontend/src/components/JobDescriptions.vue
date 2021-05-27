@@ -21,7 +21,7 @@
     <md-card class="news-card">
       <md-card-header>
         <div class="md-title">Research Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 4 } }">Library Preparation Team</router-link>
+        <router-link :to="{ name: 'team', params: { id: 4 } }">Nucleic Acids Team</router-link>
         <div class="md-body">Open!</div>
         <!-- <div>Ref: 2021-48368</div> -->
       </md-card-header>
@@ -39,15 +39,12 @@
     <md-card class="news-card">
       <md-card-header>
         <div class="md-title">Research Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 3 } }">Extraction Team</router-link>
+        <router-link :to="{ name: 'team', params: { id: 3 } }">EXPAND Team</router-link>
         <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescription42946 = true" class="md-accent">Learn More</md-button>
-        <md-button
-          href="https://careers.mskcc.org/jobs/job-details/2021-48962-research-assistant/"
-          target="_blank"
-          class="md-primary"
+        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-48962-research-assistant/" target="_blank" class="md-primary"
           >Apply
         </md-button>
       </md-card-actions>
@@ -61,10 +58,7 @@
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionSPA = true" class="md-accent">Learn More</md-button>
-        <md-button
-          href="https://careers.mskcc.org/jobs/job-details/2021-49396-project-assistant-igo/"
-          target="_blank"
-          class="md-primary"
+        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-49396-project-assistant-igo/" target="_blank" class="md-primary"
           >Apply
         </md-button>
       </md-card-actions>

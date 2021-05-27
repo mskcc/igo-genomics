@@ -60,7 +60,7 @@ export const teams = [
       'The SPM team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
     members: [
       { name: 'Marisa Dunigan', role: 'Supervisor, IGO', photoName: 'Dunigan_Marisa' },
-      { name: 'Emily Brennan' },
+      { name: 'Emily Brennan', role: 'Project Assistant' },
       { name: 'Meghanne Lomibao', role: 'Project Coordinator', photoName: 'Lomibao_Meghanne' },
       { name: 'Michael Pantano', role: 'Senior Project Assistant', photoName: 'Pantano_Michael' },
       { name: 'Tressa Octave', role: 'Research Technician', photoName: 'Octave_Tressa' },
@@ -70,7 +70,7 @@ export const teams = [
   },
   {
     id: 3,
-    name: 'Extraction',
+    name: 'EXPAND',
     description:
       'EXPAND stands for: Extraction, 10X Genomics, pathology, Archer DX, and digital droplet PCR, but also literally refers to their interest in integrating new platforms and advancing research technology to remain at the cutting edge for our users. The EXPAND team draws upon IGO’s philosophy of constant and open communication and aims to join you in detailed, scientific discussions about your projects, to meet your needs and to work together to advance science, building long-term, trusting relationships in the process.',
     members: [
@@ -87,7 +87,7 @@ export const teams = [
   },
   {
     id: 4,
-    name: 'Library Preparation',
+    name: 'Nucleic Acids',
     description:
       "The Nucleic Acid team handles the bulk of IGO's sample processing, utilizing liquid-handling robots to automate many platforms.",
     members: [
