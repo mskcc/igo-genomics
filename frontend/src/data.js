@@ -34,7 +34,7 @@ export const teams = [
     id: 0,
     name: 'Leadership',
     description:
-      'The leadership team oversees 40 full-time staff from entry-level research technicians to senior experts. They not only ensure that everyone is working in concert to process thousands of projects each year, but also continue to bring on new technologies to keep IGO on the cutting edge of genome science.',
+      'The leadership team oversees over 40 full-time staff from entry-level research technicians to senior experts. They not only ensure that everyone is working in concert to process thousands of projects each year, but also continue to bring on new technologies to keep IGO on the cutting edge of genome science.',
     members: [
       { name: 'Agnes Viale', role: 'Director', photoName: 'Viale_Agnes' },
       { name: 'Neeman Mohibullah', role: 'Associate Director', photoName: 'Mohibullah_Neeman' },
@@ -60,11 +60,12 @@ export const teams = [
       'The SPM team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
     members: [
       { name: 'Marisa Dunigan', role: 'Supervisor, IGO', photoName: 'Dunigan_Marisa' },
+      { name: 'Emily Brennan' },
       { name: 'Meghanne Lomibao', role: 'Project Coordinator', photoName: 'Lomibao_Meghanne' },
       { name: 'Michael Pantano', role: 'Senior Project Assistant', photoName: 'Pantano_Michael' },
       { name: 'Tressa Octave', role: 'Research Technician', photoName: 'Octave_Tressa' },
       { name: 'Valerie Patritti', role: 'Project Manager' },
-      { name: 'Open Position!', role: 'Senior Project Assistant' },
+      { name: 'Open Position!', role: 'Project Assistant' },
     ],
   },
   {
@@ -74,6 +75,7 @@ export const teams = [
       'EXPAND stands for: Extraction, 10X Genomics, pathology, Archer DX, and digital droplet PCR, but also literally refers to their interest in integrating new platforms and advancing research technology to remain at the cutting edge for our users. The EXPAND team draws upon IGO’s philosophy of constant and open communication and aims to join you in detailed, scientific discussions about your projects, to meet your needs and to work together to advance science, building long-term, trusting relationships in the process.',
     members: [
       { name: 'Andrea Farina', role: 'Manager, IGO', photoName: 'Farina_Andrea' },
+      { name: 'Desmond Lambe', role: 'Intern' },
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
       { name: "Josie D'Angelo", role: 'Research Technician', photoName: 'Dangelo_Josie' },
       { name: 'Julienne Lomibao', role: 'Temporary Technician' },
@@ -122,7 +124,7 @@ export const teams = [
       { name: 'Darrell Nabors', role: 'Bioinformatics Engineer V', photoName: 'Nabors_Darrell' },
       { name: 'David Streid', role: 'Bioinfo. Software Engineer II', photoName: 'Streid_David' },
       { name: 'Fahimeh Mirhaj', role: 'Bioinfo. Software Engineer I' },
-      { name: 'Open Position!', role: 'Single Cell Analyst' },
+      // { name: 'Open Position!', role: 'Single Cell Analyst' },
     ],
   },
   {
@@ -132,6 +134,7 @@ export const teams = [
       'The R&D team develops, tests, and implements new genomics platforms for the MSKCC community. In addition to testing off-the-shelf assays, our group works with MSK investigators to bring customized platforms to IGO.',
     members: [
       { name: 'Neeman Mohibullah', role: 'Associate Director, IGO', photoName: 'Mohibullah_Neeman' },
+      { name: 'Cassidy Illum', role: 'Research Technician' },
       { name: 'Elijah Castro', role: 'Research Technician' },
       { name: 'Juan Li', role: 'Manager, IGO', photoName: 'Li_Juan' },
       { name: 'Justin Clarke', role: 'Research Technician', photoName: 'Clarke_Justin' },

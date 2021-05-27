@@ -10,7 +10,7 @@
       <md-card-actions>
         <md-button @click="showJobDescriptionRDM = true" class="md-accent">Learn More</md-button>
         <md-button
-          href="https://careers.mskcc.org/jobs/job-details/2021-48309-manager-integrated-genomics-operation/?returnUrl=%2fjobs%3fkeyword%3digo%26department%3d%26location%3d"
+          href="https://careers.mskcc.org/jobs/job-details/2021-48309-manager-integrated-genomics-operation/"
           target="_blank"
           class="md-primary"
           >Apply
@@ -28,7 +28,7 @@
       <md-card-actions>
         <md-button @click="showJobDescriptionERA = true" class="md-accent">Learn More</md-button>
         <md-button
-          href="https://careers.mskcc.org/jobs/job-details/2021-48368-research-assistant-integrated-genomics-operation/?returnUrl=%2fjobs%3fkeyword%3digo%26department%3d%26location%3d"
+          href="https://careers.mskcc.org/jobs/job-details/2021-48368-research-assistant-integrated-genomics-operation/"
           target="_blank"
           class="md-primary"
           >Apply
@@ -40,13 +40,12 @@
       <md-card-header>
         <div class="md-title">Research Assistant</div>
         <router-link :to="{ name: 'team', params: { id: 3 } }">Extraction Team</router-link>
-        <div class="md-body">Available soon!</div>
+        <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescription42946 = true" class="md-accent">Learn More</md-button>
         <md-button
-          disabled
-          href="https://internaltalent-mskcc.icims.com/jobs/48368/research-assistant---integrated-genomics-operation/job"
+          href="https://careers.mskcc.org/jobs/job-details/2021-48962-research-assistant/"
           target="_blank"
           class="md-primary"
           >Apply
@@ -56,15 +55,14 @@
 
     <md-card class="news-card">
       <md-card-header>
-        <div class="md-title">Senior Project Assistant</div>
+        <div class="md-title">Project Assistant</div>
         <router-link :to="{ name: 'team', params: { id: 2 } }">Sample & Project Mgmt Team</router-link>
-        <div class="md-body">Available soon!</div>
+        <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionSPA = true" class="md-accent">Learn More</md-button>
         <md-button
-          disabled
-          href="https://internaltalent-mskcc.icims.com/jobs/47699/senior-research-project-manager---center-for-molecular-oncology/job"
+          href="https://careers.mskcc.org/jobs/job-details/2021-49396-project-assistant-igo/"
           target="_blank"
           class="md-primary"
           >Apply
@@ -118,6 +116,7 @@
             and up-to-date information.
           </li>
           <li>Investigate unexpected outputs and provide information to IGO leadership and investigators.</li>
+          <li>Facilitate lab processing by maintaining freezer organization and storage in a LEAN way</li>
           <li>Receive samples from outside institutions and use liquid handling automation to aliquot nucleic acid materials.</li>
           <li>Work closely with staff from IGO and the CMO and maintain open and proactive lines of communication.</li>
         </ul>
