@@ -4,8 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        All 10X Genomics and ATAC-Seq appointment requests can now be made through the
-        <router-link :to="{ name: 'reservations' }">Reservations tab</router-link> above.
+        IGO will be closed Monday, May 31 in observation of Memorial Day. We will resume normal hours June 1.
       </span>
     </div>
     <home-page-news></home-page-news>

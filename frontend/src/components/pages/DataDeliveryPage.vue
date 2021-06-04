@@ -53,23 +53,23 @@
           not able to be divided. Depending on the number of reads needed, a project may run on a single lane or across multiple lanes.
         </p>
         <p>
-          of our sequencers have names to distinguish them from one another for our databases, their servers, and ease of communication
+          All of our sequencers have names to distinguish them from one another for our databases, their servers, and ease of communication
           among lab members. The run ID, therefore, is the sequencer name followed by the run number; each run ID is unique. MiSeqs: TOMS,
-          VIC, JOHNSAWYERS, AYYAN; NextSeq: SCOTT; HiSeq 2500: MOMO, KIM, LIZ; HiSeq 4000: PITT, JAX; NovaSeq: MICHELLE, DIANA.
+          VIC, JOHNSAWYERS, AYYAN; NextSeq 500: SCOTT; NextSeq 2000: PEPE; HiSeq 2500: MOMO, KIM, LIZ; HiSeq 4000: PITT, JAX; NovaSeq: MICHELLE, DIANA.
         </p>
         <br />
-        <div class="md-subheading">Current Data Structure</div>
+        <div class="md-subheading">Former Data Structure</div>
         <p>
-          Currently, we deliver two FASTQ files per sample for each paired-end sequencing run (R1 and R2) and one FASTQ file for single-read
+          Traditionally, we delivered two FASTQ files per sample for each paired-end sequencing run (R1 and R2) and one FASTQ file for single-read
           runs. An example of the structure below shows a PI data folder with multiple sequencing projects. In the selected project, there
           are data from two separate sequencing runs, JAX_0416 and PITT_0483.
         </p>
         <img src="../../assets/images/screenshots/current-file-structure.jpg" alt="current file path screenshot" />
 
         <br /><br />
-        <div class="md-subheading">New Data Structure</div>
+        <div class="md-subheading">Current Data Structure</div>
         <p>
-          Beginning 01/01/2021, IGO will no longer combine reads from different lanes of a sequencing run into a single file. Instead of
+          As of 01/01/2021, IGO will no longer combine reads from different lanes of a sequencing run into a single file. Instead of
           just R1 and R2, for samples that were sequenced in multiple lanes, there will be a separate FASTQ file for each read and lane.
         </p>
         <img src="../../assets/images/screenshots/future-file-structure.jpg" alt="future file path screenshot" />
@@ -89,6 +89,23 @@
         </p>
       </md-card-content>
     </md-card>
+    <md-card class="data-delivery-card">
+      <md-card-header>
+        <div class="md-title">10X Genomics & MissionBio pipeline output</div>
+      </md-card-header>
+      <md-card-content>
+        <div class="md-subheading">Now available on /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline</div>
+        <p>
+          For quality control purposes, IGO runs Cell Ranger (10X scRNA-Seq), Space Ranger (10X Visium), and the Tapestri pipeline (MissionBio) on data from projects initiated in IGO. We will now deliver output from those analytic pipelines to the project folder along with FASTQ files by default. Because of size constraints, pipeline data will remain available for <strong>3 months</strong> before being deleted.
+        </p>
+        <p>
+          Deliverables for Cell Ranger & Space Ranger: run summary metrics (HTML, CSV), alignment files (BAM), feature barcode matrices (if applicable), Loupe Browser visualization files (cloupe), QC images and position information (JPG, PNG, CSV, JSON; Visium only), V(D)J analysis files (if applicable)
+        </p>
+        <p>
+          Deliverables for MissionBio Tapestri: QC and metadata files (TXT, TSV, INFO, YAML, CSV, JSON), CellFinder plot (PDF), Tapestri Insights file (LOOM), alignment files (BAM), mapped reads by barcode (TXT), variant information (VCF)
+        </p>
+      </md-card-content>
+    </md-card> 
   </div>
 </template>
 

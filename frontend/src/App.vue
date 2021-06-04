@@ -8,7 +8,8 @@
         </div>
         <div class="right-header">
           <div class="pre-nav">
-            <md-button :md-ripple="false" :to="{ name: 'about' }">About</md-button>
+            <!-- <md-button :md-ripple="false" :to="{ name: 'about' }">About</md-button> -->
+            <md-button :md-ripple="false" :to="{ name: 'careers' }">Careers</md-button>
             <md-button :md-ripple="false" :to="{ name: 'contact us' }">Contact Us</md-button>
             <a href="https://twitter.com/genomics212?lang=en" target="_blank"><i class="fab fa-twitter fa-1x"></i></a>
             <a href="https://www.instagram.com/genomics212/" target="_blank"><i class="fab fa-instagram fa-1x"></i></a>
@@ -109,12 +110,12 @@ export default {
         'ddpcr assays',
         'igo tutorials',
         'metrics and throughput',
-        'sample criteria',
+        'sample requirements',
         'single cell platforms',
       ],
       toolsIsActive: [
         'chemistry timeline',
-        'sample criteria',
+        'sample requirements',
         'ddpcr assays',
         'igo tutorials',
         'single cell platforms',
@@ -128,7 +129,7 @@ export default {
       platformsIsActive: this.$route.path === '/platforms',
       // platformsIsActive: this.$route.name.includes('platforms & pricing'),
       toolTips: {
-        'sample criteria': 'A comprehensive guide to quality and quantity requirements',
+        'sample requirements': 'A comprehensive guide to quality and quantity requirements',
         // "ddpcr assays": "Available ddPPCR assays",
       },
       trigger: false,
