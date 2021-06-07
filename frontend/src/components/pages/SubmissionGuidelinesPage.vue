@@ -56,6 +56,7 @@
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset">
                     <ol>
+                      <li><router-link :to="{ name: 'tissue' }">Check</router-link> our accepted preservation types and recommendations for DNA & RNA extraction</li>
                       <li>Fill out an iLab request for the appropriate application</li>
                       <ul>
                         <li>DNA Extraction</li>

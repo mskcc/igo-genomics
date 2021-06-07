@@ -5,7 +5,7 @@
       <span class="material-icons"> warning </span>
       <span class="announcement-content">
         <strong>We require at least 48 hours notice for sample drop-off and at least 2 hours notice for cancellation.</strong> If you have
-        an emergency, please contact Genomics@mskcc.org as soon as possible.
+        an emergency, please contact genomics@mskcc.org as soon as possible.
       </span>
     </div>
     <div class="md-layout">
@@ -15,7 +15,7 @@
             <md-field>
               <label>Request Type</label>
               <md-select v-model="requestType" name="requestType" id="requestType" :disabled="daySelected">
-                <md-option value="10xGenomics">10x Genomics</md-option>
+                <md-option value="10xGenomics">10X Genomics scRNASeq</md-option>
                 <md-option value="atacSeq">ATAC Seq (Thursdays only)</md-option>
                 <md-option value="missionBio" disabled>MissionBio</md-option>
               </md-select>

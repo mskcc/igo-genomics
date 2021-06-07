@@ -60,7 +60,7 @@ export const teams = [
       'The SPM team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
     members: [
       { name: 'Marisa Dunigan', role: 'Supervisor, IGO', photoName: 'Dunigan_Marisa' },
-      { name: 'Emily Brennan', role: 'Project Assistant' },
+      // { name: 'Emily Brennan', role: 'Project Assistant' },
       { name: 'Meghanne Lomibao', role: 'Project Coordinator', photoName: 'Lomibao_Meghanne' },
       { name: 'Michael Pantano', role: 'Senior Project Assistant', photoName: 'Pantano_Michael' },
       { name: 'Tressa Octave', role: 'Research Technician', photoName: 'Octave_Tressa' },
@@ -79,7 +79,6 @@ export const teams = [
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
       { name: "Josie D'Angelo", role: 'Research Technician', photoName: 'Dangelo_Josie' },
       { name: 'Julienne Lomibao', role: 'Temporary Technician' },
-      { name: 'Marisa Vanness', role: 'Research Technician', photoName: 'Vanness_Marisa' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
       { name: 'Tony Deblasio', role: 'Senior Research Assistant', photoName: 'Deblasio_Tony' },
       { name: 'Open Position!', role: 'Research Assistant' },
@@ -93,7 +92,7 @@ export const teams = [
     members: [
       { name: 'Ruchi Patel', role: 'Manager, IGO', photoName: 'Patel_Ruchi' },
       { name: 'Alber Michaeel', role: 'Automation Engineer', photoName: 'Michaeel_Alber' },
-      { name: 'Elevit Perez', role: 'Research Technician', photoName: 'Perez_Elevit' },
+      { name: 'Elevit Perez', role: 'Senior Research Technician', photoName: 'Perez_Elevit' },
       { name: 'Katherine Allard', role: 'Research Assistant', photoName: 'Allard_Katherine' },
       { name: 'Satish Ramakrishnan', role: 'Research Assistant', photoName: 'Ramakrishnan_Satish' },
       { name: 'Satoko Murakami', role: 'Research Assistant', photoName: 'Murakami_Satoko' },
@@ -134,11 +133,10 @@ export const teams = [
       'The R&D team develops, tests, and implements new genomics platforms for the MSKCC community. In addition to testing off-the-shelf assays, our group works with MSK investigators to bring customized platforms to IGO.',
     members: [
       { name: 'Neeman Mohibullah', role: 'Associate Director, IGO', photoName: 'Mohibullah_Neeman' },
-      { name: 'Cassidy Illum', role: 'Research Technician' },
+      // { name: 'Cassidy Illum', role: 'Research Technician' },
       { name: 'Elijah Castro', role: 'Research Technician' },
       { name: 'Juan Li', role: 'Manager, IGO', photoName: 'Li_Juan' },
       { name: 'Justin Clarke', role: 'Research Technician', photoName: 'Clarke_Justin' },
-      { name: 'Taylor Allen', role: 'Research Technician', photoName: 'Allen_Taylor' },
       { name: 'Yushi Wu', role: 'Research Assistant', photoName: 'Wu_Yushi' },
       { name: 'Open Position!', role: 'Supervisor' },
     ],
