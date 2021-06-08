@@ -4,7 +4,8 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        IGO will be closed Monday, May 31 in observation of Memorial Day. We will resume normal hours June 1.
+        IGO's data team is now delivering analytical pipeline output for 10X scRNA-Seq, 10X Visium, and MissionBio Tapestri projects
+        initiated in IGO. Data will remain on the igo-share server for 3 months.
       </span>
     </div>
     <div class="carousel-div">
