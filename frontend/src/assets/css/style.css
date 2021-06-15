@@ -347,6 +347,17 @@ form {
   /* font-size: 110%; */
 }
 
+/* prevents header text from being hidden */
+.prices-container .md-table-head-label {
+  overflow: visible;
+  white-space: normal;
+  line-height: 12px;
+}
+
+.prices-container .md-table-head-container {
+  overflow: visible;
+}
+
 /* prevent tables from growing out of their dropdowns */
 .prices-container .md-list-item-default.md-list-item-container.md-button-clean {
   white-space: normal;
