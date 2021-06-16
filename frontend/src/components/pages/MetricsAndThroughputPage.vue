@@ -12,7 +12,7 @@
         height="96"
         width="480"
         frameborder="0"
-        src="https://splunkp.mskcc.org/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Samples_SingleValue&oid=qefvbmkPqIH_ZbBVtH1vNBZcjJJSSoYKcCHXkGiQO3F4kTfd4nKpHlXGxokxYeY8%5EJev_z6Y743OWPdFQU407Vv25fXf74Z08GJoHn17JGbsmp%5E3c3keu32eln37fMK77rP6IElGh53Dkv1hImW0SM0EA0pNNt5CEvNJcMfBRFr"
+        src="https://splunkp.mskcc.org/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Samples_SingleValue&oid=qefvbmkPqIH_ZbBVtH1vNBZcjJJSSoYKcCHXkGiQO3F4kTfd4nKpHlXGxokxYeY8%5EJev_z6Y743OWPdFQU407Vv25fXf74Z08GJoHn17JGbsmp%5E3c3keu32eln37fMK77rP6IElGh53Dkv1hImW0SM0EA0pNNt5CEvNJcMfBRF"
       ></iframe>
     </div>
     <div>
