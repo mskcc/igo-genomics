@@ -303,10 +303,15 @@
                         <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('totalReads')"
                           >Total Reads</md-table-head
                         >
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('sr50')">SR50</md-table-head>
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('sr75')">SR75</md-table-head>
                         <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('pe50')">PE50</md-table-head>
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('pe75')">pe75</md-table-head>
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('sr150')">SR150</md-table-head>
                         <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('pe100')">PE100</md-table-head>
                         <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('pe150')">PE150</md-table-head>
                         <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('special28')">28/8/91</md-table-head>
+                        <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('pe250')">PE250</md-table-head>
                         <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('serviceType')"
                           >Service Type</md-table-head
                         >
@@ -335,7 +340,11 @@
                         <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('totalReads')">{{
                           row.totalReads
                         }}</md-table-cell>
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('sr50')">${{ row.sr50 }}</md-table-cell>
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('sr75')">${{ row.sr75 }}</md-table-cell>
                         <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('pe50')">${{ row.pe50 }}</md-table-cell>
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('pe75')">${{ row.pe75 }}</md-table-cell>
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('sr150')">${{ row.sr150 }}</md-table-cell>
                         <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('pe100')"
                           >${{ row.pe100 }}</md-table-cell
                         >
@@ -345,6 +354,7 @@
                         <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('special28')"
                           >${{ row.special28 }}</md-table-cell
                         >
+                        <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('pe250')">${{ row.pe250 }}</md-table-cell>
                         <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('serviceType')">{{
                           row.serviceType
                         }}</md-table-cell>

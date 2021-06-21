@@ -366,6 +366,103 @@
                             Yes. You can either use a commercial kit to make library, or design your own primers. If you do the latter, we
                             require you to submit the sequence or design of your library construct. Contact us for more information or to
                             have your construct verified.
+
+                            <div class="md-subheading">
+                              Test table for Block pricing
+                            </div>
+                            <br />
+                            <br />
+                            <md-table md-card class="criteria-table">
+                              <md-table-row>
+                                <md-table-head>Reads Block (M)</md-table-head>
+                                <md-table-head>SR50</md-table-head>
+                                <md-table-head>SR75</md-table-head>
+                                <md-table-head>PE50/SR100</md-table-head>
+                                <md-table-head>10X Genomics</md-table-head>
+                                <md-table-head>PE75/SR150</md-table-head>
+                                <md-table-head>PE100</md-table-head>
+                                <md-table-head>PE150</md-table-head>
+                                <md-table-head>PE250</md-table-head>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>1M</md-table-cell>
+                                <md-table-cell colspan="7" class="center-page">$310</md-table-cell>
+                                <md-table-cell>$370</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>4M</md-table-cell>
+                                <md-table-cell colspan="7" class="center-page">$465</md-table-cell>
+                                <md-table-cell>N/A</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>20M</md-table-cell>
+                                <md-table-cell>$860</md-table-cell>
+                                <md-table-cell colspan="4" class="center-page">$792</md-table-cell>
+                                <md-table-cell colspan="2" class="center-page">$1078</md-table-cell>
+                                <md-table-cell>$1545</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>120M</md-table-cell>
+                                <md-table-cell colspan="5" class="center-page">$973</md-table-cell>
+                                <md-table-cell colspan="2" class="center-page">$1568</md-table-cell>
+                                <md-table-cell>N/A</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>200M</md-table-cell>
+                                <md-table-cell colspan="4" class="center-page">$1278</md-table-cell>
+                                <md-table-cell colspan="2" class="center-page">$2403</md-table-cell>
+                                <md-table-cell>$3186</md-table-cell>
+                                <md-table-cell>N/A</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>400M</md-table-cell>
+                                <md-table-cell colspan="2" class="center-page">$1335</md-table-cell>
+                                <md-table-cell colspan="3" class="center-page">$2558</md-table-cell>
+                                <md-table-cell colspan="2" class="center-page">$4097</md-table-cell>
+                                <md-table-cell>N/A</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>550M</md-table-cell>
+                                <md-table-cell>$2025</md-table-cell>
+                                <md-table-cell colspan="3" class="center-page">$2925</md-table-cell>
+                                <md-table-cell colspan="2" class="center-page">$4050</md-table-cell>
+                                <md-table-cell>$5400</md-table-cell>
+                                <md-table-cell>N/A</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>800M</md-table-cell>
+                                <md-table-cell colspan="4" class="center-page">$2082</md-table-cell>
+                                <md-table-cell colspan="2" class="center-page">$2612</md-table-cell>
+                                <md-table-cell>$2850</md-table-cell>
+                                <md-table-cell>$3990</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>1800M</md-table-cell>
+                                <md-table-cell colspan="4" class="center-page">$3792</md-table-cell>
+                                <md-table-cell colspan="2" class="center-page">$4607</md-table-cell>
+                                <md-table-cell>$4987</md-table-cell>
+                                <md-table-cell>N/A</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>2750M</md-table-cell>
+                                <md-table-cell colspan="6" class="center-page">$3019</md-table-cell>
+                                <md-table-cell>$3420</md-table-cell>
+                                <md-table-cell>N/A</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>3600M</md-table-cell>
+                                <md-table-cell colspan="4" class="center-page">$6887</md-table-cell>
+                                <md-table-cell colspan="2" class="center-page">$8550</md-table-cell>
+                                <md-table-cell>$9120</md-table-cell>
+                                <md-table-cell>N/A</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>11000M</md-table-cell>
+                                <md-table-cell colspan="6" class="center-page">$12278</md-table-cell>
+                                <md-table-cell>$13680</md-table-cell>
+                                <md-table-cell>N/A</md-table-cell>
+                              </md-table-row>
+                            </md-table>
                           </div>
                         </md-list-item>
                       </md-list>
