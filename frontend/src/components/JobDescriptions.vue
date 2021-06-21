@@ -10,25 +10,7 @@
       <md-card-actions>
         <md-button @click="showJobDescriptionRDM = true" class="md-accent">Learn More</md-button>
         <md-button
-          href="https://careers.mskcc.org/jobs/job-details/2021-48309-manager-integrated-genomics-operation/"
-          target="_blank"
-          class="md-primary"
-          >Apply
-        </md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="news-card">
-      <md-card-header>
-        <div class="md-title">Research Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 4 } }">Nucleic Acids Team</router-link>
-        <div class="md-body">Open!</div>
-        <!-- <div>Ref: 2021-48368</div> -->
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionERA = true" class="md-accent">Learn More</md-button>
-        <md-button
-          href="https://careers.mskcc.org/jobs/job-details/2021-48368-research-assistant-integrated-genomics-operation/"
+          href="mailto: genomics@mskcc.org?subject=Research Supervisor"
           target="_blank"
           class="md-primary"
           >Apply
@@ -52,13 +34,13 @@
 
     <md-card class="news-card">
       <md-card-header>
-        <div class="md-title">Project Assistant</div>
+        <div class="md-title">Project Coordinator</div>
         <router-link :to="{ name: 'team', params: { id: 2 } }">Sample & Project Mgmt Team</router-link>
         <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionSPA = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-49396-project-assistant-igo/" target="_blank" class="md-primary"
+        <md-button href="mailto:genomics@mskcc.org?subject=SPM Project Coordinator" target="_blank" class="md-primary"
           >Apply
         </md-button>
       </md-card-actions>
