@@ -705,15 +705,12 @@ sup {
 }
 
 .career-banner .md-layout-item {
-  /* width: 100%;
-  height: auto; */
+  min-width: 100%;
+  object-fit: cover;
+  width: 100%;
   height: 250px;
 }
 
 .career-banner {
-  /* max-height: 10vmax;
-  display: flexbox;
-  grid-template-columns: repeat(3, 400px [col-start]);
-  max-height: 1000px; */
   margin: 10px;
 }

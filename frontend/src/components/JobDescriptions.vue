@@ -1,6 +1,6 @@
 <template>
   <div id="job-descriptions">
-    <!-- <career-banner /> -->
+    <career-banner />
     <md-card class="news-card">
       <md-card-header>
         <div class="md-title">Supervisor</div>
@@ -205,11 +205,11 @@
 </template>
 
 <script>
-// import CareerBanner from './CareerBanner.vue';
+import CareerBanner from './CareerBanner.vue';
 
 export default {
   name: 'JobDescriptions',
-  // components: { CareerBanner },
+  components: { CareerBanner },
   data: function() {
     return {
       showJobDescriptionERA: false,
