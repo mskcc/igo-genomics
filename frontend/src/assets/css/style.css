@@ -714,3 +714,22 @@ sup {
 .career-banner {
   margin: 10px;
 }
+
+.md-drawer.md-app-drawer.md-theme-default.md-left.md-permanent.md-permanent-full {
+  width: min-content;
+}
+
+.indent {
+  margin-left: 20px;
+}
+
+.right-bar {
+  position: fixed;
+  right: 10px;
+  z-index: 2;
+  border-left: 1px solid #e0e0e0;
+  padding-right: 15px;
+  width: 250px;
+  height: 100%;
+  padding-top: 16px;
+}

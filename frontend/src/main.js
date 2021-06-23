@@ -158,6 +158,13 @@ const router = new VueRouter({
   base: HOME_PAGE_PATH,
   routes: routes,
   mode: 'history',
+  scrollBehavior: function(to) {
+    if (to.hash) {
+      return {
+        selector: to.hash,
+      };
+    }
+  },
 });
 
 // scrolls to top of window on route change
