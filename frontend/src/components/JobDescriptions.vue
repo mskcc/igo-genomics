@@ -1,5 +1,6 @@
 <template>
   <div id="job-descriptions">
+    <career-banner />
     <md-card class="news-card">
       <md-card-header>
         <div class="md-title">Supervisor</div>
@@ -9,12 +10,7 @@
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionRDM = true" class="md-accent">Learn More</md-button>
-        <md-button
-          href="mailto: genomics@mskcc.org?subject=Research Supervisor"
-          target="_blank"
-          class="md-primary"
-          >Apply
-        </md-button>
+        <md-button href="mailto: genomics@mskcc.org?subject=Research Supervisor" target="_blank" class="md-primary">Apply </md-button>
       </md-card-actions>
     </md-card>
 
@@ -40,9 +36,7 @@
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionSPA = true" class="md-accent">Learn More</md-button>
-        <md-button href="mailto:genomics@mskcc.org?subject=SPM Project Coordinator" target="_blank" class="md-primary"
-          >Apply
-        </md-button>
+        <md-button href="mailto:genomics@mskcc.org?subject=SPM Project Coordinator" target="_blank" class="md-primary">Apply </md-button>
       </md-card-actions>
     </md-card>
 
@@ -211,8 +205,11 @@
 </template>
 
 <script>
+import CareerBanner from './CareerBanner.vue';
+
 export default {
   name: 'JobDescriptions',
+  components: { CareerBanner },
   data: function() {
     return {
       showJobDescriptionERA: false,

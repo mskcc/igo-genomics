@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="md-display-1">Jobs at IGO</div>
+    <!-- <div class="md-display-1">Jobs at IGO</div> -->
     <md-empty-state
       v-if="noJobs"
       md-rounded

@@ -703,3 +703,14 @@ sup {
 .md-dialog .md-dialog-container.md-theme-default {
   max-height: inherit;
 }
+
+.career-banner .md-layout-item {
+  min-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+
+.career-banner {
+  margin: 10px;
+}
