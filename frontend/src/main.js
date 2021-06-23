@@ -17,9 +17,9 @@ import SubmissionGuidelinesPage from './components/pages/SubmissionGuidelinesPag
 import ContactsPage from './components/pages/ContactsPage.vue';
 import FaqsPage from './components/pages/FaqsPage.vue';
 import CriteriaPage from './components/pages/CriteriaPage.vue';
-import SingleCellPage from './components/pages/SingleCellPage.vue';
+// import SingleCellPage from './components/pages/SingleCellPage.vue';
 import DataDeliveryPage from './components/pages/DataDeliveryPage.vue';
-import GenomicsVisiumPage from './components/pages/GenomicsVisiumPage.vue';
+// import GenomicsVisiumPage from './components/pages/GenomicsVisiumPage.vue';
 import NewsPage from './components/pages/NewsPage.vue';
 import IgoTutorialsPage from './components/pages/IgoTutorialsPage.vue';
 import ShowVideoPage from './components/pages/ShowVideoPage.vue';
@@ -128,9 +128,9 @@ const routes = [
       { path: '/criteria/tissue', component: TissueCriteria, name: 'tissue' },
     ],
   },
-  { path: '/single-cell-platforms', component: SingleCellPage, name: 'single cell platforms' },
+  // { path: '/single-cell-platforms', component: SingleCellPage, name: 'single cell platforms' },
   { path: '/accessing-your-data', component: DataDeliveryPage, name: 'accessing your data' },
-  { path: '/10x-genomics-visium', component: GenomicsVisiumPage, name: '10x genomics visium' },
+  // { path: '/10x-genomics-visium', component: GenomicsVisiumPage, name: '10x genomics visium' },
   { path: '/news', component: NewsPage, name: 'news' },
   { path: '/igo-tutorials', component: IgoTutorialsPage, name: 'igo tutorials' },
   { path: '/igo-tutorials/:name', component: ShowVideoPage, name: 'show video', props: true },
