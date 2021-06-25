@@ -4,18 +4,14 @@
       <md-app-drawer md-permanent="full">
         <md-list class="md-dense">
           <md-list-item :to="{ name: 'accessing your data' }"> Data Delivery</md-list-item>
-          <md-list-item class="indent" :to="{ name: 'accessing your data' }">
-            <span style="color:black;">
-              Instructions on accessing your FASTQ files
-            </span>
-          </md-list-item>
+          <md-list-item class="indent" href="#instructions">Instructions on accessing your FASTQ files</md-list-item>
           <md-list-item class="indent" href="#data-delivery-structure">Data delivery structure</md-list-item>
           <md-list-item class="indent" href="#10x-and-missionbio">10X Genomics & MissionBio pipeline output</md-list-item>
         </md-list>
       </md-app-drawer>
 
       <md-app-content>
-        <div class="md-title">Instructions on accessing your FASTQ files</div>
+        <div class="md-title" id="instructions">Instructions on accessing your FASTQ files</div>
 
         <div class="md-subheading">From a PC:</div>
         <ul>
