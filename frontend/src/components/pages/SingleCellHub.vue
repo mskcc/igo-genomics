@@ -3,12 +3,8 @@
     <md-app>
       <md-app-drawer md-permanent="full">
         <!-- <md-toolbar class="md-transparent" md-elevation="0">
-          <div class="md-display-1">Single Cell Sequencing hub</div>
-          <div>Single Cell Sequencing hub</div>
+          <span :to="{ name: 'single cell hub' }">Single Cell Sequencing & Spatial Transcriptomics Hub</span>
         </md-toolbar> -->
-        <md-toolbar class="md-transparent" md-elevation="0">
-          Navigation
-        </md-toolbar>
 
         <md-list class="md-dense">
           <md-list-item :to="{ name: 'single cell hub' }">Single Cell Sequencing & Spatial Transcriptomics Hub</md-list-item>
@@ -22,7 +18,7 @@
         </md-list>
       </md-app-drawer>
 
-      <md-app-content class="md-scrollbar">
+      <md-app-content>
         <p id="overview">
           Welcome to IGO's single cell and spatial transcriptomics hub -- here you'll find links to our pricing and submission information,
           as well as extra information about new and popular platforms.

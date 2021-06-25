@@ -733,3 +733,7 @@ sup {
   height: 100%;
   padding-top: 16px;
 }
+
+.md-app {
+  height: calc(100vh - 150px);
+}
