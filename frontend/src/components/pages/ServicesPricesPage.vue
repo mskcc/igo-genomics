@@ -9,6 +9,7 @@
       <div class="single-header">
         <img class="prices-image" src="../../assets/services2.png" alt="bulk logo" />
         <div class="md-title">Single Cell Sequencing</div>
+        <!-- <div class="md-title">Single Cell Sequencing<br /><span class="md-subheading"><router-link :to="{ name: 'single cell hub' }">Visit the Single Cell Hub</router-link></span></div> -->
       </div>
       <div class="other-header">
         <img class="prices-image" src="../../assets/services3.png" alt="bulk logo" />
