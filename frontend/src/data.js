@@ -64,7 +64,7 @@ export const teams = [
       { name: 'Meghanne Lomibao', role: 'Project Coordinator', photoName: 'Lomibao_Meghanne' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
       { name: 'Valerie Patritti', role: 'Project Manager', photoName: 'Patritti_Valerie' },
-      { name: 'Open Position!', role: 'Project Coordinator' },
+      { name: 'Position Opening Soon!', role: 'Project Coordinator' },
     ],
   },
   {
