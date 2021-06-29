@@ -45,15 +45,15 @@
       <md-table-row>
         <md-table-cell rowspan="2">Libraries for Sequencing</md-table-cell>
         <md-table-cell>Individual Libraries</md-table-cell>
-        <md-table-cell rowspan="2" class="pass">3nM</md-table-cell>
-        <md-table-cell rowspan="2" class="try">2nM</md-table-cell>
+        <md-table-cell rowspan="2" class="pass">1.5nM</md-table-cell>
+        <md-table-cell rowspan="2" class="try">1nM</md-table-cell>
         <md-table-cell rowspan="2" class="pass">150 &lt; bp &lt; 1000bp</md-table-cell>
         <md-table-cell rowspan="2" class="try">bp &lt; 150</md-table-cell>
-        <md-table-cell>10&#181;L</md-table-cell>
+        <md-table-cell>&GreaterEqual;10&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>Pooled Libraries</md-table-cell>
-        <md-table-cell>20&#181;L</md-table-cell>
+        <md-table-cell>&GreaterEqual;20&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>PDX/xenograft-derived samples</md-table-cell>
@@ -62,7 +62,7 @@
         <md-table-cell class="try">9ng</md-table-cell>
         <md-table-cell class="pass">60% human</md-table-cell>
         <md-table-cell class="try">50% human</md-table-cell>
-        <md-table-cell>9&#181;L</md-table-cell>
+        <md-table-cell>&leq;9&#181;L</md-table-cell>
       </md-table-row>
     </md-table>
   </div>
