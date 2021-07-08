@@ -151,6 +151,7 @@ export default {
         new Date('1/18/2021'),
         new Date('5/31/2021'),
         new Date('7/5/2021'),
+        new Date('7/20/2021'),
         new Date('9/6/2021'),
         new Date('11/25/2021'),
         new Date('12/24/2021'),
