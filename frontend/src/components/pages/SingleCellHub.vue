@@ -1,6 +1,14 @@
 <template>
   <div>
-    <md-app>
+    <md-empty-state
+      v-if="env === 'prod'"
+      class="md-primary"
+      md-rounded
+      md-icon="flight_takeoff"
+      md-label="We're almost there!"
+      md-description="Stay tuned for something amazing">
+    </md-empty-state>
+    <md-app v-else>
       <md-app-drawer md-permanent="full">
         <!-- <md-toolbar class="md-transparent" md-elevation="0">
           <span :to="{ name: 'single cell hub' }">Single Cell Sequencing & Spatial Transcriptomics Hub</span>
@@ -46,11 +54,17 @@
 </template>
 
 <script>
+import { ENV } from './../../config.js';
 import SingleCellTable from '../SingleCellTable.vue';
 import TenXTable from '../TenXTable.vue';
 
 export default {
   components: { SingleCellTable, TenXTable },
+  data: function() {
+    return {
+      env: ENV
+    }
+  }
 };
 </script>
 
