@@ -6,6 +6,28 @@
           <md-button :to="{ name: 'home' }"> <img class="igo-logo" alt="IGO logo" src="./assets/logoDarkGrayOnTransp.png"/></md-button>
           <div class="md-headline">Integrated Genomics Operation</div>
         </div>
+        <div class="mobile">
+          <!-- <md-app> -->
+            <md-button>
+              <span class="material-icons" @click="showNavigation = true">
+                menu
+              </span>
+            </md-button>
+            
+            <md-drawer :md-active.sync="showNavigation" md-swipeable>
+              <md-toolbar class="md-transparent" md-elevation="0">
+               <span class="md-title">Integrated Genomics Operation</span>
+              </md-toolbar>
+              <md-list>
+                <md-list-item v-for="link in links" :key="link">
+                  <router-link exact :to="{ name: link }">{{ link }}</router-link>
+                </md-list-item>
+              </md-list>
+            </md-drawer>
+          <!-- </md-app> -->
+
+
+        </div>
         <div class="right-header">
           <div class="pre-nav">
             <!-- <md-button :md-ripple="false" :to="{ name: 'about' }">About</md-button> -->
@@ -102,6 +124,7 @@ export default {
   },
   data: function() {
     return {
+      showNavigation: false,
       links: ['home', 'about', 'platforms & pricing', 'submission guidelines', 'reservations', 'faqs'],
       toolLinks: [
         '10x genomics visium',
