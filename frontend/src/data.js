@@ -150,7 +150,7 @@ export const teams = [
     members: [
       { name: 'Denise Chen', role: 'Philadelphia College of Osteopathic Medicine', photoName: 'Chen_Denise' },
       { name: "Josie D'Angelo", role: 'UC Berkeley ', photoName: 'Dangelo_Josie' },
-      { name: 'Marisa Vanness', role: 'Geisinger Commonwealth SChool of Medicine' },
+      { name: 'Marisa Vanness', role: 'Geisinger Commonwealth School of Medicine' },
       { name: 'Michael Pantano', role: 'BU Questrom School of Business', photoName: 'Pantano_Michael' },
       { name: 'Rosie Wenrich', role: 'Rowan University', photoName: 'Wenrich_Rosie' },
       { name: 'Taylor Allen', role: 'Georgia Tech Dept. of Chemistry & Biochemistry', photoName: 'Allen_Taylor' },
