@@ -338,7 +338,7 @@ export const singleServices = [
     startingMaterial: 'Single nuclei suspension',
     libraryChemistry: 'Chromium Single Cell',
     sequencingReadLength: 'PE 28/90 (GEX), PE50 (ATAC)',
-    sequencingCoverage: '20K reads/cell (GEX), 50K reads/cell (ATAC)',
+    sequencingCoverage: '20K reads/cell (GEX), 25K reads/cell (ATAC)',
     deliverable: 'FASTQ, Cell Ranger output',
     libraryCost: '$3,000/sample',
     sequencingCost: '$0.10/nucleus'
