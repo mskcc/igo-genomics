@@ -747,3 +747,7 @@ sup {
   margin-block-start: 0.83em;
   margin-block-end: 0.83em;
 }
+
+.single-cell-hub .md-divider {
+  margin: 15px 0 !important;
+}
