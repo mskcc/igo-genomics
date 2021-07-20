@@ -5,6 +5,21 @@
         <div class="logo-header">
           <md-button :to="{ name: 'home' }"> <img class="igo-logo" alt="IGO logo" src="./assets/logoDarkGrayOnTransp.png"/></md-button>
           <div class="md-headline">Integrated Genomics Operation</div>
+          <div class="mobile">
+            <md-button>
+              <span class="material-icons" @click="showNavigation = true">
+                menu
+              </span>
+            </md-button>
+
+            <md-drawer :md-active.sync="showNavigation">
+              <md-list>
+                <md-list-item v-for="link in mobileLinks" :key="link">
+                  <router-link exact :to="{ name: link }">{{ link.toUpperCase() }}</router-link>
+                </md-list-item>
+              </md-list>
+            </md-drawer>
+          </div>
         </div>
         <div class="right-header">
           <div class="pre-nav">
@@ -102,7 +117,22 @@ export default {
   },
   data: function() {
     return {
+      showNavigation: false,
       links: ['home', 'about', 'platforms & pricing', 'submission guidelines', 'reservations', 'faqs'],
+      mobileLinks: [
+        'home',
+        'about',
+        'platforms & pricing',
+        'single cell platforms',
+        'submission guidelines',
+        'sample requirements',
+        'accessing your data',
+        'reservations',
+        'ddpcr assays',
+        'faqs',
+        'contact us',
+        'careers',
+      ],
       toolLinks: [
         'accessing your data',
         'chemistry timeline',
