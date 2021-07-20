@@ -139,7 +139,7 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text ">Cells for 10X Genomics single cell sequencing</span>
+                <span class="md-list-item-text ">Cells or nuclei for 10X Genomics single cell sequencing</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset">
                     <ol>
@@ -157,8 +157,10 @@
                           <li>10X_Genomics-GeneExpression-5</li>
                           <li>10X_Genomics-GeneExpression-3</li>
                           <li>10X_Genomics-ATAC</li>
+                          <li>10X_Genomics_Multiome</li>
                         </ul>
                       </li>
+                      <li><strong>Multiome only:</strong> <a href="mailto:zzPDL_SKI_IGO_NA_team@mskcc.org?subject=Nuclei buffer">Contact us</a> to get an aliquot of nuclei preservation buffer</li>
                       <li>Bring your single-cell or single-nuclei suspension to IGO at the designated time</li>
                     </ol>
                   </md-list-item>

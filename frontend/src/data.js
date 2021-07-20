@@ -321,17 +321,30 @@ export const singleServices = [
     libraryChemistry: 'Chromium Single Cell',
     sequencingReadLength: 'PE28/91 (GEX, VDJ, cell hashing), PE50 (ATAC)',
     sequencingCoverage: '20K reads/cell (GEX), 5K reads/cell (V(D)J & cell hashing), 25K reads/cell (ATAC)',
-    deliverable: 'FASTQ, CellRanger output',
+    deliverable: 'FASTQ, Cell Ranger output',
     tableHeaders: ['xGenomicsPlatform', 'sampleCostLibrary', 'cellCostSequencing'],
     table: [
-      { xGenomicsPlatform: '5′ OR 3′ Gene Expression', sampleCostLibrary: 2068, cellCostSequencing: '$0.07-$0.13' },
-      { xGenomicsPlatform: '5′ Gene Expression + V(D)J Enrichment', sampleCostLibrary: 2279, cellCostSequencing: '$0.12-$0.20' },
-      { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 116, cellCostSequencing: '$0.05-$0.07' },
-      { xGenomicsPlatform: 'ATAC-Seq', sampleCostLibrary: 2075, cellCostSequencing: '$0.06-$0.17' },
+      { xGenomicsPlatform: '5′ OR 3′ Gene Expression', sampleCostLibrary: 2068, cellCostSequencing: '$0.05' },
+      { xGenomicsPlatform: '5′ Gene Expression + V(D)J Enrichment', sampleCostLibrary: 2279, cellCostSequencing: '$0.06' },
+      { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 116, cellCostSequencing: '$0.01' },
+      { xGenomicsPlatform: 'ATAC-Seq', sampleCostLibrary: 2075, cellCostSequencing: '$0.11' },
     ],
   },
   {
     id: 1,
+    name: '10x Genomics Multiome',
+    description:
+      'Single-cell ATAC-Seq + RNA-Seq from the same nucleus.',
+    startingMaterial: 'Single nuclei suspension',
+    libraryChemistry: 'Chromium Single Cell',
+    sequencingReadLength: 'PE 28/90 (GEX), PE50 (ATAC)',
+    sequencingCoverage: '20K reads/cell (GEX), 25K reads/cell (ATAC)',
+    deliverable: 'FASTQ, Cell Ranger output',
+    libraryCost: '$3,000/sample',
+    sequencingCost: '$0.10/nucleus'
+  },
+  {
+    id: 2,
     name: '10x Genomics Visium',
     description: 'Transcriptome sequencing of 1-10 cells along with spatial information.',
     startingMaterial: 'Fresh tissue',
@@ -344,7 +357,7 @@ export const singleServices = [
     sequencingCost: '$5,232 x %Area of squares covered',
   },
   {
-    id: 2,
+    id: 3,
     name: 'Mission Bio Tapestri',
     description: 'A targeted single-cell platform to detect SNVs and CNVs in off-the-shelf or custom panels.',
     startingMaterial: 'Single cell or nuclei suspension',
@@ -354,7 +367,7 @@ export const singleServices = [
     cost: '$2,800/sample',
   },
   {
-    id: 3,
+    id: 4,
     name: 'PlateSeq',
     description:
       'A single- or low-cell Smart-seq 2 method to accommodate projects without enough cells for 10X Genomics, or users interested in capturing the entire body of the gene.',
@@ -367,7 +380,7 @@ export const singleServices = [
     sequencingCost: '$17.50/cell',
   },
   {
-    id: 4,
+    id: 5,
     name: 'DLP',
     description: 'A method to detect CNV in single cells.',
     startingMaterial: 'Single cell suspension',

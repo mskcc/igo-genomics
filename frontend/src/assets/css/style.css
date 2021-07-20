@@ -764,13 +764,7 @@ sup {
   margin-block-end: 0.83em;
 }
 
-/* .navbar-toggle {
-  position: absolute;
-  cursor: pointer; 
-  font-size: 24px;
-} */
-/* 
-.mobile-nav {
-  list-style-type: none;
-  display: none;
-} */
+
+.single-cell-hub .md-divider {
+  margin: 15px 0 !important;
+}
