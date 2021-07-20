@@ -162,7 +162,7 @@
               >
                 <span class="md-list-item-text">{{ service.name }}</span>
                 <span v-if="service.name == '10x Genomics Visium'"
-                  ><router-link :to="{ name: '10x genomics visium' }">more info</router-link></span
+                  ><router-link :to="{ name: 'single cell hub' }">more info</router-link></span
                 >
                 <md-list slot="md-expand">
                   <md-list-item>

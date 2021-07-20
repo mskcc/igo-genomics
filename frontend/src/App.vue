@@ -123,7 +123,7 @@ export default {
         'home',
         'about',
         'platforms & pricing',
-        'single cell platforms',
+        'single cell hub',
         'submission guidelines',
         'sample requirements',
         'accessing your data',
