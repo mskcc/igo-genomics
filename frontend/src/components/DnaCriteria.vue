@@ -6,7 +6,7 @@
     <br />
     <br />
 
-    <md-table id="pass-fail" md-card class="criteria-table">
+    <md-table id="pass-fail my-table" md-card class="criteria-table" @mouseover.native="mouseOver($event)">
       <md-table-row>
         <md-table-head>Platform</md-table-head>
         <md-table-head>Sample Type</md-table-head>
@@ -228,6 +228,7 @@
 </template>
 
 <script>
+// import $ from 'jquery';
 export default {
   name: 'DnaCriteria',
   data: function() {
@@ -239,7 +240,60 @@ export default {
       },
     };
   },
+  methods: {
+    mouseOver(event) {
+      if (event.target.classList.contains('md-table-cell')) {
+        let hoveredCell = event.target;
+        let rowClasses = [];
+        let classList = hoveredCell.classList;
+
+        classList.forEach((c) => {
+          if (c.startsWith('row')) {
+            rowClasses.push('.' + c);
+          }
+        });
+
+        let cellsToHighlight = rowClasses.join(',');
+        console.log(classList, cellsToHighlight);
+
+        // document.querySelector('tr td[class*="row"]').forEach((cell) => {
+        //   if (cell.is(cellsToHighlight)) {
+        //     cell.classList.add('hover');
+        //   }
+        // });
+      }
+    },
+  },
+  mounted: function() {
+    // process rows in order from top to bottom
+    let rows = document.querySelectorAll('tr');
+
+    rows.forEach((row, index) => {
+      let cells = row.querySelectorAll('td');
+      cells.forEach((cell) => {
+        // by default, each row's cells get that row's class
+        cell.classList.add(`row${index}`);
+
+        // then also look at rowspans and assign
+        // additional classes where needed
+        let rowspan = parseInt(cell.getAttribute('rowspan'));
+        if (rowspan > 1) {
+          for (let i = index; i < index + rowspan; i++) {
+            cell.classList.add(`row${i}`);
+          }
+        }
+      });
+    });
+  },
 };
 </script>
 
-<style></style>
+<style>
+.hover {
+  background-color: var(--md-theme-default-highlight-on-background, #e4e4e4) !important;
+}
+
+.md-table-row:hover:not(.md-header-row) .md-table-cell {
+  background-color: var(--md-theme-default-highlight-on-background, #e4e4e4);
+}
+</style>
