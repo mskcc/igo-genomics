@@ -1,5 +1,9 @@
 <template>
   <div id="app" v-cloak>
+    <span class="feedback-button">
+      <md-tooltip md-direction="right">We appreciate your feedback!</md-tooltip>
+      <md-button class="md-fab md-primary" :to="{ name: 'feedback' }"><md-icon>feedback</md-icon></md-button>
+    </span>
     <div class="app-body">
       <div class="app-header md-elevation-7">
         <div class="logo-header">
