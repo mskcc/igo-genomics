@@ -96,7 +96,7 @@
             <p>
               As demand for single cell sequencing rises, IGO continues to invest in platforms to cover a wide variety of sample types and
               data needs. See which application is right for your sample set
-              <router-link :to="{ name: 'single cell platforms' }">here</router-link>.
+              <router-link :to="{ name: 'single cell hub' }">here</router-link>.
             </p>
             <p>
               Currently, IGO’s data delivery consists of FASTQ files separated by sample, sequencer run, and read (forward vs reverse).

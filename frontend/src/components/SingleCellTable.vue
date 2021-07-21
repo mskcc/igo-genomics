@@ -1,6 +1,9 @@
 <template>
   <div>
     <md-table md-card>
+      <md-table-toolbar>
+        <h1 class="md-title">SC/ST Platforms and Supported Sample Types</h1>
+      </md-table-toolbar>
       <md-table-row>
         <md-table-head>Platform</md-table-head>
         <md-table-head>Supported sample types</md-table-head>

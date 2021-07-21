@@ -1,6 +1,9 @@
 <template>
   <div>
     <md-table md-card>
+      <md-table-toolbar>
+        <h1 class="md-title">10X Visium Processing & Price Summary</h1>
+      </md-table-toolbar>
       <md-table-row>
         <md-table-head>Core</md-table-head>
         <md-table-head>Processing Step</md-table-head>

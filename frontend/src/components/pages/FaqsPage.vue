@@ -370,6 +370,20 @@
                         </md-list-item>
                       </md-list>
                     </md-list-item>
+                    <md-list-item md-expand class="md-inset">
+                      <md-icon>add</md-icon>
+                      <span class="md-list-item-text">What is the difference between the CRISPRSeq service and a CRISPR screen?</span>
+                      <md-list slot="md-expand">
+                        <md-list-item>
+                          <div>
+                            CRISPR screens are used to analyze cells transduced with sgRNA libraries to determine the identity and quantity of guides remaining after phenotypic selection. This method usually requires ~30M reads per sample (though coverage varies based on the number of sgRNAs in the library), to get 500-1000X coverage per guide. This is the method standard to a pooled screen.
+                            <br />
+                            <br />
+                            CRISPRSeq as offered by IGO is for evaluating single guide sequences (such as in an arrayed screen). It is a high-throughput (>75K reads) alternative to Sanger sequencing-based evaluation of editing events.
+                          </div>
+                        </md-list-item>
+                      </md-list>
+                    </md-list-item>
                   </md-list>
                 </div>
               </div>

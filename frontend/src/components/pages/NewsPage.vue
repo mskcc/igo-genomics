@@ -49,7 +49,7 @@
         <p>
           As demand for single cell sequencing rises, IGO continues to invest in platforms to cover a wide variety of sample types and data
           needs. See which application is right for your sample set
-          <router-link :to="{ name: 'single cell platforms' }">here</router-link>.
+          <router-link :to="{ name: 'single cell hub' }">here</router-link>.
         </p>
         <p>
           Currently, IGO’s data delivery consists of FASTQ files separated by sample, sequencer run, and read (forward vs reverse).
@@ -91,7 +91,7 @@
         </p>
         <p>
           In addition to the
-          <router-link :to="{ name: '10x genomics visium' }">new 10X Genomics Visium platform</router-link>, we are improving our website
+          <router-link :to="{ name: 'single cell hub' }">new 10X Genomics Visium platform</router-link>, we are improving our website
           resources for investigators. A searchable,
           <router-link :to="{ name: 'ddpcr assays' }">comprehensive list of our ddPCR assays</router-link> is now available and stay tuned
           for a project tracker, currently in beta testing!
@@ -122,8 +122,8 @@
         <p>
           Despite the disruption of the research shutdown and our personnel running hundreds of COVID-19 samples per day in parallel with
           our normal operations, IGO has brought into production a new spatial transcriptomics platform in collaboration with the
-          <a href="https://one.mskcc.org/sites/pub/ski/CoreFacilities/Pages/Molecular-Cytology.aspx"> Molecular Cytology Core</a>.
-          <router-link :to="{ name: '10x genomics visium' }"> Learn more</router-link> or
+          <a href="https://one.mskcc.org/sites/pub/ski/CoreFacilities/Pages/Molecular-Cytology.aspx"> Molecular Cytology Core</a>. Learn
+          more about <router-link :to="{ name: 'single cell hub' }">10x Genomics Visium</router-link> or
           <router-link :to="{ name: 'contact us' }">contact us</router-link> set up a meeting about your project.
         </p>
       </md-card-content>
@@ -138,7 +138,7 @@
           Currently all IGO’s standard platform offerings are now available except for Nanostring. Additionally, we are offering COVID-19
           testing of fresh tissue or cell samples and are rolling out our new spatial transcriptomics option in collaboration with the
           <a href="https://one.mskcc.org/sites/pub/ski/CoreFacilities/Pages/Molecular-Cytology.aspx"> Molecular Cytology Core</a> using the
-          <router-link :to="{ name: '10x genomics visium' }">10X Genomics Visium platform</router-link>.
+          <router-link :to="{ name: 'single cell hub' }">10X Genomics Visium platform</router-link>.
         </p>
         <md-button class="md-raised md-primary" :to="{ name: 'submission guidelines' }">
           Submit for COVID19

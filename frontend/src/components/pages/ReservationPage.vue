@@ -15,7 +15,7 @@
             <md-field>
               <label>Request Type</label>
               <md-select v-model="requestType" name="requestType" id="requestType" :disabled="daySelected">
-                <md-option value="10xGenomics">10X Genomics scRNASeq</md-option>
+                <md-option value="10xGenomics">10X Genomics single cell</md-option>
                 <md-option value="atacSeq">ATAC Seq (Thursdays only)</md-option>
                 <md-option value="missionBio" disabled>MissionBio</md-option>
               </md-select>
@@ -81,6 +81,7 @@
                       <md-select v-model="form.chemistry">
                         <md-option value="10x 5’ RNA seq'">10x 5’ RNA seq</md-option>
                         <md-option value="10x 3’ RNA seq'">10x 3’ RNA seq</md-option>
+                        <md-option value="10x Multiome">10x Multiome</md-option>
                       </md-select>
                       <span class="md-error" v-if="!$v.form.chemistry.required">Chemistry is required</span>
                     </md-field>
@@ -151,6 +152,7 @@ export default {
         new Date('1/18/2021'),
         new Date('5/31/2021'),
         new Date('7/5/2021'),
+        new Date('7/20/2021'),
         new Date('9/6/2021'),
         new Date('11/25/2021'),
         new Date('12/24/2021'),

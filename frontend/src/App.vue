@@ -5,6 +5,21 @@
         <div class="logo-header">
           <md-button :to="{ name: 'home' }"> <img class="igo-logo" alt="IGO logo" src="./assets/logoDarkGrayOnTransp.png"/></md-button>
           <div class="md-headline">Integrated Genomics Operation</div>
+          <div class="mobile">
+            <md-button>
+              <span class="material-icons" @click="showNavigation = true">
+                menu
+              </span>
+            </md-button>
+
+            <md-drawer :md-active.sync="showNavigation">
+              <md-list>
+                <md-list-item v-for="link in mobileLinks" :key="link">
+                  <router-link exact :to="{ name: link }">{{ link.toUpperCase() }}</router-link>
+                </md-list-item>
+              </md-list>
+            </md-drawer>
+          </div>
         </div>
         <div class="right-header">
           <div class="pre-nav">
@@ -102,30 +117,41 @@ export default {
   },
   data: function() {
     return {
+      showNavigation: false,
       links: ['home', 'about', 'platforms & pricing', 'submission guidelines', 'reservations', 'faqs'],
+      mobileLinks: [
+        'home',
+        'about',
+        'platforms & pricing',
+        'single cell hub',
+        'submission guidelines',
+        'sample requirements',
+        'accessing your data',
+        'reservations',
+        'ddpcr assays',
+        'faqs',
+        'contact us',
+        'careers',
+      ],
       toolLinks: [
-        '10x genomics visium',
         'accessing your data',
         'chemistry timeline',
         'ddpcr assays',
         'igo tutorials',
         'metrics and throughput',
         'sample requirements',
-        'single cell platforms',
-        // 'single cell hub',
+        'single cell hub',
       ],
       toolsIsActive: [
         'chemistry timeline',
         'sample requirements',
         'ddpcr assays',
         'igo tutorials',
-        'single cell platforms',
+        'single cell hub',
         'accessing your data',
-        // '10x genomics visium',
         'rna',
         'other',
         'metrics and throughput',
-        'single cell hub',
       ].includes(this.$route.name),
       teamIsActive: this.$route.path.includes('about'),
       platformsIsActive: this.$route.path === '/platforms',
