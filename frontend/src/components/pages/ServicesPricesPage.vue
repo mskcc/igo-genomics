@@ -25,7 +25,7 @@
                 :key="index"
                 md-expand
                 :md-expanded="platformName.replace(/ /g, '').toLowerCase() === service.name.replace(/ /g, '').toLowerCase()"
-                @click="expandList(service.name)"
+                @click="expandList($event, service.name)"
               >
                 <span class="md-list-item-text">{{ service.name }}</span>
                 <md-list slot="md-expand">
@@ -158,12 +158,12 @@
                 :key="index"
                 md-expand
                 :md-expanded="platformName.replace(/ /g, '').toLowerCase() === service.name.replace(/ /g, '').toLowerCase()"
-                @click="expandList(service.name)"
+                @click="expandList($event, service.name)"
               >
                 <span class="md-list-item-text">{{ service.name }}</span>
-                <span v-if="service.name == '10x Genomics Visium'"
-                  ><router-link :to="{ name: 'single cell hub' }">more info</router-link></span
-                >
+                <span v-if="service.name === '10x Genomics Visium'">
+                  <router-link exact :to="{ name: 'single cell hub' }">more info</router-link>
+                </span>
                 <md-list slot="md-expand">
                   <md-list-item>
                     <table class="prices-table services-general-table">
@@ -245,7 +245,7 @@
                 :key="index"
                 md-expand
                 :md-expanded="platformName.replace(/ /g, '').toLowerCase() === service.name.replace(/ /g, '').toLowerCase()"
-                @click="expandList(service.name)"
+                @click="expandList($event, service.name)"
               >
                 <span class="md-list-item-text">{{ service.name }}</span>
 
@@ -393,10 +393,11 @@ export default {
     // console.log(this.platformName);
   },
   methods: {
-    expandList(service) {
+    expandList(event, service) {
       // this.$route.params.name = service;
-      // console.log(this.$router);
-      history.pushState(service, '', `${HOME_PAGE_PATH}/platforms/${service.replace(/ /g, '').toLowerCase()}`);
+      if (event.target.innerHTML !== 'more info') {
+        history.pushState(service, '', `${HOME_PAGE_PATH}/platforms/${service.replace(/ /g, '').toLowerCase()}`);
+      }
     },
   },
   // computed: {
