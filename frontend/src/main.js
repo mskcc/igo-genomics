@@ -146,7 +146,7 @@ const routes = [
 
   { path: '/careers', component: CareersPage, name: 'careers' },
   { path: '/single-cell-hub', component: SingleCellHub, name: 'single cell hub' },
-  { path: '/feedback/:application', component: FeedbackPage, name: 'feedback', props: true },
+  { path: '/feedback/:application?', component: FeedbackPage, name: 'feedback', props: true },
   { path: '/view-feedback', component: ViewFeedbackPage, name: 'view feedback' },
 ];
 
