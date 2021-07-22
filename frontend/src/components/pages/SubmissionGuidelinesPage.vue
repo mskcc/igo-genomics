@@ -156,7 +156,6 @@
                           <li>10X_Genomics-Expression+VDJ</li>
                           <li>10X_Genomics-GeneExpression-5</li>
                           <li>10X_Genomics-GeneExpression-3</li>
-                          <li>10X_Genomics-ATAC</li>
                           <li>10X_Genomics_Multiome</li>
                         </ul>
                       </li>

@@ -24,20 +24,13 @@
             >10X Genomics V(D)J Enrichment</a
           ></md-table-cell
         >
-        <md-table-cell>single cell suspenion (fresh)</md-table-cell>
+        <md-table-cell>single cell suspension (fresh)</md-table-cell>
         <md-table-cell>TCR clonality</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell><a href="https://www.biolegend.com/en-us/totalseq" target="_blank">10X Genomics Feature Barcoding</a></md-table-cell>
+        <md-table-cell><a href="https://www.biolegend.com/en-us/totalseq" target="_blank">10X Genomics Feature Barcoding/Cell Hashing</a></md-table-cell>
         <md-table-cell>single cell suspension (fresh)</md-table-cell>
-        <md-table-cell>targeted protein expression</md-table-cell>
-      </md-table-row>
-      <md-table-row>
-        <md-table-cell
-          ><a href="https://www.10xgenomics.com/products/single-cell-atac" target="_blank">10X Genomics ATAC-Seq</a></md-table-cell
-        >
-        <md-table-cell>single nuclei suspension</md-table-cell>
-        <md-table-cell>chromatin accessibility</md-table-cell>
+        <md-table-cell>targeted protein expression and/or multiplexing of samples</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell><a href="https://www.nature.com/articles/nprot.2014.006" target="_blank">PlateSeq</a></md-table-cell>
@@ -73,7 +66,7 @@
       <md-table-row>
         <md-table-cell
           ><a href="https://www.10xgenomics.com/products/single-cell-multiome-atac-plus-gene-expression" target="_blank"
-            >10 Genomics Multiome</a
+            >10X Genomics Multiome</a
           ></md-table-cell
         >
         <md-table-cell>single nuclei suspension</md-table-cell>

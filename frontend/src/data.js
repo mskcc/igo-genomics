@@ -316,18 +316,17 @@ export const singleServices = [
     id: 0,
     name: '10x Genomics Single Cell',
     description:
-      'Single-cell platforms to interrogate gene expression, immune repertoire, epigenetic factors, copy number, and/or protein expression.',
+      'Single-cell platforms to interrogate gene expression, immune repertoire, and/or protein expression.',
     startingMaterial: 'Single cell or nuclei suspension',
     libraryChemistry: 'Chromium Single Cell',
-    sequencingReadLength: 'PE28/91 (GEX, VDJ, cell hashing), PE50 (ATAC)',
-    sequencingCoverage: '20K reads/cell (GEX), 5K reads/cell (V(D)J & cell hashing), 25K reads/cell (ATAC)',
+    sequencingReadLength: 'PE28/91',
+    sequencingCoverage: '20K reads/cell (GEX), 5K reads/cell (V(D)J & cell hashing)',
     deliverable: 'FASTQ, Cell Ranger output',
     tableHeaders: ['xGenomicsPlatform', 'sampleCostLibrary', 'cellCostSequencing'],
     table: [
       { xGenomicsPlatform: '5′ OR 3′ Gene Expression', sampleCostLibrary: 2068, cellCostSequencing: '$0.05' },
       { xGenomicsPlatform: '5′ Gene Expression + V(D)J Enrichment', sampleCostLibrary: 2279, cellCostSequencing: '$0.06' },
       { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 116, cellCostSequencing: '$0.01' },
-      { xGenomicsPlatform: 'ATAC-Seq', sampleCostLibrary: 2075, cellCostSequencing: '$0.11' },
     ],
   },
   {
