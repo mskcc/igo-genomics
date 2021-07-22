@@ -333,15 +333,14 @@ export const singleServices = [
   {
     id: 1,
     name: '10x Genomics Multiome',
-    description:
-      'Single-cell ATAC-Seq + RNA-Seq from the same nucleus.',
+    description: 'Single-cell ATAC-Seq + RNA-Seq from the same nucleus.',
     startingMaterial: 'Single nuclei suspension',
     libraryChemistry: 'Chromium Single Cell',
     sequencingReadLength: 'PE 28/90 (GEX), PE50 (ATAC)',
     sequencingCoverage: '20K reads/cell (GEX), 25K reads/cell (ATAC)',
     deliverable: 'FASTQ, Cell Ranger output',
     libraryCost: '$3,000/sample',
-    sequencingCost: '$0.10/nucleus'
+    sequencingCost: '$0.10/nucleus',
   },
   {
     id: 2,
@@ -449,12 +448,12 @@ export const otherServices = [
     sequencingCoverage: 'Varies (see below); contact us for additional options',
     deliverable: 'FASTQ',
     tableHeaders: ['totalReads', 'pe50', 'pe100', 'pe150', 'special28'],
-    table: [
-      { totalReads: '120M', pe50: 1092, pe100: 1746, pe150: 1746, special28: 1092 },
-      { totalReads: '350M', pe50: 1414, pe100: 2035, pe150: 2820, special28: 2035 },
-      { totalReads: '350M Rush', pe50: 3287, pe100: 4623, pe150: 5467, special28: 4623 },
-      { totalReads: '1800M', pe50: 4881, pe100: 6613, pe150: 7727, special28: 6613 },
-    ],
+    // table: [
+    //   { totalReads: '120M', pe50: 1092, pe100: 1746, pe150: 1746, special28: 1092 },
+    //   { totalReads: '350M', pe50: 1414, pe100: 2035, pe150: 2820, special28: 2035 },
+    //   { totalReads: '350M Rush', pe50: 3287, pe100: 4623, pe150: 5467, special28: 4623 },
+    //   { totalReads: '1800M', pe50: 4881, pe100: 6613, pe150: 7727, special28: 6613 },
+    // ],
   },
   {
     id: 4,

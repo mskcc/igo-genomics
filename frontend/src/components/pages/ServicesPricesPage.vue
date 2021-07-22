@@ -276,6 +276,13 @@
                         <th>Deliverable:</th>
                         <td>{{ service.deliverable }}</td>
                       </tr>
+                      <tr v-if="service.name == 'Investigator Prepared Libraries'">
+                        <th>Pricing:</th>
+                        <td>
+                          IGO is currently undergoing a price change based on new instrumentation and changes in reagent costs. New prices
+                          will be posted soon!
+                        </td>
+                      </tr>
                     </table></md-list-item
                   >
                   <span v-if="service.name == 'Investigator Prepared Libraries'">
