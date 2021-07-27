@@ -7,8 +7,22 @@
     <div v-else>
       <form @submit.prevent="submitFeedback">
         <md-card>
-          <md-card-header>
+          <md-card-header v-if="application">
             <div class="md-title">Tell us about your experience with {{ validApplications[application] }}*</div>
+          </md-card-header>
+          <md-card-header v-else>
+            <div class="md-title">
+              <div>Tell us about your experience with</div>
+              <md-field>
+                <label for="application">Process or web application</label>
+                <md-select v-model="applicationClone" name="application" id="application">
+                  <md-option v-for="(app, name) in validApplications" :key="name" :value="name">{{ app }}</md-option>
+                </md-select>
+              </md-field>
+              <span>
+                <span class="error" v-if="formHasErrors">This field is required</span>
+              </span>
+            </div>
           </md-card-header>
           <br />
           <md-card-content>
@@ -92,6 +106,7 @@ export default {
         'request-tracker': 'Request Tracker',
         'data-delivery': 'Data Delivery',
       },
+      applicationClone: this.application,
       form: {
         opinionRating: '',
         feedbackCategory: '',
@@ -102,6 +117,7 @@ export default {
   },
   validations() {
     return {
+      applicationClone: { required },
       form: {
         opinionRating: { required },
       },
@@ -109,7 +125,7 @@ export default {
   },
   computed: {
     valid: function() {
-      return this.application in this.validApplications;
+      return this.application in this.validApplications || !this.application;
     },
   },
   methods: {
@@ -131,7 +147,7 @@ export default {
       if (!this.formHasErrors) {
         app.axios
           .post(`${API_URL}/submitFeedback`, {
-            data: { application: this.application, ...this.form },
+            data: { application: this.applicationClone, ...this.form },
           })
           .then((response) => {
             this.$swal({ title: 'Thank you', text: response.data.message, icon: 'success' });
