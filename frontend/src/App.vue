@@ -2,7 +2,7 @@
   <div id="app" v-cloak>
     <span class="feedback-button">
       <md-tooltip md-direction="right">We appreciate your feedback!</md-tooltip>
-      <md-button class="md-fab md-primary" :to="{ name: 'feedback' }"><md-icon>thumb_up_alt</md-icon></md-button>
+      <md-button class="md-fab md-mini md-primary" :to="{ name: 'feedback' }"><md-icon>thumb_up_alt</md-icon></md-button>
     </span>
     <div class="app-body">
       <div class="app-header md-elevation-7">
