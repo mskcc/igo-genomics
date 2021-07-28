@@ -6,9 +6,13 @@ const moment = require('moment');
 // return priorR+afterR
 const _ = require('lodash');
 const duration = 3;
-exports.getAvailableHours = (startTime, range) => {
-  // console.log(range);
+exports.getAvailableHours = (date, stringRange) => {
   // if (!range.includes(startTime)) return [];
+  const range = [];
+  stringRange.forEach(element => {range.push(parseInt(element.split(':')[0]))})
+  
+  let startTime = new Date(date).getHours()
+
   const existingApptStartTime = startTime;
   const existingApptEndTime = existingApptStartTime + duration;
 
@@ -34,15 +38,6 @@ exports.getAvailableHours = (startTime, range) => {
   );
   return result;
 };
-// console.log('18', getAvailableHours(15));
-// console.log('10', getAvailableHours(14));
-// console.log('11', getAvailableHours(11));
-// console.log(
-//   'existing booking at 13, next booking at 10',
-//   getAvailableHours(10, [10, 16, 17, 18, 19, 20, 21])
-// );
-
-// // [13, 14, 15]
 // console.log(
 //   'existing booking at 10, next booking at 18',
 //   getAvailableHours(18, [13, 14, 15, 16, 17, 18, 19, 20, 21])

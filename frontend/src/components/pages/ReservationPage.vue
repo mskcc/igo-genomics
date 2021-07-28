@@ -18,6 +18,7 @@
                 <md-option value="10xGenomics">10X Genomics single cell</md-option>
                 <md-option value="atacSeq">ATAC Seq (Thursdays only)</md-option>
                 <md-option value="missionBio" disabled>MissionBio</md-option>
+                <md-option value="spm">All others</md-option>
               </md-select>
             </md-field>
           </md-card-content>
@@ -27,10 +28,12 @@
           <span v-show="daySelected">
             <span v-show="timesAvailable">
               <md-card-content>
-                <vue-timepicker
-                  format="hh A"
+                <!-- <vue-timepicker
+                  format="hh:mm A"
                   v-model="form.time"
                   :hour-range="hourRange"
+                  :minute-interval="minuteInterval"
+                  :minute-range="minuteRange"
                   hide-disabled-items
                   @change="changeHandler"
                   placeholder="Dropoff Time"
@@ -40,7 +43,9 @@
                   <template v-slot:icon>
                     <i class="far fa-clock"></i>
                   </template>
-                </vue-timepicker>
+                </vue-timepicker> -->
+                <md-button v-for="(time, index) in hourRange" :key="index" @click="changeHandler">{{ time }}</md-button>
+                {{ timeSelected }}
                 <div v-show="invalidTimeSelected">Invalid time slot, please correct</div>
                 <span v-show="timeSelected">
                   <md-field>
@@ -119,15 +124,16 @@
 <script>
 import * as app from './../../app.js';
 import { API_URL } from './../../config.js';
-import VueTimepicker from 'vue2-timepicker';
-import 'vue2-timepicker/dist/VueTimepicker.css';
+// import VueTimepicker from 'vue2-timepicker';
+// import 'vue2-timepicker/dist/VueTimepicker.css';
 import { required, email, numeric, requiredIf } from 'vuelidate/lib/validators';
 // import { HotTable } from '@handsontable/vue';
 import ExistingReservations from '../ExistingReservations.vue';
 
 export default {
   name: 'ReservationPage',
-  components: { VueTimepicker, ExistingReservations },
+  // components: { VueTimepicker, ExistingReservations },
+  components: { ExistingReservations },
   data: function() {
     return {
       message: 'Please select a day.',
@@ -135,15 +141,17 @@ export default {
       timeSelected: false,
       invalidTimeSelected: false,
       timesAvailable: false,
-      requestType: '',
+      requestType: 'spm',
       form: {
         name: '',
         email: '',
         sampleNumber: '',
         chemistry: '',
-        time: { A: '', hh: '', h: '', militaryTime: '', weekday: '' },
+        time: { A: '', hh: '', h: '', mm: '', militaryTime: '', weekday: '' },
       },
       hourRange: [],
+      minuteRange: [],
+      minuteInterval: '',
       formHasErrors: false,
       // for vc-date-picker
       dateSelected: new Date(),
@@ -253,6 +261,8 @@ export default {
               } else {
                 this.timesAvailable = true;
                 this.hourRange = response.data.hourRange;
+
+                // console.log(this.hourRange);
               }
             });
         }
@@ -291,28 +301,28 @@ export default {
           .catch((error) => this.$swal({ title: 'Unable to book', text: error.response.data.message, animation: false, icon: 'error' }));
       }
     },
-    changeHandler(eventData) {
+    changeHandler() {
+      this.timeSelected = true;
       // eventData -> {data: {HH:..., mm:...}, displayTime: 'HH:mm'}
-      if (eventData.data.A && eventData.data.HH) {
-        // check if the time selected is valid
-        if (this.$refs.timePicker.hasInvalidInput) {
-          this.invalidTimeSelected = true;
-          this.timeSelected = false;
-        } else {
-          this.invalidTimeSelected = false;
-          this.timeSelected = true;
-        }
+      // if (eventData.data.A && eventData.data.HH) {
+      //   // check if the time selected is valid
+      //   if (this.$refs.timePicker.hasInvalidInput) {
+      //     this.invalidTimeSelected = true;
+      //     this.timeSelected = false;
+      //   } else {
+      //     this.invalidTimeSelected = false;
+      //     this.timeSelected = true;
+      //   }
 
-        // const input = document.getElementsByClassName('vue__time-picker time-picker')[0].querySelector('input');
-        // this.invalidTimeSelected = input.classList.contains('invalid');
-        // console.log(input);
-        // this.validTimeSelected = true;
+      //   // const input = document.getElementsByClassName('vue__time-picker time-picker')[0].querySelector('input');
+      //   // this.invalidTimeSelected = input.classList.contains('invalid');
+      //   // this.validTimeSelected = true;
 
-        this.form.time.militaryTime = parseInt(eventData.data.HH);
-        this.form.time.h = eventData.data.h;
-      } else {
-        this.timeSelected = false;
-      }
+      //   this.form.time.militaryTime = parseInt(eventData.data.HH);
+      //   this.form.time.h = eventData.data.h;
+      // } else {
+      //   this.timeSelected = false;
+      // }
     },
     getMaxDate() {
       var today = new Date();
@@ -322,7 +332,6 @@ export default {
   },
   // mounted: function() {
   //   let todaysDate = new Date().toLocaleString().split(',')[0];
-  //   console.log(todaysDate);
   //   this.disabledDates.push(new Date());
   // },
 };

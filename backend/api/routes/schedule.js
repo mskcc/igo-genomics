@@ -161,7 +161,7 @@ module.exports = function (router) {
             let range = defaultHourRange;
 
             appointments.forEach((appointment) => {
-              range = helpers.getAvailableHours(appointment.startTime, range);
+              range = helpers.getAvailableHours(appointment.fullDate, range);
             });
             // that day is fully booked
             if (_.isEmpty(range)) {
