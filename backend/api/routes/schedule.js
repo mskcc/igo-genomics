@@ -81,7 +81,7 @@ module.exports = function (router) {
           .json({ message: 'Appointment could not be saved.' });
       }
 
-      mailer.sendBookingNotification(appointment, invite);
+      // mailer.sendBookingNotification(appointment, invite);
       return response.status(200).json({
         message:
           'Please check for a confirmation email and remember to call (646)888-3856 before sample dropoff.',
@@ -90,7 +90,7 @@ module.exports = function (router) {
   });
 
   router.get('/existingAppointments/:requestType', function (req, response) {
-    let today = moment().startOf('day').valueOf();
+    let today = new Date().setHours(0, 0, 0, 0);
     let requestType = req.params.requestType;
     let headers = [];
     columns.forEach((column) => {
@@ -110,7 +110,12 @@ module.exports = function (router) {
         if (appointments) {
           let futureAppointments = [];
           appointments.forEach((appointment) => {
-            let appointmentDate = moment(appointment.date).valueOf();
+            let appointmentDate = new Date(appointment.dateTime).setHours(
+              0,
+              0,
+              0,
+              0
+            );
             if (appointmentDate >= today) {
               futureAppointments.push(appointment);
             }
@@ -125,19 +130,32 @@ module.exports = function (router) {
     req,
     response
   ) {
-    // for this day, which slots are taken if any
-    // returns hour range for that day, defaults in scheduleConfig.js
+    // returns range for given day, defaults in scheduleConfig.js
     let requestType = req.params.requestType;
     let weekday = req.params.weekday;
     let date = req.params.date;
 
-    let defaultHourRange = scheduleConfig[requestType][weekday];
+    let timeRange = [];
+    let config = scheduleConfig[requestType][weekday];
+    // config.forEach((time) =>
+    //   timeRange.push(parseFloat(time.replace(':', '.')))
+    // );
+    config.forEach((time) => {
+      let tempObject = {
+        string: time,
+        float: parseFloat(time.replace(':', '.')),
+      };
+      // tempObject['string'] = time;
+      // tempObject['float'] = parseFloat(time.replace(':', '.'));
+      // timeRange[time] = parseFloat(time.replace(':', '.'));
+      timeRange.push(tempObject);
+    });
 
     // if there are no times for that requestType on that day just return
-    if (_.isEmpty(defaultHourRange)) {
+    if (_.isEmpty(timeRange)) {
       return response.status(204).send();
     }
-    // check for existing appointments
+    // check for existing appointments for that day
     AppointmentModel.find({ date: date, requestType: requestType })
       .lean()
       .exec(function (err, appointments) {
@@ -146,30 +164,32 @@ module.exports = function (router) {
             .status(500)
             .json({ message: 'Backend encountered a fatal error.' });
         }
-
         if (_.isEmpty(appointments)) {
+          console.log('no appointments');
+          let filteredTimeRange = timeRange.filter(
+            (element) => element.float <= 18
+          );
           return response.status(200).json({
             // no appointments already but trim hours later in day
-            hourRange: defaultHourRange.filter((element) => element <= 18),
+            hourRange: filteredTimeRange,
           });
         } else {
           // atac is easy bc only have 1 time slot per Thursday
           if (requestType === 'atacSeq') {
             return response.status(204).send();
           } else {
-            // we need to filter existing appointments
-            let range = defaultHourRange;
-
             appointments.forEach((appointment) => {
-              range = helpers.getAvailableHours(appointment.fullDate, range);
+              timeRange = helpers.getAvailableHours(
+                appointment.dateTime,
+                timeRange
+              );
             });
             // that day is fully booked
-            if (_.isEmpty(range)) {
+            if (_.isEmpty(timeRange)) {
               return response.status(204).send();
             } else {
-              // console.log(range);
               return response.status(200).json({
-                hourRange: range,
+                hourRange: timeRange,
               });
             }
           }
@@ -180,8 +200,8 @@ module.exports = function (router) {
   // deletes an appointment
   router.post('/cancelAppointment/:id', function (req, response) {
     let appointmentId = req.params.id;
-  
-    AppointmentModel.findOneAndDelete({_id: appointmentId}, (function (
+
+    AppointmentModel.findOneAndDelete({ _id: appointmentId }, function (
       error,
       appointment
     ) {
@@ -198,13 +218,13 @@ module.exports = function (router) {
         //   .send(
         //     '<p style=" text-align: center; font-size: larger;">Appointment cancelled!</p><p style=" text-align: center;" ><img style="width:50px; margin:auto 0;" src="https://igodev.mskcc.org/img/logoDarkGrayOnTransp.f0d9e455.png"></p>'
         //   );
-        return response.status(200).json({message: 'Appointment cancelled!'})
+        return response.status(200).json({ message: 'Appointment cancelled!' });
       }
       // no appointment was found
       return response.status(500).json({
         message: 'Appointment not found',
       });
-      
+
       // send cancellation email
 
       // return response
@@ -212,13 +232,13 @@ module.exports = function (router) {
       //   .send(
       //     '<p style=" text-align: center; font-size: larger;">Appointment not found.</p><p style=" text-align: center;" ><img style="width:50px; margin:auto 0;" src="https://igodev.mskcc.org/img/logoDarkGrayOnTransp.f0d9e455.png"></p>'
       //   );
-    }));
+    });
   });
 
   router.get('/appointment/:id', function (req, response) {
     let appointmentId = req.params.id;
-  
-    AppointmentModel.findById(appointmentId, function(error, appointment) {
+
+    AppointmentModel.findById(appointmentId, function (error, appointment) {
       // not a valid id
       if (error) {
         return response.status(500).json({
@@ -226,15 +246,12 @@ module.exports = function (router) {
         });
       }
       if (appointment) {
-        return response.status(200).json({appointment: appointment})
+        return response.status(200).json({ appointment: appointment });
       }
       // no appointment was found
       return response.status(500).json({
         message: 'Appointment not found',
       });
-    })
+    });
   });
-
 };
-
-

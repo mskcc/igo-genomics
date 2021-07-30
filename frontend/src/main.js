@@ -4,7 +4,6 @@ import VueRouter from 'vue-router';
 import store from './store';
 import VueCoreVideoPlayer from 'vue-core-video-player';
 import DatePicker from 'v-calendar';
-import VueTimepicker from 'vue2-timepicker';
 import Vuelidate from 'vuelidate';
 
 import './filters.js';
@@ -103,7 +102,7 @@ Vue.use(DatePicker, {
   componentPrefix: 'vc', // Use <vc-calendar /> instead of <v-calendar />
 });
 
-Vue.use(VueTimepicker);
+Vue.use(require('vue-moment'));
 
 Vue.config.productionTip = false;
 

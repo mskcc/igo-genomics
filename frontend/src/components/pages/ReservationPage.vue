@@ -28,23 +28,10 @@
           <span v-show="daySelected">
             <span v-show="timesAvailable">
               <md-card-content>
-                <!-- <vue-timepicker
-                  format="hh:mm A"
-                  v-model="form.time"
-                  :hour-range="hourRange"
-                  :minute-interval="minuteInterval"
-                  :minute-range="minuteRange"
-                  hide-disabled-items
-                  @change="changeHandler"
-                  placeholder="Dropoff Time"
-                  close-on-complete
-                  ref="timePicker"
-                >
-                  <template v-slot:icon>
-                    <i class="far fa-clock"></i>
-                  </template>
-                </vue-timepicker> -->
-                <md-button v-for="(time, index) in hourRange" :key="index" @click="changeHandler">{{ time }}</md-button>
+                <md-button v-for="(time, index) in hourRange" :key="index" @click="changeHandler(time)">
+                  {{ new Date().setHours(parseInt(time.string.split(':')[0]), parseInt(time.string.split(':')[1])) | moment('h:mm A') }}
+                </md-button>
+
                 {{ timeSelected }}
                 <div v-show="invalidTimeSelected">Invalid time slot, please correct</div>
                 <span v-show="timeSelected">
@@ -124,15 +111,12 @@
 <script>
 import * as app from './../../app.js';
 import { API_URL } from './../../config.js';
-// import VueTimepicker from 'vue2-timepicker';
-// import 'vue2-timepicker/dist/VueTimepicker.css';
 import { required, email, numeric, requiredIf } from 'vuelidate/lib/validators';
 // import { HotTable } from '@handsontable/vue';
 import ExistingReservations from '../ExistingReservations.vue';
 
 export default {
   name: 'ReservationPage',
-  // components: { VueTimepicker, ExistingReservations },
   components: { ExistingReservations },
   data: function() {
     return {
@@ -237,7 +221,6 @@ export default {
       // time: { A: null, hh: null, h: null, militaryTime: null },
     },
     dayClick(date) {
-      // console.log(date);
       // user clicked on a valid day
       if (date.isDisabled === false) {
         // console.log(date.isDisabled);
@@ -248,6 +231,7 @@ export default {
           this.form.time.weekday = date.weekday;
           this.daySelected = true;
           this.dateSelected = date;
+          console.log(date);
           app.axios
             .get(`${API_URL}/availableSlots/${this.requestType}/${this.dateSelected.weekday}/${this.dateSelected.id}`)
             .then((response) => {
@@ -261,8 +245,7 @@ export default {
               } else {
                 this.timesAvailable = true;
                 this.hourRange = response.data.hourRange;
-
-                // console.log(this.hourRange);
+                console.log(this.hourRange);
               }
             });
         }
@@ -301,8 +284,9 @@ export default {
           .catch((error) => this.$swal({ title: 'Unable to book', text: error.response.data.message, animation: false, icon: 'error' }));
       }
     },
-    changeHandler() {
+    changeHandler(time) {
       this.timeSelected = true;
+      this.form.time.militaryTime = time;
       // eventData -> {data: {HH:..., mm:...}, displayTime: 'HH:mm'}
       // if (eventData.data.A && eventData.data.HH) {
       //   // check if the time selected is valid
