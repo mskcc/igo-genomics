@@ -14,24 +14,25 @@
           <md-card-content>
             <md-field>
               <label>Request Type</label>
-              <md-select v-model="requestType" name="requestType" id="requestType" :disabled="daySelected">
+              <!-- <md-select v-model="requestType" name="requestType" id="requestType" :disabled="daySelected"> -->
+              <md-select v-model="requestType" name="requestType" id="requestType" :disabled="dateSelected ? true : false">
                 <md-option value="10xGenomics">10X Genomics single cell</md-option>
                 <md-option value="atacSeq">ATAC Seq (Thursdays only)</md-option>
                 <md-option value="missionBio" disabled>MissionBio</md-option>
-                <md-option value="spm">All others</md-option>
+                <md-option value="spm">All Others</md-option>
               </md-select>
             </md-field>
           </md-card-content>
           <div v-show="requestType">
             <span v-html="message"> </span>
           </div>
-          <span v-show="daySelected">
-            <span v-show="timesAvailable">
+          <span v-show="dateSelected">
+            <span v-show="timeRange">
               <md-card-content>
                 <md-button class="md-raised md-primary" v-for="(time, index) in timeRange" :key="index" @click="changeHandler(time)">
                   {{ new Date().setHours(parseInt(time.string.split(':')[0]), parseInt(time.string.split(':')[1])) | moment('h:mm A') }}
                 </md-button>
-                <span v-show="timeSelected">
+                <span v-show="form.time.militaryTime">
                   <div class="md-layout md-gutter">
                     <div class="md-layout-item md-small-size-100">
                       <md-field>
@@ -57,23 +58,15 @@
                     <span class="md-error" v-if="!$v.form.email.required">Email is required</span>
                     <span class="md-error" v-else-if="!$v.form.email.email">Please enter a valid email</span>
                   </md-field>
-                  <span v-if="requestType !== 'spm' ">
-                  <md-field :class="getValidationClass('sampleNumber')">
-                    <label>Estimated Number of Samples</label>
-                    <md-input v-model="form.sampleNumber" />
-                    <span class="md-error" v-if="!$v.form.sampleNumber.required">Number of samples is required</span>
-                    <span class="md-error" v-else-if="!$v.form.sampleNumber.numeric">Please enter a number</span>
-                    <!-- <span class="md-error" v-else-if="!$v.form.sampleNumber.maxValue">We cannot accept more than 25 samples/day</span> -->
-                  </md-field>
+                  <span v-if="requestType !== 'spm'">
+                    <md-field :class="getValidationClass('sampleNumber')">
+                      <label>Estimated Number of Samples</label>
+                      <md-input v-model="form.sampleNumber" />
+                      <span class="md-error" v-if="!$v.form.sampleNumber.required">Number of samples is required</span>
+                      <span class="md-error" v-else-if="!$v.form.sampleNumber.numeric">Please enter a number</span>
+                      <!-- <span class="md-error" v-else-if="!$v.form.sampleNumber.maxValue">We cannot accept more than 25 samples/day</span> -->
+                    </md-field>
                   </span>
-                  <!-- <md-field :class="getValidationClass('chemistry')">
-                    <label>Chemistry</label>
-                    <md-select v-model="form.chemistry">
-                      <md-option value="10x 5’ RNA seq'">10x 5’ RNA seq</md-option>
-                      <md-option value="10x 3’ RNA seq'">10x 3’ RNA seq</md-option>
-                    </md-select>
-                    <span class="md-error" v-if="!$v.form.chemistry.required">Chemistry is required</span>
-                  </md-field> -->
                   <span v-if="requestType === '10xGenomics'">
                     <md-field :class="getValidationClass('chemistry')">
                       <label>Chemistry</label>
@@ -85,10 +78,10 @@
                       <span class="md-error" v-if="!$v.form.chemistry.required">Chemistry is required</span>
                     </md-field>
                   </span>
-                   <span v-if="requestType === 'spm'">
+                  <span v-if="requestType === 'spm'">
                     <md-field :class="getValidationClass('ilabServiceId')">
                       <label>iLab Service ID</label>
-                       <md-input v-model="form.ilabServiceId" />
+                      <md-input v-model="form.ilabServiceId" />
                       <span class="md-error" v-if="!$v.form.ilabServiceId.required">iLab Service ID is required</span>
                     </md-field>
                   </span>
@@ -96,7 +89,7 @@
               </md-card-content>
               <md-card-actions>
                 <md-button class="md-primary" @click="reset">Clear</md-button>
-                <span v-show="timeSelected">
+                <span v-show="form.time.militaryTime">
                   <md-button type="submit" class="md-primary">Submit</md-button>
                 </span>
               </md-card-actions>
@@ -126,7 +119,6 @@
 import * as app from './../../app.js';
 import { API_URL } from './../../config.js';
 import { required, email, numeric, requiredIf } from 'vuelidate/lib/validators';
-// import { HotTable } from '@handsontable/vue';
 import ExistingReservations from '../ExistingReservations.vue';
 
 export default {
@@ -135,10 +127,6 @@ export default {
   data: function() {
     return {
       message: 'Please select a day.',
-      daySelected: false,
-      timeSelected: false,
-
-      timesAvailable: false,
       requestType: 'spm',
       form: {
         name: '',
@@ -146,13 +134,14 @@ export default {
         sampleNumber: '',
         chemistry: '',
         time: { A: '', hh: '', h: '', mm: '', militaryTime: '', weekday: '' },
-        ilabServiceId: ''
+        ilabServiceId: '',
       },
       timeRange: [],
 
       formHasErrors: false,
       // for vc-date-picker
-      dateSelected: new Date(),
+      // dateSelected: new Date(),
+      dateSelected: '',
       disabledDates: [
         new Date('1/1/2021'),
         new Date('1/18/2021'),
@@ -213,7 +202,6 @@ export default {
       // console.log(this.form.time);
       if (this.requestType === 'atacSeq' && this.form.time.weekday !== '6') {
         this.message = 'At this time ATAC Seq reservations can only be made on Thursdays';
-        this.timesAvailable = false;
       } else {
         this.message =
           'If your desired time slot is not available please complete <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">this waitlist form</a>';
@@ -228,8 +216,8 @@ export default {
   methods: {
     reset() {
       this.requestType = '';
-      this.daySelected = false;
-      this.timeSelected = false;
+      this.dateSelected = '';
+      this.timeRange = [];
       this.form.name = '';
       this.form.email = '';
       this.form.sampleNumber = '';
@@ -251,20 +239,18 @@ export default {
         if (this.requestType) {
           this.form.time.militaryTime = '';
           this.form.time.weekday = date.weekday;
-          this.daySelected = true;
+
           this.dateSelected = date;
+          this.timeRange = [];
           app.axios
             .get(`${API_URL}/availableSlots/${this.requestType}/${this.dateSelected.weekday}/${this.dateSelected.id}`)
             .then((response) => {
               if (response.status === 204 && this.requestType === 'atacSeq') {
-                this.timesAvailable = false;
                 this.message = 'At this time ATAC Seq reservations can only be made on Thursdays';
               } else if (response.status === 204 && this.requestType === '10xGenomics') {
-                this.timesAvailable = false;
                 this.message =
                   'There are no available times for this day. You can join the waitlist <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">here</a>. If you are looking to cancel an existing appointment, please refer to your confirmation email.';
               } else {
-                this.timesAvailable = true;
                 this.timeRange = response.data.timeRange;
               }
             });
@@ -298,14 +284,12 @@ export default {
           })
           .then((response) => {
             this.$swal({ title: 'Booked', text: response.data.message, animation: false, icon: 'success' });
-            // this.daySelected = false;
             this.reset();
           })
           .catch((error) => this.$swal({ title: 'Unable to book', text: error.response.data.message, animation: false, icon: 'error' }));
       }
     },
     changeHandler(time) {
-      this.timeSelected = true;
       this.form.time.militaryTime = time.string;
     },
     getMaxDate() {
