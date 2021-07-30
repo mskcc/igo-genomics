@@ -28,18 +28,24 @@
           <span v-show="daySelected">
             <span v-show="timesAvailable">
               <md-card-content>
-                <md-button v-for="(time, index) in hourRange" :key="index" @click="changeHandler(time)">
+                <md-button class="md-raised md-primary" v-for="(time, index) in timeRange" :key="index" @click="changeHandler(time)">
                   {{ new Date().setHours(parseInt(time.string.split(':')[0]), parseInt(time.string.split(':')[1])) | moment('h:mm A') }}
                 </md-button>
-
-                {{ timeSelected }}
-                <div v-show="invalidTimeSelected">Invalid time slot, please correct</div>
                 <span v-show="timeSelected">
-                  <md-field>
-                    <label>Selected date</label>
-                    <md-input v-model="dateSelected.id" readonly>{{ dateSelected.id }}</md-input>
-                  </md-field>
-
+                  <div class="md-layout md-gutter">
+                    <div class="md-layout-item md-small-size-100">
+                      <md-field>
+                        <label>Selected date</label>
+                        <md-input v-model="dateSelected.id" readonly></md-input>
+                      </md-field>
+                    </div>
+                    <div class="md-layout-item md-small-size-100">
+                      <md-field>
+                        <label>Selected time (24hr)</label>
+                        <md-input v-model="form.time.militaryTime" readonly> </md-input>
+                      </md-field>
+                    </div>
+                  </div>
                   <md-field :class="getValidationClass('name')">
                     <label>Full Name</label>
                     <md-input v-model="form.name" />
@@ -51,6 +57,7 @@
                     <span class="md-error" v-if="!$v.form.email.required">Email is required</span>
                     <span class="md-error" v-else-if="!$v.form.email.email">Please enter a valid email</span>
                   </md-field>
+                  <span v-if="requestType !== 'spm' ">
                   <md-field :class="getValidationClass('sampleNumber')">
                     <label>Estimated Number of Samples</label>
                     <md-input v-model="form.sampleNumber" />
@@ -58,7 +65,7 @@
                     <span class="md-error" v-else-if="!$v.form.sampleNumber.numeric">Please enter a number</span>
                     <!-- <span class="md-error" v-else-if="!$v.form.sampleNumber.maxValue">We cannot accept more than 25 samples/day</span> -->
                   </md-field>
-
+                  </span>
                   <!-- <md-field :class="getValidationClass('chemistry')">
                     <label>Chemistry</label>
                     <md-select v-model="form.chemistry">
@@ -76,6 +83,13 @@
                         <md-option value="10x Multiome">10x Multiome</md-option>
                       </md-select>
                       <span class="md-error" v-if="!$v.form.chemistry.required">Chemistry is required</span>
+                    </md-field>
+                  </span>
+                   <span v-if="requestType === 'spm'">
+                    <md-field :class="getValidationClass('ilabServiceId')">
+                      <label>iLab Service ID</label>
+                       <md-input v-model="form.ilabServiceId" />
+                      <span class="md-error" v-if="!$v.form.ilabServiceId.required">iLab Service ID is required</span>
                     </md-field>
                   </span>
                 </span>
@@ -123,7 +137,7 @@ export default {
       message: 'Please select a day.',
       daySelected: false,
       timeSelected: false,
-      invalidTimeSelected: false,
+
       timesAvailable: false,
       requestType: 'spm',
       form: {
@@ -132,10 +146,10 @@ export default {
         sampleNumber: '',
         chemistry: '',
         time: { A: '', hh: '', h: '', mm: '', militaryTime: '', weekday: '' },
+        ilabServiceId: ''
       },
-      hourRange: [],
-      minuteRange: [],
-      minuteInterval: '',
+      timeRange: [],
+
       formHasErrors: false,
       // for vc-date-picker
       dateSelected: new Date(),
@@ -165,7 +179,9 @@ export default {
         name: { required },
         email: { required, email },
         sampleNumber: {
-          required,
+          required: requiredIf(function() {
+            return this.requestType !== 'spm';
+          }),
           numeric,
           // maxValue: maxValue(function() {
           //   if (this.requestType === 'atacSeq') {
@@ -177,6 +193,11 @@ export default {
         chemistry: {
           required: requiredIf(function() {
             return this.requestType === '10xGenomics';
+          }),
+        },
+        ilabServiceId: {
+          required: requiredIf(function() {
+            return this.requestType === 'spm';
           }),
         },
       },
@@ -228,10 +249,10 @@ export default {
           this.message = 'Please select a Request Type';
         }
         if (this.requestType) {
+          this.form.time.militaryTime = '';
           this.form.time.weekday = date.weekday;
           this.daySelected = true;
           this.dateSelected = date;
-          console.log(date);
           app.axios
             .get(`${API_URL}/availableSlots/${this.requestType}/${this.dateSelected.weekday}/${this.dateSelected.id}`)
             .then((response) => {
@@ -244,8 +265,7 @@ export default {
                   'There are no available times for this day. You can join the waitlist <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">here</a>. If you are looking to cancel an existing appointment, please refer to your confirmation email.';
               } else {
                 this.timesAvailable = true;
-                this.hourRange = response.data.hourRange;
-                console.log(this.hourRange);
+                this.timeRange = response.data.timeRange;
               }
             });
         }
@@ -286,27 +306,7 @@ export default {
     },
     changeHandler(time) {
       this.timeSelected = true;
-      this.form.time.militaryTime = time;
-      // eventData -> {data: {HH:..., mm:...}, displayTime: 'HH:mm'}
-      // if (eventData.data.A && eventData.data.HH) {
-      //   // check if the time selected is valid
-      //   if (this.$refs.timePicker.hasInvalidInput) {
-      //     this.invalidTimeSelected = true;
-      //     this.timeSelected = false;
-      //   } else {
-      //     this.invalidTimeSelected = false;
-      //     this.timeSelected = true;
-      //   }
-
-      //   // const input = document.getElementsByClassName('vue__time-picker time-picker')[0].querySelector('input');
-      //   // this.invalidTimeSelected = input.classList.contains('invalid');
-      //   // this.validTimeSelected = true;
-
-      //   this.form.time.militaryTime = parseInt(eventData.data.HH);
-      //   this.form.time.h = eventData.data.h;
-      // } else {
-      //   this.timeSelected = false;
-      // }
+      this.form.time.militaryTime = time.string;
     },
     getMaxDate() {
       var today = new Date();

@@ -165,13 +165,12 @@ module.exports = function (router) {
             .json({ message: 'Backend encountered a fatal error.' });
         }
         if (_.isEmpty(appointments)) {
-          console.log('no appointments');
           let filteredTimeRange = timeRange.filter(
             (element) => element.float <= 18
           );
           return response.status(200).json({
             // no appointments already but trim hours later in day
-            hourRange: filteredTimeRange,
+            timeRange: filteredTimeRange,
           });
         } else {
           // atac is easy bc only have 1 time slot per Thursday
@@ -189,7 +188,7 @@ module.exports = function (router) {
               return response.status(204).send();
             } else {
               return response.status(200).json({
-                hourRange: timeRange,
+                timeRange: timeRange,
               });
             }
           }
