@@ -202,9 +202,11 @@ export default {
       // console.log(this.form.time);
       if (this.requestType === 'atacSeq' && this.form.time.weekday !== '6') {
         this.message = 'At this time ATAC Seq reservations can only be made on Thursdays';
-      } else {
+      } else if (this.requestType === '10xGenomics') {
         this.message =
           'If your desired time slot is not available please complete <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">this waitlist form</a>';
+      } else {
+        this.message = 'Please select a time.';
       }
     },
     requestType: function() {

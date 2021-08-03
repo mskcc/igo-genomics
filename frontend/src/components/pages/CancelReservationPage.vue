@@ -5,6 +5,8 @@
         <md-card-header>
           <md-card-header-text>
             <div class="md-title">{{ appointment.requestType }} Appointment</div>
+            <div class="md-subheading">{{ appointment.status.toUpperCase() }}</div>
+            <br />
             <div class="md-subheading">{{ appointment.notificationDate }}</div>
             <div class="md-subheading">Starts at {{ appointment.emailTime }}</div>
           </md-card-header-text>
@@ -12,11 +14,12 @@
         <md-card-content>
           <div>{{ appointment.fullName }}</div>
           <div>{{ appointment.email }}</div>
-          <div>{{ appointment.details.sampleNumber }} sample(s)</div>
+          <div v-if="appointment.requestType === 'spm'">iLab Service ID: {{ appointment.details.ilabServiceId }}</div>
+          <div v-else>{{ appointment.details.sampleNumber }} sample(s)</div>
           <div v-if="appointment.requestType === '10xGenomics'">{{ appointment.details.chemistry }}</div>
         </md-card-content>
         <md-card-actions>
-          <md-button class="md-accent" @click="cancelAppointment">Cancel Appointment</md-button>
+          <md-button v-if="appointment.status === 'confirmed'" class="md-accent" @click="cancelAppointment">Cancel Appointment</md-button>
         </md-card-actions>
       </md-card>
     </div>

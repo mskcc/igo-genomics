@@ -26,6 +26,7 @@ const columns = [
 module.exports = function (router) {
   router.post('/bookTime', function (req, response) {
     let form = req.body.data;
+    console.log(form);
 
     let appointment = new AppointmentModel({
       fullName: form.name,
@@ -34,11 +35,15 @@ module.exports = function (router) {
       notificationDate: form.notificationDate,
       requestType: form.requestType,
       startTime: form.time.militaryTime,
-      emailTime: `${form.time.h}${form.time.A}`,
+      // emailTime: `${form.time.h}${form.time.A}`,
+      emailTime: form.time.militaryTime,
       details: {
         chemistry: form.chemistry,
         sampleNumber: form.sampleNumber,
+        ilabServiceId: form.ilabServiceId,
       },
+      status: form.requestType === 'spm' ? 'pending' : 'confirmed',
+      dateTime: `${form.date} ${form.time.militaryTime}`,
     });
     let dateAndTime = moment(`${form.date} ${form.time.militaryTime}:00`);
     let end = moment(`${form.date} ${form.time.militaryTime}:00`).add(
@@ -70,6 +75,7 @@ module.exports = function (router) {
     // mailer.sendBookingNotification(appointment, invite);
     appointment.save(function (err) {
       if (err) {
+        console.log(err);
         if (err.code === 11000) {
           return response.status(409).json({
             message:
@@ -176,6 +182,19 @@ module.exports = function (router) {
           // atac is easy bc only have 1 time slot per Thursday
           if (requestType === 'atacSeq') {
             return response.status(204).send();
+          } else if (requestType === 'spm') {
+            appointments.forEach(
+              (appointment) =>
+                (timeRange = timeRange.filter(
+                  (time) => time.string !== appointment.emailTime
+                ))
+            );
+
+            console.log(timeRange);
+
+            return response.status(200).json({
+              timeRange: timeRange,
+            });
           } else {
             appointments.forEach((appointment) => {
               timeRange = helpers.getAvailableHours(
