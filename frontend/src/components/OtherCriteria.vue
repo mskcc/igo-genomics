@@ -49,7 +49,7 @@
         <md-table-cell rowspan="2" class="try">1nM</md-table-cell>
         <md-table-cell rowspan="2" class="pass">150 &lt; bp &lt; 1000bp</md-table-cell>
         <md-table-cell rowspan="2" class="try">bp &lt; 150</md-table-cell>
-        <md-table-cell>&GreaterEqual;10&#181;L</md-table-cell>
+        <md-table-cell>&GreaterEqual;20&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>Pooled Libraries</md-table-cell>
