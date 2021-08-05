@@ -773,3 +773,7 @@ sup {
   bottom: 0;
   left: 0;
 }
+
+.subpage-header {
+  max-width: fit-content;
+}
