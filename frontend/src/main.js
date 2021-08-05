@@ -33,6 +33,7 @@ import CareersPage from './components/pages/CareersPage.vue';
 import SingleCellHub from './components/pages/SingleCellHub.vue';
 import FeedbackPage from './components/pages/FeedbackPage.vue';
 import ViewFeedbackPage from './components/pages/ViewFeedbackPage.vue';
+import BlockPricingPage from './components/pages/BlockPricingPage.vue';
 
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
@@ -148,6 +149,7 @@ const routes = [
   { path: '/single-cell-hub', component: SingleCellHub, name: 'single cell hub' },
   { path: '/feedback/:application?', component: FeedbackPage, name: 'feedback', props: true },
   { path: '/view-feedback', component: ViewFeedbackPage, name: 'view feedback' },
+  { path: '/block-pricing', component: BlockPricingPage, name: 'block pricing' },
 ];
 
 const router = new VueRouter({
