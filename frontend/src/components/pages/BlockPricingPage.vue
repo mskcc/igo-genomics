@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="faq-page">
     <md-button class="md-primary" @click="submittingPricingInquiry = true">Submit a pricing inquiry</md-button>
     <div>
       <md-dialog :md-active.sync="submittingPricingInquiry" :md-fullscreen="false" style="z-index: 200;">
@@ -7,12 +7,12 @@
       </md-dialog>
     </div>
     <md-list>
-      <md-list-item md-expand class="md-inset">
+      <md-list-item md-expand>
         <md-icon>add</md-icon>
-        <span class="md-list-item-text">I need LESS than 10 million reads</span>
+        <span class="md-list-item-text md-title">I need LESS than 10 million reads</span>
 
         <md-list slot="md-expand">
-          <md-list-item>
+          <md-list-item class="md-inset">
             <md-table md-card>
               <md-table-row>
                 <md-table-head></md-table-head>
@@ -50,40 +50,51 @@
         </md-list>
       </md-list-item>
 
-      <md-list-item md-expand class="md-inset">
+      <md-list-item md-expand>
         <md-icon>add</md-icon>
-        <span class="md-list-item-text">I need MORE than 10 million reads</span>
+        <span class="md-list-item-text md-title">I need MORE than 10 million reads</span>
 
         <md-list slot="md-expand">
-          <md-list-item>
-            PE100: $2.3/million read
+          <md-list-item md-expand class="md-inset">
+            <md-icon>add</md-icon>
+            <span class="md-list-item-text">My run type is PE100 or PE150 or 28/10/10/88 (Single Cell 10x Genomics) </span>
+            <md-list slot="md-expand">
+              <md-list-item>
+                <ul>
+                  <li>PE100: $2.3/million read</li>
+                  <li>PE150: $2.5/million read</li>
+                  <li>10X (28/10/10/88): $2.7/million read</li>
+                </ul>
+              </md-list-item>
+              <md-list-item style="font-style: italic;">Minimum read requested: 10 million </md-list-item>
+            </md-list>
           </md-list-item>
-          <md-list-item>
-            PE150: $2.5/million read
-          </md-list-item>
-          <md-list-item>
-            10X (28/10/10/88): $2.7/million read
-          </md-list-item>
-          <md-list-item> Custom Run Type:</md-list-item><br />
-          <md-list-item>
-            <md-table md-card>
-              <md-table-row>
-                <md-table-head></md-table-head>
-                <md-table-head colspan="3">Block Price</md-table-head>
-              </md-table-row>
-              <md-table-row>
-                <md-table-head>Reads Block (M)</md-table-head>
-                <md-table-head>100 Cycles</md-table-head>
-                <md-table-head>200 Cycles</md-table-head>
-                <md-table-head>300 Cycles</md-table-head>
-              </md-table-row>
-              <md-table-row v-for="(row, index) in customBlockPrices" :key="index">
-                <md-table-cell>{{ row.readsBlock }}</md-table-cell>
-                <md-table-cell>{{ row['100Cycles'] }}</md-table-cell>
-                <md-table-cell>${{ row['200Cycles'] }}</md-table-cell>
-                <md-table-cell>${{ row['300Cycles'] }}</md-table-cell>
-              </md-table-row>
-            </md-table>
+          <md-list-item md-expand class="md-inset">
+            <md-icon>add</md-icon>
+            <span class="md-list-item-text">My run type is custom</span>
+            <md-list slot="md-expand">
+              <md-list-item>
+                <md-table md-card>
+                  <md-table-row>
+                    <md-table-head></md-table-head>
+                    <md-table-head colspan="3">Block Price</md-table-head>
+                  </md-table-row>
+                  <md-table-row>
+                    <md-table-head>Reads Block (M)</md-table-head>
+                    <md-table-head>100 Cycles</md-table-head>
+                    <md-table-head>200 Cycles</md-table-head>
+                    <md-table-head>300 Cycles</md-table-head>
+                  </md-table-row>
+                  <md-table-row v-for="(row, index) in customBlockPrices" :key="index">
+                    <md-table-cell>{{ row.readsBlock }}</md-table-cell>
+                    <md-table-cell>{{ row['100Cycles'] }}</md-table-cell>
+                    <md-table-cell>${{ row['200Cycles'] }}</md-table-cell>
+                    <md-table-cell>${{ row['300Cycles'] }}</md-table-cell>
+                  </md-table-row>
+                </md-table>
+              </md-list-item>
+              <md-list-item style="font-style: italic;">Minimum read requested: 10 million </md-list-item>
+            </md-list>
           </md-list-item>
         </md-list>
       </md-list-item>
