@@ -1,15 +1,9 @@
 <template>
   <div id="faq-page">
-    <md-button class="md-primary" @click="submittingPricingInquiry = true">Submit a pricing inquiry</md-button>
-    <div>
-      <md-dialog :md-active.sync="submittingPricingInquiry" :md-fullscreen="false" style="z-index: 200;">
-        <contact-form v-bind:submittingPricingInquiry.sync="submittingPricingInquiry"></contact-form>
-      </md-dialog>
-    </div>
     <md-list>
       <md-list-item md-expand>
         <md-icon>add</md-icon>
-        <span class="md-list-item-text md-title">I need LESS than 10 million reads</span>
+        <span class="md-list-item-text md-title">I need up to 20 million reads</span>
 
         <md-list slot="md-expand">
           <md-list-item class="md-inset">
@@ -52,7 +46,7 @@
 
       <md-list-item md-expand>
         <md-icon>add</md-icon>
-        <span class="md-list-item-text md-title">I need MORE than 10 million reads</span>
+        <span class="md-list-item-text md-title">I need more than 20 million reads</span>
 
         <md-list slot="md-expand">
           <md-list-item md-expand class="md-inset">
@@ -71,7 +65,7 @@
           </md-list-item>
           <md-list-item md-expand class="md-inset">
             <md-icon>add</md-icon>
-            <span class="md-list-item-text">My run type is custom or I need a customer primer</span>
+            <span class="md-list-item-text">My run type is custom or I need a custom primer</span>
             <md-list slot="md-expand">
               <md-list-item>
                 <md-table md-card>
@@ -96,6 +90,15 @@
             </md-list>
           </md-list-item>
         </md-list>
+      </md-list-item>
+      <md-list-item @click="submittingPricingInquiry = true">
+        <md-icon>add</md-icon>
+
+        <span class="md-list-item-text md-title">What I need is not on this page and I have to submit a pricing inquiry</span>
+
+        <md-dialog :md-active.sync="submittingPricingInquiry" :md-fullscreen="false" style="z-index: 200;">
+          <contact-form v-bind:submittingPricingInquiry.sync="submittingPricingInquiry"></contact-form>
+        </md-dialog>
       </md-list-item>
     </md-list>
   </div>
