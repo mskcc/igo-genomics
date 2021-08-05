@@ -71,7 +71,7 @@
           </md-list-item>
           <md-list-item md-expand class="md-inset">
             <md-icon>add</md-icon>
-            <span class="md-list-item-text">My run type is custom</span>
+            <span class="md-list-item-text">My run type is custom or I need a customer primer</span>
             <md-list slot="md-expand">
               <md-list-item>
                 <md-table md-card>
@@ -93,7 +93,6 @@
                   </md-table-row>
                 </md-table>
               </md-list-item>
-              <md-list-item style="font-style: italic;">Minimum read requested: 10 million </md-list-item>
             </md-list>
           </md-list-item>
         </md-list>
