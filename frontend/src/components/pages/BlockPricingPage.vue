@@ -87,18 +87,22 @@
                   </md-table-row>
                 </md-table>
               </md-list-item>
+              <md-list-item @click="submittingPricingInquiry = true">
+                <span>What I need is not on this page and I have to submit a pricing inquiry</span>
+                <md-dialog :md-active.sync="submittingPricingInquiry" :md-fullscreen="false" style="z-index: 200;">
+                  <contact-form v-bind:submittingPricingInquiry.sync="submittingPricingInquiry"></contact-form>
+                </md-dialog>
+              </md-list-item>
             </md-list>
           </md-list-item>
         </md-list>
       </md-list-item>
-      <md-list-item @click="submittingPricingInquiry = true">
-        <md-icon>add</md-icon>
 
-        <span class="md-list-item-text md-title">What I need is not on this page and I have to submit a pricing inquiry</span>
-
-        <md-dialog :md-active.sync="submittingPricingInquiry" :md-fullscreen="false" style="z-index: 200;">
-          <contact-form v-bind:submittingPricingInquiry.sync="submittingPricingInquiry"></contact-form>
-        </md-dialog>
+      <md-list-item>
+        <span class="md-caption"
+          >Prices indicated on this webpage are an estimation and can be adjusted (higher or lower) at any point in time based on changes in
+          sequencing reagent cost, labor cost, etc.
+        </span>
       </md-list-item>
     </md-list>
   </div>

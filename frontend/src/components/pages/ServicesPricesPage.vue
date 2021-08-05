@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <chemistry-timeline-page></chemistry-timeline-page> -->
     <div class="prices-container">
       <div class="bulk-header">
         <img class="prices-image" src="../../assets/services1.png" alt="bulk logo" />
@@ -360,6 +359,10 @@
       <!-- <div>single prices</div>
       <div>other prices</div> -->
     </div>
+    <span class="md-caption" style="text-align: right;"
+      >Prices indicated on this webpage are an estimation and can be adjusted (higher or lower) at any point in time based on changes in
+      sequencing reagent cost, labor cost, etc.
+    </span>
   </div>
 </template>
 
