@@ -47,7 +47,7 @@
         </div>
         <!-- <md-button @click="toggle">Instructions for submitting COVID19 Requests</md-button>
         <covid-instructions-page v-if="covid"></covid-instructions-page> -->
-        <div id="sample-guidelines" class="full-control">
+        <div id="sample-guidelines">
           <div class="list">
             <md-list>
               <md-list-item md-expand>

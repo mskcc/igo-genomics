@@ -17,7 +17,7 @@
       </div>
 
       <div class="bulk-data">
-        <div class="full-control">
+        <div>
           <div class="list">
             <md-list>
               <md-list-item
@@ -150,7 +150,7 @@
         </div>
       </div>
       <div class="single-data">
-        <div class="full-control">
+        <div>
           <div class="list">
             <md-list>
               <md-list-item
@@ -237,7 +237,7 @@
         </div>
       </div>
       <div class="other-data">
-        <div class="full-control">
+        <div>
           <div class="list">
             <md-list>
               <md-list-item
@@ -276,22 +276,10 @@
                         <th>Deliverable:</th>
                         <td>{{ service.deliverable }}</td>
                       </tr>
-                      <tr v-if="service.name == 'Investigator Prepared Libraries'">
-                        <th>Pricing:</th>
-                        <td>
-                          IGO is currently undergoing a price change based on new instrumentation and changes in reagent costs. New prices
-                          will be posted soon!
-                        </td>
-                      </tr>
                     </table></md-list-item
                   >
                   <span v-if="service.name == 'Investigator Prepared Libraries'">
-                    <md-button class="md-primary" @click="submittingPricingInquiry = true">Submit a pricing inquiry</md-button>
-                    <div>
-                      <md-dialog :md-active.sync="submittingPricingInquiry" :md-fullscreen="false" style="z-index: 200;">
-                        <contact-form v-bind:submittingPricingInquiry.sync="submittingPricingInquiry"></contact-form>
-                      </md-dialog>
-                    </div>
+                    <md-button :to="{ name: 'block pricing' }" class="md-primary">Pricing</md-button>
                   </span>
                   <md-list-item v-if="service.table"
                     ><md-table>
@@ -379,12 +367,10 @@
 // import ChemistryTimelinePage from './ChemistryTimelinePage.vue';
 import { HOME_PAGE_PATH } from './../../config.js';
 import { bulkServices, singleServices, otherServices } from './../../data.js';
-import ContactForm from '../ContactForm.vue';
 
 export default {
   name: 'ServicesPricesPage',
   // components: { ChemistryTimelinePage },
-  components: { ContactForm },
   props: ['name'],
   data: function() {
     return {
@@ -392,7 +378,6 @@ export default {
       singleServices: singleServices,
       otherServices: otherServices,
       platformName: '',
-      submittingPricingInquiry: false,
     };
   },
   mounted: function() {
@@ -402,8 +387,10 @@ export default {
   methods: {
     expandList(event, service) {
       // this.$route.params.name = service;
-      if (event.target.innerHTML !== 'more info') {
-        history.pushState(service, '', `${HOME_PAGE_PATH}/platforms/${service.replace(/ /g, '').toLowerCase()}`);
+      if (event.target.innerHTML === 'Pricing') {
+        history.pushState(service, '', `${HOME_PAGE_PATH}/block-pricing`);
+      } else if (event.target.innerHTML !== 'more info') {
+        history.pushState(null, null, `${HOME_PAGE_PATH}/platforms/${service.replace(/ /g, '').toLowerCase()}`);
       }
     },
   },

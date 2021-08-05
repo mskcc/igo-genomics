@@ -475,6 +475,16 @@ export const otherServices = [
   },
 ];
 
+export const customBlockPrices = [
+  { readsBlock: 100, '100Cycles': '', '200Cycles': 900, '300Cycles': 1500 },
+  { readsBlock: 400, '100Cycles': '$900', '200Cycles': 1000, '300Cycles': 1100 },
+  { readsBlock: 800, '100Cycles': '$1800', '200Cycles': 1990, '300Cycles': 2150 },
+  { readsBlock: 1800, '100Cycles': '$4032', '200Cycles': 4464, '300Cycles': 4842 },
+  { readsBlock: 2750, '100Cycles': '$6160', '200Cycles': 6820, '300Cycles': 7398 },
+  { readsBlock: 3600, '100Cycles': '$8064', '200Cycles': 8928, '300Cycles': 9684 },
+  { readsBlock: 11000, '100Cycles': '', '200Cycles': 14300, '300Cycles': 16000 },
+];
+
 export const archerFusionGenes = [
   ['ACVR2A', 'AKT1', 'ALK', 'AR', 'ARAF'],
   ['ARHGAP26', 'BCOR', 'BCORL1', 'BRAF', 'BRD4'],

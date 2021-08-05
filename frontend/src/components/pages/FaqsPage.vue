@@ -1,14 +1,14 @@
 <template>
   <div>
     <!-- <reopen-faq></reopen-faq> -->
-    <div id="faq-page" class="full-control">
+    <div id="faq-page">
       <div class="list">
         <md-list>
           <md-list-item md-expand>
             <md-icon>add</md-icon>
             <span class="md-list-item-text md-title">Sample Submission</span>
             <md-list slot="md-expand">
-              <div class="full-control">
+              <div>
                 <div class="list">
                   <md-list>
                     <md-list-item md-expand class="md-inset">
@@ -94,7 +94,7 @@
             <md-icon>add</md-icon>
             <span class="md-list-item-text md-title">DNA/RNA Extraction</span>
             <md-list slot="md-expand">
-              <div class="full-control">
+              <div>
                 <div class="list">
                   <md-list>
                     <md-list-item md-expand class="md-inset">
@@ -288,7 +288,7 @@
             <md-icon>add</md-icon>
             <span class="md-list-item-text md-title">Sample QC</span>
             <md-list slot="md-expand">
-              <div class="full-control">
+              <div>
                 <div class="list">
                   <md-list>
                     <md-list-item md-expand class="md-inset">
@@ -301,8 +301,8 @@
                           <div>
                             Yes. We can go forward but cannot guarantee downstream success at either library prep or sequencing. We are
                             always happy to discuss your results and our recommendations. Reach out to us by commenting on your QC report.
-
-                            You can find a reference range for pass/fail criteria <router-link :to="{ name: 'sample criteria' }">here.</router-link>
+                            You can find a reference range for pass/fail criteria
+                            <router-link :to="{ name: 'sample requirements' }">here.</router-link>
                           </div>
                         </md-list-item>
                       </md-list>
@@ -354,7 +354,7 @@
             <md-icon>add</md-icon>
             <span class="md-list-item-text md-title">Sequencing</span>
             <md-list slot="md-expand">
-              <div class="full-control">
+              <div>
                 <div class="list">
                   <md-list>
                     <md-list-item md-expand class="md-inset">
@@ -393,7 +393,7 @@
             <md-icon>add</md-icon>
             <span class="md-list-item-text md-title">General Queries</span>
             <md-list slot="md-expand">
-              <div class="full-control">
+              <div>
                 <div class="list">
                   <md-list>
                     <md-list-item md-expand class="md-inset">
