@@ -34,6 +34,7 @@ import SingleCellHub from './components/pages/SingleCellHub.vue';
 import FeedbackPage from './components/pages/FeedbackPage.vue';
 import ViewFeedbackPage from './components/pages/ViewFeedbackPage.vue';
 import BlockPricingPage from './components/pages/BlockPricingPage.vue';
+import AllAppointmentsPage from './components/pages/AllAppointmentsPage.vue';
 
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
@@ -150,6 +151,7 @@ const routes = [
   { path: '/feedback/:application?', component: FeedbackPage, name: 'feedback', props: true },
   { path: '/view-feedback', component: ViewFeedbackPage, name: 'view feedback' },
   { path: '/block-pricing', component: BlockPricingPage, name: 'block pricing' },
+  { path: '/all-10x-appointments', component: AllAppointmentsPage },
 ];
 
 const router = new VueRouter({

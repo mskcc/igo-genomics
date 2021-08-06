@@ -180,8 +180,8 @@ module.exports = function (router) {
   // deletes an appointment
   router.post('/cancelAppointment/:id', function (req, response) {
     let appointmentId = req.params.id;
-  
-    AppointmentModel.findOneAndDelete({_id: appointmentId}, (function (
+
+    AppointmentModel.findOneAndDelete({ _id: appointmentId }, function (
       error,
       appointment
     ) {
@@ -198,13 +198,13 @@ module.exports = function (router) {
         //   .send(
         //     '<p style=" text-align: center; font-size: larger;">Appointment cancelled!</p><p style=" text-align: center;" ><img style="width:50px; margin:auto 0;" src="https://igodev.mskcc.org/img/logoDarkGrayOnTransp.f0d9e455.png"></p>'
         //   );
-        return response.status(200).json({message: 'Appointment cancelled!'})
+        return response.status(200).json({ message: 'Appointment cancelled!' });
       }
       // no appointment was found
       return response.status(500).json({
         message: 'Appointment not found',
       });
-      
+
       // send cancellation email
 
       // return response
@@ -212,13 +212,13 @@ module.exports = function (router) {
       //   .send(
       //     '<p style=" text-align: center; font-size: larger;">Appointment not found.</p><p style=" text-align: center;" ><img style="width:50px; margin:auto 0;" src="https://igodev.mskcc.org/img/logoDarkGrayOnTransp.f0d9e455.png"></p>'
       //   );
-    }));
+    });
   });
 
   router.get('/appointment/:id', function (req, response) {
     let appointmentId = req.params.id;
-  
-    AppointmentModel.findById(appointmentId, function(error, appointment) {
+
+    AppointmentModel.findById(appointmentId, function (error, appointment) {
       // not a valid id
       if (error) {
         return response.status(500).json({
@@ -226,15 +226,25 @@ module.exports = function (router) {
         });
       }
       if (appointment) {
-        return response.status(200).json({appointment: appointment})
+        return response.status(200).json({ appointment: appointment });
       }
       // no appointment was found
       return response.status(500).json({
         message: 'Appointment not found',
       });
-    })
+    });
   });
 
+  router.get('/allAppointments', function (req, response) {
+    AppointmentModel.find({ requestType: '10xGenomics' }, function (err, docs) {
+      if (err) {
+        return response
+          .status(500)
+          .json({ message: 'Backend is experiencing an error' });
+      }
+      if (docs) {
+        return response.status(200).json({ appointments: docs });
+      }
+    });
+  });
 };
-
-
