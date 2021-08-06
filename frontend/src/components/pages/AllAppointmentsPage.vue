@@ -1,6 +1,20 @@
 <template>
   <div>
-    <md-table>
+    <form @submit.prevent="validateUser" class="md-layout">
+      <md-card class="md-layout-item md-size-50 md-small-size-100">
+        <md-card-content>
+          <md-field>
+            <label>Password</label>
+            <md-input v-model="input"></md-input>
+          </md-field>
+        </md-card-content>
+        <md-card-actions>
+          <md-button type="submit" class="md-primary">Submit</md-button>
+        </md-card-actions>
+      </md-card>
+    </form>
+
+    <md-table v-if="showData">
       <md-table-row>
         <md-table-cell>fullName</md-table-cell>
         <md-table-cell>email</md-table-cell>
@@ -35,12 +49,23 @@ export default {
   data: function() {
     return {
       appointments: {},
+      password: 'singlecell',
+      input: '',
+      showData: false,
     };
   },
   mounted: function() {
     app.axios.get(`${API_URL}/allAppointments`).then((response) => {
       this.appointments = response.data.appointments;
     });
+  },
+  methods: {
+    validateUser() {
+      if (this.input === this.password) {
+        this.showData = true;
+        this.input = '';
+      }
+    },
   },
 };
 </script>
