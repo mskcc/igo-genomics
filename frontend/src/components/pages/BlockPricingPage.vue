@@ -60,7 +60,7 @@
                   <li>10X (28/10/10/88): $2.7/million read</li>
                 </ul>
               </md-list-item>
-              <md-list-item style="font-style: italic;">Minimum reads requested: 10 million </md-list-item>
+              <md-list-item style="font-style: italic;">Minimum reads requested: 20 million </md-list-item>
             </md-list>
           </md-list-item>
           <md-list-item md-expand class="md-inset">
