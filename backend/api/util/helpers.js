@@ -34,10 +34,7 @@ exports.getAvailableHours = (date, timeRange) => {
     });
     // afterRange = _.intersection(afterRange, range);
   }
-  //  remove times after 6pm
-  let result = [...priorRange, ...afterRange].filter(
-    (element) => element.float <= 18
-  );
+  let result = [...priorRange, ...afterRange];
   return result;
 };
 // console.log(

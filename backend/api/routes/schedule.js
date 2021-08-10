@@ -143,20 +143,13 @@ module.exports = function (router) {
 
     let timeRange = [];
     let config = scheduleConfig[requestType][weekday];
-    // config.forEach((time) =>
-    //   timeRange.push(parseFloat(time.replace(':', '.')))
-    // );
     config.forEach((time) => {
       let tempObject = {
         string: time,
         float: parseFloat(time.replace(':', '.')),
       };
-      // tempObject['string'] = time;
-      // tempObject['float'] = parseFloat(time.replace(':', '.'));
-      // timeRange[time] = parseFloat(time.replace(':', '.'));
       timeRange.push(tempObject);
     });
-
     // if there are no times for that requestType on that day just return
     if (_.isEmpty(timeRange)) {
       return response.status(204).send();
@@ -189,14 +182,12 @@ module.exports = function (router) {
                   (time) => time.string !== appointment.emailTime
                 ))
             );
-
-            console.log(timeRange);
-
             return response.status(200).json({
               timeRange: timeRange,
             });
           } else {
             appointments.forEach((appointment) => {
+              console.log(timeRange);
               timeRange = helpers.getAvailableHours(
                 appointment.dateTime,
                 timeRange
@@ -207,7 +198,7 @@ module.exports = function (router) {
               return response.status(204).send();
             } else {
               return response.status(200).json({
-                timeRange: timeRange,
+                timeRange: timeRange.filter((time) => time.float <= 18),
               });
             }
           }
@@ -270,6 +261,59 @@ module.exports = function (router) {
       return response.status(500).json({
         message: 'Appointment not found',
       });
+    });
+  });
+
+  // updates previously made appointments, to be used by Anna when spm reservation feature is deployed
+  router.get('/updateAppointments', function (req, response) {
+    AppointmentModel.find({}, function (err, docs) {
+      if (err) {
+        console.log(err);
+        return response.status(500).json({
+          message: 'No Appointments found',
+        });
+      } else {
+        // convert emailtime to 24hr and set datetime, status
+        docs.forEach((doc) => {
+          let time = parseInt(doc.emailTime);
+          time < 10 ? (time = time + 12) : time;
+          let options = {
+            // otherwise will subtract a day
+            timeZone: 'UTC',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          };
+          let date = new Date(doc.date).toLocaleDateString('en-US', options);
+          console.log(
+            doc.date,
+            doc.emailTime,
+            'should change to:',
+            `${date} ${time}:00`
+          );
+
+          AppointmentModel.findByIdAndUpdate(
+            doc._id,
+            {
+              emailTime: `${time}:00`,
+              dateTime: `${date} ${time}:00`,
+              status: 'confirmed',
+            },
+            { new: true },
+            function (err, appointment) {
+              if (err) {
+                console.log(err);
+                return response.status(500).json({
+                  message: 'Cannot find appointment',
+                });
+              } else {
+                console.log(appointment);
+              }
+            }
+          );
+        });
+        return response.status(200).json({ appointments: docs });
+      }
     });
   });
 };
