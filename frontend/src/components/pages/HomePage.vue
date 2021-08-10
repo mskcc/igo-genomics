@@ -4,7 +4,8 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        IGO had introduced new pricing for sequencing of user libraries! See the Platforms & Pricing page for more information.
+        IGO has introduced new pricing for sequencing of investigator prepared libraries! See the Platforms & Pricing page for more
+        information.
       </span>
     </div>
     <div class="carousel-div">
