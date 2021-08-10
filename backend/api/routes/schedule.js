@@ -104,7 +104,7 @@ module.exports = function (router) {
     });
     let result = { columnDefinitions: columns, columnHeaders: headers };
 
-    AppointmentModel.find({ requestType: requestType })
+    AppointmentModel.find({ requestType: requestType, status: 'confirmed' })
       .sort('date')
       .lean()
       .exec(function (err, appointments) {
