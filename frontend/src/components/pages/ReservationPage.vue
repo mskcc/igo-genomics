@@ -210,8 +210,10 @@ export default {
       }
     },
     requestType: function() {
-      this.$store.commit('setRequestType', this.requestType);
-      this.$store.dispatch('setExistingReservations');
+      if (this.requestType) {
+        this.$store.commit('setRequestType', this.requestType);
+        this.$store.dispatch('setExistingReservations');
+      }
     },
   },
 
@@ -235,9 +237,6 @@ export default {
       // user clicked on a valid day
       if (date.isDisabled === false) {
         // console.log(date.isDisabled);
-        if (!this.requestType) {
-          this.message = 'Please select a Request Type';
-        }
         if (this.requestType) {
           this.form.time.militaryTime = '';
           this.form.time.weekday = date.weekday;
@@ -256,6 +255,8 @@ export default {
                 this.timeRange = response.data.timeRange;
               }
             });
+        } else {
+          this.message = 'Please select a Request Type';
         }
       }
     },
