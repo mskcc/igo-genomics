@@ -6,43 +6,37 @@ const moment = require('moment');
 // return priorR+afterR
 const _ = require('lodash');
 const duration = 3;
-exports.getAvailableHours = (startTime, range) => {
-  // console.log(range);
-  // if (!range.includes(startTime)) return [];
+exports.getAvailableHours = (date, timeRange) => {
+  let range = timeRange;
+  let startTime = new Date(date).getHours();
   const existingApptStartTime = startTime;
   const existingApptEndTime = existingApptStartTime + duration;
 
-  const dayMin = range[0];
-  const dayMax = range[range.length - 1];
-
+  const dayMin = range[0].float;
+  const dayMax = range[range.length - 1].float;
   let priorRange = [];
   let afterRange = [];
+  // console.log('range:', range, 'daymin:', dayMin, 'daymax:', dayMax);
   // can someone book prior to this appointment?
   if (dayMin + duration <= existingApptStartTime) {
     // create times between minimum for that day and start time of appointment
     priorRange = _.range(dayMin, startTime - 2);
+    priorRange = range.filter((e) => {
+      return priorRange.some((item) => item === e.float);
+    });
     // only keep times that still exist in the current range
-    priorRange = _.intersection(priorRange, range);
+    // priorRange = _.intersection(priorRange, range);
   }
   if (dayMax - existingApptEndTime >= duration) {
     afterRange = _.range(existingApptEndTime, dayMax + 1);
-    afterRange = _.intersection(afterRange, range);
+    afterRange = range.filter((e) => {
+      return afterRange.some((item) => item === e.float);
+    });
+    // afterRange = _.intersection(afterRange, range);
   }
-  //  remove times after 6pm
-  let result = [...priorRange, ...afterRange].filter(
-    (element) => element <= 18
-  );
+  let result = [...priorRange, ...afterRange];
   return result;
 };
-// console.log('18', getAvailableHours(15));
-// console.log('10', getAvailableHours(14));
-// console.log('11', getAvailableHours(11));
-// console.log(
-//   'existing booking at 13, next booking at 10',
-//   getAvailableHours(10, [10, 16, 17, 18, 19, 20, 21])
-// );
-
-// // [13, 14, 15]
 // console.log(
 //   'existing booking at 10, next booking at 18',
 //   getAvailableHours(18, [13, 14, 15, 16, 17, 18, 19, 20, 21])
