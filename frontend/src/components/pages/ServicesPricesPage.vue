@@ -12,13 +12,18 @@
       </div>
       <div class="other-header">
         <img class="prices-image" src="../../assets/services3.png" alt="bulk logo" />
-        <div class="md-title">Sequencing and Other Platforms</div>
+        <div class="md-title">Other Platforms</div>
       </div>
 
       <div class="bulk-data">
         <div>
           <div class="list">
             <md-list>
+              <md-list-item>
+                <router-link :to="{ name: 'block pricing' }" class="md-list-item-text"
+                  >Sequencing Only <span class="md-body-2">(investigator prepared libraries/pools)</span></router-link
+                >
+              </md-list-item>
               <md-list-item
                 v-for="(service, index) in bulkServices"
                 :key="index"
@@ -277,9 +282,6 @@
                       </tr>
                     </table></md-list-item
                   >
-                  <span v-if="service.name == 'Investigator Prepared Libraries'">
-                    <md-button :to="{ name: 'block pricing' }" class="md-primary">Pricing</md-button>
-                  </span>
                   <md-list-item v-if="service.table"
                     ><md-table>
                       <md-table-row>
