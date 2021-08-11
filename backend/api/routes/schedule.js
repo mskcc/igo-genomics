@@ -132,7 +132,7 @@ module.exports = function (router) {
   ) {
     // returns range for given day, defaults in scheduleConfig.js
     let requestType = req.params.requestType;
-    let weekday = req.params.weekday;
+    let weekday = parseInt(req.params.weekday);
     let date = req.params.date;
     let todaysDate = new Date().toLocaleDateString('en-CA', {
       timeZone: 'America/New_York',
@@ -167,9 +167,13 @@ module.exports = function (router) {
             timeRange = timeRange.filter(
               (element) => element.float >= currentHour + 2
             );
-          } else {
+          }
+          if (requestType === '10xGenomics') {
             // trim hours later in day, only matters for 10x
-            timeRange = timeRange.filter((element) => element.float <= 18);
+            timeRange = timeRange.filter(
+              (element) => element.float <= (weekday === 6 ? 15 : 18)
+            );
+            // timeRange = timeRange.filter((element) => element.float <= 18);
           }
           return response.status(200).json({
             timeRange: timeRange,
@@ -206,8 +210,11 @@ module.exports = function (router) {
             if (_.isEmpty(timeRange)) {
               return response.status(204).send();
             } else {
+              timeRange = timeRange.filter(
+                (element) => element.float <= (weekday === 6 ? 15 : 18)
+              );
               return response.status(200).json({
-                timeRange: timeRange.filter((time) => time.float <= 18),
+                timeRange: timeRange,
               });
             }
           }
