@@ -274,21 +274,72 @@ export default {
         return;
       }
       if (!this.formHasErrors) {
-        app.axios
-          .post(`${API_URL}/bookTime`, {
-            data: {
-              ...this.form,
-              date: this.dateSelected.id,
-              requestType: this.requestType,
-              notificationDate: this.dateSelected.ariaLabel,
-            },
-          })
-          .then((response) => {
-            this.$swal({ title: 'Booked', text: response.data.message, animation: false, icon: 'success' });
-            // this.daySelected = false;
-            this.reset();
-          })
-          .catch((error) => this.$swal({ title: 'Unable to book', text: error.response.data.message, animation: false, icon: 'error' }));
+        this.$swal({
+          title: 'Are you sure?',
+          // text: "You won't be able to revert this!",
+          icon: 'warning',
+          showClass: {
+            popup: '',
+            backdrop: 'swal2-noanimation',
+            icon: '',
+          },
+          hideClass: {
+            popup: '',
+            backdrop: '',
+            icon: '',
+          },
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, book it!',
+        }).then((result) => {
+          if (result.isConfirmed) {
+            app.axios
+              .post(`${API_URL}/bookTime`, {
+                data: {
+                  ...this.form,
+                  date: this.dateSelected.id,
+                  requestType: this.requestType,
+                  notificationDate: this.dateSelected.ariaLabel,
+                },
+              })
+              .then((response) => {
+                this.$swal({
+                  title: 'Booked',
+                  text: response.data.message,
+                  showClass: {
+                    popup: '',
+                    backdrop: 'swal2-noanimation',
+                    icon: '',
+                  },
+                  hideClass: {
+                    popup: '',
+                    backdrop: '',
+                    icon: '',
+                  },
+                  icon: 'success',
+                });
+                this.reset();
+              })
+              .catch((error) =>
+                this.$swal({
+                  title: 'Unable to book',
+                  text: error.response.data.message,
+                  showClass: {
+                    popup: '',
+                    backdrop: 'swal2-noanimation',
+                    icon: '',
+                  },
+                  hideClass: {
+                    popup: '',
+                    backdrop: '',
+                    icon: '',
+                  },
+                  icon: 'error',
+                })
+              );
+          }
+        });
       }
     },
     changeHandler(eventData) {
