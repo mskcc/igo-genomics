@@ -18,8 +18,7 @@
         <md-table-cell>{{ reservation.date }}</md-table-cell>
         <md-table-cell>{{ reservation.emailTime }}</md-table-cell>
         <md-table-cell v-if="requestType === '10xGenomics'">{{ reservation.details.chemistry }}</md-table-cell>
-        <md-table-cell v-if="requestType !== 'spm'">{{ reservation.details.sampleNumber }}</md-table-cell>
-        <md-table-cell v-if="requestType === 'spm'">{{ reservation.details.ilabServiceId }}</md-table-cell>
+        <md-table-cell>{{ reservation.details.sampleNumber }}</md-table-cell>
       </md-table-row>
     </md-table>
   </div>
