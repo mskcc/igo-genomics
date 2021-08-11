@@ -26,7 +26,6 @@ const columns = [
 module.exports = function (router) {
   router.post('/bookTime', function (req, response) {
     let form = req.body.data;
-    console.log(form);
 
     let appointment = new AppointmentModel({
       fullName: form.name,
@@ -116,12 +115,7 @@ module.exports = function (router) {
         if (appointments) {
           let futureAppointments = [];
           appointments.forEach((appointment) => {
-            let appointmentDate = new Date(appointment.dateTime).setHours(
-              0,
-              0,
-              0,
-              0
-            );
+            let appointmentDate = new Date(`${appointment.dateTime}`).valueOf();
             if (appointmentDate >= today) {
               futureAppointments.push(appointment);
             }
@@ -187,7 +181,6 @@ module.exports = function (router) {
             });
           } else {
             appointments.forEach((appointment) => {
-              console.log(timeRange);
               timeRange = helpers.getAvailableHours(
                 appointment.dateTime,
                 timeRange
@@ -277,26 +270,26 @@ module.exports = function (router) {
         docs.forEach((doc) => {
           let time = parseInt(doc.emailTime);
           time < 10 ? (time = time + 12) : time;
-          let options = {
-            // otherwise will subtract a day
-            timeZone: 'UTC',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-          };
-          let date = new Date(doc.date).toLocaleDateString('en-US', options);
-          console.log(
-            doc.date,
-            doc.emailTime,
-            'should change to:',
-            `${date} ${time}:00`
-          );
+          // let options = {
+          //   // otherwise will subtract a day
+          //   timeZone: 'UTC',
+          //   year: 'numeric',
+          //   month: 'long',
+          //   day: 'numeric',
+          // };
+          // let date = new Date(doc.date).toLocaleDateString('en-US', options);
+          // console.log(
+          //   doc.date,
+          //   doc.emailTime,
+          //   'should change to:',
+          //   `${date} ${time}:00`
+          // );
 
           AppointmentModel.findByIdAndUpdate(
             doc._id,
             {
               emailTime: `${time}:00`,
-              dateTime: `${date} ${time}:00`,
+              dateTime: `${doc.date} ${time}:00`,
               status: 'confirmed',
             },
             { new: true },

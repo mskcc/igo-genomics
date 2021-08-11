@@ -4,8 +4,11 @@
     <div class="announcement-bubble">
       <span class="material-icons"> warning </span>
       <span class="announcement-content">
-        <strong>We require at least 48 hours notice for sample drop-off and at least 2 hours notice for cancellation.</strong> If you have
-        an emergency, please contact genomics@mskcc.org as soon as possible.
+        <strong
+          >We require at least 48 hours notice for 10x Genomics and ATAC-Seq sample drop-off and at least 2 hours notice for
+          cancellation.</strong
+        >
+        If you have an emergency, please contact genomics@mskcc.org as soon as possible.
       </span>
     </div>
     <div class="md-layout">
@@ -101,7 +104,7 @@
         <vc-date-picker
           :attributes="attrs"
           :disabled-dates="disabledDates"
-          :min-date="new Date().setDate(new Date().getDate() + 2)"
+          :min-date="getMinDate()"
           :max-date="getMaxDate()"
           :value="dateSelected"
           @dayclick="(event) => dayClick(event)"
@@ -127,13 +130,14 @@ export default {
   data: function() {
     return {
       message: 'Please select a day.',
-      requestType: 'spm',
+      requestType: '',
       form: {
         name: '',
         email: '',
         sampleNumber: '',
         chemistry: '',
-        time: { A: '', hh: '', h: '', mm: '', militaryTime: '', weekday: '' },
+        // time: { A: '', hh: '', h: '', mm: '', militaryTime: '', weekday: '' },
+        time: { militaryTime: '', weekday: '' },
         ilabServiceId: '',
       },
       timeRange: [],
@@ -199,14 +203,17 @@ export default {
     // },
 
     dateSelected: function() {
-      // console.log(this.form.time);
-      if (this.requestType === 'atacSeq' && this.form.time.weekday !== '6') {
-        this.message = 'At this time ATAC Seq reservations can only be made on Thursdays';
-      } else if (this.requestType === '10xGenomics') {
-        this.message =
-          'If your desired time slot is not available please complete <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">this waitlist form</a>';
+      if (this.dateSelected) {
+        if (this.requestType === 'atacSeq' && this.form.time.weekday !== '6') {
+          this.message = 'At this time ATAC Seq reservations can only be made on Thursdays';
+        } else if (this.requestType === '10xGenomics') {
+          this.message =
+            'If your desired time slot is not available please complete <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">this waitlist form</a>';
+        } else {
+          this.message = 'Please select a time.';
+        }
       } else {
-        this.message = 'Please select a time.';
+        this.message = 'Please select a day';
       }
     },
     requestType: function() {
@@ -226,10 +233,12 @@ export default {
       this.form.email = '';
       this.form.sampleNumber = '';
       this.form.chemistry = '';
-      this.form.time.A = '';
-      this.form.time.hh = '';
-      this.form.time.h = '';
+      // this.form.time.A = '';
+      // this.form.time.hh = '';
+      // this.form.time.h = '';
       this.form.time.militaryTime = '';
+      this.form.time.weekday = '';
+      this.form.ilabServiceId = '';
 
       // time: { A: null, hh: null, h: null, militaryTime: null },
     },
@@ -295,9 +304,17 @@ export default {
     changeHandler(time) {
       this.form.time.militaryTime = time.string;
     },
+    getMinDate() {
+      // same day bookings for spm
+      if (this.requestType === 'spm') {
+        return new Date();
+      } else {
+        return new Date().setDate(new Date().getDate() + 2);
+      }
+    },
     getMaxDate() {
-      var today = new Date();
-      var newdate = new Date();
+      let today = new Date();
+      let newdate = new Date();
       return newdate.setDate(today.getDate() + 90);
     },
   },

@@ -7,7 +7,7 @@ var AppointmentSchema = new mongoose.Schema(
     email: { type: String, required: true },
     date: { type: String, required: true },
     notificationDate: { type: String, required: true },
-    dateTime: { type: String, required: true }, // month day, year hh:mm
+    dateTime: { type: String, required: true }, // year-month-day hh:mm
     // startTime: { type: Number, required: true },  remove?
     emailTime: { type: String, required: true },
     requestType: { type: String, required: true },
