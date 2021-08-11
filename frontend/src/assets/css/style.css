@@ -767,3 +767,13 @@ sup {
 .single-cell-hub .md-divider {
   margin: 15px 0 !important;
 }
+
+.feedback-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.subpage-header {
+  max-width: fit-content;
+}

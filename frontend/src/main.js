@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 import store from './store';
 import VueCoreVideoPlayer from 'vue-core-video-player';
 import DatePicker from 'v-calendar';
+import VueTimepicker from 'vue2-timepicker';
 import Vuelidate from 'vuelidate';
 
 import './filters.js';
@@ -32,6 +33,8 @@ import CareersPage from './components/pages/CareersPage.vue';
 import SingleCellHub from './components/pages/SingleCellHub.vue';
 import FeedbackPage from './components/pages/FeedbackPage.vue';
 import ViewFeedbackPage from './components/pages/ViewFeedbackPage.vue';
+import BlockPricingPage from './components/pages/BlockPricingPage.vue';
+import AllAppointmentsPage from './components/pages/AllAppointmentsPage.vue';
 
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
@@ -102,7 +105,7 @@ Vue.use(DatePicker, {
   componentPrefix: 'vc', // Use <vc-calendar /> instead of <v-calendar />
 });
 
-Vue.use(require('vue-moment'));
+Vue.use(VueTimepicker);
 
 Vue.config.productionTip = false;
 
@@ -145,8 +148,10 @@ const routes = [
 
   { path: '/careers', component: CareersPage, name: 'careers' },
   { path: '/single-cell-hub', component: SingleCellHub, name: 'single cell hub' },
-  { path: '/feedback/:application', component: FeedbackPage, name: 'feedback', props: true },
+  { path: '/feedback/:application?', component: FeedbackPage, name: 'feedback', props: true },
   { path: '/view-feedback', component: ViewFeedbackPage, name: 'view feedback' },
+  { path: '/block-pricing', component: BlockPricingPage, name: 'block pricing' },
+  { path: '/all-10x-appointments', component: AllAppointmentsPage },
 ];
 
 const router = new VueRouter({

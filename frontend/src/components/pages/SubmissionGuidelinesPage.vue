@@ -47,7 +47,7 @@
         </div>
         <!-- <md-button @click="toggle">Instructions for submitting COVID19 Requests</md-button>
         <covid-instructions-page v-if="covid"></covid-instructions-page> -->
-        <div id="sample-guidelines" class="full-control">
+        <div id="sample-guidelines">
           <div class="list">
             <md-list>
               <md-list-item md-expand>
@@ -156,7 +156,6 @@
                           <li>10X_Genomics-Expression+VDJ</li>
                           <li>10X_Genomics-GeneExpression-5</li>
                           <li>10X_Genomics-GeneExpression-3</li>
-                          <li>10X_Genomics-ATAC</li>
                           <li>10X_Genomics_Multiome</li>
                         </ul>
                       </li>

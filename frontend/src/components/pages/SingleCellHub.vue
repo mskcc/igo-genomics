@@ -32,19 +32,19 @@
 
         <md-divider></md-divider>
 
-        <div class="md-title" id="scrnaseq">10 Genomics scRNA-Seq</div>
+        <div class="md-title" id="scrnaseq">10X Genomics scRNA-Seq</div>
         <ul>
           <li>Input: Single cell suspension</li>
           <li>Output: FASTQ, Cell Ranger pipeline output</li>
           <li>
             Information type: Single-cell resolution of gene expression (either 3'-mRNA or 5'-mRNA-based) with optional TCR enrichment (5'
-            only). Proteomics data can also be recovered with Feature Barcoding technology.
+            only). Protein data can also be recovered with Feature Barcoding technology.
           </li>
           <li>
             Considerations:
             <ul>
               <li>>50K cells needed for best results</li>
-              <li>Cell viability is of the utmost importance, and the most common cause of sample failure</li>
+              <li>Cell viability and having a debris-free suspension is of the utmost importance, and the most common cause of sample failure</li>
               <li>
                 It is recommended that data analysis is arranged in advance, as IGO can provide only basic pipeline output without
                 customization
@@ -80,7 +80,7 @@
               <li>PlateSeq is an in-house-developed, SMART-Seq-based, single- or low-cell RNA Sequencing platform</li>
               <li>
                 10X Genomics is a more cost effective platform with higher throughput, but PlateSeq is a better choice for primarily a)
-                investigators who do not 50K cells to work with and need something that is tolerant of low throughput or b) investigators
+                investigators who do not have 50K cells to work with and need something that is tolerant of low throughput or b) investigators
                 who require full-length cDNA, which is not available with 10X Genomics' methods
               </li>
               <li>After sorting, plates can be frozen, so immediate processing by IGO is not required</li>
@@ -112,13 +112,13 @@
                 nuclei for analysis cannot be guaranteed
               </li>
               <li>Please ensure you are following 10X Genomics-validated nuclei isolation protocols for Multiome</li>
-              <li>It is recommended that data anlysis, as IGO can provide only basic pipeline output without customization</li>
+              <li>It is recommended that data analysis be arranged in advance, as IGO can provide only basic pipeline output without customization</li>
               <li>
                 10X Genomics recommends 20K reads/cell for the RNA-Seq portion and 25K reads/cell for the ATAC-Seq portion. Please let us
                 know in advance if you need higher coverage
               </li>
               <li>RNA-Seq reads are nuclear only and may not be comparable to whole-cell RNA-Seq</li>
-              <li>Feature barcoding and cell hashing are <strong>not compatible</strong> with Multiome</li>
+              <li>Feature barcoding and cell hashing are <strong>not compatible</strong> with Multiome (while customized methods to hash nuclei exist, we do not offer them in IGO)</li>
             </ul>
           </li>
         </ul>
@@ -136,6 +136,7 @@
               <li>
                 IGO offers the Tumor Hotspot panel in stock, but can also process other off-the-shelf or custom DNA panels from MissionBio
               </li>
+              <li>If you are using a custom panel, please provide IGO with the panel BED file from MissionBio at sample submission</li>
               <li>DNA+Protein available using TotalSeq-D antibodies from BioLegend</li>
               <li>Up to 10K cells analyzed</li>
               <li>IGO requests 100K (for DNA only) or 2M (for DNA+Protein) cells for processing</li>
@@ -157,8 +158,8 @@
                 While we do accept fresh cells by appointment, viably frozen cells are preferred, and our experience so far is that they
                 perform just as well
               </li>
-              <li>At least 100K cells are recommended for processing</li>
-              <li>Each chip can accommodate 800 cells</li>
+              <li>At least 100K cells should be submitted for processing</li>
+              <li>We spot 800-1000 cells per experiment</li>
               <li>Currently, DLP is offered on a collaborative basis only; please contact us if you are considering an experiment.</li>
             </ul>
           </li>

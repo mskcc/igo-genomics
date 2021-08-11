@@ -71,7 +71,7 @@
         <md-table-cell>Frozen</md-table-cell>
         <md-table-cell class="pass">500ng</md-table-cell>
         <md-table-cell class="try">100ng</md-table-cell>
-        <md-table-cell class="pass">RIN &gt; 6</md-table-cell>
+        <md-table-cell class="pass">RIN &GreaterEqual; 6</md-table-cell>
         <md-table-cell class="fail">No try range</md-table-cell>
         <md-table-cell>50&#181;L</md-table-cell>
       </md-table-row>
