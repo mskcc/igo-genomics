@@ -34,7 +34,8 @@
         <md-card-content>
           <div>{{ appointment.fullName }}</div>
           <div>{{ appointment.email }}</div>
-          <div>{{ appointment.details.sampleNumber }} sample(s)</div>
+          <div v-if="appointment.requestType === 'spm'">iLab Service ID: {{ appointment.details.ilabServiceId }}</div>
+          <div v-else>{{ appointment.details.sampleNumber }} sample(s)</div>
           <div v-if="appointment.requestType === '10xGenomics'">{{ appointment.details.chemistry }}</div>
         </md-card-content>
         <md-card-actions>

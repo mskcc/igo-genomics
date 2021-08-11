@@ -23,6 +23,7 @@
         <md-table-cell>startTime</md-table-cell>
         <md-table-cell>emailTime</md-table-cell>
         <md-table-cell>requestType</md-table-cell>
+        <md-table-cell>status</md-table-cell>
         <md-table-cell>chemistry</md-table-cell>
         <md-table-cell>sampleNumber</md-table-cell>
       </md-table-row>
@@ -34,6 +35,7 @@
         <md-table-cell>{{ appointment.startTime }}</md-table-cell>
         <md-table-cell>{{ appointment.emailTime }}</md-table-cell>
         <md-table-cell>{{ appointment.requestType }}</md-table-cell>
+        <md-table-cell>{{ appointment.status }}</md-table-cell>
         <md-table-cell>{{ appointment.details.chemistry }}</md-table-cell>
         <md-table-cell>{{ appointment.details.sampleNumber }}</md-table-cell>
       </md-table-row>
