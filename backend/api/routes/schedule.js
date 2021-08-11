@@ -134,6 +134,10 @@ module.exports = function (router) {
     let requestType = req.params.requestType;
     let weekday = req.params.weekday;
     let date = req.params.date;
+    let todaysDate = new Date().toLocaleDateString('en-CA', {
+      timeZone: 'America/New_York',
+    });
+    let currentHour = new Date().getHours();
 
     let timeRange = [];
     let config = scheduleConfig[requestType][weekday];
@@ -158,12 +162,17 @@ module.exports = function (router) {
             .json({ message: 'Backend encountered a fatal error.' });
         }
         if (_.isEmpty(appointments)) {
-          let filteredTimeRange = timeRange.filter(
-            (element) => element.float <= 18
-          );
+          // soonest spm reservation can only be made 2 hours from now
+          if (todaysDate === date && requestType === 'spm') {
+            timeRange = timeRange.filter(
+              (element) => element.float >= currentHour + 2
+            );
+          } else {
+            // trim hours later in day, only matters for 10x
+            timeRange = timeRange.filter((element) => element.float <= 18);
+          }
           return response.status(200).json({
-            // no appointments already but trim hours later in day
-            timeRange: filteredTimeRange,
+            timeRange: timeRange,
           });
         } else {
           // atac is easy bc only have 1 time slot per Thursday
@@ -176,9 +185,16 @@ module.exports = function (router) {
                   (time) => time.string !== appointment.emailTime
                 ))
             );
+            // soonest spm reservation can only be made 2 hours from now
+            if (todaysDate === date) {
+              timeRange = timeRange.filter(
+                (element) => element.float >= currentHour + 2
+              );
+            }
             return response.status(200).json({
               timeRange: timeRange,
             });
+            // 10x genomics
           } else {
             appointments.forEach((appointment) => {
               timeRange = helpers.getAvailableHours(
