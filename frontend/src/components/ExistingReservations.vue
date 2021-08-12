@@ -2,7 +2,7 @@
   <div class="existing-reservations-table">
     <md-table md-card v-if="existingReservations.length > 0">
       <md-table-toolbar>
-        <h1 class="md-title">Existing {{ requestType }} Reservations</h1>
+        <h1 class="md-title">Upcoming {{ requestType }} Reservations</h1>
       </md-table-toolbar>
       <md-table-row>
         <!-- <md-table-head md-numeric></md-table-head> -->

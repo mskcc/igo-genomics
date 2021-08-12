@@ -153,7 +153,11 @@ module.exports = function (router) {
       return response.status(204).send();
     }
     // check for existing appointments for that day
-    AppointmentModel.find({ date: date, requestType: requestType })
+    AppointmentModel.find({
+      date: date,
+      requestType: requestType,
+      status: { $in: ['pending', 'confirmed'] },
+    })
       .lean()
       .exec(function (err, appointments) {
         if (err) {

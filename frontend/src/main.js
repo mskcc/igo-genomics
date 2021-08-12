@@ -150,7 +150,7 @@ const routes = [
   { path: '/feedback/:application?', component: FeedbackPage, name: 'feedback', props: true },
   { path: '/view-feedback', component: ViewFeedbackPage, name: 'view feedback' },
   { path: '/block-pricing', component: BlockPricingPage, name: 'block pricing' },
-  { path: '/all-10x-appointments', component: AllAppointmentsPage },
+  { path: '/all-appointments', component: AllAppointmentsPage },
 ];
 
 const router = new VueRouter({

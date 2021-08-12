@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <form @submit.prevent="validateUser" class="md-layout">
+  <div id="all-reservations">
+    <form @submit.prevent="validateUser" class="md-layout" v-if="!showData">
       <md-card class="md-layout-item md-size-50 md-small-size-100">
         <md-card-content>
           <md-field>
@@ -14,30 +14,31 @@
       </md-card>
     </form>
 
-    <md-table v-if="showData">
-      <md-table-row>
-        <md-table-cell>fullName</md-table-cell>
-        <md-table-cell>email</md-table-cell>
-        <md-table-cell>date</md-table-cell>
-        <md-table-cell>notificationDate</md-table-cell>
-        <md-table-cell>startTime</md-table-cell>
-        <md-table-cell>emailTime</md-table-cell>
-        <md-table-cell>requestType</md-table-cell>
-        <md-table-cell>status</md-table-cell>
-        <md-table-cell>chemistry</md-table-cell>
-        <md-table-cell>sampleNumber</md-table-cell>
-      </md-table-row>
-      <md-table-row v-for="(appointment, index) in appointments" :key="index">
-        <md-table-cell>{{ appointment.fullName }}</md-table-cell>
-        <md-table-cell>{{ appointment.email }}</md-table-cell>
-        <md-table-cell>{{ appointment.date }}</md-table-cell>
-        <md-table-cell>{{ appointment.notificationDate }}</md-table-cell>
-        <md-table-cell>{{ appointment.startTime }}</md-table-cell>
-        <md-table-cell>{{ appointment.emailTime }}</md-table-cell>
-        <md-table-cell>{{ appointment.requestType }}</md-table-cell>
-        <md-table-cell>{{ appointment.status }}</md-table-cell>
-        <md-table-cell>{{ appointment.details.chemistry }}</md-table-cell>
-        <md-table-cell>{{ appointment.details.sampleNumber }}</md-table-cell>
+    <md-table v-if="showData" v-model="searched" md-sort="date" md-sort-order="desc" md-card md-fixed-header>
+      <md-table-toolbar>
+        <div class="md-toolbar-section-start">
+          <h1 class="md-title">Existing Reservations</h1>
+        </div>
+        <md-field md-clearable class="md-toolbar-section-end">
+          <md-input placeholder="Search by status..." v-model="search" @input="searchOnTable" />
+        </md-field>
+      </md-table-toolbar>
+
+      <md-table-row slot="md-table-row" slot-scope="{ item, index }">
+        <md-table-cell md-label="" md-sort-by="fullName">{{ index + 1 }}</md-table-cell>
+        <md-table-cell md-label="fullName" md-sort-by="fullName">{{ item.fullName }}</md-table-cell>
+        <md-table-cell md-label="email" md-sort-by="email">{{ item.email }}</md-table-cell>
+        <!-- <md-table-cell md-label="date" md-sort-by="date">{{ item.date }}</md-table-cell> -->
+        <md-table-cell md-label="notificationDate" md-sort-by="notificationDate">{{ item.notificationDate }}</md-table-cell>
+        <!-- <md-table-cell md-label="startTime" md-sort-by="startTime">{{ item.startTime }}</md-table-cell> -->
+        <md-table-cell md-label="emailTime" md-sort-by="emailTime">{{ item.emailTime }}</md-table-cell>
+        <md-table-cell md-label="requestType" md-sort-by="requestType">{{ item.requestType }}</md-table-cell>
+        <md-table-cell md-label="status" md-sort-by="status">
+          <md-button class="md-primary"> {{ item.status }}</md-button>
+        </md-table-cell>
+        <md-table-cell md-label="chemistry" md-sort-by="chemistry">{{ item.details.chemistry }}</md-table-cell>
+        <md-table-cell md-label="sampleNumber" md-sort-by="sampleNumber">{{ item.details.sampleNumber }}</md-table-cell>
+        <md-table-cell md-label="ilabServiceId" md-sort-by="sampleNumber">{{ item.details.ilabServiceId }}</md-table-cell>
       </md-table-row>
     </md-table>
   </div>
@@ -47,18 +48,32 @@
 import * as app from './../../app.js';
 import { API_URL } from './../../config.js';
 
+const toLower = (text) => {
+  return text.toString().toLowerCase();
+};
+
+const searchByName = (items, term) => {
+  if (term) {
+    return items.filter((item) => toLower(item.status).includes(toLower(term)));
+  }
+  return items;
+};
+
 export default {
   data: function() {
     return {
       appointments: {},
       password: 'singlecell',
       input: '',
-      showData: false,
+      showData: true,
+      search: null,
+      searched: [],
     };
   },
   mounted: function() {
     app.axios.get(`${API_URL}/allAppointments`).then((response) => {
       this.appointments = response.data.appointments;
+      this.searched = this.appointments;
     });
   },
   methods: {
@@ -67,6 +82,9 @@ export default {
         this.showData = true;
         this.input = '';
       }
+    },
+    searchOnTable() {
+      this.searched = searchByName(this.appointments, this.search);
     },
   },
 };
