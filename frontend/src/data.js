@@ -64,7 +64,7 @@ export const teams = [
       { name: 'Meghanne Lomibao', role: 'Project Coordinator', photoName: 'Lomibao_Meghanne' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
       { name: 'Valerie Patritti', role: 'Project Manager', photoName: 'Patritti_Valerie' },
-      { name: 'Position Opening Soon!', role: 'Project Coordinator' },
+      // { name: 'Position Opening Soon!', role: 'Project Coordinator' },
     ],
   },
   {
@@ -74,7 +74,6 @@ export const teams = [
       'EXPAND stands for: Extraction, pathology, Archer DX, and digital droplet PCR, but also literally refers to their interest in integrating new platforms and advancing research technology to remain at the cutting edge for our users. The EXPAND team draws upon IGO’s philosophy of constant and open communication and aims to join you in detailed, scientific discussions about your projects, to meet your needs and to work together to advance science, building long-term, trusting relationships in the process.',
     members: [
       { name: 'Andrea Farina', role: 'Manager, IGO', photoName: 'Farina_Andrea' },
-      { name: 'Desmond Lambe', role: 'Intern', photoName: 'Lambe_Desmond' },
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
       { name: 'Jordana Barnett', role: 'Intern', photoName: 'Barnett_Jordana' },
       { name: 'Julienne Lomibao', role: 'Research Technician', photoName: 'Lomibao_Julienne' },
@@ -99,7 +98,7 @@ export const teams = [
       { name: 'Satoko Murakami', role: 'Research Assistant', photoName: 'Murakami_Satoko' },
       { name: 'Sophie Kleinberg', role: 'Intern', photoName: 'Kleinberg_Sophie' },
       { name: 'Yushi Wu', role: 'Research Assistant', photoName: 'Wu_Yushi' },
-      // { name: 'Open Position!', role: 'Research Assistant' },
+      { name: 'Open Position!', role: 'Research Technician (Temporary)' },
     ],
   },
   {
@@ -113,6 +112,7 @@ export const teams = [
       { name: 'Jim Chen', role: 'Senior Research Technician', photoName: 'Chen_Jim' },
       { name: 'Keumsil Hwang', role: 'Senior Research Assistant', photoName: 'Hwang_Keumsil' },
       { name: 'Robert Hong', role: 'Senior Research Technician', photoName: 'Hong_Robert' },
+      { name: 'Open Position!', role: 'Research Assistant' },
     ],
   },
   {
@@ -139,7 +139,7 @@ export const teams = [
       { name: 'Cassidy Illum', role: 'Research Technician', photoName: 'Illum_Cassidy' },
       { name: 'Elijah Castro', role: 'Research Technician', photoName: 'Castro_Elijah' },
       { name: 'Juan Li', role: 'Manager, IGO', photoName: 'Li_Juan' },
-      { name: 'Open Position!', role: 'Supervisor' },
+      { name: 'Open Position!', role: 'Manager' },
     ],
   },
   {
@@ -149,6 +149,7 @@ export const teams = [
       'IGO technicians gain valuable skills and cutting-edge knowledge while working in a fast-paced environment. Many leverage that experience into advanced degrees and training to further their careers in science and medicine.',
     members: [
       { name: 'Denise Chen', role: 'Philadelphia College of Osteopathic Medicine', photoName: 'Chen_Denise' },
+      { name: 'Desmond Lambe', role: 'Rensselaer Polytechnic Institute', photoName: 'Lambe_Desmond' },
       { name: "Josie D'Angelo", role: 'UC Berkeley ', photoName: 'Dangelo_Josie' },
       { name: 'Marisa Vanness', role: 'Geisinger Commonwealth School of Medicine', photoName: 'Vanness_Marisa' },
       { name: 'Michael Pantano', role: 'BU Questrom School of Business', photoName: 'Pantano_Michael' },

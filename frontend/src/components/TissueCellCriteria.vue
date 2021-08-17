@@ -147,7 +147,7 @@
         <md-table-cell>Bone marrow aspirate</md-table-cell>
         <md-table-cell rowspan="2">Frozen</md-table-cell>
         <md-table-cell>Tube or syringe</md-table-cell>
-        <md-table-cell rowspan="3">-20&deg;C</md-table-cell>
+        <md-table-cell rowspan="2">-20&deg;C</md-table-cell>
         <md-table-cell>Up to 200&mu;L</md-table-cell>
       </md-table-row>
       <md-table-row>
@@ -158,15 +158,18 @@
       <md-table-row>
         <md-table-cell rowspan="2">MissionBio Tapestri</md-table-cell>
         <md-table-cell rowspan="3">Single cell suspension</md-table-cell>
-        <md-table-cell>10% DMSO</md-table-cell>
+        <md-table-cell>PBS + 0.04% BSA</md-table-cell>
+        <md-table-cell>4&deg;C</md-table-cell>
         <md-table-cell rowspan="2">100K cells</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell rowspan="2">PBS + 0.04% BSA</md-table-cell>
-        <md-table-cell rowspan="2">4&deg;C</md-table-cell>
+        <md-table-cell>10% DMSO</md-table-cell>
+        <md-table-cell>-20&deg;C</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>MissionBio DNA + Protein</md-table-cell>
+        <md-table-cell>PBS + 0.04% BSA</md-table-cell>
+        <md-table-cell>4&deg;C</md-table-cell>
         <md-table-cell>2M cells</md-table-cell>
       </md-table-row>
       <md-table-row>
