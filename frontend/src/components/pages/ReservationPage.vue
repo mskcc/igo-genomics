@@ -333,8 +333,12 @@ export default {
                     icon: '',
                   },
                   icon: 'success',
+                }).then((confirmedResult) => {
+                  this.reset();
+                  if (confirmedResult.isConfirmed) {
+                    this.$router.push({ name: 'cancel reservation', params: { id: response.data.appointment._id } });
+                  }
                 });
-                this.reset();
               })
               .catch((error) =>
                 this.$swal({
