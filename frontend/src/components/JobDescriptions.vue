@@ -42,13 +42,25 @@
 
     <md-card class="news-card">
       <md-card-header>
-        <div class="md-title">Project Coordinator</div>
+        <div class="md-title">Research Assistant</div>
+        <router-link :to="{ name: 'team', params: { id: 4 } }">Nucleic Acid Team</router-link>
+        <div class="md-body">Coming soon</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionNARA = true" class="md-accent">Learn More</md-button>
+        <md-button href="mailto:genomics@mskcc.org?subject=NA Research Assistant" target="_blank" class="md-primary">Inquire </md-button>
+      </md-card-actions>
+    </md-card>
+
+    <md-card class="news-card">
+      <md-card-header>
+        <div class="md-title">Senior Project Assistant</div>
         <router-link :to="{ name: 'team', params: { id: 2 } }">Sample & Project Mgmt Team</router-link>
         <div class="md-body">Coming soon</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescriptionSPMPC = true" class="md-accent">Learn More</md-button>
-        <md-button href="mailto:genomics@mskcc.org?subject=SPM Project Coordinator" target="_blank" class="md-primary">Inquire </md-button>
+        <md-button @click="showJobDescriptionSPMSPA = true" class="md-accent">Learn More</md-button>
+        <md-button href="mailto:genomics@mskcc.org?subject=SPM Senior Project Assistant" target="_blank" class="md-primary">Inquire </md-button>
       </md-card-actions>
     </md-card>
 
@@ -59,7 +71,7 @@
         <div class="md-body">Coming soon</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescriptionNARA = true" class="md-accent">Learn More</md-button>
+        <md-button @click="showJobDescriptionNART = true" class="md-accent">Learn More</md-button>
         <md-button href="mailto:genomics@mskcc.org?subject=NA Temp Technician" target="_blank" class="md-primary">Inquire </md-button>
       </md-card-actions>
     </md-card>
@@ -68,18 +80,19 @@
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Technician in the Library Preparation Team, you will:</strong>
         <ul>
-          <li>Prepare DNA and RNA libraries for NGS following established SOPs.</li>
-          <li>Prepare reagents and set up runs for robots.</li>
-          <li>Assist group leader to create an efficient and error-proof workflow – and troubleshoot data accordingly.</li>
-          <li>Maintain the high-quality standards that IGO has for its services.</li>
+          <li>Make NGS libraries from DNA and RNA libraries following established SOPs.</li>
+          <li>Plan and pool NGS libraries to capture using requested gene panels.</li>
+          <li>Load and run the liquid handlers according to pre-established robotic methods.</li>
+          <li>Review every step in the automated and/or manual process to maintain the high-quality standard.</li>
+          <li>Assist group leader to create an efficient and error-proof workflow – and troubleshoot accordingly.</li>
           <li>Communicate with vendor technical support and sales representatives.</li>
           <li>Maintain and coordinate documentation for assay tracking and results for review/reporting through iLabs and LIMS.</li>
         </ul>
         <strong>You have:</strong>
         <ul>
-          <li>A Bachelor’s Degree in a Biological, Chemistry, or Science related field.</li>
-          <li>Previous exposure to making libraries for NGS platform, manually and automated is preferable.</li>
-          <li>Strong organizational, prioritization and time management skills.</li>
+          <li>A Bachelor’s Degree in a Biological, Chemistry, or Science related field with at least 3 years of relevant full-time experience or a Master's degree with 1-2 years full-time relevant experience.</li>
+          <li>Previous exposure to NGS library preparation and Illumina sequencer loading is preferable.</li>
+          <li>Strong organizational, prioritization, and time management skills.</li>
         </ul>
       </md-dialog-content>
       <md-dialog-actions>
@@ -87,7 +100,31 @@
       </md-dialog-actions>
     </md-dialog>
 
-    <md-dialog :md-active.sync="showJobDescriptionSPMPC" :md-fullscreen="false" style="z-index: 400;">
+    <md-dialog :md-active.sync="showJobDescriptionNART" :md-fullscreen="false" style="z-index: 400;">
+      <md-dialog-content md-dynamic-height>
+        <strong>As a Research Technician in the Library Preparation Team, you will:</strong>
+        <ul>
+          <li>Make NGS libraries from DNA and RNA libraries following established SOPs.</li>
+          <li>Plan and pool NGS libraries to capture using requested gene panels.</li>
+          <li>Load and run the liquid handlers according to pre-established robotic methods.</li>
+          <li>Review every step in the automated and/or manual process to maintain the high-quality standard.</li>
+          <li>Assist group leader to create an efficient and error-proof workflow – and troubleshoot accordingly.</li>
+          <li>Communicate with vendor technical support and sales representatives.</li>
+          <li>Maintain and coordinate documentation for assay tracking and results for review/reporting through iLabs and LIMS.</li>
+        </ul>
+        <strong>You have:</strong>
+        <ul>
+          <li>A Bachelor’s Degree in a Biological, Chemistry, or Science related field.</li>
+          <li>Previous exposure to NGS library preparation and Illumina sequencer loading is preferable.</li>
+          <li>Strong organizational, prioritization, and time management skills.</li>
+        </ul>
+      </md-dialog-content>
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="showJobDescriptionNART = false">Close</md-button>
+      </md-dialog-actions>
+    </md-dialog>
+
+    <md-dialog :md-active.sync="showJobDescriptionSPMSPA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Project Coordinator in the Sample & Project Management Team, you will:</strong>
         <ul>
@@ -107,7 +144,7 @@
         </ul>
       </md-dialog-content>
       <md-dialog-actions>
-        <md-button class="md-primary" @click="showJobDescriptionSPMPC = false">Close</md-button>
+        <md-button class="md-primary" @click="showJobDescriptionSPMSPA = false">Close</md-button>
       </md-dialog-actions>
     </md-dialog>
 
@@ -198,11 +235,12 @@ export default {
   components: { CareerBanner },
   data: function() {
     return {
-      showJobDescriptionSPMPC: false,
+      showJobDescriptionSPMSPA: false,
       showJobDescriptionNARA: false,
       showJobDescriptionRDM: false,
       showJobDescriptionEXPANDRA: false,
       showJobDescriptionSeqRA: false,
+      showJobDescriptionNART: false,
     };
   },
 };

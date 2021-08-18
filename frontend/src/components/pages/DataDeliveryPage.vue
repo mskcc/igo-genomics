@@ -7,12 +7,12 @@
           <md-list-item class="indent" href="#instructions">Instructions on accessing your FASTQ files</md-list-item>
           <md-list-item class="indent" href="#data-delivery-structure">Data delivery structure</md-list-item>
           <md-list-item class="indent" href="#10x-and-missionbio">10X Genomics & MissionBio pipeline output</md-list-item>
+          <md-list-item class="indent" href="#data-storage">Data Storage</md-list-item>
         </md-list>
       </md-app-drawer>
 
       <md-app-content>
         <div class="md-title" id="instructions">Instructions on accessing your FASTQ files</div>
-
         <div class="md-subheading">From a PC:</div>
         <ul>
           <li>Open File Explorer from the taskbar or the Start menu, or press the Windows logo key + E.</li>
@@ -22,7 +22,6 @@
           <li>When prompted enter your MSKCC username & password</li>
           <li>Select Finish</li>
         </ul>
-
         <div class="md-subheading">From a Mac:</div>
         <ul>
           <li>Click the Finder icon in the Dock to open a Finder window</li>
@@ -31,18 +30,15 @@
           <li>From the popup select the share for your lab</li>
           <li>When prompted enter your MSKCC username & password</li>
         </ul>
-
         <div class="md-subheading">On Juno:</div>
         <ul>
           <li>Navigate to /igo/delivery/share/[LABNAME]</li>
         </ul>
-
         <div class="md-subheading">On Lilac:</div>
         <ul>
           <li>On lilac-xfer01.mskcc.org, navigate to /igo/delivery/share/[LABNAME]</li>
           <li>Rsync the data to its final destination</li>
         </ul>
-
         <p>
           If you cannot access your data or need to grant access to a collaborator or data analyst (internal or external) or an MSKCC core,
           please fill out
@@ -53,9 +49,10 @@
           questions
           <a href="mailto:zzPDL_SKI_IGO_DATA@mskcc.org?subject=Data questions">contact the Data Team.</a>
         </p>
+        
+        <md-divider></md-divider>
 
         <div class="md-title" id="data-delivery-structure">Data delivery structure</div>
-
         <div class="md-subheading">Background</div>
         <p>
           Most of our Illumina sequencers run flow cells with multiple lanes, which allow us to load different pools of samples with
@@ -68,7 +65,6 @@
           VIC, JOHNSAWYERS, AYYAN; NextSeq 500: SCOTT; NextSeq 2000: PEPE; HiSeq 2500: MOMO, KIM, LIZ; HiSeq 4000: PITT, JAX; NovaSeq:
           MICHELLE, DIANA, RUTH.
         </p>
-
         <div class="md-subheading">Former Data Structure</div>
         <p>
           Traditionally, we delivered two FASTQ files per sample for each paired-end sequencing run (R1 and R2) and one FASTQ file for
@@ -77,7 +73,6 @@
         </p>
         <img src="../../assets/images/screenshots/current-file-structure.jpg" alt="current file path screenshot" />
         <br /><br />
-
         <div class="md-subheading">Current Data Structure</div>
         <p>
           As of 01/01/2021, IGO will no longer combine reads from different lanes of a sequencing run into a single file. Instead of just R1
@@ -85,7 +80,6 @@
         </p>
         <img src="../../assets/images/screenshots/future-file-structure.jpg" alt="future file path screenshot" />
         <br /><br />
-
         <div class="md-subheading">What Does This Mean?</div>
         <p>
           For investigators that request analysis through CAS (IMPACT/HemePACT) or BIC, there will be no change aside from how you see your
@@ -100,8 +94,9 @@
           <a href="mailto:genomics@mskcc.org?subject=Question about accessing data">genomics@mskcc.org</a>.
         </p>
 
-        <div class="md-title" id="10x-and-missionbio">10X Genomics & MissionBio pipeline output</div>
+        <md-divider></md-divider>
 
+        <div class="md-title" id="10x-and-missionbio">10X Genomics & MissionBio pipeline output</div>
         <div class="md-subheading">Now available on /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline</div>
         <p>
           For quality control purposes, IGO runs Cell Ranger (10X scRNA-Seq), Space Ranger (10X Visium), and the Tapestri pipeline
@@ -118,6 +113,28 @@
           Deliverables for MissionBio Tapestri: QC and metadata files (TXT, TSV, INFO, YAML, CSV, JSON), CellFinder plot (PDF), Tapestri
           Insights file (LOOM), alignment files (BAM), mapped reads by barcode (TXT), variant information (VCF)
         </p>
+
+        <md-divider></md-divider>
+
+        <div class="md-title" id="data-storage">Data Storage & FASTQ File Compression</div>
+        <div class="md-subheading">What changes are being made?</div>
+        <p>
+          All FASTQ files from <strong>2014 and before</strong> will be converted to the fastq.ora format, compressing the file and allowing for additional storage space. Files generated since 2014 will remain in the fastq.gz format.
+        </p>
+        <div class="md-subheading">How can the files be processed?</div>
+        <p>
+          The Illumina DRAGEN pipeline accepts fastq.ora as input. They can also be decompressed with <a href="https://support.illumina.com/sequencing/sequencing_software/DRAGENDecompression/software-downloads.html" target="__blank">Orad</a>.
+        </p>
+        <div class="md-subheading">What commands would I use to run Orad?</div>
+        <p>
+          On Juno or Lilac, with Orad installed:<br />
+
+          export ORA_REF_PATH=/opt/common/CentOS_7/DragenORAD/orad_2_5_5/oradata/ <br />
+          /opt/common/CentOS_7/DragenORAD/orad_2_5_5/orad file.fastq.ora -c --raw | bwa mem humanref.fasta -> resu.sam
+
+          Your output will be a SAM file.
+        </p>
+        
       </md-app-content>
     </md-app>
   </div>

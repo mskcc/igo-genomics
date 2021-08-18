@@ -4,8 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        IGO has introduced new pricing for sequencing of investigator prepared libraries! See the Platforms & Pricing page for more
-        information.
+        Beginning Sept. 1, 2021, all FASTQ files from 2014 or prior will be converted a compressed fastq.ora format. <a href="https://genomics.mskcc.org/accessing-your-data#data-storage"> Click here</a> for more information.
       </span>
     </div>
     <div class="carousel-div">

@@ -64,7 +64,7 @@ export const teams = [
       { name: 'Meghanne Lomibao', role: 'Project Coordinator', photoName: 'Lomibao_Meghanne' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
       { name: 'Valerie Patritti', role: 'Project Manager', photoName: 'Patritti_Valerie' },
-      // { name: 'Position Opening Soon!', role: 'Project Coordinator' },
+      { name: 'Position Opening Soon!', role: 'Senior Project Assistant' },
     ],
   },
   {
@@ -98,6 +98,7 @@ export const teams = [
       { name: 'Satoko Murakami', role: 'Research Assistant', photoName: 'Murakami_Satoko' },
       { name: 'Sophie Kleinberg', role: 'Intern', photoName: 'Kleinberg_Sophie' },
       { name: 'Yushi Wu', role: 'Research Assistant', photoName: 'Wu_Yushi' },
+      { name: 'Open Position!', role: 'Research Assistant' },
       { name: 'Open Position!', role: 'Research Technician (Temporary)' },
     ],
   },
