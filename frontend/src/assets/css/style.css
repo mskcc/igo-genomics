@@ -777,3 +777,15 @@ sup {
 .subpage-header {
   max-width: fit-content;
 }
+
+.pending {
+  color: var(--mskcc-dark-yellow);
+}
+
+.cancelled {
+  color: var(--md-theme-demo-light-accent-on-background, #ff5252);
+}
+
+#all-reservations .md-content.md-table-content.md-scrollbar.md-theme-default {
+  max-height: 650px;
+}

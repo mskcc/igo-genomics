@@ -4,7 +4,6 @@ import VueRouter from 'vue-router';
 import store from './store';
 import VueCoreVideoPlayer from 'vue-core-video-player';
 import DatePicker from 'v-calendar';
-import VueTimepicker from 'vue2-timepicker';
 import Vuelidate from 'vuelidate';
 
 import './filters.js';
@@ -105,7 +104,7 @@ Vue.use(DatePicker, {
   componentPrefix: 'vc', // Use <vc-calendar /> instead of <v-calendar />
 });
 
-Vue.use(VueTimepicker);
+Vue.use(require('vue-moment'));
 
 Vue.config.productionTip = false;
 
@@ -151,7 +150,7 @@ const routes = [
   { path: '/feedback/:application?', component: FeedbackPage, name: 'feedback', props: true },
   { path: '/view-feedback', component: ViewFeedbackPage, name: 'view feedback' },
   { path: '/block-pricing', component: BlockPricingPage, name: 'block pricing' },
-  { path: '/all-10x-appointments', component: AllAppointmentsPage },
+  { path: '/all-appointments', component: AllAppointmentsPage },
 ];
 
 const router = new VueRouter({

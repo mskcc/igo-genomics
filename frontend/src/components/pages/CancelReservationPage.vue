@@ -4,19 +4,42 @@
       <md-card>
         <md-card-header>
           <md-card-header-text>
-            <div class="md-title">{{ appointment.requestType }} Appointment</div>
+            <div class="md-title">
+              <span v-if="appointment.requestType !== 'spm'">{{ appointment.requestType }}</span
+              ><span v-else>Sample Dropoff</span> Appointment
+            </div>
+            <br />
+            <div class="md-subheading">
+              Status:
+              <span
+                v-bind:class="{
+                  pending: appointment.status === 'pending',
+                  cancelled: appointment.status === 'cancelled',
+                }"
+              >
+                {{ appointment.status.toUpperCase() }}
+              </span>
+            </div>
+            <br />
             <div class="md-subheading">{{ appointment.notificationDate }}</div>
-            <div class="md-subheading">Starts at {{ appointment.emailTime }}</div>
+            <div class="md-subheading">
+              Starts at
+              {{
+                new Date().setHours(parseInt(appointment.emailTime.split(':')[0]), parseInt(appointment.emailTime.split(':')[1]))
+                  | moment('h:mm A')
+              }}
+            </div>
           </md-card-header-text>
         </md-card-header>
         <md-card-content>
           <div>{{ appointment.fullName }}</div>
           <div>{{ appointment.email }}</div>
-          <div>{{ appointment.details.sampleNumber }} sample(s)</div>
+          <div v-if="appointment.requestType === 'spm'">iLab Service ID: {{ appointment.details.ilabServiceId }}</div>
+          <div v-else>{{ appointment.details.sampleNumber }} sample(s)</div>
           <div v-if="appointment.requestType === '10xGenomics'">{{ appointment.details.chemistry }}</div>
         </md-card-content>
         <md-card-actions>
-          <md-button class="md-accent" @click="cancelAppointment">Cancel Appointment</md-button>
+          <md-button v-if="appointment.status !== 'cancelled'" class="md-accent" @click="cancelAppointment">Cancel Appointment</md-button>
         </md-card-actions>
       </md-card>
     </div>
