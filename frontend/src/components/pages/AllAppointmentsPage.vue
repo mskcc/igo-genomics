@@ -5,7 +5,7 @@
         <md-card-content>
           <md-field>
             <label>Password</label>
-            <md-input v-model="input"></md-input>
+            <md-input v-model="input" type="password" md-toggle-password></md-input>
           </md-field>
         </md-card-content>
         <md-card-actions>
@@ -29,7 +29,7 @@
         <md-table-cell md-label="fullName" md-sort-by="fullName">{{ item.fullName }}</md-table-cell>
         <md-table-cell md-label="email" md-sort-by="email">{{ item.email }}</md-table-cell>
         <!-- <md-table-cell md-label="date" md-sort-by="date">{{ item.date }}</md-table-cell> -->
-         <md-table-cell md-label="dateTime" md-sort-by="dateTime">{{ item.dateTime }}</md-table-cell>
+        <md-table-cell md-label="dateTime" md-sort-by="dateTime">{{ item.dateTime }}</md-table-cell>
         <md-table-cell md-label="notificationDate" md-sort-by="notificationDate">{{ item.notificationDate }}</md-table-cell>
         <md-table-cell md-label="status" md-sort-by="status">
           <md-button class="md-primary"> {{ item.status }}</md-button>
