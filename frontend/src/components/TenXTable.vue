@@ -1,7 +1,9 @@
 <template>
-  <div class="center-page">
-    <div class="md-display-1">10x genomics visium</div>
-    <md-table md-card style="width: 50%;">
+  <div>
+    <md-table md-card>
+      <md-table-toolbar>
+        <h1 class="md-title">10X Visium Processing & Price Summary</h1>
+      </md-table-toolbar>
       <md-table-row>
         <md-table-head>Core</md-table-head>
         <md-table-head>Processing Step</md-table-head>
@@ -78,7 +80,6 @@
         <md-table-cell>SpaceRanger</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <!-- <md-table-cell></md-table-cell> -->
         <md-table-cell colspan="3"><strong>*Price includes IGO charges only; MCC billed separately</strong></md-table-cell>
       </md-table-row>
     </md-table>

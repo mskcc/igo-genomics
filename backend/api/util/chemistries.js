@@ -22,12 +22,12 @@ module.exports = [
     stop: 'present',
     color: '#40b4e5',
   },
-  {
-    name: 'Agilent Mouse Exome',
-    start: '01-01-2020',
-    stop: '12-01-2020',
-    color: '#8fc7e8',
-  },
+  // {
+  //   name: 'Agilent Mouse Exome',
+  //   start: '01-01-2020',
+  //   stop: '12-01-2020',
+  //   color: '#8fc7e8',
+  // },
   {
     name: 'Twist Mouse Exome',
     start: '01-01-2021',

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <chemistry-timeline-page></chemistry-timeline-page> -->
     <div class="prices-container">
       <div class="bulk-header">
         <img class="prices-image" src="../../assets/services1.png" alt="bulk logo" />
@@ -9,22 +8,28 @@
       <div class="single-header">
         <img class="prices-image" src="../../assets/services2.png" alt="bulk logo" />
         <div class="md-title">Single Cell Sequencing</div>
+        <!-- <div class="md-title">Single Cell Sequencing<br /><span class="md-subheading"><router-link :to="{ name: 'single cell hub' }">Visit the Single Cell Hub</router-link></span></div> -->
       </div>
       <div class="other-header">
         <img class="prices-image" src="../../assets/services3.png" alt="bulk logo" />
-        <div class="md-title">Sequencing and Other Platforms</div>
+        <div class="md-title">Other Platforms</div>
       </div>
 
       <div class="bulk-data">
-        <div class="full-control">
+        <div>
           <div class="list">
             <md-list>
+              <md-list-item>
+                <router-link :to="{ name: 'block pricing' }" class="md-list-item-text"
+                  >Sequencing Only <span class="md-body-2">(investigator prepared libraries/pools)</span></router-link
+                >
+              </md-list-item>
               <md-list-item
                 v-for="(service, index) in bulkServices"
                 :key="index"
                 md-expand
                 :md-expanded="platformName.replace(/ /g, '').toLowerCase() === service.name.replace(/ /g, '').toLowerCase()"
-                @click="expandList(service.name)"
+                @click="expandList($event, service.name)"
               >
                 <span class="md-list-item-text">{{ service.name }}</span>
                 <md-list slot="md-expand">
@@ -149,7 +154,7 @@
         </div>
       </div>
       <div class="single-data">
-        <div class="full-control">
+        <div>
           <div class="list">
             <md-list>
               <md-list-item
@@ -157,12 +162,12 @@
                 :key="index"
                 md-expand
                 :md-expanded="platformName.replace(/ /g, '').toLowerCase() === service.name.replace(/ /g, '').toLowerCase()"
-                @click="expandList(service.name)"
+                @click="expandList($event, service.name)"
               >
                 <span class="md-list-item-text">{{ service.name }}</span>
-                <span v-if="service.name == '10x Genomics Visium'"
-                  ><router-link :to="{ name: '10x genomics visium' }">more info</router-link></span
-                >
+                <span v-if="service.name === '10x Genomics Visium'">
+                  <router-link exact :to="{ name: 'single cell hub' }">more info</router-link>
+                </span>
                 <md-list slot="md-expand">
                   <md-list-item>
                     <table class="prices-table services-general-table">
@@ -236,7 +241,7 @@
         </div>
       </div>
       <div class="other-data">
-        <div class="full-control">
+        <div>
           <div class="list">
             <md-list>
               <md-list-item
@@ -244,7 +249,7 @@
                 :key="index"
                 md-expand
                 :md-expanded="platformName.replace(/ /g, '').toLowerCase() === service.name.replace(/ /g, '').toLowerCase()"
-                @click="expandList(service.name)"
+                @click="expandList($event, service.name)"
               >
                 <span class="md-list-item-text">{{ service.name }}</span>
 
@@ -277,14 +282,6 @@
                       </tr>
                     </table></md-list-item
                   >
-                  <span v-if="service.name == 'Investigator Prepared Libraries'">
-                    <md-button class="md-primary" @click="submittingPricingInquiry = true">Submit a pricing inquiry</md-button>
-                    <div>
-                      <md-dialog :md-active.sync="submittingPricingInquiry" :md-fullscreen="false" style="z-index: 200;">
-                        <contact-form v-bind:submittingPricingInquiry.sync="submittingPricingInquiry"></contact-form>
-                      </md-dialog>
-                    </div>
-                  </span>
                   <md-list-item v-if="service.table"
                     ><md-table>
                       <md-table-row>
@@ -374,6 +371,10 @@
       <!-- <div>single prices</div>
       <div>other prices</div> -->
     </div>
+    <span class="md-caption" style="text-align: right;"
+      >Prices indicated on this webpage are an estimation and can be adjusted (higher or lower) at any point in time based on changes in
+      sequencing reagent cost, labor cost, etc.
+    </span>
   </div>
 </template>
 
@@ -381,12 +382,10 @@
 // import ChemistryTimelinePage from './ChemistryTimelinePage.vue';
 import { HOME_PAGE_PATH } from './../../config.js';
 import { bulkServices, singleServices, otherServices } from './../../data.js';
-import ContactForm from '../ContactForm.vue';
 
 export default {
   name: 'ServicesPricesPage',
   // components: { ChemistryTimelinePage },
-  components: { ContactForm },
   props: ['name'],
   data: function() {
     return {
@@ -394,7 +393,6 @@ export default {
       singleServices: singleServices,
       otherServices: otherServices,
       platformName: '',
-      submittingPricingInquiry: false,
     };
   },
   mounted: function() {
@@ -402,10 +400,13 @@ export default {
     // console.log(this.platformName);
   },
   methods: {
-    expandList(service) {
+    expandList(event, service) {
       // this.$route.params.name = service;
-      // console.log(this.$router);
-      history.pushState(service, '', `${HOME_PAGE_PATH}/platforms/${service.replace(/ /g, '').toLowerCase()}`);
+      if (event.target.innerHTML === 'Pricing') {
+        history.pushState(service, '', `${HOME_PAGE_PATH}/block-pricing`);
+      } else if (event.target.innerHTML !== 'more info') {
+        history.pushState(null, null, `${HOME_PAGE_PATH}/platforms/${service.replace(/ /g, '').toLowerCase()}`);
+      }
     },
   },
   // computed: {

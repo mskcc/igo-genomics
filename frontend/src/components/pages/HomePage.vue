@@ -4,8 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        IGO's data team is now delivering analytical pipeline output for 10X scRNA-Seq, 10X Visium, and MissionBio Tapestri projects
-        initiated in IGO. Data will remain on the igo-share server for 3 months.
+        Beginning Sept. 1, 2021, all FASTQ files from 2014 or prior will be converted a compressed fastq.ora format. <a href="https://genomics.mskcc.org/accessing-your-data#data-storage"> Click here</a> for more information.
       </span>
     </div>
     <div class="carousel-div">
