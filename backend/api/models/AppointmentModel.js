@@ -19,7 +19,7 @@ var AppointmentSchema = new mongoose.Schema(
 
 // AppointmentSchema.index({ email: 1, date: 1, startTime: 1 }, { unique: true });
 AppointmentSchema.index(
-  { email: 1, date: 1, dateTime: 1, requestType: 1 },
+  { _id: 1, email: 1, date: 1, dateTime: 1, requestType: 1, status: 1 },
   { unique: true }
 );
 

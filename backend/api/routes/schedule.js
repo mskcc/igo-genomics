@@ -227,42 +227,58 @@ module.exports = function (router) {
       });
   });
 
-  // deletes an appointment
+  // cancels an appointment
   router.post('/cancelAppointment/:id', function (req, response) {
-    let appointmentId = req.params.id;
-
-    AppointmentModel.findOneAndDelete({ _id: appointmentId }, function (
-      error,
-      appointment
-    ) {
-      // not a valid id
+    AppointmentModel.findById(req.params.id, function (error, doc) {
       if (error) {
         return response.status(500).json({
           message: 'Appointment not found',
         });
       }
-      if (appointment) {
-        mailer.sendCancellationNotification(appointment);
-        // return response
-        //   .status(200)
-        //   .send(
-        //     '<p style=" text-align: center; font-size: larger;">Appointment cancelled!</p><p style=" text-align: center;" ><img style="width:50px; margin:auto 0;" src="https://igodev.mskcc.org/img/logoDarkGrayOnTransp.f0d9e455.png"></p>'
-        //   );
-        return response.status(200).json({ message: 'Appointment cancelled!' });
-      }
-      // no appointment was found
-      return response.status(500).json({
-        message: 'Appointment not found',
+      doc.status = 'cancelled';
+      doc.save(function (err, updatedAppointment) {
+        if (err) {
+          console.log(err);
+          return response.status(500).json({
+            message: 'Appointment could not be cancelled',
+          });
+        }
+        if (updatedAppointment) {
+          mailer.sendCancellationNotification(updatedAppointment);
+          return response.status(200).json({
+            message: 'Appointment cancelled!',
+            appointment: updatedAppointment,
+          });
+        }
       });
-
-      // send cancellation email
-
-      // return response
-      //   .status(200)
-      //   .send(
-      //     '<p style=" text-align: center; font-size: larger;">Appointment not found.</p><p style=" text-align: center;" ><img style="width:50px; margin:auto 0;" src="https://igodev.mskcc.org/img/logoDarkGrayOnTransp.f0d9e455.png"></p>'
-      //   );
     });
+
+    // AppointmentModel.findOneAndUpdate(
+    //   { _id: req.params.id },
+    //   {
+    //     status: 'cancelled',
+    //   },
+    //   { new: true },
+    //   function (error, appointment) {
+    //     // not a valid id
+    //     if (error) {
+    //       console.log(error);
+    //       return response.status(500).json({
+    //         message: 'Appointment not found',
+    //       });
+    //     }
+    //     if (appointment) {
+    //       mailer.sendCancellationNotification(appointment);
+    //       return response
+    //         .status(200)
+    //         .json({ message: 'Appointment cancelled!' });
+    //     }
+    //     // no appointment was found
+    //     // return response.status(500).json({
+    //     //   message: 'Appointment not found',
+    //     // });
+    //   }
+    // );
   });
 
   router.get('/appointment/:id', function (req, response) {

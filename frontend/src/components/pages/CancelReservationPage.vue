@@ -62,7 +62,7 @@ export default {
     cancelAppointment: function() {
       this.$swal({
         // title: 'Cancel',
-        text: `Are you sure you want to cancel your appointment for ${this.appointment.notificationDate}?`,
+        text: `Are you sure you want to cancel your appointment on ${this.appointment.notificationDate}?`,
         // animation: false,
         icon: 'warning',
         showCancelButton: true,
@@ -76,10 +76,10 @@ export default {
             .post(`${API_URL}/cancelAppointment/${this.id}`)
             .then((response) => {
               if (response.status === 200) {
-                this.$swal({ title: 'Deleted', text: response.data.message, icon: 'success' }).then((confirmedDelete) => {
-                  // redirect home
+                this.$swal({ title: 'Success', text: response.data.message, icon: 'success' }).then((confirmedDelete) => {
                   if (confirmedDelete.isConfirmed) {
-                    this.$router.push({ name: 'home' });
+                    // this.$router.go();
+                    this.appointment = response.data.appointment;
                   }
                 });
               }
