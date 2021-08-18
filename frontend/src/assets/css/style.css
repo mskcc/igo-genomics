@@ -787,5 +787,5 @@ sup {
 }
 
 #all-reservations .md-content.md-table-content.md-scrollbar.md-theme-default {
-  max-height: 650px;
+  min-height: 600px;
 }

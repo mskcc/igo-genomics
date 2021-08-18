@@ -20,7 +20,7 @@
           <h1 class="md-title">Existing Reservations</h1>
         </div>
         <md-field md-clearable class="md-toolbar-section-end">
-          <md-input placeholder="Search by status..." v-model="search" @input="searchOnTable" />
+          <md-input placeholder="Search by name..." v-model="search" @input="searchOnTable" />
         </md-field>
       </md-table-toolbar>
 
@@ -29,16 +29,17 @@
         <md-table-cell md-label="fullName" md-sort-by="fullName">{{ item.fullName }}</md-table-cell>
         <md-table-cell md-label="email" md-sort-by="email">{{ item.email }}</md-table-cell>
         <!-- <md-table-cell md-label="date" md-sort-by="date">{{ item.date }}</md-table-cell> -->
+         <md-table-cell md-label="dateTime" md-sort-by="dateTime">{{ item.dateTime }}</md-table-cell>
         <md-table-cell md-label="notificationDate" md-sort-by="notificationDate">{{ item.notificationDate }}</md-table-cell>
-        <!-- <md-table-cell md-label="startTime" md-sort-by="startTime">{{ item.startTime }}</md-table-cell> -->
-        <md-table-cell md-label="emailTime" md-sort-by="emailTime">{{ item.emailTime }}</md-table-cell>
-        <md-table-cell md-label="requestType" md-sort-by="requestType">{{ item.requestType }}</md-table-cell>
         <md-table-cell md-label="status" md-sort-by="status">
           <md-button class="md-primary"> {{ item.status }}</md-button>
         </md-table-cell>
+        <!-- <md-table-cell md-label="startTime" md-sort-by="startTime">{{ item.startTime }}</md-table-cell> -->
+        <md-table-cell md-label="emailTime" md-sort-by="emailTime">{{ item.emailTime }}</md-table-cell>
+        <md-table-cell md-label="requestType" md-sort-by="requestType">{{ item.requestType }}</md-table-cell>
         <md-table-cell md-label="chemistry" md-sort-by="chemistry">{{ item.details.chemistry }}</md-table-cell>
         <md-table-cell md-label="sampleNumber" md-sort-by="sampleNumber">{{ item.details.sampleNumber }}</md-table-cell>
-        <md-table-cell md-label="ilabServiceId" md-sort-by="sampleNumber">{{ item.details.ilabServiceId }}</md-table-cell>
+        <!-- <md-table-cell md-label="ilabServiceId" md-sort-by="sampleNumber">{{ item.details.ilabServiceId }}</md-table-cell> -->
       </md-table-row>
     </md-table>
   </div>
@@ -46,7 +47,7 @@
 
 <script>
 import * as app from './../../app.js';
-import { API_URL } from './../../config.js';
+import { API_URL, PW } from './../../config.js';
 
 const toLower = (text) => {
   return text.toString().toLowerCase();
@@ -54,7 +55,7 @@ const toLower = (text) => {
 
 const searchByName = (items, term) => {
   if (term) {
-    return items.filter((item) => toLower(item.status).includes(toLower(term)));
+    return items.filter((item) => toLower(item.fullName).includes(toLower(term)));
   }
   return items;
 };
@@ -63,9 +64,9 @@ export default {
   data: function() {
     return {
       appointments: {},
-      password: 'singlecell',
+      password: PW,
       input: '',
-      showData: true,
+      showData: '',
       search: null,
       searched: [],
     };
