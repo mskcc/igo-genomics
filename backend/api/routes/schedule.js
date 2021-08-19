@@ -159,6 +159,7 @@ module.exports = function (router) {
       requestType: requestType,
       status: { $in: ['pending', 'confirmed'] },
     })
+      .sort({ emailTime: 'asc' })
       .lean()
       .exec(function (err, appointments) {
         if (err) {
