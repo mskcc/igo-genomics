@@ -65,7 +65,9 @@ exports.sendBookingNotification = function (appointment, appointmentIcal) {
 
   let email = {
     subject: subject,
-    content: `Hello<br><br>Your ${appointment.requestType} reservation is ${
+    content: `Hello ${appointment.fullName},<br><br>Your ${
+      appointment.requestType
+    } reservation is ${
       appointment.status
     }. Please call (646) 888-3856 before dropping off your samples. Cancellations can be made no less than 2 hours before your drop off time.<br><br>Appointment type: <strong>${
       appointment.requestType
