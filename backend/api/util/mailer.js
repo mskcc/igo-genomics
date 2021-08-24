@@ -33,12 +33,26 @@ let transporter = nodemailer.createTransport({
 exports.sendBookingNotification = function (appointment, appointmentIcal) {
   let recipients;
   let subject;
+  let options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    weekday: 'short',
+    hour: '2-digit',
+    minute: '2-digit',
+  };
+  let date = new Date(appointment.dateTime).toLocaleDateString(
+    'en-US',
+    options
+  );
+
   if (process.env.ENV === 'development') {
     recipients = [
       'patrunoa@mskcc.org,apatruno618@gmail.com',
       appointment.email,
     ];
-    subject = `[IGO Reservation TEST] Drop-off samples at: ${appointment.emailTime} on ${appointment.notificationDate}`;
+    // subject = `[IGO Reservation TEST] Drop-off samples at: ${appointment.emailTime} on ${appointment.notificationDate}`;
+    subject = `[IGO Reservation TEST] Drop-off samples on: ${date}`;
   } else {
     recipients = [
       emailConfig.notificationRecipients[appointment.requestType],
@@ -51,13 +65,13 @@ exports.sendBookingNotification = function (appointment, appointmentIcal) {
 
   let email = {
     subject: subject,
-    content: `Hello<br><br>Your ${
+    content: `Hello ${appointment.fullName},<br><br>Your ${
       appointment.requestType
-    } reservation is confirmed. Please call (646) 888-3856 before dropping off your samples. Cancellations can be made no less than 2 hours before your drop off time.<br><br>Appointment type: <strong>${
+    } reservation is ${
+      appointment.status
+    }. Please call (646) 888-3856 before dropping off your samples. Cancellations can be made no less than 2 hours before your drop off time.<br><br>Appointment type: <strong>${
       appointment.requestType
-    }</strong><br>Date: <strong>${appointment.notificationDate} at ${
-      appointment.emailTime
-    }</strong><br>Number of samples: <strong>${
+    }</strong><br>Date: <strong>${date}</strong><br>Number of samples: <strong>${
       appointment.details.sampleNumber
     } samples</strong><br><br>You can cancel this appointment by clicking on: ${cancellationLink}<br>If you have any questions, please reach out to ${
       emailConfig.notificationRecipients[appointment.requestType]
@@ -98,7 +112,7 @@ exports.sendCancellationNotification = function (appointment) {
       emailConfig.notificationRecipients[appointment.requestType],
       appointment.email,
     ];
-    subject = `${emailConfig.subject} Cancelled ${appointment.emailTime} on ${appointment.notificationDate} `;
+    subject = `${emailConfig.subject} ${appointment.requestType} Reservation Cancelled ${appointment.dateTime}`;
   }
 
   let email = {
