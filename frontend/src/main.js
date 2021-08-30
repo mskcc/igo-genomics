@@ -12,7 +12,7 @@ import HomePage from './components/pages/HomePage.vue';
 import AboutPage from './components/pages/AboutPage.vue';
 import ddpcrAssaysPage from './components/pages/ddpcrAssaysPage.vue';
 import TeamPage from './components/pages/TeamPage.vue';
-import ServicesPricesPage from './components/pages/ServicesPricesPage.vue';
+// import ServicesPricesPage from './components/pages/ServicesPricesPage.vue';
 import SubmissionGuidelinesPage from './components/pages/SubmissionGuidelinesPage.vue';
 import ContactsPage from './components/pages/ContactsPage.vue';
 import FaqsPage from './components/pages/FaqsPage.vue';
@@ -35,6 +35,12 @@ import FeedbackPage from './components/pages/FeedbackPage.vue';
 import ViewFeedbackPage from './components/pages/ViewFeedbackPage.vue';
 import BlockPricingPage from './components/pages/BlockPricingPage.vue';
 import AllAppointmentsPage from './components/pages/AllAppointmentsPage.vue';
+import PlatformsPricesNew from './components/pages/PlatformsPricesNew.vue';
+// import PricesLandingPage from './components/PricesLandingPage.vue';
+import LibrarySeq from './components/LibrarySeq.vue';
+import BulkSeq from './components/BulkSeq.vue';
+import ScstSeq from './components/SCSTSeq.vue';
+import OtherApps from './components/OtherApps.vue';
 
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
@@ -117,12 +123,12 @@ const routes = [
     component: ddpcrAssaysPage,
     name: 'ddpcr assays',
   },
-  {
-    path: '/platforms/:name?',
-    component: ServicesPricesPage,
-    name: 'platforms & pricing',
-    props: true,
-  },
+  // {
+  //   path: '/platforms/:name?',
+  //   component: ServicesPricesPage,
+  //   name: 'platforms & pricing',
+  //   props: true,
+  // },
   { path: '/submission-guidelines', component: SubmissionGuidelinesPage, name: 'submission guidelines' },
   { path: '/contacts', component: ContactsPage, name: 'contact us' },
   { path: '/faqs', component: FaqsPage, name: 'faqs' },
@@ -134,6 +140,17 @@ const routes = [
       { path: '/criteria/rna', component: RnaCriteria, name: 'rna' },
       { path: '/criteria/other', component: OtherCriteria, name: 'other' },
       { path: '/criteria/tissue', component: TissueCriteria, name: 'tissue' },
+    ],
+  },
+  {
+    path: '/platforms/landing',
+    component: PlatformsPricesNew,
+    name: 'platforms & pricing',
+    children: [
+      { path: '/platforms/seq', component: LibrarySeq, name: 'library sequencing' },
+      { path: '/platforms/bulk', component: BulkSeq, name: 'bulk library & sequencing' },
+      { path: '/platforms/scst', component: ScstSeq, name: 'single cell & spatial transcriptomics' },
+      { path: '/platforms/nonseq', component: OtherApps, name: 'non sequencing' },
     ],
   },
   { path: '/accessing-your-data', component: DataDeliveryPage, name: 'accessing your data' },
