@@ -10,7 +10,7 @@
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionRDM = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-48309-manager-integrated-genomics-operations/" target="_blank" class="md-primary">Apply </md-button>
+        <md-button href="mailto:genomics@mskcc.org?subject=R&D Manager" target="_blank" class="md-primary">Inquire </md-button>
       </md-card-actions>
     </md-card>
 
@@ -22,8 +22,7 @@
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionEXPANDRA = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-48962-research-assistant/" target="_blank" class="md-primary">Apply
-        </md-button>
+        <md-button href="mailto:genomics@mskcc.org?subject=EXPAND Research Assistant" target="_blank" class="md-primary">Inquire </md-button>
       </md-card-actions>
     </md-card>
 
@@ -61,18 +60,6 @@
       <md-card-actions>
         <md-button @click="showJobDescriptionSPMSPA = true" class="md-accent">Learn More</md-button>
         <md-button href="mailto:genomics@mskcc.org?subject=SPM Senior Project Assistant" target="_blank" class="md-primary">Inquire </md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="news-card">
-      <md-card-header>
-        <div class="md-title">Research Tech (Temp)</div>
-        <router-link :to="{ name: 'team', params: { id: 4 } }">Nucleic Acid Team</router-link>
-        <div class="md-body">Coming soon</div>
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionNART = true" class="md-accent">Learn More</md-button>
-        <md-button href="mailto:genomics@mskcc.org?subject=NA Temp Technician" target="_blank" class="md-primary">Inquire </md-button>
       </md-card-actions>
     </md-card>
 
