@@ -10,7 +10,7 @@
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionRDM = true" class="md-accent">Learn More</md-button>
-        <md-button href="mailto:genomics@mskcc.org?subject=R&D Manager" target="_blank" class="md-primary">Inquire </md-button>
+        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-48309-manager-integrated-genomics-operations/" target="_blank" class="md-primary">Apply </md-button>
       </md-card-actions>
     </md-card>
 

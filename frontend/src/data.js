@@ -89,7 +89,6 @@ export const teams = [
       "The Nucleic Acid team handles the bulk of IGO's sample processing, utilizing liquid-handling robots to automate many platforms. They also handle IGO's single cell platforms: 10X Genomics scRNASeq & Multiome, MissionBio Tapestri, PlateSeq, and DLP.",
     members: [
       { name: 'Ruchi Patel', role: 'Manager, IGO', photoName: 'Patel_Ruchi' },
-      { name: 'Alber Michaeel', role: 'Automation Engineer', photoName: 'Michaeel_Alber' },
       { name: 'Elevit Perez', role: 'Senior Research Technician', photoName: 'Perez_Elevit' },
       { name: 'Justin Clarke', role: 'Research Technician', photoName: 'Clarke_Justin' },
       { name: 'Kalliopi Chatzis', role: 'Research Assistant', photoName: 'Chatzis_Kalliopi' },

@@ -6,8 +6,7 @@
         <md-card-header>
           <div class="md-subheading">
             <p>If this is your first time submitting, please see our detailed instructions below.</p>
-            To maintain social distancing and ensure the safety of our employees and users, we will use an alternative submission protocol
-            until further notice. Please follow these directions and <strong>do not enter the lab space:</strong>
+            <strong>RETURNING CUSTOMERS -- please note IGO's sample submission guidelines have recently changed</strong>
           </div>
         </md-card-header>
         <div>
@@ -15,10 +14,7 @@
           <ol>
             <li><a href="https://my.ilabsolutions.com/account/saml/mskcc">Submit an iLabs request</a> for the desired application.</li>
             <li>
-              <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up"
-                >E-mail the Sample & Project Management team
-              </a>
-              or call 646-888-3856 to pick up a plate or micronic barcoded tubes outside Z320 for submission.
+              <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up">E-mail the Sample & Project Management team</a> or call 646-888-3856 to pick up a plate or micronic barcoded tubes outside Z320 for submission.
             </li>
             <li>
               Complete the <a href="https://igo.mskcc.org/sample-submission">sample submission form</a> indicating the sample specific
@@ -30,16 +26,11 @@
           <div class="md-subheading">Ready to drop off samples:</div>
           <ol>
             <li>
-              <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Schedule Sample Dropoff"
-                >Email the Sample and Project Management Team (SPM)
-              </a>
-              your iLab service ID to coordinate a sample drop off window. Do not bring your samples unless you have a confirmed time. If
-              you are unable to make your appointment please email zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org to reschedule.
+              Schedule a sample drop off time on the <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/8OXW74xHNEOAJNpvnf5-hg2" target="__blank">IGO SPM Reservations calendar</a>.
             </li>
             <li>
-              Bring your samples to the 3rd floor of Zuckerman at your assigned time and place them in the marked area. Wait by the elevator
-              bank while IGO staff confirms the sample set. If you are running late and a lab member is no longer at the receiving desk,
-              please refrain from entering the lab and call 646-888-3856 to notify us of your presence.<br /><br />Any follow-up inquiries
+              Bring your samples to the 3rd floor of Zuckerman at your scheduled time and place them in the marked area. Wait with the samples while IGO staff confirms the sample set. If you are running late and a lab member is no longer at the receiving desk,
+              please refrain from entering the lab and call 646-888-3856 to notify us of your arrival.<br /><br />Any follow-up inquiries
               will be handled by e-mail or phone.
             </li>
             <div></div>
@@ -68,7 +59,7 @@
                         analysis you’ll eventually need)
                       </li>
                       <li>
-                        E-mail <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Schedule Sample Dropoff">the Sample and Project Management Team</a> to schedule a time to bring your samples to IGO
+                        Schedule a sample drop off time on the <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/8OXW74xHNEOAJNpvnf5-hg2" target="__blank">IGO SPM Reservations calendar</a>.
                       </li>
                       <li>
                         Wait for the e-mail from <a href="https://igo.mskcc.org/sample-qc">Sample QC</a> indicating your extraction and QC
@@ -99,9 +90,7 @@
                         application
                       </li>
                       <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Samples to be moved downstream">
-                          Email SPM </a
-                        >to schedule a time to bring your samples -- note that COVID screening is only run on Wednesdays
+                        Schedule a sample drop off time on the <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/8OXW74xHNEOAJNpvnf5-hg2" target="__blank">IGO SPM Reservations calendar</a> -- note that COVID screening is only run on Wednesdays
                       </li>
                       <ul>
                         <li><strong>Cells</strong> should be suspended in >250µL 100% PBS and dropped off Wednesday before 10am</li>
@@ -129,7 +118,7 @@
                       <li>
                         <strong>If submitting viably frozen cells:</strong>
                       <ul>
-                        <li><a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> email SPM </a>to set up a time to bring your samples to IGO</li>
+                        <li>Schedule a sample drop off time on the <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/8OXW74xHNEOAJNpvnf5-hg2" target="__blank">IGO SPM Reservations calendar</a></li>
                         <li>Freeze your 50K cells in 300-500&mu;L 10% DMSO in a 1.5mL Eppendorf tube</li>
                       </ul>
                       </li>
@@ -203,8 +192,7 @@
                       </li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
                       <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> Email SPM </a>to schedule a time to bring
-                        your samples
+                        Schedule a sample drop off time on the <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/8OXW74xHNEOAJNpvnf5-hg2" target="__blank">IGO SPM Reservations calendar</a>
                       </li>
                     </ol></md-list-item
                   >
@@ -238,8 +226,7 @@
                       </li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
                       <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> Email SPM </a>to schedule a time to bring
-                        your samples
+                        Schedule a sample drop off time on the <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/8OXW74xHNEOAJNpvnf5-hg2" target="__blank">IGO SPM Reservations calendar</a>
                       </li>
                     </ol></md-list-item
                   >
@@ -265,8 +252,7 @@
                       </li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
                       <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> Email SPM </a>to schedule a time to bring
-                        your samples
+                        Schedule a sample drop off time on the <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/8OXW74xHNEOAJNpvnf5-hg2" target="__blank">IGO SPM Reservations calendar</a>
                       </li>
                     </ol></md-list-item
                   >
@@ -292,8 +278,7 @@
                         material
                       </li>
                       <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> Email SPM </a>to schedule a time to bring
-                        your samples
+                        Schedule a sample drop off time on the <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/8OXW74xHNEOAJNpvnf5-hg2" target="__blank">IGO SPM Reservations calendar</a>
                       </li>
                     </ol></md-list-item
                   >
@@ -319,8 +304,7 @@
                         material
                       </li>
                       <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> Email SPM </a>to schedule a time to bring
-                        your samples
+                        Schedule a sample drop off time on the <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/8OXW74xHNEOAJNpvnf5-hg2" target="__blank">IGO SPM Reservations calendar</a>
                       </li>
                     </ol>
                   </md-list-item>
@@ -387,8 +371,7 @@
                       <li>Fill out an iLab request for “Digital PCR”</li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
                       <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> Email SPM </a>to schedule a time to bring
-                        your samples
+                        Schedule a sample drop off time on the <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/8OXW74xHNEOAJNpvnf5-hg2" target="__blank">IGO SPM Reservations calendar</a>
                       </li>
                     </ol></md-list-item
                   >
@@ -410,8 +393,7 @@
                       <li>Fill out an iLab request for “Quality Control for Nucleic Acids”</li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
                       <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> Email SPM </a>to schedule a time to bring
-                        your samples
+                        Schedule a sample drop off time on the <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/8OXW74xHNEOAJNpvnf5-hg2" target="__blank">IGO SPM Reservations calendar</a>
                       </li>
                     </ol></md-list-item
                   >

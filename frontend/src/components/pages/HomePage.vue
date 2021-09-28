@@ -4,7 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        Beginning Sept. 1, 2021, all FASTQ files from 2014 or prior will be converted a compressed fastq.ora format. <a href="https://genomics.mskcc.org/accessing-your-data#data-storage"> Click here</a> for more information.
+        Investigators can now schedule their own sample drop off using the <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/8OXW74xHNEOAJNpvnf5-hg2" target="__blank">IGO SPM Reservations calendar</a>
       </span>
     </div>
     <div class="carousel-div">

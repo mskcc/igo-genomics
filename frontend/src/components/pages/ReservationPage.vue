@@ -9,6 +9,8 @@
           cancellation.</strong
         >
         If you have an emergency, please contact genomics@mskcc.org as soon as possible.
+
+        For sample drop-off reservations, please click <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/8OXW74xHNEOAJNpvnf5-hg2" target="__blank">here</a>.
       </span>
     </div>
     <div class="md-layout">
