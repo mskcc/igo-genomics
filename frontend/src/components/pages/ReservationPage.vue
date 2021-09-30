@@ -8,9 +8,13 @@
           >We require at least 48 hours notice for 10x Genomics and ATAC-Seq sample drop-off and at least 2 hours notice for
           cancellation.</strong
         >
-        If you have an emergency, please contact genomics@mskcc.org as soon as possible.
-
-        For sample drop-off reservations, please click <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/8OXW74xHNEOAJNpvnf5-hg2" target="__blank">here</a>.
+        If you have an emergency, please contact genomics@mskcc.org as soon as possible.<br />
+        For all other sample drop-off reservations, please click
+        <a
+          :href="spmCalendar"
+          target="__blank"
+          >here</a
+        >.
       </span>
     </div>
     <div class="md-layout">
@@ -124,7 +128,7 @@
 
 <script>
 import * as app from './../../app.js';
-import { API_URL } from './../../config.js';
+import { API_URL, SPM_CALENDAR } from './../../config.js';
 import { required, email, numeric, requiredIf } from 'vuelidate/lib/validators';
 import ExistingReservations from '../ExistingReservations.vue';
 
@@ -133,6 +137,7 @@ export default {
   components: { ExistingReservations },
   data: function() {
     return {
+      spmCalendar: SPM_CALENDAR,
       message: 'Please select a day.',
       requestType: '',
       form: {

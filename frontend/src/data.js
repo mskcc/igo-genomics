@@ -75,7 +75,6 @@ export const teams = [
     members: [
       { name: 'Andrea Farina', role: 'Manager, IGO', photoName: 'Farina_Andrea' },
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
-      { name: 'Jordana Barnett', role: 'Intern', photoName: 'Barnett_Jordana' },
       { name: 'Julienne Lomibao', role: 'Research Technician', photoName: 'Lomibao_Julienne' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
       { name: 'Tony Deblasio', role: 'Senior Research Assistant', photoName: 'Deblasio_Tony' },
@@ -96,7 +95,6 @@ export const teams = [
       { name: 'Ravi Shrivastav', role: 'Research Assistant', photoName: 'Shrivastav_Ravi' },
       { name: 'Satish Ramakrishnan', role: 'Research Assistant', photoName: 'Ramakrishnan_Satish' },
       { name: 'Satoko Murakami', role: 'Research Assistant', photoName: 'Murakami_Satoko' },
-      { name: 'Sophie Kleinberg', role: 'Intern', photoName: 'Kleinberg_Sophie' },
       { name: 'Yushi Wu', role: 'Research Assistant', photoName: 'Wu_Yushi' },
       { name: 'Open Position!', role: 'Research Technician (Temporary)' },
     ],

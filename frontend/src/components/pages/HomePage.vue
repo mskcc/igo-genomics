@@ -4,7 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        Investigators can now schedule their own sample drop off using the <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/8OXW74xHNEOAJNpvnf5-hg2" target="__blank">IGO SPM Reservations calendar</a>
+        Investigators can now schedule their own sample drop off using the <a :href="spmCalendar" target="__blank">IGO SPM Reservations calendar</a>
       </span>
     </div>
     <div class="carousel-div">
@@ -167,6 +167,7 @@
 <script>
 import { Carousel, Slide } from 'vue-carousel';
 // import { IMAGE_URL } from './../../config.js';
+import { SPM_CALENDAR } from './../../config.js';
 import HomePageNews from '../HomePageNews.vue';
 
 export default {
@@ -183,6 +184,7 @@ export default {
       // showDialog: false,
       // enlargedImage: '',
       announcement: true,
+      spmCalendar: SPM_CALENDAR
     };
   },
   // methods: {
