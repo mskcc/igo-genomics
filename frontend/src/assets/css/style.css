@@ -221,7 +221,8 @@ form {
   text-align: left;
 }
 
-.VueCarousel img {
+.VueCarousel img,
+.carousel-div .md-card {
   width: 60%;
   /* min-width: 100%; */
   max-height: 650px;

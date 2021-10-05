@@ -7,21 +7,57 @@
         IGO will be closed Monday, May 31 in observation of Memorial Day. We will resume normal hours June 1.
       </span>
     </div>
-    <home-page-news></home-page-news>
+    <!-- <home-page-news></home-page-news> -->
     <div class="carousel-div">
       <carousel :per-page="1" :autoplay="true" :scrollPerPage="true" paginationActiveColor="#f29934" :paginationSize="13">
         <slide>
           <img src="../../assets/images/lab/wheresciencegoesigo.jpeg" />
+          <div><a href="https://www.google.com/" target="_blank">New "Reservations feature"</a></div>
+        </slide>
+        <slide>
+          <!-- <img src="../../assets/images/lab/Viale_190612_104.jpg" /> -->
+          <md-card>
+            <md-card-media-cover>
+              <md-card-media>
+                <img src="../../assets/images/lab/wheresciencegoesigo.jpeg" @click="showJobDescriptionERA" />
+              </md-card-media>
+              <md-card-area>
+                <md-card-header>
+                  <span class="md-title">Welcome to the new IGO website!</span>
+                  <span class="md-subhead">January 15, 2021</span>
+                </md-card-header>
+
+                <md-card-actions>
+                  <md-card-expand-trigger>
+                    <md-button class="md-icon-button">
+                      <md-icon>keyboard_arrow_down</md-icon>
+                    </md-button>
+                  </md-card-expand-trigger>
+                </md-card-actions>
+              </md-card-area>
+            </md-card-media-cover>
+
+            <md-card-expand>
+              <md-card-expand-content>
+                <md-card-content>
+                  <p>
+                    In support of our ongoing efforts to provide excellent customer service alongside our cutting-edge technologies, IGO's
+                    Data Team has worked to upgrade our genomics.mskcc.org site. Executed in just over a month, the new site provides easier
+                    access to tools and information while increasing functionality. Please feel free to contact us at genomics@mskcc.org if
+                    you have any questions, comments, or suggestions for the website.
+                  </p>
+                </md-card-content>
+              </md-card-expand-content>
+            </md-card-expand>
+          </md-card>
         </slide>
         <!-- <slide>
-          <img src="../../assets/images/lab/Viale_190612_104.jpg" />
-        </slide> -->
-        <slide>
           <img src="../../assets/images/lab/Viale_190612_030.jpg" />
+          <md-button @click="showJobDescriptionERA = true" class="md-accent">Learn More</md-button>
         </slide>
         <slide>
           <img src="../../assets/images/lab/Viale_190612_005.jpg" />
-        </slide>
+        </slide> -->
       </carousel>
     </div>
 
@@ -44,6 +80,34 @@
         src="https://splunkp/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Samples_SingleValue&oid=7wKarMvR1CyTn6ycX5yp7bY2GW7gINgA5wlwS3QVnSOplfnMZ%5EBpktUHUwg7VfRQsORWL3ajbtcMgviYZ7Kq4rH8XgNoMjkIlzK%5ELAOBiKNRNKQ1IbIw9C%5EcrSJfZy8O%5EvOH%5E%5EwAN%5E8zH4dVlMtAgnaTIa63bme3S7FIK6Jr"
       ></iframe>
     </div>
+
+    <md-dialog :md-active.sync="showJobDescriptionERA" :md-fullscreen="false" style="z-index: 400;">
+      <md-dialog-content md-dynamic-height>
+        <strong>As a Research Assistant in the Library Preparation Team, you will:</strong>
+        <ul>
+          <li>Prepare DNA and RNA libraries for NGS following established SOPs.</li>
+          <li>Prepare reagents and set up runs for robots.</li>
+          <li>Assist group leader to create an efficient and error-proof workflow – and troubleshoot data accordingly.</li>
+          <li>Maintain the high-quality standards that IGO has for its services.</li>
+          <li>Communicate with vendor technical support and sales representatives.</li>
+          <li>Maintain and coordinate documentation for assay tracking and results for review/reporting through iLabs and LIMS.</li>
+        </ul>
+
+        <strong>You have:</strong>
+        <ul>
+          <li>
+            A Bachelor’s Degree in a Biological, Chemistry, or Science related field with at least 3 years of relevant full-time experience
+            or a master’s degree with 1-2 years full-time relevant experience.
+          </li>
+          <li>Previous exposure to making libraries for NGS platform, manually and automated is preferable.</li>
+          <li>Strong organizational, prioritization and time management skills.</li>
+        </ul>
+      </md-dialog-content>
+
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="showJobDescriptionERA = false">Close</md-button>
+      </md-dialog-actions>
+    </md-dialog>
 
     <!-- <div class="news">
       <div class="news-headline md-headline md-inset">News at the IGO</div>
@@ -167,14 +231,14 @@
 <script>
 import { Carousel, Slide } from 'vue-carousel';
 // import { IMAGE_URL } from './../../config.js';
-import HomePageNews from '../HomePageNews.vue';
+// import HomePageNews from '../HomePageNews.vue';
 
 export default {
   name: 'HomePage',
   components: {
     Carousel,
     Slide,
-    HomePageNews,
+    // HomePageNews,
   },
   data: function() {
     return {
@@ -183,6 +247,7 @@ export default {
       // showDialog: false,
       // enlargedImage: '',
       announcement: true,
+      showJobDescriptionERA: false,
     };
   },
   // methods: {
