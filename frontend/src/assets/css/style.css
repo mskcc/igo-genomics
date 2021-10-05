@@ -221,13 +221,12 @@ form {
   text-align: left;
 }
 
-.VueCarousel img,
+/* .VueCarousel img,
 .carousel-div .md-card {
   width: 60%;
-  /* min-width: 100%; */
   max-height: 650px;
   object-fit: cover;
-}
+} */
 
 .igo-description {
   width: 80%;
@@ -244,7 +243,7 @@ form {
   margin: 0 auto;
 }
 
-.news-card {
+.career-card {
   /* width: 350px; */
   /* height: 400px; */
   /* margin: 20px; */
@@ -255,7 +254,12 @@ form {
   vertical-align: top;
 }
 
-.news-card img {
+.news-card {
+  max-width: 550px;
+  display: inline-block;
+}
+
+.career-card img {
   cursor: pointer;
 }
 
@@ -263,7 +267,7 @@ form {
   margin: 1%;
 }
 
-.news-card .md-card-content {
+.career-card .md-card-content {
   text-align: left;
 }
 
@@ -650,7 +654,7 @@ sup {
 
 /* job descriptions */
 
-#job-descriptions .md-card.news-card.md-theme-default {
+#job-descriptions .md-card.career-card.md-theme-default {
   border-left: 5px solid var(--mskcc-light-turquoise);
 }
 
