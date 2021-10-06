@@ -2,7 +2,7 @@
   <div class="existing-reservations-table">
     <md-table md-card v-if="existingReservations.length > 0">
       <md-table-toolbar>
-        <h1 class="md-title">Existing {{ requestType }} Reservations</h1>
+        <h1 class="md-title">Upcoming {{ requestType }} Reservations</h1>
       </md-table-toolbar>
       <md-table-row>
         <!-- <md-table-head md-numeric></md-table-head> -->
@@ -18,7 +18,8 @@
         <md-table-cell>{{ reservation.date }}</md-table-cell>
         <md-table-cell>{{ reservation.emailTime }}</md-table-cell>
         <md-table-cell v-if="requestType === '10xGenomics'">{{ reservation.details.chemistry }}</md-table-cell>
-        <md-table-cell>{{ reservation.details.sampleNumber }}</md-table-cell>
+        <md-table-cell v-if="requestType !== 'spm'">{{ reservation.details.sampleNumber }}</md-table-cell>
+        <md-table-cell v-if="requestType === 'spm'">{{ reservation.details.ilabServiceId }}</md-table-cell>
       </md-table-row>
     </md-table>
   </div>

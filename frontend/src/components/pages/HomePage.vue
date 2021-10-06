@@ -4,7 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        IGO will be closed Monday, May 31 in observation of Memorial Day. We will resume normal hours June 1.
+        Investigators can now schedule their own sample drop off using the <a :href="spmCalendar" target="__blank">IGO SPM Reservations calendar</a>
       </span>
     </div>
 
@@ -37,6 +37,7 @@
 <script>
 // import { Carousel, Slide } from 'vue-carousel';
 // import { IMAGE_URL } from './../../config.js';
+import { SPM_CALENDAR } from './../../config.js';
 import HomePageNews from '../HomePageNews.vue';
 
 export default {
@@ -53,7 +54,7 @@ export default {
       // showDialog: false,
       // enlargedImage: '',
       announcement: true,
-      showJobDescriptionERA: false,
+      spmCalendar: SPM_CALENDAR
     };
   },
   // methods: {

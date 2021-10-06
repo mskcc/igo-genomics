@@ -26,21 +26,27 @@ mongoose
     process.exit(1);
   });
 
-app.use(
-  morgan(function (tokens, req, res) {
-    return [
-      tokens.method(req, res),
-      tokens.url(req, res),
-      tokens.status(req, res),
-      tokens.res(req, res, 'content-length'),
-      '-',
-      tokens['response-time'](req, res),
-      'ms',
-      '-',
-      res.user ? res.user.username : 'anonymous',
-    ].join(' ');
-  })
-);
+// app.use(
+//   morgan(function (tokens, req, res) {
+//     return [
+//       tokens.method(req, res),
+//       tokens.url(req, res),
+//       tokens.status(req, res),
+//       tokens.res(req, res, 'content-length'),
+//       '-',
+//       tokens['response-time'](req, res),
+//       'ms',
+//       '-',
+//       res.user ? res.user.username : 'anonymous',
+//     ].join(' ');
+//   })
+// );
+
+if (process.env.ENV === 'development') {
+  app.use(morgan('common'));
+} else {
+  app.use(morgan('combined'));
+}
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -55,9 +61,9 @@ let publicDir = path.join(__dirname, 'public');
 app.get('/*', function (req, res) {
   res.sendFile(path.join(publicDir, 'index.html'));
 });
-app.get('/favicon.ico', function (req, res) {
-  res.sendFile(path.join(publicDir, 'favicon.ico'));
-});
+// app.get('/favicon.ico', function (req, res) {
+//   res.sendFile(path.join(publicDir, 'favicon.ico'));
+// });
 
 app.use(function (req, res) {
   res.status(404).send({ message: 'Endpoint not found.' });

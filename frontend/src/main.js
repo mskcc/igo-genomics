@@ -4,7 +4,6 @@ import VueRouter from 'vue-router';
 import store from './store';
 import VueCoreVideoPlayer from 'vue-core-video-player';
 import DatePicker from 'v-calendar';
-import VueTimepicker from 'vue2-timepicker';
 import Vuelidate from 'vuelidate';
 
 import './filters.js';
@@ -17,9 +16,7 @@ import SubmissionGuidelinesPage from './components/pages/SubmissionGuidelinesPag
 import ContactsPage from './components/pages/ContactsPage.vue';
 import FaqsPage from './components/pages/FaqsPage.vue';
 import CriteriaPage from './components/pages/CriteriaPage.vue';
-import SingleCellPage from './components/pages/SingleCellPage.vue';
 import DataDeliveryPage from './components/pages/DataDeliveryPage.vue';
-import GenomicsVisiumPage from './components/pages/GenomicsVisiumPage.vue';
 import NewsPage from './components/pages/NewsPage.vue';
 import IgoTutorialsPage from './components/pages/IgoTutorialsPage.vue';
 import ShowVideoPage from './components/pages/ShowVideoPage.vue';
@@ -35,6 +32,8 @@ import CareersPage from './components/pages/CareersPage.vue';
 import SingleCellHub from './components/pages/SingleCellHub.vue';
 import FeedbackPage from './components/pages/FeedbackPage.vue';
 import ViewFeedbackPage from './components/pages/ViewFeedbackPage.vue';
+import BlockPricingPage from './components/pages/BlockPricingPage.vue';
+import AllAppointmentsPage from './components/pages/AllAppointmentsPage.vue';
 
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
@@ -61,6 +60,9 @@ import {
   MdTable,
   MdTabs,
   MdTooltip,
+  MdApp,
+  MdDrawer,
+  MdToolbar,
 } from 'vue-material/dist/components';
 import 'vue-material/dist/vue-material.min.css';
 import 'vue-material/dist/theme/default.css';
@@ -72,6 +74,7 @@ Vue.use(Vuelidate);
 Vue.use(VueSweetalert2);
 
 Vue.use(VueRouter);
+
 Vue.use(MdAvatar);
 Vue.use(MdButton);
 Vue.use(MdCard);
@@ -92,12 +95,16 @@ Vue.use(MdTable);
 Vue.use(MdTabs);
 Vue.use(MdTooltip);
 
+Vue.use(MdApp);
+Vue.use(MdDrawer);
+Vue.use(MdToolbar);
+
 // Use v-calendar & v-date-picker components
 Vue.use(DatePicker, {
   componentPrefix: 'vc', // Use <vc-calendar /> instead of <v-calendar />
 });
 
-Vue.use(VueTimepicker);
+Vue.use(require('vue-moment'));
 
 Vue.config.productionTip = false;
 
@@ -128,10 +135,8 @@ const routes = [
       { path: '/criteria/tissue', component: TissueCriteria, name: 'tissue' },
     ],
   },
-  { path: '/single-cell-platforms', component: SingleCellPage, name: 'single cell platforms' },
   { path: '/accessing-your-data', component: DataDeliveryPage, name: 'accessing your data' },
-  { path: '/10x-genomics-visium', component: GenomicsVisiumPage, name: '10x genomics visium' },
-  { path: '/news', component: NewsPage, name: 'all news' },
+  { path: '/news', component: NewsPage, name: 'news' },
   { path: '/igo-tutorials', component: IgoTutorialsPage, name: 'igo tutorials' },
   { path: '/igo-tutorials/:name', component: ShowVideoPage, name: 'show video', props: true },
   { path: '/archer-fusion', component: ArcherFusionPage, name: 'archer fusion' },
@@ -142,15 +147,23 @@ const routes = [
 
   { path: '/careers', component: CareersPage, name: 'careers' },
   { path: '/single-cell-hub', component: SingleCellHub, name: 'single cell hub' },
-  { path: '/feedback/:application', component: FeedbackPage, name: 'feedback', props: true },
+  { path: '/feedback/:application?', component: FeedbackPage, name: 'feedback', props: true },
   { path: '/view-feedback', component: ViewFeedbackPage, name: 'view feedback' },
-
+  { path: '/block-pricing', component: BlockPricingPage, name: 'block pricing' },
+  { path: '/all-appointments', component: AllAppointmentsPage },
 ];
 
 const router = new VueRouter({
   base: HOME_PAGE_PATH,
   routes: routes,
   mode: 'history',
+  scrollBehavior: function(to) {
+    if (to.hash) {
+      return {
+        selector: to.hash,
+      };
+    }
+  },
 });
 
 // scrolls to top of window on route change

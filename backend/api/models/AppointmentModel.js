@@ -7,14 +7,20 @@ var AppointmentSchema = new mongoose.Schema(
     email: { type: String, required: true },
     date: { type: String, required: true },
     notificationDate: { type: String, required: true },
-    startTime: { type: Number, required: true },
+    dateTime: { type: String, required: true }, // year-month-day hh:mm
+    // startTime: { type: Number, required: true },  remove?
     emailTime: { type: String, required: true },
     requestType: { type: String, required: true },
+    status: { type: String, required: true },
     details: { type: Object, required: true }, // [ {cellNumber: 6, chemistry: ''} ]
   },
   { timestamps: true }
 );
 
-AppointmentSchema.index({ email: 1, date: 1, startTime: 1 }, { unique: true });
+// AppointmentSchema.index({ email: 1, date: 1, startTime: 1 }, { unique: true });
+AppointmentSchema.index(
+  { _id: 1, email: 1, date: 1, dateTime: 1, requestType: 1, status: 1 },
+  { unique: true }
+);
 
 module.exports = mongoose.model('Appointment', AppointmentSchema);

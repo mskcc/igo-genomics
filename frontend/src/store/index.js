@@ -23,6 +23,7 @@ export default new Vuex.Store({
       'Sequencing',
       'Data',
       'Research & Development',
+      // 'IGO Alumni',
     ],
     timeline: [],
     requestType: '',

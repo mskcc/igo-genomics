@@ -124,7 +124,7 @@
     </carousel>
 
     <div id="read-more">
-      <md-button class="md-primary" :to="{ name: 'all news' }">more news</md-button>
+      <md-button class="md-primary" :to="{ name: 'news' }">more news</md-button>
     </div>
 
     <md-dialog :md-active.sync="showDialog">

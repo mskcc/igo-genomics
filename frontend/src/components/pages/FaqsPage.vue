@@ -1,14 +1,14 @@
 <template>
   <div>
     <!-- <reopen-faq></reopen-faq> -->
-    <div id="faq-page" class="full-control">
+    <div id="faq-page">
       <div class="list">
         <md-list>
           <md-list-item md-expand>
             <md-icon>add</md-icon>
             <span class="md-list-item-text md-title">Sample Submission</span>
             <md-list slot="md-expand">
-              <div class="full-control">
+              <div>
                 <div class="list">
                   <md-list>
                     <md-list-item md-expand class="md-inset">
@@ -94,7 +94,7 @@
             <md-icon>add</md-icon>
             <span class="md-list-item-text md-title">DNA/RNA Extraction</span>
             <md-list slot="md-expand">
-              <div class="full-control">
+              <div>
                 <div class="list">
                   <md-list>
                     <md-list-item md-expand class="md-inset">
@@ -288,7 +288,7 @@
             <md-icon>add</md-icon>
             <span class="md-list-item-text md-title">Sample QC</span>
             <md-list slot="md-expand">
-              <div class="full-control">
+              <div>
                 <div class="list">
                   <md-list>
                     <md-list-item md-expand class="md-inset">
@@ -301,8 +301,8 @@
                           <div>
                             Yes. We can go forward but cannot guarantee downstream success at either library prep or sequencing. We are
                             always happy to discuss your results and our recommendations. Reach out to us by commenting on your QC report.
-
-                            You can find a reference range for pass/fail criteria <router-link :to="{ name: 'sample criteria' }">here.</router-link>
+                            You can find a reference range for pass/fail criteria
+                            <router-link :to="{ name: 'sample requirements' }">here.</router-link>
                           </div>
                         </md-list-item>
                       </md-list>
@@ -354,7 +354,7 @@
             <md-icon>add</md-icon>
             <span class="md-list-item-text md-title">Sequencing</span>
             <md-list slot="md-expand">
-              <div class="full-control">
+              <div>
                 <div class="list">
                   <md-list>
                     <md-list-item md-expand class="md-inset">
@@ -370,6 +370,20 @@
                         </md-list-item>
                       </md-list>
                     </md-list-item>
+                    <md-list-item md-expand class="md-inset">
+                      <md-icon>add</md-icon>
+                      <span class="md-list-item-text">What is the difference between the CRISPRSeq service and a CRISPR screen?</span>
+                      <md-list slot="md-expand">
+                        <md-list-item>
+                          <div>
+                            CRISPR screens are used to analyze cells transduced with sgRNA libraries to determine the identity and quantity of guides remaining after phenotypic selection. This method usually requires ~30M reads per sample (though coverage varies based on the number of sgRNAs in the library), to get 500-1000X coverage per guide. This is the method standard to a pooled screen.
+                            <br />
+                            <br />
+                            CRISPRSeq as offered by IGO is for evaluating single guide sequences (such as in an arrayed screen). It is a high-throughput (>75K reads) alternative to Sanger sequencing-based evaluation of editing events.
+                          </div>
+                        </md-list-item>
+                      </md-list>
+                    </md-list-item>
                   </md-list>
                 </div>
               </div>
@@ -379,7 +393,7 @@
             <md-icon>add</md-icon>
             <span class="md-list-item-text md-title">General Queries</span>
             <md-list slot="md-expand">
-              <div class="full-control">
+              <div>
                 <div class="list">
                   <md-list>
                     <md-list-item md-expand class="md-inset">

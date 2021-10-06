@@ -79,29 +79,45 @@
   flex-direction: column;
 }
 
-.main-nav {
-  width: auto;
-  display: flex;
-  justify-content: flex-end;
-  /* align-items: flex-start; */
-  flex-wrap: wrap;
-  padding-bottom: 1%;
+@media only screen and (min-width: 600px) {
+  .main-nav {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: flex-start; */
+    flex-wrap: wrap;
+    padding-bottom: 1%;
 
-  /* prevent right click red behavior from material */
-  user-select: none;
+    /* prevent right click red behavior from material */
+    user-select: none;
+  }
+
+  /* navigations buttons should not have a gap on hover */
+  .main-nav .md-ripple.nav-button {
+    margin: 0;
+  }
+
+  .main-nav .nav-button {
+    text-transform: uppercase;
+    text-decoration: unset;
+    min-width: 100px;
+  }
+  .mobile {
+    display: none;
+  }
 }
 
-/* navigations buttons should not have a gap on hover */
-.main-nav .md-ripple.nav-button {
-  margin: 0;
-}
-
-.main-nav .nav-button {
-  text-transform: uppercase;
-  /* font-size: 1.5em; */
-  /* color: white !important; */
-  text-decoration: unset;
-  min-width: 100px;
+@media only screen and (max-width: 600px) {
+  .right-header,
+  .logo-header a.md-button.router-link-active.md-active.md-theme-default {
+    display: none;
+  }
+  .logo-header {
+    flex-direction: row-reverse;
+  }
+  .mobile .md-theme-default a:not(.md-button) {
+    color: black;
+  }
 }
 
 .pre-nav {
@@ -355,6 +371,17 @@ form {
 .prices-container .md-list-item-text {
   font-weight: bold;
   /* font-size: 110%; */
+}
+
+/* prevents header text from being hidden */
+.prices-container .md-table-head-label {
+  overflow: visible;
+  white-space: normal;
+  line-height: 12px;
+}
+
+.prices-container .md-table-head-container {
+  overflow: visible;
 }
 
 /* prevent tables from growing out of their dropdowns */
@@ -701,4 +728,74 @@ sup {
 
 .md-dialog .md-dialog-container.md-theme-default {
   max-height: inherit;
+}
+
+.career-banner .md-layout-item {
+  min-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+
+.career-banner {
+  margin: 10px;
+}
+
+.md-drawer.md-app-drawer.md-theme-default.md-left.md-permanent.md-permanent-full {
+  width: min-content;
+}
+
+.indent {
+  margin-left: 20px;
+}
+
+.right-bar {
+  position: fixed;
+  right: 10px;
+  z-index: 2;
+  border-left: 1px solid #e0e0e0;
+  padding-right: 15px;
+  width: 250px;
+  height: 100%;
+  padding-top: 16px;
+}
+
+.md-app {
+  height: calc(100vh - 150px);
+}
+
+#data-delivery-page .md-subheading {
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+}
+
+#data-delivery-page .md-title {
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+}
+
+.single-cell-hub .md-divider {
+  margin: 15px 0 !important;
+}
+
+.feedback-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.subpage-header {
+  max-width: fit-content;
+}
+
+.pending {
+  color: var(--mskcc-dark-yellow);
+}
+
+.cancelled {
+  color: var(--md-theme-demo-light-accent-on-background, #ff5252);
+}
+
+#all-reservations .md-content.md-table-content.md-scrollbar.md-theme-default {
+  min-height: 600px;
 }
