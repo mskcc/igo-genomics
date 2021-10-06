@@ -2,7 +2,7 @@
   <div>
     <div class="md-display-1">IGO Tutorials</div>
     <div class="news">
-      <md-card class="news-card" v-for="(tutorial, index) in tutorials" :key="index">
+      <md-card class="career-card" v-for="(tutorial, index) in tutorials" :key="index">
         <md-card-media v-if="tutorial.screenshot">
           <router-link :to="{ name: 'show video', params: { name: tutorial.slug } }">
             <img :src="tutorial.screenshot | returnScreenshot"

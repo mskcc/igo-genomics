@@ -1,7 +1,7 @@
 <template>
   <div id="job-descriptions">
     <career-banner />
-    <md-card class="news-card">
+    <md-card class="career-card">
       <md-card-header>
         <div class="md-title">Manager</div>
         <router-link :to="{ name: 'team', params: { id: 7 } }">Research & Development</router-link>
@@ -14,7 +14,7 @@
       </md-card-actions>
     </md-card>
 
-    <md-card class="news-card">
+    <md-card class="career-card">
       <md-card-header>
         <div class="md-title">Research Assistant</div>
         <router-link :to="{ name: 'team', params: { id: 3 } }">EXPAND Team</router-link>
@@ -26,7 +26,7 @@
       </md-card-actions>
     </md-card>
 
-    <md-card class="news-card">
+    <md-card class="career-card">
       <md-card-header>
         <div class="md-title">Research Assistant</div>
         <router-link :to="{ name: 'team', params: { id: 5 } }">Sequencing Team</router-link>
@@ -39,7 +39,7 @@
       </md-card-actions>
     </md-card>
 
-    <md-card class="news-card">
+    <md-card class="career-card">
       <md-card-header>
         <div class="md-title">Research Assistant</div>
         <router-link :to="{ name: 'team', params: { id: 4 } }">Nucleic Acid Team</router-link>

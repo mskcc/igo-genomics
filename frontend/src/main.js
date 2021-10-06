@@ -109,7 +109,7 @@ Vue.use(require('vue-moment'));
 Vue.config.productionTip = false;
 
 const routes = [
-  { path: '/', component: HomePage, name: 'home' },
+  { path: '/', component: HomePage, name: 'news' },
   { path: '/about', component: AboutPage, name: 'about', children: [{ path: '/about/:id', component: TeamPage, name: 'team' }] },
   {
     path: '/ddpcr',
