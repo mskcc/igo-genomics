@@ -245,9 +245,12 @@ form {
 } */
 
 .igo-description {
-  width: 80%;
   margin: 0 auto;
-  padding: 40px 0px;
+  padding-bottom: 10px;
+}
+
+.md-layout-item.igo-description {
+  max-width: 80%;
 }
 
 .news-container {
@@ -297,13 +300,15 @@ form {
 }
 
 .news {
-  /* background-color: var(--material-gray); */
   padding: 0.5% 5%;
-  margin-bottom: 1%;
 }
 
 .md-card-area {
   background: rgba(0, 0, 0, 0.7);
+}
+
+.VueCarousel-dot-container {
+  margin-top: 0px !important;
 }
 
 #read-more {
