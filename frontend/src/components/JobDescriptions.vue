@@ -51,7 +51,7 @@
       </md-card-actions>
     </md-card>
 
-    <md-card class="news-card">
+    <md-card class="career-card">
       <md-card-header>
         <div class="md-title">Senior Project Assistant</div>
         <router-link :to="{ name: 'team', params: { id: 2 } }">Sample & Project Mgmt Team</router-link>

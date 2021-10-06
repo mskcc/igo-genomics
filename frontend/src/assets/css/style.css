@@ -253,10 +253,12 @@ form {
 .news-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
-  max-width: 60%;
+  max-width: 80%;
   margin: 0 auto;
+  /* background-color: var(--material-gray); */
+  align-items: flex-start;
 }
 
 .career-card {
@@ -271,6 +273,13 @@ form {
 }
 
 .news-card {
+  max-width: 320px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 4px;
+}
+
+.home-news-card {
   max-width: 550px;
   display: inline-block;
 }
@@ -303,11 +312,11 @@ form {
 
 /*News  Page */
 
-#news-page .md-card {
+/* #news-page .md-card {
   width: 60%;
   margin: 1% auto;
   margin-bottom: 2%;
-}
+} */
 
 /* Images on all pages */
 

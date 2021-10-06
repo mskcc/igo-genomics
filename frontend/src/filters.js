@@ -5,6 +5,13 @@ Vue.filter('memberImage', function(photoName) {
   try {
     return require('./assets/images/members/' + photoName + '.jpg');
   } catch (e) {
-    return require('./assets/images/lab/where_science_goes.png');
+    return require('./assets/images/lab/wheresciencegoesigo.jpeg');
+  }
+});
+Vue.filter('newsImage', function(photoName) {
+  try {
+    return require('./assets/images/news/' + photoName + '.jpg');
+  } catch (e) {
+    return require('./assets/images/lab/wheresciencegoesigo.jpeg');
   }
 });

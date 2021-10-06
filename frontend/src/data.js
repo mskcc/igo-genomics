@@ -1,32 +1,131 @@
 export const news = [
   {
-    id: 1,
-    name: 'New pricing for block sequencing',
-    body:
-      'For investigators who make their own sequencing libraries to submit to IGO, we now have easy-to-understand block pricing for our most commonly-requested read lengths and throughputs. We accept both individual user libraries and pre-pooled libraries to occupy a full flow cell or lane. Custom read lengths and coverages outside the block pricing will still be accepted; contact us for more information.',
-    date: '2020 - 10 - 26',
+    title: 'New "Reservations" feature for 10X Genomics & ATAC-Seq sample drop off',
+    date: 'March 9, 2021',
+    imgSource: 'IGO_210408_002',
+    categories: ['featured'],
+    body: `<p>
+      IGO is happy to announce the launch of a new website feature to
+      <a href="https://genomics.mskcc.org/reservations">book drop off appointments</a> of fresh samples for 10X Genomics
+      (M-F) and ATAC-Seq (Th only)! Simply select your request type from the dropdown menu, desired appointment day, AM or PM
+      and then select the hour of drop offering. Fill out the short form, including whether you are requesting 3' or 5' 10X
+      chemistry, and submit! You will receive a confirmation e-mail; don't forget to fill out your iLab request and the sample
+      webform before your appointment.
+    </p>`,
   },
   {
-    id: 2,
-    name: 'End of era in IGO + new website features',
-    body:
-      'After more than 6 months and over 46,000 samples, Friday, October 9 will be the last day of COVID-19 testing in IGO. While the core jumped at the opportunity to support our colleagues and city through the ongoing pandemic, we also look forward to turning our full attention back to our mission of supporting and enabling a broad range of research efforts at MSK. We will continue to provide COVID-19 testing of research samples. In addition to the new 10X Genomics Visium platform, we are improving our website resources for investigators. A searchable, comprehensive list of our ddPCR assays is now available and stay tuned for a project tracker, currently in beta testing!',
-    date: '2020-10-8',
+    title: 'Welcome to the new IGO website!',
+    date: 'January 15, 2021',
+    imgSource: 'wheresciencegoesigo',
+    categories: ['featured'],
+    body: `<p>
+      In support of our ongoing efforts to provide excellent customer service alongside our cutting-edge technologies, IGO's
+      Data Team has worked to upgrade our genomics.mskcc.org site. Executed in just over a month, the new site provides easier
+      access to tools and information while increasing functionality. Please feel free to contact us at genomics@mskcc.org if
+      you have any questions, comments, or suggestions for the website.
+    </p>`,
   },
   {
-    id: 3,
-    name: 'End of era in IGO + new website features',
-    body:
-      'After more than 6 months and over 46,000 samples, Friday, October 9 will be the last day of COVID-19 testing in IGO. While the core jumped at the opportunity to support our colleagues and city through the ongoing pandemic, we also look forward to turning our full attention back to our mission of supporting and enabling a broad range of research efforts at MSK. We will continue to provide COVID-19 testing of research samples. In addition to the new 10X Genomics Visium platform, we are improving our website resources for investigators. A searchable, comprehensive list of our ddPCR assays is now available and stay tuned for a project tracker, currently in beta testing!',
-    date: '2020-10-8',
+    title: 'New project tracker, guidance for single cell applications, and changes to data delivery',
+    date: 'December 3, 2020',
+    imgSource: 'Viale_190612_083',
+    categories: ['featured'],
+    body: `<p>
+      IGO’s Data Team is pleased to roll out a new
+      <a href="https://igo.mskcc.org/login/request-tracker"> request tracking application</a>. Use this tool for real-time
+      visualization of IGO’s progress on your project, with detail to the sample level. Try it out in the IGO Marketplace today!
+    </p>
+    <p>
+      As demand for single cell sequencing rises, IGO continues to invest in platforms to cover a wide variety of sample types
+      and data needs. See which application is right for your sample set
+      <a href="https://genomics.mskcc.org/single-cell-hub">here</a>.
+    </p>
+    <p>
+      Currently, IGO’s data delivery consists of FASTQ files separated by sample, sequencer run, and read (forward vs reverse).
+      <strong>Starting January 2021, there will be an additional layer of separation: by sequencer lane. </strong>
+      <a href="https://genomics.mskcc.org/accessing-your-data">Click here for more information.</a>
+    </p>`,
   },
   {
-    id: 4,
-    name: 'End of era in IGO + new website features',
-    body:
-      'After more than 6 months and over 46,000 samples, Friday, October 9 will be the last day of COVID-19 testing in IGO. While the core jumped at the opportunity to support our colleagues and city through the ongoing pandemic, we also look forward to turning our full attention back to our mission of supporting and enabling a broad range of research efforts at MSK. We will continue to provide COVID-19 testing of research samples. In addition to the new 10X Genomics Visium platform, we are improving our website resources for investigators. A searchable, comprehensive list of our ddPCR assays is now available and stay tuned for a project tracker, currently in beta testing!',
-    date: '2020-10-8',
+    title: 'New pricing for block sequencing',
+    date: 'October 26, 2020',
+    imgSource: 'Viale_190612_078',
+    categories: [''],
+    body: `<p>
+    For investigators who make their own sequencing libraries to submit to IGO, we now have
+    <a href="https://genomics.mskcc.org/block-pricing"
+      >easy-to-understand block pricing</a
+    >
+    for our most commonly-requested read lengths and throughputs. We accept both individual user libraries and pre-pooled libraries to
+    occupy a full flow cell or lane. Custom read lengths and coverages outside the block pricing will still be accepted;
+    <a href="https://genomics.mskcc.org/contacts">contact us for more information.</a>
+  </p>`,
   },
+  {
+    title: 'End of era in IGO + new website features',
+    date: 'October 8, 2020',
+    imgSource: 'IMG_20180918_173027',
+    categories: [''],
+    body: ` <p>
+    After more than 6 months and over 46,000 samples, Friday, October 9 will be the last day of COVID-19 testing in IGO. While the
+    core jumped at the opportunity to support our colleagues and city through the ongoing pandemic, we also look forward to turning
+    our full attention back to our mission of supporting and enabling a broad range of research efforts at MSK. We will continue to
+    provide
+    <a href="https://genomics.mskcc.org/submission-guidelines">COVID-19 testing of research samples.</a>
+  </p>
+  <p>
+    In addition to the
+    <a href="https://genomics.mskcc.org/single-cell-hub">new 10X Genomics Visium platform</a>, we are improving our website
+    resources for investigators. A searchable,
+    <a href="https://genomics.mskcc.org/ddpcr">comprehensive list of our ddPCR assays</a> is now available and stay tuned
+    for a project tracker, currently in beta testing!
+  </p>`,
+  },
+  {
+    title: 'COVID-19 testing continues in IGO',
+    date: 'August 10, 2020',
+    imgSource: 'COVIDInfographic_080720',
+    categories: [''],
+    body: ` <p>
+    When all research operations halted, the IGO’s high-throughput automation and skilled technicians turned to meet a critical
+    demand: expanding MSK’s COVID-19 testing capabilities. Now, with a clinically-compliant COVID-testing infrastructure in place, the
+    core continues to contribute to MSK’s expansive and rapid testing program without sacrificing turnaround time on research
+    applications.
+  </p>`,
+  },
+  {
+    title: 'NEW at IGO: 10X Genomics Visium Spatial Transcriptomics',
+    date: 'July 30, 2020',
+    imgSource: 'IGO_210408_044',
+    categories: [''],
+    body: `<p>
+    Despite the disruption of the research shutdown and our personnel running hundreds of COVID-19 samples per day in parallel with
+    our normal operations, IGO has brought into production a new spatial transcriptomics platform in collaboration with the
+    <a href="https://one.mskcc.org/sites/pub/ski/CoreFacilities/Pages/Molecular-Cytology.aspx"> Molecular Cytology Core</a>. Learn
+    more about <a href="https://genomics.mskcc.org/single-cell-hub">10x Genomics Visium</a> or
+    <a href="https://genomics.mskcc.org/contacts">contact us</a> set up a meeting about your project.
+  </p>`,
+  },
+  {
+    title: 'Nanostring platform discontinued',
+    date: 'July 20, 2020',
+    imgSource: 'IGO_210408_127',
+    categories: [''],
+    body: `<p>
+    Currently all IGO’s standard platform offerings are now available except for Nanostring. Additionally, we are offering COVID-19
+    testing of fresh tissue or cell samples and are rolling out our new spatial transcriptomics option in collaboration with the
+    <a href="https://one.mskcc.org/sites/pub/ski/CoreFacilities/Pages/Molecular-Cytology.aspx"> Molecular Cytology Core</a> using the
+    <a href="https://genomics.mskcc.org/single-cell-hub">10X Genomics Visium platform</a>.
+    </p><a href="https://genomics.mskcc.org/submission-guidelines">Submit for COVID19</a></br>
+    <!-- <md-button class="md-raised md-primary" :to="{ name: 'reopen faq' }">Reopen FAQs</md-button> -->
+    <a href="https://genomics.mskcc.org/igo-tutorials">IGO Tutorials</a>`,
+  },
+  // {
+  //   title: '',
+  //   date: '',
+  //   imgSource: '',
+  //   body: ``,
+  // },
 ];
 
 export const teams = [

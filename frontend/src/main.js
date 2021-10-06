@@ -99,6 +99,13 @@ Vue.use(MdApp);
 Vue.use(MdDrawer);
 Vue.use(MdToolbar);
 
+// eslint compiler looks at these comments
+// it will ignore no-unused-vars
+/* eslint-disable no-unused-vars */
+const _ = require('lodash');
+// then will re-enable
+/* eslint-enable no-unused-vars */
+
 // Use v-calendar & v-date-picker components
 Vue.use(DatePicker, {
   componentPrefix: 'vc', // Use <vc-calendar /> instead of <v-calendar />
@@ -109,7 +116,7 @@ Vue.use(require('vue-moment'));
 Vue.config.productionTip = false;
 
 const routes = [
-  { path: '/', component: HomePage, name: 'news' },
+  { path: '/', component: HomePage, name: 'home' },
   { path: '/about', component: AboutPage, name: 'about', children: [{ path: '/about/:id', component: TeamPage, name: 'team' }] },
   {
     path: '/ddpcr',

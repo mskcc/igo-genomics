@@ -1,157 +1,63 @@
 <template>
-  <div id="news-page">
-    <div class="md-display-1">News</div>
-    <md-card>
-      <md-card-header>
-        <div class="md-title">New "Reservations" module for 10X Genomics & ATAC-Seq sample drop off</div>
-        <div class="md-subhead">March 9, 2021</div>
-      </md-card-header>
+  <div>
+    <div class="md-display-1">News at the IGO</div>
+    <div class="news-container">
+      <md-card class="news-card" v-for="(newsItem, index) in news" :key="index">
+        <!-- <md-card-media-cover> -->
+        <md-card-media>
+          <img :src="newsItem.imgSource | newsImage" @click="showDialogMethod" />
+        </md-card-media>
+        <!-- <md-card-area> -->
+        <md-card-header>
+          <div class="md-title">{{ newsItem.title }}</div>
+          <div class="md-subhead">{{ newsItem.date }}</div>
+        </md-card-header>
 
-      <md-card-content>
-        <p>
-          IGO's Data Team is happy to announce that a new website module, the Reservations app, is now live! To book your appointment to
-          drop off fresh samples for 10X Genomics or ATAC-Seq (Thursdays only), please visit the Reservations tab in the navigation bar
-          above. Instructions: Select your request type from the dropdown menu Pick the desired appointment day Pick AM or PM and then
-          select the hour of drop offering Fill out the short form, including whether you are requesting 3' or 5' 10X chemistry, and submit
-          You will receive a confirmation e-mail; don't forget to fill out your iLab request and the sample webform before your appointment.
-        </p>
-      </md-card-content>
-    </md-card>
+        <!-- <md-card-actions>
+            <md-card-expand-trigger>
+              <md-button class="md-icon-button">
+                <md-icon>keyboard_arrow_down</md-icon>
+              </md-button>
+            </md-card-expand-trigger>
+          </md-card-actions> -->
+        <!-- </md-card-area> -->
+        <!-- </md-card-media-cover> -->
 
-    <md-card>
-      <md-card-header>
-        <div class="md-title">Welcome to the new IGO website!</div>
-        <div class="md-subhead">January 15, 2021</div>
-      </md-card-header>
-
-      <md-card-content>
-        <p>
-          In support of our ongoing efforts to provide excellent customer service alongside our cutting-edge technologies, IGO's Data Team
-          has worked to upgrade our genomics.mskcc.org site. Executed in just over a month, the new site provides easier access to tools and
-          information while increasing functionality. Please feel free to contact us at genomics@mskcc.org if you have any questions,
-          comments, or suggestions for the website.
-        </p>
-      </md-card-content>
-    </md-card>
-
-    <md-card>
-      <md-card-header>
-        <div class="md-title">New project tracker, guidance for single cell applications, and changes to data delivery</div>
-        <div class="md-subhead">December 3, 2020</div>
-      </md-card-header>
-
-      <md-card-content>
-        <p>
-          IGO’s Data Team is pleased to roll out a new
-          <a href="https://igo.mskcc.org/login/request-tracker"> request tracking application</a>. Use this tool for real-time visualization
-          of IGO’s progress on your project, with detail to the sample level. Try it out in the IGO Marketplace today!
-        </p>
-        <p>
-          As demand for single cell sequencing rises, IGO continues to invest in platforms to cover a wide variety of sample types and data
-          needs. See which application is right for your sample set
-          <router-link :to="{ name: 'single cell hub' }">here</router-link>.
-        </p>
-        <p>
-          Currently, IGO’s data delivery consists of FASTQ files separated by sample, sequencer run, and read (forward vs reverse).
-          <strong>Starting January 2021, there will be an additional layer of separation: by sequencer lane. </strong>
-          <router-link :to="{ name: 'accessing your data' }">Click here for more information.</router-link>
-        </p>
-      </md-card-content>
-    </md-card>
-    <md-card>
-      <md-card-header>
-        <div class="md-title">New pricing for block sequencing</div>
-        <div class="md-subhead">October 26, 2020</div>
-      </md-card-header>
-      <md-card-content>
-        <p>
-          For investigators who make their own sequencing libraries to submit to IGO, we now have
-          <router-link :to="{ name: 'platforms & pricing', params: { name: 'userlibrarysequencing' } }"
-            >easy-to-understand block pricing</router-link
-          >
-          for our most commonly-requested read lengths and throughputs. We accept both individual user libraries and pre-pooled libraries to
-          occupy a full flow cell or lane. Custom read lengths and coverages outside the block pricing will still be accepted;
-          <router-link :to="{ name: 'contact us' }">contact us for more information.</router-link>
-        </p>
-      </md-card-content>
-    </md-card>
-    <md-card>
-      <md-card-header>
-        <div class="md-title">End of era in IGO + new website features</div>
-        <div class="md-subhead">October 8, 2020</div>
-      </md-card-header>
-
-      <md-card-content>
-        <p>
-          After more than 6 months and over 46,000 samples, Friday, October 9 will be the last day of COVID-19 testing in IGO. While the
-          core jumped at the opportunity to support our colleagues and city through the ongoing pandemic, we also look forward to turning
-          our full attention back to our mission of supporting and enabling a broad range of research efforts at MSK. We will continue to
-          provide
-          <router-link :to="{ name: 'submission guidelines' }">COVID-19 testing of research samples.</router-link>
-        </p>
-        <p>
-          In addition to the
-          <router-link :to="{ name: 'single cell hub' }">new 10X Genomics Visium platform</router-link>, we are improving our website
-          resources for investigators. A searchable,
-          <router-link :to="{ name: 'ddpcr assays' }">comprehensive list of our ddPCR assays</router-link> is now available and stay tuned
-          for a project tracker, currently in beta testing!
-        </p>
-      </md-card-content>
-    </md-card>
-    <md-card>
-      <md-card-header>
-        <div class="md-title">COVID-19 testing continues in IGO</div>
-        <div class="md-subhead">August 10, 2020</div>
-      </md-card-header>
-
-      <md-card-content>
-        <p>
-          When all research operations halted, the IGO’s high-throughput automation and skilled technicians turned to meet a critical
-          demand: expanding MSK’s COVID-19 testing capabilities. Now, with a clinically-compliant COVID-testing infrastructure in place, the
-          core continues to contribute to MSK’s expansive and rapid testing program without sacrificing turnaround time on research
-          applications.
-        </p>
-      </md-card-content>
-    </md-card>
-    <md-card>
-      <md-card-header>
-        <div class="md-title">NEW at IGO: 10X Genomics Visium Spatial Transcriptomics</div>
-        <div class="md-subhead">July 30, 2020</div>
-      </md-card-header>
-      <md-card-content>
-        <p>
-          Despite the disruption of the research shutdown and our personnel running hundreds of COVID-19 samples per day in parallel with
-          our normal operations, IGO has brought into production a new spatial transcriptomics platform in collaboration with the
-          <a href="https://one.mskcc.org/sites/pub/ski/CoreFacilities/Pages/Molecular-Cytology.aspx"> Molecular Cytology Core</a>. Learn
-          more about <router-link :to="{ name: 'single cell hub' }">10x Genomics Visium</router-link> or
-          <router-link :to="{ name: 'contact us' }">contact us</router-link> set up a meeting about your project.
-        </p>
-      </md-card-content>
-    </md-card>
-    <md-card>
-      <md-card-header>
-        <div class="md-title">Nanostring platform discontinued</div>
-        <div class="md-subhead">July 20, 2020</div>
-      </md-card-header>
-      <md-card-content>
-        <p>
-          Currently all IGO’s standard platform offerings are now available except for Nanostring. Additionally, we are offering COVID-19
-          testing of fresh tissue or cell samples and are rolling out our new spatial transcriptomics option in collaboration with the
-          <a href="https://one.mskcc.org/sites/pub/ski/CoreFacilities/Pages/Molecular-Cytology.aspx"> Molecular Cytology Core</a> using the
-          <router-link :to="{ name: 'single cell hub' }">10X Genomics Visium platform</router-link>.
-        </p>
-        <md-button class="md-raised md-primary" :to="{ name: 'submission guidelines' }">
-          Submit for COVID19
-        </md-button>
-        <!-- <md-button class="md-raised md-primary" :to="{ name: 'reopen faq' }">Reopen FAQs</md-button> -->
-        <md-button class="md-raised md-primary" :to="{ name: 'igo tutorials' }">IGO Tutorials</md-button>
-      </md-card-content>
-    </md-card>
+        <!-- <md-card-expand>
+        <md-card-expand-content> -->
+        <md-card-content v-html="newsItem.body"> </md-card-content>
+        <!-- </md-card-expand-content>
+      </md-card-expand> -->
+      </md-card>
+    </div>
+    <md-dialog :md-active.sync="showDialog">
+      <md-dialog-content md-dynamic-height><img :src="enlargedImage"/></md-dialog-content>
+    </md-dialog>
   </div>
 </template>
 
 <script>
-export default {};
+import { news } from './../../data.js';
+import { IMAGE_URL } from './../../config.js';
+
+export default {
+  data: function() {
+    return {
+      showDialog: false,
+      enlargedImage: '',
+      news: news,
+    };
+  },
+  methods: {
+    showDialogMethod: function(event) {
+      const imageElement = event.target;
+      const imageSrc = imageElement.getAttribute('src');
+      const cleanedImageSrc = imageSrc.split('/').pop();
+      this.enlargedImage = IMAGE_URL + cleanedImageSrc;
+      this.showDialog = true;
+    },
+  },
+};
 </script>
 
 <style></style>

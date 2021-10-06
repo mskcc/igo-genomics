@@ -4,13 +4,12 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        Investigators can now schedule their own sample drop off using the <a :href="spmCalendar" target="__blank">IGO SPM Reservations calendar</a>
+        Investigators can now schedule their own sample drop off using the
+        <a :href="spmCalendar" target="__blank">IGO SPM Reservations calendar</a>
       </span>
     </div>
 
-    <!-- <div class="carousel-div"> -->
     <home-page-news></home-page-news>
-    <!-- </div> -->
 
     <div class="md-layout-item igo-description md-title">
       <span>
@@ -35,7 +34,6 @@
 </template>
 
 <script>
-// import { Carousel, Slide } from 'vue-carousel';
 // import { IMAGE_URL } from './../../config.js';
 import { SPM_CALENDAR } from './../../config.js';
 import HomePageNews from '../HomePageNews.vue';
@@ -43,18 +41,14 @@ import HomePageNews from '../HomePageNews.vue';
 export default {
   name: 'HomePage',
   components: {
-    // Carousel,
-    // Slide,
     HomePageNews,
   },
   data: function() {
     return {
       igoDescription:
         'The Integrated Genomics Operation (IGO) core enables basic, clinical, and translational science by providing a broad range of services and expertise to investigators interested in evaluating gene expression, chromosome structure, and nucleotide sequence. Our services are comprehensive, rapid, and user-friendly. Through the centralized management of all sequencing activities at MSK, the core empowers scientists with an array of technological options and the most efficient and cost-effective means of performing high-throughput genomics.',
-      // showDialog: false,
-      // enlargedImage: '',
       announcement: true,
-      spmCalendar: SPM_CALENDAR
+      spmCalendar: SPM_CALENDAR,
     };
   },
   // methods: {
