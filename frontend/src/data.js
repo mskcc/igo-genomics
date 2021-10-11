@@ -1,5 +1,14 @@
 export const news = [
   {
+    title: "IGO's Open House Coming 10/29",
+    date: 'October 11, 2021',
+    imgSource: 'IMG_20191031_112220',
+    categories: ['featured'],
+    body: `<p>
+    It's time for IGO's (almost) annual Halloween Open House! Come join us on Friday, October 29 in ZRC 320 for a COVID-safe event to learn about the latest in our technology and services, a host of games and activities, and plenty of candy to take home.
+  </p>`,
+  },
+  {
     title: 'New "Reservations" feature for 10X Genomics & ATAC-Seq sample drop off',
     date: 'March 9, 2021',
     imgSource: 'IGO_210408_002',
@@ -29,7 +38,7 @@ export const news = [
     title: 'New project tracker, guidance for single cell applications, and changes to data delivery',
     date: 'December 3, 2020',
     imgSource: 'Viale_190612_083',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
       IGO’s Data Team is pleased to roll out a new
       <a href="https://igo.mskcc.org/login/request-tracker"> request tracking application</a>. Use this tool for real-time
@@ -305,28 +314,27 @@ export const bulkServices = [
     startingMaterial: 'RNA or cells (SMARTer only)',
     libraryChemistry: 'TruSeq stranded mRNA (polyA), TruSeq stranded total (Ribodepletion), SMART-Seq v4 + KAPA Hyper (SMARTer)',
     sequencingReadLength: 'PE100',
-    sequencingCoverage: '20-100M',
-    deliverable: 'FASTQ; analysis options from BIC',
+    sequencingCoverage: '10-100M+',
+    deliverable: 'FASTQ; analysis options from BIC at an additonal cost',
     tableHeaders: ['libraryType', 'readNumber', 'sampleCost'],
     table: [
+      { libraryType: 'PolyA', readNumber: '10-20', sampleCost: 250 },
       { libraryType: 'PolyA', readNumber: '20-30', sampleCost: 300 },
       { libraryType: 'PolyA', readNumber: '30-40', sampleCost: 350 },
       { libraryType: 'PolyA', readNumber: '40-50', sampleCost: 400 },
       { libraryType: 'PolyA', readNumber: '50-60', sampleCost: 450 },
       { libraryType: 'PolyA', readNumber: '60-80', sampleCost: 575 },
       { libraryType: 'PolyA', readNumber: '80-100', sampleCost: 600 },
+      { libraryType: 'PolyA', readNumber: '100+', sampleCost: 700 },
+      { libraryType: 'RiboDepletion', readNumber: '10-20', sampleCost: 300 },
       { libraryType: 'RiboDepletion', readNumber: '20-30', sampleCost: 350 },
       { libraryType: 'RiboDepletion', readNumber: '30-40', sampleCost: 400 },
       { libraryType: 'RiboDepletion', readNumber: '40-50', sampleCost: 450 },
       { libraryType: 'RiboDepletion', readNumber: '50-60', sampleCost: 500 },
       { libraryType: 'RiboDepletion', readNumber: '60-80', sampleCost: 600 },
       { libraryType: 'RiboDepletion', readNumber: '80-100', sampleCost: 700 },
-      { libraryType: 'SMARTer', readNumber: '20-30', sampleCost: 390 },
-      { libraryType: 'SMARTer', readNumber: '30-40', sampleCost: 440 },
-      { libraryType: 'SMARTer', readNumber: '40-50', sampleCost: 490 },
-      { libraryType: 'SMARTer', readNumber: '50-60', sampleCost: 540 },
-      { libraryType: 'SMARTer', readNumber: '60-80', sampleCost: 665 },
-      { libraryType: 'SMARTer', readNumber: '80-100', sampleCost: 690 },
+      { libraryType: 'RiboDepletion', readNumber: '100+', sampleCost: 800 },
+      { libraryType: 'SMARTer amplification', readNumber: '', sampleCost: 90 },
     ],
   },
   {
@@ -356,12 +364,12 @@ export const bulkServices = [
     startingMaterial: 'Cells - no more than 24 samples/batch (ATAC), Transposed DNA (ChIP), DNA – samples in multiples of 4 (EPIC)',
     libraryChemistry: 'Nextera XT (ATAC), KAPA HTP (ChIP), TruSeq Methyl Capture (EPIC)',
     sequencingReadLength: 'PE100',
-    sequencingCoverage: '40-50M (ATAC), 30-40M (ChIP), 40M (EPIC)',
+    sequencingCoverage: '40-50M (ATAC), 10M (ChIP; more reads can be requested), 40M (EPIC)',
     deliverable: 'FASTQ',
     tableHeaders: ['platform', 'sampleCost'],
     table: [
       { platform: 'ATAC-Seq', sampleCost: 450 },
-      { platform: 'ChIP-Seq', sampleCost: 300 },
+      { platform: 'ChIP-Seq/CUT&RUN', sampleCost: 250 },
       { platform: 'EPIC Methyl Capture-Seq', sampleCost: 550 },
     ],
   },
@@ -375,6 +383,7 @@ export const bulkServices = [
     table: [
       { platform: 'Adaptive immunoSEQ (survey)', sampleCost: 350 },
       { platform: 'Adaptive immunoSEQ (deep)', sampleCost: 850 },
+      { platform: 'Adaptive immunoSEQ (ultradeep)', sampleCost: 1200 },
       { platform: 'Archer immunoverse', sampleCost: 494 },
       { platform: '10X Genomics V(D)J Enrichment', sampleCost: 2279 },
     ],
@@ -386,7 +395,7 @@ export const bulkServices = [
     tableHeaders: ['platform', 'sequencingDetails', 'deliverable', 'cost'],
     table: [
       { platform: 'Shallow/bacterial WGS', sequencingDetails: 'PE100, 10M reads', deliverable: 'FASTQ + CNV analysis', cost: '$182' },
-      { platform: 'Amplicon Sequencing', sequencingDetails: 'Varies', deliverable: 'FASTQ', cost: 'please inquire' },
+      { platform: 'Amplicon Sequencing', sequencingDetails: 'additional cost', deliverable: 'FASTQ', cost: '159' },
       {
         platform: 'CRISPR Cut Site Sequencing',
         sequencingDetails: '75K reads',
@@ -395,15 +404,15 @@ export const bulkServices = [
       },
       {
         platform: 'Archer FusionPlex',
-        sequencingDetails: 'Solid Tumor Panel',
+        sequencingDetails: 'Solid Tumor (MSK) Panel',
         deliverable: 'Archer portal access',
-        cost: '$820',
+        cost: '$690',
       },
       {
         platform: 'Archer FusionPlex',
         sequencingDetails: 'Heme Panel',
         deliverable: 'Archer portal access',
-        cost: '$610',
+        cost: '$480',
       },
     ],
   },
@@ -422,7 +431,7 @@ export const singleServices = [
     tableHeaders: ['xGenomicsPlatform', 'sampleCostLibrary', 'cellCostSequencing'],
     table: [
       { xGenomicsPlatform: '5′ OR 3′ Gene Expression', sampleCostLibrary: 2068, cellCostSequencing: '$0.05' },
-      { xGenomicsPlatform: '5′ Gene Expression + V(D)J Enrichment', sampleCostLibrary: 2279, cellCostSequencing: '$0.06' },
+      { xGenomicsPlatform: 'V(D)J Enrichment', sampleCostLibrary: 211, cellCostSequencing: '$0.01' },
       { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 116, cellCostSequencing: '$0.01' },
     ],
   },
@@ -500,7 +509,7 @@ export const otherServices = [
     table: [
       { service: 'New Assay Design & Optimization', cost: 200 },
       { service: 'New Assay Order (CNV)', cost: 200 },
-      { service: 'New Assay Order (mutation)', cost: 375 },
+      { service: 'New Assay Order (mutation/GEX)', cost: 375 },
       { service: 'Digital PCR (per reaction)', cost: 9.5 },
     ],
   },
@@ -513,7 +522,7 @@ export const otherServices = [
     deliverable: 'Genotype + Database matching report',
     tableHeaders: ['species', 'cost'],
     table: [
-      { species: 'Human', cost: 36 },
+      { species: 'Human', cost: 30 },
       { species: 'Mouse (coming soon)', cost: 44 },
     ],
   },
@@ -525,10 +534,11 @@ export const otherServices = [
     deliverable: 'Nucleic acid + QC report',
     tableHeaders: ['startingMaterial', 'extractionOutput', 'sampleCost'],
     table: [
+      { startingMaterial: 'Plasma', extractionOutput: 'cfDNA', sampleCost: 50 },
       { startingMaterial: 'Fresh frozen or OCT tissue/cells', extractionOutput: 'DNA', sampleCost: 25 },
       { startingMaterial: 'Viably frozen cells', extractionOutput: 'DNA', sampleCost: 40 },
       { startingMaterial: 'Blood', extractionOutput: 'DNA', sampleCost: 30 },
-      { startingMaterial: 'FFPE tissue', extractionOutput: 'DNA', sampleCost: 35 },
+      { startingMaterial: 'FFPE', extractionOutput: 'DNA', sampleCost: 35 },
       { startingMaterial: 'Fingernails', extractionOutput: 'DNA', sampleCost: 40 },
       { startingMaterial: 'Frozen tissue/cells (TRIzol, OCT, RLT, pellet)', extractionOutput: 'RNA', sampleCost: 33 },
       { startingMaterial: 'Viably frozen cells', extractionOutput: 'RNA', sampleCost: 48 },
@@ -561,13 +571,14 @@ export const otherServices = [
     tableHeaders: ['serviceType', 'serviceSubType', 'price'],
     table: [
       { serviceType: 'QC Service', serviceSubType: 'BioAnalyzer or TapeStation QC', price: '$11/sample' },
-      { serviceType: 'QC Service', serviceSubType: 'Qubit/Quant-it', price: '$7/sample' },
+      { serviceType: 'QC Service', serviceSubType: 'Qubit/Quant-it', price: '$6.50/sample' },
       { serviceType: 'QC Service', serviceSubType: '%Human for PDX', price: '$19/sample' },
-      { serviceType: 'Pathology Service', serviceSubType: 'Sectioning (curls)', price: '$15/block' },
-      { serviceType: 'Pathology Service', serviceSubType: 'Sectioning (slides)', price: '$3.50/sample' },
-      { serviceType: 'Pathology Service', serviceSubType: 'H&E Staining', price: '$7/sample' },
-      { serviceType: 'Pathology Service', serviceSubType: 'Slide scraping', price: '$10/sample' },
-      { serviceType: 'Pathology Service', serviceSubType: 'Macrodissection', price: '$3/slide' },
+      { serviceType: 'QC Service', serviceSubType: 'STR fingerprinting', price: '$20/sample' },
+      { serviceType: 'Pathology Service', serviceSubType: 'Sectioning (curls)', price: '$15/up to 10 curls' },
+      { serviceType: 'Pathology Service', serviceSubType: 'Sectioning (slides)', price: '$3.50/slide' },
+      { serviceType: 'Pathology Service', serviceSubType: 'H&E Staining', price: '$12/slide' },
+      { serviceType: 'Pathology Service', serviceSubType: 'Slide scraping', price: '$10/up to 20 slides' },
+      { serviceType: 'Pathology Service', serviceSubType: 'Macrodissection', price: '$2.50/slide' },
     ],
   },
 ];
@@ -577,7 +588,7 @@ export const customBlockPrices = [
   { readsBlock: 400, '100Cycles': '$900', '200Cycles': 1000, '300Cycles': 1100 },
   { readsBlock: 800, '100Cycles': '$1800', '200Cycles': 1990, '300Cycles': 2150 },
   { readsBlock: 1800, '100Cycles': '$4032', '200Cycles': 4464, '300Cycles': 4842 },
-  { readsBlock: 2750, '100Cycles': '$6160', '200Cycles': 6820, '300Cycles': 7398 },
+  { readsBlock: 2750, '100Cycles': '', '200Cycles': 6820, '300Cycles': 7398 },
   { readsBlock: 3600, '100Cycles': '$8064', '200Cycles': 8928, '300Cycles': 9684 },
   { readsBlock: 11000, '100Cycles': '', '200Cycles': 14300, '300Cycles': 16000 },
 ];

@@ -10,7 +10,7 @@
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionRDM = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-48309-manager-integrated-genomics-operations/" target="_blank" class="md-primary">Apply </md-button>
+        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-48309-manager-research-and-development/" target="_blank" class="md-primary">Apply </md-button>
       </md-card-actions>
     </md-card>
 
@@ -30,11 +30,11 @@
       <md-card-header>
         <div class="md-title">Research Assistant</div>
         <router-link :to="{ name: 'team', params: { id: 5 } }">Sequencing Team</router-link>
-        <div class="md-body">Open!</div>
+        <div class="md-body">Pending</div>
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionSeqRA = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-51799-research-assistant/" target="_blank" class="md-primary">Apply
+        <md-button href="mailto:genomics.mskcc.org?subject=Seq Research Assistant" target="_blank" class="md-primary">Inquire
         </md-button>
       </md-card-actions>
     </md-card>
@@ -151,8 +151,8 @@
         </ul>
         <strong>You need:</strong>
         <ul>
-          <li>A Ph.D. in molecular biology, biochemistry or a related discipline with at least 3 years of post-doctoral experience in an academic environment</li>
-          <li>Experience working in experimental and computational genomic methodologies. A background in NGS assay development is highly desired. Experience with imaging technologies is a plus.</li>
+          <li>A Ph.D. in molecular biology, biochemistry or a related discipline, or a Masters' degree with a strong background in experimental and computational genomic methodologies and assay development</li>
+          <li>A background in NGS assay development is highly desired. Experience with imaging technologies is a plus. Management experience is welcome.</li>
           <li>Excellent interpersonal, written and oral communication skills</li>
         </ul>
       </md-dialog-content>

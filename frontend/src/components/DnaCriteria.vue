@@ -18,41 +18,37 @@
       </md-table-row>
 
       <md-table-row>
-        <md-table-cell rowspan="6"
-          >Adaptive immunoSEQ<sup
-            >a<md-tooltip v-if="footnotes.a" md-direction="right">{{ footnotes.a }}</md-tooltip></sup
-          ></md-table-cell
-        >
+        <md-table-cell rowspan="6">Adaptive immunoSEQ (survey/deep/ultradeep)<sup>a<md-tooltip v-if="footnotes.a" md-direction="right">{{ footnotes.a }}</md-tooltip></sup></md-table-cell>
         <md-table-cell>FFPE</md-table-cell>
-        <md-table-cell class="pass">25&#181;m</md-table-cell>
-        <md-table-cell class="try">&lt;5 curls</md-table-cell>
+        <md-table-cell class="pass">25&#181;m / 50&#181;m / N/A</md-table-cell>
+        <md-table-cell class="try">400ng</md-table-cell>
         <md-table-cell rowspan="5" colspan="2" class="center-page">No quality requirements</md-table-cell>
         <md-table-cell rowspan="5">50&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>Lymphoid tissue</md-table-cell>
-        <md-table-cell class="pass">650ng</md-table-cell>
-        <md-table-cell class="try">175ng</md-table-cell>
+        <md-table-cell class="pass">1.7&#181;g / 5&#181;g / 12&#181;g</md-table-cell>
+        <md-table-cell class="try">400ng</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>PBMCs</md-table-cell>
-        <md-table-cell class="pass">1.1&#181;g</md-table-cell>
+        <md-table-cell class="pass">1.1&#181;g / 3.4&#181;g / 10.3&#181;g</md-table-cell>
         <md-table-cell class="try">275ng</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>T cells</md-table-cell>
-        <md-table-cell class="pass">400ng</md-table-cell>
+        <md-table-cell class="pass">400ng / 1.2&#181;g / 3.5&#181;g</md-table-cell>
         <md-table-cell class="try">100ng</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>Whole Blood/BMMCs</md-table-cell>
-        <md-table-cell class="pass">1.6&#181;g</md-table-cell>
+        <md-table-cell class="pass">1.6&#181;g / 4.7&#181;g / 15&#181;g</md-table-cell>
         <md-table-cell class="try">400ng</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>Other</md-table-cell>
-        <md-table-cell class="pass">3&#181;g</md-table-cell>
-        <md-table-cell class="try">1&#181;g</md-table-cell>
+        <md-table-cell class="pass">2.7&#181;g / 9&#181;g / N/A</md-table-cell>
+        <md-table-cell class="try">400ng</md-table-cell>
       </md-table-row>
 
       <md-table-row>
@@ -73,15 +69,9 @@
         <md-table-cell>50&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell
-          ><a href="https://my.ilabsolutions.com/service_center/3276/?tab=services" target="__blank">CRISPRSeq</a></md-table-cell
-        >
+        <md-table-cell><a href="https://my.ilabsolutions.com/service_center/3276/?tab=services" target="__blank">CRISPRSeq</a></md-table-cell>
         <md-table-cell></md-table-cell>
-        <md-table-cell class="pass"
-          >1&#181;g<sup
-            >b<md-tooltip v-if="footnotes.b" md-direction="right">{{ footnotes.b }}</md-tooltip></sup
-          ></md-table-cell
-        >
+        <md-table-cell class="pass">1&#181;g<sup>b<md-tooltip v-if="footnotes.b" md-direction="right">{{ footnotes.b }}</md-tooltip></sup></md-table-cell>
         <md-table-cell class="try">400ng</md-table-cell>
         <md-table-cell class="pass">200-280bp</md-table-cell>
         <md-table-cell class="fail">No try range</md-table-cell>
@@ -233,7 +223,7 @@ export default {
   data: function() {
     return {
       footnotes: {
-        a: 'Guidelines given are based on survey depth (two replicates). For four replicates, multiply input requirements by two.',
+        a: 'For samples that are clonal, non-lymphoid, or with fewer than 100K T cells, survey is appropriate. For detection of rare clones or peripheral immune repertoire in samples with 100-200K T cells, deep resolution can be used. For 500-600K T cells, choose ultradeep.',
         b: "CRISPRSeq samples are not QC'd by IGO. Mass requirements are based on investigator QC.",
         c: 'Requirements also apply to custom capture projects.',
       },

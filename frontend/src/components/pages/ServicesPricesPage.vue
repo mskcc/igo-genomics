@@ -363,7 +363,7 @@
     </div>
     <span class="md-caption" style="text-align: right;"
       >Prices indicated on this webpage are an estimation and can be adjusted (higher or lower) at any point in time based on changes in
-      sequencing reagent cost, labor cost, etc.
+      sequencing reagent cost, labor cost, etc. Note that prices do not include QC.
     </span>
   </div>
 </template>
