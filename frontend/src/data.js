@@ -2,7 +2,8 @@ export const news = [
   {
     title: "IGO's Open House Coming 10/29",
     date: 'October 11, 2021',
-    imgSource: 'IMG_20191031_112220',
+    // imgSource: 'IMG_20191031_112220',
+    imgSource: 'OpenHouse2021-Flyer-Final-Landscape',
     categories: ['featured'],
     body: `<p>
     It's time for IGO's (almost) annual Halloween Open House! Come join us on Friday, October 29 in ZRC 320 for a COVID-safe event to learn about the latest in our technology and services, a host of games and activities, and plenty of candy to take home.
