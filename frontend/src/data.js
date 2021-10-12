@@ -6,7 +6,7 @@ export const news = [
     imgSource: 'OpenHouse2021-Flyer-Final-Landscape',
     categories: ['featured'],
     body: `<p>
-    It's time for IGO's (almost) annual Halloween Open House! Come join us on Friday, October 29 in ZRC 320 for a COVID-safe event to learn about the latest in our technology and services, a host of games and activities, and plenty of candy to take home. Tour the lab, schedule consults on our common and new technologies, and play a host of science-themed games hosted by our costumed IGO staff to celebrate another year of genomics. Watch this space or email genomics@mskcc.org for more information.
+    It's time for IGO's (almost) annual Halloween Open House! Come join us on Friday, October 29 in ZRC 320 for a COVID-safe event to learn about the latest in our technology and services, take part in a host of games and activities, and grab plenty of candy to take home. Tour the lab, schedule consults on our common and new technologies, and play some science-themed games hosted by our costumed IGO staff to celebrate another year of genomics. Watch this space or email genomics@mskcc.org for more information.
   </p>`,
   },
   {
