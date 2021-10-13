@@ -18,7 +18,7 @@
           <!-- <md-list-item class="indent" href="#geomx">Nanostring GeoMx</md-list-item> -->
           <md-list-item :to="{ name: 'platforms & pricing' }">Pricing</md-list-item>
           <md-list-item :to="{ name: 'submission guidelines' }">How to submit samples</md-list-item>
-          <md-list-item :to="{ name: 'reservations' }">Make a reservation for sample drop off</md-list-item>
+          <md-list-item><a :href="scCalendar" target="__blank">Make a reservation for sample drop off</a></md-list-item>
         </md-list>
       </md-app-drawer>
 
@@ -186,11 +186,14 @@
 <script>
 import SingleCellTable from '../SingleCellTable.vue';
 import TenXTable from '../TenXTable.vue';
+import { SC_CALENDAR } from './../../config.js';
 
 export default {
   components: { SingleCellTable, TenXTable },
   data: function() {
-    return {};
+    return {
+      scCalendar: SC_CALENDAR
+    };
   },
 };
 </script>

@@ -1,20 +1,14 @@
 <template>
   <div id="reservation-page">
-    <div class="md-display-1">Schedule an appointment</div>
+    <div class="md-display-1">We are now using Microsoft Bookings!</div>
     <div class="announcement-bubble">
       <span class="material-icons"> warning </span>
       <span class="announcement-content">
-        <strong
-          >We require at least 48 hours notice for 10x Genomics and ATAC-Seq sample drop-off and at least 2 hours notice for
-          cancellation.</strong
-        >
-        If you have an emergency, please contact genomics@mskcc.org as soon as possible.<br />
-        For all other sample drop-off reservations, please click
-        <a
-          :href="spmCalendar"
-          target="__blank"
-          >here</a
-        >.
+        <strong>10xGenomics, MissionBio and DLP appointments</strong> can now be made on our new
+        <a :href="scCalendar" target="__blank">Single Cell Calendar.</a>
+        All other sample drop-off appointments can be made <a :href="spmCalendar" target="__blank">here</a>.<br />Cancellations (must be
+        done via email?) and can be made <strong>no less than 2 hours before the scheduled arrival time.</strong> If you have an emergency,
+        please contact genomics@mskcc.org as soon as possible.<br />
       </span>
     </div>
     <div class="md-layout">
@@ -128,7 +122,7 @@
 
 <script>
 import * as app from './../../app.js';
-import { API_URL, SPM_CALENDAR } from './../../config.js';
+import { API_URL, SPM_CALENDAR, SC_CALENDAR } from './../../config.js';
 import { required, email, numeric, requiredIf } from 'vuelidate/lib/validators';
 import ExistingReservations from '../ExistingReservations.vue';
 
@@ -138,6 +132,8 @@ export default {
   data: function() {
     return {
       spmCalendar: SPM_CALENDAR,
+      scCalendar: SC_CALENDAR,
+      microsoftBookingsIsActive: true,
       message: 'Please select a day.',
       requestType: '',
       form: {
