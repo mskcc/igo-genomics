@@ -111,7 +111,7 @@
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> indicating that you are submitting "Cells" for "ATACSeq"</li>
                       <li><strong>If submitting fresh cells:</strong> 
                       <ul>
-                        <li><a :href="scCalendar" target="__blank">Make a reservation</a> to bring your samples (Thursdays only)</li>
+                        <li><a :href="spmCalendar" target="__blank">Make a reservation</a> to bring your samples (Thursdays only)</li>
                         <li>Bring 50K live cells suspended in 300-350&mu;L PBS or their favored medium in a 1.5mL <strong>V-bottom</strong> Eppendorf tube</li>
                       </ul>
                       </li>
@@ -133,9 +133,8 @@
                   <md-list-item class="md-inset">
                     <ol>
                       <li>
-                        <a href="https://genomics.mskcc.org/reservations">Make a reservation</a> for a time to bring your samples – the
-                        system will block off three hours for processing<br /><strong>Note:</strong> 10X ATAC projects should select morning
-                        drop-offs only
+                        <a :href="scCalendar" target="__blank">Make a reservation</a> for a time to bring your samples – the
+                        system will block off three hours for processing<br />
                       </li>
                       <li>Fill out an iLab request for “Single Cell Library Prep + Sequencing”</li>
                       <li>

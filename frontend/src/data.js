@@ -11,16 +11,12 @@ export const news = [
   },
   {
     title: 'New "Reservations" feature for 10X Genomics & ATAC-Seq sample drop off',
-    date: 'March 9, 2021',
+    date: 'October 15, 2021',
     imgSource: 'IGO_210408_002',
     categories: ['featured'],
     body: `<p>
       IGO is happy to announce the launch of a new website feature to
-      <a href="https://genomics.mskcc.org/reservations">book drop off appointments</a> of fresh samples for 10X Genomics
-      (M-F) and ATAC-Seq (Th only)! Simply select your request type from the dropdown menu, desired appointment day, AM or PM
-      and then select the hour of drop offering. Fill out the short form, including whether you are requesting 3' or 5' 10X
-      chemistry, and submit! You will receive a confirmation e-mail; don't forget to fill out your iLab request and the sample
-      webform before your appointment.
+      <a href="https://outlook.office365.com/owa/calendar/igo1@mskcc.onmicrosoft.com/bookings/">book drop off appointments</a> of fresh samples for 10X Genomics, DLP, and MissionBio!
     </p>`,
   },
   {

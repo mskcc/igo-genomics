@@ -192,7 +192,7 @@ export default {
   components: { SingleCellTable, TenXTable },
   data: function() {
     return {
-      scCalendar: SC_CALENDAR
+      scCalendar: SC_CALENDAR,
     };
   },
 };
