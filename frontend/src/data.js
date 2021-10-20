@@ -10,13 +10,13 @@ export const news = [
   </p>`,
   },
   {
-    title: 'New "Reservations" feature for 10X Genomics & ATAC-Seq sample drop off',
+    title: 'Reservations have moved to Microsoft Bookings (10X Genomics, ATAC-Seq and more!)',
     date: 'October 15, 2021',
     imgSource: 'IGO_210408_002',
     categories: ['featured'],
     body: `<p>
-      IGO is happy to announce the launch of a new website feature to
-      <a href="https://outlook.office365.com/owa/calendar/igo1@mskcc.onmicrosoft.com/bookings/">book drop off appointments</a> of fresh samples for 10X Genomics, DLP, and MissionBio!
+      IGO is happy to announce the launch of a new tool to
+      book <a href="https://outlook.office365.com/owa/calendar/igo1@mskcc.onmicrosoft.com/bookings/" target="_blank">drop off appointments of fresh samples for 10X Genomics, DLP, and MissionBio</a>! All other sample drop-off appointments, including fresh samples for ATAC-Seq can be made <a :href="spmCalendar" target="__blank">here</a>. 
     </p>`,
   },
   {

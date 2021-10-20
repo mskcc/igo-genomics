@@ -6,9 +6,9 @@
       <span class="announcement-content">
         <strong>10xGenomics, MissionBio and DLP appointments</strong> can now be made on our new
         <a :href="scCalendar" target="__blank">Single Cell Calendar.</a>
-        All other sample drop-off appointments can be made <a :href="spmCalendar" target="__blank">here</a>.<br />Cancellations (must be
-        done via email?) and can be made <strong>no less than 2 hours before the scheduled arrival time.</strong> If you have an emergency,
-        please contact genomics@mskcc.org as soon as possible.<br />
+        All other sample drop-off appointments can be made <a :href="spmCalendar" target="__blank">here</a>.<br />Cancellations can be made
+        <strong>no less than 2 hours before the scheduled arrival time.</strong> If you have an emergency, please contact genomics@mskcc.org
+        as soon as possible.<br />
       </span>
     </div>
 
