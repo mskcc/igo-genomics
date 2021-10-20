@@ -11,12 +11,12 @@ export const news = [
   },
   {
     title: 'Reservations have moved to Microsoft Bookings (10X Genomics, ATAC-Seq and more!)',
-    date: 'October 15, 2021',
+    date: 'October 22, 2021',
     imgSource: 'IGO_210408_002',
     categories: ['featured'],
     body: `<p>
       IGO is happy to announce the launch of a new tool to
-      book <a href="https://outlook.office365.com/owa/calendar/igo1@mskcc.onmicrosoft.com/bookings/" target="_blank">drop off appointments of fresh samples for 10X Genomics, DLP, and MissionBio</a>! All other sample drop-off appointments, including fresh samples for ATAC-Seq can be made <a :href="spmCalendar" target="__blank">here</a>. 
+      book <a href="https://outlook.office365.com/owa/calendar/igo1@mskcc.onmicrosoft.com/bookings/" target="_blank">drop off appointments of fresh samples for 10X Genomics, DLP, and MissionBio</a>! All other sample drop-off appointments, including fresh samples for ATAC-Seq can be made <a :href="spmCalendar" target="__blank">here</a>. Appointments previously scheduled through https://genomics.mskcc.org/reservations have been moved by an IGO Staff member to their respective Microsoft Bookings calendar. If you did not receive a new confirmation email please contact zzPDL_SKI_IGO_DATA@mskcc.org.
     </p>`,
   },
   {

@@ -48,7 +48,10 @@
               :key="link"
               :to="{ name: link }"
               v-bind:class="{
-                'router-link-active': (teamIsActive && link === 'about') || (platformsIsActive && link === 'platforms & pricing') || (criteriaIsActive && link === 'sample requirements'),
+                'router-link-active':
+                  (teamIsActive && link === 'about') ||
+                  (platformsIsActive && link === 'platforms & pricing') ||
+                  (criteriaIsActive && link === 'sample requirements'),
               }"
             >
               <md-button class="md-ripple nav-button">{{ link }}</md-button>
@@ -142,6 +145,7 @@ export default {
         'ddpcr assays',
         'igo tutorials',
         'metrics and throughput',
+        'reservations',
         'single cell hub',
       ],
       toolsIsActive: [
@@ -153,7 +157,7 @@ export default {
         'rna',
         'other',
         'metrics and throughput',
-        'reservations'
+        'reservations',
       ].includes(this.$route.name),
       teamIsActive: this.$route.path.includes('about'),
       platformsIsActive: this.$route.path === '/platforms',
@@ -171,7 +175,7 @@ export default {
   methods: {},
   watch: {
     $route() {
-      this.toolsIsActive = this.toolLinks.includes(this.$route.name) 
+      this.toolsIsActive = this.toolLinks.includes(this.$route.name);
       this.teamIsActive = this.$route.path.includes('about');
       this.platformsIsActive = this.$route.path === '/platforms';
       this.criteriaIsActive = this.$route.path.includes('criteria');
