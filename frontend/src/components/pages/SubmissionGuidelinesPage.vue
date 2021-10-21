@@ -14,7 +14,8 @@
           <ol>
             <li><a href="https://my.ilabsolutions.com/account/saml/mskcc">Submit an iLabs request</a> for the desired application.</li>
             <li>
-              <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up">E-mail the Sample & Project Management team</a> or call 646-888-3856 to pick up a plate or micronic barcoded tubes outside Z320 for submission.
+              Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to pick up a plate or micronic
+              barcoded tubes.
             </li>
             <li>
               Complete the <a href="https://igo.mskcc.org/sample-submission">sample submission form</a> indicating the sample specific
@@ -26,10 +27,12 @@
           <div class="md-subheading">Ready to drop off samples:</div>
           <ol>
             <li>
-              Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>.
+              Schedule a sample drop off time on the
+              <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>.
             </li>
             <li>
-              Bring your samples to the 3rd floor of Zuckerman at your scheduled time and place them in the marked area. Wait with the samples while IGO staff confirms the sample set. If you are running late and a lab member is no longer at the receiving desk,
+              Bring your samples to the 3rd floor of Zuckerman at your scheduled time and place them in the marked area. Wait with the
+              samples while IGO staff confirms the sample set. If you are running late and a lab member is no longer at the receiving desk,
               please refrain from entering the lab and call 646-888-3856 to notify us of your arrival.<br /><br />Any follow-up inquiries
               will be handled by e-mail or phone.
             </li>
@@ -47,7 +50,10 @@
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset">
                     <ol>
-                      <li><router-link :to="{ name: 'tissue' }">Check</router-link> our accepted preservation types and recommendations for DNA & RNA extraction</li>
+                      <li>
+                        <router-link :to="{ name: 'tissue' }">Check</router-link> our accepted preservation types and recommendations for
+                        DNA & RNA extraction
+                      </li>
                       <li>Fill out an iLab request for the appropriate application</li>
                       <ul>
                         <li>DNA Extraction</li>
@@ -59,7 +65,8 @@
                         analysis you’ll eventually need)
                       </li>
                       <li>
-                        Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>.
+                        Schedule a sample drop off time on the
+                        <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>.
                       </li>
                       <li>
                         Wait for the e-mail from <a href="https://igo.mskcc.org/sample-qc">Sample QC</a> indicating your extraction and QC
@@ -90,7 +97,9 @@
                         application
                       </li>
                       <li>
-                        Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a> -- note that COVID screening is only run on Wednesdays
+                        Schedule a sample drop off time on the
+                        <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a> -- note that COVID
+                        screening is only run on Wednesdays
                       </li>
                       <ul>
                         <li><strong>Cells</strong> should be suspended in >250µL 100% PBS and dropped off Wednesday before 10am</li>
@@ -104,23 +113,36 @@
                 <md-icon>add</md-icon>
                 <span class="md-list-item-text ">Cells for ATAC-Seq</span>
                 <md-list slot="md-expand">
-                  <md-list-item class="md-inset">Note: if you have never run ATAC-Seq on your cell type, please e-mail genomics@mskcc.org to discuss an optimization of the transposition conditions.</md-list-item>
+                  <md-list-item class="md-inset"
+                    >Note: if you have never run ATAC-Seq on your cell type, please e-mail genomics@mskcc.org to discuss an optimization of
+                    the transposition conditions.</md-list-item
+                  >
                   <md-list-item class="md-inset">
                     <ol>
                       <li>Fill out an iLab form for “Epigenetic Library Prep + Sequencing”</li>
-                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> indicating that you are submitting "Cells" for "ATACSeq"</li>
-                      <li><strong>If submitting fresh cells:</strong> 
-                      <ul>
-                        <li><a :href="spmCalendar" target="__blank">Make a reservation</a> to bring your samples (Thursdays only)</li>
-                        <li>Bring 50K live cells suspended in 300-350&mu;L PBS or their favored medium in a 1.5mL <strong>V-bottom</strong> Eppendorf tube</li>
-                      </ul>
+                      <li>
+                        Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> indicating that you are submitting
+                        "Cells" for "ATACSeq"
+                      </li>
+                      <li>
+                        <strong>If submitting fresh cells:</strong>
+                        <ul>
+                          <li><a :href="spmCalendar" target="__blank">Make a reservation</a> to bring your samples (Thursdays only)</li>
+                          <li>
+                            Bring 50K live cells suspended in 300-350&mu;L PBS or their favored medium in a 1.5mL
+                            <strong>V-bottom</strong> Eppendorf tube
+                          </li>
+                        </ul>
                       </li>
                       <li>
                         <strong>If submitting viably frozen cells:</strong>
-                      <ul>
-                        <li>Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a></li>
-                        <li>Freeze your 50K cells in 300-500&mu;L 10% DMSO in a 1.5mL Eppendorf tube</li>
-                      </ul>
+                        <ul>
+                          <li>
+                            Schedule a sample drop off time on the
+                            <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>
+                          </li>
+                          <li>Freeze your 50K cells in 300-500&mu;L 10% DMSO in a 1.5mL Eppendorf tube</li>
+                        </ul>
                       </li>
                     </ol>
                   </md-list-item>
@@ -133,8 +155,8 @@
                   <md-list-item class="md-inset">
                     <ol>
                       <li>
-                        <a :href="scCalendar" target="__blank">Make a reservation</a> for a time to bring your samples – the
-                        system will block off three hours for processing<br />
+                        <a :href="scCalendar" target="__blank">Make a reservation</a> for a time to bring your samples – the system will
+                        block off three hours for processing<br />
                       </li>
                       <li>Fill out an iLab request for “Single Cell Library Prep + Sequencing”</li>
                       <li>
@@ -147,7 +169,11 @@
                           <li>10X_Genomics_Multiome</li>
                         </ul>
                       </li>
-                      <li><strong>Multiome only:</strong> <a href="mailto:zzPDL_SKI_IGO_NA_team@mskcc.org?subject=Nuclei buffer">Contact us</a> to get an aliquot of nuclei preservation buffer</li>
+                      <li>
+                        <strong>Multiome only: </strong>
+                        <a href="mailto:zzPDL_SKI_IGO_NA_team@mskcc.org?subject=Nuclei buffer">Contact us</a> to get an aliquot of nuclei
+                        preservation buffer
+                      </li>
                       <li>Bring your single-cell or single-nuclei suspension to IGO at the designated time</li>
                     </ol>
                   </md-list-item>
@@ -177,21 +203,20 @@
                   <md-list-item class="md-inset"
                     ><ol>
                       <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up"
-                          >E-mail the Sample & Project Management team
-                        </a>
-                        or call 646-888-3856 to pick up micronic barcoded tubes outside Z320 for submission.
-                      </li>
-                      <li>
                         Fill out an iLab request for the appropriate application
                         <ul>
                           <li>Whole Exome Capture and Sequencing</li>
                           <li>Human or Mouse – Whole Genome Sequencing</li>
                         </ul>
                       </li>
+                      <li>
+                        Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request micronic
+                        barcoded tube(s).
+                      </li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
                       <li>
-                        Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>
+                        Schedule a sample drop off time on the
+                        <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>
                       </li>
                     </ol></md-list-item
                   >
@@ -203,11 +228,6 @@
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset"
                     ><ol>
-                      <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up"
-                          >E-mail the Sample & Project Management team </a
-                        >or call 646-888-3856 to pick up a plate outside Z320 for submission.
-                      </li>
                       <li>
                         Fill out an iLab request for the appropriate application
                         <ul>
@@ -223,9 +243,13 @@
                           <li>Fragment Analysis</li>
                         </ul>
                       </li>
+                      <li>
+                        Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request a plate.
+                      </li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
                       <li>
-                        Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>
+                        Schedule a sample drop off time on the
+                        <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>
                       </li>
                     </ol></md-list-item
                   >
@@ -238,20 +262,19 @@
                   <md-list-item class="md-inset"
                     ><ol>
                       <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up"
-                          >E-mail the Sample & Project Management team </a
-                        >or call 646-888-3856 to pick up a plate outside Z320 for submission.
-                      </li>
-                      <li>
                         Fill out an iLab request for the appropriate application
                         <ul>
                           <li>Archer Panel Sequencing</li>
                           <li>RNA Library Prep and Sequencing</li>
                         </ul>
                       </li>
+                      <li>
+                        Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request a plate.
+                      </li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
                       <li>
-                        Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>
+                        Schedule a sample drop off time on the
+                        <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>
                       </li>
                     </ol></md-list-item
                   >
@@ -267,17 +290,17 @@
                         <strong>If you are submitting for the first time or submitting a new construct:</strong> e-mail genomics@mskcc.org
                         with your protocol, a link to your reference, your primer barcodes, or a schematic of your construct
                       </li>
+                      <li>Fill out an iLab request for “User Libraries for Sequencing”</li>
                       <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up"
-                          >E-mail the Sample & Project Management team </a
-                        >or call 646-888-3856 to pick up a plate outside Z320 for submission.
+                        Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request a plate.
                       </li>
                       <li>
                         Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting “DNA Library” as your
                         material
                       </li>
                       <li>
-                        Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>
+                        Schedule a sample drop off time on the
+                        <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>
                       </li>
                     </ol></md-list-item
                   >
@@ -293,17 +316,18 @@
                         <strong>If you are submitting for the first time or submitting a new construct:</strong> e-mail genomics@mskcc.org
                         with your protocol, a link to your reference, your primer barcodes, or a schematic of your construct
                       </li>
-                      <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org"> Email SPM </a>to get a micronic tube for
-                        your pool
-                      </li>
                       <li>Fill out an iLab request for “User Libraries for Sequencing”</li>
+                      <li>
+                        Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request micronic
+                        barcoded tube(s) for your pool(s).
+                      </li>
                       <li>
                         Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting “Pooled Library” as your
                         material
                       </li>
                       <li>
-                        Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>
+                        Schedule a sample drop off time on the
+                        <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>
                       </li>
                     </ol>
                   </md-list-item>
@@ -342,8 +366,8 @@
                         appropriate design file
                       </li>
                       <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org">Email SPM</a> to get a micronic tube for your
-                        positive control(s)
+                        Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request a micronic
+                        barcoded tube(s) for your positive control(s).
                       </li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> for your positive control</li>
                       <li>E-mail farinaa@mskcc.org to coordinate sample drop off for your assay optimization</li>
@@ -362,15 +386,14 @@
                   <md-list-item class="md-inset"
                     ><ol>
                       <li>Make sure that your desired assay is in stock</li>
-                      <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up"
-                          >E-mail the Sample & Project Management team </a
-                        >or call 646-888-3856 to pick up a plate outside Z320 for submission.
-                      </li>
                       <li>Fill out an iLab request for “Digital PCR”</li>
+                      <li>
+                        Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request a plate.
+                      </li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
                       <li>
-                        Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>
+                        Schedule a sample drop off time on the
+                        <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>
                       </li>
                     </ol></md-list-item
                   >
@@ -384,15 +407,14 @@
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset"
                     ><ol>
-                      <li>
-                        <a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Container Pick Up"
-                          >E-mail the Sample & Project Management team </a
-                        >or call 646-888-3856 to pick up a plate outside Z320 for submission.
-                      </li>
                       <li>Fill out an iLab request for “Quality Control for Nucleic Acids”</li>
+                      <li>
+                        Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request a plate.
+                      </li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
                       <li>
-                        Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>
+                        Schedule a sample drop off time on the
+                        <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>
                       </li>
                     </ol></md-list-item
                   >
@@ -414,7 +436,7 @@ export default {
   data: function() {
     return {
       spmCalendar: SPM_CALENDAR,
-      scCalendar: SC_CALENDAR
+      scCalendar: SC_CALENDAR,
     };
   },
   components: {},
