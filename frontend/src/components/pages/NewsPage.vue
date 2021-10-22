@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="md-display-1">News at the IGO</div>
+    <div class="md-display-1">News at IGO</div>
     <div class="news-container">
       <md-card class="news-card" v-for="(newsItem, index) in news" :key="index">
         <!-- <md-card-media-cover> -->

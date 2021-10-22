@@ -1,5 +1,14 @@
 <template>
   <div id="faq-page">
+    <p style="text-align:left;">
+      Prices below do not include:<br />
+      <ul>
+        <li>Library or pool QC ($17.50/sample or pool)</li>
+        <li>Pooling ($10/sample)</li>
+        <li>FASTQ generation ($30/sample)</li>
+      </ul>
+    </p>
+
     <md-list>
       <md-list-item md-expand>
         <md-icon>add</md-icon>

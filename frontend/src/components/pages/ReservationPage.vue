@@ -1,125 +1,124 @@
 <template>
   <div id="reservation-page">
-    <div class="md-display-1">Schedule an appointment</div>
+    <div class="md-display-1">We are now using Microsoft Bookings!</div>
     <div class="announcement-bubble">
       <span class="material-icons"> warning </span>
       <span class="announcement-content">
-        <strong
-          >We require at least 48 hours notice for 10x Genomics and ATAC-Seq sample drop-off and at least 2 hours notice for
-          cancellation.</strong
-        >
-        If you have an emergency, please contact genomics@mskcc.org as soon as possible.<br />
-        For all other sample drop-off reservations, please click
-        <a
-          :href="spmCalendar"
-          target="__blank"
-          >here</a
-        >.
+        <strong>10xGenomics, MissionBio and DLP appointments</strong> can now be made on our new
+        <a :href="scCalendar" target="__blank">Single Cell Calendar.</a>
+        All other sample drop-off appointments, including fresh samples for ATAC-Seq can be made
+        <a :href="spmCalendar" target="__blank">here</a>. Cancellations can be made
+        <strong>no less than 2 hours before the scheduled arrival time.</strong> If you have an emergency, please contact genomics@mskcc.org
+        as soon as possible.<br /><br />Appointments previously scheduled through https://genomics.mskcc.org/reservations have been moved by
+        an IGO staff member to their respective Microsoft Bookings calendar. If you did not receive a new confirmation email please contact
+        zzPDL_SKI_IGO_DATA@mskcc.org.
       </span>
     </div>
-    <div class="md-layout">
-      <form class="md-layout-item" @submit.prevent="book()">
-        <md-card>
-          <md-card-content>
-            <md-field>
-              <label>Request Type</label>
-              <!-- <md-select v-model="requestType" name="requestType" id="requestType" :disabled="daySelected"> -->
-              <md-select v-model="requestType" name="requestType" id="requestType" :disabled="dateSelected ? true : false">
-                <md-option value="10xGenomics">10X Genomics single cell</md-option>
-                <md-option value="atacSeq">ATAC Seq (Thursdays only)</md-option>
-                <md-option value="missionBio" disabled>MissionBio</md-option>
-                <!-- <md-option value="spm">All Others</md-option> -->
-              </md-select>
-            </md-field>
-          </md-card-content>
-          <div v-show="requestType">
-            <span v-html="message"> </span>
-          </div>
-          <span v-show="dateSelected">
-            <span v-show="timeRange">
-              <md-card-content>
-                <md-button class="md-raised md-primary" v-for="(time, index) in timeRange" :key="index" @click="changeHandler(time)">
-                  {{ new Date().setHours(parseInt(time.string.split(':')[0]), parseInt(time.string.split(':')[1])) | moment('h:mm A') }}
-                </md-button>
-                <span v-show="form.time.militaryTime">
-                  <div class="md-layout md-gutter">
-                    <div class="md-layout-item md-small-size-100">
-                      <md-field>
-                        <label>Selected date</label>
-                        <md-input v-model="dateSelected.id" readonly></md-input>
-                      </md-field>
+    <div v-if="!microsoftBookingsIsActive">
+      <div class="md-layout">
+        <form class="md-layout-item" @submit.prevent="book()">
+          <md-card>
+            <md-card-content>
+              <md-field>
+                <label>Request Type</label>
+                <!-- <md-select v-model="requestType" name="requestType" id="requestType" :disabled="daySelected"> -->
+                <md-select v-model="requestType" name="requestType" id="requestType" :disabled="dateSelected ? true : false">
+                  <md-option value="10xGenomics">10X Genomics single cell</md-option>
+                  <md-option value="atacSeq">ATAC Seq (Thursdays only)</md-option>
+                  <md-option value="missionBio" disabled>MissionBio</md-option>
+                  <!-- <md-option value="spm">All Others</md-option> -->
+                </md-select>
+              </md-field>
+            </md-card-content>
+            <div v-show="requestType">
+              <span v-html="message"> </span>
+            </div>
+            <span v-show="dateSelected">
+              <span v-show="timeRange">
+                <md-card-content>
+                  <md-button class="md-raised md-primary" v-for="(time, index) in timeRange" :key="index" @click="changeHandler(time)">
+                    {{ new Date().setHours(parseInt(time.string.split(':')[0]), parseInt(time.string.split(':')[1])) | moment('h:mm A') }}
+                  </md-button>
+                  <span v-show="form.time.militaryTime">
+                    <div class="md-layout md-gutter">
+                      <div class="md-layout-item md-small-size-100">
+                        <md-field>
+                          <label>Selected date</label>
+                          <md-input v-model="dateSelected.id" readonly></md-input>
+                        </md-field>
+                      </div>
+                      <div class="md-layout-item md-small-size-100">
+                        <md-field>
+                          <label>Selected time (24hr)</label>
+                          <md-input v-model="form.time.militaryTime" readonly> </md-input>
+                        </md-field>
+                      </div>
                     </div>
-                    <div class="md-layout-item md-small-size-100">
-                      <md-field>
-                        <label>Selected time (24hr)</label>
-                        <md-input v-model="form.time.militaryTime" readonly> </md-input>
+
+                    <md-field :class="getValidationClass('name')">
+                      <label>Full Name</label>
+                      <md-input v-model="form.name" />
+                      <span class="md-error" v-if="!$v.form.name.required">Name is required</span>
+                    </md-field>
+                    <md-field :class="getValidationClass('email')">
+                      <label>Email</label>
+                      <md-input v-model="form.email" />
+                      <span class="md-error" v-if="!$v.form.email.required">Email is required</span>
+                      <span class="md-error" v-else-if="!$v.form.email.email">Please enter a valid email</span>
+                    </md-field>
+                    <span v-if="requestType !== 'spm'">
+                      <md-field :class="getValidationClass('sampleNumber')">
+                        <label>Estimated Number of Samples</label>
+                        <md-input v-model="form.sampleNumber" />
+                        <span class="md-error" v-if="!$v.form.sampleNumber.required">Number of samples is required</span>
+                        <span class="md-error" v-else-if="!$v.form.sampleNumber.numeric">Please enter a number</span>
+                        <!-- <span class="md-error" v-else-if="!$v.form.sampleNumber.maxValue">We cannot accept more than 25 samples/day</span> -->
                       </md-field>
-                    </div>
-                  </div>
+                    </span>
 
-                  <md-field :class="getValidationClass('name')">
-                    <label>Full Name</label>
-                    <md-input v-model="form.name" />
-                    <span class="md-error" v-if="!$v.form.name.required">Name is required</span>
-                  </md-field>
-                  <md-field :class="getValidationClass('email')">
-                    <label>Email</label>
-                    <md-input v-model="form.email" />
-                    <span class="md-error" v-if="!$v.form.email.required">Email is required</span>
-                    <span class="md-error" v-else-if="!$v.form.email.email">Please enter a valid email</span>
-                  </md-field>
-                  <span v-if="requestType !== 'spm'">
-                    <md-field :class="getValidationClass('sampleNumber')">
-                      <label>Estimated Number of Samples</label>
-                      <md-input v-model="form.sampleNumber" />
-                      <span class="md-error" v-if="!$v.form.sampleNumber.required">Number of samples is required</span>
-                      <span class="md-error" v-else-if="!$v.form.sampleNumber.numeric">Please enter a number</span>
-                      <!-- <span class="md-error" v-else-if="!$v.form.sampleNumber.maxValue">We cannot accept more than 25 samples/day</span> -->
-                    </md-field>
+                    <span v-if="requestType === '10xGenomics'">
+                      <md-field :class="getValidationClass('chemistry')">
+                        <label>Chemistry</label>
+                        <md-select v-model="form.chemistry">
+                          <md-option value="10x 5’ RNA seq'">10x 5’ RNA seq</md-option>
+                          <md-option value="10x 3’ RNA seq'">10x 3’ RNA seq</md-option>
+                          <md-option value="10x Multiome">10x Multiome</md-option>
+                        </md-select>
+                        <span class="md-error" v-if="!$v.form.chemistry.required">Chemistry is required</span>
+                      </md-field>
+                    </span>
+                    <span v-if="requestType === 'spm'">
+                      <md-field :class="getValidationClass('ilabServiceId')">
+                        <label>iLab Service ID</label>
+                        <md-input v-model="form.ilabServiceId" />
+                        <span class="md-error" v-if="!$v.form.ilabServiceId.required">iLab Service ID is required</span>
+                      </md-field>
+                    </span>
                   </span>
-
-                  <span v-if="requestType === '10xGenomics'">
-                    <md-field :class="getValidationClass('chemistry')">
-                      <label>Chemistry</label>
-                      <md-select v-model="form.chemistry">
-                        <md-option value="10x 5’ RNA seq'">10x 5’ RNA seq</md-option>
-                        <md-option value="10x 3’ RNA seq'">10x 3’ RNA seq</md-option>
-                        <md-option value="10x Multiome">10x Multiome</md-option>
-                      </md-select>
-                      <span class="md-error" v-if="!$v.form.chemistry.required">Chemistry is required</span>
-                    </md-field>
+                </md-card-content>
+                <md-card-actions>
+                  <md-button class="md-primary" @click="reset">Clear</md-button>
+                  <span v-show="form.time.militaryTime">
+                    <md-button type="submit" class="md-primary">Submit</md-button>
                   </span>
-                  <span v-if="requestType === 'spm'">
-                    <md-field :class="getValidationClass('ilabServiceId')">
-                      <label>iLab Service ID</label>
-                      <md-input v-model="form.ilabServiceId" />
-                      <span class="md-error" v-if="!$v.form.ilabServiceId.required">iLab Service ID is required</span>
-                    </md-field>
-                  </span>
-                </span>
-              </md-card-content>
-              <md-card-actions>
-                <md-button class="md-primary" @click="reset">Clear</md-button>
-                <span v-show="form.time.militaryTime">
-                  <md-button type="submit" class="md-primary">Submit</md-button>
-                </span>
-              </md-card-actions>
+                </md-card-actions>
+              </span>
             </span>
-          </span>
-        </md-card>
-      </form>
-      <div class="md-layout-item" v-if="requestType">
-        <vc-date-picker
-          :attributes="attrs"
-          :disabled-dates="disabledDates"
-          :min-date="getMinDate()"
-          :max-date="getMaxDate()"
-          :value="dateSelected"
-          @dayclick="(event) => dayClick(event)"
-        />
+          </md-card>
+        </form>
+        <div class="md-layout-item" v-if="requestType">
+          <vc-date-picker
+            :attributes="attrs"
+            :disabled-dates="disabledDates"
+            :min-date="getMinDate()"
+            :max-date="getMaxDate()"
+            :value="dateSelected"
+            @dayclick="(event) => dayClick(event)"
+          />
 
-        <div v-if="requestType">
-          <existing-reservations></existing-reservations>
+          <div v-if="requestType">
+            <existing-reservations></existing-reservations>
+          </div>
         </div>
       </div>
     </div>
@@ -128,7 +127,7 @@
 
 <script>
 import * as app from './../../app.js';
-import { API_URL, SPM_CALENDAR } from './../../config.js';
+import { API_URL, SPM_CALENDAR, SC_CALENDAR } from './../../config.js';
 import { required, email, numeric, requiredIf } from 'vuelidate/lib/validators';
 import ExistingReservations from '../ExistingReservations.vue';
 
@@ -138,6 +137,8 @@ export default {
   data: function() {
     return {
       spmCalendar: SPM_CALENDAR,
+      scCalendar: SC_CALENDAR,
+      microsoftBookingsIsActive: true,
       message: 'Please select a day.',
       requestType: '',
       form: {

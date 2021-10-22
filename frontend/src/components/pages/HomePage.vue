@@ -4,8 +4,14 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        Investigators can now schedule their own sample drop off using the
-        <a :href="spmCalendar" target="__blank">IGO SPM Reservations calendar</a>
+        <strong>10X Genomics, MissionBio, and DLP appointments</strong> can now be made on our new
+        <a :href="scCalendar" target="__blank">Single Cell Calendar.</a>
+        All other sample drop-off appointments, including fresh samples for ATAC-Seq can be made
+        <a :href="spmCalendar" target="__blank">here</a>. Cancellations can be made
+        <strong>no less than 2 hours before the scheduled arrival time.</strong> If you have an emergency, please contact genomics@mskcc.org
+        as soon as possible.<br /><br />Appointments previously scheduled through https://genomics.mskcc.org/reservations have been moved by
+        an IGO staff member to their respective Microsoft Bookings calendar. If you did not receive a new confirmation email please contact
+        zzPDL_SKI_IGO_DATA@mskcc.org.
       </span>
     </div>
 
@@ -35,7 +41,7 @@
 
 <script>
 // import { IMAGE_URL } from './../../config.js';
-import { SPM_CALENDAR } from './../../config.js';
+import { SPM_CALENDAR, SC_CALENDAR } from './../../config.js';
 import HomePageNews from '../HomePageNews.vue';
 
 export default {
@@ -49,6 +55,7 @@ export default {
         'The Integrated Genomics Operation (IGO) core enables basic, clinical, and translational science by providing a broad range of services and expertise to investigators interested in evaluating gene expression, chromosome structure, and nucleotide sequence. Our services are comprehensive, rapid, and user-friendly. Through the centralized management of all sequencing activities at MSK, the core empowers scientists with an array of technological options and the most efficient and cost-effective means of performing high-throughput genomics.',
       announcement: true,
       spmCalendar: SPM_CALENDAR,
+      scCalendar: SC_CALENDAR,
     };
   },
   // methods: {

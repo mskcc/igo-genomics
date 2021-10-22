@@ -10,17 +10,13 @@ export const news = [
   </p>`,
   },
   {
-    title: 'New "Reservations" feature for 10X Genomics & ATAC-Seq sample drop off',
-    date: 'March 9, 2021',
+    title: 'Reservations have moved to Microsoft Bookings (10X Genomics, ATAC-Seq and more!)',
+    date: 'October 22, 2021',
     imgSource: 'IGO_210408_002',
     categories: ['featured'],
     body: `<p>
-      IGO is happy to announce the launch of a new website feature to
-      <a href="https://genomics.mskcc.org/reservations">book drop off appointments</a> of fresh samples for 10X Genomics
-      (M-F) and ATAC-Seq (Th only)! Simply select your request type from the dropdown menu, desired appointment day, AM or PM
-      and then select the hour of drop offering. Fill out the short form, including whether you are requesting 3' or 5' 10X
-      chemistry, and submit! You will receive a confirmation e-mail; don't forget to fill out your iLab request and the sample
-      webform before your appointment.
+      IGO is happy to announce the launch of a new tool to
+      book <a href="https://outlook.office365.com/owa/calendar/igo1@mskcc.onmicrosoft.com/bookings/" target="_blank">drop off appointments of fresh samples for 10X Genomics, DLP, and MissionBio</a>! All other sample drop-off appointments, including fresh samples for ATAC-Seq can be made <a :href="spmCalendar" target="__blank">here</a>.</p><p>Appointments previously scheduled through https://genomics.mskcc.org/reservations have been moved by an IGO Staff member to their respective Microsoft Bookings calendar. If you did not receive a new confirmation email please contact zzPDL_SKI_IGO_DATA@mskcc.org.
     </p>`,
   },
   {
@@ -217,8 +213,7 @@ export const teams = [
       { name: 'Liping Sun', role: 'Manager, IGO', photoName: 'Sun_Liping' },
       { name: 'Jim Chen', role: 'Senior Research Technician', photoName: 'Chen_Jim' },
       { name: 'Keumsil Hwang', role: 'Senior Research Assistant', photoName: 'Hwang_Keumsil' },
-      { name: 'Robert Hong', role: 'Senior Research Technician', photoName: 'Hong_Robert' },
-      { name: 'Open Position!', role: 'Research Assistant' },
+      { name: 'Open Position!', role: 'Research Technician' },
     ],
   },
   {
@@ -273,7 +268,7 @@ export const bulkServices = [
     description: 'A capture-based assay to assess the entire exome.',
     startingMaterial: 'DNA or DMP Library',
     libraryChemistry: 'KAPA Hyper',
-    captureChemistry: 'xGen v2.0 from IDT (human) SinglePlex Mouse Exome from Twist (mouse)',
+    captureChemistry: 'xGen v2.0 from IDT (human); SinglePlex Mouse Exome from Twist (mouse)',
     sequencingReadLength: 'PE100',
     sequencingCoverage: 'Varies (see below)',
     deliverable: 'FASTQ; Pipeline analysis options available from CMO or BIC with additional charges',
@@ -316,7 +311,7 @@ export const bulkServices = [
     libraryChemistry: 'TruSeq stranded mRNA (polyA), TruSeq stranded total (Ribodepletion), SMART-Seq v4 + KAPA Hyper (SMARTer)',
     sequencingReadLength: 'PE100',
     sequencingCoverage: '10-100M+',
-    deliverable: 'FASTQ; analysis options from BIC at an additonal cost',
+    deliverable: 'FASTQ; analysis options from BIC at an additonal cost; pipeline analysis (Archer only)',
     tableHeaders: ['libraryType', 'readNumber', 'sampleCost'],
     table: [
       { libraryType: 'PolyA', readNumber: '10-20', sampleCost: 250 },
@@ -336,15 +331,17 @@ export const bulkServices = [
       { libraryType: 'RiboDepletion', readNumber: '80-100', sampleCost: 700 },
       { libraryType: 'RiboDepletion', readNumber: '100+', sampleCost: 800 },
       { libraryType: 'SMARTer amplification', readNumber: '', sampleCost: 90 },
+      { libraryType: 'Archer Fusion Heme', readNumber: '', sampleCost: 480 },
+      { libraryType: 'Archer Fusion Solid Tumor', readNumber: '', sampleCost: 690 },
     ],
   },
   {
     id: 3,
     name: 'Whole Genome Sequencing',
-    description: 'Assess the entire genome using PCR-free methods or minimal PCR cycles.',
+    description: 'Assess the entire genome using PCR-free methods, minimal PCR cycles, or a shallow sequencing for CNV.',
     startingMaterial: 'DNA',
     libraryChemistry: 'KAPA Hyper',
-    sequencingReadLength: 'PE150',
+    sequencingReadLength: 'PE150 (deep WGS); PE100 (shallow/bacterial WGS)',
     sequencingCoverage: 'Varies; see below',
     deliverable: 'FASTQ',
     tableHeaders: ['sampleCoverage', 'sampleCostFrozen', 'sampleCostFfpe'],
@@ -356,6 +353,8 @@ export const bulkServices = [
       { sampleCoverage: 80, sampleCostFrozen: 2229, sampleCostFfpe: 3219 },
       { sampleCoverage: 100, sampleCostFrozen: 3017, sampleCostFfpe: 4002 },
       { sampleCoverage: 150, sampleCostFrozen: 4009, sampleCostFfpe: 5957 },
+      { sampleCoverage: 'shallow', sampleCostFrozen: 182, sampleCostFfpe: 182 },
+      { sampleCoverage: 'bacterial/yeast', sampleCostFrozen: 182, sampleCostFfpe: 182 },
     ],
   },
   {
@@ -391,29 +390,16 @@ export const bulkServices = [
   },
   {
     id: 6,
-    name: 'Other Services',
+    name: 'Other Bulk Sequencing',
     description: 'Please email us if your sequencing needs do not fit in one of these categories.',
     tableHeaders: ['platform', 'sequencingDetails', 'deliverable', 'cost'],
     table: [
-      { platform: 'Shallow/bacterial WGS', sequencingDetails: 'PE100, 10M reads', deliverable: 'FASTQ + CNV analysis', cost: '$182' },
       { platform: 'Amplicon Sequencing', sequencingDetails: 'additional cost', deliverable: 'FASTQ', cost: '159' },
       {
         platform: 'CRISPR Cut Site Sequencing',
         sequencingDetails: '75K reads',
         deliverable: 'FASTQ + CRISPRESSO analysis',
         cost: '$70',
-      },
-      {
-        platform: 'Archer FusionPlex',
-        sequencingDetails: 'Solid Tumor (MSK) Panel',
-        deliverable: 'Archer portal access',
-        cost: '$690',
-      },
-      {
-        platform: 'Archer FusionPlex',
-        sequencingDetails: 'Heme Panel',
-        deliverable: 'Archer portal access',
-        cost: '$480',
       },
     ],
   },
@@ -516,19 +502,6 @@ export const otherServices = [
   },
   {
     id: 1,
-    name: 'Cell Line Authentication',
-    description: 'STR-based analysis to verify the identity of cell lines grown in vitro.',
-    startingMaterial: 'DNA',
-    kitChemistry: 'AmpFLSTR Identifiler (human), Custom (mouse; pending)',
-    deliverable: 'Genotype + Database matching report',
-    tableHeaders: ['species', 'cost'],
-    table: [
-      { species: 'Human', cost: 30 },
-      { species: 'Mouse (coming soon)', cost: 44 },
-    ],
-  },
-  {
-    id: 2,
     name: 'Tissue and Bulk Extraction',
     description: 'Manual and automated methods for purifying RNA, DNA, or both from a variety of starting materials and sample types.',
     startingMaterial: 'See below. Other? Contact us.',
@@ -566,15 +539,15 @@ export const otherServices = [
   //   // ],
   // },
   {
-    id: 3,
-    name: 'General Services',
+    id: 2,
+    name: 'QC & Pathology',
     description: 'Other services offered by IGO.',
     tableHeaders: ['serviceType', 'serviceSubType', 'price'],
     table: [
       { serviceType: 'QC Service', serviceSubType: 'BioAnalyzer or TapeStation QC', price: '$11/sample' },
       { serviceType: 'QC Service', serviceSubType: 'Qubit/Quant-it', price: '$6.50/sample' },
       { serviceType: 'QC Service', serviceSubType: '%Human for PDX', price: '$19/sample' },
-      { serviceType: 'QC Service', serviceSubType: 'STR fingerprinting', price: '$20/sample' },
+      { serviceType: 'QC Service', serviceSubType: 'Cell Line Authentication', price: '$30/sample' },
       { serviceType: 'Pathology Service', serviceSubType: 'Sectioning (curls)', price: '$15/up to 10 curls' },
       { serviceType: 'Pathology Service', serviceSubType: 'Sectioning (slides)', price: '$3.50/slide' },
       { serviceType: 'Pathology Service', serviceSubType: 'H&E Staining', price: '$12/slide' },

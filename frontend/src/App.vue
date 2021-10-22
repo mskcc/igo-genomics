@@ -48,7 +48,10 @@
               :key="link"
               :to="{ name: link }"
               v-bind:class="{
-                'router-link-active': (teamIsActive && link === 'about') || (platformsIsActive && link === 'platforms & pricing'),
+                'router-link-active':
+                  (teamIsActive && link === 'about') ||
+                  (platformsIsActive && link === 'platforms & pricing') ||
+                  (criteriaIsActive && link === 'sample requirements'),
               }"
             >
               <md-button class="md-ripple nav-button">{{ link }}</md-button>
@@ -122,7 +125,7 @@ export default {
   data: function() {
     return {
       showNavigation: false,
-      links: ['home', 'about', 'platforms & pricing', 'submission guidelines', 'reservations', 'faqs'],
+      links: ['home', 'about', 'platforms & pricing', 'submission guidelines', 'sample requirements', 'faqs'],
       mobileLinks: [
         'home',
         'about',
@@ -131,7 +134,6 @@ export default {
         'submission guidelines',
         'sample requirements',
         'accessing your data',
-        'reservations',
         'ddpcr assays',
         'faqs',
         'contact us',
@@ -143,12 +145,11 @@ export default {
         'ddpcr assays',
         'igo tutorials',
         'metrics and throughput',
-        'sample requirements',
+        'reservations',
         'single cell hub',
       ],
       toolsIsActive: [
         'chemistry timeline',
-        'sample requirements',
         'ddpcr assays',
         'igo tutorials',
         'single cell hub',
@@ -156,9 +157,11 @@ export default {
         'rna',
         'other',
         'metrics and throughput',
+        'reservations',
       ].includes(this.$route.name),
       teamIsActive: this.$route.path.includes('about'),
       platformsIsActive: this.$route.path === '/platforms',
+      criteriaIsActive: this.$route.path.includes('criteria'),
       // platformsIsActive: this.$route.name.includes('platforms & pricing'),
       toolTips: {
         'sample requirements': 'A comprehensive guide to quality and quantity requirements',
@@ -172,9 +175,10 @@ export default {
   methods: {},
   watch: {
     $route() {
-      this.toolsIsActive = this.toolLinks.includes(this.$route.name) || this.$route.path.includes('criteria');
+      this.toolsIsActive = this.toolLinks.includes(this.$route.name);
       this.teamIsActive = this.$route.path.includes('about');
       this.platformsIsActive = this.$route.path === '/platforms';
+      this.criteriaIsActive = this.$route.path.includes('criteria');
       // this.platformsIsActive = this.$route.name.includes('platforms & pricing');
       // console.log(this.$route);
     },

@@ -16,25 +16,13 @@
 
     <md-card class="career-card">
       <md-card-header>
-        <div class="md-title">Research Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 3 } }">EXPAND Team</router-link>
+        <div class="md-title">Senior Research Technician</div>
+        <router-link :to="{ name: 'team', params: { id: 5 } }">Sequencing Team</router-link>
         <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescriptionEXPANDRA = true" class="md-accent">Learn More</md-button>
-        <md-button href="mailto:genomics@mskcc.org?subject=EXPAND Research Assistant" target="_blank" class="md-primary">Inquire </md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="career-card">
-      <md-card-header>
-        <div class="md-title">Research Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 5 } }">Sequencing Team</router-link>
-        <div class="md-body">Pending</div>
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionSeqRA = true" class="md-accent">Learn More</md-button>
-        <md-button href="mailto:genomics.mskcc.org?subject=Seq Research Assistant" target="_blank" class="md-primary">Inquire
+        <md-button @click="showJobDescriptionSeqSRT = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-54470-senior-research-technician/" target="_blank" class="md-primary">Apply
         </md-button>
       </md-card-actions>
     </md-card>
@@ -53,19 +41,19 @@
 
     <md-card class="career-card">
       <md-card-header>
-        <div class="md-title">Senior Project Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 2 } }">Sample & Project Mgmt Team</router-link>
+        <div class="md-title">Bioinformatics Software Engineer</div>
+        <router-link :to="{ name: 'team', params: { id: 6 } }">Data Team</router-link>
         <div class="md-body">Coming soon</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescriptionSPMSPA = true" class="md-accent">Learn More</md-button>
-        <md-button href="mailto:genomics@mskcc.org?subject=SPM Senior Project Assistant" target="_blank" class="md-primary">Inquire </md-button>
+        <md-button @click="showJobDescriptionCS = true" class="md-accent">Learn More</md-button>
+        <md-button href="mailto:genomics@mskcc.org?subject=NA Research Assistant" target="_blank" class="md-primary">Inquire </md-button>
       </md-card-actions>
     </md-card>
 
     <md-dialog :md-active.sync="showJobDescriptionNARA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
-        <strong>As a Research Technician in the Library Preparation Team, you will:</strong>
+        <strong>As a Research Technician in the Nucelic Acids team, you will:</strong>
         <ul>
           <li>Make NGS libraries from DNA and RNA libraries following established SOPs.</li>
           <li>Plan and pool NGS libraries to capture using requested gene panels.</li>
@@ -211,6 +199,40 @@
         <md-button class="md-primary" @click="showJobDescriptionSeqRA = false">Close</md-button>
       </md-dialog-actions>
     </md-dialog>
+
+    <md-dialog :md-active.sync="showJobDescriptionSeqSRT" :md-fullscreen="false" style="z-index: 400;">
+      <md-dialog-content md-dynamic-height>
+        <strong>As a Senior Research Technician in the Sequencing Team, you will:</strong>
+        <ul>
+          <li>QC NGS libraries following established SOPs.</li>
+          <li>Plan and pool NGS libraries according to sequencing request.</li>
+          <li>Load and run Illumina sequencers according to pre-established run plan.</li>
+          <li>Review analysis of NGS runs in order to maintain the high-quality standards.</li>
+          <li>Assist group leader to create an efficient and error-proof workflow – and troubleshoot data accordingly.</li>
+          <li>Communicate with vendor technical support and sales representatives.</li>
+          <li>Maintain and coordinate documentation for assay tracking and results for review/reporting through iLabs and LIMS.</li>
+        </ul>
+        <strong>You have:</strong>
+        <ul>
+          <li>A Bachelor’s Degree in a Biological, Chemistry, or Science related field with at least 3 years of relevant full-time experience or a master’s degree with 1-2 years full-time relevant experience. </li>
+          <li>Previous exposure to NGS library preparation and Illumina sequencer loading is preferable.</li>
+          <li>Strong organizational, prioritization and time management skills.</li>
+        </ul>
+      </md-dialog-content>
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="showJobDescriptionSeqSRT = false">Close</md-button>
+      </md-dialog-actions>
+    </md-dialog>
+
+    <md-dialog :md-active.sync="showJobDescriptionCS" :md-fullscreen="false" style="z-index: 400;">
+      <md-dialog-content md-dynamic-height>
+        <strong>Position description coming soon!</strong>
+      </md-dialog-content>
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="showJobDescriptionCS = false">Close</md-button>
+      </md-dialog-actions>
+    </md-dialog>
+
   </div>
 </template>
 
@@ -228,6 +250,8 @@ export default {
       showJobDescriptionEXPANDRA: false,
       showJobDescriptionSeqRA: false,
       showJobDescriptionNART: false,
+      showJobDescriptionSeqSRT: false,
+      showJobDescriptionCS: false,
     };
   },
 };
