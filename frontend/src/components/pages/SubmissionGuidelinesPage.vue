@@ -150,27 +150,34 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text ">Cells or nuclei for 10X Genomics single cell sequencing</span>
+                <span class="md-list-item-text ">Cells or nuclei for single cell sequencing</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset">
                     <ol>
                       <li>
-                        <a :href="scCalendar" target="__blank">Make a reservation</a> for a time to bring your samples – the system will
-                        block off three hours for processing<br />
+                        <a :href="scCalendar" target="__blank">Make a reservation</a> for a time to bring your samples<br />
                       </li>
-                      <li>Fill out an iLab request for “Single Cell Library Prep + Sequencing”</li>
-                      <li>
-                        Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting the appropriate 10X
-                        Genomics application
+                      <li>Fill out an iLab request for:
                         <ul>
-                          <li>10X_Genomics-Expression+VDJ</li>
-                          <li>10X_Genomics-GeneExpression-5</li>
-                          <li>10X_Genomics-GeneExpression-3</li>
-                          <li>10X_Genomics_Multiome</li>
+                          <li>Single Cell Library Prep + Sequencing</li>
+                          <li>Direct Library Prep</li>
                         </ul>
                       </li>
                       <li>
-                        <strong>Multiome only: </strong>
+                        Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting the appropriate application:
+                        <ul>
+                          <li>10X_Genomics-GeneExpression-VDJ</li>
+                          <li>10X_Genomics-GeneExpression-5</li>
+                          <li>10X_Genomics-GeneExpression-3</li>
+                          <li>10X_Genomics_Multiome</li>
+                          <li>MissioBio-Heme</li>
+                          <li>MissionBio-Myeloid</li>
+                          <li>MissionBio-THS</li>
+                          <li>MissionBio-Custom</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <strong>10X Multiome only: </strong>
                         <a href="mailto:zzPDL_SKI_IGO_NA_team@mskcc.org?subject=Nuclei buffer">Contact us</a> to get an aliquot of nuclei
                         preservation buffer
                       </li>
@@ -181,7 +188,7 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text ">Tissue for 10X Genomics Visium</span>
+                <span class="md-list-item-text ">Tissue for spatial transcriptomics</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset"
                     ><ol>
@@ -213,7 +220,13 @@
                         Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request micronic
                         barcoded tube(s).
                       </li>
-                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
+                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting the appropriate application:
+                      <ul>
+                        <li>WholeExomeSequencing</li>
+                        <li>MouseWholeGenome</li>
+                        <li>HumanWholeGenome</li>
+                      </ul>
+                      </li>
                       <li>
                         Schedule a sample drop off time on the
                         <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>
@@ -231,7 +244,10 @@
                       <li>
                         Fill out an iLab request for the appropriate application
                         <ul>
+                          <li>ACCESS Capture and Sequencing</li>
                           <li>Adaptive immunoSEQ</li>
+                          <li>Amplicon Library Prep and Sequencing</li>
+                          <li>Bacterial/yeast Whole Genome Sequencing</li>
                           <li>CRISPR Sequencing</li>
                           <li>EPIC MethylCapture Seq</li>
                           <li>Epigenetic Library Prep + Sequencing</li>
@@ -240,7 +256,7 @@
                           <li>Mouse-IMPACT</li>
                           <li>Shallow Whole Genome Sequencing for Copy Number</li>
                           <li>Digital PCR</li>
-                          <li>Fragment Analysis</li>
+                          <li>Cell Line Authentication & Fragment Analysis</li>
                         </ul>
                       </li>
                       <li>
@@ -264,7 +280,8 @@
                       <li>
                         Fill out an iLab request for the appropriate application
                         <ul>
-                          <li>Archer Panel Sequencing</li>
+                          <li>Archer Fusion</li>
+                          <li>Archer immunoverse</li>
                           <li>RNA Library Prep and Sequencing</li>
                         </ul>
                       </li>
@@ -342,6 +359,7 @@
                       <li>
                         Fill out an iLab form
                         <ul>
+                          <li>ACCESS Capture and Sequencing</li>
                           <li>IMPACT/HemePACT/Custom Capture and Sequencing</li>
                           <li>Whole Exome Capture and Sequencing</li>
                         </ul>
