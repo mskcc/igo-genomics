@@ -56,7 +56,8 @@
         <md-table-cell></md-table-cell>
         <md-table-cell class="pass">100ng</md-table-cell>
         <md-table-cell class="try">10ng</md-table-cell>
-        <md-table-cell colspan="2" class="center-page">No quality requirements</md-table-cell>
+        <md-table-cell rowspan="2" class="pass">100-700bp</md-table-cell>
+        <md-table-cell rowspan="2" class="try">100 > bp > 700</md-table-cell>
         <md-table-cell>55&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
@@ -64,8 +65,6 @@
         <md-table-cell></md-table-cell>
         <md-table-cell class="pass">10ng</md-table-cell>
         <md-table-cell class="try">No fail range</md-table-cell>
-        <md-table-cell class="pass">100-700bp</md-table-cell>
-        <md-table-cell class="try">100 > bp > 700</md-table-cell>
         <md-table-cell>50&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
