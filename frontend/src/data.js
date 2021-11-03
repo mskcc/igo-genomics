@@ -1,5 +1,14 @@
 export const news = [
   {
+    title: 'Welcome Neeman Mohibullah, new IGO Director!',
+    date: 'November 1, 2021',
+    imgSource: 'Mohibullah_Neeman',
+    categories: ['featured'],
+    body: `<p>
+    Neeman Mohibullah, formerly IGO's R&D Manager and Associate Director, has now taken over the Director's mantle. She succeeds Agnes Viale, who helmed IGO and its precursor for more than 20 years, and who is continuing her leadership role at MSK as Director of Core Facilities. Neeman earned her PhD at the Fred Hutch in Seattle, and was a postdoctoral researcher in the Keeney lab at MSK before joining IGO in 2016. Please join us in welcoming her into her new role!
+    </p>`,
+  },
+  {
     title: "IGO's Open House Coming 10/29",
     date: 'October 11, 2021',
     // imgSource: 'IMG_20191031_112220',
@@ -23,7 +32,7 @@ export const news = [
     title: 'Welcome to the new IGO website!',
     date: 'January 15, 2021',
     imgSource: 'wheresciencegoesigo',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
       In support of our ongoing efforts to provide excellent customer service alongside our cutting-edge technologies, IGO's
       Data Team has worked to upgrade our genomics.mskcc.org site. Executed in just over a month, the new site provides easier
@@ -141,8 +150,7 @@ export const teams = [
     description:
       'The leadership team oversees over 40 full-time staff from entry-level research technicians to senior experts. They not only ensure that everyone is working in concert to process thousands of projects each year, but also continue to bring on new technologies to keep IGO on the cutting edge of genome science.',
     members: [
-      { name: 'Agnes Viale', role: 'Director', photoName: 'Viale_Agnes' },
-      { name: 'Neeman Mohibullah', role: 'Associate Director', photoName: 'Mohibullah_Neeman' },
+      { name: 'Neeman Mohibullah', role: 'Director', photoName: 'Mohibullah_Neeman' },
       { name: 'Kety Huberman', role: 'Operations Manager', photoName: 'Huberman_Kety' },
     ],
   },
@@ -169,7 +177,7 @@ export const teams = [
       { name: 'Meghanne Lomibao', role: 'Project Coordinator', photoName: 'Lomibao_Meghanne' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
       { name: 'Valerie Patritti', role: 'Project Manager', photoName: 'Patritti_Valerie' },
-      { name: 'Position Opening Soon!', role: 'Senior Project Assistant' },
+      // { name: 'Position Opening Soon!', role: 'Senior Project Assistant' },
     ],
   },
   {
@@ -183,7 +191,7 @@ export const teams = [
       { name: 'Julienne Lomibao', role: 'Research Technician', photoName: 'Lomibao_Julienne' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
       { name: 'Tony Deblasio', role: 'Senior Research Assistant', photoName: 'Deblasio_Tony' },
-      { name: 'Open Position!', role: 'Research Assistant' },
+      // { name: 'Open Position!', role: 'Research Assistant' },
     ],
   },
   {
@@ -201,7 +209,6 @@ export const teams = [
       { name: 'Satish Ramakrishnan', role: 'Research Assistant', photoName: 'Ramakrishnan_Satish' },
       { name: 'Satoko Murakami', role: 'Research Assistant', photoName: 'Murakami_Satoko' },
       { name: 'Yushi Wu', role: 'Research Assistant', photoName: 'Wu_Yushi' },
-      { name: 'Open Position!', role: 'Research Technician (Temporary)' },
     ],
   },
   {
@@ -213,7 +220,7 @@ export const teams = [
       { name: 'Liping Sun', role: 'Manager, IGO', photoName: 'Sun_Liping' },
       { name: 'Jim Chen', role: 'Senior Research Technician', photoName: 'Chen_Jim' },
       { name: 'Keumsil Hwang', role: 'Senior Research Assistant', photoName: 'Hwang_Keumsil' },
-      { name: 'Open Position!', role: 'Research Technician' },
+      { name: 'Open Position!', role: 'Senior Research Technician' },
     ],
   },
   {
@@ -226,9 +233,8 @@ export const teams = [
       { name: 'Anna Patruno', role: 'Bioinfo. Software Engineer II', photoName: 'Patruno_Anna' },
       { name: 'Cuijie Lu', role: 'Bioinfo. Software Engineer I', photoName: 'Lu_Cuijie' },
       { name: 'Darrell Nabors', role: 'Bioinformatics Engineer V', photoName: 'Nabors_Darrell' },
-      { name: 'David Streid', role: 'Bioinfo. Software Engineer II', photoName: 'Streid_David' },
       { name: 'Fahimeh Mirhaj', role: 'Bioinfo. Software Engineer I', photoName: 'Mirhaj_Fahimeh' },
-      // { name: 'Open Position!', role: 'Single Cell Analyst' },
+       { name: 'Open Position!', role: 'Bioinfo. Software Engineer II' },
     ],
   },
   {
@@ -237,7 +243,6 @@ export const teams = [
     description:
       'The R&D team develops, tests, and implements new genomics platforms for the MSKCC community. In addition to testing off-the-shelf assays, our group works with MSK investigators to bring customized platforms to IGO.',
     members: [
-      { name: 'Neeman Mohibullah', role: 'Associate Director, IGO', photoName: 'Mohibullah_Neeman' },
       { name: 'Cassidy Illum', role: 'Research Technician', photoName: 'Illum_Cassidy' },
       { name: 'Elijah Castro', role: 'Research Technician', photoName: 'Castro_Elijah' },
       { name: 'Juan Li', role: 'Manager, IGO', photoName: 'Li_Juan' },
@@ -394,7 +399,7 @@ export const bulkServices = [
     description: 'Please email us if your sequencing needs do not fit in one of these categories.',
     tableHeaders: ['platform', 'sequencingDetails', 'deliverable', 'cost'],
     table: [
-      { platform: 'Amplicon Sequencing', sequencingDetails: 'additional cost', deliverable: 'FASTQ', cost: '159' },
+      { platform: 'Amplicon Sequencing', sequencingDetails: 'additional cost', deliverable: 'FASTQ', cost: '$159' },
       {
         platform: 'CRISPR Cut Site Sequencing',
         sequencingDetails: '75K reads',

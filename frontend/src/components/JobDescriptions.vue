@@ -29,21 +29,9 @@
 
     <md-card class="career-card">
       <md-card-header>
-        <div class="md-title">Research Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 4 } }">Nucleic Acid Team</router-link>
-        <div class="md-body">Coming soon</div>
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionNARA = true" class="md-accent">Learn More</md-button>
-        <md-button href="mailto:genomics@mskcc.org?subject=NA Research Assistant" target="_blank" class="md-primary">Inquire </md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="career-card">
-      <md-card-header>
-        <div class="md-title">Bioinformatics Software Engineer</div>
+        <div class="md-title">Bioinformatics Software Engineer II</div>
         <router-link :to="{ name: 'team', params: { id: 6 } }">Data Team</router-link>
-        <div class="md-body">Coming soon</div>
+        <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionCS = true" class="md-accent">Learn More</md-button>
