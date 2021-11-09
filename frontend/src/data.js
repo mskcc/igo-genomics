@@ -164,6 +164,7 @@ export const teams = [
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
       { name: 'Magali Cavatore', role: 'Lab Manager', photoName: 'Cavatore_Magali' },
       { name: 'Mary Betancor', role: 'SKI Administrative Assistant II', photoName: 'Betancor_Mary' },
+      { name: 'Position Open!', role: 'Automation Engineer Assistant' },
     ],
   },
   {
@@ -190,6 +191,7 @@ export const teams = [
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
       { name: 'Julienne Lomibao', role: 'Research Technician', photoName: 'Lomibao_Julienne' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
+      { name: 'Mohamed Abdelbaset', role: 'Research Assistant', photoName: '' },
       { name: 'Tony Deblasio', role: 'Senior Research Assistant', photoName: 'Deblasio_Tony' },
       // { name: 'Open Position!', role: 'Research Assistant' },
     ],
@@ -209,6 +211,7 @@ export const teams = [
       { name: 'Satish Ramakrishnan', role: 'Research Assistant', photoName: 'Ramakrishnan_Satish' },
       { name: 'Satoko Murakami', role: 'Research Assistant', photoName: 'Murakami_Satoko' },
       { name: 'Yushi Wu', role: 'Research Assistant', photoName: 'Wu_Yushi' },
+      { name: 'Open Position!', role: 'Research Assistant' },
     ],
   },
   {
