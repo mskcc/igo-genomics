@@ -191,7 +191,7 @@ export const teams = [
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
       { name: 'Julienne Lomibao', role: 'Research Technician', photoName: 'Lomibao_Julienne' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
-      { name: 'Mohamed Abdelbaset', role: 'Research Assistant', photoName: '' },
+      { name: 'Mohamed Abdelbaset', role: 'Research Assistant', photoName: 'Abdelbaset_Mohamed' },
       { name: 'Tony Deblasio', role: 'Senior Research Assistant', photoName: 'Deblasio_Tony' },
       // { name: 'Open Position!', role: 'Research Assistant' },
     ],
