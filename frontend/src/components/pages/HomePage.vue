@@ -4,14 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        <strong>10X Genomics, MissionBio, and DLP appointments</strong> can now be made on our new
-        <a :href="scCalendar" target="__blank">Single Cell Calendar.</a> Cancellations can be made
-        <strong>no less than 2 hours before the scheduled arrival time.</strong> If you have an emergency, please contact genomics@mskcc.org
-        as soon as possible.<br /><br />
-        All other sample drop-off appointments, including fresh samples for ATAC-Seq can be made
-        <a :href="spmCalendar" target="__blank">here</a>.<br /><br />Appointments previously scheduled through
-        https://genomics.mskcc.org/reservations have been moved by an IGO staff member to their respective Microsoft Bookings calendar. If
-        you did not receive a new confirmation email please contact zzPDL_SKI_IGO_DATA@mskcc.org.
+        IGO will be closed Thursday, November 25. Normal hours will resume Friday.
       </span>
     </div>
 
