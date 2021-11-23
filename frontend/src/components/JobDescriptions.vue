@@ -1,20 +1,8 @@
 <template>
   <div id="job-descriptions">
     <career-banner />
-    <md-card class="career-card">
-      <md-card-header>
-        <div class="md-title">Manager</div>
-        <router-link :to="{ name: 'team', params: { id: 7 } }">Research & Development</router-link>
-        <div class="md-body">Open!</div>
-        <!-- <div>Ref: 2021-48309</div> -->
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionRDM = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-48309-manager-research-and-development" target="_blank" class="md-primary">Apply </md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="career-card">
+    
+     <md-card class="career-card">
       <md-card-header>
         <div class="md-title">Senior Research Technician</div>
         <router-link :to="{ name: 'team', params: { id: 5 } }">Sequencing Team</router-link>

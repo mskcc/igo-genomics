@@ -221,6 +221,7 @@ export const teams = [
       "The Sequencing Team performs all activities related to Illumina sequencing, including quantity and quality assessment of libraries, pooling, and preparation for sequencing. The team is also responsible for the care & feeding of IGO's 12 sequencing instruments.",
     members: [
       { name: 'Liping Sun', role: 'Manager, IGO', photoName: 'Sun_Liping' },
+      { name: 'Andrea Lopez', role:'Research Assistant' },
       { name: 'Jim Chen', role: 'Senior Research Technician', photoName: 'Chen_Jim' },
       { name: 'Keumsil Hwang', role: 'Senior Research Assistant', photoName: 'Hwang_Keumsil' },
       { name: 'Open Position!', role: 'Senior Research Technician' },
