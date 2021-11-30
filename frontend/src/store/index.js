@@ -60,8 +60,8 @@ export default new Vuex.Store({
   },
   actions: {
     setLastTwelveMonths(context) {
-      app.axios.get(`${API_URL}/chemistryTimeline`).then((response) => {
-        let timeline = response.data;
+      app.axios.get(`${API_URL}/chemistry/chemistryTimeline`).then((response) => {
+        let timeline = response.data.data;
         context.commit('setTimeline', timeline);
       });
     },

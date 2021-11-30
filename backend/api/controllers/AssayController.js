@@ -1,6 +1,3 @@
-// const axios = require('axios');
-// const https = require('https');
-
 const apiResponse = require('../helpers/apiResponse');
 const services = require('../services/services');
 
