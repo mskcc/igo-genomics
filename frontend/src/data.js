@@ -495,10 +495,10 @@ export const singleServices = [
     startingMaterial: 'Single cell suspension',
     libraryChemistry: 'Custom protocol',
     sequencingReadLength: 'PE150',
-    sequencingCoverage: '1M reads/cell',
+    sequencingCoverage: '2M reads/cell',
     deliverable: 'FASTQ',
     libraryCost: '$2,300/up to 800 cells',
-    sequencingCost: '$7/cell',
+    sequencingCost: '$5-7/cell',
   },
 ];
 
