@@ -69,9 +69,9 @@ export default new Vuex.Store({
       app.axios
         // .get(process.env.VUE_APP_API_ROOT + "/api/getAssaysFromMongo")
         // .get("http://localhost:8801/api/getAssaysFromMongo")
-        .get(`${API_URL}/getAssayFromLims`)
+        .get(`${API_URL}/assay/ddpcrAssays`)
         .then((response) => {
-          let assays = response.data;
+          let assays = response.data.data;
 
           // Creates assayTableObject from what is in assays/response.data
           let assayTableObject = {
