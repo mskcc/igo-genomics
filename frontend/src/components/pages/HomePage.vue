@@ -4,7 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        IGO will be closed Thursday, November 25. Normal hours will resume Friday.
+        IGO will be closed Friday, 12/24 and Friday, 12/31. We will also be closed to investigator submissions and sample processing 12/27-30. Normal hours will resume Monday, January 3.
       </span>
     </div>
 

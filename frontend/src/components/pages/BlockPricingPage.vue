@@ -6,7 +6,7 @@
           <ul>
             <li>Library or pool QC ($17.50/sample or pool)</li>
             <li>Pooling ($10/sample)</li>
-            <li>FASTQ generation ($30/sample)</li>
+            <li>Data Handling ($30/sample)</li>
           </ul>
         </span>
       </md-list-item>
