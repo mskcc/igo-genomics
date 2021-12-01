@@ -1,5 +1,14 @@
 export const news = [
   {
+    title: 'Coming Soon: Oxford Nanopore PromethION',
+    date: 'November 29, 2021',
+    imgSource: 'promethion',
+    categories: ['featured'],
+    body: `<p>
+    IGO's R&D team has recently begun validation efforts for Oxford Nanopore's PromethION instrument, which provides high-throughput sequencing of long reads, including direct molecule sequencing of DNA and RNA, with or without PCR. While the platform is still in early development, if you are interested in long-read sequencing, please contact genomics@mskcc.org to discuss your needs.
+    </p>`,
+  },
+  {
     title: 'Welcome Neeman Mohibullah, new IGO Director!',
     date: 'November 1, 2021',
     imgSource: 'Mohibullah_Neeman',
@@ -22,7 +31,7 @@ export const news = [
     title: 'Reservations have moved to Microsoft Bookings (10X Genomics, ATAC-Seq and more!)',
     date: 'October 22, 2021',
     imgSource: 'IGO_210408_002',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
       IGO is happy to announce the launch of a new tool to
       book <a href="https://outlook.office365.com/owa/calendar/igo1@mskcc.onmicrosoft.com/bookings/" target="_blank">drop off appointments of fresh samples for 10X Genomics, DLP, and MissionBio</a>! All other sample drop-off appointments, including fresh samples for ATAC-Seq can be made <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/" target="__blank">here</a>.</p><p>Appointments previously scheduled through https://genomics.mskcc.org/reservations have been moved by an IGO Staff member to their respective Microsoft Bookings calendar. If you did not receive a new confirmation email please contact zzPDL_SKI_IGO_DATA@mskcc.org.
@@ -207,7 +216,7 @@ export const teams = [
       { name: 'Justin Clarke', role: 'Research Technician', photoName: 'Clarke_Justin' },
       { name: 'Kalliopi Chatzis', role: 'Research Assistant', photoName: 'Chatzis_Kalliopi' },
       { name: 'Katherine Allard', role: 'Research Assistant', photoName: 'Allard_Katherine' },
-      { name: 'Ravi Shrivastav', role: 'Research Assistant', photoName: 'Shrivastav_Ravi' },
+      { name: 'Ravi Shrivastav', role: 'Senior Research Technician', photoName: 'Shrivastav_Ravi' },
       { name: 'Satish Ramakrishnan', role: 'Research Assistant', photoName: 'Ramakrishnan_Satish' },
       { name: 'Satoko Murakami', role: 'Research Assistant', photoName: 'Murakami_Satoko' },
       { name: 'Yushi Wu', role: 'Research Assistant', photoName: 'Wu_Yushi' },
@@ -486,10 +495,10 @@ export const singleServices = [
     startingMaterial: 'Single cell suspension',
     libraryChemistry: 'Custom protocol',
     sequencingReadLength: 'PE150',
-    sequencingCoverage: '1M reads/cell',
+    sequencingCoverage: '2M reads/cell',
     deliverable: 'FASTQ',
     libraryCost: '$2,300/up to 800 cells',
-    sequencingCost: '$7/cell',
+    sequencingCost: '$5-7/cell',
   },
 ];
 
