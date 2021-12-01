@@ -119,7 +119,7 @@ export default {
 
       if (!this.formHasErrors) {
         app.axios
-          .post(`${API_URL}/submitInquiry`, {
+          .post(`${API_URL}/inquiry/inquiry`, {
             data: { ...this.form },
           })
           .then((response) => {
