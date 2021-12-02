@@ -17,12 +17,6 @@ const agent = new https.Agent({
 });
 const apiResponse = require('../util/apiResponse');
 
-const columns = [
-  { columnHeader: 'Name', data: 'fullName' },
-  { columnHeader: 'Date', data: 'date' },
-  { columnHeader: 'Reservation Time', data: 'emailTime' },
-];
-
 exports.bookTime = [
   function (req, response) {
     let form = req.body.data;
@@ -70,27 +64,26 @@ exports.bookTime = [
     }).toString();
 
     // let string = cal.toString()
-    // console.log(invite);
-    // mailer.sendBookingNotification(appointment, invite);
     appointment.save(function (err) {
       if (err) {
         if (err.code === 11000) {
-          return response.status(409).json({
-            message:
-              'An appointment for this email, time and date is already booked.',
-          });
+          return apiResponse.errorResponse(
+            response,
+            'An appointment for this email, time and date is already booked.'
+          );
         }
-        return response
-          .status(500)
-          .json({ message: 'Appointment could not be saved.' });
+        return apiResponse.errorResponse(
+          response,
+          'Appointment could not be saved.'
+        );
       }
 
-      mailer.sendBookingNotification(appointment, invite);
-      return response.status(200).json({
-        message:
-          'Please check for a confirmation email and remember to call (646)888-3856 before sample dropoff.',
-        appointment: appointment,
-      });
+      //   mailer.sendBookingNotification(appointment, invite);
+      return apiResponse.successResponseWithData(
+        response,
+        'Please check for a confirmation email and remember to call (646)888-3856 before sample dropoff.',
+        appointment
+      );
     });
   },
 ];
@@ -99,20 +92,16 @@ exports.existingAppointments = [
   function (req, response) {
     let today = new Date().setHours(0, 0, 0, 0);
     let requestType = req.params.requestType;
-    let headers = [];
-    columns.forEach((column) => {
-      headers.push(column.columnHeader);
-    });
-    let result = { columnDefinitions: columns, columnHeaders: headers };
 
     AppointmentModel.find({ requestType: requestType, status: 'confirmed' })
       .sort('dateTime')
       .lean()
       .exec(function (err, appointments) {
         if (err) {
-          return response
-            .status(500)
-            .json({ message: 'Error retrieving existing reservations.' });
+          return apiResponse.errorResponse(
+            response,
+            'Error retrieving existing reservations.'
+          );
         }
         if (appointments) {
           let futureAppointments = [];
@@ -122,8 +111,11 @@ exports.existingAppointments = [
               futureAppointments.push(appointment);
             }
           });
-          result.data = futureAppointments;
-          return response.status(200).send(result);
+          return apiResponse.successResponseWithData(
+            response,
+            'Operation success',
+            futureAppointments
+          );
         }
       });
   },

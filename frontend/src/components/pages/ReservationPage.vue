@@ -137,7 +137,7 @@ export default {
     return {
       spmCalendar: SPM_CALENDAR,
       scCalendar: SC_CALENDAR,
-      microsoftBookingsIsActive: true,
+      microsoftBookingsIsActive: false,
       message: 'Please select a day.',
       requestType: '',
       form: {
@@ -343,7 +343,7 @@ export default {
                 }).then((confirmedResult) => {
                   this.reset();
                   if (confirmedResult.isConfirmed) {
-                    this.$router.push({ name: 'cancel reservation', params: { id: response.data.appointment._id } });
+                    this.$router.push({ name: 'cancel reservation', params: { id: response.data.data._id } });
                   }
                 });
               })
