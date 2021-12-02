@@ -321,12 +321,17 @@ exports.allAppointments = [
   function (req, response) {
     AppointmentModel.find({}, function (err, docs) {
       if (err) {
-        return response
-          .status(500)
-          .json({ message: 'Backend is experiencing an error' });
+        return apiResponse.errorResponse(
+          response,
+          'Backend is experiencing an error'
+        );
       }
       if (docs) {
-        return response.status(200).json({ appointments: docs });
+        return apiResponse.successResponseWithData(
+          response,
+          'Operation success',
+          { appointments: docs }
+        );
       }
     });
   },
@@ -338,9 +343,7 @@ exports.updateAppointments = [
     AppointmentModel.find({}, function (err, docs) {
       if (err) {
         console.log(err);
-        return response.status(500).json({
-          message: 'No Appointments found',
-        });
+        return apiResponse.errorResponse(response, 'No Appointments found');
       } else {
         // convert emailtime to 24hr and set datetime, status
         docs.forEach((doc) => {
@@ -372,9 +375,10 @@ exports.updateAppointments = [
             function (err, appointment) {
               if (err) {
                 console.log(err);
-                return response.status(500).json({
-                  message: 'Cannot find appointment',
-                });
+                return apiResponse.errorResponse(
+                  response,
+                  'Cannot find appointment'
+                );
               } else {
                 console.log(appointment);
               }
