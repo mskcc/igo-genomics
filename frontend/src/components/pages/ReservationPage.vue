@@ -25,7 +25,7 @@
                   <md-option value="10xGenomics">10X Genomics single cell</md-option>
                   <md-option value="atacSeq">ATAC Seq (Thursdays only)</md-option>
                   <md-option value="missionBio" disabled>MissionBio</md-option>
-                  <!-- <md-option value="spm">All Others</md-option> -->
+                  <md-option value="spm">All Others</md-option>
                 </md-select>
               </md-field>
             </md-card-content>
@@ -211,18 +211,7 @@ export default {
     // },
 
     dateSelected: function() {
-      if (this.dateSelected) {
-        if (this.requestType === 'atacSeq' && this.form.time.weekday !== '6') {
-          this.message = 'At this time ATAC Seq reservations can only be made on Thursdays';
-        } else if (this.requestType === '10xGenomics') {
-          this.message =
-            'If your desired time slot is not available please complete <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">this waitlist form</a>';
-        } else {
-          this.message = 'Please select a time.';
-        }
-      } else {
-        this.message = 'Please select a day';
-      }
+      !this.dateSelected ? (this.message = 'Please select a day') : this.message;
     },
     requestType: function() {
       if (this.requestType) {
@@ -266,14 +255,12 @@ export default {
           app.axios
             .get(`${API_URL}/availableSlots/${this.requestType}/${this.dateSelected.weekday}/${this.dateSelected.id}`)
             .then((response) => {
-              if (response.status === 204 && this.requestType === 'atacSeq') {
-                this.message = 'At this time ATAC Seq reservations can only be made on Thursdays';
-              } else if (response.status === 204 && this.requestType === '10xGenomics') {
-                this.message =
-                  'There are no available times for this day. You can join the waitlist <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">here</a>. If you are looking to cancel an existing appointment, please refer to your confirmation email.';
-              } else {
-                this.timeRange = response.data.timeRange;
-              }
+              this.message = response.data.message;
+              this.requestType === '10xGenomics'
+                ? (this.message +=
+                    '</br>If your desired time slot is not available please complete <a href="https://docs.google.com/forms/d/e/1FAIpQLSffons9-vDVlxCU6zVlZnh7wC9rlyNnJaGoB1a8ZwhuSa9SNA/viewform">this 10x waitlist form.</a>')
+                : this.message;
+              response.data.data.timeRange ? (this.timeRange = response.data.data.timeRange) : (this.timeRange = []);
             });
         } else {
           this.message = 'Please select a Request Type';

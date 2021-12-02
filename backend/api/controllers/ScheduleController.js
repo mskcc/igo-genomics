@@ -78,7 +78,7 @@ exports.bookTime = [
         );
       }
 
-      //   mailer.sendBookingNotification(appointment, invite);
+      mailer.sendBookingNotification(appointment, invite);
       return apiResponse.successResponseWithData(
         response,
         'Please check for a confirmation email and remember to call (646)888-3856 before sample dropoff.',
@@ -144,7 +144,10 @@ exports.availableSlots = [
 
     // if there are no times for that requestType on that day just return
     if (_.isEmpty(timeRange)) {
-      return response.status(204).send();
+      return apiResponse.successResponse(
+        response,
+        'No appointments for that request type on that day.'
+      );
     }
     // check for existing appointments for that day
     AppointmentModel.find({
@@ -156,11 +159,11 @@ exports.availableSlots = [
       .lean()
       .exec(function (err, appointments) {
         if (err) {
-          return response
-            .status(500)
-            .json({ message: 'Backend encountered a fatal error.' });
+          return apiResponse.errorResponse(
+            response,
+            'Backend encountered a fatal error.'
+          );
         }
-
         if (_.isEmpty(appointments)) {
           // soonest spm reservation can only be made 2 hours from now
           if (todaysDate === date && requestType === 'spm') {
@@ -175,13 +178,18 @@ exports.availableSlots = [
             );
             // timeRange = timeRange.filter((element) => element.float <= 18);
           }
-          return response.status(200).json({
-            timeRange: timeRange,
-          });
+          return apiResponse.successResponseWithData(
+            response,
+            'Please select a time.',
+            { timeRange: timeRange }
+          );
         } else {
           // atac is easy bc only have 1 time slot per Thursday
           if (requestType === 'atacSeq') {
-            return response.status(204).send();
+            return apiResponse.successResponse(
+              response,
+              'That day is fully booked.'
+            );
           } else if (requestType === 'spm') {
             appointments.forEach(
               (appointment) =>
@@ -195,9 +203,11 @@ exports.availableSlots = [
                 (element) => element.float >= currentHour + 2
               );
             }
-            return response.status(200).json({
-              timeRange: timeRange,
-            });
+            return apiResponse.successResponseWithData(
+              response,
+              'Please select a time.',
+              { timeRange: timeRange }
+            );
             // 10x genomics
           } else {
             appointments.forEach((appointment) => {
@@ -208,14 +218,19 @@ exports.availableSlots = [
             });
             // that day is fully booked
             if (_.isEmpty(timeRange)) {
-              return response.status(204).send();
+              return apiResponse.successResponse(
+                response,
+                'That day is fully booked.'
+              );
             } else {
               timeRange = timeRange.filter(
                 (element) => element.float <= (weekday === 6 ? 15 : 18)
               );
-              return response.status(200).json({
-                timeRange: timeRange,
-              });
+              return apiResponse.successResponseWithData(
+                response,
+                'Please select a time.',
+                { timeRange: timeRange }
+              );
             }
           }
         }
@@ -239,6 +254,7 @@ exports.cancelAppointment = [
           return response.status(500).json({
             message: 'Appointment could not be cancelled',
           });
+          return apiResponse.errorResponse();
         }
         if (updatedAppointment) {
           mailer.sendCancellationNotification(updatedAppointment);
@@ -286,17 +302,17 @@ exports.appointment = [
     AppointmentModel.findById(appointmentId, function (error, appointment) {
       // not a valid id
       if (error) {
-        return response.status(500).json({
-          message: 'Appointment not found',
-        });
+        return apiResponse.errorResponse(response, 'Appointment not found');
       }
       if (appointment) {
-        return response.status(200).json({ appointment: appointment });
+        return apiResponse.successResponseWithData(
+          response,
+          'Operation success',
+          { appointment: appointment }
+        );
       }
       // no appointment was found
-      return response.status(500).json({
-        message: 'Appointment not found',
-      });
+      return apiResponse.errorResponse(response, 'Appointment not found');
     });
   },
 ];
