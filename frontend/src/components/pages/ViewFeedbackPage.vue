@@ -53,9 +53,9 @@ export default {
   },
   mounted: function() {
     app.axios
-      .get(`${API_URL}/getFeedback`)
+      .get(`${API_URL}/feedback/allFeedback`)
       .then((response) => {
-        this.feedback = response.data;
+        this.feedback = response.data.data;
       })
       .catch((error) => {
         this.$swal({ title: 'Error', text: error.response.data.message, icon: 'error' });

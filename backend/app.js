@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const api = require('./api');
+const apiRouter = require('./api/routes/api.js');
 const morgan = require('morgan');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -11,6 +11,7 @@ app.set('port', process.env.PORT || 8801);
 // DB connection
 var MONGODB_URL = process.env.MONGODB_URL;
 var mongoose = require('mongoose');
+
 mongoose
   .connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
@@ -51,7 +52,8 @@ if (process.env.ENV === 'development') {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
-app.use('/api', api);
+// var apiResponse = require('./api/helpers/apiResponse');
+app.use('/api', apiRouter);
 
 app.use(express.static('static'));
 

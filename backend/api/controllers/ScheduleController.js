@@ -8,7 +8,6 @@ var ObjectId = mongoose.Types.ObjectId;
 const helpers = require('../util/helpers');
 const mailer = require('../util/mailer');
 
-// const scheduleConfig = require('../util/scheduleConfig');
 const scheduleConfig = require('../util/scheduleConfig');
 const AppointmentModel = require('../models/AppointmentModel');
 const { time } = require('console');
@@ -16,15 +15,10 @@ const { time } = require('console');
 const agent = new https.Agent({
   rejectUnauthorized: false,
 });
+const apiResponse = require('../util/apiResponse');
 
-const columns = [
-  { columnHeader: 'Name', data: 'fullName' },
-  { columnHeader: 'Date', data: 'date' },
-  { columnHeader: 'Reservation Time', data: 'emailTime' },
-];
-
-module.exports = function (router) {
-  router.post('/bookTime', function (req, response) {
+exports.bookTime = [
+  function (req, response) {
     let form = req.body.data;
 
     let appointment = new AppointmentModel({
@@ -70,47 +64,44 @@ module.exports = function (router) {
     }).toString();
 
     // let string = cal.toString()
-    // console.log(invite);
-    // mailer.sendBookingNotification(appointment, invite);
     appointment.save(function (err) {
       if (err) {
         if (err.code === 11000) {
-          return response.status(409).json({
-            message:
-              'An appointment for this email, time and date is already booked.',
-          });
+          return apiResponse.errorResponse(
+            response,
+            'An appointment for this email, time and date is already booked.'
+          );
         }
-        return response
-          .status(500)
-          .json({ message: 'Appointment could not be saved.' });
+        return apiResponse.errorResponse(
+          response,
+          'Appointment could not be saved.'
+        );
       }
 
       mailer.sendBookingNotification(appointment, invite);
-      return response.status(200).json({
-        message:
-          'Please check for a confirmation email and remember to call (646)888-3856 before sample dropoff.',
-        appointment: appointment,
-      });
+      return apiResponse.successResponseWithData(
+        response,
+        'Please check for a confirmation email and remember to call (646)888-3856 before sample dropoff.',
+        appointment
+      );
     });
-  });
+  },
+];
 
-  router.get('/existingAppointments/:requestType', function (req, response) {
+exports.existingAppointments = [
+  function (req, response) {
     let today = new Date().setHours(0, 0, 0, 0);
     let requestType = req.params.requestType;
-    let headers = [];
-    columns.forEach((column) => {
-      headers.push(column.columnHeader);
-    });
-    let result = { columnDefinitions: columns, columnHeaders: headers };
 
     AppointmentModel.find({ requestType: requestType, status: 'confirmed' })
       .sort('dateTime')
       .lean()
       .exec(function (err, appointments) {
         if (err) {
-          return response
-            .status(500)
-            .json({ message: 'Error retrieving existing reservations.' });
+          return apiResponse.errorResponse(
+            response,
+            'Error retrieving existing reservations.'
+          );
         }
         if (appointments) {
           let futureAppointments = [];
@@ -120,16 +111,18 @@ module.exports = function (router) {
               futureAppointments.push(appointment);
             }
           });
-          result.data = futureAppointments;
-          return response.status(200).send(result);
+          return apiResponse.successResponseWithData(
+            response,
+            'Operation success',
+            futureAppointments
+          );
         }
       });
-  });
+  },
+];
 
-  router.get('/availableSlots/:requestType/:weekday/:date', function (
-    req,
-    response
-  ) {
+exports.availableSlots = [
+  function (req, response) {
     // returns range for given day, defaults in scheduleConfig.js
     let requestType = req.params.requestType;
     let weekday = parseInt(req.params.weekday);
@@ -151,7 +144,10 @@ module.exports = function (router) {
 
     // if there are no times for that requestType on that day just return
     if (_.isEmpty(timeRange)) {
-      return response.status(204).send();
+      return apiResponse.successResponse(
+        response,
+        'No appointments for that request type on that day.'
+      );
     }
     // check for existing appointments for that day
     AppointmentModel.find({
@@ -163,11 +159,11 @@ module.exports = function (router) {
       .lean()
       .exec(function (err, appointments) {
         if (err) {
-          return response
-            .status(500)
-            .json({ message: 'Backend encountered a fatal error.' });
+          return apiResponse.errorResponse(
+            response,
+            'Backend encountered a fatal error.'
+          );
         }
-
         if (_.isEmpty(appointments)) {
           // soonest spm reservation can only be made 2 hours from now
           if (todaysDate === date && requestType === 'spm') {
@@ -182,13 +178,18 @@ module.exports = function (router) {
             );
             // timeRange = timeRange.filter((element) => element.float <= 18);
           }
-          return response.status(200).json({
-            timeRange: timeRange,
-          });
+          return apiResponse.successResponseWithData(
+            response,
+            'Please select a time.',
+            { timeRange: timeRange }
+          );
         } else {
           // atac is easy bc only have 1 time slot per Thursday
           if (requestType === 'atacSeq') {
-            return response.status(204).send();
+            return apiResponse.successResponse(
+              response,
+              'That day is fully booked.'
+            );
           } else if (requestType === 'spm') {
             appointments.forEach(
               (appointment) =>
@@ -202,9 +203,11 @@ module.exports = function (router) {
                 (element) => element.float >= currentHour + 2
               );
             }
-            return response.status(200).json({
-              timeRange: timeRange,
-            });
+            return apiResponse.successResponseWithData(
+              response,
+              'Please select a time.',
+              { timeRange: timeRange }
+            );
             // 10x genomics
           } else {
             appointments.forEach((appointment) => {
@@ -215,22 +218,29 @@ module.exports = function (router) {
             });
             // that day is fully booked
             if (_.isEmpty(timeRange)) {
-              return response.status(204).send();
+              return apiResponse.successResponse(
+                response,
+                'That day is fully booked.'
+              );
             } else {
               timeRange = timeRange.filter(
                 (element) => element.float <= (weekday === 6 ? 15 : 18)
               );
-              return response.status(200).json({
-                timeRange: timeRange,
-              });
+              return apiResponse.successResponseWithData(
+                response,
+                'Please select a time.',
+                { timeRange: timeRange }
+              );
             }
           }
         }
       });
-  });
+  },
+];
 
-  // cancels an appointment
-  router.post('/cancelAppointment/:id', function (req, response) {
+// cancels an appointment
+exports.cancelAppointment = [
+  function (req, response) {
     AppointmentModel.findById(req.params.id, function (error, doc) {
       if (error) {
         return response.status(500).json({
@@ -244,6 +254,7 @@ module.exports = function (router) {
           return response.status(500).json({
             message: 'Appointment could not be cancelled',
           });
+          return apiResponse.errorResponse();
         }
         if (updatedAppointment) {
           mailer.sendCancellationNotification(updatedAppointment);
@@ -281,49 +292,58 @@ module.exports = function (router) {
     //     // });
     //   }
     // );
-  });
+  },
+];
 
-  router.get('/appointment/:id', function (req, response) {
+exports.appointment = [
+  function (req, response) {
     let appointmentId = req.params.id;
 
     AppointmentModel.findById(appointmentId, function (error, appointment) {
       // not a valid id
       if (error) {
-        return response.status(500).json({
-          message: 'Appointment not found',
-        });
+        return apiResponse.errorResponse(response, 'Appointment not found');
       }
       if (appointment) {
-        return response.status(200).json({ appointment: appointment });
+        return apiResponse.successResponseWithData(
+          response,
+          'Operation success',
+          { appointment: appointment }
+        );
       }
       // no appointment was found
-      return response.status(500).json({
-        message: 'Appointment not found',
-      });
+      return apiResponse.errorResponse(response, 'Appointment not found');
     });
-  });
+  },
+];
 
-  router.get('/allAppointments', function (req, response) {
+exports.allAppointments = [
+  function (req, response) {
     AppointmentModel.find({}, function (err, docs) {
       if (err) {
-        return response
-          .status(500)
-          .json({ message: 'Backend is experiencing an error' });
+        return apiResponse.errorResponse(
+          response,
+          'Backend is experiencing an error'
+        );
       }
       if (docs) {
-        return response.status(200).json({ appointments: docs });
+        return apiResponse.successResponseWithData(
+          response,
+          'Operation success',
+          { appointments: docs }
+        );
       }
     });
-  });
+  },
+];
 
-  // updates previously made appointments, to be used by Anna when spm reservation feature is deployed
-  router.get('/updateAppointments', function (req, response) {
+// updates previously made appointments, to be used by Anna when spm reservation feature is deployed
+exports.updateAppointments = [
+  function (req, response) {
     AppointmentModel.find({}, function (err, docs) {
       if (err) {
         console.log(err);
-        return response.status(500).json({
-          message: 'No Appointments found',
-        });
+        return apiResponse.errorResponse(response, 'No Appointments found');
       } else {
         // convert emailtime to 24hr and set datetime, status
         docs.forEach((doc) => {
@@ -355,9 +375,10 @@ module.exports = function (router) {
             function (err, appointment) {
               if (err) {
                 console.log(err);
-                return response.status(500).json({
-                  message: 'Cannot find appointment',
-                });
+                return apiResponse.errorResponse(
+                  response,
+                  'Cannot find appointment'
+                );
               } else {
                 console.log(appointment);
               }
@@ -366,5 +387,5 @@ module.exports = function (router) {
         });
       }
     });
-  });
-};
+  },
+];
