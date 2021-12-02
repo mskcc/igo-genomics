@@ -7,7 +7,7 @@
     <div class="app-body">
       <div class="app-header md-elevation-7">
         <div class="logo-header">
-          <md-button :to="{ name: 'news' }"> <img class="igo-logo" alt="IGO logo" src="./assets/logoDarkGrayOnTransp.png"/></md-button>
+          <md-button :to="{ name: 'home' }"> <img class="igo-logo" alt="IGO logo" src="./assets/logoDarkGrayOnTransp.png"/></md-button>
           <div class="md-headline">Integrated Genomics Operation</div>
           <div class="mobile">
             <md-button>
