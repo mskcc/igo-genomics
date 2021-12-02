@@ -1,4 +1,4 @@
-const apiResponse = require('../helpers/apiResponse');
+const apiResponse = require('../util/apiResponse');
 const InquiryModel = require('../models/InquiryModel');
 const mailer = require('../util/mailer');
 

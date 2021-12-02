@@ -1,4 +1,4 @@
-const apiResponse = require('../helpers/apiResponse');
+const apiResponse = require('../util/apiResponse');
 const helpers = require('../util/helpers');
 const chemistries = require('../util/chemistries');
 

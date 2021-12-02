@@ -8,7 +8,6 @@ var ObjectId = mongoose.Types.ObjectId;
 const helpers = require('../util/helpers');
 const mailer = require('../util/mailer');
 
-// const scheduleConfig = require('../util/scheduleConfig');
 const scheduleConfig = require('../util/scheduleConfig');
 const AppointmentModel = require('../models/AppointmentModel');
 const { time } = require('console');
@@ -16,6 +15,7 @@ const { time } = require('console');
 const agent = new https.Agent({
   rejectUnauthorized: false,
 });
+const apiResponse = require('../util/apiResponse');
 
 const columns = [
   { columnHeader: 'Name', data: 'fullName' },
@@ -23,8 +23,8 @@ const columns = [
   { columnHeader: 'Reservation Time', data: 'emailTime' },
 ];
 
-module.exports = function (router) {
-  router.post('/bookTime', function (req, response) {
+exports.bookTime = [
+  function (req, response) {
     let form = req.body.data;
 
     let appointment = new AppointmentModel({
@@ -92,9 +92,11 @@ module.exports = function (router) {
         appointment: appointment,
       });
     });
-  });
+  },
+];
 
-  router.get('/existingAppointments/:requestType', function (req, response) {
+exports.existingAppointments = [
+  function (req, response) {
     let today = new Date().setHours(0, 0, 0, 0);
     let requestType = req.params.requestType;
     let headers = [];
@@ -124,12 +126,11 @@ module.exports = function (router) {
           return response.status(200).send(result);
         }
       });
-  });
+  },
+];
 
-  router.get('/availableSlots/:requestType/:weekday/:date', function (
-    req,
-    response
-  ) {
+exports.availableSlots = [
+  function (req, response) {
     // returns range for given day, defaults in scheduleConfig.js
     let requestType = req.params.requestType;
     let weekday = parseInt(req.params.weekday);
@@ -227,10 +228,12 @@ module.exports = function (router) {
           }
         }
       });
-  });
+  },
+];
 
-  // cancels an appointment
-  router.post('/cancelAppointment/:id', function (req, response) {
+// cancels an appointment
+exports.cancelAppointment = [
+  function (req, response) {
     AppointmentModel.findById(req.params.id, function (error, doc) {
       if (error) {
         return response.status(500).json({
@@ -281,9 +284,11 @@ module.exports = function (router) {
     //     // });
     //   }
     // );
-  });
+  },
+];
 
-  router.get('/appointment/:id', function (req, response) {
+exports.appointment = [
+  function (req, response) {
     let appointmentId = req.params.id;
 
     AppointmentModel.findById(appointmentId, function (error, appointment) {
@@ -301,9 +306,11 @@ module.exports = function (router) {
         message: 'Appointment not found',
       });
     });
-  });
+  },
+];
 
-  router.get('/allAppointments', function (req, response) {
+exports.allAppointments = [
+  function (req, response) {
     AppointmentModel.find({}, function (err, docs) {
       if (err) {
         return response
@@ -314,10 +321,12 @@ module.exports = function (router) {
         return response.status(200).json({ appointments: docs });
       }
     });
-  });
+  },
+];
 
-  // updates previously made appointments, to be used by Anna when spm reservation feature is deployed
-  router.get('/updateAppointments', function (req, response) {
+// updates previously made appointments, to be used by Anna when spm reservation feature is deployed
+exports.updateAppointments = [
+  function (req, response) {
     AppointmentModel.find({}, function (err, docs) {
       if (err) {
         console.log(err);
@@ -366,5 +375,5 @@ module.exports = function (router) {
         });
       }
     });
-  });
-};
+  },
+];

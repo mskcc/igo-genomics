@@ -60,7 +60,7 @@ export default new Vuex.Store({
   },
   actions: {
     setLastTwelveMonths(context) {
-      app.axios.get(`${API_URL}/chemistry/chemistryTimeline`).then((response) => {
+      app.axios.get(`${API_URL}/chemistryTimeline`).then((response) => {
         let timeline = response.data.data;
         context.commit('setTimeline', timeline);
       });
@@ -69,7 +69,7 @@ export default new Vuex.Store({
       app.axios
         // .get(process.env.VUE_APP_API_ROOT + "/api/getAssaysFromMongo")
         // .get("http://localhost:8801/api/getAssaysFromMongo")
-        .get(`${API_URL}/assay/ddpcrAssays`)
+        .get(`${API_URL}/ddpcrAssays`)
         .then((response) => {
           let assays = response.data.data;
 

@@ -1,4 +1,4 @@
-const apiResponse = require('../helpers/apiResponse');
+const apiResponse = require('../util/apiResponse');
 const FeedbackModel = require('../models/FeedbackModel');
 
 const columns = [
