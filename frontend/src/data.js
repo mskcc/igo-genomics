@@ -178,9 +178,9 @@ export const teams = [
   },
   {
     id: 2,
-    name: 'Sample & Project Management',
+    name: 'SPM',
     description:
-      'The SPM team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
+      'The Sample & Project Management team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
     members: [
       { name: 'Marisa Dunigan', role: 'Supervisor, IGO', photoName: 'Dunigan_Marisa' },
       { name: 'Emily Brennan', role: 'Project Assistant', photoName: 'Brennan_Emily' },
@@ -207,27 +207,36 @@ export const teams = [
   },
   {
     id: 4,
-    name: 'Nucleic Acids',
+    name: 'Single Cell',
     description:
-      "The Nucleic Acid team handles the bulk of IGO's sample processing, utilizing liquid-handling robots to automate many platforms. They also handle IGO's single cell platforms: 10X Genomics scRNASeq & Multiome, MissionBio Tapestri, PlateSeq, and DLP.",
+      "The Single Cell team receives fresh and frozen samples for IGO's 10X Genomics, DLP, and MissionBio platforms. They use a mix of manual and automated techniques to help investigators achieve the best single cell data possible.",
     members: [
       { name: 'Ruchi Patel', role: 'Manager, IGO', photoName: 'Patel_Ruchi' },
-      { name: 'Elevit Perez', role: 'Senior Research Technician', photoName: 'Perez_Elevit' },
       { name: 'Justin Clarke', role: 'Research Technician', photoName: 'Clarke_Justin' },
-      { name: 'Kalliopi Chatzis', role: 'Research Assistant', photoName: 'Chatzis_Kalliopi' },
-      { name: 'Katherine Allard', role: 'Research Assistant', photoName: 'Allard_Katherine' },
       { name: 'Ravi Shrivastav', role: 'Senior Research Technician', photoName: 'Shrivastav_Ravi' },
       { name: 'Satish Ramakrishnan', role: 'Research Assistant', photoName: 'Ramakrishnan_Satish' },
-      { name: 'Satoko Murakami', role: 'Research Assistant', photoName: 'Murakami_Satoko' },
-      { name: 'Yushi Wu', role: 'Research Assistant', photoName: 'Wu_Yushi' },
-      { name: 'Open Position!', role: 'Research Assistant' },
+      { name: 'Yushi Wu', role: 'Research Assistant', photoName: 'Wu_Yushi' },   
     ],
   },
   {
     id: 5,
+    name: 'Library Prep',
+    description:
+      "The Library Preparation team handles the bulk of IGO's sample processing, utilizing liquid-handling robots to automate many platforms.",
+    members: [
+      { name: 'Ruchi Patel', role: 'Manager, IGO', photoName: 'Patel_Ruchi' },
+      { name: 'Elevit Perez', role: 'Senior Research Technician', photoName: 'Perez_Elevit' },      
+      { name: 'Kalliopi Chatzis', role: 'Research Assistant', photoName: 'Chatzis_Kalliopi' },
+      { name: 'Katherine Allard', role: 'Research Assistant', photoName: 'Allard_Katherine' },
+      { name: 'Satoko Murakami', role: 'Research Assistant', photoName: 'Murakami_Satoko' },
+      { name: 'Open Position!', role: 'Research Assistant' },
+    ],
+  },
+  {
+    id: 6,
     name: 'Sequencing',
     description:
-      "The Sequencing Team performs all activities related to Illumina sequencing, including quantity and quality assessment of libraries, pooling, and preparation for sequencing. The team is also responsible for the care & feeding of IGO's 12 sequencing instruments.",
+      "The Sequencing Team performs all activities related to Illumina sequencing, including quantity and quality assessment of libraries, pooling, and preparation for sequencing. The team is also responsible for the care & feeding of IGO's 8 sequencing instruments.",
     members: [
       { name: 'Liping Sun', role: 'Manager, IGO', photoName: 'Sun_Liping' },
       { name: 'Andrea Lopez', role:'Research Assistant' },
@@ -237,7 +246,7 @@ export const teams = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     name: 'Data',
     description:
       "The IGO Data Team is a group of bioinformaticians, software engineers, and computer scientists.  They work closely with IGO's investigators and wet-lab technicians to write multiple software applications from sample receiving and LIMS processing to post-sequencing stats tracking and data delivery.",
@@ -251,32 +260,31 @@ export const teams = [
     ],
   },
   {
-    id: 7,
-    name: 'Research & Development',
+    id: 8,
+    name: 'R&D',
     description:
-      'The R&D team develops, tests, and implements new genomics platforms for the MSKCC community. In addition to testing off-the-shelf assays, our group works with MSK investigators to bring customized platforms to IGO.',
+      'The Researh & Development team develops, tests, and implements new genomics platforms for the MSKCC community. In addition to testing off-the-shelf assays, our group works with MSK investigators to bring customized platforms to IGO.',
     members: [
       { name: 'Cassidy Illum', role: 'Research Technician', photoName: 'Illum_Cassidy' },
       { name: 'Elijah Castro', role: 'Research Technician', photoName: 'Castro_Elijah' },
       { name: 'Juan Li', role: 'Manager, IGO', photoName: 'Li_Juan' },
-      { name: 'Open Position!', role: 'Manager' },
     ],
   },
-  {
-    id: 8,
-    name: 'IGO Alumni',
-    description:
-      'IGO technicians gain valuable skills and cutting-edge knowledge while working in a fast-paced environment. Many leverage that experience into advanced degrees and training to further their careers in science and medicine.',
-    members: [
-      { name: 'Denise Chen', role: 'Philadelphia College of Osteopathic Medicine', photoName: 'Chen_Denise' },
-      { name: 'Desmond Lambe', role: 'Rensselaer Polytechnic Institute', photoName: 'Lambe_Desmond' },
-      { name: "Josie D'Angelo", role: 'UC Berkeley ', photoName: 'Dangelo_Josie' },
-      { name: 'Marisa Vanness', role: 'Geisinger Commonwealth School of Medicine', photoName: 'Vanness_Marisa' },
-      { name: 'Michael Pantano', role: 'BU Questrom School of Business', photoName: 'Pantano_Michael' },
-      { name: 'Rosie Wenrich', role: 'Rowan University', photoName: 'Wenrich_Rosie' },
-      { name: 'Taylor Allen', role: 'Georgia Tech Dept. of Chemistry & Biochemistry', photoName: 'Allen_Taylor' },
-    ],
-  },
+  // {
+  //   id: 8,
+  //   name: 'IGO Alumni',
+  //   description:
+  //     'IGO technicians gain valuable skills and cutting-edge knowledge while working in a fast-paced environment. Many leverage that experience into advanced degrees and training to further their careers in science and medicine.',
+  //   members: [
+  //     { name: 'Denise Chen', role: 'Philadelphia College of Osteopathic Medicine', photoName: 'Chen_Denise' },
+  //     { name: 'Desmond Lambe', role: 'Rensselaer Polytechnic Institute', photoName: 'Lambe_Desmond' },
+  //     { name: "Josie D'Angelo", role: 'UC Berkeley ', photoName: 'Dangelo_Josie' },
+  //     { name: 'Marisa Vanness', role: 'Geisinger Commonwealth School of Medicine', photoName: 'Vanness_Marisa' },
+  //     { name: 'Michael Pantano', role: 'BU Questrom School of Business', photoName: 'Pantano_Michael' },
+  //     { name: 'Rosie Wenrich', role: 'Rowan University', photoName: 'Wenrich_Rosie' },
+  //     { name: 'Taylor Allen', role: 'Georgia Tech Dept. of Chemistry & Biochemistry', photoName: 'Allen_Taylor' },
+  //   ],
+  // },
 ];
 
 export const bulkServices = [
