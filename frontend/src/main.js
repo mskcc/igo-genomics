@@ -34,6 +34,7 @@ import FeedbackPage from './components/pages/FeedbackPage.vue';
 import ViewFeedbackPage from './components/pages/ViewFeedbackPage.vue';
 import BlockPricingPage from './components/pages/BlockPricingPage.vue';
 import AllAppointmentsPage from './components/pages/AllAppointmentsPage.vue';
+import CustomConstructPage from './components/pages/CustomConstructPage.vue';
 
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
@@ -158,6 +159,7 @@ const routes = [
   { path: '/view-feedback', component: ViewFeedbackPage, name: 'view feedback' },
   { path: '/block-pricing', component: BlockPricingPage, name: 'block pricing' },
   { path: '/all-appointments', component: AllAppointmentsPage },
+  { path: '/custom-construct', component: CustomConstructPage },
 ];
 
 const router = new VueRouter({
