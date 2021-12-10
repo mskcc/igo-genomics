@@ -198,6 +198,7 @@ export const teams = [
     members: [
       { name: 'Andrea Farina', role: 'Manager, IGO', photoName: 'Farina_Andrea' },
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
+      { name: 'Elijah Castro', role: 'Research Technician', photoName: 'Castro_Elijah' },
       { name: 'Julienne Lomibao', role: 'Research Technician', photoName: 'Lomibao_Julienne' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
       { name: 'Mohamed Abdelbaset', role: 'Research Assistant', photoName: 'Abdelbaset_Mohamed' },
@@ -267,7 +268,7 @@ export const teams = [
     members: [
       { name: 'Juan Li', role: 'Manager, IGO', photoName: 'Li_Juan' },
       { name: 'Cassidy Illum', role: 'Research Technician', photoName: 'Illum_Cassidy' },
-      { name: 'Elijah Castro', role: 'Research Technician', photoName: 'Castro_Elijah' },
+      
     ],
   },
   // {
