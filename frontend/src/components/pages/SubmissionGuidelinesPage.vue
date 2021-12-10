@@ -353,8 +353,8 @@
                 <md-icon>add</md-icon>
                 <span class="md-list-item-text ">DMP libraries for capture</span>
                 <md-list slot="md-expand">
-                  <md-list-item class="md-inset"
-                    ><ol>
+                  <md-list-item class="md-inset">
+                    <ol>
                       <li>
                         Fill out an iLab form
                         <ul>
