@@ -146,7 +146,7 @@ export default {
       }
       if (!this.formHasErrors) {
         app.axios
-          .post(`${API_URL}/feedback/feedback`, {
+          .post(`${API_URL}/feedback`, {
             data: { application: this.applicationClone, ...this.form },
           })
           .then((response) => {
