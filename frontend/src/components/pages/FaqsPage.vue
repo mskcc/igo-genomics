@@ -85,6 +85,41 @@
                         </md-list-item>
                       </md-list>
                     </md-list-item>
+                    <md-list-item md-expand class="md-inset">
+                      <md-icon>add</md-icon>
+                      <span class="md-list-item-text">I want to sequence a tumor sample for a patient. How do I know if there is a normal available?</span>
+                      <md-list slot="md-expand">
+                        <md-list-item>
+                          <div>
+                            If you have a patient <strong>MRN</strong>:<br>
+                            <ol>
+                              <li>Query the <a href="https://ddp.mskcc.org/search" target="__blank">Darwin Digital Platform</a></li>
+                              <li>Link to the sample data in the <a href="https://cbioportal.mskcc.org" target="__blank">cBioPortal</a></li>
+                              <li>Go to the patient's EMR within the Pathology folder and view the DMP Path results</li>
+                            </ol><br>
+                            If you have a <strong>DMP Patient ID</strong>:
+                            <ol>
+                              <li>Ensure the ID is in the format P-#######</li>
+                              <li>Query the <a href="https://cbioportal.mskcc.org" target="__blank">cBioPortal</a></li>
+                            </ol><br>
+                            If you have a <strong>Molecular Accession Number</strong>:
+                            <ol>
+                              <li>Ensure the Number is in the format M##-#####</li>
+                              <li>Submit a <a href="https://dataline.mskcc.org/DataLine/login?dest=createRequest" target="__blank">Dataline query</a> following the guidelines <a href="https://mskcc.sharepoint.com/sites/pub-td/sitepages/dataline.aspx" target="__blank">here</a></li>
+                            </ol>
+                            or:
+                            <ol>
+                              <li>Query <a href="https://ddp.mskcc.org/search" target="__blank">Darwin</a> to get an MRN</li>
+                              <li>Follow the MRN instructions above</li>
+                            </ol><br>
+                            If the patient has had <strong>cfDNA banked</strong>:
+                            <ol>
+                              <li>E-mail Chintan Patel (patelc@mskcc.org) to inquire if a matching buffy coat has been stored in IGO</li>
+                            </ol>
+                          </div>
+                        </md-list-item>
+                      </md-list>
+                    </md-list-item>                          
                   </md-list>
                 </div>
               </div>
