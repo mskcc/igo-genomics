@@ -1,7 +1,7 @@
 <template>
   <div id="feedback-page">
     <div>
-      <form @submit.prevent="submitFeedback">
+      <form @submit.prevent="submitCustomConstruct">
         <md-card>
           <md-card-header>
             <div class="md-title">
@@ -29,33 +29,33 @@
                 </div>
               </div>
 
-              <md-field :class="getValidationClass('contactInfo', 'name')">
+              <md-field :class="getValidationClass('body', 'principalInvestigator')">
                 <label>Principal Investigator</label>
                 <md-input type="text" id="pi" name="pi" v-model="form.body.principalInvestigator"></md-input>
                 <span class="md-error" vif="!$v.form.body.principalInvestigator.required">PI is required</span>
               </md-field>
-              <md-field :class="getValidationClass('contactInfo', 'email')">
-                <label>Forward primer</label>
+              <md-field :class="getValidationClass('body', 'forwardPrimer')">
+                <label>Forward Primer</label>
                 <md-input type="text" id="pi" name="pi" v-model="form.body.forwardPrimer"></md-input>
-                <span class="md-error" vif="!$v.form.body.principalInvestigator.required">PI is required</span>
+                <span class="md-error" vif="!$v.form.body.principalInvestigator.required">Forward Primer is required</span>
               </md-field>
-              <md-field :class="getValidationClass('contactInfo', 'email')">
-                <label>Reverse primer</label>
+              <md-field :class="getValidationClass('body', 'reversePrimer')">
+                <label>Reverse Primer</label>
                 <md-input type="text" id="pi" name="pi" v-model="form.body.reversePrimer"></md-input>
-                <span class="md-error" vif="!$v.form.body.principalInvestigator.required">PI is required</span>
+                <span class="md-error" vif="!$v.form.body.principalInvestigator.required">Reverse Primer is required</span>
               </md-field>
-              <md-field :class="getValidationClass('contactInfo', 'email')">
-                <label>Kit name</label>
+              <md-field :class="getValidationClass('body', 'kitName')">
+                <label>Kit Name</label>
                 <md-input type="text" id="pi" name="pi" v-model="form.body.kitName"></md-input>
-                <span class="md-error" vif="!$v.form.body.principalInvestigator.required">PI is required</span>
+                <span class="md-error" vif="!$v.form.body.principalInvestigator.required">Kit Name is required</span>
               </md-field>
               <md-field>
-                <label>File upload</label>
-                <md-file v-model="form.file" multiple accept="image/*" />
+                <label>File Upload</label>
+                <md-file v-model="form.files" multiple accept="image/*" />
               </md-field>
               <br />
               <md-field>
-                <label>Protocol details</label>
+                <label>Protocol Details</label>
                 <md-textarea v-model="form.protocolDetails"></md-textarea>
               </md-field>
             </div>
@@ -83,17 +83,17 @@ export default {
     return {
       form: {
         contactInfo: {
-          name: '',
-          email: '',
+          name: 'anna',
+          email: 'patrunoa@mskcc.org',
         },
         body: {
-          principalInvestigator: '',
-          forwardPrimer: '',
-          reversePrimer: '',
-          kitName: '',
-          protocolDetails: '',
+          principalInvestigator: 'principalInvestigator-test',
+          forwardPrimer: 'forwardPrimer-test',
+          reversePrimer: 'reversePrimer-test',
+          kitName: 'kitName-test',
+          protocolDetails: 'protocolDetails-test',
         },
-        file: '',
+        files: [],
       },
       formHasErrors: false,
     };
@@ -106,9 +106,11 @@ export default {
           email: { required, email },
         },
         body: {
-          // runLength: { required },
-          // totalReads: { required },
-          // projectDescription: { required },
+          principalInvestigator: { required },
+          forwardPrimer: { required },
+          reversePrimer: { required },
+          kitName: { required },
+          protocolDetails: { required },
         },
       },
     };
@@ -124,7 +126,7 @@ export default {
         };
       }
     },
-    submitFeedback: function() {
+    submitCustomConstruct: function() {
       this.$v.$touch();
       if (this.$v.$invalid) {
         this.formHasErrors = true;
@@ -132,8 +134,8 @@ export default {
       }
       if (!this.formHasErrors) {
         app.axios
-          .post(`${API_URL}/feedback/feedback`, {
-            data: { application: this.applicationClone, ...this.form },
+          .post(`${API_URL}/customConstruct`, {
+            data: { ...this.form },
           })
           .then((response) => {
             this.$swal({ title: 'Thank you', text: response.data.message, icon: 'success' });
@@ -144,9 +146,14 @@ export default {
     },
     reset() {
       this.$v.$reset();
-      this.form.opinionRating = '';
-      this.form.feedbackCategory = '';
-      this.form.description = '';
+      this.form.contactInfo.name = '';
+      this.form.contactInfo.email = '';
+      this.form.body.principalInvestigator = '';
+      this.form.body.forwardPrimer = '';
+      this.form.body.reversePrimer = '';
+      this.form.body.kitName = '';
+      this.form.body.protocolDetails = '';
+      this.form.files = [];
     },
   },
   watch: {
