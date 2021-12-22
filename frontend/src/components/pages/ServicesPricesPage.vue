@@ -184,7 +184,7 @@
                         <td>{{ service.libraryChemistry }}</td>
                       </tr>
 
-                      <tr>
+                      <tr v-if="service.sequencingReadLength">
                         <th>Sequencing Read Length:</th>
                         <td>{{ service.sequencingReadLength }}</td>
                       </tr>

@@ -15,7 +15,7 @@
           <md-list-item class="indent" href="#mbtapestri">Mission Bio Tapestri</md-list-item>
           <md-list-item class="indent" href="#dlp">Direct Library Prep (DLP)</md-list-item>
           <md-list-item class="indent" href="#visium">10X Visium Processing & Price Summary</md-list-item>
-          <!-- <md-list-item class="indent" href="#geomx">Nanostring GeoMx</md-list-item> -->
+          <md-list-item class="indent" href="#geomx">Nanostring GeoMx</md-list-item>
           <md-list-item :to="{ name: 'platforms & pricing' }">Pricing</md-list-item>
           <md-list-item :to="{ name: 'submission guidelines' }">How to submit samples</md-list-item>
           <md-list-item><a :href="scCalendar" target="__blank">Make a reservation for sample drop off</a></md-list-item>
@@ -169,15 +169,23 @@
 
         <ten-x-table id="visium" />
 
-        <!-- <span class="md-list-item-text md-title" id="geomx">Nanostring GeoMx</span>
-        <md-list slot="md-expand">
-          <md-list-item>
-            <div class="md-layout md-gutter">
-              <div class="md-layout-item">Sample type</div>
-              <div class="md-layout-item">Info type</div>
-            </div>
-          </md-list-item>
-        </md-list> -->
+        <md-divider></md-divider>
+
+        <div class="md-title" id="geomx">Nanostring GeoMx</div>
+        <ul>
+          <li>Input: FFPE slides</li>
+          <li>Output: FASTQ + GeoMx pipeline</li>
+          <li>Considerations:
+            <ul>
+              <li>We highly recommend that slides be test-stained and visualized before beginning a GeoMx experiment, to ensure that regions of interest are distinct and present</li>
+              <li>While Nanostring-validated morphological staining panels need little optimization, custom panels likely will</li>
+              <li>If selected regions are too small and not enough RNA can be collected, library prep will fail, so we have a 200 micron minimum for ROI circumference</li>
+              <li>ROI size may need to be increased if the targeted cell type (CD45+, for instance) is rarer in the region</li>
+              <li>Multiple areas of interest can be harvested from a single region: for example, from a single ROI, CD45+, tumor, and TME cells can be separately harvested for 3 AOIs</li>
+              <li>Sequencing depth is based on Nanostring recommendations for each panel, but experimental needs can vary</li>
+            </ul>
+          </li>
+        </ul>
       </md-app-content>
     </md-app>
   </div>
