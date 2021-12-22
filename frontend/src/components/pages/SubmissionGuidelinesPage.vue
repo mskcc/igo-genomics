@@ -188,7 +188,7 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text ">Tissue for spatial transcriptomics</span>
+                <span class="md-list-item-text ">Tissue for 10X Visium spatial transcriptomics</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset"
                     ><ol>
@@ -203,6 +203,19 @@
                   >
                 </md-list>
               </md-list-item>
+              <!-- <md-list-item md-expand>
+                <md-icon>add</md-icon>
+                <span class="md-list-item-text ">Tissue for Nanostring GeoMx spatial transcriptomics</span>
+                <md-list slot="md-expand">
+                  <md-list-item class="md-inset">
+                    <ol>
+                      <li>Contact IGO to discuss your experimental goals</li>
+                      <li>Fill out an iLab form for “Nanostring GeoMx”</li>
+                      <li> Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> with “GeoMx” as your application</li>
+                      <li>Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a></li>
+                    </ol></md-list-item>
+                </md-list>
+              </md-list-item> -->
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
                 <span class="md-list-item-text ">DNA for WES or Human/Mouse WGS</span>

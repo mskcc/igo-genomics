@@ -1,5 +1,14 @@
 export const news = [
   {
+    title: 'NEW at IGO: Nanostring GeoMx Spatial Transcriptomics',
+    date: 'December 22, 2021',
+    imgSource: 'geomx',
+    categories: ['featured'],
+    body: `<p>
+    IGO is now accepting samples for Nanostring GeoMx, a probe-based, targeted RNA-Seq platform optimized for FFPE slides. GeoMx allows for morphologically-stained slides to be scanned and for specific regions of interest to be selected by the investigator for precise targeting of tumor or TME (including both cell types from the same region). Customization is available both for the morphological staining and the RNA targeted. See more information in our <a href="https://genomics.mskcc.org/single-cell-hub">Single Cell Hub</a>, and contact us at genomics@mskcc.org to discuss your experiment.
+  </p>`,
+  },
+  {
     title: 'Coming Soon: Oxford Nanopore PromethION',
     date: 'November 29, 2021',
     imgSource: 'promethion',
@@ -22,7 +31,7 @@ export const news = [
     date: 'October 11, 2021',
     // imgSource: 'IMG_20191031_112220',
     imgSource: 'OpenHouse2021-Flyer-Final-Landscape',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     It's time for IGO's (almost) annual Halloween Open House! Come join us on Friday, October 29 in ZRC 320 for a COVID-safe event to learn about the latest in our technology and services, take part in a host of games and activities, and grab plenty of candy to take home. Tour the lab, schedule consults on our common and new technologies, and play some science-themed games hosted by our costumed IGO staff to celebrate another year of genomics. Watch this space or email genomics@mskcc.org for more information.
   </p>`,
@@ -508,6 +517,16 @@ export const singleServices = [
     deliverable: 'FASTQ',
     libraryCost: '$2,300/up to 800 cells',
     sequencingCost: '$5-7/cell',
+  },
+  {
+    id: 6,
+    name: 'Nanostring GeoMx',
+    description: 'A spatial transcriptomics platform allowing for targeted RNA-seq of manually selected regions of interest.',
+    startingMaterial: 'FFPE slides',
+    sequencingCoverage: 'variable',
+    deliverable: 'FASTQ; GeoMx pipeline output',
+    libraryCost: '$2,000-2,500 per slide for sample prep/staining + $200-400 per slide for library prep',
+    sequencingCost: '$60-250 per area of interest',
   },
 ];
 
