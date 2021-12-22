@@ -1,11 +1,12 @@
 <template>
   <div id="feedback-page">
     <div>
-      <form @submit.prevent="submitCustomConstruct">
+      <!-- enctype="multipart/form-data" is necessart for file uploads https://www.digitalocean.com/community/tutorials/how-to-handle-file-uploads-in-vue-2 -->
+      <form enctype="multipart/form-data" @submit.prevent="submitCustomConstruct">
         <md-card>
           <md-card-header>
             <div class="md-title">
-              <div>Submit a custom construct</div>
+              <div>Submit a Custom Construct</div>
             </div>
           </md-card-header>
           <br />
@@ -50,8 +51,8 @@
                 <span class="md-error" vif="!$v.form.body.principalInvestigator.required">Kit Name is required</span>
               </md-field>
               <md-field>
-                <label>File Upload</label>
-                <md-file v-model="form.files" multiple accept="image/*" />
+                <label>File Upload (Optional)</label>
+                <md-file multiple accept="image/*" @change="filesChange($event)" />
               </md-field>
               <br />
               <md-field>
@@ -83,18 +84,19 @@ export default {
     return {
       form: {
         contactInfo: {
-          name: 'anna',
-          email: 'patrunoa@mskcc.org',
+          name: '',
+          email: '',
         },
         body: {
-          principalInvestigator: 'principalInvestigator-test',
-          forwardPrimer: 'forwardPrimer-test',
-          reversePrimer: 'reversePrimer-test',
-          kitName: 'kitName-test',
-          protocolDetails: 'protocolDetails-test',
+          principalInvestigator: '',
+          forwardPrimer: '',
+          reversePrimer: '',
+          kitName: '',
+          protocolDetails: '',
         },
-        files: [],
       },
+      files: [],
+      fileCount: '',
       formHasErrors: false,
     };
   },
@@ -126,6 +128,11 @@ export default {
         };
       }
     },
+    filesChange(event) {
+      // handle file changes
+      console.log(Object.entries(event.target.files));
+      event.target.files.length ? (this.files = event.target.files) : this.files;
+    },
     submitCustomConstruct: function() {
       this.$v.$touch();
       if (this.$v.$invalid) {
@@ -133,10 +140,35 @@ export default {
         return;
       }
       if (!this.formHasErrors) {
+        const formData = new FormData();
+        // append the files to FormData
+        // for (const i of Object.keys(this.form.files)) {
+        // formData.append('files', this.form.files);
+
+        for (const i of Object.keys(this.files)) {
+          //   console.log(this.form.files[i]);
+          formData.append('files', this.files[i]);
+        }
+        formData.append('name', this.form.contactInfo.name);
+        formData.append('email', this.form.contactInfo.email);
+        formData.append('principalInvestigator', this.form.body.principalInvestigator);
+        formData.append('forwardPrimer', this.form.body.forwardPrimer);
+        formData.append('reversePrimer', this.form.body.reversePrimer);
+        formData.append('kitName', this.form.body.kitName);
+        formData.append('protocolDetails', this.form.body.protocolDetails);
+
+        // }
         app.axios
-          .post(`${API_URL}/customConstruct`, {
-            data: { ...this.form },
-          })
+          .post(
+            `${API_URL}/customConstruct`,
+            // { formData, data: { ...this.form } },
+            formData,
+            {
+              header: {
+                'Content-Type': 'multipart/form-data',
+              },
+            }
+          )
           .then((response) => {
             this.$swal({ title: 'Thank you', text: response.data.message, icon: 'success' });
             this.reset();
@@ -153,7 +185,7 @@ export default {
       this.form.body.reversePrimer = '';
       this.form.body.kitName = '';
       this.form.body.protocolDetails = '';
-      this.form.files = [];
+      this.files = [];
     },
   },
   watch: {
