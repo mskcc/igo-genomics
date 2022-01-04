@@ -58,6 +58,7 @@ import {
   MdMenu,
   MdRadio,
   MdRipple,
+  MdSnackbar,
   MdSteppers,
   MdTable,
   MdTabs,
@@ -92,6 +93,7 @@ Vue.use(MdList);
 Vue.use(MdRadio);
 Vue.use(MdRipple);
 Vue.use(MdSteppers);
+Vue.use(MdSnackbar);
 Vue.use(MdMenu);
 Vue.use(MdTable);
 Vue.use(MdTabs);

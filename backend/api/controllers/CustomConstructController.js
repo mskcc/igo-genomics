@@ -26,6 +26,8 @@ const upload = multer({
       'docx',
       'xls',
       'xlsx',
+      'ppt',
+      'pptx',
       'pdf',
     ];
     if (!allowedTypes.includes(file.mimetype)) {

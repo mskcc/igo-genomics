@@ -38,22 +38,24 @@
               <md-field :class="getValidationClass('body', 'forwardPrimer')">
                 <label>Forward Primer</label>
                 <md-input type="text" id="pi" name="pi" v-model="form.body.forwardPrimer"></md-input>
-                <span class="md-error" vif="!$v.form.body.principalInvestigator.required">Forward Primer is required</span>
+                <span class="md-error" vif="!$v.form.body.forwardPrimer.required">Forward Primer is required</span>
               </md-field>
               <md-field :class="getValidationClass('body', 'reversePrimer')">
                 <label>Reverse Primer</label>
                 <md-input type="text" id="pi" name="pi" v-model="form.body.reversePrimer"></md-input>
-                <span class="md-error" vif="!$v.form.body.principalInvestigator.required">Reverse Primer is required</span>
+                <span class="md-error" vif="!$v.form.body.reversePrimer.required">Reverse Primer is required</span>
               </md-field>
               <md-field :class="getValidationClass('body', 'kitName')">
                 <label>Kit Name</label>
                 <md-input type="text" id="pi" name="pi" v-model="form.body.kitName"></md-input>
-                <span class="md-error" vif="!$v.form.body.principalInvestigator.required">Kit Name is required</span>
+                <span class="md-error" vif="!$v.form.body.kitName.required">Kit Name is required</span>
               </md-field>
-              <md-field>
+              <md-field :class="getValidationClass('body', 'files')">
                 <label>File Upload (Optional)</label>
-                <md-file multiple accept="image/*" @change="filesChange($event)" />
+                <md-file accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,image/*" @change="filesChange($event)" />
+                <span class="md-error" vif="!$v.form.body.files.tooLarge">File too large, max 250 KB</span>
               </md-field>
+              <!-- <div v-if="acceptableFiles"><strong>Uploaded files: </strong>{{ acceptedFiles }}</div> -->
               <br />
               <md-field>
                 <label>Protocol Details</label>
@@ -68,6 +70,7 @@
             <md-button type="submit" class="md-primary">Submit</md-button>
           </md-card-actions>
         </md-card>
+        <md-snackbar v-html="message" :md-active.sync="showMessage"></md-snackbar>
       </form>
     </div>
   </div>
@@ -88,16 +91,20 @@ export default {
           email: '',
         },
         body: {
-          principalInvestigator: '',
-          forwardPrimer: '',
-          reversePrimer: '',
-          kitName: '',
-          protocolDetails: '',
+          principalInvestigator: 'test',
+          forwardPrimer: 'test',
+          reversePrimer: 'test',
+          kitName: 'test',
+          protocolDetails: 'test',
+          files: [],
         },
       },
-      files: [],
       fileCount: '',
       formHasErrors: false,
+      showMessage: false,
+      message: '',
+      // fileHasError: false,
+      maxFileSize: 250000,
     };
   },
   validations() {
@@ -113,6 +120,15 @@ export default {
           reversePrimer: { required },
           kitName: { required },
           protocolDetails: { required },
+          files: {
+            tooLarge(value) {
+              if (!value) {
+                return true;
+              }
+              let file = value;
+              return file.size < this.maxFileSize;
+            },
+          },
         },
       },
     };
@@ -128,10 +144,31 @@ export default {
         };
       }
     },
+
     filesChange(event) {
       // handle file changes
-      console.log(Object.entries(event.target.files));
-      event.target.files.length ? (this.files = event.target.files) : this.files;
+      // console.log(Object.keys(event.target.files));
+      // console.log(event.target.files[0]);
+      let numberOfUploadedFiles = event.target.files.length;
+      if (numberOfUploadedFiles === 1) {
+        this.form.body.files = event.target.files[0];
+
+        if (this.form.body.files.size >= this.maxFileSize) {
+          this.showMessage = true;
+          this.message = `File [${event.target.files[0].name}] exceeds max size of 250 KB`;
+          this.form.body.files = [];
+          // this.fileHasError = true;
+        } else {
+          this.showMessage = false;
+          this.message = '';
+          // this.fileHasError = false;
+        }
+        this.$v.$touch();
+        if (this.$v.$invalid) {
+          this.formHasErrors = true;
+          return;
+        }
+      }
     },
     submitCustomConstruct: function() {
       this.$v.$touch();
@@ -145,9 +182,9 @@ export default {
         // for (const i of Object.keys(this.form.files)) {
         // formData.append('files', this.form.files);
 
-        for (const i of Object.keys(this.files)) {
+        for (const i of Object.keys(this.form.body.files)) {
           //   console.log(this.form.files[i]);
-          formData.append('files', this.files[i]);
+          formData.append('files', this.form.body.files[i]);
         }
         formData.append('name', this.form.contactInfo.name);
         formData.append('email', this.form.contactInfo.email);
