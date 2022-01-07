@@ -169,7 +169,11 @@ export const teams = [
       'The leadership team oversees over 40 full-time staff from entry-level research technicians to senior experts. They not only ensure that everyone is working in concert to process thousands of projects each year, but also continue to bring on new technologies to keep IGO on the cutting edge of genome science.',
     members: [
       { name: 'Neeman Mohibullah', role: 'Director', photoName: 'Mohibullah_Neeman' },
-      { name: 'Kety Huberman', role: 'Operations Manager', photoName: 'Huberman_Kety' },
+      { name: 'Marisa Dunigan', role: 'Supervisor, SPM', photoName: 'Dunigan_Marisa' },
+      { name: 'Andrea Farina', role: 'Manager, EXPAND', photoName: 'Farina_Andrea' },
+      { name: 'Ruchi Patel', role: 'Manager, Single Cell & Library Prep', photoName: 'Patel_Ruchi' },
+      { name: 'Liping Sun', role: 'Manager, Sequencing', photoName: 'Sun_Liping' },
+      { name: 'David Mcmanamon', role: 'Manager, Data', photoName: 'Mcmanamon_David' },
     ],
   },
   {
