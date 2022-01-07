@@ -26,35 +26,13 @@
     <md-list class="md-triple-line ">
       <md-list-item>
         <!-- <md-avatar>
-          <img :src="'Viale_Agnes' | memberImage" alt="Viale_Agnes" />
-        </md-avatar> -->
-        <md-icon class="md-primary">email</md-icon>
-        <div class="md-list-item-text">
-          <span>Dr. Agnes Viale</span>
-          <span>Director</span>
-          <span>vialea@mskcc.org</span>
-        </div>
-      </md-list-item>
-      <md-divider class="md-inset"></md-divider>
-      <md-list-item>
-        <!-- <md-avatar>
           <img :src="'Mohibullah_Neeman' | memberImage" alt="Mohibullah_Neeman" />
         </md-avatar> -->
         <md-icon class="md-primary">email</md-icon>
         <div class="md-list-item-text">
-          <span>Dr. Neeman Mohibullah</span><span>Associate Director</span><span>mohibuln@mskcc.org</span>
+          <span>Dr. Neeman Mohibullah</span><span>Director</span><span>mohibuln@mskcc.org</span>
         </div>
       </md-list-item>
-      <md-divider class="md-inset"></md-divider>
-      <md-list-item>
-        <!-- <md-avatar>
-          <img :src="'Huberman_Kety' | memberImage" alt="Huberman_Kety" />
-        </md-avatar> -->
-        <md-icon class="md-primary">email</md-icon>
-        <div class="md-list-item-text">
-          <span>Kety Huberman</span><span>Operations Manager</span><span>hubermak@mskcc.org</span>
-        </div></md-list-item
-      >
       <md-divider class="md-inset"></md-divider>
       <md-list-item>
         <!-- <md-avatar>
