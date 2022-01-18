@@ -5,7 +5,7 @@
      <md-card class="career-card">
       <md-card-header>
         <div class="md-title">Senior Research Technician</div>
-        <router-link :to="{ name: 'team', params: { id: 5 } }">Sequencing Team</router-link>
+        <router-link :to="{ name: 'team', params: { id: 6 } }">Sequencing Team</router-link>
         <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
@@ -17,20 +17,20 @@
 
     <md-card class="career-card">
       <md-card-header>
-        <div class="md-title">Bioinformatics Software Engineer II</div>
-        <router-link :to="{ name: 'team', params: { id: 6 } }">Data Team</router-link>
+        <div class="md-title">Software Engineer II (JavaScript/Python)</div>
+        <router-link :to="{ name: 'team', params: { id: 7 } }">Data Team</router-link>
         <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescriptionCS = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-54188-bioinformatics-software-engineer-ii" target="_blank" class="md-primary">Apply</md-button>
+        <md-button @click="showJobDescriptionDataSEII = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-54188-software-engineer-ii-javascriptpython/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
 
     <md-card class="career-card">
       <md-card-header>
         <div class="md-title">Research Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 4 } }">Nucleic Acids Team</router-link>
+        <router-link :to="{ name: 'team', params: { id: 5 } }">Nucleic Acids Team</router-link>
         <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
@@ -41,13 +41,37 @@
 
     <md-card class="career-card">
       <md-card-header>
-        <div class="md-title">Automation Engineer Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 1 } }">Lab Support</router-link>
+        <div class="md-title">Research Assistant</div>
+        <router-link :to="{ name: 'team', params: { id: 6 } }">Sequencing Team</router-link>
         <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescriptionAE = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-54064-automation-engineer-liquid-handling/" target="_blank" class="md-primary">Apply</md-button>
+        <md-button @click="showJobDescriptionSeqRA = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/jobs/job-details/2022-57064-research-assisstant/" target="_blank" class="md-primary">Apply</md-button>
+      </md-card-actions>
+    </md-card>
+
+    <md-card class="career-card">
+      <md-card-header>
+        <div class="md-title">Project Coordinator</div>
+        <router-link :to="{ name: 'team', params: { id: 2 } }">SPM Team</router-link>
+        <div class="md-body">Open!</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionSPMPC = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/jobs/job-details/2022-57069-project-coordinator/" target="_blank" class="md-primary">Apply</md-button>
+      </md-card-actions>
+    </md-card>
+
+    <md-card class="career-card">
+      <md-card-header>
+        <div class="md-title">Project Manager</div>
+        <router-link :to="{ name: 'team', params: { id: 2 } }">SPM Team</router-link>
+        <div class="md-body">Open!</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionSPMPM = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/jobs/job-details/2022-57053-project-manager-center-for-molecular-oncology/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
     
@@ -75,7 +99,7 @@
       </md-dialog-actions>
     </md-dialog>
 
-    <md-dialog :md-active.sync="showJobDescriptionAE" :md-fullscreen="false" style="z-index: 400;">
+    <!-- <md-dialog :md-active.sync="showJobDescriptionAE" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As an Automation Engineer Assistant in IGO, you will:</strong>
         <ul>
@@ -99,9 +123,9 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionAE = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog>
+    </md-dialog> -->
     
-    <md-dialog :md-active.sync="showJobDescriptionNART" :md-fullscreen="false" style="z-index: 400;">
+    <!-- <md-dialog :md-active.sync="showJobDescriptionNART" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Technician in the Library Preparation Team, you will:</strong>
         <ul>
@@ -123,9 +147,9 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionNART = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog>
+    </md-dialog> -->
 
-    <md-dialog :md-active.sync="showJobDescriptionSPMSPA" :md-fullscreen="false" style="z-index: 400;">
+    <md-dialog :md-active.sync="showJobDescriptionSPMPC" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Project Coordinator in the Sample & Project Management Team, you will:</strong>
         <ul>
@@ -140,16 +164,45 @@
         </ul>
         <strong>You have:</strong>
         <ul>
-          <li>A Bachelor’s Degree in a Biological, Chemistry, or Science related field.</li>
+          <li>A Bachelor’s Degree in a Biological, Chemistry, or Science related field + 2-4 years experience</li>
+          <li>A Master's Degree in  Biological, Chemistry, or Science related field + 0-2 years experience</li>
           <li>Experience handling DNA/RNA preferred.</li>
+          <li>Experience with genomics and NGS preferred.</li>
         </ul>
       </md-dialog-content>
       <md-dialog-actions>
-        <md-button class="md-primary" @click="showJobDescriptionSPMSPA = false">Close</md-button>
+        <md-button class="md-primary" @click="showJobDescriptionSPMPC = false">Close</md-button>
       </md-dialog-actions>
     </md-dialog>
 
-    <md-dialog :md-active.sync="showJobDescriptionRDM" :md-fullscreen="false" style="z-index: 400;">
+    <md-dialog :md-active.sync="showJobDescriptionSPMPM" :md-fullscreen="false" style="z-index: 400;">
+      <md-dialog-content md-dynamic-height>
+        <strong>As a Project Manager in the Sample & Project Management Team, you will:</strong>
+        <ul>
+          <li>Drive meetings with investigators to understand the scope of projects and effectively communicate the services provided by IGO</li>
+          <li>Review all submissions for correctness and completeness, and work with investigators to guide them through processing decisions that are in line with the goals of their projects.</li>
+          <li>Manage investigator expectations and facilitate professional interaction of team with investigators.</li>
+          <li>Analyze sample data and communicate results electronically.</li>
+          <li>Utilize the LIMS (Laboratory Information Management System) effectively to ensure the downstream processing team has relevant and up-to-date information.</li>
+          <li>Proactively monitor the progress of samples to guarantee deadlines are met.</li>
+          <li>Investigate unexpected outputs and provide information to IGO leadership and investigators.</li>
+          <li>Facilitate lab processing by maintaining freezer organization and storage in a LEAN way</li>
+          <li>Assist group leader with supporting junior team members including training.</li>
+          <li>Work closely with staff from IGO and the CMO and maintain open and proactive lines of communication.</li>
+        </ul>
+        <strong>You have:</strong>
+        <ul>
+          <li>A Bachelor’s Degree in a Biological, Chemistry, or Science related field + 4-6 years experience</li>
+          <li>A Master's Degree in  Biological, Chemistry, or Science related field + 2-4 years experience</li>
+          <li>Experience with genomics and NGS preferred.</li>
+        </ul>
+      </md-dialog-content>
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="showJobDescriptionSPMPM = false">Close</md-button>
+      </md-dialog-actions>
+    </md-dialog>
+
+    <!-- <md-dialog :md-active.sync="showJobDescriptionRDM" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>You are:</strong>
         <ul>
@@ -173,9 +226,9 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionRDM = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog>
+    </md-dialog> -->
 
-    <md-dialog :md-active.sync="showJobDescriptionEXPANDRA" :md-fullscreen="false" style="z-index: 400;">
+    <!-- <md-dialog :md-active.sync="showJobDescriptionEXPANDRA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Assistant in the Extraction Team, you will:</strong>
         <ul>
@@ -200,7 +253,7 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionEXPANDRA = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog>
+    </md-dialog> -->
 
     <md-dialog :md-active.sync="showJobDescriptionSeqRA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -250,9 +303,9 @@
       </md-dialog-actions>
     </md-dialog>
 
-    <md-dialog :md-active.sync="showJobDescriptionCS" :md-fullscreen="false" style="z-index: 400;">
+    <md-dialog :md-active.sync="showJobDescriptionDataSEII" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
-        <strong>As a Bioinformatics Software Engineer II on the Data Team, you will:</strong>
+        <strong>As a Software Engineer II on the Data Team, you will:</strong>
         <ul>
           <li>Build user-friendly web applications using modern JavaScript frameworks (React, Vue.js), Node.js, and Python.</li>
           <li>Clearly communicate project challenges and progress.</li>
@@ -263,12 +316,12 @@
         <ul> 
           <li>A Bacherlor's degree in Computer Science, Bioinformatics, or other applied science or equivalent experience</li>
           <li>3 years of software development experience</li>
-          <li>Experience working with web technologies including but not limited to HTML, CSS, JavaScript, React, and Python</li>
+          <li>Experience working with web technologies JavaScript or Python</li>
           <li>Experience with relational databases and/or non-relational databases (MySQL, MongoDB)</li>
         </ul>
       </md-dialog-content>
       <md-dialog-actions>
-        <md-button class="md-primary" @click="showJobDescriptionCS = false">Close</md-button>
+        <md-button class="md-primary" @click="showJobDescriptionDataSEII = false">Close</md-button>
       </md-dialog-actions>
     </md-dialog>
 
@@ -283,15 +336,16 @@ export default {
   components: { CareerBanner },
   data: function() {
     return {
-      showJobDescriptionSPMSPA: false,
+      showJobDescriptionSPMPC: false,
       showJobDescriptionNARA: false,
-      showJobDescriptionRDM: false,
-      showJobDescriptionEXPANDRA: false,
+      // showJobDescriptionRDM: false,
+      // showJobDescriptionEXPANDRA: false,
       showJobDescriptionSeqRA: false,
-      showJobDescriptionNART: false,
+      // showJobDescriptionNART: false,
       showJobDescriptionSeqSRT: false,
-      showJobDescriptionCS: false,
-      showJobDescriptionAE: false,
+      showJobDescriptionDataSEII: false,
+      // showJobDescriptionAE: false,
+      showJobDescriptionSPMPM: false,
     };
   },
 };

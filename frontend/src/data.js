@@ -186,7 +186,7 @@ export const teams = [
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
       { name: 'Magali Cavatore', role: 'Lab Manager', photoName: 'Cavatore_Magali' },
       { name: 'Mary Betancor', role: 'SKI Administrative Assistant II', photoName: 'Betancor_Mary' },
-      { name: 'Position Open!', role: 'Automation Engineer Assistant' },
+      // { name: 'Position Open!', role: 'Automation Engineer Assistant' },
     ],
   },
   {
@@ -199,8 +199,8 @@ export const teams = [
       { name: 'Emily Brennan', role: 'Project Assistant', photoName: 'Brennan_Emily' },
       { name: 'Meghanne Lomibao', role: 'Project Coordinator', photoName: 'Lomibao_Meghanne' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
-      { name: 'Valerie Patritti', role: 'Project Manager', photoName: 'Patritti_Valerie' },
-      // { name: 'Position Opening Soon!', role: 'Senior Project Assistant' },
+      { name: 'Position Open!', role: 'Project Manager' },
+      { name: 'Position Open!', role: 'Project Coordinator' },
     ],
   },
   {
@@ -253,9 +253,9 @@ export const teams = [
       "The Sequencing Team performs all activities related to Illumina sequencing, including quantity and quality assessment of libraries, pooling, and preparation for sequencing. The team is also responsible for the care & feeding of IGO's 8 sequencing instruments.",
     members: [
       { name: 'Liping Sun', role: 'Manager, IGO', photoName: 'Sun_Liping' },
-      { name: 'Andrea Lopez', role:'Research Assistant' },
       { name: 'Jim Chen', role: 'Senior Research Technician', photoName: 'Chen_Jim' },
       { name: 'Keumsil Hwang', role: 'Senior Research Assistant', photoName: 'Hwang_Keumsil' },
+      { name: 'Open Position!', role: 'Research Assistant', },
       { name: 'Open Position!', role: 'Senior Research Technician' },
     ],
   },
@@ -270,7 +270,7 @@ export const teams = [
       { name: 'Cuijie Lu', role: 'Bioinfo. Software Engineer I', photoName: 'Lu_Cuijie' },
       { name: 'Darrell Nabors', role: 'Bioinformatics Engineer V', photoName: 'Nabors_Darrell' },
       { name: 'Fahimeh Mirhaj', role: 'Bioinfo. Software Engineer I', photoName: 'Mirhaj_Fahimeh' },
-       { name: 'Open Position!', role: 'Bioinfo. Software Engineer II' },
+      { name: 'Open Position!', role: 'Software Engineer II' },
     ],
   },
   {
@@ -401,7 +401,7 @@ export const bulkServices = [
     id: 4,
     name: 'Epigenome Sequencing',
     description: 'Various methods to assess the epigenetic structure of the genome',
-    startingMaterial: 'Cells - no more than 24 samples/batch (ATAC), Transposed DNA (ChIP), DNA – samples in multiples of 4 (EPIC)',
+    startingMaterial: 'Cells - no more than 24 samples/batch (ATAC), Transposed DNA (ChIP), DNA – 4 sample minimum (EPIC)',
     libraryChemistry: 'Nextera XT (ATAC), KAPA HTP (ChIP), TruSeq Methyl Capture (EPIC)',
     sequencingReadLength: 'PE100',
     sequencingCoverage: '40-50M (ATAC), 10M (ChIP; more reads can be requested), 40M (EPIC)',
