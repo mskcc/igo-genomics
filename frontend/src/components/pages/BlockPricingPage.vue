@@ -32,20 +32,20 @@
               </md-table-row>
               <md-table-row>
                 <md-table-cell>1</md-table-cell>
-                <md-table-cell colspan="6">$396</md-table-cell>
-                <md-table-cell>$462</md-table-cell>
+                <md-table-cell colspan="6">$421</md-table-cell>
+                <md-table-cell>$463</md-table-cell>
               </md-table-row>
               <md-table-row>
                 <md-table-cell>4</md-table-cell>
-                <md-table-cell colspan="6">$496</md-table-cell>
+                <md-table-cell colspan="6">$576</md-table-cell>
                 <md-table-cell>N/A</md-table-cell>
               </md-table-row>
               <md-table-row>
                 <md-table-cell>20</md-table-cell>
-                <md-table-cell>$1001</md-table-cell>
-                <md-table-cell colspan="3">$953</md-table-cell>
-                <md-table-cell colspan="2">$1241</md-table-cell>
-                <md-table-cell>$1575</md-table-cell>
+                <md-table-cell>$969</md-table-cell>
+                <md-table-cell colspan="3">$1063</md-table-cell>
+                <md-table-cell colspan="2">$1207</md-table-cell>
+                <md-table-cell>$1712</md-table-cell>
               </md-table-row>
             </md-table>
           </md-list-item>
@@ -88,42 +88,42 @@
             </md-table-row>
             <md-table-row>
               <md-table-cell>100</md-table-cell>
-              <md-table-cell colspan="3">$900</md-table-cell>
-              <md-table-cell colspan="2">$1500</md-table-cell>
+              <md-table-cell colspan="3">$1209</md-table-cell>
+              <md-table-cell colspan="2">$1896</md-table-cell>
               <md-table-cell>N/A</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>400</md-table-cell>
-              <md-table-cell colspan="3">$900</md-table-cell>
-              <md-table-cell>$1000</md-table-cell>
-              <md-table-cell>$1100</md-table-cell>
+              <md-table-cell colspan="3">$1533</md-table-cell>
+              <md-table-cell>$2808</md-table-cell>
+              <md-table-cell>$3695</md-table-cell>
               <md-table-cell>N/A</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>800</md-table-cell>
-              <md-table-cell colspan="3">$1800</md-table-cell>
-              <md-table-cell>$1990</md-table-cell>
-              <md-table-cell>$2150</md-table-cell>
-              <md-table-cell>$4200</md-table-cell>
+              <md-table-cell colspan="3">$2289</md-table-cell>
+              <md-table-cell>$2837</md-table-cell>
+              <md-table-cell>$3081</md-table-cell>
+              <md-table-cell>$4256</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>1800</md-table-cell>
-              <md-table-cell colspan="3">$4032</md-table-cell>
-              <md-table-cell>$4464</md-table-cell>
-              <md-table-cell>$4842</md-table-cell>
+              <md-table-cell colspan="3">$4060</md-table-cell>
+              <md-table-cell>$4899</md-table-cell>
+              <md-table-cell>$5291</md-table-cell>
               <md-table-cell>N/A</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>3600</md-table-cell>
-              <md-table-cell colspan="3">$8064</md-table-cell>
-              <md-table-cell>$8928</md-table-cell>
-              <md-table-cell>$9684</md-table-cell>
+              <md-table-cell colspan="3">$7261</md-table-cell>
+              <md-table-cell>$8974</md-table-cell>
+              <md-table-cell>$9561</md-table-cell>
               <md-table-cell>N/A</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>11000</md-table-cell>
-              <md-table-cell colspan="4">$14300</md-table-cell>
-              <md-table-cell>$16000</md-table-cell>
+              <md-table-cell colspan="4">$13779</md-table-cell>
+              <md-table-cell>$15222</md-table-cell>
               <md-table-cell>N/A</md-table-cell>
             </md-table-row>
           </md-table>
