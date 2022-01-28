@@ -169,11 +169,11 @@ export const teams = [
       'The leadership team oversees over 40 full-time staff from entry-level research technicians to senior experts. They not only ensure that everyone is working in concert to process thousands of projects each year, but also continue to bring on new technologies to keep IGO on the cutting edge of genome science.',
     members: [
       { name: 'Neeman Mohibullah', role: 'Director', photoName: 'Mohibullah_Neeman' },
-      { name: 'Marisa Dunigan', role: 'Supervisor, SPM', photoName: 'Dunigan_Marisa' },
       { name: 'Andrea Farina', role: 'Manager, EXPAND', photoName: 'Farina_Andrea' },
-      { name: 'Ruchi Patel', role: 'Manager, Single Cell & Library Prep', photoName: 'Patel_Ruchi' },
-      { name: 'Liping Sun', role: 'Manager, Sequencing', photoName: 'Sun_Liping' },
       { name: 'David Mcmanamon', role: 'Manager, Data', photoName: 'Mcmanamon_David' },
+      { name: 'Liping Sun', role: 'Manager, Sequencing', photoName: 'Sun_Liping' },
+      { name: 'Marisa Dunigan', role: 'Supervisor, SPM', photoName: 'Dunigan_Marisa' },
+      { name: 'Ruchi Patel', role: 'Manager, Single Cell & Library Prep', photoName: 'Patel_Ruchi' },      
     ],
   },
   {
@@ -243,7 +243,7 @@ export const teams = [
       { name: 'Kalliopi Chatzis', role: 'Research Assistant', photoName: 'Chatzis_Kalliopi' },
       { name: 'Katherine Allard', role: 'Research Assistant', photoName: 'Allard_Katherine' },
       { name: 'Satoko Murakami', role: 'Research Assistant', photoName: 'Murakami_Satoko' },
-      { name: 'Open Position!', role: 'Research Assistant' },
+      // { name: 'Open Position!', role: 'Research Assistant' },
     ],
   },
   {
@@ -256,7 +256,7 @@ export const teams = [
       { name: 'Jim Chen', role: 'Senior Research Technician', photoName: 'Chen_Jim' },
       { name: 'Keumsil Hwang', role: 'Senior Research Assistant', photoName: 'Hwang_Keumsil' },
       { name: 'Open Position!', role: 'Research Assistant', },
-      { name: 'Open Position!', role: 'Senior Research Technician' },
+      // { name: 'Open Position!', role: 'Senior Research Technician' },
     ],
   },
   {
@@ -386,6 +386,7 @@ export const bulkServices = [
     deliverable: 'FASTQ',
     tableHeaders: ['sampleCoverage', 'sampleCostFrozen', 'sampleCostFfpe'],
     table: [
+      { sampleCoverage: 10, sampleCostFrozen: 487, sampleCostFfpe: 561 },
       { sampleCoverage: 30, sampleCostFrozen: 1067, sampleCostFfpe: 1263 },
       { sampleCoverage: 40, sampleCostFrozen: 1324, sampleCostFfpe: 1655 },
       { sampleCoverage: 50, sampleCostFrozen: 1557, sampleCostFfpe: 2046 },

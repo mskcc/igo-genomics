@@ -77,23 +77,27 @@
           <td>NovaSeq 6000</td>
         </tr>
         <tr>
-          <td>JAX</td>
+          <td>RUTH</td>
+          <td>NovaSeq 6000</td>
+        </tr>
+        <tr>
+          <td>JAX (retired)</td>
           <td>HiSeq 4000</td>
         </tr>
         <tr>
-          <td>PITT</td>
+          <td>PITT (retired)</td>
           <td>HiSeq 4000</td>
         </tr>
         <tr>
-          <td>LIZ</td>
+          <td>LIZ (retired)</td>
           <td>HiSeq 2500</td>
         </tr>
         <tr>
-          <td>KIM</td>
+          <td>KIM (retired)</td>
           <td>HiSeq 2500</td>
         </tr>
         <tr>
-          <td>MOMO</td>
+          <td>MOMO (retired)</td>
           <td>HiSeq 2500</td>
         </tr>
         <tr>
@@ -101,15 +105,19 @@
           <td>NextSeq 500</td>
         </tr>
         <tr>
+          <td>PEPE</td>
+          <td>NextSeq 2000</td>
+        </tr>
+        <tr>
           <td>JOHNSAWYERS</td>
           <td>MiSeq</td>
         </tr>
         <tr>
-          <td>TOMS</td>
+          <td>TOMS (retired)</td>
           <td>MiSeq</td>
         </tr>
         <tr>
-          <td>VIC</td>
+          <td>VIC (retired)</td>
           <td>MiSeq</td>
         </tr>
         <tr>
