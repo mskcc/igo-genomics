@@ -419,6 +419,20 @@
                         </md-list-item>
                       </md-list>
                     </md-list-item>
+                    <md-list-item md-expand class="md-inset">
+                      <md-icon>add</md-icon>
+                      <span class="md-list-item-text">Do I need to sequence a matched normal sample for IMPACT?</span>
+                      <md-list slot="md-expand">
+                        <md-list-item>
+                          <div>
+                            Matched normals are highly recommended. If there is a normal sample that has been sequenced clinically in the DMP, the data can be used for your research sample <strong>only</strong> if the same IMPACT assay was used. You can find the assay by searching the DMP patient ID in MSK cBioPortal, clicking on the "Clinical Data" tab, and checking the "Gene Panel" and "Somatic Status" columns. The latter will say "Matched" if a normal was processed. The former will tell you which panel version was used. Currently we are using IMPACT505 in the research and clinical setting.
+                            <br>
+                            <br>
+                            If no appropriate normal is available, your sample will be run against the pooled normal, and no copy number results will be given as part of the standard output. 
+                          </div>
+                        </md-list-item>
+                      </md-list>
+                    </md-list-item>
                   </md-list>
                 </div>
               </div>

@@ -88,10 +88,10 @@
                           >Sample Coverage (X)</md-table-head
                         >
                         <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostFrozen')"
-                          >Cost Per Sample (Frozen Tissue)</md-table-head
+                          >Cost Per Sample (PCR-free)</md-table-head
                         >
                         <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostFfpe')"
-                          >Cost Per Sample (FFPE Tissue)</md-table-head
+                          >Cost Per Sample (PCR+)</md-table-head
                         >
                         <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('platform')">Platform</md-table-head>
                         <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('sequencingDetails')"
