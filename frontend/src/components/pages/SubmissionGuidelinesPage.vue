@@ -14,8 +14,8 @@
           <ol>
             <li><a href="https://my.ilabsolutions.com/account/saml/mskcc">Submit an iLabs request</a> for the desired application.</li>
             <li>
-              Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to pick up a plate or micronic
-              barcoded tubes.
+              Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to pick up a plate, micronic
+              barcoded tubes, or AutoLys tubes.
             </li>
             <li>
               Complete the <a href="https://igo.mskcc.org/sample-submission">sample submission form</a> indicating the sample specific
@@ -53,6 +53,9 @@
                       <li>
                         <router-link :to="{ name: 'tissue' }">Check</router-link> our accepted preservation types and recommendations for
                         DNA & RNA extraction
+                      </li>
+                      <li>
+                        <strong>FFPE curls/punches only:</strong> Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request AutoLys tubes.
                       </li>
                       <li>Fill out an iLab request for the appropriate application</li>
                       <ul>
