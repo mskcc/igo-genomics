@@ -12,7 +12,7 @@
     "@handsontable/vue": "^5.1.0",
     "axios": "^0.21.0",
     "core-js": "^3.6.5",
-    "handsontable": "^8.2.0",
+    "handsontable": "^10.0.0",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "v-calendar": "^2.1.3",

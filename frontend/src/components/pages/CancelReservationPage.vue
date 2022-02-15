@@ -96,7 +96,7 @@ export default {
     app.axios
       .get(`${API_URL}/appointment/${this.id}`)
       .then((response) => {
-        this.appointment = response.data.appointment;
+        this.appointment = response.data.data.appointment;
       })
       .catch((error) => {
         this.$swal({ title: error.response.data.message, icon: 'error' });

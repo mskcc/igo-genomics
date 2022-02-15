@@ -119,7 +119,7 @@
                   >
                   <md-list-item class="md-inset">
                     <ol>
-                      <li>Fill out an iLab form for “Epigenetic Library Prep + Sequencing”</li>
+                      <li>Fill out an iLab form for "ATAC Prep + Sequencing”</li>
                       <li>
                         Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> indicating that you are submitting
                         "Cells" for "ATACSeq"
@@ -161,17 +161,17 @@
                         <ul>
                           <li>Single Cell Library Prep + Sequencing</li>
                           <li>Direct Library Prep</li>
+                          <li>Mission Bio Prep + Sequencing</li>
                         </ul>
                       </li>
                       <li>
                         Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting the appropriate application:
                         <ul>
-                          <li>10X_Genomics-GeneExpression-VDJ</li>
+                          <li>96Well_SmartSeq2</li>
                           <li>10X_Genomics-GeneExpression-5</li>
                           <li>10X_Genomics-GeneExpression-3</li>
                           <li>10X_Genomics_Multiome</li>
-                          <li>MissioBio-Heme</li>
-                          <li>MissionBio-Myeloid</li>
+                          <li>DLP</li>
                           <li>MissionBio-THS</li>
                           <li>MissionBio-Custom</li>
                         </ul>
@@ -193,7 +193,7 @@
                   <md-list-item class="md-inset"
                     ><ol>
                       <li>Contact MCC to discuss your needs to schedule your sample drop off</li>
-                      <li>Fill out an iLab form for “10x Visium – Spatial Transcriptomics”</li>
+                      <li>Fill out an iLab form for “10X Genomics Visium”</li>
                       <li>
                         Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> with “10X_Genomics-Visium” as your
                         application
@@ -212,8 +212,9 @@
                       <li>
                         Fill out an iLab request for the appropriate application
                         <ul>
-                          <li>Whole Exome Capture and Sequencing</li>
-                          <li>Human or Mouse – Whole Genome Sequencing</li>
+                          <li>Human Whole Exome Capture and Sequencing</li>
+                          <li>Mouse Whole Exome Capture and Sequencing</li>
+                          <li>Human or Mouse Whole Genome Library Prep + Sequencing</li>
                         </ul>
                       </li>
                       <li>
@@ -244,18 +245,17 @@
                       <li>
                         Fill out an iLab request for the appropriate application
                         <ul>
-                          <li>ACCESS Capture and Sequencing</li>
+                          <li>ACCESS Capture + Sequencing</li>
                           <li>Adaptive immunoSEQ</li>
                           <li>Amplicon Library Prep and Sequencing</li>
-                          <li>Bacterial/yeast Whole Genome Sequencing</li>
+                          <li>Bacterial/yeast Whole Genome Library Prep and Sequencing</li>
                           <li>CRISPR Sequencing</li>
                           <li>EPIC MethylCapture Seq</li>
-                          <li>Epigenetic Library Prep + Sequencing</li>
+                          <li>ChIP/CUT&RUN Library Prep + Sequencing</li>
                           <li>IMPACT/HemePACT/Custom Capture and Sequencing</li>
                           <li>Library Prep and Illumina Next-Gen Sequencing</li>
                           <li>Mouse-IMPACT</li>
                           <li>Shallow Whole Genome Sequencing for Copy Number</li>
-                          <li>Digital PCR</li>
                           <li>Cell Line Authentication & Fragment Analysis</li>
                         </ul>
                       </li>
@@ -281,7 +281,6 @@
                         Fill out an iLab request for the appropriate application
                         <ul>
                           <li>Archer Fusion</li>
-                          <li>Archer immunoverse</li>
                           <li>RNA Library Prep and Sequencing</li>
                         </ul>
                       </li>
@@ -307,7 +306,7 @@
                         <strong>If you are submitting for the first time or submitting a new construct:</strong> e-mail genomics@mskcc.org
                         with your protocol, a link to your reference, your primer barcodes, or a schematic of your construct
                       </li>
-                      <li>Fill out an iLab request for “User Libraries for Sequencing”</li>
+                      <li>Fill out an iLab request for "Investigator Prepared Libraries/Pools for Sequencing”</li>
                       <li>
                         Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request a plate.
                       </li>
@@ -333,7 +332,7 @@
                         <strong>If you are submitting for the first time or submitting a new construct:</strong> e-mail genomics@mskcc.org
                         with your protocol, a link to your reference, your primer barcodes, or a schematic of your construct
                       </li>
-                      <li>Fill out an iLab request for “User Libraries for Sequencing”</li>
+                      <li>Fill out an iLab request for “Investigator Prepared Libraries/Pools for Sequencing”</li>
                       <li>
                         Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request micronic
                         barcoded tube(s) for your pool(s).
@@ -359,9 +358,8 @@
                       <li>
                         Fill out an iLab form
                         <ul>
-                          <li>ACCESS Capture and Sequencing</li>
                           <li>IMPACT/HemePACT/Custom Capture and Sequencing</li>
-                          <li>Whole Exome Capture and Sequencing</li>
+                          <li>Human Whole Exome Capture and Sequencing</li>
                         </ul>
                       </li>
                       <li>

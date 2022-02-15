@@ -1,20 +1,8 @@
 <template>
   <div id="job-descriptions">
     <career-banner />
-    <md-card class="career-card">
-      <md-card-header>
-        <div class="md-title">Manager</div>
-        <router-link :to="{ name: 'team', params: { id: 7 } }">Research & Development</router-link>
-        <div class="md-body">Open!</div>
-        <!-- <div>Ref: 2021-48309</div> -->
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionRDM = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-48309-manager-research-and-development/" target="_blank" class="md-primary">Apply </md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="career-card">
+    
+     <md-card class="career-card">
       <md-card-header>
         <div class="md-title">Senior Research Technician</div>
         <router-link :to="{ name: 'team', params: { id: 5 } }">Sequencing Team</router-link>
@@ -29,28 +17,40 @@
 
     <md-card class="career-card">
       <md-card-header>
-        <div class="md-title">Research Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 4 } }">Nucleic Acid Team</router-link>
-        <div class="md-body">Coming soon</div>
+        <div class="md-title">Bioinformatics Software Engineer II</div>
+        <router-link :to="{ name: 'team', params: { id: 6 } }">Data Team</router-link>
+        <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescriptionNARA = true" class="md-accent">Learn More</md-button>
-        <md-button href="mailto:genomics@mskcc.org?subject=NA Research Assistant" target="_blank" class="md-primary">Inquire </md-button>
+        <md-button @click="showJobDescriptionCS = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-54188-bioinformatics-software-engineer-ii" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
 
     <md-card class="career-card">
       <md-card-header>
-        <div class="md-title">Bioinformatics Software Engineer</div>
-        <router-link :to="{ name: 'team', params: { id: 6 } }">Data Team</router-link>
-        <div class="md-body">Coming soon</div>
+        <div class="md-title">Research Assistant</div>
+        <router-link :to="{ name: 'team', params: { id: 4 } }">Nucleic Acids Team</router-link>
+        <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescriptionCS = true" class="md-accent">Learn More</md-button>
-        <md-button href="mailto:genomics@mskcc.org?subject=NA Research Assistant" target="_blank" class="md-primary">Inquire </md-button>
+        <md-button @click="showJobDescriptionNARA = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-54569-research-assistant/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
 
+    <md-card class="career-card">
+      <md-card-header>
+        <div class="md-title">Automation Engineer Assistant</div>
+        <router-link :to="{ name: 'team', params: { id: 1 } }">Lab Support</router-link>
+        <div class="md-body">Open!</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionAE = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-54064-automation-engineer/" target="_blank" class="md-primary">Apply</md-button>
+      </md-card-actions>
+    </md-card>
+    
     <md-dialog :md-active.sync="showJobDescriptionNARA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Technician in the Nucelic Acids team, you will:</strong>
@@ -58,7 +58,7 @@
           <li>Make NGS libraries from DNA and RNA libraries following established SOPs.</li>
           <li>Plan and pool NGS libraries to capture using requested gene panels.</li>
           <li>Load and run the liquid handlers according to pre-established robotic methods.</li>
-          <li>Review every step in the automated and/or manual process to maintain the high-quality standard.</li>
+          <li>Review every step in the automated and/or manual process to maintain high-quality standards.</li>
           <li>Assist group leader to create an efficient and error-proof workflow – and troubleshoot accordingly.</li>
           <li>Communicate with vendor technical support and sales representatives.</li>
           <li>Maintain and coordinate documentation for assay tracking and results for review/reporting through iLabs and LIMS.</li>
@@ -75,6 +75,32 @@
       </md-dialog-actions>
     </md-dialog>
 
+    <md-dialog :md-active.sync="showJobDescriptionAE" :md-fullscreen="false" style="z-index: 400;">
+      <md-dialog-content md-dynamic-height>
+        <strong>As an Automation Engineer Assistant in IGO, you will:</strong>
+        <ul>
+          <li>Test and execute automated assays in both 96- and 384-well plates.</li>
+          <li>Offer support to all lab members with their automation needs.</li>
+          <li>Implement recovery methodologies as necessary.</li>
+          <li>Train lab members to run robotic methods and help troubleshoot issues if any arise.</li>
+          <li>Maintain a LEAN workflow for all processes.</li>
+          <li>Support the Automation Engineer in all capacities as required.</li>
+          <li>Collaborate with bioininformatics software engineers and become familiar with Laboratory Information Management Systems (LIMS) to integrate into the automation.</li>
+          <li>Evaluate new equpiment and automated methodologies as required by the Automation Engineer.</li>
+          <li>Communicate with vendor technical support and sales representatives if necessary.</li>
+        </ul>
+        <strong>You have:</strong>
+        <ul>
+          <li>A Bachelor’s Degree in Biology or a related field with at least 3 years of relevant full-time experience or a Master's degree with 1 year full-time relevant experience.</li>
+          <li>Knowledge and expertise in scripting languages is a plus (e.g. VBScript, JavaScript).</li>
+          <li>Experience with Hamilton and Beckman equpiment, knowledge of basic Next Gen Sequencing workflows, and previous exposure to LIMS are welcome</li>
+        </ul>
+      </md-dialog-content>
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="showJobDescriptionAE = false">Close</md-button>
+      </md-dialog-actions>
+    </md-dialog>
+    
     <md-dialog :md-active.sync="showJobDescriptionNART" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Technician in the Library Preparation Team, you will:</strong>
@@ -226,7 +252,20 @@
 
     <md-dialog :md-active.sync="showJobDescriptionCS" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
-        <strong>Position description coming soon!</strong>
+        <strong>As a Bioinformatics Software Engineer II on the Data Team, you will:</strong>
+        <ul>
+          <li>Build user-friendly web applications using modern JavaScript frameworks (React, Vue.js), Node.js, and Python.</li>
+          <li>Clearly communicate project challenges and progress.</li>
+          <li>Ensure code is readable, maintainable, and stable through implementation of unit and end-to-end test.</li>
+          <li>Follow programming best practices and work collaboratively in-person and through GitHub.</li>
+        </ul>
+        <strong>You have:</strong>
+        <ul> 
+          <li>A Bacherlor's degree in Computer Science, Bioinformatics, or other applied science or equivalent experience</li>
+          <li>3 years of software development experience</li>
+          <li>Experience working with web technologies including but not limited to HTML, CSS, JavaScript, React, and Python</li>
+          <li>Experience with relational databases and/or non-relational databases (MySQL, MongoDB)</li>
+        </ul>
       </md-dialog-content>
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionCS = false">Close</md-button>
@@ -252,6 +291,7 @@ export default {
       showJobDescriptionNART: false,
       showJobDescriptionSeqSRT: false,
       showJobDescriptionCS: false,
+      showJobDescriptionAE: false,
     };
   },
 };
