@@ -18,7 +18,7 @@ test_host:
 	if [[ "$(HOST)" != "" ]]; then echo "Deploying to $(HOST)"; else printf "\nPlease specify HOST, e.g.\n\t'make HOST=igo.mskcc.org deploy'\n\n" && exit 1; fi
 
 install:
-	ssh $(HOST) 'dzdo -S rm -rf /srv/www/genomics && mv ~/deployments/genomics /srv/www && cd /srv/www/genomics/public && dzdo pm2 restart genomics'
+	ssh $(HOST) 'dzdo -S rm -rf /srv/www/genomics && mv ~/deployments/genomics /srv/www && dzdo pm2 restart genomics'
 
 deploy:
 	make HOST=$(HOST) test_host && \
