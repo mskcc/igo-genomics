@@ -73,7 +73,7 @@ export default {
   },
   mounted: function() {
     app.axios.get(`${API_URL}/allAppointments`).then((response) => {
-      this.appointments = response.data.appointments;
+      this.appointments = response.data.data.appointments;
       this.searched = this.appointments;
     });
   },

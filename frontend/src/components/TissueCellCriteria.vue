@@ -81,7 +81,7 @@
         <md-table-cell rowspan="2">Direct Library Prep (DLP)</md-table-cell>
         <md-table-cell>Single cell suspension</md-table-cell>
         <md-table-cell>PBS + 0.04% BSA</md-table-cell>
-        <md-table-cell rowspan="2">1.5mL Eppendorf tube</md-table-cell>
+        <md-table-cell rowspan="2">Cryovial</md-table-cell>
         <md-table-cell>4&deg;C</md-table-cell>
         <md-table-cell rowspan="2">> 100K cells</md-table-cell>
       </md-table-row>
