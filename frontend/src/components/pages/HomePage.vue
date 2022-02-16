@@ -4,8 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        IGO will be closed on 12/24 and 12/31, and will not be accepting new submissions or processing samples from 12/27 - 12/30. Normal
-        hours will resume Monday, January 3<sup>rd</sup>.
+        We are now requiring FFPE curls and punches be submitted in AutoLys tubes provided by IGO. Tubes can be requested <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/80XW74xHNEOAJNpvnf5-hg2" target="__blank">here</a>.
       </span>
     </div>
 
@@ -47,7 +46,7 @@ export default {
     return {
       igoDescription:
         'The Integrated Genomics Operation (IGO) core enables basic, clinical, and translational science by providing a broad range of services and expertise to investigators interested in evaluating gene expression, chromosome structure, and nucleotide sequence. Our services are comprehensive, rapid, and user-friendly. Through the centralized management of all sequencing activities at MSK, the core empowers scientists with an array of technological options and the most efficient and cost-effective means of performing high-throughput genomics.',
-      announcement: false,
+      announcement: true,
       spmCalendar: SPM_CALENDAR,
       scCalendar: SC_CALENDAR,
     };

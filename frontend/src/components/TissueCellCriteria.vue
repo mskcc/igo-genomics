@@ -116,7 +116,7 @@
         <md-table-cell rowspan="2">5-8 sections of 10mm; 10-15 sections of 5-10mm; 20-25 sections of&lt;5mm; 10&mu;m thick</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell>curls/punches in 1.5mL Eppendorf tube</md-table-cell>
+        <md-table-cell>curls/punches in AutoLys tubes</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>Blood<sup>b<md-tooltip v-if="footnotes.b" md-direction="right" v-html="footnotes.b">{{ footnotes.b }}</md-tooltip></sup></md-table-cell>
@@ -225,7 +225,7 @@
       </md-table-row>
       <md-table-row>
         <md-table-cell>FFPE curls/punches</md-table-cell>
-        <md-table-cell>1.5mL Eppendorf tube</md-table-cell>
+        <md-table-cell>AutoLys tubes</md-table-cell>
         <md-table-cell>4&deg;C</md-table-cell>
       </md-table-row>
       <md-table-row>

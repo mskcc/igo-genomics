@@ -1,18 +1,6 @@
 <template>
   <div id="job-descriptions">
     <career-banner />
-    
-    <md-card class="career-card">
-      <md-card-header>
-        <div class="md-title">Software Engineer II (JavaScript/Python)</div>
-        <router-link :to="{ name: 'team', params: { id: 7 } }">Data Team</router-link>
-        <div class="md-body">Open!</div>
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionDataSEII = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/jobs/job-details/2021-54188-software-engineer-ii-javascriptpython/" target="_blank" class="md-primary">Apply</md-button>
-      </md-card-actions>
-    </md-card>
 
     <md-card class="career-card">
       <md-card-header>
@@ -278,7 +266,7 @@
       </md-dialog-actions>
     </md-dialog> -->
 
-    <md-dialog :md-active.sync="showJobDescriptionDataSEII" :md-fullscreen="false" style="z-index: 400;">
+    <!-- <md-dialog :md-active.sync="showJobDescriptionDataSEII" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Software Engineer II on the Data Team, you will:</strong>
         <ul>
@@ -298,7 +286,7 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionDataSEII = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog>
+    </md-dialog> -->
 
   </div>
 </template>
@@ -318,7 +306,7 @@ export default {
       showJobDescriptionSeqRA: false,
       // showJobDescriptionNART: false,
       // showJobDescriptionSeqSRT: false,
-      showJobDescriptionDataSEII: false,
+      // showJobDescriptionDataSEII: false,
       // showJobDescriptionAE: false,
       showJobDescriptionSPMPM: false,
     };

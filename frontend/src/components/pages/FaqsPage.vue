@@ -143,7 +143,7 @@
                               <li>Cell pellets</li>
                               <li>Frozen tissue</li>
                               <li>OCT blocks</li>
-                              <li>FFPE tissue (slides, curls, or punches)</li>
+                              <li>FFPE tissue (slides or curls or punches in AutoLys tubes)</li>
                               <li>Cells in 1mL TRIzol</li>
                               <li>Cells in DMSO freezing media</li>
                               <li>Cells sorted into 750μL TRIzol LS + 250μL PBS</li>
@@ -182,7 +182,7 @@
                               <li>Cells in DMSO/DMEM freezing medium</li>
                               <li>Frozen tissue</li>
                               <li>OCT tissue (blocks or curls)</li>
-                              <li>FFPE tissue (slides, blocks, curls, or punches)</li>
+                              <li>FFPE tissue (slides, blocks, or curls or punches in AutoLys tubes)</li>
                               <li>Blood in EDTA tubes</li>
                               <li>Blood in Streck tubes (for cfDNA)</li>
                               <li>PBMCs/buffy coats in micronic tubes</li>
