@@ -279,6 +279,7 @@ export const teams = [
     description:
       'The Researh & Development team develops, tests, and implements new genomics platforms for the MSKCC community. In addition to testing off-the-shelf assays, our group works with MSK investigators to bring customized platforms to IGO.',
     members: [
+      { name: 'Stephanie Chrysanthou', role: 'Manager, IGO', photoName: 'Chrysanthou_Stephanie' },
       { name: 'Juan Li', role: 'Manager, IGO', photoName: 'Li_Juan' },
       { name: 'Cassidy Illum', role: 'Research Technician', photoName: 'Illum_Cassidy' },
       
