@@ -14,7 +14,7 @@
           <md-list-item class="indent" href="#multiome">10X Genomics Multiome</md-list-item>
           <md-list-item class="indent" href="#mbtapestri">Mission Bio Tapestri</md-list-item>
           <md-list-item class="indent" href="#dlp">Direct Library Prep (DLP)</md-list-item>
-          <md-list-item class="indent" href="#visium">10X Visium Processing & Price Summary</md-list-item>
+          <md-list-item class="indent" href="#visium">10X Genomics Visium</md-list-item>
           <md-list-item class="indent" href="#geomx">Nanostring GeoMx</md-list-item>
           <md-list-item :to="{ name: 'platforms & pricing' }">Pricing</md-list-item>
           <md-list-item :to="{ name: 'submission guidelines' }">How to submit samples</md-list-item>
@@ -167,7 +167,24 @@
 
         <md-divider></md-divider>
 
-        <ten-x-table id="visium" />
+        <div class="md-title" id="visium">10X Genomics Visium</div>
+        <ul>
+          <li>Input: Frozen or FFPE blocks</li>
+          <li>Output: FASTQ, Space Ranger count output</li>
+          <li>
+            Considerations:
+            <ul>
+              <li>Each slide has four squares available for tissue sections, each 6.5x6.5mm -- we recommend tissues are processed in duplicate, at two samples per slide</li>
+              <li>We strongly recommend test stainings to ensure structures are visible and cells of interest are part of the usable section.</li>
+              <li>IGO works in collaboration with MCC to prepare these samples and MCC bills services separately from IGO.</li>
+              <li>Permeabilization optimization is only necessary with frozen tissue.</li>
+              <li>From frozen tissue, all polyadenylated mRNA can be captured by the poly-dT primers; for FFPE a whole transcriptome (human or mouse) probeset is used to capture RNA.</li>
+              <li>FFPE requires about half the reads of frozen, so sequencing costs will be reduced for FFPE (see below for a cost breakdown).</li>
+            </ul>
+          </li>
+        </ul>
+
+        <ten-x-table />
 
         <md-divider></md-divider>
 
