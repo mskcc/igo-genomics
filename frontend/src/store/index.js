@@ -17,6 +17,7 @@ export default new Vuex.Store({
     teamNamesInIgo: [
       'Leadership',
       'Lab Support',
+      'Automation',
       'SPM',
       'EXPAND',
       'Single Cell',
