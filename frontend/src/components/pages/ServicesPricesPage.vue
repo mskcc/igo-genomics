@@ -75,7 +75,7 @@
                         <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostFfpe')">Cost Per Sample (PCR+)</md-table-head>
                         <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostWet')">Wet Lab Cost</md-table-head>
                         <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostDry')">Dry Lab Cost</md-table-head>
-                        <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('totalCost')">Total Cost</md-table-head>
+                        <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('totalCost')" class="highlight-column">Total Cost</md-table-head>
                         <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('platform')">Platform</md-table-head>
                         <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('sequencingDetails')">Sequencing Details</md-table-head>
                         <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('deliverable')">Deliverable</md-table-head>
@@ -94,7 +94,7 @@
                         <md-table-cell md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostFfpe')">${{ row.sampleCostFfpe }}</md-table-cell>
                         <md-table-cell md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostWet')">${{ row.sampleCostWet }}</md-table-cell>
                         <md-table-cell md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostDry')">${{ row.sampleCostDry }}</md-table-cell>
-                        <md-table-cell md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('totalCost')">${{ row.totalCost }}</md-table-cell>
+                        <md-table-cell md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('totalCost')" class="highlight-column">${{ row.totalCost }}</md-table-cell>
                         <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('platform')">{{ row.platform }}</md-table-cell>
                         <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('sequencingDetails')">{{ row.sequencingDetails }}</md-table-cell>
                         <md-table-cell v-if="service.tableHeaders && service.tableHeaders.includes('deliverable')">{{ row.deliverable }}</md-table-cell>

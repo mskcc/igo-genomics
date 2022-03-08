@@ -25,8 +25,8 @@ import RnaCriteria from './components/RnaCriteria.vue';
 import OtherCriteria from './components/OtherCriteria.vue';
 import TissueCriteria from './components/TissueCellCriteria.vue';
 import MetricsAndThroughputPage from './components/pages/MetricsAndThroughputPage.vue';
-import ReservationPage from './components/pages/ReservationPage.vue';
-import CancelReservationPage from './components/pages/CancelReservationPage.vue';
+// import ReservationPage from './components/pages/ReservationPage.vue';
+// import CancelReservationPage from './components/pages/CancelReservationPage.vue';
 import ChemistryTimelinePage from './components/pages/ChemistryTimelinePage.vue';
 import CareersPage from './components/pages/CareersPage.vue';
 import SingleCellHub from './components/pages/SingleCellHub.vue';
@@ -148,8 +148,8 @@ const routes = [
   { path: '/igo-tutorials/:name', component: ShowVideoPage, name: 'show video', props: true },
   { path: '/archer-fusion', component: ArcherFusionPage, name: 'archer fusion' },
   { path: '/metrics-and-throughput', component: MetricsAndThroughputPage, name: 'metrics and throughput' },
-  { path: '/reservations', component: ReservationPage, name: 'reservations' },
-  { path: '/reservations/cancel/:id', component: CancelReservationPage, name: 'cancel reservation', props: true },
+  // { path: '/reservations', component: ReservationPage, name: 'reservations' },
+  // { path: '/reservations/cancel/:id', component: CancelReservationPage, name: 'cancel reservation', props: true },
   { path: '/chemistry-timeline', component: ChemistryTimelinePage, name: 'chemistry timeline' },
 
   { path: '/careers', component: CareersPage, name: 'careers' },

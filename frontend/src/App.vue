@@ -66,28 +66,49 @@
                   </router-link>
                 </md-menu-item>
 
+                 <md-menu-item class="md-ripple nav-button">
+                  <md-menu md-size="auto" :md-offset-x="-200" :md-offset-y="-36">
+                    <md-button md-menu-trigger>Reservations</md-button>
+                    <md-menu-content class="tools-menu">
+                      <md-menu-item>
+                        <md-button :href="spmCalendar" target="_blank">
+                          <i class="far fa-box-open"></i> Container pickup
+                        </md-button>
+                      </md-menu-item>
+                       <md-menu-item>
+                        <md-button :href="spmCalendar" target="_blank">
+                          <i class="fas fa-vials"></i> Sample Drop Off
+                        </md-button>
+                      </md-menu-item>
+                      <md-menu-item>
+                        <md-button :href="scCalendar" target="_blank"> <i class="fas fa-vial"></i> Fresh Single Cell</md-button>
+                      </md-menu-item>
+                    </md-menu-content>
+                  </md-menu>
+                </md-menu-item>
+
                 <md-menu-item class="md-ripple nav-button">
-                  <md-menu md-size="auto" :md-offset-x="400" :md-offset-y="-36">
+                  <md-menu md-size="auto" :md-offset-x="-250" :md-offset-y="-36">
                     <md-button md-menu-trigger>IGO Marketplace <i class="fas fa-external-link-alt"></i></md-button>
                     <md-menu-content class="tools-menu">
                       <md-menu-item>
-                        <md-button href="https://igo.mskcc.org/sample-submission">
+                        <md-button href="https://igo.mskcc.org/sample-submission" target="_blank">
                           <i class="fas fa-upload"></i> Sample Submission
                         </md-button>
                       </md-menu-item>
                       <md-menu-item>
-                        <md-button href="https://igo.mskcc.org/request-tracker"> <i class="fas fa-tasks"></i> Request Tracker </md-button>
+                        <md-button href="https://igo.mskcc.org/request-tracker" target="_blank"> <i class="fas fa-tasks"></i> Request Tracker </md-button>
                       </md-menu-item>
 
                       <md-menu-item>
-                        <md-button href="https://igo.mskcc.org/sample-qc">
+                        <md-button href="https://igo.mskcc.org/sample-qc" target="_blank">
                           <i class="fas fa-check"></i>
                           Sample QC
                         </md-button>
                       </md-menu-item>
                       <md-menu-item>
-                        <md-button href="https://igo.mskcc.org/swabnseq">
-                          <i class="fas fa-dna"></i>
+                        <md-button href="https://igo.mskcc.org/swabnseq" target="_blank">
+                          <i class="far fa-barcode-read"></i>
                           Swab 'n Seq Results
                         </md-button>
                       </md-menu-item>
@@ -116,6 +137,8 @@
 </template>
 
 <script>
+import { SPM_CALENDAR, SC_CALENDAR } from './config.js';
+
 export default {
   name: 'App',
   mounted() {
@@ -124,6 +147,8 @@ export default {
   },
   data: function() {
     return {
+      spmCalendar: SPM_CALENDAR,
+      scCalendar: SC_CALENDAR,
       showNavigation: false,
       links: ['home', 'about', 'platforms & pricing', 'submission guidelines', 'sample requirements', 'faqs'],
       mobileLinks: [
@@ -145,7 +170,6 @@ export default {
         'ddpcr assays',
         'igo tutorials',
         'metrics and throughput',
-        'reservations',
         'single cell hub',
       ],
       toolsIsActive: [
@@ -157,7 +181,6 @@ export default {
         'rna',
         'other',
         'metrics and throughput',
-        'reservations',
       ].includes(this.$route.name),
       teamIsActive: this.$route.path.includes('about'),
       platformsIsActive: this.$route.path === '/platforms',
