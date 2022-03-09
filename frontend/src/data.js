@@ -181,16 +181,24 @@ export const teams = [
     name: 'Lab Support',
     description:
       'As a large, high-throughput facility constantly striving for technical excellence and exemplary customer service, IGO has several employees who work between and among teams and directly with investigators.',
-    members: [
-      { name: 'Alan Li', role: 'Automation Engineer', photoName: 'Li_Alan' },
+    members: [      
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
       { name: 'Magali Cavatore', role: 'Lab Manager', photoName: 'Cavatore_Magali' },
       { name: 'Mary Betancor', role: 'SKI Administrative Assistant II', photoName: 'Betancor_Mary' },
-      // { name: 'Position Open!', role: 'Automation Engineer Assistant' },
     ],
   },
   {
     id: 2,
+    name: 'Automation',
+    description:
+      "In order to process hundreds of samples per day and maintain consistent protocols between batches, IGO operates 10 liquid handling robots. The Automation team is responsible for maintaining those instruments, training technicians in their use, and developing all programming for IGO's many platforms.",
+    members: [
+      { name: 'Alan Li', role: 'Sr. Automation Engineer', photoName: 'Li_Alan' },
+      { name: 'Elevit Perez', role: 'Automation Engineer', photoName: 'Perez_Elevit' },
+    ],
+  },
+  {
+    id: 3,
     name: 'SPM',
     description:
       'The Sample & Project Management team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
@@ -204,10 +212,10 @@ export const teams = [
     ],
   },
   {
-    id: 3,
-    name: 'EXPAND',
+    id: 4,
+    name: 'EXPAnD',
     description:
-      'EXPAND stands for: Extraction, pathology, Archer DX, and digital droplet PCR, but also literally refers to their interest in integrating new platforms and advancing research technology to remain at the cutting edge for our users. The EXPAND team draws upon IGO’s philosophy of constant and open communication and aims to join you in detailed, scientific discussions about your projects, to meet your needs and to work together to advance science, building long-term, trusting relationships in the process.',
+      'EXPAnD stands for: Extraction, pathology, Archer DX, and digital droplet PCR, but also literally refers to their interest in integrating new platforms and advancing research technology to remain at the cutting edge for our users. The EXPAND team draws upon IGO’s philosophy of constant and open communication and aims to join you in detailed, scientific discussions about your projects, to meet your needs and to work together to advance science, building long-term, trusting relationships in the process.',
     members: [
       { name: 'Andrea Farina', role: 'Manager, IGO', photoName: 'Farina_Andrea' },
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
@@ -220,7 +228,7 @@ export const teams = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     name: 'Single Cell',
     description:
       "The Single Cell team receives fresh and frozen samples for IGO's 10X Genomics, DLP, and MissionBio platforms. They use a mix of manual and automated techniques to help investigators achieve the best single cell data possible.",
@@ -233,13 +241,12 @@ export const teams = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     name: 'Library Prep',
     description:
       "The Library Preparation team handles the bulk of IGO's sample processing, utilizing liquid-handling robots to automate many platforms.",
     members: [
       { name: 'Ruchi Patel', role: 'Manager, IGO', photoName: 'Patel_Ruchi' },
-      { name: 'Elevit Perez', role: 'Senior Research Technician', photoName: 'Perez_Elevit' },      
       { name: 'Kalliopi Chatzis', role: 'Research Assistant', photoName: 'Chatzis_Kalliopi' },
       { name: 'Katherine Allard', role: 'Research Assistant', photoName: 'Allard_Katherine' },
       { name: 'Satoko Murakami', role: 'Research Assistant', photoName: 'Murakami_Satoko' },
@@ -247,7 +254,7 @@ export const teams = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     name: 'Sequencing',
     description:
       "The Sequencing Team performs all activities related to Illumina sequencing, including quantity and quality assessment of libraries, pooling, and preparation for sequencing. The team is also responsible for the care & feeding of IGO's 8 sequencing instruments.",
@@ -259,7 +266,7 @@ export const teams = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     name: 'Data',
     description:
       "The IGO Data Team is a group of bioinformaticians, software engineers, and computer scientists.  They work closely with IGO's investigators and wet-lab technicians to write multiple software applications from sample receiving and LIMS processing to post-sequencing stats tracking and data delivery.",
@@ -274,7 +281,7 @@ export const teams = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     name: 'R&D',
     description:
       'The Researh & Development team develops, tests, and implements new genomics platforms for the MSKCC community. In addition to testing off-the-shelf assays, our group works with MSK investigators to bring customized platforms to IGO.',

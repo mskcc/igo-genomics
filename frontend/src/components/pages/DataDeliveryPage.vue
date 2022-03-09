@@ -5,6 +5,7 @@
         <md-list class="md-dense">
           <md-list-item :to="{ name: 'accessing your data' }"> Data Delivery</md-list-item>
           <md-list-item class="indent" href="#instructions">Instructions on accessing your FASTQ files</md-list-item>
+          <md-list-item class="indent" href="#sharing">Sharing data with collaborators</md-list-item>
           <md-list-item class="indent" href="#data-delivery-structure">Data delivery structure</md-list-item>
           <md-list-item class="indent" href="#10x-and-missionbio">10X Genomics & MissionBio pipeline output</md-list-item>
           <md-list-item class="indent" href="#data-storage">Data Storage</md-list-item>
@@ -13,6 +14,9 @@
 
       <md-app-content>
         <div class="md-title" id="instructions">Instructions on accessing your FASTQ files</div>
+        <p>
+          You must have an HPC ID before you will be able to mount the share drive. For investigators who do not need to use the cluster or other HPC resources, this ID is still required, but is limited to allowing you to map a network drive. If you aren't sure if you have this ID, please <a href="mailto:genomics@mskcc.org">contact us</a>. The instructions below <i>will not work</i> without this step.
+        </p>
         <div class="md-subheading">From a PC:</div>
         <ul>
           <li>Open File Explorer from the taskbar or the Start menu, or press the Windows logo key + E.</li>
@@ -40,14 +44,44 @@
           <li>Rsync the data to its final destination</li>
         </ul>
         <p>
-          If you cannot access your data or need to grant access to a collaborator or data analyst (internal or external) or an MSKCC core,
-          please fill out
-          <a href="https://my.ilabsolutions.com/service_center/3276/?tab=services">the "Data Access Request" iLab form</a>
+          If you need to grant access to a collaborator or data analyst (internal or external) or an MSKCC core,
+          please see the section below on data sharing.
         </p>
         <p>
           If you want to understand more about the data storage structure, are having difficulties locating your data, or have other
           questions
           <a href="mailto:zzPDL_SKI_IGO_DATA@mskcc.org?subject=Data questions">contact the Data Team.</a>
+        </p>
+        
+        <md-divider></md-divider>
+
+        <div class="md-title" id="sharing">Sharing your data with collaborators</div>
+        <div class="md-subheading">Before submission:</div>
+        <p>
+          The mskcc.org e-mail addresses of all internal collaborators or lab members who need to be able to access your FASTQ files or pipeline results (if applicable) should be included in the "Data Access" section of your iLab request.
+        </p>
+        <p>
+          If you plan to request analysis services from the Bioinformatics Core, please make sure you have selected the "Institutional Support" option on your iLab request.
+        </p>
+        <p>
+          If your data will be shared externally, please notify Sample & Project Management at drop-off so that arrangements can be made.
+        </p>
+        <div class="md-subheading">Internal collaborators:</div>
+        <ul>
+          <li>Include mskcc.org e-mail addresses in the "Data Access" field in iLab </li>
+          <li>After data delivery, request retrospective access <a href="https://my.ilabsolutions.com/service_center/3276/?tab=services">in iLab</a> under the "Post-processing services" heading</li>
+        </ul>
+        <div class="md-subheading">External collaborators:</div>
+        <p>
+          For projects less than 200GB, you can transfer FASTQ files via Box, Gsuite, or Go-Anywhere. Please see the <a href="https://actg.mskcc.org/hpc/external-collaborators">ACTG website</a> for more information and links to request accounts.
+
+          For larger requests, files can be transferred via QBio:
+          <ul>
+            <li>Fill out <a href="https://actg.mskcc.org/contact-data-sharing-form/">this form</a></li>
+            <li>Under Data Management, check "IGO will be uploading the data to qbio"</li>
+            <li>Indicate that Darrell Nabors, naborsd@mskcc.org, will be managing the data</li>
+            <li>If you're unsure of the amount of data to share, please contact us</li>
+          </ul>
         </p>
         
         <md-divider></md-divider>
