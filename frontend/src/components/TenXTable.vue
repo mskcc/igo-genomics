@@ -27,7 +27,7 @@
       <md-table-row>
         <md-table-cell rowspan="2" style="background:#8fc7e8">MCC</md-table-cell>
         <md-table-cell>Preparation of tissue optimization slide</md-table-cell>
-        <md-table-cell rowspan="6">Permeabilization Optimization $900*</md-table-cell>
+        <md-table-cell rowspan="6">Permeabilization Optimization $900* (frozen tissue only)</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>H&E stain + imaging</md-table-cell>

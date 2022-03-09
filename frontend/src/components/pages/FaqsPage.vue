@@ -73,20 +73,6 @@
                     </md-list-item>
                     <md-list-item md-expand class="md-inset">
                       <md-icon>add</md-icon>
-                      <span class="md-list-item-text">I don’t know the COVID19 status of my human samples. Can I submit them?</span>
-                      <md-list slot="md-expand">
-                        <md-list-item>
-                          <div>
-                            We cannot accept human samples collected after December 2019 unless the patient has been screened for COVID19.
-                            We offer RNA extraction specifically for COVID19 testing, which you can submit to determine status before
-                            starting your project. Submission instructions are
-                            <router-link :to="{ name: 'submission guidelines' }">here</router-link>.
-                          </div>
-                        </md-list-item>
-                      </md-list>
-                    </md-list-item>
-                    <md-list-item md-expand class="md-inset">
-                      <md-icon>add</md-icon>
                       <span class="md-list-item-text">I want to sequence a tumor sample for a patient. How do I know if there is a normal available?</span>
                       <md-list slot="md-expand">
                         <md-list-item>

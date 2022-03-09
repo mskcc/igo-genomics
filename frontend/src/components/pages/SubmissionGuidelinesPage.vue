@@ -90,30 +90,6 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text ">Tissue or cells for COVID screening</span>
-                <md-list slot="md-expand">
-                  <md-list-item class="md-inset">
-                    <ol>
-                      <li>Submit an iLab request for “RNA Extraction for COVID Screening”</li>
-                      <li>
-                        Complete the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting “COVID19” as your
-                        application
-                      </li>
-                      <li>
-                        Schedule a sample drop off time on the
-                        <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a> -- note that COVID
-                        screening is only run on Wednesdays
-                      </li>
-                      <ul>
-                        <li><strong>Cells</strong> should be suspended in >250µL 100% PBS and dropped off Wednesday before 10am</li>
-                        <li><strong>Tissue</strong> should be dropped off Tuesday before 11am</li>
-                      </ul>
-                    </ol>
-                  </md-list-item>
-                </md-list>
-              </md-list-item>
-              <md-list-item md-expand>
-                <md-icon>add</md-icon>
                 <span class="md-list-item-text ">Cells for ATAC-Seq</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset"
