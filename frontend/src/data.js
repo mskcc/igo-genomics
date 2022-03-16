@@ -193,7 +193,7 @@ export const teams = [
     description:
       "In order to process hundreds of samples per day and maintain consistent protocols between batches, IGO operates 10 liquid handling robots. The Automation team is responsible for maintaining those instruments, training technicians in their use, and developing all programming for IGO's many platforms.",
     members: [
-      { name: 'Alan Li', role: 'Sr. Automation Engineer', photoName: 'Li_Alan' },
+      { name: 'Alan Li', role: 'Lead Automation Engineer', photoName: 'Li_Alan' },
       { name: 'Elevit Perez', role: 'Automation Engineer', photoName: 'Perez_Elevit' },
     ],
   },
