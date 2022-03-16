@@ -46,9 +46,10 @@ exports.sendBookingNotification = function (appointment, appointmentIcal) {
     options
   );
 
-  if (process.env.ENV === 'development') {
+  if (process.env.ENV !== 'production') {
     recipients = [
-      'patrunoa@mskcc.org,apatruno618@gmail.com',
+      // msk inboxes don't receive emails during local development, replace non-msk email addresses with your own
+      'skigodata@mskcc.org,apatruno618@gmail.com',
       appointment.email,
     ];
     // subject = `[IGO Reservation TEST] Drop-off samples at: ${appointment.emailTime} on ${appointment.notificationDate}`;
@@ -101,9 +102,10 @@ exports.sendBookingNotification = function (appointment, appointmentIcal) {
 exports.sendCancellationNotification = function (appointment) {
   let recipients;
   let subject;
-  if (process.env.ENV === 'development') {
+  if (process.env.ENV !== 'production') {
     recipients = [
-      'patrunoa@mskcc.org,apatruno618@gmail.com',
+      // msk inboxes don't receive emails during local development, replace non-msk email addresses with your own
+      'skigodata@mskcc.org,apatruno618@gmail.com',
       appointment.email,
     ];
     subject = `[IGO Reservation TEST] ${appointment.requestType} Reservation Cancelled`;
