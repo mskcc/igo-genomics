@@ -1,7 +1,7 @@
 <template>
   <div>
     <md-empty-state
-      v-if="env === 'prod'"
+      v-if="env === 'production'"
       class="md-primary"
       md-rounded
       md-icon="flight_takeoff"
