@@ -5,11 +5,11 @@ clean:
 build-fe:
 	cd frontend && \
 	npm install && \
-	NODE_ENV=$(ENV) npm run build && \
+	NODE_ENV=$(ENV) npm run $(ENV) && \
 	cd -
 
 move-fe:
-	mv frontend/dist backend/public
+	mv frontend/dist/ backend/public
 
 move:
 	scp -r backend $(HOST):deployments/genomics
