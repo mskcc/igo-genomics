@@ -15,12 +15,11 @@ var mongoose = require('mongoose');
 mongoose
   .connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
-    //don't show the log when it is test
-    if (process.env.NODE_ENV !== 'test') {
-      console.log('Connec  ted to %s', MONGODB_URL);
+    // make sure we're connected to mongo
+      console.log(process.env.ENV);
+      console.log('Connected to %s', MONGODB_URL);
       console.log('App is running ... \n');
       console.log('Press CTRL + C to stop the process. \n');
-    }
   })
   .catch((err) => {
     console.error('App starting error:', err.message);
@@ -43,7 +42,8 @@ mongoose
 //   })
 // );
 
-if (process.env.ENV === 'development') {
+if (process.env.ENV !== 'production') {
+  // better for development because its less verbose
   app.use(morgan('common'));
 } else {
   app.use(morgan('combined'));
