@@ -53,7 +53,7 @@ export default {
   },
   mounted: function() {
     app.axios
-      .get(`${API_URL}/feedback/allFeedback`)
+      .get(`${API_URL}/allFeedback`)
       .then((response) => {
         this.feedback = response.data.data;
       })

@@ -14,8 +14,8 @@
           <md-list-item class="indent" href="#multiome">10X Genomics Multiome</md-list-item>
           <md-list-item class="indent" href="#mbtapestri">Mission Bio Tapestri</md-list-item>
           <md-list-item class="indent" href="#dlp">Direct Library Prep (DLP)</md-list-item>
-          <md-list-item class="indent" href="#visium">10X Visium Processing & Price Summary</md-list-item>
-          <!-- <md-list-item class="indent" href="#geomx">Nanostring GeoMx</md-list-item> -->
+          <md-list-item class="indent" href="#visium">10X Genomics Visium</md-list-item>
+          <md-list-item class="indent" href="#geomx">Nanostring GeoMx</md-list-item>
           <md-list-item :to="{ name: 'platforms & pricing' }">Pricing</md-list-item>
           <md-list-item :to="{ name: 'submission guidelines' }">How to submit samples</md-list-item>
           <md-list-item><a :href="scCalendar" target="__blank">Make a reservation for sample drop off</a></md-list-item>
@@ -167,17 +167,42 @@
 
         <md-divider></md-divider>
 
-        <ten-x-table id="visium" />
+        <div class="md-title" id="visium">10X Genomics Visium</div>
+        <ul>
+          <li>Input: Frozen or FFPE blocks</li>
+          <li>Output: FASTQ, Space Ranger count output</li>
+          <li>
+            Considerations:
+            <ul>
+              <li>Each slide has four squares available for tissue sections, each 6.5x6.5mm -- we recommend tissues are processed in duplicate, at two samples per slide</li>
+              <li>We strongly recommend test stainings to ensure structures are visible and cells of interest are part of the usable section.</li>
+              <li>IGO works in collaboration with MCC to prepare these samples and MCC bills services separately from IGO.</li>
+              <li>Permeabilization optimization is only necessary with frozen tissue.</li>
+              <li>From frozen tissue, all polyadenylated mRNA can be captured by the poly-dT primers; for FFPE a whole transcriptome (human or mouse) probeset is used to capture RNA.</li>
+              <li>FFPE requires about half the reads of frozen, so sequencing costs will be reduced for FFPE (see below for a cost breakdown).</li>
+            </ul>
+          </li>
+        </ul>
 
-        <!-- <span class="md-list-item-text md-title" id="geomx">Nanostring GeoMx</span>
-        <md-list slot="md-expand">
-          <md-list-item>
-            <div class="md-layout md-gutter">
-              <div class="md-layout-item">Sample type</div>
-              <div class="md-layout-item">Info type</div>
-            </div>
-          </md-list-item>
-        </md-list> -->
+        <ten-x-table />
+
+        <md-divider></md-divider>
+
+        <div class="md-title" id="geomx">Nanostring GeoMx</div>
+        <ul>
+          <li>Input: FFPE slides</li>
+          <li>Output: FASTQ + GeoMx pipeline</li>
+          <li>Considerations:
+            <ul>
+              <li>We highly recommend that slides be test-stained and visualized before beginning a GeoMx experiment, to ensure that regions of interest are distinct and present</li>
+              <li>While Nanostring-validated morphological staining panels need little optimization, custom panels likely will</li>
+              <li>If selected regions are too small and not enough RNA can be collected, library prep will fail, so we have a 200 micron minimum for ROI circumference</li>
+              <li>ROI size may need to be increased if the targeted cell type (CD45+, for instance) is rarer in the region</li>
+              <li>Multiple areas of interest can be harvested from a single region: for example, from a single ROI, CD45+, tumor, and TME cells can be separately harvested for 3 AOIs</li>
+              <li>Sequencing depth is based on Nanostring recommendations for each panel, but experimental needs can vary</li>
+            </ul>
+          </li>
+        </ul>
       </md-app-content>
     </md-app>
   </div>

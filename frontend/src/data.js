@@ -1,5 +1,14 @@
 export const news = [
   {
+    title: 'NEW at IGO: Nanostring GeoMx Spatial Transcriptomics',
+    date: 'December 22, 2021',
+    imgSource: 'geomx',
+    categories: ['featured'],
+    body: `<p>
+    IGO is now accepting samples for Nanostring GeoMx, a probe-based, targeted RNA-Seq platform optimized for FFPE slides. GeoMx allows for morphologically-stained slides to be scanned and for specific regions of interest to be selected by the investigator for precise targeting of tumor or TME (including both cell types from the same region). Customization is available both for the morphological staining and the RNA targeted. See more information in our <a href="https://genomics.mskcc.org/single-cell-hub">Single Cell Hub</a>, and contact us at genomics@mskcc.org to discuss your experiment.
+  </p>`,
+  },
+  {
     title: 'Coming Soon: Oxford Nanopore PromethION',
     date: 'November 29, 2021',
     imgSource: 'promethion',
@@ -22,7 +31,7 @@ export const news = [
     date: 'October 11, 2021',
     // imgSource: 'IMG_20191031_112220',
     imgSource: 'OpenHouse2021-Flyer-Final-Landscape',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     It's time for IGO's (almost) annual Halloween Open House! Come join us on Friday, October 29 in ZRC 320 for a COVID-safe event to learn about the latest in our technology and services, take part in a host of games and activities, and grab plenty of candy to take home. Tour the lab, schedule consults on our common and new technologies, and play some science-themed games hosted by our costumed IGO staff to celebrate another year of genomics. Watch this space or email genomics@mskcc.org for more information.
   </p>`,
@@ -160,7 +169,11 @@ export const teams = [
       'The leadership team oversees over 40 full-time staff from entry-level research technicians to senior experts. They not only ensure that everyone is working in concert to process thousands of projects each year, but also continue to bring on new technologies to keep IGO on the cutting edge of genome science.',
     members: [
       { name: 'Neeman Mohibullah', role: 'Director', photoName: 'Mohibullah_Neeman' },
-      { name: 'Kety Huberman', role: 'Operations Manager', photoName: 'Huberman_Kety' },
+      { name: 'Andrea Farina', role: 'Manager, EXPAND', photoName: 'Farina_Andrea' },
+      { name: 'David Mcmanamon', role: 'Manager, Data', photoName: 'Mcmanamon_David' },
+      { name: 'Liping Sun', role: 'Manager, Sequencing', photoName: 'Sun_Liping' },
+      { name: 'Marisa Dunigan', role: 'Supervisor, SPM', photoName: 'Dunigan_Marisa' },
+      { name: 'Ruchi Patel', role: 'Manager, Single Cell & Library Prep', photoName: 'Patel_Ruchi' },      
     ],
   },
   {
@@ -168,36 +181,45 @@ export const teams = [
     name: 'Lab Support',
     description:
       'As a large, high-throughput facility constantly striving for technical excellence and exemplary customer service, IGO has several employees who work between and among teams and directly with investigators.',
-    members: [
-      { name: 'Alan Li', role: 'Automation Engineer', photoName: 'Li_Alan' },
+    members: [      
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
       { name: 'Magali Cavatore', role: 'Lab Manager', photoName: 'Cavatore_Magali' },
       { name: 'Mary Betancor', role: 'SKI Administrative Assistant II', photoName: 'Betancor_Mary' },
-      { name: 'Position Open!', role: 'Automation Engineer Assistant' },
     ],
   },
   {
     id: 2,
-    name: 'Sample & Project Management',
+    name: 'Automation',
     description:
-      'The SPM team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
+      "In order to process hundreds of samples per day and maintain consistent protocols between batches, IGO operates 10 liquid handling robots. The Automation team is responsible for maintaining those instruments, training technicians in their use, and developing all programming for IGO's many platforms.",
+    members: [
+      { name: 'Alan Li', role: 'Lead Automation Engineer', photoName: 'Li_Alan' },
+      { name: 'Elevit Perez', role: 'Automation Engineer', photoName: 'Perez_Elevit' },
+    ],
+  },
+  {
+    id: 3,
+    name: 'SPM',
+    description:
+      'The Sample & Project Management team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
     members: [
       { name: 'Marisa Dunigan', role: 'Supervisor, IGO', photoName: 'Dunigan_Marisa' },
       { name: 'Emily Brennan', role: 'Project Assistant', photoName: 'Brennan_Emily' },
       { name: 'Meghanne Lomibao', role: 'Project Coordinator', photoName: 'Lomibao_Meghanne' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
-      { name: 'Valerie Patritti', role: 'Project Manager', photoName: 'Patritti_Valerie' },
-      // { name: 'Position Opening Soon!', role: 'Senior Project Assistant' },
+      { name: 'Position Open!', role: 'Project Manager' },
+      // { name: 'Position Open!', role: 'Project Coordinator' },
     ],
   },
   {
-    id: 3,
-    name: 'EXPAND',
+    id: 4,
+    name: 'EXPAnD',
     description:
-      'EXPAND stands for: Extraction, pathology, Archer DX, and digital droplet PCR, but also literally refers to their interest in integrating new platforms and advancing research technology to remain at the cutting edge for our users. The EXPAND team draws upon IGO’s philosophy of constant and open communication and aims to join you in detailed, scientific discussions about your projects, to meet your needs and to work together to advance science, building long-term, trusting relationships in the process.',
+      'EXPAnD stands for: Extraction, pathology, Archer DX, and digital droplet PCR, but also literally refers to their interest in integrating new platforms and advancing research technology to remain at the cutting edge for our users. The EXPAND team draws upon IGO’s philosophy of constant and open communication and aims to join you in detailed, scientific discussions about your projects, to meet your needs and to work together to advance science, building long-term, trusting relationships in the process.',
     members: [
       { name: 'Andrea Farina', role: 'Manager, IGO', photoName: 'Farina_Andrea' },
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
+      { name: 'Elijah Castro', role: 'Research Technician', photoName: 'Castro_Elijah' },
       { name: 'Julienne Lomibao', role: 'Research Technician', photoName: 'Lomibao_Julienne' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
       { name: 'Mohamed Abdelbaset', role: 'Research Assistant', photoName: 'Abdelbaset_Mohamed' },
@@ -206,38 +228,45 @@ export const teams = [
     ],
   },
   {
-    id: 4,
-    name: 'Nucleic Acids',
+    id: 5,
+    name: 'Single Cell',
     description:
-      "The Nucleic Acid team handles the bulk of IGO's sample processing, utilizing liquid-handling robots to automate many platforms. They also handle IGO's single cell platforms: 10X Genomics scRNASeq & Multiome, MissionBio Tapestri, PlateSeq, and DLP.",
+      "The Single Cell team receives fresh and frozen samples for IGO's 10X Genomics, DLP, and MissionBio platforms. They use a mix of manual and automated techniques to help investigators achieve the best single cell data possible.",
     members: [
       { name: 'Ruchi Patel', role: 'Manager, IGO', photoName: 'Patel_Ruchi' },
-      { name: 'Elevit Perez', role: 'Senior Research Technician', photoName: 'Perez_Elevit' },
       { name: 'Justin Clarke', role: 'Research Technician', photoName: 'Clarke_Justin' },
-      { name: 'Kalliopi Chatzis', role: 'Research Assistant', photoName: 'Chatzis_Kalliopi' },
-      { name: 'Katherine Allard', role: 'Research Assistant', photoName: 'Allard_Katherine' },
       { name: 'Ravi Shrivastav', role: 'Senior Research Technician', photoName: 'Shrivastav_Ravi' },
       { name: 'Satish Ramakrishnan', role: 'Research Assistant', photoName: 'Ramakrishnan_Satish' },
-      { name: 'Satoko Murakami', role: 'Research Assistant', photoName: 'Murakami_Satoko' },
-      { name: 'Yushi Wu', role: 'Research Assistant', photoName: 'Wu_Yushi' },
-      { name: 'Open Position!', role: 'Research Assistant' },
-    ],
-  },
-  {
-    id: 5,
-    name: 'Sequencing',
-    description:
-      "The Sequencing Team performs all activities related to Illumina sequencing, including quantity and quality assessment of libraries, pooling, and preparation for sequencing. The team is also responsible for the care & feeding of IGO's 12 sequencing instruments.",
-    members: [
-      { name: 'Liping Sun', role: 'Manager, IGO', photoName: 'Sun_Liping' },
-      { name: 'Andrea Lopez', role:'Research Assistant' },
-      { name: 'Jim Chen', role: 'Senior Research Technician', photoName: 'Chen_Jim' },
-      { name: 'Keumsil Hwang', role: 'Senior Research Assistant', photoName: 'Hwang_Keumsil' },
-      { name: 'Open Position!', role: 'Senior Research Technician' },
+      { name: 'Yushi Wu', role: 'Research Assistant', photoName: 'Wu_Yushi' },   
     ],
   },
   {
     id: 6,
+    name: 'Library Prep',
+    description:
+      "The Library Preparation team handles the bulk of IGO's sample processing, utilizing liquid-handling robots to automate many platforms.",
+    members: [
+      { name: 'Ruchi Patel', role: 'Manager, IGO', photoName: 'Patel_Ruchi' },
+      { name: 'Kalliopi Chatzis', role: 'Research Assistant', photoName: 'Chatzis_Kalliopi' },
+      { name: 'Katherine Allard', role: 'Research Assistant', photoName: 'Allard_Katherine' },
+      { name: 'Satoko Murakami', role: 'Research Assistant', photoName: 'Murakami_Satoko' },
+      // { name: 'Open Position!', role: 'Research Assistant' },
+    ],
+  },
+  {
+    id: 7,
+    name: 'Sequencing',
+    description:
+      "The Sequencing Team performs all activities related to Illumina sequencing, including quantity and quality assessment of libraries, pooling, and preparation for sequencing. The team is also responsible for the care & feeding of IGO's 8 sequencing instruments.",
+    members: [
+      { name: 'Liping Sun', role: 'Manager, IGO', photoName: 'Sun_Liping' },
+      { name: 'Jim Chen', role: 'Senior Research Technician', photoName: 'Chen_Jim' },
+      { name: 'Keumsil Hwang', role: 'Senior Research Assistant', photoName: 'Hwang_Keumsil' },
+      // { name: 'Open Position!', role: 'Research Assistant', },
+    ],
+  },
+  {
+    id: 8,
     name: 'Data',
     description:
       "The IGO Data Team is a group of bioinformaticians, software engineers, and computer scientists.  They work closely with IGO's investigators and wet-lab technicians to write multiple software applications from sample receiving and LIMS processing to post-sequencing stats tracking and data delivery.",
@@ -247,36 +276,37 @@ export const teams = [
       { name: 'Cuijie Lu', role: 'Bioinfo. Software Engineer I', photoName: 'Lu_Cuijie' },
       { name: 'Darrell Nabors', role: 'Bioinformatics Engineer V', photoName: 'Nabors_Darrell' },
       { name: 'Fahimeh Mirhaj', role: 'Bioinfo. Software Engineer I', photoName: 'Mirhaj_Fahimeh' },
-       { name: 'Open Position!', role: 'Bioinfo. Software Engineer II' },
+      { name: 'Stephanie DelBelso', role: 'Software Engineer', photoName: 'DelBelso_Stephanie' },
+      // { name: 'Open Position!', role: 'Software Engineer II' },
     ],
   },
   {
-    id: 7,
-    name: 'Research & Development',
+    id: 9,
+    name: 'R&D',
     description:
-      'The R&D team develops, tests, and implements new genomics platforms for the MSKCC community. In addition to testing off-the-shelf assays, our group works with MSK investigators to bring customized platforms to IGO.',
+      'The Researh & Development team develops, tests, and implements new genomics platforms for the MSKCC community. In addition to testing off-the-shelf assays, our group works with MSK investigators to bring customized platforms to IGO.',
     members: [
-      { name: 'Cassidy Illum', role: 'Research Technician', photoName: 'Illum_Cassidy' },
-      { name: 'Elijah Castro', role: 'Research Technician', photoName: 'Castro_Elijah' },
+      { name: 'Stephanie Chrysanthou', role: 'Manager, IGO', photoName: 'Chrysanthou_Stephanie' },
       { name: 'Juan Li', role: 'Manager, IGO', photoName: 'Li_Juan' },
-      { name: 'Open Position!', role: 'Manager' },
+      { name: 'Cassidy Illum', role: 'Research Technician', photoName: 'Illum_Cassidy' },
+      
     ],
   },
-  {
-    id: 8,
-    name: 'IGO Alumni',
-    description:
-      'IGO technicians gain valuable skills and cutting-edge knowledge while working in a fast-paced environment. Many leverage that experience into advanced degrees and training to further their careers in science and medicine.',
-    members: [
-      { name: 'Denise Chen', role: 'Philadelphia College of Osteopathic Medicine', photoName: 'Chen_Denise' },
-      { name: 'Desmond Lambe', role: 'Rensselaer Polytechnic Institute', photoName: 'Lambe_Desmond' },
-      { name: "Josie D'Angelo", role: 'UC Berkeley ', photoName: 'Dangelo_Josie' },
-      { name: 'Marisa Vanness', role: 'Geisinger Commonwealth School of Medicine', photoName: 'Vanness_Marisa' },
-      { name: 'Michael Pantano', role: 'BU Questrom School of Business', photoName: 'Pantano_Michael' },
-      { name: 'Rosie Wenrich', role: 'Rowan University', photoName: 'Wenrich_Rosie' },
-      { name: 'Taylor Allen', role: 'Georgia Tech Dept. of Chemistry & Biochemistry', photoName: 'Allen_Taylor' },
-    ],
-  },
+  // {
+  //   id: 8,
+  //   name: 'IGO Alumni',
+  //   description:
+  //     'IGO technicians gain valuable skills and cutting-edge knowledge while working in a fast-paced environment. Many leverage that experience into advanced degrees and training to further their careers in science and medicine.',
+  //   members: [
+  //     { name: 'Denise Chen', role: 'Philadelphia College of Osteopathic Medicine', photoName: 'Chen_Denise' },
+  //     { name: 'Desmond Lambe', role: 'Rensselaer Polytechnic Institute', photoName: 'Lambe_Desmond' },
+  //     { name: "Josie D'Angelo", role: 'UC Berkeley ', photoName: 'Dangelo_Josie' },
+  //     { name: 'Marisa Vanness', role: 'Geisinger Commonwealth School of Medicine', photoName: 'Vanness_Marisa' },
+  //     { name: 'Michael Pantano', role: 'BU Questrom School of Business', photoName: 'Pantano_Michael' },
+  //     { name: 'Rosie Wenrich', role: 'Rowan University', photoName: 'Wenrich_Rosie' },
+  //     { name: 'Taylor Allen', role: 'Georgia Tech Dept. of Chemistry & Biochemistry', photoName: 'Allen_Taylor' },
+  //   ],
+  // },
 ];
 
 export const bulkServices = [
@@ -308,17 +338,18 @@ export const bulkServices = [
     libraryChemistry: 'KAPA Hyper',
     captureChemistry: 'Custom probes',
     sequencingReadLength: 'PE100',
-    sequencingCoverage: '500X T/250X N (IMPACT/HemePACT); 1000X (ACCESS)',
-    deliverable: 'cBioPortal instance (IMPACT & HemePACT), pipeline analysis (ACCESS & M-IMPACT)',
-    tableHeaders: ['panel', 'sampleType', 'sampleCost'],
+    sequencingCoverage: '500X T/250X N (IMPACT/HemePACT); 60M reads (ACCESS); 30M reads (CMO-CH)',
+    deliverable: 'cBioPortal instance (IMPACT & HemePACT), pipeline analysis (ACCESS, M-IMPACT); in development (CMO-CH)',
+    tableHeaders: ['panel', 'sampleType', 'sampleCostWet', 'sampleCostDry', 'totalCost' ],
     table: [
-      { panel: 'IMPACT', sampleType: 'Tumor', sampleCost: 500 },
-      { panel: 'IMPACT', sampleType: 'Normal', sampleCost: 250 },
-      { panel: 'Mouse IMPACT', sampleType: '', sampleCost: 525 },
-      { panel: 'HemePACT', sampleType: 'Tumor', sampleCost: 573 },
-      { panel: 'HemePACT', sampleType: 'Normal', sampleCost: 350 },
-      { panel: 'ACCESS', sampleType: 'Tumor', sampleCost: 600 },
-      { panel: 'ACCESS', sampleType: 'Normal', sampleCost: 300 },
+      { panel: 'IMPACT', sampleType: 'Tumor', sampleCostWet: 348, sampleCostDry: 152, totalCost: 500 },
+      { panel: 'IMPACT', sampleType: 'Normal', sampleCostWet: 191, sampleCostDry: 59, totalCost: 250 },
+      { panel: 'Mouse IMPACT', sampleType: '', sampleCostWet: 380, sampleCostDry: 145, totalCost: 525 },
+      { panel: 'HemePACT', sampleType: 'Tumor', sampleCostWet: 420, sampleCostDry: 153, totalCost: 573 },
+      { panel: 'HemePACT', sampleType: 'Normal', sampleCostWet: 270, sampleCostDry: 80, totalCost: 350 },
+      { panel: 'ACCESS', sampleType: 'Tumor', sampleCostWet: 490, sampleCostDry: 110, totalCost: 600 },
+      { panel: 'ACCESS', sampleType: 'Normal', sampleCostWet: 260, sampleCostDry: 40, totalCost: 300 },
+      { panel: 'CMO-CH', sampleType: '', sampleCostWet: 220, sampleCostDry: 80, totalCost: 300 },
     ],
   },
   {
@@ -364,6 +395,7 @@ export const bulkServices = [
     deliverable: 'FASTQ',
     tableHeaders: ['sampleCoverage', 'sampleCostFrozen', 'sampleCostFfpe'],
     table: [
+      { sampleCoverage: 10, sampleCostFrozen: 487, sampleCostFfpe: 561 },
       { sampleCoverage: 30, sampleCostFrozen: 1067, sampleCostFfpe: 1263 },
       { sampleCoverage: 40, sampleCostFrozen: 1324, sampleCostFfpe: 1655 },
       { sampleCoverage: 50, sampleCostFrozen: 1557, sampleCostFfpe: 2046 },
@@ -379,7 +411,7 @@ export const bulkServices = [
     id: 4,
     name: 'Epigenome Sequencing',
     description: 'Various methods to assess the epigenetic structure of the genome',
-    startingMaterial: 'Cells - no more than 24 samples/batch (ATAC), Transposed DNA (ChIP), DNA – samples in multiples of 4 (EPIC)',
+    startingMaterial: 'Cells - no more than 24 samples/batch (ATAC), Transposed DNA (ChIP), DNA – 4 sample minimum (EPIC)',
     libraryChemistry: 'Nextera XT (ATAC), KAPA HTP (ChIP), TruSeq Methyl Capture (EPIC)',
     sequencingReadLength: 'PE100',
     sequencingCoverage: '40-50M (ATAC), 10M (ChIP; more reads can be requested), 40M (EPIC)',
@@ -456,14 +488,14 @@ export const singleServices = [
     id: 2,
     name: '10x Genomics Visium',
     description: 'Transcriptome sequencing of 1-10 cells along with spatial information.',
-    startingMaterial: 'Fresh tissue',
+    startingMaterial: 'Fresh or FFPE tissue',
     libraryChemistry: 'Visium Spatial Gene Expression',
     sequencingReadLength: 'PE28/90',
-    sequencingCoverage: '50K reads/1-10 cells',
-    deliverable: 'FASTQ, SpaceRanger output',
-    tissueOptimizationCost: '$900 (once/tissue)',
+    sequencingCoverage: '25-50K reads/1-10 cells',
+    deliverable: 'FASTQ, Space Ranger output',
+    tissueOptimizationCost: '$900 (once/tissue; frozen only)',
     libraryCost: '$4,400/slide',
-    sequencingCost: '$5,232 x %Area of squares covered',
+    sequencingCost: '$5,232 (frozen) or $2,616 (FFPE) x %Area of squares covered',
   },
   {
     id: 3,
@@ -500,6 +532,16 @@ export const singleServices = [
     libraryCost: '$2,300/up to 800 cells',
     sequencingCost: '$5-7/cell',
   },
+  {
+    id: 6,
+    name: 'Nanostring GeoMx',
+    description: 'A spatial transcriptomics platform allowing for targeted RNA-seq of manually selected regions of interest.',
+    startingMaterial: 'FFPE slides',
+    sequencingCoverage: 'variable',
+    deliverable: 'FASTQ; GeoMx pipeline output',
+    libraryCost: '$2,000-2,500 per slide for sample prep/staining + $200-400 per slide for library prep',
+    sequencingCost: '$60-250 per area of interest',
+  },
 ];
 
 export const otherServices = [
@@ -534,7 +576,6 @@ export const otherServices = [
       { startingMaterial: 'Fingernails', extractionOutput: 'DNA', sampleCost: 40 },
       { startingMaterial: 'Frozen tissue/cells (TRIzol, OCT, RLT, pellet)', extractionOutput: 'RNA', sampleCost: 33 },
       { startingMaterial: 'Viably frozen cells', extractionOutput: 'RNA', sampleCost: 48 },
-      { startingMaterial: 'Frozen tissue/cells + COVID19 testing', extractionOutput: 'RNA', sampleCost: 93 },
       { startingMaterial: 'FFPE tissue', extractionOutput: 'RNA', sampleCost: 39 },
       { startingMaterial: 'All materials', extractionOutput: 'DNA + RNA (simultaneous extraction)', sampleCost: 55 },
       { startingMaterial: 'Special processing', extractionOutput: 'DNA/RNA', sampleCost: 15 },

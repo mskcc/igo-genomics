@@ -137,7 +137,7 @@ export default {
     return {
       spmCalendar: SPM_CALENDAR,
       scCalendar: SC_CALENDAR,
-      microsoftBookingsIsActive: false,
+      microsoftBookingsIsActive: true,
       message: 'Please select a day.',
       requestType: '',
       form: {

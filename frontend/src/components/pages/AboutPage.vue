@@ -14,9 +14,9 @@
             </p>
             <p>
               IGO offers a comprehensive inventory of genomic platforms. We house a full range of Illumina NGS instruments, maximizing our
-              flexibility for many sequencing applications. For more specific information, please check out the Services and Prices tab to
-              learn more about the various platforms currently supported by IGO. We comprise six main groups, under the leadership of Dr.
-              Agnes Viale. We are located on the 3rd floor of the Zuckerman Building.
+              flexibility for many sequencing applications. For more specific information, please check out the Platforms & Prices tab to
+              learn more about the various platforms currently supported by IGO. We comprise seven main groups, under the leadership of Dr.
+              Neeman Mohibullah. We are located on the 3rd floor of the Zuckerman Building.
             </p>
           </div>
           <div class="about-image-container">

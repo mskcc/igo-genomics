@@ -73,18 +73,39 @@
                     </md-list-item>
                     <md-list-item md-expand class="md-inset">
                       <md-icon>add</md-icon>
-                      <span class="md-list-item-text">I don’t know the COVID19 status of my human samples. Can I submit them?</span>
+                      <span class="md-list-item-text">I want to sequence a tumor sample for a patient. How do I know if there is a normal available?</span>
                       <md-list slot="md-expand">
                         <md-list-item>
                           <div>
-                            We cannot accept human samples collected after December 2019 unless the patient has been screened for COVID19.
-                            We offer RNA extraction specifically for COVID19 testing, which you can submit to determine status before
-                            starting your project. Submission instructions are
-                            <router-link :to="{ name: 'submission guidelines' }">here</router-link>.
+                            If you have a patient <strong>MRN</strong>:<br>
+                            <ol>
+                              <li>Query the <a href="https://ddp.mskcc.org/search" target="__blank">Darwin Digital Platform</a></li>
+                              <li>Link to the sample data in the <a href="https://cbioportal.mskcc.org" target="__blank">cBioPortal</a></li>
+                              <li>Go to the patient's EMR within the Pathology folder and view the DMP Path results</li>
+                            </ol><br>
+                            If you have a <strong>DMP Patient ID</strong>:
+                            <ol>
+                              <li>Ensure the ID is in the format P-#######</li>
+                              <li>Query the <a href="https://cbioportal.mskcc.org" target="__blank">cBioPortal</a></li>
+                            </ol><br>
+                            If you have a <strong>Molecular Accession Number</strong>:
+                            <ol>
+                              <li>Ensure the Number is in the format M##-#####</li>
+                              <li>Submit a <a href="https://dataline.mskcc.org/DataLine/login?dest=createRequest" target="__blank">Dataline query</a> following the guidelines <a href="https://mskcc.sharepoint.com/sites/pub-td/sitepages/dataline.aspx" target="__blank">here</a></li>
+                            </ol>
+                            or:
+                            <ol>
+                              <li>Query <a href="https://ddp.mskcc.org/search" target="__blank">Darwin</a> to get an MRN</li>
+                              <li>Follow the MRN instructions above</li>
+                            </ol><br>
+                            If the patient has had <strong>cfDNA banked</strong>:
+                            <ol>
+                              <li>E-mail Chintan Patel (patelc@mskcc.org) to inquire if a matching buffy coat has been stored in IGO</li>
+                            </ol>
                           </div>
                         </md-list-item>
                       </md-list>
-                    </md-list-item>
+                    </md-list-item>                          
                   </md-list>
                 </div>
               </div>
@@ -108,7 +129,7 @@
                               <li>Cell pellets</li>
                               <li>Frozen tissue</li>
                               <li>OCT blocks</li>
-                              <li>FFPE tissue (slides, curls, or punches)</li>
+                              <li>FFPE tissue (slides or curls or punches in AutoLys tubes)</li>
                               <li>Cells in 1mL TRIzol</li>
                               <li>Cells in DMSO freezing media</li>
                               <li>Cells sorted into 750μL TRIzol LS + 250μL PBS</li>
@@ -147,7 +168,7 @@
                               <li>Cells in DMSO/DMEM freezing medium</li>
                               <li>Frozen tissue</li>
                               <li>OCT tissue (blocks or curls)</li>
-                              <li>FFPE tissue (slides, blocks, curls, or punches)</li>
+                              <li>FFPE tissue (slides, blocks, or curls or punches in AutoLys tubes)</li>
                               <li>Blood in EDTA tubes</li>
                               <li>Blood in Streck tubes (for cfDNA)</li>
                               <li>PBMCs/buffy coats in micronic tubes</li>
@@ -380,6 +401,20 @@
                             <br />
                             <br />
                             CRISPRSeq as offered by IGO is for evaluating single guide sequences (such as in an arrayed screen). It is a high-throughput (>75K reads) alternative to Sanger sequencing-based evaluation of editing events.
+                          </div>
+                        </md-list-item>
+                      </md-list>
+                    </md-list-item>
+                    <md-list-item md-expand class="md-inset">
+                      <md-icon>add</md-icon>
+                      <span class="md-list-item-text">Do I need to sequence a matched normal sample for IMPACT?</span>
+                      <md-list slot="md-expand">
+                        <md-list-item>
+                          <div>
+                            Matched normals are highly recommended. If there is a normal sample that has been sequenced clinically in the DMP, the data can be used for your research sample <strong>only</strong> if the same IMPACT assay was used. You can find the assay by searching the DMP patient ID in MSK cBioPortal, clicking on the "Clinical Data" tab, and checking the "Gene Panel" and "Somatic Status" columns. The latter will say "Matched" if a normal was processed. The former will tell you which panel version was used. Currently we are using IMPACT505 in the research and clinical setting.
+                            <br>
+                            <br>
+                            If no appropriate normal is available, your sample will be run against the pooled normal, and no copy number results will be given as part of the standard output. 
                           </div>
                         </md-list-item>
                       </md-list>

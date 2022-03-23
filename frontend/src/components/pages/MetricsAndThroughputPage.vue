@@ -28,7 +28,7 @@
         src="https://splunkp.mskcc.org/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Popular_Services_By_Samples&oid=iZ2iFI3KDyT9KRTIjs0JQXxSwhzeNZ2GM_uqowhN_9PoFIzfmufnxK1ASLeyGkstXdC1aWY0DcUKsInXl5FAHCUEOGIWnECKDE7iOWSx2nZzP4JZJ6DBamAVXCkA2BNXkS_%5EQBElZGJqbtGubZ7rIeAisgzJ8bX4CpvFhR4H1b3JOMBR28fcyY8ojAF"
       ></iframe>
       <p>
-        Top request types by request number (left) and sample number (right), 2020
+        Top request types by request number (left) and sample number (right), 2022
       </p>
     </div>
 
@@ -42,7 +42,7 @@
       </div>
 
       <p>
-        The number of requests (top) and samples (bottom) IGO receives per month, from January 2018 to present.
+        The number of requests (top) and samples (bottom) IGO receives per month, from January 2020 to present.
       </p>
       <div class="wrap">
         <iframe
@@ -77,23 +77,27 @@
           <td>NovaSeq 6000</td>
         </tr>
         <tr>
-          <td>JAX</td>
+          <td>RUTH</td>
+          <td>NovaSeq 6000</td>
+        </tr>
+        <tr>
+          <td>JAX (retired)</td>
           <td>HiSeq 4000</td>
         </tr>
         <tr>
-          <td>PITT</td>
+          <td>PITT (retired)</td>
           <td>HiSeq 4000</td>
         </tr>
         <tr>
-          <td>LIZ</td>
+          <td>LIZ (retired)</td>
           <td>HiSeq 2500</td>
         </tr>
         <tr>
-          <td>KIM</td>
+          <td>KIM (retired)</td>
           <td>HiSeq 2500</td>
         </tr>
         <tr>
-          <td>MOMO</td>
+          <td>MOMO (retired)</td>
           <td>HiSeq 2500</td>
         </tr>
         <tr>
@@ -101,15 +105,19 @@
           <td>NextSeq 500</td>
         </tr>
         <tr>
+          <td>PEPE</td>
+          <td>NextSeq 2000</td>
+        </tr>
+        <tr>
           <td>JOHNSAWYERS</td>
           <td>MiSeq</td>
         </tr>
         <tr>
-          <td>TOMS</td>
+          <td>TOMS (retired)</td>
           <td>MiSeq</td>
         </tr>
         <tr>
-          <td>VIC</td>
+          <td>VIC (retired)</td>
           <td>MiSeq</td>
         </tr>
         <tr>

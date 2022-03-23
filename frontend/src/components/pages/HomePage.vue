@@ -4,8 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        IGO will be closed on 12/24 and 12/31, and will not be accepting new submissions or processing samples from 12/27 - 12/30. Normal
-        hours will resume Monday, January 3<sup>rd</sup>.
+        We are now requiring FFPE curls and punches be submitted in AutoLys tubes provided by IGO. Tubes can be requested <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/80XW74xHNEOAJNpvnf5-hg2" target="__blank">here</a>.
       </span>
     </div>
 
