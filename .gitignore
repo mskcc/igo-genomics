@@ -47,4 +47,6 @@ public/
 
 
 backend/.env
-frontend/src/config.js
+frontend/.env.development
+frontend/.env.production
+frontend/.env.staging
