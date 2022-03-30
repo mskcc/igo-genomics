@@ -1,8 +1,6 @@
 <template>
   <div id="feedback-page">
-    <div v-if="!valid">
-      Sorry, that's not a valid application!
-    </div>
+    <div v-if="!valid">Sorry, that's not a valid application!</div>
 
     <div v-else>
       <form @submit.prevent="submitFeedback">
@@ -20,7 +18,7 @@
                 </md-select>
               </md-field>
               <span>
-                <span class="error" v-if="formHasErrors">This field is required</span>
+                <span class="error" v-if="formHasErrors">Please specify</span>
               </span>
             </div>
           </md-card-header>
@@ -29,33 +27,33 @@
             <div>
               <div class="opinion-div">
                 <div class="opinion">
-                  <i class="far fa-tired fa-3x" style="color: salmon;"></i>
+                  <i class="far fa-tired fa-3x" style="color: salmon"></i>
                   <span>Very dissatisfied</span>
                   <md-radio v-model="form.opinionRating" value="1"></md-radio>
                 </div>
                 <div class="opinion">
-                  <i class="far fa-frown fa-3x" style="color: #f29934;"></i>
+                  <i class="far fa-frown fa-3x" style="color: #f29934"></i>
                   <span>Dissatisfied</span>
                   <md-radio v-model="form.opinionRating" value="2"></md-radio>
                 </div>
                 <div class="opinion">
-                  <i class="far fa-meh fa-3x" style="color: #ffc20e;"></i>
+                  <i class="far fa-meh fa-3x" style="color: #ffc20e"></i>
                   <span>Neutral</span>
                   <md-radio v-model="form.opinionRating" value="3"></md-radio>
                 </div>
                 <div class="opinion">
-                  <i class="far fa-smile fa-3x" style="color: #a6ce39;"></i>
+                  <i class="far fa-smile fa-3x" style="color: #a6ce39"></i>
                   <span>Satisfied</span>
                   <md-radio v-model="form.opinionRating" value="4"></md-radio>
                 </div>
                 <div class="opinion">
-                  <i class="far fa-laugh-beam fa-3x" style="color: #4c8b2b;"></i>
+                  <i class="far fa-laugh-beam fa-3x" style="color: #4c8b2b"></i>
                   <span>Very satisfied</span>
                   <md-radio v-model="form.opinionRating" value="5"></md-radio>
                 </div>
               </div>
               <span>
-                <span class="error" v-if="formHasErrors">This field is required</span>
+                <span class="error" v-if="formHasErrors">Rating is required</span>
               </span>
             </div>
 
@@ -63,11 +61,14 @@
             <md-divider></md-divider>
             <br />
             <div>
-              <div>Please select your feedback category below (optional)</div>
+              <div>Please select your feedback category below</div>
               <md-radio v-model="form.feedbackCategory" value="suggestion">Suggestion</md-radio>
               <md-radio v-model="form.feedbackCategory" value="something not right">Something is not quite right</md-radio>
               <md-radio v-model="form.feedbackCategory" value="compliment">Compliment</md-radio>
             </div>
+            <span>
+              <span class="error" v-if="formHasErrors">Category is required</span>
+            </span>
             <br />
             <md-divider></md-divider>
             <br />
@@ -76,6 +77,9 @@
                 <label>Is there anything else you'd like to share about our product and customer experience?</label>
                 <md-textarea v-model="form.description"></md-textarea>
               </md-field>
+              <span>
+                <span class="error" v-if="formHasErrors">Description is required</span>
+              </span>
             </div>
           </md-card-content>
 
@@ -98,7 +102,7 @@ import { required } from 'vuelidate/lib/validators';
 export default {
   name: 'FeedbackPage',
   props: ['application'],
-  data: function() {
+  data: function () {
     return {
       validApplications: {
         'sample-qc': 'Sample QC',
@@ -120,11 +124,13 @@ export default {
       applicationClone: { required },
       form: {
         opinionRating: { required },
+        feedbackCategory: { required },
+        description: { required },
       },
     };
   },
   computed: {
-    valid: function() {
+    valid: function () {
       return this.application in this.validApplications || !this.application;
     },
   },
@@ -138,7 +144,7 @@ export default {
         };
       }
     },
-    submitFeedback: function() {
+    submitFeedback: function () {
       this.$v.$touch();
       if (this.$v.$invalid) {
         this.formHasErrors = true;
@@ -164,7 +170,7 @@ export default {
     },
   },
   watch: {
-    '$v.$anyError': function() {
+    '$v.$anyError': function () {
       this.formHasErrors = this.$v.$anyError;
     },
   },
