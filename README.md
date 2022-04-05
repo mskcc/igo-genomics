@@ -17,7 +17,7 @@ The new and improved IGO website built using the MEVN stack.
 
 ### Frontend
 
-1. Configurations - Update `env.development`, `env.staging`, and ``env.production` files in `frontend/` (Not available in git repo - take from VM `dlviigoweb1`).
+1. Configurations - Update `env.development`, `env.staging`, and `env.production` files in `frontend/` (Not available in git repo - take from VM `dlviigoweb1`).
 
 2. Run
     ```
