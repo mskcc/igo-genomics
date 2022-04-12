@@ -40,7 +40,7 @@
       </md-table-row>
       <md-table-row>
         <md-table-cell>Single nuclei suspension</md-table-cell>
-        <md-table-cell><a href="https://support.10xgenomics.com/single-cell-gene-expression/sample-prep/doc/demonstrated-protocol-isolation-of-nuclei-for-single-cell-rna-sequencing" target="__blank">See protocol</a></md-table-cell>
+        <md-table-cell><a href="https://support.10xgenomics.com/single-cell-gene-expression/sample-prep/doc/demonstrated-protocol-single-cell-suspensions-from-cultured-cell-lines-for-single-cell-rna-sequencing" target="__blank">See protocol</a></md-table-cell>
         <md-table-cell>700-1200 nuclei/&mu;L in > 50&mu;L</md-table-cell>
       </md-table-row>
       <md-table-row>

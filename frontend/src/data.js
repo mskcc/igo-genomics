@@ -173,7 +173,8 @@ export const teams = [
       { name: 'David Mcmanamon', role: 'Manager, Data', photoName: 'Mcmanamon_David' },
       { name: 'Liping Sun', role: 'Manager, Sequencing', photoName: 'Sun_Liping' },
       { name: 'Marisa Dunigan', role: 'Supervisor, SPM', photoName: 'Dunigan_Marisa' },
-      { name: 'Ruchi Patel', role: 'Manager, Single Cell & Library Prep', photoName: 'Patel_Ruchi' },      
+      { name: 'Ruchi Patel', role: 'Manager, Single Cell & Library Prep', photoName: 'Patel_Ruchi' }, 
+      { name: 'Position Open!', role: 'Operations Manager' },     
     ],
   },
   {
@@ -207,7 +208,6 @@ export const teams = [
       { name: 'Emily Brennan', role: 'Project Assistant', photoName: 'Brennan_Emily' },
       { name: 'Meghanne Lomibao', role: 'Project Coordinator', photoName: 'Lomibao_Meghanne' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
-      { name: 'Position Open!', role: 'Project Manager' },
       // { name: 'Position Open!', role: 'Project Coordinator' },
     ],
   },
@@ -272,7 +272,6 @@ export const teams = [
       "The IGO Data Team is a group of bioinformaticians, software engineers, and computer scientists.  They work closely with IGO's investigators and wet-lab technicians to write multiple software applications from sample receiving and LIMS processing to post-sequencing stats tracking and data delivery.",
     members: [
       { name: 'David Mcmanamon', role: 'Manager, IGO', photoName: 'Mcmanamon_David' },
-      { name: 'Anna Patruno', role: 'Bioinfo. Software Engineer II', photoName: 'Patruno_Anna' },
       { name: 'Cuijie Lu', role: 'Bioinfo. Software Engineer I', photoName: 'Lu_Cuijie' },
       { name: 'Darrell Nabors', role: 'Bioinformatics Engineer V', photoName: 'Nabors_Darrell' },
       { name: 'Fahimeh Mirhaj', role: 'Bioinfo. Software Engineer I', photoName: 'Mirhaj_Fahimeh' },
