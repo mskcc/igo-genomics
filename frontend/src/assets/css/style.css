@@ -821,13 +821,20 @@ sup {
 .reservations-button {
   margin: 0 0 16px;
   padding: 16px 24px;
+  width: 300px;
 }
 
 .reservations-button a {
   cursor: pointer;
 }
 
+.reservations-button-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
 .reservation-buttons-container {
-  width: 200px;
   margin: auto;
+  padding-top: 25px;
+  width: 300px;
 }
