@@ -123,7 +123,7 @@
                 :md-expanded="platformName.replace(/ /g, '').toLowerCase() === service.name.replace(/ /g, '').toLowerCase()"
                 @click="expandList($event, service.name)">
                 <span class="md-list-item-text">{{ service.name }}</span>
-                <span v-if="service.name === '10x Genomics Visium'">
+                <span v-if="service.name === '10x Genomics Visium'"></span>
                 <md-list slot="md-expand">
                   <md-list-item>
                     <table class="prices-table services-general-table">
