@@ -113,6 +113,9 @@
         <div>
           <div class="list">
             <md-list>
+              <md-list-item>
+                <router-link :to="{ name: 'single cell hub' }" class="md-list-item-text">Single Cell Hub </router-link>
+              </md-list-item>
               <md-list-item
                 v-for="(service, index) in singleServices"
                 :key="index"
@@ -121,8 +124,6 @@
                 @click="expandList($event, service.name)">
                 <span class="md-list-item-text">{{ service.name }}</span>
                 <span v-if="service.name === '10x Genomics Visium'">
-                  <router-link exact :to="{ name: 'single cell hub' }">more info</router-link>
-                </span>
                 <md-list slot="md-expand">
                   <md-list-item>
                     <table class="prices-table services-general-table">

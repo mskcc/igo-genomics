@@ -54,7 +54,9 @@
                 Feature Barcoding vs Cell Hashing vs CITE-Seq: "CITE-Seq" is a specific method of enrichment that is not supported by IGO
                 with 10X kits; if you are looking at protein expression alongside your gene expression, use the term "feature barcoding". If
                 you are using oligo-tagged antibodies to multiplex samples prior to submission to IGO, you are "cell hashing". You can do
-                both! BioLegend information:
+                both!
+              </li>
+              <li>BioLegend information:
                 <ul>
                   <li>TotalSeq-A: used for generic poly-A based methods. <strong>Not compatible with 10X Genomics in IGO</strong></li>
                   <li>TotalSeq-B: used for <strong>3' gene expression experiments</strong></li>

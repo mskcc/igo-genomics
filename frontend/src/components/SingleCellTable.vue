@@ -57,7 +57,7 @@
       <md-table-row>
         <md-table-cell
           ><a href="https://www.nanostring.com/products/geomx-digital-spatial-profiler/geomx-dsp" target="_blank"
-            >Nanostring Geomx</a
+            >Nanostring GeoMx</a
           ></md-table-cell
         >
         <md-table-cell>FFPE or frozen tissue</md-table-cell>

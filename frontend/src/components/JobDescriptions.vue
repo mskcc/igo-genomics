@@ -2,17 +2,17 @@
   <div id="job-descriptions">
     <career-banner />
 
-    <md-card class="career-card">
+    <!-- <md-card class="career-card">
       <md-card-header>
-        <div class="md-title">Project Manager</div>
-        <router-link :to="{ name: 'team', params: { id: 2 } }">SPM Team</router-link>
+        <div class="md-title">Operations Manager</div>
+        <router-link :to="{ name: 'team', params: { id: 0 } }">Leadership</router-link>
         <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescriptionSPMPM = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/jobs/job-details/2022-57053-project-manager-center-for-molecular-oncology/" target="_blank" class="md-primary">Apply</md-button>
+        <md-button @click="showJobDescriptionOM = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/jobs/job-details/2022-59668-operations-manager-integrated-genomics-operation/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
-    </md-card>
+    </md-card> -->
     
     <!-- <md-dialog :md-active.sync="showJobDescriptionNARA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -114,7 +114,7 @@
       </md-dialog-actions>
     </md-dialog> -->
 
-    <md-dialog :md-active.sync="showJobDescriptionSPMPM" :md-fullscreen="false" style="z-index: 400;">
+    <!-- <md-dialog :md-active.sync="showJobDescriptionSPMPM" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Project Manager in the Sample & Project Management Team, you will:</strong>
         <ul>
@@ -139,7 +139,7 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionSPMPM = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog>
+    </md-dialog> -->
 
     <!-- <md-dialog :md-active.sync="showJobDescriptionRDM" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -253,7 +253,7 @@
         </ul>
         <strong>You have:</strong>
         <ul> 
-          <li>A Bacherlor's degree in Computer Science, Bioinformatics, or other applied science or equivalent experience</li>
+          <li>A Bachelor's degree in Computer Science, Bioinformatics, or other applied science or equivalent experience</li>
           <li>3 years of software development experience</li>
           <li>Experience working with web technologies JavaScript or Python</li>
           <li>Experience with relational databases and/or non-relational databases (MySQL, MongoDB)</li>
@@ -261,6 +261,29 @@
       </md-dialog-content>
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionDataSEII = false">Close</md-button>
+      </md-dialog-actions>
+    </md-dialog> -->
+
+    <!-- <md-dialog :md-active.sync="showJobDescriptionOM" :md-fullscreen="false" style="z-index: 400;">
+      <md-dialog-content md-dynamic-height>
+        <strong>As an Operations Manager, you will:</strong>
+        <ul>
+          <li>Provide leadership and management of the core facility</li>
+          <li>Ensure the well-controlled production of next generation sequencing data</li>
+          <li>Establish and maintain LEAN processes from R&D to production</li>
+          <li>Ensure maximum sustainability and optimal use of funds, space and other resources</li>
+          <li>Interact with clinical, translational and basic science researchers and leadership groups at MSKCC</li>
+        </ul>
+        <strong>You have:</strong>
+        <ul>
+          <li>A track record of strategizing and executing process improvements and ensuring best practices</li>
+          <li>Excellent interpersonal, written and oral communication skills</li>
+          <li>Experience in a genomics facility environment and experience with a large operation</li>
+          <li>A passion for LEAN principles of management</li>
+        </ul>
+      </md-dialog-content>
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="showJobDescriptionOM = false">Close</md-button>
       </md-dialog-actions>
     </md-dialog> -->
 
@@ -284,7 +307,8 @@ export default {
       // showJobDescriptionSeqSRT: false,
       // showJobDescriptionDataSEII: false,
       // showJobDescriptionAE: false,
-      showJobDescriptionSPMPM: false,
+      // showJobDescriptionSPMPM: false,
+      showJobDescriptionOM: false,
     };
   },
 };
