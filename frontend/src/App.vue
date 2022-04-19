@@ -27,7 +27,8 @@
         </div>
         <div class="right-header">
           <div class="pre-nav">
-            <!-- <md-button :md-ripple="false" :to="{ name: 'about' }">About</md-button> -->
+            <md-button :md-ripple="false" :to="{ name: 'about' }">About</md-button>
+            <md-button :md-ripple="false" :to="{ name: 'faqs' }">FAQs</md-button>
             <md-button :md-ripple="false" :to="{ name: 'careers' }">Careers</md-button>
             <md-button :md-ripple="false" :to="{ name: 'contact us' }">Contact Us</md-button>
             <a href="https://twitter.com/genomics212?lang=en" target="_blank"><i class="fab fa-twitter fa-1x"></i></a>
@@ -51,7 +52,8 @@
                 'router-link-active':
                   (teamIsActive && link === 'about') ||
                   (platformsIsActive && link === 'platforms & pricing') ||
-                  (criteriaIsActive && link === 'sample requirements'),
+                  (criteriaIsActive && link === 'sample requirements') ||
+                  (reservationsIsActive && link === 'reservations'),
               }"
             >
               <md-button class="md-ripple nav-button">{{ link }}</md-button>
@@ -150,7 +152,7 @@ export default {
       spmCalendar: SPM_CALENDAR,
       scCalendar: SC_CALENDAR,
       showNavigation: false,
-      links: ['home', 'about', 'platforms & pricing', 'submission guidelines', 'sample requirements', 'faqs'],
+      links: ['home', 'platforms & pricing', 'submission guidelines', 'sample requirements', 'reservations'],
       mobileLinks: [
         'home',
         'about',
@@ -158,6 +160,7 @@ export default {
         'single cell hub',
         'submission guidelines',
         'sample requirements',
+        'reservations',
         'accessing your data',
         'ddpcr assays',
         'faqs',
@@ -185,6 +188,7 @@ export default {
       teamIsActive: this.$route.path.includes('about'),
       platformsIsActive: this.$route.path === '/platforms',
       criteriaIsActive: this.$route.path.includes('criteria'),
+      reservationsIsActive: this.$route.path === '/reservations',
       // platformsIsActive: this.$route.name.includes('platforms & pricing'),
       toolTips: {
         'sample requirements': 'A comprehensive guide to quality and quantity requirements',
@@ -202,8 +206,7 @@ export default {
       this.teamIsActive = this.$route.path.includes('about');
       this.platformsIsActive = this.$route.path === '/platforms';
       this.criteriaIsActive = this.$route.path.includes('criteria');
-      // this.platformsIsActive = this.$route.name.includes('platforms & pricing');
-      // console.log(this.$route);
+      this.reservationsIsActive = this.$route.path === '/reservations';
     },
   },
 };

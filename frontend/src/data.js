@@ -21,7 +21,7 @@ export const news = [
     title: 'Welcome Neeman Mohibullah, new IGO Director!',
     date: 'November 1, 2021',
     imgSource: 'Mohibullah_Neeman',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     Neeman Mohibullah, formerly IGO's R&D Manager and Associate Director, has now taken over the Director's mantle. She succeeds Agnes Viale, who helmed IGO and its precursor for more than 20 years, and who is continuing her leadership role at MSK as Director of Core Facilities. Neeman earned her PhD at the Fred Hutch in Seattle, and was a postdoctoral researcher in the Keeney lab at MSK before joining IGO in 2016. Please join us in welcoming her into her new role!
     </p>`,
