@@ -817,3 +817,17 @@ sup {
 #all-reservations .md-content.md-table-content.md-scrollbar.md-theme-default {
   min-height: 600px;
 }
+
+.reservations-button {
+  margin: 0 0 16px;
+  padding: 16px 24px;
+}
+
+.reservations-button a {
+  cursor: pointer;
+}
+
+.reservation-buttons-container {
+  width: 200px;
+  margin: auto;
+}
