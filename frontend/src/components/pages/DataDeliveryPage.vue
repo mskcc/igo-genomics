@@ -41,7 +41,7 @@
         <div class="md-subheading">On Lilac:</div>
         <ul>
           <li>On lilac-xfer01.mskcc.org, navigate to /igo/delivery/share/[LABNAME]</li>
-          <li>Rsync the data to its final destination</li>
+          <li>Rsync the data to its final destination -- your command should look like: rsync --copy-links -avz [SOURCE] [DEST]</li>
         </ul>
         <p>
           If you need to grant access to a collaborator or data analyst (internal or external) or an MSKCC core,
