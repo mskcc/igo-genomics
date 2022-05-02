@@ -1,5 +1,23 @@
 export const news = [
   {
+    title: 'NEW at IGO: TCR sequencing',
+    date: 'May 3, 2022',
+    imgSource: 'IGO_210408_008',
+    categories: ['featured'],
+    body: `<p>
+    In collaboration with MSK's Computational Immuno-oncology group, IGO's R&D team has developed a homebrew, RNA-based, TCR&alpha;/&beta; sequencing platform appropriate for mouse and human samples. Priced at $225/sample, including analysis, this application fills a need for a low-cost service appriopriate for both large and small sample sets. More details about submission can be found in our Submission Guidelines and Sample Requirements sections. Contact genomics@mskcc.org with questions!
+  </p>`,
+  },
+  {
+    title: 'Adaptive no longer supports core use',
+    date: 'April 29, 2022',
+    imgSource: 'adaptive',
+    categories: ['featured'],
+    body: `<p>
+    Adaptive Biotech, makers of the immunoSEQ platform for DNA-based TCR sequencing, has announced that they will no longer offer human TCR&beta; kits for labs to process their own samples. Going forward, investigators in need of a DNA-based TCRSeq approach will need to coordinate directly with Adaptive to ship their samples to the company. From Adaptive: "To provide the best value to our customers, we would have needed to make a significant investment to expand our barcodes to more than one lot and validate compatibility on Illumina's patterened flow cells...Unfortunately, our business unit didn't have the financial, software and manufacturing resources required to complete this project."
+  </p>`,
+  },
+  {
     title: 'NEW at IGO: Nanostring GeoMx Spatial Transcriptomics',
     date: 'December 22, 2021',
     imgSource: 'geomx',
@@ -12,7 +30,7 @@ export const news = [
     title: 'Coming Soon: Oxford Nanopore PromethION',
     date: 'November 29, 2021',
     imgSource: 'promethion',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     IGO's R&D team has recently begun validation efforts for Oxford Nanopore's PromethION instrument, which provides high-throughput sequencing of long reads, including direct molecule sequencing of DNA and RNA, with or without PCR. While the platform is still in early development, if you are interested in long-read sequencing, please contact genomics@mskcc.org to discuss your needs.
     </p>`,
@@ -174,6 +192,7 @@ export const teams = [
       { name: 'Liping Sun', role: 'Manager, Sequencing', photoName: 'Sun_Liping' },
       { name: 'Marisa Dunigan', role: 'Supervisor, SPM', photoName: 'Dunigan_Marisa' },
       { name: 'Ruchi Patel', role: 'Manager, Single Cell & Library Prep', photoName: 'Patel_Ruchi' }, 
+      { name: 'Stephanie Chrysanthou', role: 'Manager, R&D', photoName: 'Chrysanthou_Stephanie' },
       { name: 'Position Open!', role: 'Operations Manager' },     
     ],
   },
@@ -185,7 +204,7 @@ export const teams = [
     members: [      
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
       { name: 'Magali Cavatore', role: 'Lab Manager', photoName: 'Cavatore_Magali' },
-      { name: 'Mary Betancor', role: 'SKI Administrative Assistant II', photoName: 'Betancor_Mary' },
+      { name: 'Mary Betancor', role: 'SKI Admin Assistant II', photoName: 'Betancor_Mary' },
     ],
   },
   {
@@ -194,7 +213,7 @@ export const teams = [
     description:
       "In order to process hundreds of samples per day and maintain consistent protocols between batches, IGO operates 10 liquid handling robots. The Automation team is responsible for maintaining those instruments, training technicians in their use, and developing all programming for IGO's many platforms.",
     members: [
-      { name: 'Alan Li', role: 'Lead Automation Engineer', photoName: 'Li_Alan' },
+      { name: 'Alan Li', role: 'Senior Automation Engineer', photoName: 'Li_Alan' },
       { name: 'Elevit Perez', role: 'Automation Engineer', photoName: 'Perez_Elevit' },
     ],
   },
@@ -426,15 +445,13 @@ export const bulkServices = [
     id: 5,
     name: 'TCR Sequencing',
     description: 'Methods to enrich T-cell receptor sequences',
-    startingMaterial: 'DNA - 12 sample minimum (Adaptive), RNA - 7 sample minimum (Archer), Cells (10X Genomics)',
-    deliverable: 'Pipeline output (Adaptive & Archer)',
+    startingMaterial: 'RNA - 7 sample minimum (Archer), Cells (10X Genomics), RNA - IGO-TCR',
+    deliverable: 'FASTQ + Pipeline output',
     tableHeaders: ['platform', 'sampleCost'],
     table: [
-      { platform: 'Adaptive immunoSEQ (survey)', sampleCost: 350 },
-      { platform: 'Adaptive immunoSEQ (deep)', sampleCost: 850 },
-      { platform: 'Adaptive immunoSEQ (ultradeep)', sampleCost: 1200 },
       { platform: 'Archer immunoverse', sampleCost: 494 },
       { platform: '10X Genomics V(D)J Enrichment', sampleCost: 2279 },
+      { platform: 'IGO-TCR', sampleCost: 225 },
     ],
   },
   {

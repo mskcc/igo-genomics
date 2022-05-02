@@ -106,6 +106,18 @@
         <md-table-cell class="fail">No try range</md-table-cell>
         <md-table-cell>N/A</md-table-cell>
       </md-table-row>
+      <md-table-row>
+        <md-table-cell rowspan="2">TCR-Seq (IGO)</md-table-cell>
+        <md-table-cell>Blood/PBMCs/Lymphoid Tissue</md-table-cell>
+        <md-table-cell class="pass">100ng</md-table-cell>
+        <md-table-cell class="fail" rowspan="2">No try range</md-table-cell>
+        <md-table-cell rowspan="2" colspan="2" class="center-page">No quality requirements</md-table-cell>
+        <md-table-cell rowspan="2">10&#181;L</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell>Non-lymphoid tissue</md-table-cell>
+        <md-table-cell class="pass">1.2&#181;g</md-table-cell>
+      </md-table-row>
     </md-table>
   </div>
 </template>

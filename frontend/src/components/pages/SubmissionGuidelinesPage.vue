@@ -180,7 +180,6 @@
                       <li>Fill out an iLab request for the appropriate application
                         <ul>
                           <li>ACCESS Capture + Sequencing</li>
-                          <li>Adaptive immunoSEQ</li>
                           <li>Amplicon Library Prep and Sequencing</li>
                           <li>Bacterial/yeast Whole Genome Library Prep and Sequencing</li>
                           <li>CRISPR Sequencing</li>
@@ -191,6 +190,7 @@
                           <li>Mouse-IMPACT</li>
                           <li>Shallow Whole Genome Sequencing for Copy Number</li>
                           <li>Cell Line Authentication & Fragment Analysis</li>
+                          <li>TCRSeq-IGO</li>
                         </ul></li>
                       <li>Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request a plate.</li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
