@@ -4,7 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        We are now requiring FFPE curls and punches be submitted in AutoLys tubes provided by IGO. Tubes can be requested <a href="https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/s/80XW74xHNEOAJNpvnf5-hg2" target="__blank">here</a>.
+        We are no longer able to offer the Adaptive immunoSEQ platform in the core. Please see the below news item for more information!
       </span>
     </div>
 

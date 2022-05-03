@@ -18,40 +18,6 @@
       </md-table-row>
 
       <md-table-row>
-        <md-table-cell rowspan="6">Adaptive immunoSEQ (survey/deep/ultradeep)<sup>a<md-tooltip v-if="footnotes.a" md-direction="right">{{ footnotes.a }}</md-tooltip></sup></md-table-cell>
-        <md-table-cell>FFPE</md-table-cell>
-        <md-table-cell class="pass">25&#181;m / 50&#181;m / N/A</md-table-cell>
-        <md-table-cell class="try">400ng</md-table-cell>
-        <md-table-cell rowspan="5" colspan="2" class="center-page">No quality requirements</md-table-cell>
-        <md-table-cell rowspan="5">50&#181;L</md-table-cell>
-      </md-table-row>
-      <md-table-row>
-        <md-table-cell>Lymphoid tissue</md-table-cell>
-        <md-table-cell class="pass">1.7&#181;g / 5&#181;g / 12&#181;g</md-table-cell>
-        <md-table-cell class="try">400ng</md-table-cell>
-      </md-table-row>
-      <md-table-row>
-        <md-table-cell>PBMCs</md-table-cell>
-        <md-table-cell class="pass">1.1&#181;g / 3.4&#181;g / 10.3&#181;g</md-table-cell>
-        <md-table-cell class="try">275ng</md-table-cell>
-      </md-table-row>
-      <md-table-row>
-        <md-table-cell>T cells</md-table-cell>
-        <md-table-cell class="pass">400ng / 1.2&#181;g / 3.5&#181;g</md-table-cell>
-        <md-table-cell class="try">100ng</md-table-cell>
-      </md-table-row>
-      <md-table-row>
-        <md-table-cell>Whole Blood/BMMCs</md-table-cell>
-        <md-table-cell class="pass">1.6&#181;g / 4.7&#181;g / 15&#181;g</md-table-cell>
-        <md-table-cell class="try">400ng</md-table-cell>
-      </md-table-row>
-      <md-table-row>
-        <md-table-cell>Other</md-table-cell>
-        <md-table-cell class="pass">2.7&#181;g / 9&#181;g / N/A</md-table-cell>
-        <md-table-cell class="try">400ng</md-table-cell>
-      </md-table-row>
-
-      <md-table-row>
         <md-table-cell>AmpliconSeq</md-table-cell>
         <md-table-cell></md-table-cell>
         <md-table-cell class="pass">100ng</md-table-cell>
@@ -144,6 +110,7 @@
         <md-table-cell colspan="2" class="center-page">No quality requirements</md-table-cell>
         <md-table-cell>50ng/&#181;L</md-table-cell>
       </md-table-row>
+
       <md-table-row>
         <md-table-cell rowspan="3">Whole Exome Sequencing</md-table-cell>
         <md-table-cell>cfDNA</md-table-cell>
