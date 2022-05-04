@@ -29,7 +29,7 @@
             </a>
         </div>
         <div class="reservations-button">
-            <a :href="scCalendar" target="__blank">
+            <a @click="showSingleCellDialogMethod">
                 <div>
                     <i class="fas fa-vial reservations-button-icon"></i>
                 </div>
@@ -54,6 +54,21 @@
           <md-button class="md-secondary" :to="{ name: 'submission guidelines' }">Not yet</md-button>
         </md-dialog-actions>
     </md-dialog>
+    <md-dialog :md-active.sync="showSingleCellDialog">
+        <md-dialog-title>Have you prepared your submission?</md-dialog-title>
+        <md-dialog-content md-dynamic-height>
+            Sample drop offs cannot be scheduled until the following forms have been submitted:
+            <ol>
+                <li><a href="https://my.ilabsolutions.com/account/saml/mskcc" target="__blank">iLabs request</a></li>
+                <li><a href="https://igo.mskcc.org/sample-submission" target="__blank">Sample Submission form</a></li>
+            </ol>
+            For more information please see our <router-link :to="{ name: 'submission guidelines' }">submission guidelines</router-link>
+        </md-dialog-content>
+        <md-dialog-actions>
+          <md-button class="md-primary" :href="scCalendar">Yes</md-button>
+          <md-button class="md-secondary" :to="{ name: 'submission guidelines' }">Not yet</md-button>
+        </md-dialog-actions>
+    </md-dialog>
   </div>
 </template>
 <script>
@@ -66,12 +81,16 @@ export default {
             spmCalendar: SPM_CALENDAR,
             scCalendar: SC_CALENDAR,
             showDialog: false,
+            showSingleCellDialog: false,
         }
     },
     methods: {
         showDialogMethod: function() {
             this.showDialog = true;
-        }
+        },
+        showSingleCellDialogMethod: function() {
+            this.showSingleCellDialog = true;
+        },
     }
 }
 </script>
