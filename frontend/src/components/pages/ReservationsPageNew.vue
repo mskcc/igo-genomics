@@ -4,7 +4,7 @@
     <div class="announcement-bubble reservation-announcement">
       <span class="material-icons"> priority_high </span>
       <span class="announcement-content">
-        Please note reservations cannot be made until all <a href="/submission-guidelines">submission guideline steps</a> have been completed.
+        Please note reservations cannot be made until all <router-link :to="{ name: 'submission guidelines' }">submission guideline steps</router-link> have been completed.
       </span>
     </div>
     <div class="reservation-buttons-container">
@@ -47,11 +47,11 @@
                 <li><a href="https://my.ilabsolutions.com/account/saml/mskcc" target="__blank">iLabs request</a></li>
                 <li><a href="https://igo.mskcc.org/sample-submission" target="__blank">Sample Submission form</a></li>
             </ol>
-            For more information please see our <a href="/submission-guidelines">submission guidelines</a>
+            For more information please see our <router-link :to="{ name: 'submission guidelines' }">submission guidelines</router-link>
         </md-dialog-content>
         <md-dialog-actions>
           <md-button class="md-primary" :href="spmCalendar">Yes</md-button>
-          <md-button class="md-secondary" href="/submission-guidelines">Not yet</md-button>
+          <md-button class="md-secondary" :to="{ name: 'submission guidelines' }">Not yet</md-button>
         </md-dialog-actions>
     </md-dialog>
   </div>
