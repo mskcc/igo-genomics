@@ -12,9 +12,9 @@
         <div>
           <div class="md-subheading">Prepare submission:</div>
           <ol>
-            <li><a href="https://my.ilabsolutions.com/account/saml/mskcc">Submit an iLabs request</a> for the desired application.</li>
+            <li><a href="https://my.ilabsolutions.com/account/saml/mskcc" target="__blank">Submit an iLabs request</a> for the desired application.</li>
             <li>Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to pick up a plate, micronic barcoded tubes, or AutoLys tubes.</li>
-            <li>Complete the <a href="https://igo.mskcc.org/sample-submission">sample submission form</a> indicating the sample specific information.</li>
+            <li>Complete the <a href="https://igo.mskcc.org/sample-submission" target="__blank">sample submission form</a> indicating the sample specific information.</li>
           </ol>
         </div>
         <div>

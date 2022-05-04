@@ -838,3 +838,8 @@ sup {
   padding-top: 25px;
   width: 300px;
 }
+
+.reservation-announcement {
+  max-width: 720px;
+  margin: auto;
+}
