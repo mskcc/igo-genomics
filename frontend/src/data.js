@@ -1,5 +1,14 @@
 export const news = [
   {
+    title: 'New barcoded label pilot for extraction material',
+    date: 'May 23, 2022',
+    imgSource: '',
+    categories: ['featured'],
+    body: `<p>
+    In order to improve sample tracking and prevent sample swaps or handling errors, IGO has begun labeling all incoming Eppendorf tubes of cells or tissue for nucleic acid extraction with 2D barcodes. Currently, there is no need to do anything differently in the submission process -- our team will label the tubes at the time of drop-off while we test the logistics of this new method.
+  </p>`,
+  },
+  {
     title: 'NEW at IGO: TCR sequencing',
     date: 'May 3, 2022',
     imgSource: 'IGO_210408_008',
@@ -21,7 +30,7 @@ export const news = [
     title: 'NEW at IGO: Nanostring GeoMx Spatial Transcriptomics',
     date: 'December 22, 2021',
     imgSource: 'geomx',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     IGO is now accepting samples for Nanostring GeoMx, a probe-based, targeted RNA-Seq platform optimized for FFPE slides. GeoMx allows for morphologically-stained slides to be scanned and for specific regions of interest to be selected by the investigator for precise targeting of tumor or TME (including both cell types from the same region). Customization is available both for the morphological staining and the RNA targeted. See more information in our <a href="https://genomics.mskcc.org/single-cell-hub">Single Cell Hub</a>, and contact us at genomics@mskcc.org to discuss your experiment.
   </p>`,
@@ -281,6 +290,7 @@ export const teams = [
       { name: 'Liping Sun', role: 'Manager, IGO', photoName: 'Sun_Liping' },
       { name: 'Jim Chen', role: 'Senior Research Technician', photoName: 'Chen_Jim' },
       { name: 'Keumsil Hwang', role: 'Senior Research Assistant', photoName: 'Hwang_Keumsil' },
+      { name: 'Medhini Mankale', role: 'Research Technician', photoName: 'Mankale_Medhini' },
       // { name: 'Open Position!', role: 'Research Assistant', },
     ],
   },
