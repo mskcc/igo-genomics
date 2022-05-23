@@ -73,11 +73,11 @@
         </ul>
         <div class="md-subheading">External collaborators:</div>
         <p>
-          For projects less than 200GB, you can transfer FASTQ files via Box, Gsuite, or Go-Anywhere. Please see the <a href="https://actg.mskcc.org/hpc/external-collaborators">ACTG website</a> for more information and links to request accounts.
+          For projects less than 200GB, you can transfer FASTQ files via Box, Gsuite, or Go-Anywhere. Please see the <a href="http://actg.mskcc.org/hpc/external-collaborators">ACTG website</a> for more information and links to request accounts.
 
           For larger requests, files can be transferred via QBio:
           <ul>
-            <li>Fill out <a href="https://actg.mskcc.org/contact-data-sharing-form/">this form</a></li>
+            <li>Fill out <a href="http://actg.mskcc.org/contact-data-sharing-form/">this form</a></li>
             <li>Under Data Management, check "IGO will be uploading the data to qbio"</li>
             <li>Indicate that Darrell Nabors, naborsd@mskcc.org, will be managing the data</li>
             <li>If you're unsure of the amount of data to share, please contact us</li>
