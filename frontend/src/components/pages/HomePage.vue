@@ -7,13 +7,6 @@
         IGO is transitioning to a new labeling system for incoming extraction material. We will be providing barcoded labels for tubes to ensure better sample tracking. Please anticipate an extended sample drop off time.
       </span>
     </div>
-    <div v-if="announcement" class="announcement-bubble">
-      <!-- <span class="material-icons"> priority_high </span> -->
-      <span class="material-icons"> notifications_active </span>
-      <span class="announcement-content">
-        We are no longer able to offer the Adaptive immunoSEQ platform in the core. Please see the below news item for more information!
-      </span>
-    </div>
 
     <home-page-news></home-page-news>
 
