@@ -234,6 +234,7 @@ export const teams = [
     members: [
       { name: 'Marisa Dunigan', role: 'Supervisor, IGO', photoName: 'Dunigan_Marisa' },
       { name: 'Emily Brennan', role: 'Project Assistant', photoName: 'Brennan_Emily' },
+      { name: 'Kyriakos Chatzis', role: 'Project Assistant', photoName: 'Chatzis_Kyriakos' },
       { name: 'Meghanne Lomibao', role: 'Project Coordinator', photoName: 'Lomibao_Meghanne' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
       // { name: 'Position Open!', role: 'Project Coordinator' },
@@ -250,7 +251,7 @@ export const teams = [
       { name: 'Elijah Castro', role: 'Research Technician', photoName: 'Castro_Elijah' },
       { name: 'Julienne Lomibao', role: 'Research Technician', photoName: 'Lomibao_Julienne' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
-      { name: 'Mohamed Abdelbaset', role: 'Research Assistant', photoName: 'Abdelbaset_Mohamed' },
+      { name: 'Mohamed Abdelbaset', role: 'Senior Research Technician', photoName: 'Abdelbaset_Mohamed' },
       { name: 'Tony Deblasio', role: 'Senior Research Assistant', photoName: 'Deblasio_Tony' },
       // { name: 'Open Position!', role: 'Research Assistant' },
     ],

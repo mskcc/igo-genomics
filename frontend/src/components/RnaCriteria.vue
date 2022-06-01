@@ -16,12 +16,16 @@
         <md-table-head>Maximum Submission Volume</md-table-head>
       </md-table-row>
       <md-table-row>
-        <md-table-cell>10X Genomics Visium</md-table-cell>
-        <md-table-cell>RNA</md-table-cell>
-        <md-table-cell colspan="2" class="pass center-page">No quantity requirements</md-table-cell>
+        <md-table-cell rowspan="2">10X Genomics Visium</md-table-cell>
+        <md-table-cell>FFPE</md-table-cell>
+        <md-table-cell rowspan="2" colspan="2" class="pass center-page">No quantity requirements</md-table-cell>
+        <md-table-cell class="pass">DV200 > 50</md-table-cell>
+        <md-table-cell rowspan="2" class="fail">No try range</md-table-cell>
+        <md-table-cell rowspan="2">N/A</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell>Frozen</md-table-cell>
         <md-table-cell class="pass">RIN > 7</md-table-cell>
-        <md-table-cell class="fail">No try range</md-table-cell>
-        <md-table-cell>N/A</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell rowspan="2">Archer FusionPlex</md-table-cell>
