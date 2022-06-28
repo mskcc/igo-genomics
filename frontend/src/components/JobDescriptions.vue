@@ -37,6 +37,18 @@
         <md-button href="https://careers.mskcc.org/vacancies/2022-62346-bioinformatics-software-engineer-ii/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
+
+    <md-card class="career-card">
+      <md-card-header>
+        <div class="md-title">Lab Manager</div>
+        <router-link :to="{ name: 'team', params: { id: 1 } }">Lab Support</router-link>
+        <div class="md-body">Open!</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionLM = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2022-62092-lab-manager/" target="_blank" class="md-primary">Apply</md-button>
+      </md-card-actions>
+    </md-card>
     
     <md-dialog :md-active.sync="showJobDescriptionAA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -338,6 +350,31 @@
       </md-dialog-actions>
     </md-dialog>
 
+    <md-dialog :md-active.sync="showJobDescriptionLM" :md-fullscreen="false" style="z-index: 400;">
+      <md-dialog-content md-dynamic-height>
+        <strong>As a Lab Manager in IGO, you will:</strong>
+        <ul>
+          <li>Manage activities such as ensuring operations of essential equimpment and making sure adequate supplies are available for routine procedures</li>
+          <li>Act as liaison between the lab and MSK safety and regulatory offices to ensure compliance with all applicable regulations</li>
+          <li>Train lab personnel in proper lab conduct</li>
+          <li>Provide recommendations for operational improvements</li>
+          <li>Oversee daily lab administrative operations</li>
+          <li>Manage complex calendars and scheduling of meetings on the manager’s behalf</li>
+          <li>Work under LEAN management principles</li>
+        </ul>
+        <strong>You have:</strong>
+        <ul>
+          <li>Master's degree in health or physical sciences or equivalent education + experience</li>
+          <li>5+ years lab experience</li>
+          <li>Ability to initiate and compose communications for various purpposes in an appropriate style</li>
+          <li>Ability to review goals, analyze processes necessary to achieve those goals, and develop techniques and systems required to meet those goals</li>
+        </ul>
+      </md-dialog-content>
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="showJobDescriptionLM = false">Close</md-button>
+      </md-dialog-actions>
+    </md-dialog>
+
   </div>
 </template>
 
@@ -361,6 +398,7 @@ export default {
       // showJobDescriptionSPMPM: false,
       showJobDescriptionOM: false,
       showJobDescriptionAA: false,
+      showJobDescriptionLM: false,
     };
   },
 };

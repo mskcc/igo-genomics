@@ -214,6 +214,7 @@ export const teams = [
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
       { name: 'Magali Cavatore', role: 'Lab Manager', photoName: 'Cavatore_Magali' },
       { name: 'Open Position!', role: 'Administrative Assistant' },
+      { name: 'Open Position!', role: 'Lab Manager' },
     ],
   },
   {
