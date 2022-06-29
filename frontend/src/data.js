@@ -213,7 +213,8 @@ export const teams = [
     members: [      
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
       { name: 'Magali Cavatore', role: 'Lab Manager', photoName: 'Cavatore_Magali' },
-      { name: 'Mary Betancor', role: 'SKI Admin Assistant II', photoName: 'Betancor_Mary' },
+      { name: 'Open Position!', role: 'Administrative Assistant' },
+      { name: 'Open Position!', role: 'Lab Manager' },
     ],
   },
   {
@@ -224,6 +225,7 @@ export const teams = [
     members: [
       { name: 'Alan Li', role: 'Senior Automation Engineer', photoName: 'Li_Alan' },
       { name: 'Elevit Perez', role: 'Automation Engineer', photoName: 'Perez_Elevit' },
+      { name: 'Ethan Song', role: 'Intern', photoName: 'Song_Ethan' },
     ],
   },
   {
@@ -252,6 +254,7 @@ export const teams = [
       { name: 'Julienne Lomibao', role: 'Research Technician', photoName: 'Lomibao_Julienne' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
       { name: 'Mohamed Abdelbaset', role: 'Senior Research Technician', photoName: 'Abdelbaset_Mohamed' },
+      { name: 'Nick Bruno', role:'Temporary Technician', photoName: 'Bruno_Nick' },
       { name: 'Tony Deblasio', role: 'Senior Research Assistant', photoName: 'Deblasio_Tony' },
       // { name: 'Open Position!', role: 'Research Assistant' },
     ],
@@ -266,6 +269,7 @@ export const teams = [
       { name: 'Justin Clarke', role: 'Research Technician', photoName: 'Clarke_Justin' },
       { name: 'Ravi Shrivastav', role: 'Senior Research Technician', photoName: 'Shrivastav_Ravi' },
       { name: 'Satish Ramakrishnan', role: 'Research Assistant', photoName: 'Ramakrishnan_Satish' },
+      { name: 'Sophie Kleinberg', role: 'Intern', photoName: 'Kleinberg_Sophie'},
       { name: 'Yushi Wu', role: 'Research Assistant', photoName: 'Wu_Yushi' },   
     ],
   },
@@ -276,9 +280,11 @@ export const teams = [
       "The Library Preparation team handles the bulk of IGO's sample processing, utilizing liquid-handling robots to automate many platforms.",
     members: [
       { name: 'Ruchi Patel', role: 'Manager, IGO', photoName: 'Patel_Ruchi' },
+      { name: 'Janhavi Dhore', role: 'Intern', photoName: 'Dhore_Janhavi' },
       { name: 'Kalliopi Chatzis', role: 'Research Assistant', photoName: 'Chatzis_Kalliopi' },
       { name: 'Katherine Allard', role: 'Research Assistant', photoName: 'Allard_Katherine' },
       { name: 'Satoko Murakami', role: 'Research Assistant', photoName: 'Murakami_Satoko' },
+      { name: 'Sophia Rust', role: 'Research Technician', photoName: 'Rust_Sophia' },
       // { name: 'Open Position!', role: 'Research Assistant' },
     ],
   },
@@ -306,7 +312,7 @@ export const teams = [
       { name: 'Darrell Nabors', role: 'Bioinformatics Engineer V', photoName: 'Nabors_Darrell' },
       { name: 'Fahimeh Mirhaj', role: 'Bioinfo. Software Engineer I', photoName: 'Mirhaj_Fahimeh' },
       { name: 'Stephanie DelBelso', role: 'Software Engineer', photoName: 'DelBelso_Stephanie' },
-      // { name: 'Open Position!', role: 'Software Engineer II' },
+      { name: 'Open Position!', role: 'Bioinformatics Software Engineer II' },
     ],
   },
   {
@@ -542,10 +548,10 @@ export const singleServices = [
     startingMaterial: 'Sorted cells',
     libraryChemistry: 'SMART-Seq + Nextera XT',
     sequencingReadLength: 'PE50',
-    sequencingCoverage: '5M reads/cell',
+    sequencingCoverage: '~4M reads/cell',
     deliverable: 'FASTQ',
     libraryCost: '$1,680/plate',
-    sequencingCost: '$17.50/cell',
+    sequencingCost: '$1,020/plate',
   },
   {
     id: 5,

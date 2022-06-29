@@ -13,7 +13,69 @@
         <md-button href="https://careers.mskcc.org/vacancies/2022-59668-operations-manager-integrated-genomics-operation/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
+
+    <md-card class="career-card">
+      <md-card-header>
+        <div class="md-title">Administrative Assistant</div>
+        <router-link :to="{ name: 'team', params: { id: 1 } }">Lab Support</router-link>
+        <div class="md-body">Open!</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionAA = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2022-62246-administrative-assistant-sloan-kettering-institute/" target="_blank" class="md-primary">Apply</md-button>
+      </md-card-actions>
+    </md-card>
+
+    <md-card class="career-card">
+      <md-card-header>
+        <div class="md-title">Bioinformatics Software Engineer II</div>
+        <router-link :to="{ name: 'team', params: { id: 8 } }">Data</router-link>
+        <div class="md-body">Open!</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionDataSEII = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2022-62346-bioinformatics-software-engineer-ii/" target="_blank" class="md-primary">Apply</md-button>
+      </md-card-actions>
+    </md-card>
+
+    <md-card class="career-card">
+      <md-card-header>
+        <div class="md-title">Lab Manager</div>
+        <router-link :to="{ name: 'team', params: { id: 1 } }">Lab Support</router-link>
+        <div class="md-body">Open!</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionLM = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2022-62092-lab-manager/" target="_blank" class="md-primary">Apply</md-button>
+      </md-card-actions>
+    </md-card>
     
+    <md-dialog :md-active.sync="showJobDescriptionAA" :md-fullscreen="false" style="z-index: 400;">
+      <md-dialog-content md-dynamic-height>
+        <strong>As an Administrative Assistant in the Sloan Kettering Institute, you will:</strong>
+        <ul>
+          <li>Perform general administrative work in support of SKI program activities as directed including ensuring the smooth flow of communication between investigators, members of the lab, institutional contacts, and external contacts</li>
+          <li>Exhibit sound understanding of lab operations and manage day-to-day administrative operations for the manager and Principal Investigator (PI)</li>
+          <li>Assist in the accurate preparation of complex documents and supervise the coordination and organization of timely grant submissions and similar projects</li>
+          <li>Troubleshoot process/paperwork problems and proactively follow up on problem resolution</li>
+          <li>Purchase capital equipment including laboratory and computer equipment, and maintain inventory and maintenance records</li>
+          <li>Manage complex calendars and scheduling of meetings on the manager’s behalf</li>
+          <li>Assist with clerical duties such as scheduling, attendance, payroll, and related records for lab members</li>
+          <li>Develop agendas for visiting faculty, establish a detailed course of action for duties, demonstrate thoroughness and accuracy, and use written and verbal communication skills while using extensive discretion and judgment</li>
+        </ul>
+        <strong>You have:</strong>
+        <ul>
+          <li>High school degree and 4+ years administrative work experience or a bachelor's degree and 2-4 years of administrative work experience, experience in a healthcare environment preferred</li>
+          <li>The ability to work proactively & independently and follow through on projects</li>
+          <li>Excellent Microsoft Office software skills (Word, Excel, PowerPoint, Outlook) Experience with both PC and Mac software strong preferred & familiarity with FileMaker database is a plus</li>
+          <li>Grant experience strongly preferred- Outstanding communication & interpersonal skills</li>
+        </ul>
+      </md-dialog-content>
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="showJobDescriptionAA = false">Close</md-button>
+      </md-dialog-actions>
+    </md-dialog>
+
     <!-- <md-dialog :md-active.sync="showJobDescriptionNARA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Technician in the Nucelic Acids team, you will:</strong>
@@ -242,27 +304,28 @@
       </md-dialog-actions>
     </md-dialog> -->
 
-    <!-- <md-dialog :md-active.sync="showJobDescriptionDataSEII" :md-fullscreen="false" style="z-index: 400;">
+    <md-dialog :md-active.sync="showJobDescriptionDataSEII" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
-        <strong>As a Software Engineer II on the Data Team, you will:</strong>
+        <strong>As a Bioinformatics Software Engineer II on the Data Team, you will:</strong>
         <ul>
-          <li>Build user-friendly web applications using modern JavaScript frameworks (React, Vue.js), Node.js, and Python.</li>
-          <li>Clearly communicate project challenges and progress.</li>
-          <li>Ensure code is readable, maintainable, and stable through implementation of unit and end-to-end test.</li>
-          <li>Follow programming best practices and work collaboratively in-person and through GitHub.</li>
+          <li>Build fast, stable, and efficient delivery pipelines</li>
+          <li>Use continuous delivery practices to deliver high-quality Java code</li>
+          <li>Build user-friendly web applications using modern JavaScript frameworks (React, Vue.js), Node.js, and Python</li>
+          <li>Clearly communicate project challenges and progress</li>
+          <li>Ensure code is readable, maintainable, and stable through implementation of unit and end-to-end test</li>
+          <li>Follow programming best practices and work collaboratively in-person and through GitHub</li>
         </ul>
         <strong>You have:</strong>
         <ul> 
-          <li>A Bachelor's degree in Computer Science, Bioinformatics, or other applied science or equivalent experience</li>
-          <li>3 years of software development experience</li>
-          <li>Experience working with web technologies JavaScript or Python</li>
+          <li>3+ years of software development experience</li>
+          <li>Experience working with two or more development languages including Java</li>
           <li>Experience with relational databases and/or non-relational databases (MySQL, MongoDB)</li>
         </ul>
       </md-dialog-content>
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionDataSEII = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog> -->
+    </md-dialog>
 
     <md-dialog :md-active.sync="showJobDescriptionOM" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -287,6 +350,31 @@
       </md-dialog-actions>
     </md-dialog>
 
+    <md-dialog :md-active.sync="showJobDescriptionLM" :md-fullscreen="false" style="z-index: 400;">
+      <md-dialog-content md-dynamic-height>
+        <strong>As a Lab Manager in IGO, you will:</strong>
+        <ul>
+          <li>Manage activities such as ensuring operations of essential equimpment and making sure adequate supplies are available for routine procedures</li>
+          <li>Act as liaison between the lab and MSK safety and regulatory offices to ensure compliance with all applicable regulations</li>
+          <li>Train lab personnel in proper lab conduct</li>
+          <li>Provide recommendations for operational improvements</li>
+          <li>Oversee daily lab administrative operations</li>
+          <li>Manage complex calendars and scheduling of meetings on the manager’s behalf</li>
+          <li>Work under LEAN management principles</li>
+        </ul>
+        <strong>You have:</strong>
+        <ul>
+          <li>Master's degree in health or physical sciences or equivalent education + experience</li>
+          <li>5+ years lab experience</li>
+          <li>Ability to initiate and compose communications for various purpposes in an appropriate style</li>
+          <li>Ability to review goals, analyze processes necessary to achieve those goals, and develop techniques and systems required to meet those goals</li>
+        </ul>
+      </md-dialog-content>
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="showJobDescriptionLM = false">Close</md-button>
+      </md-dialog-actions>
+    </md-dialog>
+
   </div>
 </template>
 
@@ -305,10 +393,12 @@ export default {
       // showJobDescriptionSeqRA: false,
       // showJobDescriptionNART: false,
       // showJobDescriptionSeqSRT: false,
-      // showJobDescriptionDataSEII: false,
+      showJobDescriptionDataSEII: false,
       // showJobDescriptionAE: false,
       // showJobDescriptionSPMPM: false,
       showJobDescriptionOM: false,
+      showJobDescriptionAA: false,
+      showJobDescriptionLM: false,
     };
   },
 };
