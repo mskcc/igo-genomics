@@ -4,18 +4,6 @@
 
     <md-card class="career-card">
       <md-card-header>
-        <div class="md-title">Operations Manager</div>
-        <router-link :to="{ name: 'team', params: { id: 0 } }">Leadership</router-link>
-        <div class="md-body">Open!</div>
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionOM = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2022-59668-operations-manager-integrated-genomics-operation/" target="_blank" class="md-primary">Apply</md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="career-card">
-      <md-card-header>
         <div class="md-title">Administrative Assistant</div>
         <router-link :to="{ name: 'team', params: { id: 1 } }">Lab Support</router-link>
         <div class="md-body">Open!</div>
@@ -46,7 +34,7 @@
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionLM = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2022-62092-lab-manager/" target="_blank" class="md-primary">Apply</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2022-62873-lab-manager/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
     
@@ -327,7 +315,7 @@
       </md-dialog-actions>
     </md-dialog>
 
-    <md-dialog :md-active.sync="showJobDescriptionOM" :md-fullscreen="false" style="z-index: 400;">
+    <!-- <md-dialog :md-active.sync="showJobDescriptionOM" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As an Operations Manager, you will:</strong>
         <ul>
@@ -348,26 +336,24 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionOM = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog>
+    </md-dialog> -->
 
     <md-dialog :md-active.sync="showJobDescriptionLM" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
-        <strong>As a Lab Manager in IGO, you will:</strong>
+        <strong>As a Lab Manager in IGO, you must be:</strong>
         <ul>
-          <li>Manage activities such as ensuring operations of essential equimpment and making sure adequate supplies are available for routine procedures</li>
+          <li>Handle day-to-day activities such as ensuring operation of essential equimpment, making sure adequate supplies are available for routine procedures, and reviewing budgets</li>
           <li>Act as liaison between the lab and MSK safety and regulatory offices to ensure compliance with all applicable regulations</li>
-          <li>Train lab personnel in proper lab conduct</li>
-          <li>Provide recommendations for operational improvements</li>
-          <li>Oversee daily lab administrative operations</li>
-          <li>Manage complex calendars and scheduling of meetings on the manager’s behalf</li>
-          <li>Work under LEAN management principles</li>
+          <li>Collaborate with financial groups and systems at MSK</li>
+          <li>Establish and maintain relationships with IGO's vendors (Illumina, 10X Genomics, Agilent, Beckman Coulter, etc.)</li>
+          <li>Work as a team with the operations manager to report on lab operations to the core director</li>
         </ul>
         <strong>You have:</strong>
         <ul>
-          <li>Master's degree in health or physical sciences or equivalent education + experience</li>
-          <li>5+ years lab experience</li>
-          <li>Ability to initiate and compose communications for various purpposes in an appropriate style</li>
-          <li>Ability to review goals, analyze processes necessary to achieve those goals, and develop techniques and systems required to meet those goals</li>
+          <li>Experience in lab management (ordering, procurement, inventory, repairs)</li>
+          <li>A passion for efficiency (e.g., LEAN principles)</li>
+          <li>Excellent interpersonal, written, and oral communication skills</li>
+          <li>Genomics and molecular biology experience welcome</li>
         </ul>
       </md-dialog-content>
       <md-dialog-actions>
@@ -396,7 +382,7 @@ export default {
       showJobDescriptionDataSEII: false,
       // showJobDescriptionAE: false,
       // showJobDescriptionSPMPM: false,
-      showJobDescriptionOM: false,
+      // showJobDescriptionOM: false,
       showJobDescriptionAA: false,
       showJobDescriptionLM: false,
     };
