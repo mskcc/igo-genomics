@@ -437,7 +437,7 @@
                       <md-list slot="md-expand">
                         <md-list-item>
                           <div>
-                            Please see our <router-link :to="{ name: 'accessing your data' }">data access instructions</router-link>.
+                            Please see our <router-link :to="{ name: 'data & delivery' }">data access instructions</router-link>.
                             <br />
                             If you cannot log in or need access for a collaborator or data analyst, please fill out the "Data Access Request" <a href="https://my.ilabsolutions.com/service_center/3276/?tab=services">iLab form</a>
                           </div>
@@ -473,6 +473,17 @@
                         <md-list-item>
                           <div>
                             PAXgene is the best choice for long-term blood storage, as the tubes are good up to 24 months or longer.
+                          </div>
+                        </md-list-item>
+                      </md-list>
+                    </md-list-item>
+                    <md-list-item md-expand class="md-inset">
+                      <md-icon>add</md-icon>
+                      <span class="md-list-item-text">How long does IGO keep FASTQ files?</span>
+                      <md-list slot="md-expand">
+                        <md-list-item>
+                          <div>
+                            Currently we will leave FASTQ files linked to the project folder for <b>5 years</b>. After that time, we will be able to regenerate FASTQ files upon request, but there will be a charge and a processing delay. BAM files and pipeline output are kept for 3 months.
                           </div>
                         </md-list-item>
                       </md-list>

@@ -3,7 +3,7 @@
     <md-app style="text-align:left;">
       <md-app-drawer md-permanent="full">
         <md-list class="md-dense">
-          <md-list-item :to="{ name: 'accessing your data' }"> Data & Delivery</md-list-item>
+          <md-list-item :to="{ name: 'data & delivery' }"> Data & Delivery</md-list-item>
           <md-list-item class="indent" href="#instructions">Instructions on accessing your FASTQ files</md-list-item>
           <md-list-item class="indent" href="#sharing">Sharing data with collaborators</md-list-item>
           <md-list-item class="indent" href="#data-delivery-structure">Data delivery structure</md-list-item>
@@ -140,7 +140,7 @@
         </p>
         <div class="md-subheading">BAM files</div>
         <p>
-          Beginning July 1, 2022, BAM files will be part of the deliverable for RNA-Seq projects. They will be deposited in the directory /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline.
+          Beginning July 1, 2022, BAM files will be part of the deliverable for RNA-Seq projects. They will be deposited in the directory /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline. We plan to gradually expand BAM delivery to other experiment types.
         </p> 
         <p>
           BAMs are generated in Dragen v3.10 with a command like:
@@ -159,7 +159,7 @@
            </pre>
         </p>
         <p>
-          The reference genomes are: <a href="https://support.illumina.com/sequencing/sequencing_software/dragen-bio-it-platform/product_files.html" target="_blank">hg38 for human</a> or <a href="https://nov2020.archive.ensembl.org/Mus_musculus/Info/Index" target="_blank">GRCm38.p6 for mouse</a>. GTF files for human come from <a href="https://gencodegenes.org/human" target="_blank">Gencode</a>; for mouse we use the same Ensembl link above. For more information on the accuracy of DRAGEN compared to BWA-MEM see <a href="https://gatk.broadinstitute.org/hc/en-us/articles/4410953761563-Introducing-DRAGMAP-the-new-genome-mapper-in-DRAGEN-GATK" target="_blank">Introducing DRAGMAP, the new genome mapper in DRAGEN-GATK</a> and <a href="https://www.illumina.com/science/genomics-research/articles/dragen-demystifying-reference-genomes.html" target="_blank">Demystifying the Versions of GRCh38/hg38 Reference Genomes, How They are Used in Dragen and Their Impact on Accuracy</a>.
+          The reference genomes are: <a href="https://support.illumina.com/sequencing/sequencing_software/dragen-bio-it-platform/product_files.html" target="_blank">hg38-alt-masked-v2 for human</a> or <a href="https://useast.ensembl.org/Mus_musculus/Info/Index" target="_blank">GRCm39 for mouse</a>. GTF files for human come from <a href="https://gencodegenes.org/human" target="_blank">Gencode</a>; for mouse we use the same Ensembl link above. For more information on the accuracy of DRAGEN compared to BWA-MEM see <a href="https://gatk.broadinstitute.org/hc/en-us/articles/4410953761563-Introducing-DRAGMAP-the-new-genome-mapper-in-DRAGEN-GATK" target="_blank">Introducing DRAGMAP, the new genome mapper in DRAGEN-GATK</a> and <a href="https://www.illumina.com/science/genomics-research/articles/dragen-demystifying-reference-genomes.html" target="_blank">Demystifying the Versions of GRCh38/hg38 Reference Genomes, How They are Used in Dragen and Their Impact on Accuracy</a>.
         </p>
         <div class="md-subheading">Cell Ranger, Space Ranger, and Tapestri</div>
         <p>
@@ -189,7 +189,7 @@
         <div class="md-title" id="data-storage">Data Storage</div>
         <div class="md-subheading">How long does IGO keep FASTQ files?</div>
         <p>
-          Currently we will leave FASTQ files linked to the project folder for <b>5 years</b>. After that time, we will be able to regenerate FASTQ files upon request, but there will be a processing delay. FASTQs from 2017 and earlier will be deleted <b>August 1, 2022</b>.
+          Currently we will leave FASTQ files linked to the project folder for <b>5 years</b>. After that time, we will be able to regenerate FASTQ files upon request, but there will be a charge and a processing delay. FASTQs from 2017 and earlier will be deleted <b>September 1, 2022</b>.
         </p>
         
       </md-app-content>
