@@ -139,7 +139,7 @@
 </template>
 
 <script>
-// import { SPM_CALENDAR, SC_CALENDAR } from './config.js';
+import { SPM_CALENDAR, SC_CALENDAR } from './config.js';
 
 export default {
   name: 'App',
@@ -149,8 +149,8 @@ export default {
   },
   data: function() {
     return {
-      spmCalendar: 'https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/',
-      scCalendar: 'https://outlook.office365.com/owa/calendar/igo1@mskcc.onmicrosoft.com/bookings/',
+      spmCalendar: SPM_CALENDAR,
+      scCalendar: SC_CALENDAR,
       showNavigation: false,
       links: ['home', 'platforms & pricing', 'submission guidelines', 'sample requirements', 'reservations'],
       mobileLinks: [

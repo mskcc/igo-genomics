@@ -72,14 +72,14 @@
   </div>
 </template>
 <script>
-// import { SPM_CALENDAR, SC_CALENDAR } from './../../config.js';
+import { SPM_CALENDAR, SC_CALENDAR } from './../../config.js';
 
 export default {
     name: 'ReservationPageNew',
     data: function() {
         return {
-            spmCalendar: 'https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/',
-            scCalendar: 'https://outlook.office365.com/owa/calendar/igo1@mskcc.onmicrosoft.com/bookings/',
+            spmCalendar: SPM_CALENDAR,
+            scCalendar: SC_CALENDAR,
             showDialog: false,
             showSingleCellDialog: false,
         }

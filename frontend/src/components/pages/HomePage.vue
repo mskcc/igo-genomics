@@ -34,7 +34,7 @@
 
 <script>
 // import { IMAGE_URL } from './../../config.js';
-// import { SPM_CALENDAR, SC_CALENDAR } from './../../config.js';
+import { SPM_CALENDAR, SC_CALENDAR } from './../../config.js';
 import HomePageNews from '../HomePageNews.vue';
 
 export default {
@@ -47,8 +47,8 @@ export default {
       igoDescription:
         'The Integrated Genomics Operation (IGO) core enables basic, clinical, and translational science by providing a broad range of services and expertise to investigators interested in evaluating gene expression, chromosome structure, and nucleotide sequence. Our services are comprehensive, rapid, and user-friendly. Through the centralized management of all sequencing activities at MSK, the core empowers scientists with an array of technological options and the most efficient and cost-effective means of performing high-throughput genomics.',
       announcement: true,
-      spmCalendar: 'https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/',
-      scCalendar: 'https://outlook.office365.com/owa/calendar/igo1@mskcc.onmicrosoft.com/bookings/',
+      spmCalendar: SPM_CALENDAR,
+      scCalendar: SC_CALENDAR,
     };
   },
   // methods: {
