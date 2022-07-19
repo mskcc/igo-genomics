@@ -216,13 +216,13 @@
 <script>
 import SingleCellTable from '../SingleCellTable.vue';
 import TenXTable from '../TenXTable.vue';
-import { SC_CALENDAR } from './../../config.js';
+// import { SC_CALENDAR } from './../../config.js';
 
 export default {
   components: { SingleCellTable, TenXTable },
   data: function() {
     return {
-      scCalendar: SC_CALENDAR,
+      scCalendar: 'https://outlook.office365.com/owa/calendar/igo1@mskcc.onmicrosoft.com/bookings/',
     };
   },
 };
