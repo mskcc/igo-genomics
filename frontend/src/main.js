@@ -142,7 +142,7 @@ const routes = [
       { path: '/criteria/tissue', component: TissueCriteria, name: 'tissue' },
     ],
   },
-  { path: '/accessing-your-data', component: DataDeliveryPage, name: 'accessing your data' },
+  { path: '/accessing-your-data', component: DataDeliveryPage, name: 'data & delivery' },
   { path: '/news', component: NewsPage, name: 'news' },
   { path: '/igo-tutorials', component: IgoTutorialsPage, name: 'igo tutorials' },
   { path: '/igo-tutorials/:name', component: ShowVideoPage, name: 'show video', props: true },

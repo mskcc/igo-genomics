@@ -177,6 +177,9 @@
             Considerations:
             <ul>
               <li>Each slide has four squares available for tissue sections, each 6.5x6.5mm -- we recommend tissues are processed in duplicate, at two samples per slide</li>
+              <ul>
+                <li>Note: Investigators can choose to buy slides in packs of 1 (4 reactions) or 4 (16 reactions). They will be billed at project initiation for those reagents, and have at least 3 months to use them.</li>
+              </ul>
               <li>We strongly recommend test stainings to ensure structures are visible and cells of interest are part of the usable section.</li>
               <li>IGO works in collaboration with MCC to prepare these samples and MCC bills services separately from IGO.</li>
               <li>Permeabilization optimization is only necessary with frozen tissue.</li>
@@ -196,7 +199,7 @@
           <li>Output: FASTQ + GeoMx pipeline</li>
           <li>Considerations:
             <ul>
-              <li>We highly recommend that slides be test-stained and visualized before beginning a GeoMx experiment, to ensure that regions of interest are distinct and present</li>
+              <li>We require that slides be test-stained and visualized before beginning a GeoMx experiment, to ensure that regions of interest are distinct and present</li>
               <li>While Nanostring-validated morphological staining panels need little optimization, custom panels likely will</li>
               <li>If selected regions are too small and not enough RNA can be collected, library prep will fail, so we have a 200 micron minimum for ROI circumference</li>
               <li>ROI size may need to be increased if the targeted cell type (CD45+, for instance) is rarer in the region</li>

@@ -3,11 +3,11 @@
     <md-app style="text-align:left;">
       <md-app-drawer md-permanent="full">
         <md-list class="md-dense">
-          <md-list-item :to="{ name: 'accessing your data' }"> Data Delivery</md-list-item>
+          <md-list-item :to="{ name: 'data & delivery' }"> Data & Delivery</md-list-item>
           <md-list-item class="indent" href="#instructions">Instructions on accessing your FASTQ files</md-list-item>
           <md-list-item class="indent" href="#sharing">Sharing data with collaborators</md-list-item>
           <md-list-item class="indent" href="#data-delivery-structure">Data delivery structure</md-list-item>
-          <md-list-item class="indent" href="#10x-and-missionbio">10X Genomics & MissionBio pipeline output</md-list-item>
+          <md-list-item class="indent" href="#deliverables">Deliverables</md-list-item>
           <md-list-item class="indent" href="#data-storage">Data Storage</md-list-item>
         </md-list>
       </md-app-drawer>
@@ -130,12 +130,41 @@
 
         <md-divider></md-divider>
 
-        <div class="md-title" id="10x-and-missionbio">10X Genomics & MissionBio pipeline output</div>
-        <div class="md-subheading">Now available on /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline</div>
+        <div class="md-title" id="deliverables">Deliverables -- FASTQ, BAM, & pipeline</div>
+        <div class="md-subheading">FASTQ files</div>
         <p>
-          For quality control purposes, IGO runs Cell Ranger (10X scRNA-Seq), Space Ranger (10X Visium), and the Tapestri pipeline
-          (MissionBio) on data from projects initiated in IGO. We will now deliver output from those analytic pipelines to the project
-          folder along with FASTQ files by default. Because of size constraints, pipeline data will remain available for
+          FASTQ files are our standard deliverable for all applications. We base our target output either requested read number (RNA-Seq or epigenetic platforms, shallow WGS or shotgun metagenomics, user library sequencing, UMI-based platforms) or coverage (WES, non-UMI targeted sequencing, WGS, single cell platforms). Coverage for 10X Genomics and MissionBio applications is calculated by their respective pipelines; we aim for the recommended coverage unless you request otherwise. Coverage for WES, WGS, IMPACT, HemePACT, or custom capture applications is calculated by DRAGEN v3.10 and may differ from coverages calculated with other algorithms.
+        </p>
+        <p>
+          We always strive to meet or exceed read number or coverage requests, however sometimes samples are delivered under those targets. This is typically due to sample quality or quantity.
+        </p>
+        <div class="md-subheading">BAM files</div>
+        <p>
+          Beginning July 1, 2022, BAM files will be part of the deliverable for RNA-Seq projects. They will be deposited in the directory /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline. We plan to gradually expand BAM delivery to other experiment types.
+        </p> 
+        <p>
+          BAMs are generated in Dragen v3.10 with a command like:
+          <pre>
+            <code>
+              dragen -f -r /staging/ref/hg38_alt_masked_graph_v2+cnv_graph_rna-1644018559
+              --fastq0list {RUN}/Reports/fastq_list.csv
+              --fastq-list-sample-id {SAMPLE-NAME}
+              -a {https://www.gencodegenes.org/human/ ALL GTF File}
+              --enable-map-align true --enable-sort=true --enable-bam-indexing true
+              --enable-map-align-output true --output-format=BAM --enable-rna=true
+              --enable-duplicate-marking true --enable-rna-quantification true
+              --output-file-prefix {SAMPLE_NAME}
+              --output-directory {OUTPUT_DIR}
+           </code>
+           </pre>
+        </p>
+        <p>
+          The reference genomes are: <a href="https://support.illumina.com/sequencing/sequencing_software/dragen-bio-it-platform/product_files.html" target="_blank">hg38-alt-masked-v2 for human</a> or <a href="https://useast.ensembl.org/Mus_musculus/Info/Index" target="_blank">GRCm39 for mouse</a>. GTF files for human come from <a href="https://gencodegenes.org/human" target="_blank">Gencode</a>; for mouse we use the same Ensembl link above. For more information on the accuracy of DRAGEN compared to BWA-MEM see <a href="https://gatk.broadinstitute.org/hc/en-us/articles/4410953761563-Introducing-DRAGMAP-the-new-genome-mapper-in-DRAGEN-GATK" target="_blank">Introducing DRAGMAP, the new genome mapper in DRAGEN-GATK</a> and <a href="https://www.illumina.com/science/genomics-research/articles/dragen-demystifying-reference-genomes.html" target="_blank">Demystifying the Versions of GRCh38/hg38 Reference Genomes, How They are Used in Dragen and Their Impact on Accuracy</a>.
+        </p>
+        <div class="md-subheading">Cell Ranger, Space Ranger, and Tapestri</div>
+        <p>
+          For quality control purposes, IGO runs Cell Ranger (10X scRNA-Seq, VDJ, & Multiome), Space Ranger (10X Visium), and the Tapestri pipeline
+          (MissionBio) on data from projects initiated in IGO. We deliver output from those analytic pipelines to /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline along with FASTQ files by default. Because of size constraints, pipeline data will remain available for
           <strong>3 months</strong> before being deleted.
         </p>
         <p>
@@ -147,26 +176,20 @@
           Deliverables for MissionBio Tapestri: QC and metadata files (TXT, TSV, INFO, YAML, CSV, JSON), CellFinder plot (PDF), Tapestri
           Insights file (LOOM), alignment files (BAM), mapped reads by barcode (TXT), variant information (VCF)
         </p>
+        <p>
+          Please note that Cell Ranger count output will not take feature barcoding or cell hashing information into account.
+        </p>
+        <div class="md-subheading">CRISPresso</div>
+        <p>
+          CRISPResso2 output is delivered for CRISPRSeq projects that have selected that option. We run with default parameters and the information provided in iLab, so the pipeline isn't necessarily tailored for your experiment. You can learn more about CRISPResso2, the available parameters, and run your FASTQ files yourself by visiting <a href="http://crispresso.pinellolab.org/submission" target="_blank">crispresso.pinellolab.org</a>.
+        </p>
 
         <md-divider></md-divider>
 
-        <div class="md-title" id="data-storage">Data Storage & FASTQ File Compression</div>
-        <div class="md-subheading">What changes are being made?</div>
+        <div class="md-title" id="data-storage">Data Storage</div>
+        <div class="md-subheading">How long does IGO keep FASTQ files?</div>
         <p>
-          All FASTQ files from <strong>2014 and before</strong> will be converted to the fastq.ora format, compressing the file and allowing for additional storage space. Files generated since 2014 will remain in the fastq.gz format.
-        </p>
-        <div class="md-subheading">How can the files be processed?</div>
-        <p>
-          The Illumina DRAGEN pipeline accepts fastq.ora as input. They can also be decompressed with <a href="https://support.illumina.com/sequencing/sequencing_software/DRAGENDecompression/software-downloads.html" target="__blank">Orad</a>.
-        </p>
-        <div class="md-subheading">What commands would I use to run Orad?</div>
-        <p>
-          On Juno or Lilac, with Orad installed:<br />
-
-          export ORA_REF_PATH=/opt/common/CentOS_7/DragenORAD/orad_2_5_5/oradata/ <br />
-          /opt/common/CentOS_7/DragenORAD/orad_2_5_5/orad file.fastq.ora -c --raw | bwa mem humanref.fasta -> resu.sam
-
-          Your output will be a SAM file.
+          Currently we will leave FASTQ files linked to the project folder for <b>5 years</b>. After that time, we will be able to regenerate FASTQ files upon request, but there will be a charge and a processing delay. FASTQs from 2017 and earlier will be deleted <b>September 1, 2022</b>.
         </p>
         
       </md-app-content>
