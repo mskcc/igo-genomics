@@ -319,14 +319,14 @@
 </template>
 
 <script>
-import { SPM_CALENDAR, SC_CALENDAR } from './../../config.js';
+// import { SPM_CALENDAR, SC_CALENDAR } from './../../config.js';
 
 export default {
   name: 'SubmissionGuidelinesPage',
   data: function() {
     return {
-      spmCalendar: SPM_CALENDAR,
-      scCalendar: SC_CALENDAR,
+      spmCalendar: 'https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/',
+      scCalendar: 'https://outlook.office365.com/owa/calendar/igo1@mskcc.onmicrosoft.com/bookings/',
     };
   },
   components: {},

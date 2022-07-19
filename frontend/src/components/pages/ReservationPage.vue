@@ -126,7 +126,7 @@
 
 <script>
 import * as app from './../../app.js';
-import { API_URL, SPM_CALENDAR, SC_CALENDAR } from './../../config.js';
+import { API_URL } from './../../config.js';
 import { required, email, numeric, requiredIf } from 'vuelidate/lib/validators';
 import ExistingReservations from '../ExistingReservations.vue';
 
@@ -135,8 +135,8 @@ export default {
   components: { ExistingReservations },
   data: function() {
     return {
-      spmCalendar: SPM_CALENDAR,
-      scCalendar: SC_CALENDAR,
+      spmCalendar: 'https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/',
+      scCalendar: 'https://outlook.office365.com/owa/calendar/igo1@mskcc.onmicrosoft.com/bookings/',
       microsoftBookingsIsActive: true,
       message: 'Please select a day.',
       requestType: '',
