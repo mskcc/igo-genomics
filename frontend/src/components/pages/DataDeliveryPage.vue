@@ -133,10 +133,10 @@
         <div class="md-title" id="deliverables">Deliverables -- FASTQ, BAM, & pipeline</div>
         <div class="md-subheading">FASTQ files</div>
         <p>
-          FASTQ files are our standard deliverable for all applications. We base our target output either requested read number (RNA-Seq or epigenetic platforms, shallow WGS or shotgun metagenomics, user library sequencing, UMI-based platforms) or coverage (WES, non-UMI targeted sequencing, WGS, single cell platforms). Coverage for 10X Genomics and MissionBio applications is calculated by their respective pipelines; we aim for the recommended coverage unless you request otherwise. Coverage for WES, WGS, IMPACT, HemePACT, or custom capture applications is calculated by DRAGEN v3.10 and may differ from coverages calculated with other algorithms.
+          FASTQ files are our standard deliverable for all applications. We base our target output one of two ways: requested read number (RNA-Seq, ChIP seq, ATAC seq, shallow WGS, shotgun metagenomics, user libraries, UMI-based platforms) or coverage (WES, non-UMI targeted sequencing, WGS). Reads for 10X Genomics and coverage for MissionBio applications is calculated by their respective pipelines; we aim for the recommended numbers unless you request otherwise. <strong>Coverage for WES, WGS, IMPACT, HemePACT, or custom capture applications is calculated by DRAGEN v3.10 and may differ from coverages calculated with other algorithms.</strong>
         </p>
         <p>
-          We always strive to meet or exceed read number or coverage requests, however sometimes samples are delivered under those targets. This is typically due to sample quality or quantity.
+          We always strive to meet or exceed read number or coverage requests, however sometimes samples are delivered under those targets, typically due to sample quality or quantity.
         </p>
         <div class="md-subheading">BAM files</div>
         <p>
