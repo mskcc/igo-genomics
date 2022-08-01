@@ -130,7 +130,7 @@
 
         <md-divider></md-divider>
 
-        <div class="md-title" id="deliverables">Deliverables -- FASTQ, BAM, & pipeline</div>
+        <div class="md-title" id="deliverables">Deliverables - FASTQ, BAM, & pipeline</div>
         <div class="md-subheading">FASTQ files</div>
         <p>
           FASTQ files are our standard deliverable for all applications. We base our target output one of two ways: requested read number (RNA-Seq, ChIP seq, ATAC seq, shallow WGS, shotgun metagenomics, user libraries, UMI-based platforms) or coverage (WES, non-UMI targeted sequencing, WGS). Reads for 10X Genomics and coverage for MissionBio applications is calculated by their respective pipelines; we aim for the recommended numbers unless you request otherwise. <strong>Coverage for WES, WGS, IMPACT, HemePACT, or custom capture applications is calculated by DRAGEN v3.10 and may differ from coverages calculated with other algorithms.</strong>
@@ -183,7 +183,10 @@
         <p>
           CRISPResso2 output is delivered for CRISPRSeq projects that have selected that option. We run with default parameters and the information provided in iLab, so the pipeline isn't necessarily tailored for your experiment. You can learn more about CRISPResso2, the available parameters, and run your FASTQ files yourself by visiting <a href="http://crispresso.pinellolab.org/submission" target="_blank">crispresso.pinellolab.org</a>.
         </p>
-
+        <div class="md-subheading">Customization</div>
+        <p>
+          IGO does <b>not</b> provide custom alignment or pipeline runs. We provide these files as a courtesy to our investigators because we generate them for QC purposes. If you need experiment-specific, more complex, or additional downstream analysis, you should reach out to MSK's <a href="http://bic.mskcc.org/bic/" target="_blank">Bioinformatics Core</a>. Please note that our Cell Ranger count and vdj output <b>does not</b> take Feature Barcoding or Cell Hashing information into account.
+        </p>
         <md-divider></md-divider>
 
         <div class="md-title" id="data-storage">Data Storage</div>
