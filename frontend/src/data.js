@@ -1,5 +1,16 @@
 export const news = [
   {
+    title: 'Learn about libraries & ddPCR with IGO',
+    date: 'August 1, 2022',
+    imgSource: 'IGO_210408_021',
+    categories: ['featured'],
+    body: `<p>
+    As part of the MSK Core Facilities' 1st Annual Technology Day on September 14, IGO will present two separate workshops to help our investigators. Andrea Farina will present on ddPCR principles, workflow, advantages, and applications and Cassidy Cobbs will give an overview of the structure and components of Illumina sequencing libraries, including how to generate them specifically for the most cost-effective sequencing in IGO.
+
+    You can find more information on Tech Day <a href="https://mskcc.sharepoint.com/sites/pub-CoreFacilities/SitePages/1st-Annual-Technology-Day-Details.aspx" target="_blank">here</a>, and register for workshops <a href="http://skitraining.mskcc.org/MSK/Index" target="_blank">here</a>.
+  </p>`,
+  },
+  {
     title: 'Changes to data delivery and archiving',
     date: 'July 12, 2022',
     imgSource: 'IGO_210408_177',
@@ -23,7 +34,7 @@ export const news = [
     title: 'NEW at IGO: TCR sequencing',
     date: 'May 3, 2022',
     imgSource: 'IGO_210408_008',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     In collaboration with MSK's Computational Immuno-oncology group, IGO's R&D team has developed a homebrew, RNA-based, TCR&alpha;/&beta; sequencing platform appropriate for mouse and human samples. Priced at $225/sample, including analysis, this application fills a need for a low-cost service appriopriate for both large and small sample sets. More details about submission can be found in our Submission Guidelines and Sample Requirements sections. Contact genomics@mskcc.org with questions!
   </p>`,
