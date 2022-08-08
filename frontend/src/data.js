@@ -24,7 +24,7 @@ export const news = [
   {
     title: 'New barcoded label pilot for extraction material',
     date: 'May 23, 2022',
-    imgSource: '',
+    imgSource: 'eppy_labels',
     categories: ['featured'],
     body: `<p>
     In order to improve sample tracking and prevent sample swaps or handling errors, IGO has begun labeling all incoming Eppendorf tubes of cells or tissue for nucleic acid extraction with 2D barcodes. Currently, there is no need to do anything differently in the submission process -- our team will label the tubes at the time of drop-off while we test the logistics of this new method.
