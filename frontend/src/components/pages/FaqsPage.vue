@@ -488,6 +488,17 @@
                         </md-list-item>
                       </md-list>
                     </md-list-item>
+                    <md-list-item md-expand class="md-inset">
+                      <md-icon>add</md-icon>
+                      <span class="md-list-item-text">Does IGO provide methods for publication?</span>
+                      <md-list slot="md-expand">
+                        <md-list-item>
+                          <div>
+                            We do not provide boilerplate methods, because there can be processing differences between projects for the same application. To request personalized methods for specific projects/samples for publication, please contact genomics@mskcc.org. For accuracy, we recommend not not referencing an earlier publication, but instead checking with us about any processing differences, as instruments, kits, and protocols change regularly. You can find the current chemistries and software versions in use in IGO on our <router-link :to="{ name: 'chemistry timeline' }">Chemistry Timeline</router-link>.
+                          </div>
+                        </md-list-item>
+                      </md-list>
+                    </md-list-item>
                   </md-list>
                 </div>
               </div>
