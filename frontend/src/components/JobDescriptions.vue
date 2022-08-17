@@ -4,30 +4,6 @@
 
     <md-card class="career-card">
       <md-card-header>
-        <div class="md-title">Administrative Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 1 } }">Lab Support</router-link>
-        <div class="md-body">Open!</div>
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionAA = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2022-62246-administrative-assistant-sloan-kettering-institute/" target="_blank" class="md-primary">Apply</md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="career-card">
-      <md-card-header>
-        <div class="md-title">Bioinformatics Software Engineer II</div>
-        <router-link :to="{ name: 'team', params: { id: 8 } }">Data</router-link>
-        <div class="md-body">Open!</div>
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionDataSEII = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2022-62346-bioinformatics-software-engineer-ii/" target="_blank" class="md-primary">Apply</md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="career-card">
-      <md-card-header>
         <div class="md-title">Lab Manager</div>
         <router-link :to="{ name: 'team', params: { id: 1 } }">Lab Support</router-link>
         <div class="md-body">Open!</div>
@@ -38,7 +14,7 @@
       </md-card-actions>
     </md-card>
     
-    <md-dialog :md-active.sync="showJobDescriptionAA" :md-fullscreen="false" style="z-index: 400;">
+    <!-- <md-dialog :md-active.sync="showJobDescriptionAA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As an Administrative Assistant in the Sloan Kettering Institute, you will:</strong>
         <ul>
@@ -62,7 +38,7 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionAA = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog>
+    </md-dialog> -->
 
     <!-- <md-dialog :md-active.sync="showJobDescriptionNARA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -292,7 +268,7 @@
       </md-dialog-actions>
     </md-dialog> -->
 
-    <md-dialog :md-active.sync="showJobDescriptionDataSEII" :md-fullscreen="false" style="z-index: 400;">
+    <!-- <md-dialog :md-active.sync="showJobDescriptionDataSEII" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Bioinformatics Software Engineer II on the Data Team, you will:</strong>
         <ul>
@@ -313,7 +289,7 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionDataSEII = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog>
+    </md-dialog> -->
 
     <!-- <md-dialog :md-active.sync="showJobDescriptionOM" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -379,11 +355,11 @@ export default {
       // showJobDescriptionSeqRA: false,
       // showJobDescriptionNART: false,
       // showJobDescriptionSeqSRT: false,
-      showJobDescriptionDataSEII: false,
+      // showJobDescriptionDataSEII: false,
       // showJobDescriptionAE: false,
       // showJobDescriptionSPMPM: false,
       // showJobDescriptionOM: false,
-      showJobDescriptionAA: false,
+      // showJobDescriptionAA: false,
       showJobDescriptionLM: false,
     };
   },

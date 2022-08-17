@@ -219,6 +219,7 @@ export const teams = [
     members: [
       { name: 'Neeman Mohibullah', role: 'Director', photoName: 'Mohibullah_Neeman' },
       { name: 'Andrea Farina', role: 'Manager, EXPAND', photoName: 'Farina_Andrea' },
+      // { name: 'Angele Pepe-Caprio', role: 'Operations Manager', photoName: '' },
       { name: 'David Mcmanamon', role: 'Manager, Data', photoName: 'Mcmanamon_David' },
       { name: 'Liping Sun', role: 'Manager, Sequencing', photoName: 'Sun_Liping' },
       { name: 'Marisa Dunigan', role: 'Supervisor, SPM', photoName: 'Dunigan_Marisa' },
@@ -233,9 +234,9 @@ export const teams = [
     description:
       'As a large, high-throughput facility constantly striving for technical excellence and exemplary customer service, IGO has several employees who work between and among teams and directly with investigators.',
     members: [      
+      { name: 'Andrea John', role: 'Administrative Assistant', photoName: '' },
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
-      { name: 'Magali Cavatore', role: 'Lab Manager', photoName: 'Cavatore_Magali' },
-      { name: 'Open Position!', role: 'Administrative Assistant' },
+      // { name: 'Open Position!', role: 'Administrative Assistant' },
       { name: 'Open Position!', role: 'Lab Manager' },
     ],
   },
@@ -247,7 +248,6 @@ export const teams = [
     members: [
       { name: 'Alan Li', role: 'Senior Automation Engineer', photoName: 'Li_Alan' },
       { name: 'Elevit Perez', role: 'Automation Engineer', photoName: 'Perez_Elevit' },
-      { name: 'Ethan Song', role: 'Intern', photoName: 'Song_Ethan' },
     ],
   },
   {
@@ -276,7 +276,6 @@ export const teams = [
       { name: 'Julienne Lomibao', role: 'Research Technician', photoName: 'Lomibao_Julienne' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
       { name: 'Mohamed Abdelbaset', role: 'Senior Research Technician', photoName: 'Abdelbaset_Mohamed' },
-      { name: 'Nick Bruno', role:'Temporary Technician', photoName: 'Bruno_Nick' },
       { name: 'Tony Deblasio', role: 'Senior Research Assistant', photoName: 'Deblasio_Tony' },
       // { name: 'Open Position!', role: 'Research Assistant' },
     ],
@@ -291,7 +290,6 @@ export const teams = [
       { name: 'Justin Clarke', role: 'Research Technician', photoName: 'Clarke_Justin' },
       { name: 'Ravi Shrivastav', role: 'Senior Research Technician', photoName: 'Shrivastav_Ravi' },
       { name: 'Satish Ramakrishnan', role: 'Research Assistant', photoName: 'Ramakrishnan_Satish' },
-      { name: 'Sophie Kleinberg', role: 'Intern', photoName: 'Kleinberg_Sophie'},
       { name: 'Yushi Wu', role: 'Research Assistant', photoName: 'Wu_Yushi' },   
     ],
   },
@@ -302,7 +300,6 @@ export const teams = [
       "The Library Preparation team handles the bulk of IGO's sample processing, utilizing liquid-handling robots to automate many platforms.",
     members: [
       { name: 'Ruchi Patel', role: 'Manager, IGO', photoName: 'Patel_Ruchi' },
-      { name: 'Janhavi Dhore', role: 'Intern', photoName: 'Dhore_Janhavi' },
       { name: 'Kalliopi Chatzis', role: 'Research Assistant', photoName: 'Chatzis_Kalliopi' },
       { name: 'Katherine Allard', role: 'Research Assistant', photoName: 'Allard_Katherine' },
       { name: 'Kiruthika Balasubramanian', role: 'Research Assistant', photoName: 'Balasubramanian_Kiruthika' },
@@ -318,6 +315,7 @@ export const teams = [
       "The Sequencing Team performs all activities related to Illumina sequencing, including quantity and quality assessment of libraries, pooling, and preparation for sequencing. The team is also responsible for the care & feeding of IGO's 8 sequencing instruments.",
     members: [
       { name: 'Liping Sun', role: 'Manager, IGO', photoName: 'Sun_Liping' },
+      { name: 'Desmond Lambe', role: '', photoName: 'Lambe_Desmond' },
       { name: 'Jim Chen', role: 'Senior Research Technician', photoName: 'Chen_Jim' },
       { name: 'Keumsil Hwang', role: 'Senior Research Assistant', photoName: 'Hwang_Keumsil' },
       { name: 'Medhini Mankale', role: 'Research Technician', photoName: 'Mankale_Medhini' },
@@ -335,7 +333,7 @@ export const teams = [
       { name: 'Darrell Nabors', role: 'Bioinformatics Engineer V', photoName: 'Nabors_Darrell' },
       { name: 'Fahimeh Mirhaj', role: 'Bioinfo. Software Engineer I', photoName: 'Mirhaj_Fahimeh' },
       { name: 'Stephanie DelBelso', role: 'Bioinfo. Software Engineer III', photoName: 'DelBelso_Stephanie' },
-      { name: 'Open Position!', role: 'Bioinformatics Software Engineer II' },
+      // { name: 'Open Position!', role: 'Bioinformatics Software Engineer II' },
     ],
   },
   {
@@ -611,8 +609,8 @@ export const otherServices = [
     tableHeaders: ['service', 'cost'],
     table: [
       { service: 'New Assay Design & Optimization', cost: 200 },
-      { service: 'New Assay Order (CNV)', cost: 200 },
-      { service: 'New Assay Order (mutation/GEX)', cost: 375 },
+      { service: 'New Assay Order (CNV/GEX)', cost: 200 },
+      { service: 'New Assay Order (mutation)', cost: 375 },
       { service: 'Digital PCR (per reaction)', cost: 9.5 },
     ],
   },
