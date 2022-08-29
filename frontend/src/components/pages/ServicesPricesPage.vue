@@ -71,8 +71,8 @@
                         <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('panel')">Panel</md-table-head>
                         <md-table-head v-if="service.tableHeaders && service.tableHeaders.includes('sampleType')">Sample Type</md-table-head>
                         <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCoverage')">Sample Coverage (X)</md-table-head>
-                        <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostFrozen')">Cost Per Sample (PCR-free)</md-table-head>
-                        <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostFfpe')">Cost Per Sample (PCR+)</md-table-head>
+                        <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostFrozen')">Cost Per Sample (Frozen)</md-table-head>
+                        <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostFfpe')">Cost Per Sample (FFPE)</md-table-head>
                         <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostWet')">Wet Lab Cost</md-table-head>
                         <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('sampleCostDry')">Dry Lab Cost</md-table-head>
                         <md-table-head md-numeric v-if="service.tableHeaders && service.tableHeaders.includes('totalCost')" class="highlight-column">Total Cost</md-table-head>
