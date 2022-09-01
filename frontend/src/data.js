@@ -1,5 +1,18 @@
 export const news = [
   {
+    title: 'IGO price changes',
+    date: 'September 1, 2022',
+    imgSource: 'IGO_210408_127',
+    categories: ['featured'],
+    body: `<p>
+    In accordance with the changing cost of reagents and the evolution of protocols and workflows in IGO, we have adjusted the prices for a number of services. You will find a few price increases, especially for our block sequencing options. There are also small increases in extraction prices as well as simplification of the DNA, RNA, and dual extraction categories.
+
+    Two major platforms have price decreases: RNA-Seq with SMARTer amplification has dropped about 10% in price, and fresh/frozen samples for human or mouse whole exome sequencing will see significant savings over FFPE.
+
+    New pricing goes into effect for samples submitted September 1 and later.
+  </p>`,
+  },
+  {
     title: 'Learn about libraries & ddPCR with IGO',
     date: 'August 1, 2022',
     imgSource: 'IGO_210408_021',
@@ -25,7 +38,7 @@ export const news = [
     title: 'New barcoded label pilot for extraction material',
     date: 'May 23, 2022',
     imgSource: 'eppy_labels',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     In order to improve sample tracking and prevent sample swaps or handling errors, IGO has begun labeling all incoming Eppendorf tubes of cells or tissue for nucleic acid extraction with 2D barcodes. Currently, there is no need to do anything differently in the submission process -- our team will label the tubes at the time of drop-off while we test the logistics of this new method.
   </p>`,
@@ -219,7 +232,7 @@ export const teams = [
     members: [
       { name: 'Neeman Mohibullah', role: 'Director', photoName: 'Mohibullah_Neeman' },
       { name: 'Andrea Farina', role: 'Manager, EXPAND', photoName: 'Farina_Andrea' },
-      // { name: 'Angela Pepe-Caprio', role: 'Operations Manager', photoName: '' },
+      { name: 'Angela Pepe-Caprio', role: 'Operations Manager', photoName: '' },
       { name: 'David Mcmanamon', role: 'Manager, Data', photoName: 'Mcmanamon_David' },
       { name: 'Liping Sun', role: 'Manager, Sequencing', photoName: 'Sun_Liping' },
       { name: 'Marisa Dunigan', role: 'Supervisor, SPM', photoName: 'Dunigan_Marisa' },
@@ -234,7 +247,7 @@ export const teams = [
     description:
       'As a large, high-throughput facility constantly striving for technical excellence and exemplary customer service, IGO has several employees who work between and among teams and directly with investigators.',
     members: [      
-      { name: 'Andrea John', role: 'Administrative Assistant II', photoName: '' },
+      { name: 'Andrea John', role: 'Administrative Assistant II', photoName: 'John_Andrea' },
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
       // { name: 'Open Position!', role: 'Administrative Assistant' },
       { name: 'Open Position!', role: 'Lab Manager' },
@@ -376,14 +389,14 @@ export const bulkServices = [
     sequencingReadLength: 'PE100',
     sequencingCoverage: 'Varies (see below)',
     deliverable: 'FASTQ; Pipeline analysis options available from CMO or BIC with additional charges',
-    tableHeaders: ['sampleCoverage', 'sampleCost'],
+    tableHeaders: ['sampleCoverage', 'sampleCostFrozen', 'sampleCostFfpe'],
     table: [
-      { sampleCoverage: 30, sampleCost: 458 },
-      { sampleCoverage: 70, sampleCost: 580 },
-      { sampleCoverage: 100, sampleCost: 668 },
-      { sampleCoverage: 150, sampleCost: 808 },
-      { sampleCoverage: 200, sampleCost: 966 },
-      { sampleCoverage: 250, sampleCost: 1106 },
+      { sampleCoverage: 30, sampleCostFrozen: 230, sampleCostFfpe: 458 },
+      { sampleCoverage: 70, sampleCostFrozen: 289, sampleCostFfpe: 580 },
+      { sampleCoverage: 100, sampleCostFrozen: 334, sampleCostFfpe: 668 },
+      { sampleCoverage: 150, sampleCostFrozen: 408, sampleCostFfpe: 808 },
+      { sampleCoverage: 200, sampleCostFrozen: 482, sampleCostFfpe: 966 },
+      { sampleCoverage: 250, sampleCostFrozen: 556, sampleCostFfpe: 1106 },
     ],
   },
   {
@@ -405,7 +418,7 @@ export const bulkServices = [
       { panel: 'HemePACT', sampleType: 'Normal', sampleCostWet: 270, sampleCostDry: 80, totalCost: 350 },
       { panel: 'ACCESS', sampleType: 'Tumor', sampleCostWet: 490, sampleCostDry: 110, totalCost: 600 },
       { panel: 'ACCESS', sampleType: 'Normal', sampleCostWet: 260, sampleCostDry: 40, totalCost: 300 },
-      { panel: 'CMO-CH', sampleType: '', sampleCostWet: 220, sampleCostDry: 80, totalCost: 300 },
+      { panel: 'CMO-CH', sampleType: '', sampleCostWet: 287, sampleCostDry: 80, totalCost: 367 },
     ],
   },
   {
@@ -435,7 +448,14 @@ export const bulkServices = [
       { libraryType: 'RiboDepletion', readNumber: '60-80', sampleCost: 600 },
       { libraryType: 'RiboDepletion', readNumber: '80-100', sampleCost: 700 },
       { libraryType: 'RiboDepletion', readNumber: '100+', sampleCost: 800 },
-      { libraryType: 'SMARTer amplification', readNumber: '', sampleCost: 90 },
+      { libraryType: 'SMARTer amplification', readNumber: '10-20', sampleCost: 300 },
+      { libraryType: 'SMARTer amplification', readNumber: '20-30', sampleCost: 350 },
+      { libraryType: 'SMARTer amplification', readNumber: '30-40', sampleCost: 400 },
+      { libraryType: 'SMARTer amplification', readNumber: '40-50', sampleCost: 450 },
+      { libraryType: 'SMARTer amplification', readNumber: '50-60', sampleCost: 500 },
+      { libraryType: 'SMARTer amplification', readNumber: '60-80', sampleCost: 625 },
+      { libraryType: 'SMARTer amplification', readNumber: '80-100', sampleCost: 650 },
+      { libraryType: 'SMARTer amplification', readNumber: '100+', sampleCost: 750 },
       { libraryType: 'Archer Fusion Heme', readNumber: '', sampleCost: 480 },
       { libraryType: 'Archer Fusion Solid Tumor', readNumber: '', sampleCost: 690 },
     ],
@@ -456,9 +476,10 @@ export const bulkServices = [
       { sampleCoverage: 40, sampleCostFrozen: 1324, sampleCostFfpe: 1655 },
       { sampleCoverage: 50, sampleCostFrozen: 1557, sampleCostFfpe: 2046 },
       { sampleCoverage: 60, sampleCostFrozen: 1769, sampleCostFfpe: 2437 },
+      { sampleCoverage: 70, sampleCostFrozen: 1999, sampleCostFfpe: 2828 },
       { sampleCoverage: 80, sampleCostFrozen: 2229, sampleCostFfpe: 3219 },
       { sampleCoverage: 100, sampleCostFrozen: 3017, sampleCostFfpe: 4002 },
-      { sampleCoverage: 150, sampleCostFrozen: 4009, sampleCostFfpe: 5957 },
+      { sampleCoverage: 120, sampleCostFrozen: 3414, sampleCostFfpe: 4784 },
       { sampleCoverage: 'shallow', sampleCostFrozen: 182, sampleCostFfpe: 182 },
       { sampleCoverage: 'bacterial/yeast', sampleCostFrozen: 182, sampleCostFfpe: 182 },
     ],
@@ -476,7 +497,7 @@ export const bulkServices = [
     table: [
       { platform: 'ATAC-Seq', sampleCost: 450 },
       { platform: 'ChIP-Seq/CUT&RUN', sampleCost: 250 },
-      { platform: 'EPIC Methyl Capture-Seq', sampleCost: 550 },
+      { platform: 'EPIC Methyl Capture-Seq', sampleCost: 605 },
     ],
   },
   {
@@ -488,7 +509,7 @@ export const bulkServices = [
     tableHeaders: ['platform', 'sampleCost'],
     table: [
       { platform: 'Archer immunoverse', sampleCost: 494 },
-      { platform: '10X Genomics V(D)J Enrichment', sampleCost: 2279 },
+      { platform: '10X Genomics V(D)J Enrichment', sampleCost: 2368 },
       { platform: 'IGO-TCR', sampleCost: 225 },
     ],
   },
@@ -522,8 +543,8 @@ export const singleServices = [
     tableHeaders: ['xGenomicsPlatform', 'sampleCostLibrary', 'cellCostSequencing'],
     table: [
       { xGenomicsPlatform: '5′ OR 3′ Gene Expression', sampleCostLibrary: 2068, cellCostSequencing: '$0.05' },
-      { xGenomicsPlatform: 'V(D)J Enrichment', sampleCostLibrary: 211, cellCostSequencing: '$0.01' },
-      { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 116, cellCostSequencing: '$0.01' },
+      { xGenomicsPlatform: 'V(D)J Enrichment', sampleCostLibrary: 300, cellCostSequencing: '$0.01' },
+      { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 300, cellCostSequencing: '$0.01' },
     ],
   },
   {
@@ -548,7 +569,7 @@ export const singleServices = [
     sequencingCoverage: '25-50K reads/1-10 cells',
     deliverable: 'FASTQ, Space Ranger output',
     tissueOptimizationCost: '$900 (once/tissue; frozen only)',
-    libraryCost: '$4,421/$16,074 (frozen) or $5,796/$20,286 (FFPE) per 1 slide/4 slides + $840/slide',
+    libraryCost: '$4,421/$16,074 (frozen) or $5,796/$20,286 (FFPE) per 1 slide/4 slides + $1,100/slide',
     sequencingCost: '$5,232 (frozen) or $2,616 (FFPE) x %Area of squares covered',
   },
   {
@@ -561,19 +582,19 @@ export const singleServices = [
     deliverable: 'FASTQ + Tapestri Platform output',
     cost: '$2,800/sample',
   },
-  {
-    id: 4,
-    name: 'PlateSeq',
-    description:
-      'A single- or low-cell Smart-seq 2 method to accommodate projects without enough cells for 10X Genomics, or users interested in capturing the entire body of the gene.',
-    startingMaterial: 'Sorted cells',
-    libraryChemistry: 'SMART-Seq + Nextera XT',
-    sequencingReadLength: 'PE50',
-    sequencingCoverage: '~4M reads/cell',
-    deliverable: 'FASTQ',
-    libraryCost: '$1,680/plate',
-    sequencingCost: '$1,020/plate',
-  },
+  // {
+  //   id: 4,
+  //   name: 'PlateSeq',
+  //   description:
+  //     'A single- or low-cell Smart-seq 2 method to accommodate projects without enough cells for 10X Genomics, or users interested in capturing the entire body of the gene.',
+  //   startingMaterial: 'Sorted cells',
+  //   libraryChemistry: 'SMART-Seq + Nextera XT',
+  //   sequencingReadLength: 'PE50',
+  //   sequencingCoverage: '~4M reads/cell',
+  //   deliverable: 'FASTQ',
+  //   libraryCost: '$1,680/plate',
+  //   sequencingCost: '$1,020/plate',
+  // },
   {
     id: 5,
     name: 'DLP',
@@ -584,7 +605,7 @@ export const singleServices = [
     sequencingCoverage: '2M reads/cell',
     deliverable: 'FASTQ',
     libraryCost: '$2,300/up to 800 cells',
-    sequencingCost: '$5-7/cell',
+    sequencingCost: '$4/cell',
   },
   {
     id: 6,
@@ -593,7 +614,8 @@ export const singleServices = [
     startingMaterial: 'FFPE slides',
     sequencingCoverage: 'variable',
     deliverable: 'FASTQ; GeoMx pipeline output',
-    libraryCost: '$2,000-2,500 per slide for sample prep/staining + $200-400 per slide for library prep',
+    tissueOptimizationCost: '$435',
+    libraryCost: '$1,775 (Cancer atlas) or $2,275 (Whole transcriptome) per slide + $52/ROI',
     sequencingCost: '$60-250 per area of interest',
   },
 ];
@@ -623,15 +645,13 @@ export const otherServices = [
     tableHeaders: ['startingMaterial', 'extractionOutput', 'sampleCost'],
     table: [
       { startingMaterial: 'Plasma', extractionOutput: 'cfDNA', sampleCost: 50 },
-      { startingMaterial: 'Fresh frozen or OCT tissue/cells', extractionOutput: 'DNA', sampleCost: 25 },
-      { startingMaterial: 'Viably frozen cells', extractionOutput: 'DNA', sampleCost: 40 },
-      { startingMaterial: 'Blood', extractionOutput: 'DNA', sampleCost: 30 },
-      { startingMaterial: 'FFPE', extractionOutput: 'DNA', sampleCost: 35 },
-      { startingMaterial: 'Fingernails', extractionOutput: 'DNA', sampleCost: 40 },
-      { startingMaterial: 'Frozen tissue/cells (TRIzol, OCT, RLT, pellet)', extractionOutput: 'RNA', sampleCost: 33 },
-      { startingMaterial: 'Viably frozen cells', extractionOutput: 'RNA', sampleCost: 48 },
-      { startingMaterial: 'FFPE tissue', extractionOutput: 'RNA', sampleCost: 39 },
-      { startingMaterial: 'All materials', extractionOutput: 'DNA + RNA (simultaneous extraction)', sampleCost: 55 },
+      { startingMaterial: 'Non-FFPE', extractionOutput: 'DNA', sampleCost: 43 },
+      { startingMaterial: 'FFPE', extractionOutput: 'DNA', sampleCost: 46 },
+      { startingMaterial: 'Oxford Nanopore', extractionOutput: 'HMW DNA', sampleCost: 50 },
+      { startingMaterial: 'Non-FFPE', extractionOutput: 'RNA', sampleCost: 43 },
+      { startingMaterial: 'FFPE', extractionOutput: 'RNA', sampleCost: 48 },
+      { startingMaterial: 'Non-FFPE', extractionOutput: 'DNA + RNA (simultaneous extraction)', sampleCost: 67 },
+      { startingMaterial: 'FFPE', extractionOutput: 'DNA + RNA (simultaneous extraction)', sampleCost: 55 },
       { startingMaterial: 'Special processing', extractionOutput: 'DNA/RNA', sampleCost: 15 },
     ],
   },
@@ -661,10 +681,11 @@ export const otherServices = [
       { serviceType: 'QC Service', serviceSubType: 'Qubit/Quant-it', price: '$6.50/sample' },
       { serviceType: 'QC Service', serviceSubType: '%Human for PDX', price: '$19/sample' },
       { serviceType: 'QC Service', serviceSubType: 'Cell Line Authentication', price: '$30/sample' },
-      { serviceType: 'Pathology Service', serviceSubType: 'Sectioning (curls)', price: '$15/up to 10 curls' },
-      { serviceType: 'Pathology Service', serviceSubType: 'Sectioning (slides)', price: '$3.50/slide' },
+      { serviceType: 'QC Service', serviceSubType: 'Custom Fragment Analysis', price: '$5/sample' },
+      { serviceType: 'Pathology Service', serviceSubType: 'Block Sectioning', price: '$15/sample' },
+      { serviceType: 'Pathology Service', serviceSubType: 'FFPE slides', price: '$3.50/slide' },
       { serviceType: 'Pathology Service', serviceSubType: 'H&E Staining', price: '$12/slide' },
-      { serviceType: 'Pathology Service', serviceSubType: 'Slide scraping', price: '$10/up to 20 slides' },
+      { serviceType: 'Pathology Service', serviceSubType: 'Slide scraping', price: '$40/sample' },
       { serviceType: 'Pathology Service', serviceSubType: 'Macrodissection', price: '$2.50/slide' },
     ],
   },

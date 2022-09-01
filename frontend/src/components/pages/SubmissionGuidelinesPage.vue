@@ -249,19 +249,22 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text ">DMP libraries for capture</span>
+                <span class="md-list-item-text ">DMP DNA or libraries for IGO processing</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset">
                     <ol>
+                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission/#/sample-submission/dmp">DMP sample transfer webform</a></li>
+                      <li>Complete the <a href="https://redcap.mskcc.org/surveys/?s=3MDAEWTYXK">MSKCC Tumor Genomic Profiling Project Proposal</a> using the transaction ID generated in step 1</li>
                       <li>
                         Fill out an iLab form
                         <ul>
+                          <li>Digital PCR</li>
                           <li>IMPACT/HemePACT/Custom Capture and Sequencing</li>
                           <li>Human Whole Exome Capture and Sequencing</li>
+                          <li>Human or Mouse Whole Genome Library Prep & Sequencing</li>
                         </ul>
                       </li>
-                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting DNA Library” as your material</li>
-                      <li>E-mail your CMO Project Manager to initiate sample transfer from the DMP</li>
+                      <li>Your CMO Project Manager will communicate your next steps based on your project!</li>
                     </ol>
                   </md-list-item>
                 </md-list>

@@ -4,7 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        IGO will delete all FASTQ files generated in 2017 and earlier on September 1. Please copy your data prior to that date.
+        Core Facilities Tech Day is September 14!
       </span>
     </div>
 
