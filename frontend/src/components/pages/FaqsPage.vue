@@ -450,17 +450,9 @@
                       <md-list slot="md-expand">
                         <md-list-item>
                           <div>
-                            <a href="https://cmo.mskcc.org/cmo/resources/gene-lists/impact-468" target="_blank">IMPACT468</a><br />
-                            <a href="https://cmo.mskcc.org/cmo/resources/gene-lists/impact-505/" target="_blank">IMPACT505</a> <br />
-                            <a href="https://cmo.mskcc.org/cmo/resources/gene-lists/hemepact_v4/" target="_blank">HemePACTv4</a><br />
-                            <a class="white-link" href="https://cmo.mskcc.org/cmo/resources/gene-lists/m-impact_v1/" target="_blank"
-                              >Mouse-IMPACT</a
-                            ><br />
+                            <a href="http://cmo.mskcc.org/index.php/gene-panels/" target="_blank">IMPACT, HemePACT, ACCESS, CMO-CH, Archer</a><br />
+                            Mouse-IMPACT -- available soon <br />
                             <a href="https://cmo.mskcc.org/cmo/resources/gene-lists/msk-access/" target="_blank">MSK-ACCESS</a><br />
-                            <a href="https://one.mskcc.org/sites/pub/Pathology/Documents/Archer%20Pan%20Heme.xlsx" target="_blank"
-                              >Archer Pan Heme</a
-                            ><br />
-                            <router-link :to="{ name: 'archer fusion' }">Archer Solid</router-link><br />
                             <router-link :to="{ name: 'ddpcr assays' }">ddPCR assays</router-link>
                           </div>
                         </md-list-item>

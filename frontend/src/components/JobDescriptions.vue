@@ -10,7 +10,7 @@
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionLM = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2022-62873-lab-manager/" target="_blank" class="md-primary">Apply</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2022-62092-lab-manager/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
     
