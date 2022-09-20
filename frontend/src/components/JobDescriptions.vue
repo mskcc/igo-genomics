@@ -13,6 +13,54 @@
         <md-button href="https://careers.mskcc.org/vacancies/2022-62092-lab-manager/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
+
+    <md-card class="career-card">
+      <md-card-header>
+        <div class="md-title">Project Manager</div>
+        <router-link :to="{ name: 'team', params: { id: 3 } }">SPM</router-link>
+        <div class="md-body">Open!</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionSPMPM = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2022-63352-project-manager-center-for-molecular-oncology/" target="_blank" class="md-primary">Apply</md-button>
+      </md-card-actions>
+    </md-card>
+
+    <md-card class="career-card">
+      <md-card-header>
+        <div class="md-title">Research Assistant</div>
+        <router-link :to="{ name: 'team', params: { id: 4 } }">EXPAnD</router-link>
+        <div class="md-body">Open!</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionEXPANDRA = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2022-57852-research-assistant/" target="_blank" class="md-primary">Apply</md-button>
+      </md-card-actions>
+    </md-card>
+
+    <md-card class="career-card">
+      <md-card-header>
+        <div class="md-title">Research Assistant</div>
+        <router-link :to="{ name: 'team', params: { id: 5 } }">Single Cell</router-link>
+        <div class="md-body">Open!</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionSCRA = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2022-57852-research-assistant/" target="_blank" class="md-primary">Apply</md-button>
+      </md-card-actions>
+    </md-card>
+
+    <md-card class="career-card">
+      <md-card-header>
+        <div class="md-title">Research Assistant</div>
+        <router-link :to="{ name: 'team', params: { id: 7 } }">Sequencing</router-link>
+        <div class="md-body">Open!</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionSeqRA = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2022-57852-research-assistant/" target="_blank" class="md-primary">Apply</md-button>
+      </md-card-actions>
+    </md-card>
     
     <!-- <md-dialog :md-active.sync="showJobDescriptionAA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -140,60 +188,31 @@
       </md-dialog-actions>
     </md-dialog> -->
 
-    <!-- <md-dialog :md-active.sync="showJobDescriptionSPMPM" :md-fullscreen="false" style="z-index: 400;">
+    <md-dialog :md-active.sync="showJobDescriptionSPMPM" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Project Manager in the Sample & Project Management Team, you will:</strong>
         <ul>
-          <li>Drive meetings with investigators to understand the scope of projects and effectively communicate the services provided by IGO</li>
-          <li>Review all submissions for correctness and completeness, and work with investigators to guide them through processing decisions that are in line with the goals of their projects.</li>
-          <li>Manage investigator expectations and facilitate professional interaction of team with investigators.</li>
-          <li>Analyze sample data and communicate results electronically.</li>
-          <li>Utilize the LIMS (Laboratory Information Management System) effectively to ensure the downstream processing team has relevant and up-to-date information.</li>
+          <li>Effectively communicate the services and deliverables provided by IGO to MSK scientists.</li>
+          <li>Use your strong practical background to interpret RNA and DNA QC results, using the QC to guide investigators to the right genomics assay for their samples.</li>
+          <li>Understand how samples are accessioned into the Laboratory Information Management System (LIMS), how to search for records and how to maintain a LEAN storage system for samples</li>
           <li>Proactively monitor the progress of samples to guarantee deadlines are met.</li>
-          <li>Investigate unexpected outputs and provide information to IGO leadership and investigators.</li>
-          <li>Facilitate lab processing by maintaining freezer organization and storage in a LEAN way</li>
-          <li>Assist group leader with supporting junior team members including training.</li>
-          <li>Work closely with staff from IGO and the CMO and maintain open and proactive lines of communication.</li>
+          <li>Ensure junior lab members are performing RNA and DNA QC according to protocol and train them in how to interpret Bioanalyzer and Tapestation results and best practice at the bench and with liquid handlers.</li>
+          <li>Coordinate with numerous teams and departments across the institution to assist in sample submission to IGO</li>
         </ul>
         <strong>You have:</strong>
         <ul>
-          <li>A Bachelor’s Degree in a Biological, Chemistry, or Science related field + 4-6 years experience</li>
-          <li>A Master's Degree in  Biological, Chemistry, or Science related field + 2-4 years experience</li>
-          <li>Experience with genomics and NGS preferred.</li>
+          <li>A Bachelor’s Degree in a Biological, Chemistry, or Science related field + 3 years relevant bench experience</li>
+          <li>A Master's Degree in  Biological, Chemistry, or Science related field + 1-2 years relevant bench experience</li>
+          <li>Previous exposure to NGS platforms is welcome.</li>
+          <li>Strong organizational, prioritization and time management skills.</li>
         </ul>
       </md-dialog-content>
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionSPMPM = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog> -->
+    </md-dialog>
 
-    <!-- <md-dialog :md-active.sync="showJobDescriptionRDM" :md-fullscreen="false" style="z-index: 400;">
-      <md-dialog-content md-dynamic-height>
-        <strong>You are:</strong>
-        <ul>
-          <li>A highly experienced and skilled molecular biologist with sharp focus, attention to detail and good decision-making skills</li>
-          <li>Able to maintain detailed records of all experiments, drafts of technical procedures and written summaries pertaining to research work</li>
-          <li>A quick learner and strong problem-solver who sees the forest and the trees and is able to quickly identify anomalies in data and uncover their source</li>
-          <li>Adept at multitasking, planning, prioritizing and re-prioritizing work to meet goals and commitments with minimal direction in a multifaceted environment</li>
-          <li> A highly motivated person capable of building positive relationships within the lab and with internal and external collaborators including data analysts</li>
-          <li>Someone with a strong background of mentorship who is interested in the success of others and willing to evaluate performance and provide feedback as a manager</li>
-          <li>An outstanding communicator and clear presenter, capable of determining how best to reach different audiences and executing communications based on that understanding whether it be internal lab meetings or institutional seminars</li>
-          <li>A creative thinker who engages in thinking outside the box and has an appreciation for the “business” aspect of working at the core</li>
-          <li>Consistently achieving results, even under tough circumstances</li>
-        </ul>
-        <strong>You need:</strong>
-        <ul>
-          <li>A Ph.D. in molecular biology, biochemistry or a related discipline, or a Masters' degree with a strong background in experimental and computational genomic methodologies and assay development</li>
-          <li>A background in NGS assay development is highly desired. Experience with imaging technologies is a plus. Management experience is welcome.</li>
-          <li>Excellent interpersonal, written and oral communication skills</li>
-        </ul>
-      </md-dialog-content>
-      <md-dialog-actions>
-        <md-button class="md-primary" @click="showJobDescriptionRDM = false">Close</md-button>
-      </md-dialog-actions>
-    </md-dialog> -->
-
-    <!-- <md-dialog :md-active.sync="showJobDescriptionEXPANDRA" :md-fullscreen="false" style="z-index: 400;">
+    <md-dialog :md-active.sync="showJobDescriptionEXPANDRA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Assistant in the Extraction Team, you will:</strong>
         <ul>
@@ -210,7 +229,7 @@
 
         <strong>You have:</strong>
         <ul>
-          <li>A Bachelor’s Degree in a Biological, Chemistry, or Science related field with at least 3 years of relevant full-time experience or a master’s degree with 1-2 years full-time relevant experience.</li>
+          <li>Bachelor's degree in a relevant field and 5-7 years of work experience in a biological laboratory environment or Masters degree in a science and 3-5 years of shown experience.</li>
           <li>Previous exposure to purifying nucleic acids for NGS platform, knowledge of digital PCR and experience with cells and FFPE samples is preferable.</li>
           <li>Strong organizational, prioritization and time management skills.</li>
         </ul>
@@ -218,9 +237,9 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionEXPANDRA = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog> -->
+    </md-dialog>
 
-    <!-- <md-dialog :md-active.sync="showJobDescriptionSeqRA" :md-fullscreen="false" style="z-index: 400;">
+    <md-dialog :md-active.sync="showJobDescriptionSeqRA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Assistant in the Sequencing Team, you will:</strong>
         <ul>
@@ -234,7 +253,7 @@
         </ul>
         <strong>You have:</strong>
         <ul>
-          <li>A Bachelor’s Degree in a Biological, Chemistry, or Science related field with at least 3 years of relevant full-time experience or a master’s degree with 1-2 years full-time relevant experience. </li>
+          <li>Bachelor's degree in a relevant field and 5-7 years of work experience in a biological laboratory environment or Masters degree in a science and 3-5 years of shown experience.</li>
           <li>Previous exposure to NGS library preparation and Illumina sequencer loading is preferable.</li>
           <li>Strong organizational, prioritization and time management skills.</li>
         </ul>
@@ -242,7 +261,7 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionSeqRA = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog> -->
+    </md-dialog>
 
     <!-- <md-dialog :md-active.sync="showJobDescriptionSeqSRT" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -291,29 +310,6 @@
       </md-dialog-actions>
     </md-dialog> -->
 
-    <!-- <md-dialog :md-active.sync="showJobDescriptionOM" :md-fullscreen="false" style="z-index: 400;">
-      <md-dialog-content md-dynamic-height>
-        <strong>As an Operations Manager, you will:</strong>
-        <ul>
-          <li>Provide leadership and management of the core facility</li>
-          <li>Ensure the well-controlled production of next generation sequencing data</li>
-          <li>Establish and maintain LEAN processes from R&D to production</li>
-          <li>Ensure maximum sustainability and optimal use of funds, space and other resources</li>
-          <li>Interact with clinical, translational and basic science researchers and leadership groups at MSKCC</li>
-        </ul>
-        <strong>You have:</strong>
-        <ul>
-          <li>A track record of strategizing and executing process improvements and ensuring best practices</li>
-          <li>Excellent interpersonal, written and oral communication skills</li>
-          <li>Experience in a genomics facility environment and experience with a large operation</li>
-          <li>A passion for LEAN principles of management</li>
-        </ul>
-      </md-dialog-content>
-      <md-dialog-actions>
-        <md-button class="md-primary" @click="showJobDescriptionOM = false">Close</md-button>
-      </md-dialog-actions>
-    </md-dialog> -->
-
     <md-dialog :md-active.sync="showJobDescriptionLM" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Lab Manager in IGO, you must be:</strong>
@@ -337,6 +333,29 @@
       </md-dialog-actions>
     </md-dialog>
 
+    <md-dialog :md-active.sync="showJobDescriptionSCRA" :md-fullscreen="false" style="z-index: 400;">
+      <md-dialog-content md-dynamic-height>
+        <strong>As a Research Technician in the Single Cell team, you will:</strong>
+        <ul>
+          <li>Following established SOPs to make NGS libraries on a variety of single cell platforms.</li>
+          <li>Load and run the liquid handlers according to pre-established robotic methods.</li>
+          <li>Review every step in the automated and/or manual process to maintain high-quality standards.</li>
+          <li>Assist group leader to create an efficient and error-proof workflow – and troubleshoot accordingly.</li>
+          <li>Communicate with vendor technical support and sales representatives.</li>
+          <li>Maintain and coordinate documentation for assay tracking and results for review/reporting through iLabs and LIMS.</li>
+        </ul>
+        <strong>You have:</strong>
+        <ul>
+          <li>Bachelor's degree in a relevant field and 5-7 years of work experience in a biological laboratory environment or Masters degree in a science and 3-5 years of shown experience.</li>
+          <li>Previous exposure to NGS library preparation or single cell applications are preferable.</li>
+          <li>Strong organizational, prioritization, and time management skills.</li>
+        </ul>
+      </md-dialog-content>
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="showJobDescriptionNARA = false">Close</md-button>
+      </md-dialog-actions>
+    </md-dialog>
+
   </div>
 </template>
 
@@ -350,17 +369,16 @@ export default {
     return {
       // showJobDescriptionSPMPC: false,
       // showJobDescriptionNARA: false,
-      // showJobDescriptionRDM: false,
-      // showJobDescriptionEXPANDRA: false,
-      // showJobDescriptionSeqRA: false,
+      showJobDescriptionEXPANDRA: false,
+      showJobDescriptionSeqRA: false,
       // showJobDescriptionNART: false,
       // showJobDescriptionSeqSRT: false,
       // showJobDescriptionDataSEII: false,
       // showJobDescriptionAE: false,
-      // showJobDescriptionSPMPM: false,
-      // showJobDescriptionOM: false,
+      showJobDescriptionSPMPM: false,
       // showJobDescriptionAA: false,
       showJobDescriptionLM: false,
+      showJobDescriptionSCRA: false,
     };
   },
 };
