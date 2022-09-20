@@ -352,7 +352,7 @@
         </ul>
       </md-dialog-content>
       <md-dialog-actions>
-        <md-button class="md-primary" @click="showJobDescriptionNARA = false">Close</md-button>
+        <md-button class="md-primary" @click="showJobDescriptionSCRA = false">Close</md-button>
       </md-dialog-actions>
     </md-dialog>
 
