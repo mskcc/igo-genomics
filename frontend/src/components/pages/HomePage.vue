@@ -20,13 +20,13 @@
         height="96"
         width="480"
         frameborder="0"
-        src="https://splunkp/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Requests_SingleValue&oid=Q2WAJ0bUU5H6VvrvNWX4je81RBL6FpBswMl34LeDjwftbntREU86md93n1rleLhEogXprs8%5E_B8WrnYTtGEnIy1kv8JKzvgSyfGo3kdiBB4GiX7KHvamfqfKwWgYNk_Uv8g_Tj7LFzZJ9q4F3%5E8eH_f3DmgVRY6uvGdM6EC_sJLA"
+        src="https://splunkp.mskcc.org/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Requests_SingleValue&oid=NLHxk5BQ8ipCsbirSp0MN3hcVLY_D_60uJvC2vT1XN8pKhVzZ1bYYYqdyyyOHfVO1WUB0IeeAmqmjTbAcBAqB87NMY1DVfk47MWdBjfRRV9ruNBGBHThKZnG9AdOSPgv%5EmT8FWGK6ZytbjW36MRjnAQW_KAqLa1Y_HtT6fhH1c7"
       ></iframe>
       <iframe
         height="96"
         width="480"
         frameborder="0"
-        src="https://splunkp/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Samples_SingleValue&oid=7wKarMvR1CyTn6ycX5yp7bY2GW7gINgA5wlwS3QVnSOplfnMZ%5EBpktUHUwg7VfRQsORWL3ajbtcMgviYZ7Kq4rH8XgNoMjkIlzK%5ELAOBiKNRNKQ1IbIw9C%5EcrSJfZy8O%5EvOH%5E%5EwAN%5E8zH4dVlMtAgnaTIa63bme3S7FIK6Jr"
+        src="https://splunkp.mskcc.org/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Samples_SingleValue&oid=BC_qU7wK5_NDTKTqnIwGXz8rXbF_DctNM5i5pXYHHKCyyDrKATuPSzzm1B8m9bCrOFEoW_A600ORpHGy3uVDBTVzzX%5EaB95P4Cfh7FjEql3i_QplsChCBZdw7NzcH4Ln4bAhK1fu5uc%5EviSjx1q6VnzDGXlTUDQlmQcZj1AjnN"
       ></iframe>
     </div>
   </div>
