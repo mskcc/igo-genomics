@@ -20,13 +20,13 @@
         height="96"
         width="480"
         frameborder="0"
-        src="https://splunkp.mskcc.org/en-US/app/msk_is_igo/report?sid=scheduler__mirhajf_bXNrX2lzX2lnbw__RMD530a954525e3a7dc7_at_1664942400_65226_A69FC099-7EFC-4F0D-9586-C6E0A697737E&s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Requests_SingleValue"
+        src="https://splunkp.mskcc.org/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Requests_SingleValue&oid=NLHxk5BQ8ipCsbirSp0MN3hcVLY_D_60uJvC2vT1XN8pKhVzZ1bYYYqdyyyOHfVO1WUB0IeeAmqmjTbAcBAqB87NMY1DVfk47MWdBjfRRV9ruNBGBHThKZnG9AdOSPgv%5EmT8FWGK6ZytbjW36MRjnAQW_KAqLa1Y_HtT6fhH1c7"
       ></iframe>
       <iframe
         height="96"
         width="480"
         frameborder="0"
-        src="https://splunkp.mskcc.org/en-US/app/msk_is_igo/report?sid=scheduler__mirhajf_bXNrX2lzX2lnbw__RMD53d4c8f6a16f673e8_at_1664942400_35426_47E5C73B-C856-4312-B334-29BD0C36636C&s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Samples_SingleValue"
+        src="https://splunkp.mskcc.org/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Samples_SingleValue&oid=BC_qU7wK5_NDTKTqnIwGXz8rXbF_DctNM5i5pXYHHKCyyDrKATuPSzzm1B8m9bCrOFEoW_A600ORpHGy3uVDBTVzzX%5EaB95P4Cfh7FjEql3i_QplsChCBZdw7NzcH4Ln4bAhK1fu5uc%5EviSjx1q6VnzDGXlTUDQlmQcZj1AjnN"
       ></iframe>
     </div>
   </div>
