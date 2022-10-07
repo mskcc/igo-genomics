@@ -4,7 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        Core Facilities Tech Day is September 14!
+        Mark your calendar: IGO's Halloween Open House is Friday, October 28!
       </span>
     </div>
 

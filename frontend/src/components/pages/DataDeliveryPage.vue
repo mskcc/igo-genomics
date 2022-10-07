@@ -73,9 +73,9 @@
         </ul>
         <div class="md-subheading">External collaborators:</div>
         <p>
-          For projects less than 200GB, you can transfer FASTQ files via Box, Gsuite, or Go-Anywhere. Please see the <a href="http://actg.mskcc.org/hpc/external-collaborators">ACTG website</a> for more information and links to request accounts.
+          We encourage investigators to share FASTQ files via Box (accounts can be request through The Spot), as the sharing is then entirely under your control. There is a 15GB file size limit, which is sufficient for almost all sequencing requests.
 
-          For larger requests, files can be transferred via QBio:
+          For larger requests or when an HPC approach is preferred, files can be transferred via QBio:
           <ul>
             <li>Fill out <a href="http://actg.mskcc.org/contact-data-sharing-form/">this form</a></li>
             <li>Under Data Management, check "IGO will be uploading the data to qbio"</li>
@@ -165,7 +165,7 @@
         <p>
           For quality control purposes, IGO runs Cell Ranger (10X scRNA-Seq, VDJ, & Multiome), Space Ranger (10X Visium), and the Tapestri pipeline
           (MissionBio) on data from projects initiated in IGO. We deliver output from those analytic pipelines to /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline along with FASTQ files by default. Because of size constraints, pipeline data will remain available for
-          <strong>3 months</strong> before being deleted.
+          <strong>3 months</strong> before being deleted. To request regeneration of older pipeline files, submit a request <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">in iLab</a> using the "Regeneration of FASTQ, BAM, or pipeline files" form under Post-processing services.
         </p>
         <p>
           Deliverables for Cell Ranger & Space Ranger: run summary metrics (HTML, CSV), alignment files (BAM), feature barcode matrices (if
@@ -192,7 +192,7 @@
         <div class="md-title" id="data-storage">Data Storage</div>
         <div class="md-subheading">How long does IGO keep FASTQ files?</div>
         <p>
-          Currently we will leave FASTQ files linked to the project folder for <b>5 years</b>. After that time, we will be able to regenerate FASTQ files upon request, but there will be a charge and a processing delay. FASTQs from 2017 and earlier will be deleted <b>September 1, 2022</b>.
+          Currently we will leave FASTQ files linked to the project folder for <b>5 years</b>. After that time, we will be able to regenerate FASTQ files upon request, but there will be a charge and a processing delay. FASTQs from 2017 and earlier can be requested <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">in iLab</a> using the "Regeneration of FASTQ, BAM, or pipeline files" form under Post-processing services.
         </p>
         
       </md-app-content>

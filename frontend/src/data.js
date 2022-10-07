@@ -1,5 +1,25 @@
 export const news = [
   {
+    title: "Changes to IGO's Sample Discard/Return Policy",
+    date: 'October 7, 2022',
+    imgSource: 'IGO_210408_014',
+    categories: ['featured'],
+    body: `<p>
+    Due to IGO's ever-expanding collection of stored samples, our freezers are now at full capacity. To alleviate the situation, IGO has worked with MSK leadership to implement the following:<br />
+    <br />
+    Leftover biomaterial (tissue, DNA, RNA) submitted to IGO for processing will be discarded <u><strong>24 months after submission of the project</strong></u>. You will have to <u><strong>proactively</u></strong> request your leftover material.<br />
+    <br />
+    For projects submitted prior to October 2020, you have until 12/15/22 to retrieve your samples.<br/>
+    <br />
+    To request your leftover material:<br/>
+    <ol>
+    <li>If you submitted in a barcoded plate (DNA/RNA), <a href="mailto:igosampleprojmgmt@mskcc.org">e-mail IGO</a> to schedule a pickup and provide the plate ID used in sample submission.</li>
+    <li>If you provided tissue for extraction followed by a downstream sequencing request, <a href="mailto: igosampleprojmgmt@mskcc.org">e-mail IGO</a> to schedule a pickup and provide the project number your data were delivered under.</li>
+    <li>Once you receive a pickup notification, you have 5 business days to pick up your material or it will be discarded.</li>
+    </ol>
+  </p>`,
+  },
+  {
     title: 'IGO price changes',
     date: 'September 1, 2022',
     imgSource: 'IGO_210408_127',
@@ -27,7 +47,7 @@ export const news = [
     title: 'Changes to data delivery and archiving',
     date: 'July 12, 2022',
     imgSource: 'IGO_210408_177',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     Beginning July 1, IGO will deliver BAM alignment files for all human and mouse RNA-Seq experiments in addition to the FASTQ files. Your data folder will now contain a 'pipeline' folder with these files. You can find more details on BAM generation on our Data & Delivery page.
 
@@ -270,6 +290,7 @@ export const teams = [
       'The Sample & Project Management team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
     members: [
       { name: 'Marisa Dunigan', role: 'Supervisor, IGO', photoName: 'Dunigan_Marisa' },
+      { name: 'Carly Richards', role: 'Billing/Procurement Associate', photoName: 'Richards_Carly' },
       { name: 'Emily Brennan', role: 'Project Assistant', photoName: 'Brennan_Emily' },
       { name: 'Kyriakos Chatzis', role: 'Project Assistant', photoName: 'Chatzis_Kyriakos' },
       { name: 'Meghanne Lomibao', role: 'Project Coordinator', photoName: 'Lomibao_Meghanne' },

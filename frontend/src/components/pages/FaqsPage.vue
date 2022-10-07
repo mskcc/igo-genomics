@@ -450,10 +450,16 @@
                       <md-list slot="md-expand">
                         <md-list-item>
                           <div>
-                            <a href="http://cmo.mskcc.org/index.php/gene-panels/" target="_blank">IMPACT, HemePACT, ACCESS, CMO-CH, Archer</a><br />
-                            Mouse-IMPACT -- available soon <br />
-                            <a href="https://cmo.mskcc.org/cmo/resources/gene-lists/msk-access/" target="_blank">MSK-ACCESS</a><br />
-                            <router-link :to="{ name: 'ddpcr assays' }">ddPCR assays</router-link>
+                            <a href="http://cmo.mskcc.org/wp-content/uploads/2022/04/IMPACT505_Gene_list_detailed.xlsx" target="_blank">IMPACT 505</a><br />
+                            <a href="http://cmo.mskcc.org/wp-content/uploads/2022/09/M-IMPACT_v2__DESIGN_A_2021-06-30.xlsx" target="_blank">M-IMPACT v2</a><br />
+                            <a href="http://cmo.mskcc.org/wp-content/uploads/2022/04/HemePACT_v4.xlsx" target="_blank">HemePACT v4</a><br />
+                            <a href="http://cmo.mskcc.org/wp-content/uploads/2022/04/CMOWebsite_MSK-ACCESS_gene_list.xlsx" target="_blank">MSK-ACCESS</a><br />
+                            <a href="http://cmo.mskcc.org/index.php/technology-in-development/#cmo-ch-panel" target="_blank">CMO-CH</a><br />
+                            <a href="http://cmo.mskcc.org/wp-content/uploads/2022/04/CV4_ARCHER_SOLID.xlsx" target="_blank">Archer Solid Tumor</a><br />
+                            <a href="http://cmo.mskcc.org/wp-content/uploads/2022/04/ARCHER_Heme_CV2.xlsx" target="_blank">Archer Heme</a><br />
+                            <router-link :to="{ name: 'ddpcr assays' }">ddPCR assays</router-link><br />
+                            <br />
+                            For older versions of the panels, please see the <a href="http://cmo.mskcc.org/index.php/gene-panels" target="_blank">CMO website.</a>
                           </div>
                         </md-list-item>
                       </md-list>
