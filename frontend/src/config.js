@@ -3,4 +3,5 @@ export const API_URL = process.env.VUE_APP_API_URL;
 export const IMAGE_URL = process.env.VUE_APP_IMG_PATH;
 export const SPM_CALENDAR = process.env.VUE_APP_SPM_CALENDAR;
 export const SC_CALENDAR = process.env.VUE_APP_SC_CALENDAR;
+export const OH_CALENDAR = process.env.VUE_APP_OH_CALENDAR;
 export const PW = process.env.VUE_APP_PW;

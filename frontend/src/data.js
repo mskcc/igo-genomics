@@ -269,8 +269,9 @@ export const teams = [
     members: [      
       { name: 'Andrea John', role: 'Administrative Assistant II', photoName: 'John_Andrea' },
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
+      { name: 'Meghanne Lomibao', role: 'Lab Manager', photoName: 'Lomibao_Meghanne' },
       // { name: 'Open Position!', role: 'Administrative Assistant' },
-      { name: 'Open Position!', role: 'Lab Manager' },
+      // { name: 'Open Position!', role: 'Lab Manager' },
     ],
   },
   {
@@ -293,7 +294,6 @@ export const teams = [
       { name: 'Carly Richards', role: 'Billing/Procurement Associate', photoName: 'Richards_Carly' },
       { name: 'Emily Brennan', role: 'Project Assistant', photoName: 'Brennan_Emily' },
       { name: 'Kyriakos Chatzis', role: 'Project Assistant', photoName: 'Chatzis_Kyriakos' },
-      { name: 'Meghanne Lomibao', role: 'Project Coordinator', photoName: 'Lomibao_Meghanne' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
       { name: 'Position Open!', role: 'Project Manager' },
     ],

@@ -4,18 +4,6 @@
 
     <md-card class="career-card">
       <md-card-header>
-        <div class="md-title">Lab Manager</div>
-        <router-link :to="{ name: 'team', params: { id: 1 } }">Lab Support</router-link>
-        <div class="md-body">Open!</div>
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionLM = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2022-62092-lab-manager/" target="_blank" class="md-primary">Apply</md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="career-card">
-      <md-card-header>
         <div class="md-title">Project Manager</div>
         <router-link :to="{ name: 'team', params: { id: 3 } }">SPM</router-link>
         <div class="md-body">Open!</div>
@@ -310,7 +298,7 @@
       </md-dialog-actions>
     </md-dialog> -->
 
-    <md-dialog :md-active.sync="showJobDescriptionLM" :md-fullscreen="false" style="z-index: 400;">
+    <!-- <md-dialog :md-active.sync="showJobDescriptionLM" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Lab Manager in IGO, you must be:</strong>
         <ul>
@@ -331,7 +319,7 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionLM = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog>
+    </md-dialog> -->
 
     <md-dialog :md-active.sync="showJobDescriptionSCRA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -377,7 +365,7 @@ export default {
       // showJobDescriptionAE: false,
       showJobDescriptionSPMPM: false,
       // showJobDescriptionAA: false,
-      showJobDescriptionLM: false,
+      // showJobDescriptionLM: false,
       showJobDescriptionSCRA: false,
     };
   },

@@ -139,7 +139,7 @@
 </template>
 
 <script>
-import { SPM_CALENDAR, SC_CALENDAR } from './config.js';
+import { SPM_CALENDAR, SC_CALENDAR, OH_CALENDAR } from './config.js';
 
 export default {
   name: 'App',
@@ -151,6 +151,7 @@ export default {
     return {
       spmCalendar: SPM_CALENDAR,
       scCalendar: SC_CALENDAR,
+      ohCalendar: OH_CALENDAR,
       showNavigation: false,
       links: ['home', 'platforms & pricing', 'submission guidelines', 'sample requirements', 'reservations'],
       mobileLinks: [
