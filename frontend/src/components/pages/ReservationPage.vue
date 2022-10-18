@@ -137,6 +137,7 @@ export default {
     return {
       spmCalendar: 'https://outlook.office365.com/owa/calendar/IGOSPMReservations@mskcc.onmicrosoft.com/bookings/',
       scCalendar: 'https://outlook.office365.com/owa/calendar/igo1@mskcc.onmicrosoft.com/bookings/',
+      ohCalendar: 'https://outlook.office365.com/owa/calendar/HalloweenOpenHouse@mskcc.onmicrosoft.com/bookings/',
       microsoftBookingsIsActive: true,
       message: 'Please select a day.',
       requestType: '',

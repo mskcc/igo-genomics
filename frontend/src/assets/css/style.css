@@ -843,3 +843,22 @@ sup {
   max-width: 720px;
   margin: auto;
 }
+
+.generic-button {
+  padding: 10px;
+  border-radius: 2px;
+  background-color: var(--mskcc-dark-blue);
+  color: white !important;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: unset;
+}
+
+a.generic-button:hover {
+  background-color: var(--mskcc-dark-gray);
+  text-decoration: none !important;
+}
+
+.spacer-30 {
+  margin-top:30px;
+}

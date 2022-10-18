@@ -13,6 +13,7 @@ import ddpcrAssaysPage from './components/pages/ddpcrAssaysPage.vue';
 import TeamPage from './components/pages/TeamPage.vue';
 import ServicesPricesPage from './components/pages/ServicesPricesPage.vue';
 import SubmissionGuidelinesPage from './components/pages/SubmissionGuidelinesPage.vue';
+import HalloweenPage from './components/pages/HalloweenPage.vue';
 import ContactsPage from './components/pages/ContactsPage.vue';
 import FaqsPage from './components/pages/FaqsPage.vue';
 import CriteriaPage from './components/pages/CriteriaPage.vue';
@@ -130,6 +131,7 @@ const routes = [
     props: true,
   },
   { path: '/submission-guidelines', component: SubmissionGuidelinesPage, name: 'submission guidelines' },
+  { path: '/halloween', component: HalloweenPage, name: 'halloween' },
   { path: '/contacts', component: ContactsPage, name: 'contact us' },
   { path: '/faqs', component: FaqsPage, name: 'faqs' },
   {
