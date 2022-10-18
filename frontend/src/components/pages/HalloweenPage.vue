@@ -2,11 +2,12 @@
   <div>
     <!-- <div class="md-display-1">Submitting a Project</div> -->
     <md-card class="data-delivery-card">
-      <md-card-content>
+      <md-card-content class="center-page">
         <md-card-header>
           <div class="md-subheading">
-            <a href="https://outlook.office365.com/owa/calendar/HalloweenOpenHouse@mskcc.onmicrosoft.com/bookings/" target="__blank">Register for a workshop or consultation</a><br />
-            <a href="https://igo.mskcc.org/swabnseq/about">Learn about Swab&Seq</a>
+            <a href="https://outlook.office365.com/owa/calendar/HalloweenOpenHouse@mskcc.onmicrosoft.com/bookings/" target="__blank" class="generic-button">Register for a workshop or consultation</a>
+            <div class="spacer-30"></div>
+            <a href="https://igo.mskcc.org/swabnseq/about" class="generic-button">Learn about Swab&Seq</a>
           </div>
         </md-card-header>
         <div class="about-image-container">
