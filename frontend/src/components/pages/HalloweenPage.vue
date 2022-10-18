@@ -12,7 +12,7 @@
         </md-card-header>
         <div class="about-image-container">
           <md-content class="md-elevation-24 lab-photo">
-            <img src="../../assets/images/news/OpenHouse2021-Flyer-Final-Landscape.jpg" alt="2021 Flyer" />
+            <img src="../../assets/images/news/IGO_OpenHouse2022.png" alt="2021 Flyer" />
           </md-content>
           <!-- <iframe
             height="611"
