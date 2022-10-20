@@ -4,7 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        Mark your calendar: IGO's Halloween Open House is Friday, October 28!
+        Mark your calendar: IGO's Halloween Open House is Friday, October 28! <a href="https://genomics.mskcc.org/halloween">Learn more here</a>
       </span>
     </div>
 
