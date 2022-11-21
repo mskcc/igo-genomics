@@ -2,19 +2,7 @@
   <div id="job-descriptions">
     <career-banner />
 
-    <md-card class="career-card">
-      <md-card-header>
-        <div class="md-title">Project Manager</div>
-        <router-link :to="{ name: 'team', params: { id: 3 } }">SPM</router-link>
-        <div class="md-body">Open!</div>
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionSPMPM = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2022-63352-project-manager-center-for-molecular-oncology/" target="_blank" class="md-primary">Apply</md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="career-card">
+    <!-- <md-card class="career-card">
       <md-card-header>
         <div class="md-title">Research Assistant</div>
         <router-link :to="{ name: 'team', params: { id: 4 } }">EXPAnD</router-link>
@@ -24,31 +12,7 @@
         <md-button @click="showJobDescriptionEXPANDRA = true" class="md-accent">Learn More</md-button>
         <md-button href="https://careers.mskcc.org/vacancies/2022-57852-research-assistant/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
-    </md-card>
-
-    <md-card class="career-card">
-      <md-card-header>
-        <div class="md-title">Research Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 5 } }">Single Cell</router-link>
-        <div class="md-body">Open!</div>
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionSCRA = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2022-57852-research-assistant/" target="_blank" class="md-primary">Apply</md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="career-card">
-      <md-card-header>
-        <div class="md-title">Research Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 7 } }">Sequencing</router-link>
-        <div class="md-body">Open!</div>
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionSeqRA = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2022-57852-research-assistant/" target="_blank" class="md-primary">Apply</md-button>
-      </md-card-actions>
-    </md-card>
+    </md-card> -->
     
     <!-- <md-dialog :md-active.sync="showJobDescriptionAA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -176,7 +140,7 @@
       </md-dialog-actions>
     </md-dialog> -->
 
-    <md-dialog :md-active.sync="showJobDescriptionSPMPM" :md-fullscreen="false" style="z-index: 400;">
+    <!-- <md-dialog :md-active.sync="showJobDescriptionSPMPM" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Project Manager in the Sample & Project Management Team, you will:</strong>
         <ul>
@@ -198,8 +162,8 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionSPMPM = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog>
-
+    </md-dialog> -->
+<!-- 
     <md-dialog :md-active.sync="showJobDescriptionEXPANDRA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Assistant in the Extraction Team, you will:</strong>
@@ -225,9 +189,9 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionEXPANDRA = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog>
+    </md-dialog> -->
 
-    <md-dialog :md-active.sync="showJobDescriptionSeqRA" :md-fullscreen="false" style="z-index: 400;">
+    <!-- <md-dialog :md-active.sync="showJobDescriptionSeqRA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Assistant in the Sequencing Team, you will:</strong>
         <ul>
@@ -249,7 +213,7 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionSeqRA = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog>
+    </md-dialog> -->
 
     <!-- <md-dialog :md-active.sync="showJobDescriptionSeqSRT" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -321,7 +285,7 @@
       </md-dialog-actions>
     </md-dialog> -->
 
-    <md-dialog :md-active.sync="showJobDescriptionSCRA" :md-fullscreen="false" style="z-index: 400;">
+    <!-- <md-dialog :md-active.sync="showJobDescriptionSCRA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Technician in the Single Cell team, you will:</strong>
         <ul>
@@ -342,7 +306,7 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionSCRA = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog>
+    </md-dialog> -->
 
   </div>
 </template>
@@ -357,16 +321,16 @@ export default {
     return {
       // showJobDescriptionSPMPC: false,
       // showJobDescriptionNARA: false,
-      showJobDescriptionEXPANDRA: false,
-      showJobDescriptionSeqRA: false,
+      // showJobDescriptionEXPANDRA: false,
+      // showJobDescriptionSeqRA: false,
       // showJobDescriptionNART: false,
       // showJobDescriptionSeqSRT: false,
       // showJobDescriptionDataSEII: false,
       // showJobDescriptionAE: false,
-      showJobDescriptionSPMPM: false,
+      // showJobDescriptionSPMPM: false,
       // showJobDescriptionAA: false,
       // showJobDescriptionLM: false,
-      showJobDescriptionSCRA: false,
+      // showJobDescriptionSCRA: false,
     };
   },
 };

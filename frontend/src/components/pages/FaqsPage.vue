@@ -105,6 +105,73 @@
                           </div>
                         </md-list-item>
                       </md-list>
+                    </md-list-item>
+                    <md-list-item md-expand class="md-inset">
+                      <md-icon>add</md-icon>
+                      <span class="md-list-item-text">How much material should I request from the DMP?</span>
+                      <md-list slot="md-expand">
+                        <md-list-item>
+                          <div>
+                            See the chart below for the required mass for various applications:
+                            <br />
+                            <br />
+                            <md-table md-card class="criteria-table">
+                              <md-table-row>
+                                <md-table-head>Sample Type</md-table-head>
+                                <md-table-head>Application</md-table-head>
+                                <md-table-head>Mass (ng)</md-table-head>
+                                <md-table-head>Min. Concentration (ng/&#181;L)</md-table-head>
+                                <md-table-head>Min. Volume (&#181;L)</md-table-head>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell rowspan="3">DMP Library</md-table-cell>
+                                <md-table-cell>IMPACT/HemePACT</md-table-cell>
+                                <md-table-cell rowspan="2">475</md-table-cell>
+                                <md-table-cell rowpan="2">6</md-table-cell>
+                                <md-table-cell rowspan="9">5</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>WES</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>ddPCR</md-table-cell>
+                                <md-table-cell>55 + 25/addtional assay</md-table-cell>
+                                <md-table-cell rowspan="2">1</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell rowspan="6">gDNA</md-table-cell>
+                                <md-table-cell>IMPACT/HemePACT (FFPE)</md-table-cell>
+                                <md-table-cell>250</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>IMPACT/HemePACT (non-FFPE)</md-table-cell>
+                                <md-table-cell>150</md-table-cell>
+                                <md-table-cell>0.5</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>WES (FFPE)</md-table-cell>
+                                <md-table-cell>250</md-table-cell>
+                                <md-table-cell>1</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>WES (non-FFPE)</md-table-cell>
+                                <md-table-cell>150</md-table-cell>
+                                <md-table-cell>0.5</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>hWGS</md-table-cell>
+                                <md-table-cell>550</md-table-cell>
+                                <md-table-cell>6</md-table-cell>
+                              </md-table-row>
+                              <md-table-row>
+                                <md-table-cell>ddPCR</md-table-cell>
+                                <md-table-cell>50 + 25/additonal assay</md-table-cell>
+                                <md-table-cell>1</md-table-cell>
+                              </md-table-row>
+                            </md-table>
+                          </div>
+                        </md-list-item>
+                      </md-list>
                     </md-list-item>                          
                   </md-list>
                 </div>

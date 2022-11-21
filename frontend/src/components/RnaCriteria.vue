@@ -65,8 +65,8 @@
       </md-table-row>
       <md-table-row>
         <md-table-cell>FFPE</md-table-cell>
-        <md-table-cell class="try">No pass range</md-table-cell>
-        <md-table-cell class="try">No pass range</md-table-cell>
+        <md-table-cell class="try">2ng</md-table-cell>
+        <md-table-cell class="try">DV200 > 50</md-table-cell>
         <md-table-cell class="try" rowspan="2">No fail range</md-table-cell>
         <md-table-cell rowspan="2">18&#181;L</md-table-cell>
       </md-table-row>
@@ -88,7 +88,7 @@
       <md-table-row>
         <md-table-cell rowspan="2">RNASeq-RiboDepletion</md-table-cell>
         <md-table-cell>FFPE</md-table-cell>
-        <md-table-cell class="try">No pass range</md-table-cell>
+        <md-table-cell class="try">1&#181;g</md-table-cell>
         <md-table-cell rowspan="2" class="try">500ng</md-table-cell>
         <md-table-cell class="try">No pass range</md-table-cell>
         <md-table-cell rowspan="2" class="try">DV200 &gt; 30</md-table-cell>
