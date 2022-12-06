@@ -291,11 +291,12 @@ export const teams = [
       'The Sample & Project Management team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
     members: [
       { name: 'Marisa Dunigan', role: 'Supervisor, IGO', photoName: 'Dunigan_Marisa' },
+      { name: 'Blaise Robin', role: 'Project Manager', photoName: 'Robin_Blaise' },
       { name: 'Carly Richards', role: 'Billing/Procurement Associate', photoName: 'Richards_Carly' },
       { name: 'Emily Brennan', role: 'Project Assistant', photoName: 'Brennan_Emily' },
       { name: 'Kyriakos Chatzis', role: 'Project Assistant', photoName: 'Chatzis_Kyriakos' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
-      { name: 'Position Open!', role: 'Project Manager' },
+      // { name: 'Position Open!', role: 'Project Manager' },
     ],
   },
   {
@@ -311,7 +312,7 @@ export const teams = [
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
       { name: 'Mohamed Abdelbaset', role: 'Senior Research Technician', photoName: 'Abdelbaset_Mohamed' },
       { name: 'Tony Deblasio', role: 'Senior Research Assistant', photoName: 'Deblasio_Tony' },
-      { name: 'Open Position!', role: 'Research Assistant' },
+      // { name: 'Open Position!', role: 'Research Assistant' },
     ],
   },
   {
@@ -325,7 +326,7 @@ export const teams = [
       { name: 'Ravi Shrivastav', role: 'Senior Research Technician', photoName: 'Shrivastav_Ravi' },
       { name: 'Satish Ramakrishnan', role: 'Senior Research Assistant', photoName: 'Ramakrishnan_Satish' },
       { name: 'Yushi Wu', role: 'Research Assistant', photoName: 'Wu_Yushi' },   
-      { name: 'Open Positions!', role: 'Research Assistant' },
+      // { name: 'Open Positions!', role: 'Research Assistant' },
     ],
   },
   {
@@ -353,7 +354,8 @@ export const teams = [
       { name: 'Jim Chen', role: 'Senior Research Technician', photoName: 'Chen_Jim' },
       { name: 'Keumsil Hwang', role: 'Senior Research Assistant', photoName: 'Hwang_Keumsil' },
       { name: 'Medhini Mankale', role: 'Research Technician', photoName: 'Mankale_Medhini' },
-      { name: 'Open Position!', role: 'Research Assistant', },
+      { name: 'Mingqiang Zhuang', role: 'Research Assistant', photoName: 'Zhuang_Mingqiang' },
+      // { name: 'Open Position!', role: 'Research Assistant', },
     ],
   },
   {
