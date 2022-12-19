@@ -4,7 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        Mark your calendar: IGO's Halloween Open House is Friday, October 28! <a href="https://genomics.mskcc.org/halloween">Learn more here</a>
+        IGO will be closed Monday, December 26 and Monday, January 2. December 27-30 we will be performing annual maintenance and not receiving or processing samples.
       </span>
     </div>
 
@@ -46,7 +46,7 @@ export default {
     return {
       igoDescription:
         'The Integrated Genomics Operation (IGO) core enables basic, clinical, and translational science by providing a broad range of services and expertise to investigators interested in evaluating gene expression, chromosome structure, and nucleotide sequence. Our services are comprehensive, rapid, and user-friendly. Through the centralized management of all sequencing activities at MSK, the core empowers scientists with an array of technological options and the most efficient and cost-effective means of performing high-throughput genomics.',
-      announcement: false,
+      announcement: true,
       spmCalendar: SPM_CALENDAR,
       scCalendar: SC_CALENDAR,
     };

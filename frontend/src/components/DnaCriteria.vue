@@ -72,11 +72,7 @@
         <md-table-cell class="pass">500ng</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell rowspan="3"
-          >IMPACT/HemePACT<sup
-            >c<md-tooltip v-if="footnotes.c" md-direction="right">{{ footnotes.c }}</md-tooltip></sup
-          ></md-table-cell
-        >
+        <md-table-cell rowspan="3">IMPACT<sup>c<md-tooltip v-if="footnotes.c" md-direction="right">{{ footnotes.c }}</md-tooltip></sup></md-table-cell>
         <md-table-cell>cfDNA</md-table-cell>
         <md-table-cell class="pass">100ng</md-table-cell>
         <md-table-cell class="try">5ng</md-table-cell>
@@ -105,6 +101,26 @@
         <md-table-cell>PBMCs</md-table-cell>
         <md-table-cell class="pass">200ng</md-table-cell>
         <md-table-cell class="try">100ng</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell>Oxford Nanopore WGS</md-table-cell>
+        <md-table-cell>gDNA</md-table-cell>
+        <md-table-cell class="pass">2&#181;g</md-table-cell>
+        <md-table-cell class="try">100ng</md-table-cell>
+        <md-table-cell rowspan="3" class="pass">DIN > 8, 260/280 = 1.8, 260/230 = 2-2.2, size > 25kb<sup>d<md-tooltip v-if="footnotes.d" md-direction="right">{{ footnotes.d }}</md-tooltip></sup></md-table-cell>
+        <md-table-cell rowspan="3" class="fail">No try range</md-table-cell>
+        <md-table-cell rowspan="3">50&#181;L</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell rowspan="2">Oxford Nanopore WGS (Multiplexed)</md-table-cell>
+        <md-table-cell>2-4 barcodes</md-table-cell>
+        <md-table-cell class="pass">1&#181;g</md-table-cell>
+        <md-table-cell class="try">500ng</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell>>4 barcodes</md-table-cell>
+        <md-table-cell class="pass">400ng</md-table-cell>
+        <md-table-cell class="try">200ng</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>STR Analysis</md-table-cell>
@@ -181,6 +197,7 @@
           <sup>a</sup>Guidelines given are based on survey depth (two replicates). For four replicates, multiply input requirements by two.
           <sup>b</sup>CRISPRSeq samples are <strong>not</strong> QC'd by IGO. Mass requirements are based on investigator QC.
           <sup>c</sup>Requirements also apply to custom capture projects.
+          <sup>d</sup>Samples that do not pass quality requirements may be rescued with a gDNA cleanup or short fragment removal ($20/sample).
         </md-table-cell>
       </md-table-row>
     </md-table>
@@ -196,6 +213,7 @@ export default {
         a: 'For samples that are clonal, non-lymphoid, or with fewer than 100K T cells, survey is appropriate. For detection of rare clones or peripheral immune repertoire in samples with 100-200K T cells, deep resolution can be used. For 500-600K T cells, choose ultradeep.',
         b: "CRISPRSeq samples are not QC'd by IGO. Mass requirements are based on investigator QC.",
         c: 'Requirements also apply to custom capture projects.',
+        d: 'Samples that do not pass quality requirements may be rescued with a gDNA cleanup or short fragment removal ($20/sample).',
       },
     };
   },

@@ -106,7 +106,7 @@
         <md-table-cell rowspan="4">Tissue</md-table-cell>
         <md-table-cell>Frozen</md-table-cell>
         <md-table-cell rowspan="2">1.5mL Eppendorf tube</md-table-cell>
-        <md-table-cell rowspan="2">10-15mg</md-table-cell>
+        <md-table-cell rowspan="2">10-15mg (15-25mg for Oxford Nanopore)</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>OCT</md-table-cell>
@@ -121,13 +121,13 @@
         <md-table-cell>curls/punches in AutoLys tubes</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell>Blood<sup>b<md-tooltip v-if="footnotes.b" md-direction="right" v-html="footnotes.b">{{ footnotes.b }}</md-tooltip></sup></md-table-cell>
+        <md-table-cell>Blood<sup>b<md-tooltip v-if="footnotes.b" md-direction="right">{{ footnotes.b }}</md-tooltip></sup></md-table-cell>
         <md-table-cell colspan="2" class="center-page">EDTA tube</md-table-cell>
         <md-table-cell>RT to -20&deg;C</md-table-cell>
         <md-table-cell>1mL</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell>PBMCs<sup>c<md-tooltip v-if="footnotes.c" md-direction="right" v-html="footnotes.c">{{ footnotes.c }}</md-tooltip></sup></md-table-cell>
+        <md-table-cell>PBMCs<sup>c<md-tooltip v-if="footnotes.c" md-direction="right">{{ footnotes.c }}</md-tooltip></sup></md-table-cell>
         <md-table-cell>Frozen</md-table-cell>
         <md-table-cell>1.5mL Eppendorf or cryotube</md-table-cell>
         <md-table-cell rowspan="2">-20&deg;C</md-table-cell>
@@ -191,7 +191,7 @@
         <md-table-cell>Frozen pellet</md-table-cell>
         <md-table-cell rowspan="2">1.5mL Eppendorf tube</md-table-cell>
         <md-table-cell rowspan="6">-80&deg;C to -20&deg;C</md-table-cell>
-        <md-table-cell>200K-1M cells</md-table-cell>
+        <md-table-cell>200K-1M cells (50M for Oxford Nanopore)</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>TRIzol</md-table-cell>
@@ -212,10 +212,9 @@
         <md-table-cell>200K-1M cells in 350&mu;L</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell rowspan="4"
-          >Tissue</md-table-cell>
+        <md-table-cell rowspan="4">Tissue</md-table-cell>
         <md-table-cell>Frozen</md-table-cell>
-        <md-table-cell rowspan="2">10-15mg</md-table-cell>
+        <md-table-cell rowspan="2">10-15mg (20-35mg for Oxford Nanopore)</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>OCT</md-table-cell>
