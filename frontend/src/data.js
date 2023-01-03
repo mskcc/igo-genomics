@@ -7,7 +7,7 @@ export const news = [
     body: `<p>
     Long read sequencing on the Oxford Nanopore platform is now available for all investigators. We are offering PCR-free WGS and cDNA sequencing in production -- for other applications, please <a href="mailto:genomics.mskcc.org">contact the R&D team</a>.<br />
     <br />
-    More information on long read sequencing <a href="/assets/images/news/ONTposterOct2022[96].pdf" target="_blank">here</a>.<br />
+    More information on long read sequencing <a href="https://genomics.mskcc.org/ONTposter" target="_blank">here</a>.<br />
     <br />
     <a href="https://genomics.mskcc.org/platforms/longreadsequencing">Pricing</a><br />
     <br />
