@@ -1,5 +1,20 @@
 export const news = [
   {
+    title: 'NEW at IGO: Oxford Nanopore Long Read Sequencing',
+    date: 'December 13, 2022',
+    imgSource: 'promethion',
+    categories: ['featured'],
+    body: `<p>
+    Long read sequencing on the Oxford Nanopore platform is now available for all investigators. We are offering PCR-free WGS and cDNA sequencing in production -- for other applications, please <a href="mailto:genomics.mskcc.org">contact the R&D team</a>.<br />
+    <br />
+    More information on long read sequencing <a href="">here</a>.<br />
+    <br />
+    <a href="https://genomics.mskcc.org/platforms/longreadsequencing">Pricing</a><br />
+    <br />
+    Pass/fail criteria and input recommendations for <a href="https://genomics.mskcc.org/criteria">DNA</a> and <a href="https://genomics.mskcc.org/criteria/rna">RNA</a>
+    </p>`,
+  },
+  {
     title: "Changes to IGO's Sample Discard/Return Policy",
     date: 'October 7, 2022',
     imgSource: 'IGO_210408_014',
@@ -36,7 +51,7 @@ export const news = [
     title: 'Learn about libraries & ddPCR with IGO',
     date: 'August 1, 2022',
     imgSource: 'IGO_210408_021',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     As part of the MSK Core Facilities' 1st Annual Technology Day on September 14, IGO will present two separate workshops to help our investigators. Andrea Farina will present on ddPCR principles, workflow, advantages, and applications and Cassidy Cobbs will give an overview of the structure and components of Illumina sequencing libraries, including how to generate them specifically for the most cost-effective sequencing in IGO.
 
@@ -430,15 +445,15 @@ export const bulkServices = [
     libraryChemistry: 'KAPA Hyper',
     captureChemistry: 'Custom probes',
     sequencingReadLength: 'PE100',
-    sequencingCoverage: '500X T/250X N (IMPACT/HemePACT); 60M reads (ACCESS); 30M reads (CMO-CH)',
-    deliverable: 'cBioPortal instance (IMPACT & HemePACT), pipeline analysis (ACCESS, M-IMPACT); in development (CMO-CH)',
+    sequencingCoverage: '500X T/250X N (IMPACT); 60M reads (ACCESS); 30M reads (CMO-CH)',
+    deliverable: 'cBioPortal instance (IMPACT), pipeline analysis (ACCESS, M-IMPACT); in development (CMO-CH)',
     tableHeaders: ['panel', 'sampleType', 'sampleCostWet', 'sampleCostDry', 'totalCost' ],
     table: [
       { panel: 'IMPACT', sampleType: 'Tumor', sampleCostWet: 348, sampleCostDry: 152, totalCost: 500 },
       { panel: 'IMPACT', sampleType: 'Normal', sampleCostWet: 191, sampleCostDry: 59, totalCost: 250 },
       { panel: 'Mouse IMPACT', sampleType: '', sampleCostWet: 380, sampleCostDry: 145, totalCost: 525 },
-      { panel: 'HemePACT', sampleType: 'Tumor', sampleCostWet: 420, sampleCostDry: 153, totalCost: 573 },
-      { panel: 'HemePACT', sampleType: 'Normal', sampleCostWet: 270, sampleCostDry: 80, totalCost: 350 },
+      // { panel: 'HemePACT', sampleType: 'Tumor', sampleCostWet: 420, sampleCostDry: 153, totalCost: 573 },
+      // { panel: 'HemePACT', sampleType: 'Normal', sampleCostWet: 270, sampleCostDry: 80, totalCost: 350 },
       { panel: 'ACCESS', sampleType: 'Tumor', sampleCostWet: 490, sampleCostDry: 110, totalCost: 600 },
       { panel: 'ACCESS', sampleType: 'Normal', sampleCostWet: 260, sampleCostDry: 40, totalCost: 300 },
       { panel: 'CMO-CH', sampleType: '', sampleCostWet: 287, sampleCostDry: 80, totalCost: 367 },
@@ -710,6 +725,23 @@ export const otherServices = [
       { serviceType: 'Pathology Service', serviceSubType: 'H&E Staining', price: '$12/slide' },
       { serviceType: 'Pathology Service', serviceSubType: 'Slide scraping', price: '$40/sample' },
       { serviceType: 'Pathology Service', serviceSubType: 'Macrodissection', price: '$2.50/slide' },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Long Read Sequencing',
+    description: 'Long-read WGS or cDNA-Seq on the Oxford Nanopore platform',
+    startingMaterial: 'DNA, RNA, mRNA',
+    deliverable: 'FAST5 + FASTQ',
+    tableHeaders: ['serviceType', 'service', 'sampleCost'],
+    table: [
+      { serviceType: 'Library Prep', service: 'ONT cDNA-Seq Library', sampleCost: '285' },
+      { serviceType: 'Library Prep', service: 'ONT cDNA-Seq Library (Multiplexed)', sampleCost: '255' },
+      { serviceType: 'Library Prep', service: 'ONT WGS Library', sampleCost: '210' },
+      { serviceType: 'Library Prep', service: 'ONT WGS Library (Multiplexed)', sampleCost: '180' },
+      { serviceType: 'Sequencing', service: 'ONT - PromethION (100Gb)', sampleCost: '1400' },
+      { serviceType: 'Lib + Seq', service: 'Long Read RNA-Seq 30-40M reads', sampleCost: '1685' },
+      { serviceType: 'Lib + Seq', service: 'Long Read WGS 30-40X', sampleCost: '1610' },
     ],
   },
 ];

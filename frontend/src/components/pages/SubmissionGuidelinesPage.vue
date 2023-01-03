@@ -185,11 +185,12 @@
                           <li>CRISPR Sequencing</li>
                           <li>EPIC MethylCapture Seq</li>
                           <li>ChIP/CUT&RUN Library Prep + Sequencing</li>
-                          <li>IMPACT/HemePACT/Custom Capture and Sequencing</li>
+                          <li>IMPACT/Custom Capture and Sequencing</li>
                           <li>Library Prep and Illumina Next-Gen Sequencing</li>
                           <li>Mouse-IMPACT</li>
                           <li>Shallow Whole Genome Sequencing for Copy Number</li>
                           <li>Cell Line Authentication & Fragment Analysis</li>
+                          <li>Long Read Whole Genome Sequencing</li>
                         </ul></li>
                       <li>Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request a plate.</li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
@@ -209,6 +210,7 @@
                           <li>Archer Fusion</li>
                           <li>RNA Library Prep and Sequencing</li>
                           <li>TCRSeq-IGO</li>
+                          <li>Long Read cDNA Sequencing</li>
                         </ul></li>
                       <li>Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request a plate.</li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>

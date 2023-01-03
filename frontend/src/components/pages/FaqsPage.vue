@@ -486,6 +486,21 @@
                         </md-list-item>
                       </md-list>
                     </md-list-item>
+                    <md-list-item md-expand class="md-inset">
+                      <md-icon>add</md-icon>
+                      <span class="md-list-item-text">I'm interested in long read sequencing. What do I need to know?</span>
+                      <md-list slot="md-expand">
+                        <md-list-item>
+                          <div>
+                            We offer long reads on the Oxford Nanopore platform. Currently, PCR-free WGS and PCR-free cDNA sequencing are in production, and PCR+ workflows, direct RNA sequencing, amplicons, and other applications may be available in the R&D setting. We also provide high molecular weight DNA extraction services.<br />
+                            <br />
+                            The mass and quality requirements are quite high for both <a href="https://genomics.mskcc.org/criteria/">DNA</a> and <a href="https://genomics.mskc.org/criteria/rna">RNA</a> applications. Unlike our other RNA-based applications, you can submit mRNA or cDNA for ONT. It should be DNase treated and in RNase-free water. DNA should be submitted in buffer EB.<br />
+                            <br />
+                            We have a few ancillary services that may help DNA samples that fail QC. We can clean-up to improve purity (and increase ligation efficiency), shear samples to maximize the flow cell output, or eliminate short fragments to improve the N50. If your sample could benefit from these services, we will recommend them at QC.
+                          </div>
+                        </md-list-item>
+                      </md-list>
+                    </md-list-item>
                   </md-list>
                 </div>
               </div>
