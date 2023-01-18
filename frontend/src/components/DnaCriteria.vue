@@ -56,7 +56,7 @@
       </md-table-row>
       <md-table-row>
         <md-table-cell>gDNA</md-table-cell>
-        <md-table-cell class="try">9ng</md-table-cell>
+        <md-table-cell class="try">No fail range</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell rowspan="2">EPIC MethylCapture</md-table-cell>
