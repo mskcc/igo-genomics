@@ -46,7 +46,7 @@
         <md-table-cell rowspan="3">ddPCR (per assay)</md-table-cell>
         <md-table-cell>cDNA</md-table-cell>
         <md-table-cell class="pass">1ng</md-table-cell>
-        <md-table-cell class="try" rowspan="2">No fail range</md-table-cell>
+        <md-table-cell class="try" rowspan="3">No fail range</md-table-cell>
         <md-table-cell colspan="2" rowspan="3" class="center-page">No quality requirements</md-table-cell>
         <md-table-cell rowspan="3">9&#181;L</md-table-cell>
       </md-table-row>
@@ -56,7 +56,6 @@
       </md-table-row>
       <md-table-row>
         <md-table-cell>gDNA</md-table-cell>
-        <md-table-cell class="try">No fail range</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell rowspan="2">EPIC MethylCapture</md-table-cell>
