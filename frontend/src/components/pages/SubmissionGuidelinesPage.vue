@@ -6,14 +6,13 @@
         <md-card-header>
           <div class="md-subheading">
             <p>If this is your first time submitting, please see our detailed instructions below.</p>
-            <strong>RETURNING CUSTOMERS -- please note IGO's sample submission guidelines have recently changed</strong>
           </div>
         </md-card-header>
         <div>
           <div class="md-subheading">Prepare submission:</div>
           <ol>
             <li><a href="https://my.ilabsolutions.com/account/saml/mskcc" target="__blank">Submit an iLabs request</a> for the desired application.</li>
-            <li>Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to pick up a plate, micronic barcoded tubes, AutoLys tubes, or Eppendorf barcodes.</li>
+            <li>If submitting DNA, RNA, library, amplicons, FFPE curls, or cells/tissue in Eppendorf tubes, schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to pick up a plate, micronic barcoded tubes, AutoLys tubes, or Eppendorf barcodes.</li>
             <li>Complete the <a href="https://igo.mskcc.org/sample-submission" target="__blank">sample submission form</a> indicating the sample specific information.</li>
           </ol>
         </div>
@@ -92,13 +91,13 @@
                         <ul>
                           <li><a :href="scCalendar" target="__blank">Make a reservation</a> for a time to bring your samples</li>
                         </ul></li>
-                      <li><strong>If submitting sorted cells for PlateSeq:</strong>
+                      <!-- <li><strong>If submitting sorted cells for PlateSeq:</strong>
                         <ul>
                           <li><a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Reagents for PlateSeq">Contact SPM</a> to get plates/reagents for sorting</li>
-                        </ul></li>
+                        </ul></li> -->
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting the appropriate application:
                         <ul>
-                          <li>96Well_SmartSeq2</li>
+                          <!-- <li>96Well_SmartSeq2</li> -->
                           <li>10X_Genomics-GeneExpression-5</li>
                           <li>10X_Genomics-GeneExpression-3</li>
                           <li>10X_Genomics_Multiome</li>
@@ -125,7 +124,7 @@
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset">
                     <ol>
-                      <li>Contact MCC to discuss your needs to schedule your sample drop off</li>
+                      <li>Contact MCC to discuss your needs and to schedule your sample drop off</li>
                       <li>Fill out an iLab form for “10X Genomics Visium”</li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> with “10X_Genomics-Visium” as your application</li>
                       <li>Drop off your sample at MCC at the agreed-upon time</li>
@@ -183,7 +182,6 @@
                           <li>Amplicon Library Prep and Sequencing</li>
                           <li>Bacterial/yeast Whole Genome Library Prep and Sequencing</li>
                           <li>CRISPR Sequencing</li>
-                          <li>EPIC MethylCapture Seq</li>
                           <li>ChIP/CUT&RUN Library Prep + Sequencing</li>
                           <li>IMPACT/Custom Capture and Sequencing</li>
                           <li>Library Prep and Illumina Next-Gen Sequencing</li>
@@ -261,7 +259,7 @@
                         Fill out an iLab form
                         <ul>
                           <li>Digital PCR</li>
-                          <li>IMPACT/HemePACT/Custom Capture and Sequencing</li>
+                          <li>IMPACT/Custom Capture and Sequencing</li>
                           <li>Human Whole Exome Capture and Sequencing</li>
                           <li>Human or Mouse Whole Genome Library Prep & Sequencing</li>
                         </ul>

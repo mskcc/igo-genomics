@@ -1,5 +1,21 @@
 export const news = [
   {
+    title: 'IGO Updates for 2023',
+    date: 'January 23, 2023',
+    imgSource: 'wheresciencegoesigo',
+    categories: ['featured'],
+    body: `<p>
+    The new year brings new platforms, discontinuations, platform development, and pricing changes:
+    <ul>
+      <li>Oxford Nanopore long read DNA and cDNA sequencing is now in production and samples can be submitted via iLab</li>
+      <li>The HemePACT panel has been discontinued, but IGO will soon start running IMPACT-Heme, the same panel offered in the clinical lab</li>
+      <li>Illumina has discontinued the EPIC Methyl Capture Seq platform -- IGO's R&D team is evaluating alternatives for methylation sequencing</li>
+      <li>IGO will be onboarding Nanostring CosMx and 10X Genomics Xenium instruments to enable subcellular spatial RNA profiling</li>
+      <li>We have implemented price increases to IMPACT tumor profiling, slide sectioning, scraping, and dissection, and some block sequencing read lengths</li>
+      <li>We have decreased prices for PolyA RNA-Seq, standard read length sequencing (PE150, PE100, and 10X Genomics), and some block sequencing read lengths</li>
+    </p>`,
+  },
+  {
     title: 'NEW at IGO: Oxford Nanopore Long Read Sequencing',
     date: 'December 13, 2022',
     imgSource: 'promethion',
@@ -38,7 +54,7 @@ export const news = [
     title: 'IGO price changes',
     date: 'September 1, 2022',
     imgSource: 'IGO_210408_127',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     In accordance with the changing cost of reagents and the evolution of protocols and workflows in IGO, we have adjusted the prices for a number of services. You will find a few price increases, especially for our block sequencing options. There are also small increases in extraction prices as well as simplification of the DNA, RNA, and dual extraction categories.
 
@@ -270,7 +286,6 @@ export const teams = [
       { name: 'Angela Pepe-Caprio', role: 'Operations Manager', photoName: 'Pepe-Caprio_Angela' },
       { name: 'David Mcmanamon', role: 'Manager, Data', photoName: 'Mcmanamon_David' },
       { name: 'Liping Sun', role: 'Manager, Sequencing', photoName: 'Sun_Liping' },
-      { name: 'Marisa Dunigan', role: 'Supervisor, SPM', photoName: 'Dunigan_Marisa' },
       { name: 'Ruchi Patel', role: 'Manager, Single Cell & Library Prep', photoName: 'Patel_Ruchi' }, 
       { name: 'Stephanie Chrysanthou', role: 'Manager, R&D', photoName: 'Chrysanthou_Stephanie' },
       // { name: 'Position Open!', role: 'Operations Manager' },     
@@ -305,10 +320,9 @@ export const teams = [
     description:
       'The Sample & Project Management team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
     members: [
-      { name: 'Marisa Dunigan', role: 'Supervisor, IGO', photoName: 'Dunigan_Marisa' },
       { name: 'Blaise Robin', role: 'Project Manager', photoName: 'Robin_Blaise' },
       { name: 'Carly Richards', role: 'Billing/Procurement Associate', photoName: 'Richards_Carly' },
-      { name: 'Emily Brennan', role: 'Project Assistant', photoName: 'Brennan_Emily' },
+      { name: 'Emily Brennan', role: 'Senior Project Assistant', photoName: 'Brennan_Emily' },
       { name: 'Kyriakos Chatzis', role: 'Project Assistant', photoName: 'Chatzis_Kyriakos' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
       // { name: 'Position Open!', role: 'Project Manager' },
@@ -322,7 +336,7 @@ export const teams = [
     members: [
       { name: 'Andrea Farina', role: 'Manager, IGO', photoName: 'Farina_Andrea' },
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
-      { name: 'Elijah Castro', role: 'Research Technician', photoName: 'Castro_Elijah' },
+      { name: 'Elijah Castro', role: 'Senior Research Technician', photoName: 'Castro_Elijah' },
       { name: 'Julienne Lomibao', role: 'Senior Research Technician', photoName: 'Lomibao_Julienne' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
       { name: 'Mohamed Abdelbaset', role: 'Senior Research Technician', photoName: 'Abdelbaset_Mohamed' },
@@ -341,7 +355,7 @@ export const teams = [
       { name: 'Ravi Shrivastav', role: 'Senior Research Technician', photoName: 'Shrivastav_Ravi' },
       { name: 'Satish Ramakrishnan', role: 'Senior Research Assistant', photoName: 'Ramakrishnan_Satish' },
       { name: 'Yushi Wu', role: 'Research Assistant', photoName: 'Wu_Yushi' },   
-      // { name: 'Open Positions!', role: 'Research Assistant' },
+      { name: 'Open Position!', role: 'Research Assistant' },
     ],
   },
   {
@@ -355,7 +369,8 @@ export const teams = [
       { name: 'Katherine Allard', role: 'Research Assistant', photoName: 'Allard_Katherine' },
       { name: 'Kiruthika Balasubramanian', role: 'Research Assistant', photoName: 'Balasubramanian_Kiruthika' },
       { name: 'Sophia Rust', role: 'Research Technician', photoName: 'Rust_Sophia' },
-      // { name: 'Open Position!', role: 'Research Assistant' },
+      { name: 'Open Position!', role: 'Supervisor' },
+      { name: 'Open Position!', role: 'Research Technician' },
     ],
   },
   {
@@ -366,7 +381,7 @@ export const teams = [
     members: [
       { name: 'Liping Sun', role: 'Manager, IGO', photoName: 'Sun_Liping' },
       { name: 'Desmond Lambe', role: 'Research Technician', photoName: 'Lambe_Desmond' },
-      { name: 'Jim Chen', role: 'Senior Research Technician', photoName: 'Chen_Jim' },
+      { name: 'Jim Chen', role: 'Research Assistant', photoName: 'Chen_Jim' },
       { name: 'Keumsil Hwang', role: 'Senior Research Assistant', photoName: 'Hwang_Keumsil' },
       { name: 'Medhini Mankale', role: 'Research Technician', photoName: 'Mankale_Medhini' },
       { name: 'Mingqiang Zhuang', role: 'Research Assistant', photoName: 'Zhuang_Mingqiang' },
@@ -395,7 +410,7 @@ export const teams = [
     members: [
       { name: 'Stephanie Chrysanthou', role: 'Manager, IGO', photoName: 'Chrysanthou_Stephanie' },
       { name: 'Juan Li', role: 'Manager, IGO', photoName: 'Li_Juan' },
-      { name: 'Cassidy Illum', role: 'Research Technician', photoName: 'Illum_Cassidy' },
+      { name: 'Open Position!', role: 'Research Technician' },
       
     ],
   },
@@ -449,7 +464,7 @@ export const bulkServices = [
     deliverable: 'cBioPortal instance (IMPACT), pipeline analysis (ACCESS, M-IMPACT); in development (CMO-CH)',
     tableHeaders: ['panel', 'sampleType', 'sampleCostWet', 'sampleCostDry', 'totalCost' ],
     table: [
-      { panel: 'IMPACT', sampleType: 'Tumor', sampleCostWet: 348, sampleCostDry: 152, totalCost: 500 },
+      { panel: 'IMPACT', sampleType: 'Tumor', sampleCostWet: 323, sampleCostDry: 227, totalCost: 550 },
       { panel: 'IMPACT', sampleType: 'Normal', sampleCostWet: 191, sampleCostDry: 59, totalCost: 250 },
       { panel: 'Mouse IMPACT', sampleType: '', sampleCostWet: 380, sampleCostDry: 145, totalCost: 525 },
       // { panel: 'HemePACT', sampleType: 'Tumor', sampleCostWet: 420, sampleCostDry: 153, totalCost: 573 },
@@ -473,11 +488,11 @@ export const bulkServices = [
       { libraryType: 'PolyA', readNumber: '10-20', sampleCost: 250 },
       { libraryType: 'PolyA', readNumber: '20-30', sampleCost: 300 },
       { libraryType: 'PolyA', readNumber: '30-40', sampleCost: 350 },
-      { libraryType: 'PolyA', readNumber: '40-50', sampleCost: 400 },
-      { libraryType: 'PolyA', readNumber: '50-60', sampleCost: 450 },
-      { libraryType: 'PolyA', readNumber: '60-80', sampleCost: 575 },
-      { libraryType: 'PolyA', readNumber: '80-100', sampleCost: 600 },
-      { libraryType: 'PolyA', readNumber: '100+', sampleCost: 700 },
+      { libraryType: 'PolyA', readNumber: '40-50', sampleCost: 375 },
+      { libraryType: 'PolyA', readNumber: '50-60', sampleCost: 400 },
+      { libraryType: 'PolyA', readNumber: '60-80', sampleCost: 450 },
+      { libraryType: 'PolyA', readNumber: '80-100', sampleCost: 500 },
+      { libraryType: 'PolyA', readNumber: '100+', sampleCost: 550 },
       { libraryType: 'RiboDepletion', readNumber: '10-20', sampleCost: 300 },
       { libraryType: 'RiboDepletion', readNumber: '20-30', sampleCost: 350 },
       { libraryType: 'RiboDepletion', readNumber: '30-40', sampleCost: 400 },
@@ -526,16 +541,15 @@ export const bulkServices = [
     id: 4,
     name: 'Epigenome Sequencing',
     description: 'Various methods to assess the epigenetic structure of the genome',
-    startingMaterial: 'Cells - no more than 24 samples/batch (ATAC), Transposed DNA (ChIP), DNA – 4 sample minimum (EPIC)',
-    libraryChemistry: 'Nextera XT (ATAC), KAPA HTP (ChIP), TruSeq Methyl Capture (EPIC)',
+    startingMaterial: 'Cells - no more than 24 samples/batch (ATAC), Transposed DNA (ChIP)',
+    libraryChemistry: 'Nextera XT (ATAC), KAPA HTP (ChIP)',
     sequencingReadLength: 'PE100',
-    sequencingCoverage: '40-50M (ATAC), 10M (ChIP; more reads can be requested), 40M (EPIC)',
+    sequencingCoverage: '40-50M (ATAC), 10M (ChIP; more reads can be requested)',
     deliverable: 'FASTQ',
     tableHeaders: ['platform', 'sampleCost'],
     table: [
       { platform: 'ATAC-Seq', sampleCost: 450 },
       { platform: 'ChIP-Seq/CUT&RUN', sampleCost: 250 },
-      { platform: 'EPIC Methyl Capture-Seq', sampleCost: 605 },
     ],
   },
   {
@@ -548,7 +562,7 @@ export const bulkServices = [
     table: [
       { platform: 'Archer immunoverse', sampleCost: 494 },
       { platform: '10X Genomics V(D)J Enrichment', sampleCost: 2368 },
-      { platform: 'IGO-TCR', sampleCost: 225 },
+      { platform: 'IGO-TCR', sampleCost: 300 },
     ],
   },
   {
@@ -564,6 +578,7 @@ export const bulkServices = [
         deliverable: 'FASTQ + CRISPRESSO analysis',
         cost: '$70',
       },
+      { platform: 'Investigator Library Sequencing', sequencingDetails: 'see Sequencing Only link above', deliverable: 'FASTQ', cost: '$40' },
     ],
   },
 ];
@@ -580,9 +595,9 @@ export const singleServices = [
     deliverable: 'FASTQ, Cell Ranger output',
     tableHeaders: ['xGenomicsPlatform', 'sampleCostLibrary', 'cellCostSequencing'],
     table: [
-      { xGenomicsPlatform: '5′ OR 3′ Gene Expression', sampleCostLibrary: 2068, cellCostSequencing: '$0.05' },
-      { xGenomicsPlatform: 'V(D)J Enrichment', sampleCostLibrary: 300, cellCostSequencing: '$0.01' },
-      { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 300, cellCostSequencing: '$0.01' },
+      { xGenomicsPlatform: '5′ OR 3′ Gene Expression', sampleCostLibrary: 2068, cellCostSequencing: '$0.02' },
+      { xGenomicsPlatform: 'V(D)J Enrichment', sampleCostLibrary: 300, cellCostSequencing: '$0.005' },
+      { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 300, cellCostSequencing: '$0.005' },
     ],
   },
   {
@@ -595,7 +610,7 @@ export const singleServices = [
     sequencingCoverage: '20K reads/cell (GEX), 25K reads/cell (ATAC)',
     deliverable: 'FASTQ, Cell Ranger output',
     libraryCost: '$3,000/sample',
-    sequencingCost: '$0.10/nucleus',
+    sequencingCost: '$0.044/nucleus',
   },
   {
     id: 2,
@@ -608,7 +623,7 @@ export const singleServices = [
     deliverable: 'FASTQ, Space Ranger output',
     tissueOptimizationCost: '$900 (once/tissue; frozen only)',
     libraryCost: '$4,421/$16,074 (frozen) or $5,796/$20,286 (FFPE) per 1 slide/4 slides + $1,100/slide',
-    sequencingCost: '$5,232 (frozen) or $2,616 (FFPE) x %Area of squares covered',
+    sequencingCost: '$500 (frozen) or $250 (FFPE) x %Area of squares covered',
   },
   {
     id: 3,
@@ -643,7 +658,7 @@ export const singleServices = [
     sequencingCoverage: '2M reads/cell',
     deliverable: 'FASTQ',
     libraryCost: '$2,300/up to 800 cells',
-    sequencingCost: '$4/cell',
+    sequencingCost: '$2/cell',
   },
   {
     id: 6,
@@ -720,11 +735,11 @@ export const otherServices = [
       { serviceType: 'QC Service', serviceSubType: '%Human for PDX', price: '$19/sample' },
       { serviceType: 'QC Service', serviceSubType: 'Cell Line Authentication', price: '$30/sample' },
       { serviceType: 'QC Service', serviceSubType: 'Custom Fragment Analysis', price: '$5/sample' },
-      { serviceType: 'Pathology Service', serviceSubType: 'Block Sectioning', price: '$15/sample' },
+      { serviceType: 'Pathology Service', serviceSubType: 'Block Sectioning', price: '$20/sample' },
       { serviceType: 'Pathology Service', serviceSubType: 'FFPE slides', price: '$3.50/slide' },
       { serviceType: 'Pathology Service', serviceSubType: 'H&E Staining', price: '$12/slide' },
-      { serviceType: 'Pathology Service', serviceSubType: 'Slide scraping', price: '$40/sample' },
-      { serviceType: 'Pathology Service', serviceSubType: 'Macrodissection', price: '$2.50/slide' },
+      { serviceType: 'Pathology Service', serviceSubType: 'Slide scraping', price: '$2.50/slide' },
+      { serviceType: 'Pathology Service', serviceSubType: 'Macrodissection', price: '$4.50/slide' },
     ],
   },
   {
@@ -735,13 +750,13 @@ export const otherServices = [
     deliverable: 'FAST5 + FASTQ',
     tableHeaders: ['serviceType', 'service', 'sampleCost'],
     table: [
-      { serviceType: 'Library Prep', service: 'ONT cDNA-Seq Library', sampleCost: '285' },
-      { serviceType: 'Library Prep', service: 'ONT cDNA-Seq Library (Multiplexed)', sampleCost: '255' },
-      { serviceType: 'Library Prep', service: 'ONT WGS Library', sampleCost: '210' },
-      { serviceType: 'Library Prep', service: 'ONT WGS Library (Multiplexed)', sampleCost: '180' },
-      { serviceType: 'Sequencing', service: 'ONT - PromethION (100Gb)', sampleCost: '1400' },
-      { serviceType: 'Lib + Seq', service: 'Long Read RNA-Seq 30-40M reads', sampleCost: '1685' },
-      { serviceType: 'Lib + Seq', service: 'Long Read WGS 30-40X', sampleCost: '1610' },
+      { serviceType: 'Library Prep', service: 'ONT cDNA-Seq Library', sampleCost: '315' },
+      { serviceType: 'Library Prep', service: 'ONT cDNA-Seq Library (Multiplexed)', sampleCost: '285' },
+      { serviceType: 'Library Prep', service: 'ONT WGS Library', sampleCost: '235' },
+      { serviceType: 'Library Prep', service: 'ONT WGS Library (Multiplexed)', sampleCost: '210' },
+      { serviceType: 'Sequencing', service: 'ONT - PromethION (100Gb)', sampleCost: '1405' },
+      { serviceType: 'Lib + Seq', service: 'Long Read cDNA-Seq 30-40M reads', sampleCost: '1715' },
+      { serviceType: 'Lib + Seq', service: 'Long Read WGS 30-40X', sampleCost: '1640' },
     ],
   },
 ];

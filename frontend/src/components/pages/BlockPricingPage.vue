@@ -5,8 +5,7 @@
         <span>Prices below do not include:<br /><br />
           <ul>
             <li>Library or pool QC ($17.50/sample or pool)</li>
-            <li>Pooling ($10/sample)</li>
-            <li>Data Handling ($30/sample)</li>
+            <li>$40/sample or pool for pooling and data processing</li>
           </ul>
         </span>
       </md-list-item>
@@ -32,18 +31,18 @@
               </md-table-row>
               <md-table-row>
                 <md-table-cell>1</md-table-cell>
-                <md-table-cell colspan="6">$421</md-table-cell>
-                <md-table-cell>$463</md-table-cell>
+                <md-table-cell colspan="6">$300</md-table-cell>
+                <md-table-cell>$360</md-table-cell>
               </md-table-row>
               <md-table-row>
                 <md-table-cell>4</md-table-cell>
-                <md-table-cell colspan="6">$576</md-table-cell>
+                <md-table-cell colspan="6">$470</md-table-cell>
                 <md-table-cell>N/A</md-table-cell>
               </md-table-row>
               <md-table-row>
                 <md-table-cell>20</md-table-cell>
-                <md-table-cell>$1290</md-table-cell>
-                <md-table-cell colspan="3">$1104</md-table-cell>
+                <md-table-cell>$1160</md-table-cell>
+                <md-table-cell colspan="3">$965</md-table-cell>
                 <md-table-cell colspan="2">$1440</md-table-cell>
                 <md-table-cell>$1689</md-table-cell>
               </md-table-row>
@@ -58,9 +57,10 @@
         <md-list slot="md-expand">
         <md-list-item>
           <ul>
-            <li>PE100: $2.30/million read</li>
-            <li>PE150: $2.50/million read</li>
-            <li>10X (28/10/10/88): $2.70/million read</li>
+            <li>PE100: $2.00/million reads</li>
+            <li>PE150: $2.20/million reads</li>
+            <li>10X (28/10/10/88): $2.00/million reads</li>
+            <li>10X ATAC (50/8/16 or 24/48): $2.40/million reads</li>
           </ul>
         </md-list-item>
         <md-list-item style="font-style: italic;">10-20M reads/sample OR &gt;20M reads/pool minimum </md-list-item>
@@ -88,29 +88,29 @@
             </md-table-row>
             <md-table-row>
               <md-table-cell>100</md-table-cell>
-              <md-table-cell colspan="3">$1558</md-table-cell>
-              <md-table-cell colspan="2">$2174</md-table-cell>
-              <md-table-cell>N/A</md-table-cell>
+              <md-table-cell colspan="3">$825</md-table-cell>
+              <md-table-cell colspan="2">$1350</md-table-cell>
+              <md-table-cell>$1740</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>400</md-table-cell>
-              <md-table-cell colspan="3">$1848</md-table-cell>
-              <md-table-cell>$2190</md-table-cell>
-              <md-table-cell>$4074</md-table-cell>
+              <md-table-cell colspan="3">$1375</md-table-cell>
+              <md-table-cell>$2580</md-table-cell>
+              <md-table-cell>$4625</md-table-cell>
               <md-table-cell>N/A</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>800</md-table-cell>
-              <md-table-cell colspan="3">$2825</md-table-cell>
+              <md-table-cell colspan="3">$2325</md-table-cell>
               <md-table-cell>$2926</md-table-cell>
               <md-table-cell>$3579</md-table-cell>
-              <md-table-cell>$5569</md-table-cell>
+              <md-table-cell>$4625</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>1800</md-table-cell>
-              <md-table-cell colspan="3">$4060</md-table-cell>
-              <md-table-cell>$4899</md-table-cell>
-              <md-table-cell>$5291</md-table-cell>
+              <md-table-cell colspan="3">$4995</md-table-cell>
+              <md-table-cell>$6015</md-table-cell>
+              <md-table-cell>$6510</md-table-cell>
               <md-table-cell>N/A</md-table-cell>
             </md-table-row>
             <md-table-row>
@@ -122,8 +122,8 @@
             </md-table-row>
             <md-table-row>
               <md-table-cell>11000</md-table-cell>
-              <md-table-cell colspan="4">$14401</md-table-cell>
-              <md-table-cell>$19881</md-table-cell>
+              <md-table-cell colspan="4">$19800</md-table-cell>
+              <md-table-cell>$22000</md-table-cell>
               <md-table-cell>N/A</md-table-cell>
             </md-table-row>
           </md-table>
