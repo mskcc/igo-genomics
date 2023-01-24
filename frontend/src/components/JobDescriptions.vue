@@ -2,17 +2,53 @@
   <div id="job-descriptions">
     <career-banner />
 
-    <!-- <md-card class="career-card">
+    <md-card class="career-card">
       <md-card-header>
-        <div class="md-title">Research Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 4 } }">EXPAnD</router-link>
+        <div class="md-title">Research Technician</div>
+        <router-link :to="{ name: 'team', params: { id: 9 } }">R&D</router-link>
         <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescriptionEXPANDRA = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2022-57852-research-assistant/" target="_blank" class="md-primary">Apply</md-button>
+        <md-button @click="showJobDescriptionRnDRT = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2023-65091-research-technician/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
-    </md-card> -->
+    </md-card>
+
+    <md-card class="career-card">
+      <md-card-header>
+        <div class="md-title">Supervisor</div>
+        <router-link :to="{ name: 'team', params: { id: 6 } }">Library Prep</router-link>
+        <div class="md-body">Coming Soon</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionRASup = false" class="md-accent">Coming Soon</md-button>
+        <md-button href="mailto:genomics@mskcc.org" target="_blank" class="md-primary">Inquire</md-button>
+      </md-card-actions>
+    </md-card>
+
+    <md-card class="career-card">
+      <md-card-header>
+        <div class="md-title">Research Technician</div>
+        <router-link :to="{ name: 'team', params: { id: 6 } }">Library Prep</router-link>
+        <div class="md-body">Open!</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionNART = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2023-65091-research-technician/" target="_blank" class="md-primary">Apply</md-button>
+      </md-card-actions>
+    </md-card>
+
+    <md-card class="career-card">
+      <md-card-header>
+        <div class="md-title">Research Assistant</div>
+        <router-link :to="{ name: 'team', params: { id: 5 } }">Single Cell</router-link>
+        <div class="md-body">Open!</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionSCRA = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2023-65093-research-assistant/" target="_blank" class="md-primary">Apply</md-button>
+      </md-card-actions>
+    </md-card>
     
     <!-- <md-dialog :md-active.sync="showJobDescriptionAA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -90,7 +126,7 @@
       </md-dialog-actions>
     </md-dialog> -->
     
-    <!-- <md-dialog :md-active.sync="showJobDescriptionNART" :md-fullscreen="false" style="z-index: 400;">
+    <md-dialog :md-active.sync="showJobDescriptionNART" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Technician in the Library Preparation Team, you will:</strong>
         <ul>
@@ -104,7 +140,7 @@
         </ul>
         <strong>You have:</strong>
         <ul>
-          <li>A Bachelor’s Degree in a Biological, Chemistry, or Science related field.</li>
+          <li>A Bachelor’s Degree in a biology, chemistry, or science related field.</li>
           <li>Previous exposure to NGS library preparation and Illumina sequencer loading is preferable.</li>
           <li>Strong organizational, prioritization, and time management skills.</li>
         </ul>
@@ -112,7 +148,35 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionNART = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog> -->
+    </md-dialog>
+
+    <md-dialog :md-active.sync="showJobDescriptionRnDRT" :md-fullscreen="false" style="z-index: 400;">
+          <md-dialog-content md-dynamic-height>
+            <strong>As a Research Technician in the R&D Team, you will:</strong>
+            <ul>
+              <li>Assist in the desigh and implementation of experiments to test novel technologies</li>
+              <li>Meticulously record experimental details</li>
+              <li>Evaluate results and troubleshoot assays as required</li>
+              <li>Optimize existing IGO assays</li>
+              <li>Read scientific literature to develop a detailed understanding of your work</li>
+              <li>Work with the production lab to transfer newly validated assays to a high throughput format</li>
+              <li>Use the LIMS and iLab to track samples and experiments</li>
+            </ul>
+            <strong>You have:</strong>
+            <ul>
+              <li>A Bachelor’s Degree in a biology, chemistry, or science related field.</li>
+              <li>An interest in the scientific principles behind the assays being developed</li>
+              <li>The ability to work indepedently and collaborate with team members</li>
+              <li>An affinity for math and stoichiometry, strong communication skills, and an ability to work in a fast-paced, deadline-oriented environment</li>
+              <li>Undergraduate lab experience, a record of academic excellence, and strong references</li>
+              <li>Previous molecular biology experience preferred</li>
+              <li>Strong organizational, prioritization, and time management skills.</li>
+            </ul>
+          </md-dialog-content>
+          <md-dialog-actions>
+            <md-button class="md-primary" @click="showJobDescriptionRnDRT = false">Close</md-button>
+          </md-dialog-actions>
+        </md-dialog>
 
     <!-- <md-dialog :md-active.sync="showJobDescriptionSPMPC" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -285,7 +349,7 @@
       </md-dialog-actions>
     </md-dialog> -->
 
-    <!-- <md-dialog :md-active.sync="showJobDescriptionSCRA" :md-fullscreen="false" style="z-index: 400;">
+    <md-dialog :md-active.sync="showJobDescriptionSCRA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Technician in the Single Cell team, you will:</strong>
         <ul>
@@ -306,6 +370,29 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionSCRA = false">Close</md-button>
       </md-dialog-actions>
+    </md-dialog>
+
+    <!-- <md-dialog :md-active.sync="showJobDescriptionNASup" :md-fullscreen="false" style="z-index: 400;">
+      <md-dialog-content md-dynamic-height>
+        <strong>As a Research Technician in the Single Cell team, you will:</strong>
+        <ul>
+          <li>Following established SOPs to make NGS libraries on a variety of single cell platforms.</li>
+          <li>Load and run the liquid handlers according to pre-established robotic methods.</li>
+          <li>Review every step in the automated and/or manual process to maintain high-quality standards.</li>
+          <li>Assist group leader to create an efficient and error-proof workflow – and troubleshoot accordingly.</li>
+          <li>Communicate with vendor technical support and sales representatives.</li>
+          <li>Maintain and coordinate documentation for assay tracking and results for review/reporting through iLabs and LIMS.</li>
+        </ul>
+        <strong>You have:</strong>
+        <ul>
+          <li>Bachelor's degree in a relevant field and 5-7 years of work experience in a biological laboratory environment or Masters degree in a science and 3-5 years of shown experience.</li>
+          <li>Previous exposure to NGS library preparation or single cell applications are preferable.</li>
+          <li>Strong organizational, prioritization, and time management skills.</li>
+        </ul>
+      </md-dialog-content>
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="showJobDescriptionNASup = false">Close</md-button>
+      </md-dialog-actions>
     </md-dialog> -->
 
   </div>
@@ -323,14 +410,16 @@ export default {
       // showJobDescriptionNARA: false,
       // showJobDescriptionEXPANDRA: false,
       // showJobDescriptionSeqRA: false,
-      // showJobDescriptionNART: false,
+      showJobDescriptionNART: false,
       // showJobDescriptionSeqSRT: false,
       // showJobDescriptionDataSEII: false,
       // showJobDescriptionAE: false,
       // showJobDescriptionSPMPM: false,
       // showJobDescriptionAA: false,
       // showJobDescriptionLM: false,
-      // showJobDescriptionSCRA: false,
+      showJobDescriptionSCRA: false,
+      showJobDescriptionRnDRT: false,
+      // showJobDescriptionRASup: false,
     };
   },
 };
