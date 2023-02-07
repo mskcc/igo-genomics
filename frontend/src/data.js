@@ -466,6 +466,7 @@ export const bulkServices = [
     table: [
       { panel: 'IMPACT', sampleType: 'Tumor', sampleCostWet: 323, sampleCostDry: 227, totalCost: 550 },
       { panel: 'IMPACT', sampleType: 'Normal', sampleCostWet: 191, sampleCostDry: 59, totalCost: 250 },
+      { panel: 'IMPACT', sampleType: 'Pooled Normal', sampleCostWet: '-', sampleCostDry: 59, totalCost: 59 },
       { panel: 'Mouse IMPACT', sampleType: '', sampleCostWet: 380, sampleCostDry: 145, totalCost: 525 },
       // { panel: 'HemePACT', sampleType: 'Tumor', sampleCostWet: 420, sampleCostDry: 153, totalCost: 573 },
       // { panel: 'HemePACT', sampleType: 'Normal', sampleCostWet: 270, sampleCostDry: 80, totalCost: 350 },
@@ -482,7 +483,7 @@ export const bulkServices = [
     libraryChemistry: 'TruSeq stranded mRNA (polyA), TruSeq stranded total (Ribodepletion), SMART-Seq v4 + KAPA Hyper (SMARTer)',
     sequencingReadLength: 'PE100',
     sequencingCoverage: '10-100M+',
-    deliverable: 'FASTQ; analysis options from BIC at an additonal cost; pipeline analysis (Archer only)',
+    deliverable: 'FASTQ + BAM; analysis options from BIC at an additonal cost; pipeline analysis (Archer only)',
     tableHeaders: ['libraryType', 'readNumber', 'sampleCost'],
     table: [
       { libraryType: 'PolyA', readNumber: '10-20', sampleCost: 250 },
