@@ -105,7 +105,7 @@
         <md-table-cell>Oxford Nanopore WGS</md-table-cell>
         <md-table-cell>gDNA</md-table-cell>
         <md-table-cell class="pass">2&#181;g</md-table-cell>
-        <md-table-cell class="try">100ng</md-table-cell>
+        <md-table-cell class="try" rowspan="2">500ng</md-table-cell>
         <md-table-cell rowspan="3" class="pass">DIN > 8, 260/280 = 1.8, 260/230 = 2-2.2, size > 25kb<sup>d<md-tooltip v-if="footnotes.d" md-direction="right">{{ footnotes.d }}</md-tooltip></sup></md-table-cell>
         <md-table-cell rowspan="3" class="fail">No try range</md-table-cell>
         <md-table-cell rowspan="3">50&#181;L</md-table-cell>
@@ -114,7 +114,6 @@
         <md-table-cell rowspan="2">Oxford Nanopore WGS (Multiplexed)</md-table-cell>
         <md-table-cell>2-4 barcodes</md-table-cell>
         <md-table-cell class="pass">1&#181;g</md-table-cell>
-        <md-table-cell class="try">500ng</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>>4 barcodes</md-table-cell>

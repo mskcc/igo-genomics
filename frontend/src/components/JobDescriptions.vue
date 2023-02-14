@@ -10,7 +10,7 @@
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionRnDRT = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2023-65091-research-technician/" target="_blank" class="md-primary">Apply</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2022-65091-research-technician/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
 
@@ -18,11 +18,11 @@
       <md-card-header>
         <div class="md-title">Supervisor</div>
         <router-link :to="{ name: 'team', params: { id: 6 } }">Library Prep</router-link>
-        <div class="md-body">Coming Soon</div>
+        <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescriptionRASup = false" class="md-accent">Coming Soon</md-button>
-        <md-button href="mailto:genomics@mskcc.org" target="_blank" class="md-primary">Inquire</md-button>
+        <md-button @click="showJobDescriptionNASup = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2023-66278-supervisor-core-facility/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
 
@@ -34,7 +34,7 @@
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionNART = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2023-65091-research-technician/" target="_blank" class="md-primary">Apply</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2022-65091-research-technician/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
 
@@ -46,7 +46,7 @@
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionSCRA = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2023-65093-research-assistant/" target="_blank" class="md-primary">Apply</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2022-65093-research-assistant/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
     
@@ -351,7 +351,7 @@
 
     <md-dialog :md-active.sync="showJobDescriptionSCRA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
-        <strong>As a Research Technician in the Single Cell team, you will:</strong>
+        <strong>As a Research Assistant in the Single Cell team, you will:</strong>
         <ul>
           <li>Following established SOPs to make NGS libraries on a variety of single cell platforms.</li>
           <li>Load and run the liquid handlers according to pre-established robotic methods.</li>
@@ -372,28 +372,32 @@
       </md-dialog-actions>
     </md-dialog>
 
-    <!-- <md-dialog :md-active.sync="showJobDescriptionNASup" :md-fullscreen="false" style="z-index: 400;">
+    <md-dialog :md-active.sync="showJobDescriptionNASup" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
-        <strong>As a Research Technician in the Single Cell team, you will:</strong>
+        <strong>As a Supervisor in the Library Prep team, you will:</strong>
         <ul>
-          <li>Following established SOPs to make NGS libraries on a variety of single cell platforms.</li>
-          <li>Load and run the liquid handlers according to pre-established robotic methods.</li>
-          <li>Review every step in the automated and/or manual process to maintain high-quality standards.</li>
-          <li>Assist group leader to create an efficient and error-proof workflow – and troubleshoot accordingly.</li>
+          <li>Plan and discuss work priorties for the team.</li>
+          <li>Oversee the daily functioning of lab personnel in terms of scheduling work and establishing timeframes, including providing guidance to staff as needed.</li>
+          <li>Troubleshoot problems and resolve challenges at the bench.</li>
+          <li>Supervise the team as well as participate in laboratory experiments to meet deadlines.</li>
+          <li>Communicate effectively with the team and drive accountability.</li>
+          <li>Assist the group leader to create and efficient and error-proof workflow.</li>
+          <li>Maintain the high-quality standards IGO has for its services.</li>
           <li>Communicate with vendor technical support and sales representatives.</li>
-          <li>Maintain and coordinate documentation for assay tracking and results for review/reporting through iLabs and LIMS.</li>
+          <li>Maintain and coordinate documentation for assay tracking and results for review/reporting through iLab and LIMS.</li>
         </ul>
         <strong>You have:</strong>
         <ul>
-          <li>Bachelor's degree in a relevant field and 5-7 years of work experience in a biological laboratory environment or Masters degree in a science and 3-5 years of shown experience.</li>
-          <li>Previous exposure to NGS library preparation or single cell applications are preferable.</li>
-          <li>Strong organizational, prioritization, and time management skills.</li>
+          <li>Bachelor's degree in a relevant field and 4-7 years of work experience in a biological laboratory environment or Masters degree in a science and 1-2 years of relevant experience.</li>
+          <li>Previous exposure to team supervision is preferable.</li>
+          <li>Previous experience with NGS library preparation, manual and automated, is preferable.</li>
+          <li>Strong leadership, prioritization, and time management skills.</li>
         </ul>
       </md-dialog-content>
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionNASup = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog> -->
+    </md-dialog>
 
   </div>
 </template>
@@ -419,7 +423,7 @@ export default {
       // showJobDescriptionLM: false,
       showJobDescriptionSCRA: false,
       showJobDescriptionRnDRT: false,
-      // showJobDescriptionRASup: false,
+      showJobDescriptionNASup: false,
     };
   },
 };
