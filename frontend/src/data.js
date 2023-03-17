@@ -321,7 +321,6 @@ export const teams = [
       'The Sample & Project Management team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
     members: [
       { name: 'Blaise Robin', role: 'Project Manager', photoName: 'Robin_Blaise' },
-      { name: 'Carly Richards', role: 'Billing/Procurement Associate', photoName: 'Richards_Carly' },
       { name: 'Emily Brennan', role: 'Senior Project Assistant', photoName: 'Brennan_Emily' },
       { name: 'Kyriakos Chatzis', role: 'Project Assistant', photoName: 'Chatzis_Kyriakos' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
