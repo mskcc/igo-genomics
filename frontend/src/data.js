@@ -1,5 +1,14 @@
 export const news = [
   {
+    title: "Meet IGO's Scientific Liaison",
+    date: 'April 3, 2023',
+    imgSource: 'Cobbs, Cassidy-230324-01lr',
+    categories: ['featured'],
+    body: `<p>
+    Cassidy Cobbs, who many of you have exchanged e-mails with in their role as IGO's Scientific Liaison, was recently profiled on OneMSK for Transgender Day of Visibility. Check it out <a href="https://mskcc.sharepoint.com/SitePages/Transgender-Day-of-Visibility--Meet-Cassidy-Cobbs.aspx" target="__blank">here!</a>
+    </p>`,
+  },
+  {
     title: 'IGO Updates for 2023',
     date: 'January 23, 2023',
     imgSource: 'wheresciencegoesigo',
@@ -34,7 +43,7 @@ export const news = [
     title: "Changes to IGO's Sample Discard/Return Policy",
     date: 'October 7, 2022',
     imgSource: 'IGO_210408_014',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     Due to IGO's ever-expanding collection of stored samples, our freezers are now at full capacity. To alleviate the situation, IGO has worked with MSK leadership to implement the following:<br />
     <br />
@@ -336,9 +345,9 @@ export const teams = [
       { name: 'Andrea Farina', role: 'Manager, IGO', photoName: 'Farina_Andrea' },
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
       { name: 'Elijah Castro', role: 'Senior Research Technician', photoName: 'Castro_Elijah' },
-      { name: 'Julienne Lomibao', role: 'Senior Research Technician', photoName: 'Lomibao_Julienne' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
       { name: 'Mohamed Abdelbaset', role: 'Senior Research Technician', photoName: 'Abdelbaset_Mohamed' },
+      { name: 'Phung Hyunh', role: 'Research Technician', photoName: 'Huynh_Phung' },
       { name: 'Tony Deblasio', role: 'Senior Research Assistant', photoName: 'Deblasio_Tony' },
       // { name: 'Open Position!', role: 'Research Assistant' },
     ],
@@ -408,7 +417,7 @@ export const teams = [
       'The Researh & Development team develops, tests, and implements new genomics platforms for the MSKCC community. In addition to testing off-the-shelf assays, our group works with MSK investigators to bring customized platforms to IGO.',
     members: [
       { name: 'Stephanie Chrysanthou', role: 'Manager, IGO', photoName: 'Chrysanthou_Stephanie' },
-      { name: 'Juan Li', role: 'Manager, IGO', photoName: 'Li_Juan' },
+      { name: 'Juan Li', role: 'Scientific Research Lead', photoName: 'Li_Juan' },
       { name: 'Open Position!', role: 'Research Technician' },
       
     ],

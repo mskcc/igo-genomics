@@ -58,7 +58,7 @@
         <div class="md-title" id="sharing">Sharing your data with collaborators</div>
         <div class="md-subheading">Before submission:</div>
         <p>
-          The mskcc.org e-mail addresses of all internal collaborators or lab members who need to be able to access your FASTQ files or pipeline results (if applicable) should be included in the "Data Access" section of your iLab request.
+          The mskcc.org e-mail addresses of all internal collaborators or lab members who need to be able to access your FASTQ files or pipeline results (if applicable) should be included in the "Data Access" section of your iLab request. If your collaborator has an HPC ID under their Cornell e-mail address, using a faux e-mail address of [cornell ID]@mskcc.org will add those individuals automatically.
         </p>
         <p>
           If you plan to request analysis services from the Bioinformatics Core, please make sure you have selected the "Institutional Support" option on your iLab request.
@@ -73,13 +73,12 @@
         </ul>
         <div class="md-subheading">External collaborators:</div>
         <p>
-          We encourage investigators to share FASTQ files via Box (accounts can be requested through The Spot), as the sharing is then entirely under your control. There is a 15GB file size limit, which is sufficient for almost all sequencing requests.
+          We encourage investigators to share FASTQ files via Box (accounts can be requested through The Spot), as the sharing is then entirely under your control. There is a 50GB file size limit, which is sufficient for almost all sequencing requests.
 
           For larger requests or when an HPC approach is preferred, files can be transferred via QBio:
           <ul>
-            <li>Fill out <a href="http://actg.mskcc.org/contact-data-sharing-form/">this form</a></li>
-            <li>Under Data Management, check "IGO will be uploading the data to qbio"</li>
-            <li>Indicate that Darrell Nabors, naborsd@mskcc.org, will be managing the data</li>
+            <li>Fill out <a href="https://thespot.mskcc.org/esc/esc?id=sc_cat_item&sys_id=18c2aeeddbbd1110b4d51619139619f5&sysparm_category=3b10ff451bb86510e6f0106fbd4bcb2b&catalog_id=e0d08b13c3330100c8b837659bba8fb4">this Spot request</a></li>
+            <li>Answer "Yes" to the question "Is IGO managing your data share?"</li>
             <li>If you're unsure of the amount of data to share, please contact us</li>
           </ul>
         </p>
@@ -96,8 +95,7 @@
         <p>
           All of our sequencers have names to distinguish them from one another for our databases, their servers, and ease of communication
           among lab members. The run ID, therefore, is the sequencer name followed by the run number; each run ID is unique. MiSeqs: TOMS,
-          VIC, JOHNSAWYERS, AYYAN; NextSeq 500: SCOTT; NextSeq 2000: PEPE; HiSeq 2500: MOMO, KIM; HiSeq 2000: BRAD, LIZ; HiSeq 4000: PITT, JAX; NovaSeq:
-          MICHELLE, DIANA, RUTH.
+          VIC, JOHNSAWYERS, AYYAN; NextSeq 500: SCOTT; NextSeq 1000: AMELIE; NextSeq 2000: PEPE; HiSeq 2500: MOMO, KIM; HiSeq 2000: BRAD, LIZ; HiSeq 4000: PITT, JAX; NovaSeq: MICHELLE, DIANA, RUTH.
         </p>
         <div class="md-subheading">Former Data Structure</div>
         <p>
@@ -161,6 +159,9 @@
         <p>
           The reference genomes are: <a href="https://support.illumina.com/sequencing/sequencing_software/dragen-bio-it-platform/product_files.html" target="_blank">hg38-alt-masked-v2 for human</a> or <a href="https://useast.ensembl.org/Mus_musculus/Info/Index" target="_blank">GRCm39 for mouse</a>. GTF files for human come from <a href="https://gencodegenes.org/human" target="_blank">Gencode</a>; for mouse we use the same Ensembl link above. For more information on the accuracy of DRAGEN compared to BWA-MEM see <a href="https://gatk.broadinstitute.org/hc/en-us/articles/4410953761563-Introducing-DRAGMAP-the-new-genome-mapper-in-DRAGEN-GATK" target="_blank">Introducing DRAGMAP, the new genome mapper in DRAGEN-GATK</a> and <a href="https://www.illumina.com/science/genomics-research/articles/dragen-demystifying-reference-genomes.html" target="_blank">Demystifying the Versions of GRCh38/hg38 Reference Genomes, How They are Used in Dragen and Their Impact on Accuracy</a>.
         </p>
+        <p>
+          BAM files are guaranteed in your share drive for 6 months; after that they are subject to deletion to save space. After that time, they can be regenerated using the "Regeneration of FASTQ, BAM, or pipeline files" form under Post-processing services in iLab for a charge.
+        </p>
         <div class="md-subheading">FAST5 files</div>
         <p>
           FAST5 is the raw data output of the Oxford Nanopore long-read sequencer. An advantage to saving your FAST5 files is that you may be able to re-analyze them if improvements to the base-calling algorithm are made. The files are very large, so while they are an option for delivery, IGO will delete them after 6 months. Basecalling to FASTQ files is part of the ONT sequencing service, and those files will be treated like all other IGO FASTQs.
@@ -169,7 +170,7 @@
         <p>
           For quality control purposes, IGO runs Cell Ranger (10X scRNA-Seq, VDJ, & Multiome), Space Ranger (10X Visium), and the Tapestri pipeline
           (MissionBio) on data from projects initiated in IGO. We deliver output from those analytic pipelines to /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline along with FASTQ files by default. Because of size constraints, pipeline data will remain available for
-          <strong>3 months</strong> before being deleted. To request regeneration of older pipeline files, submit a request <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">in iLab</a> using the "Regeneration of FASTQ, BAM, or pipeline files" form under Post-processing services.
+          <strong>3 months</strong> before being deleted. To request regeneration of older pipeline files, submit a request <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">in iLab</a> using the "Regeneration of FASTQ, BAM, or pipeline files" form under Post-processing services. There is a charge for regeneration.
         </p>
         <p>
           Deliverables for Cell Ranger & Space Ranger: run summary metrics (HTML, CSV), alignment files (BAM), feature barcode matrices (if
@@ -186,6 +187,9 @@
         <div class="md-subheading">CRISPresso</div>
         <p>
           CRISPResso2 output is delivered for CRISPRSeq projects that have selected that option. We run with default parameters and the information provided in iLab, so the pipeline isn't necessarily tailored for your experiment. You can learn more about CRISPResso2, the available parameters, and run your FASTQ files yourself by visiting <a href="http://crispresso.pinellolab.org/submission" target="_blank">crispresso.pinellolab.org</a>.
+        </p>
+        <p>
+          CRISPResso2 data will remain available for <strong>3 months</strong> before being subject to deletion. To request regeneration of older files, submit a request <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">in iLab</a> using the "Regeneration of FASTQ, BAM, or pipeline files" form under Post-processing services. There is a charge for regeneration.
         </p>
         <div class="md-subheading">Customization</div>
         <p>

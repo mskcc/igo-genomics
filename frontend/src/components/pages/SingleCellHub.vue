@@ -65,6 +65,7 @@
                 </ul>
               </li>
               <li>Please bring your cells in at least 50uL of 800-1200 cells/&mu;L PBS + 0.04% BSA</li>
+              <li>Lo-bind tubes are recommended for best results</li>
               <li>Recovery of 10K cells for analysis can never be guaranteed</li>
             </ul>
           </li>
@@ -121,6 +122,7 @@
               </li>
               <li>RNA-Seq reads are nuclear only and may not be comparable to whole-cell RNA-Seq</li>
               <li>Feature barcoding and cell hashing are <strong>not compatible</strong> with Multiome (while customized methods to hash nuclei exist, we do not offer them in IGO)</li>
+              <li>Lo-bind tubes are recommended for best results</li>
             </ul>
           </li>
         </ul>
