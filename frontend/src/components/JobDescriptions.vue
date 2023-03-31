@@ -10,7 +10,7 @@
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionRnDRT = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2022-65091-research-technician/" target="_blank" class="md-primary">Apply</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2023-67415-research-technician/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
 
@@ -22,7 +22,7 @@
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionNASup = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2023-66278-supervisor-core-facility/" target="_blank" class="md-primary">Apply</md-button>
+        <md-button href="mailto:genomics@mskcc.org" target="_blank" class="md-primary">Contact us</md-button>
       </md-card-actions>
     </md-card>
 
@@ -34,7 +34,7 @@
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionNART = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2022-65091-research-technician/" target="_blank" class="md-primary">Apply</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2023-67415-research-technician/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
 
@@ -46,7 +46,7 @@
       </md-card-header>
       <md-card-actions>
         <md-button @click="showJobDescriptionSCRA = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2022-65093-research-assistant/" target="_blank" class="md-primary">Apply</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2023-67417-research-assistant/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
     
