@@ -136,6 +136,9 @@
         <p>
           We always strive to meet or exceed read number or coverage requests, however sometimes samples are delivered under those targets, typically due to sample quality or quantity.
         </p>
+        <p>
+          We will maintain links to FASTQ files in your share drive for <b>3 years</b>. After that time, links will be deactivated and files will be moved into "cold" storage. <b>Nothing will be permanently deleted</b>. However, there will be both a delay and a charge to recover archived files.
+        </p>
         <div class="md-subheading">BAM files</div>
         <p>
           Beginning July 1, 2022, BAM files will be part of the deliverable for RNA-Seq projects. They will be deposited in the directory /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline. We plan to gradually expand BAM delivery to other experiment types.
@@ -164,7 +167,7 @@
         </p>
         <div class="md-subheading">FAST5 files</div>
         <p>
-          FAST5 is the raw data output of the Oxford Nanopore long-read sequencer. An advantage to saving your FAST5 files is that you may be able to re-analyze them if improvements to the base-calling algorithm are made. The files are very large, so while they are an option for delivery, IGO will delete them after 6 months. Basecalling to FASTQ files is part of the ONT sequencing service, and those files will be treated like all other IGO FASTQs.
+          FAST5 is the raw data output of the Oxford Nanopore long-read sequencer. An advantage to saving your FAST5 files is that you may be able to re-analyze them if improvements to the base-calling algorithm are made. The files are very large, so while they are an option for delivery, IGO will delete them after <b>30 days</b>. Basecalling to FASTQ files is part of the ONT sequencing service, and those files will be treated like all other IGO FASTQs.
         </p>
         <div class="md-subheading">Cell Ranger, Space Ranger, and Tapestri</div>
         <p>
@@ -193,14 +196,26 @@
         </p>
         <div class="md-subheading">Customization</div>
         <p>
-          IGO does <b>not</b> provide custom alignment or pipeline runs. We provide these files as a courtesy to our investigators because we generate them for QC purposes. If you need experiment-specific, more complex, or additional downstream analysis, you should reach out to MSK's <a href="http://bic.mskcc.org/bic/" target="_blank">Bioinformatics Core</a>. Please note that our Cell Ranger count and vdj output <b>does not</b> take Feature Barcoding or Cell Hashing information into account.
+          IGO does <b>not</b> provide custom alignment or pipeline runs. We provide these files as a courtesy to our investigators because we generate them for QC purposes. If you need experiment-specific, more complex, or additional downstream analysis, you should reach out to MSK's <a href="http://bic.mskcc.org/bic/" target="_blank">Bioinformatics Core</a>.
         </p>
         <md-divider></md-divider>
 
         <div class="md-title" id="data-storage">Data Storage</div>
         <div class="md-subheading">How long does IGO keep FASTQ files?</div>
         <p>
-          Currently we will leave FASTQ files linked to the project folder for <b>5 years</b>. After that time, we will be able to regenerate FASTQ files upon request, but there will be a charge and a processing delay. FASTQs from 2017 and earlier can be requested <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">in iLab</a> using the "Regeneration of FASTQ, BAM, or pipeline files" form under Post-processing services.
+          FASTQ files will be linked to the project folder for <b>3 years</b>.
+        </p>
+        <p>
+          BAM files will be available for <b>6 months</b>.
+        </p>
+        <p>
+          Cell Ranger, Space Ranger, Tapestri, and CRISPResso2 results will be available for <b>3 months</b>.
+        </p>
+        <p>
+          FAST5 files will be maintained for <b>30 days</b>.
+        </p>
+        <p>
+          All deliverables except for FAST5 can be recovered after their expiration date using the <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">"Regeneration of FASTQ, BAM, or pipeline files" form</a> under Post-processing services. There will be both a delay and a fee.
         </p>
         
       </md-app-content>

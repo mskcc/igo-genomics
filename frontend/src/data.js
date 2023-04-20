@@ -1,5 +1,20 @@
 export const news = [
   {
+    title: "Changes to IGO's Data Retention Policy",
+    date: 'April 20, 2023',
+    imgSource: 'IGO_210408_177',
+    categories: ['featured'],
+    body: `<p>
+    As sequencing-heavy applications such as Whole Genome Sequencing and 10X Genomics Single Cell Sequencing continue to grow and usage of the Oxford Nanopore long-read sequencing platform increases, storage space is an ongoing challenge for IGO. To accommodate newer platforms and in anticipation of the arrival of the NovaSeqX sequencing instrument later this year, we are tweaking our policies to ensure we have sufficient space.<br />
+    <br />
+    Going forward, FASTQ file links will remain active in /igo/delivery/share for <b>36 months</b>. After 3 years, links will be deactivated and files will be moved into "cold" storage. <b>Nothing will be permanently deleted</b>. However, there will be both a delay and a charge to recover archived files.<br />
+    <br />
+    FAST5 files will only be kept for <b>30 days</b> after delivery (previously 6 months) and will not be recoverable after that point.<br />
+    <br />
+    Previous policies remain in place: BAM files for RNA-Seq will be linked for <b>6 months</b> and Cell Ranger, Space Ranger, Tapestri, and CRISPResso pipeline results will be available for <b>3 months</b>. After that time, they can be regenerated from FASTQ files for a fee.
+    </p>`,
+  },
+  {
     title: "Meet IGO's Scientific Liaison",
     date: 'April 3, 2023',
     imgSource: 'Cobbs, Cassidy-230324-01lr',
@@ -28,7 +43,7 @@ export const news = [
     title: 'NEW at IGO: Oxford Nanopore Long Read Sequencing',
     date: 'December 13, 2022',
     imgSource: 'promethion',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     Long read sequencing on the Oxford Nanopore platform is now available for all investigators. We are offering PCR-free WGS and cDNA sequencing in production -- for other applications, please <a href="mailto:genomics.mskcc.org">contact the R&D team</a>.<br />
     <br />
@@ -333,7 +348,8 @@ export const teams = [
       { name: 'Emily Brennan', role: 'Senior Project Assistant', photoName: 'Brennan_Emily' },
       { name: 'Kyriakos Chatzis', role: 'Project Assistant', photoName: 'Chatzis_Kyriakos' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
-      // { name: 'Position Open!', role: 'Project Manager' },
+      { name: 'Position Open!', role: 'Supervisor' },
+      { name: 'Position Open!', role: 'Project Assistant' },
     ],
   },
   {
@@ -363,7 +379,7 @@ export const teams = [
       { name: 'Ravi Shrivastav', role: 'Senior Research Technician', photoName: 'Shrivastav_Ravi' },
       { name: 'Satish Ramakrishnan', role: 'Senior Research Assistant', photoName: 'Ramakrishnan_Satish' },
       { name: 'Yushi Wu', role: 'Research Assistant', photoName: 'Wu_Yushi' },   
-      { name: 'Open Position!', role: 'Research Assistant' },
+      // { name: 'Open Position!', role: 'Research Assistant' },
     ],
   },
   {
@@ -377,8 +393,8 @@ export const teams = [
       { name: 'Katherine Allard', role: 'Research Assistant', photoName: 'Allard_Katherine' },
       { name: 'Kiruthika Balasubramanian', role: 'Research Assistant', photoName: 'Balasubramanian_Kiruthika' },
       { name: 'Sophia Rust', role: 'Research Technician', photoName: 'Rust_Sophia' },
-      { name: 'Open Position!', role: 'Supervisor' },
-      { name: 'Open Position!', role: 'Research Technician' },
+      // { name: 'Open Position!', role: 'Supervisor' },
+      // { name: 'Open Position!', role: 'Research Technician' },
     ],
   },
   {
@@ -418,7 +434,7 @@ export const teams = [
     members: [
       { name: 'Stephanie Chrysanthou', role: 'Manager, IGO', photoName: 'Chrysanthou_Stephanie' },
       { name: 'Juan Li', role: 'Scientific Research Lead', photoName: 'Li_Juan' },
-      { name: 'Open Position!', role: 'Research Technician' },
+      // { name: 'Open Position!', role: 'Research Technician' },
       
     ],
   },
@@ -632,7 +648,7 @@ export const singleServices = [
     deliverable: 'FASTQ, Space Ranger output',
     tissueOptimizationCost: '$900 (once/tissue; frozen only)',
     libraryCost: '$4,421/$16,074 (frozen) or $5,796/$20,286 (FFPE) per 1 slide/4 slides + $1,100/slide',
-    sequencingCost: '$500 (frozen) or $250 (FFPE) x %Area of squares covered',
+    sequencingCost: '$500 (frozen) or $250 (FFPE) x %Area of square covered',
   },
   {
     id: 3,
