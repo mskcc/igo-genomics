@@ -4,49 +4,25 @@
 
     <md-card class="career-card">
       <md-card-header>
-        <div class="md-title">Research Technician</div>
-        <router-link :to="{ name: 'team', params: { id: 9 } }">R&D</router-link>
+        <div class="md-title">Project Assistant</div>
+        <router-link :to="{ name: 'team', params: { id: 3 } }">Sample & Project Management</router-link>
         <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescriptionRnDRT = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2023-67415-research-technician/" target="_blank" class="md-primary">Apply</md-button>
+        <md-button @click="showJobDescriptionSPMPA = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2023-68434-project-assistant/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
 
     <md-card class="career-card">
       <md-card-header>
         <div class="md-title">Supervisor</div>
-        <router-link :to="{ name: 'team', params: { id: 6 } }">Library Prep</router-link>
+        <router-link :to="{ name: 'team', params: { id: 3 } }">Sample & Project Management</router-link>
         <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescriptionNASup = true" class="md-accent">Learn More</md-button>
-        <md-button href="mailto:genomics@mskcc.org" target="_blank" class="md-primary">Contact us</md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="career-card">
-      <md-card-header>
-        <div class="md-title">Research Technician</div>
-        <router-link :to="{ name: 'team', params: { id: 6 } }">Library Prep</router-link>
-        <div class="md-body">Open!</div>
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionNART = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2023-67415-research-technician/" target="_blank" class="md-primary">Apply</md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="career-card">
-      <md-card-header>
-        <div class="md-title">Research Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 5 } }">Single Cell</router-link>
-        <div class="md-body">Open!</div>
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionSCRA = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2023-67417-research-assistant/" target="_blank" class="md-primary">Apply</md-button>
+        <md-button @click="showJobDescriptionSPMSup = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2023-67400-supervisor-core-facility/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
     
@@ -126,7 +102,7 @@
       </md-dialog-actions>
     </md-dialog> -->
     
-    <md-dialog :md-active.sync="showJobDescriptionNART" :md-fullscreen="false" style="z-index: 400;">
+    <!-- <md-dialog :md-active.sync="showJobDescriptionNART" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Technician in the Library Preparation Team, you will:</strong>
         <ul>
@@ -148,9 +124,9 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionNART = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog>
+    </md-dialog> -->
 
-    <md-dialog :md-active.sync="showJobDescriptionRnDRT" :md-fullscreen="false" style="z-index: 400;">
+    <!-- <md-dialog :md-active.sync="showJobDescriptionRnDRT" :md-fullscreen="false" style="z-index: 400;">
           <md-dialog-content md-dynamic-height>
             <strong>As a Research Technician in the R&D Team, you will:</strong>
             <ul>
@@ -176,33 +152,30 @@
           <md-dialog-actions>
             <md-button class="md-primary" @click="showJobDescriptionRnDRT = false">Close</md-button>
           </md-dialog-actions>
-        </md-dialog>
+        </md-dialog> -->
 
-    <!-- <md-dialog :md-active.sync="showJobDescriptionSPMPC" :md-fullscreen="false" style="z-index: 400;">
+    <md-dialog :md-active.sync="showJobDescriptionSPMPA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
-        <strong>As a Project Coordinator in the Sample & Project Management Team, you will:</strong>
+        <strong>As a Project Assistant in the Sample & Project Management Team, you will:</strong>
         <ul>
-          <li>Participate in meetings with investigators to understand the scope of projects and effectively communicate the services provided by IGO</li>
-          <li>Review all submissions for correctness and completeness, and work with project managers to guide investigators through processing decisions that are in line with the goals of their projects.</li>
-          <li>Analyze quantity and quality of samples using various instruments and communicate results electronically.</li>
-          <li>Utilize the LIMS (Laboratory Information Management System) effectively to ensure the downstream processing team has relevant and up-to-date information.</li>
-          <li>Investigate unexpected outputs and provide information to IGO leadership and investigators.</li>
-          <li>Facilitate lab processing by maintaining freezer organization and storage in a LEAN way</li>
-          <li>Receive samples from outside institutions and use liquid handling automation to aliquot nucleic acid materials.</li>
-          <li>Work closely with staff from IGO and the CMO and maintain open and proactive lines of communication.</li>
+          <li>Perform QC of samples received by the SPM team.</li>
+          <li>Evaluate QC results and troubleshoot as the need arises.</li>
+          <li>Use the Lab Information Management System (LIMS) and iLab to track samples and experiments.</li>
+          <li>Meticulously record experimental details.</li>
+          <li>Communicate with investigators by providing updates on sample attrition and coordinating downstream efforts.</li>
+          <li>Read scientific literature to develop a detailed understanding of your work.</li>
+          <li>Actively participate in weekly meetings by taking notes for the team or preparing presentation if required.</li>
+          <li>Ultimately be able to review sophisticated genomic project submissions and identify any issues or technical inaccuracies.</li>
         </ul>
         <strong>You have:</strong>
         <ul>
-          <li>A Bachelor’s Degree in a Biological, Chemistry, or Science related field + 2-4 years experience</li>
-          <li>A Master's Degree in  Biological, Chemistry, or Science related field + 0-2 years experience</li>
-          <li>Experience handling DNA/RNA preferred.</li>
-          <li>Experience with genomics and NGS preferred.</li>
+          <li>A Bachelor’s Degree in a Biological, Chemistry, or Science related field with undergrad lab experience preferred</li>
         </ul>
       </md-dialog-content>
       <md-dialog-actions>
-        <md-button class="md-primary" @click="showJobDescriptionSPMPC = false">Close</md-button>
+        <md-button class="md-primary" @click="showJobDescriptionSPMPA = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog> -->
+    </md-dialog>
 
     <!-- <md-dialog :md-active.sync="showJobDescriptionSPMPM" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -349,7 +322,7 @@
       </md-dialog-actions>
     </md-dialog> -->
 
-    <md-dialog :md-active.sync="showJobDescriptionSCRA" :md-fullscreen="false" style="z-index: 400;">
+    <!-- <md-dialog :md-active.sync="showJobDescriptionSCRA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Research Assistant in the Single Cell team, you will:</strong>
         <ul>
@@ -370,9 +343,9 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionSCRA = false">Close</md-button>
       </md-dialog-actions>
-    </md-dialog>
+    </md-dialog> -->
 
-    <md-dialog :md-active.sync="showJobDescriptionNASup" :md-fullscreen="false" style="z-index: 400;">
+    <!-- <md-dialog :md-active.sync="showJobDescriptionNASup" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
         <strong>As a Supervisor in the Library Prep team, you will:</strong>
         <ul>
@@ -397,6 +370,38 @@
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionNASup = false">Close</md-button>
       </md-dialog-actions>
+    </md-dialog> -->
+
+    <md-dialog :md-active.sync="showJobDescriptionSPMSup" :md-fullscreen="false" style="z-index: 400;">
+      <md-dialog-content md-dynamic-height>
+        <strong>As a Supervisor in the Sample & Project Management team, you will:</strong>
+        <ul>
+          <li>Oversee the daily activities of the SPM team which includes:</li>
+            <ul>
+              <li>QC of samples received by the SPM team, evaluate the QC results, and troubleshoot as required.</li>
+              <li>Review incoming requests utilizing the Lab Information Management System (LIMS) and iLab.</li>
+              <li>Meet investigators to receive incoming samples and confirm accuracy of the submission.</li>
+              <li>Connect with investigators by providing updates on sample attrition and coordinate downstream efforts.</li>
+              <li>Manage sample storage system and assist with sample returns to investigators.</li>
+            </ul>
+          <li>Hire and train new personnel on IGO processes and daily SPM activities.</li>
+          <li>Supervise employee efficiency and provide feedback and mentorship.</li>
+          <li>Lead weekly team meetings to improve the team's knowledge and to troubleshoot issues.</li>
+          <li>Connect with IGO managers/leaders as needed with complex genomic project submissions.</li>
+          <li>Attend weekly Operations Meeting to discuss issues or improvements on IGO processes.</li>
+          <li>Maintain and coordinate documentations for SPM daily activities and reporting through iLab and LIMS.</li>
+        </ul>
+        <strong>You have:</strong>
+        <ul>
+          <li>Bachelor's degree in a relevant field and 4-7 years of work experience in a biological laboratory environment or Master's degree in a science and 1-2 years of relevant experience.</li>
+          <li>Previous exposure to team supervision is preferable.</li>
+          <li>Previous experience with NGS processes is preferable.</li>
+          <li>Strong leadership, prioritization, and time management skills.</li>
+        </ul>
+      </md-dialog-content>
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="showJobDescriptionSPMSup = false">Close</md-button>
+      </md-dialog-actions>
     </md-dialog>
 
   </div>
@@ -410,20 +415,21 @@ export default {
   components: { CareerBanner },
   data: function() {
     return {
-      // showJobDescriptionSPMPC: false,
+      showJobDescriptionSPMPA: false,
       // showJobDescriptionNARA: false,
       // showJobDescriptionEXPANDRA: false,
       // showJobDescriptionSeqRA: false,
-      showJobDescriptionNART: false,
+      // showJobDescriptionNART: false,
       // showJobDescriptionSeqSRT: false,
       // showJobDescriptionDataSEII: false,
       // showJobDescriptionAE: false,
       // showJobDescriptionSPMPM: false,
       // showJobDescriptionAA: false,
       // showJobDescriptionLM: false,
-      showJobDescriptionSCRA: false,
-      showJobDescriptionRnDRT: false,
-      showJobDescriptionNASup: false,
+      // showJobDescriptionSCRA: false,
+      // showJobDescriptionRnDRT: false,
+      // showJobDescriptionNASup: false,
+      showJobDescriptionSPMSup: false,
     };
   },
 };
