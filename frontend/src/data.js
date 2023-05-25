@@ -1,5 +1,16 @@
 export const news = [
   {
+    title: "New at IGO: Cell Ranger multi",
+    date: 'May 11, 2023',
+    imgSource: 'Viale_190612_001',
+    categories: ['featured'],
+    body: `<p>
+    Going forward, IGO will run the Cell Ranger multi pipeline as part of the QC of feature barcoding and cell hashing samples. As we do for gene expression and VDJ libraries, we will now deliver that pipeline output. Files will remain for 3 months.<br />
+    <br />
+    To help us facilitate this process, please fill out the template available on your iLab request with details of your Feature Barcode/CITE-Seq and/or Cell Hashing/Cell Multiplexing experiment.
+    </p>`,
+  },
+  {
     title: "Changes to IGO's Data Retention Policy",
     date: 'April 20, 2023',
     imgSource: 'IGO_210408_177',
@@ -27,7 +38,7 @@ export const news = [
     title: 'IGO Updates for 2023',
     date: 'January 23, 2023',
     imgSource: 'wheresciencegoesigo',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     The new year brings new platforms, discontinuations, platform development, and pricing changes:
     <ul>
@@ -348,8 +359,8 @@ export const teams = [
       { name: 'Emily Brennan', role: 'Senior Project Assistant', photoName: 'Brennan_Emily' },
       { name: 'Kyriakos Chatzis', role: 'Project Assistant', photoName: 'Chatzis_Kyriakos' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
-      { name: 'Position Open!', role: 'Supervisor' },
-      { name: 'Position Open!', role: 'Project Assistant' },
+      // { name: 'Position Open!', role: 'Supervisor' },
+      // { name: 'Position Open!', role: 'Project Assistant' },
     ],
   },
   {
@@ -375,6 +386,7 @@ export const teams = [
       "The Single Cell team receives fresh and frozen samples for IGO's 10X Genomics, DLP, and MissionBio platforms. They use a mix of manual and automated techniques to help investigators achieve the best single cell data possible.",
     members: [
       { name: 'Ruchi Patel', role: 'Manager, IGO', photoName: 'Patel_Ruchi' },
+      { name: 'Dooa Kim', role: 'Research Assistant', photoName:'' },
       { name: 'Justin Clarke', role: 'Senior Research Technician', photoName: 'Clarke_Justin' },
       { name: 'Ravi Shrivastav', role: 'Senior Research Technician', photoName: 'Shrivastav_Ravi' },
       { name: 'Satish Ramakrishnan', role: 'Senior Research Assistant', photoName: 'Ramakrishnan_Satish' },
@@ -390,7 +402,7 @@ export const teams = [
     members: [
       { name: 'Ruchi Patel', role: 'Manager, IGO', photoName: 'Patel_Ruchi' },
       { name: 'Kalliopi Chatzis', role: 'Research Assistant', photoName: 'Chatzis_Kalliopi' },
-      { name: 'Katherine Allard', role: 'Research Assistant', photoName: 'Allard_Katherine' },
+      { name: 'Katherine Allard', role: 'Senior Research Assistant', photoName: 'Allard_Katherine' },
       { name: 'Kiruthika Balasubramanian', role: 'Research Assistant', photoName: 'Balasubramanian_Kiruthika' },
       { name: 'Sophia Rust', role: 'Research Technician', photoName: 'Rust_Sophia' },
       // { name: 'Open Position!', role: 'Supervisor' },
@@ -434,6 +446,7 @@ export const teams = [
     members: [
       { name: 'Stephanie Chrysanthou', role: 'Manager, IGO', photoName: 'Chrysanthou_Stephanie' },
       { name: 'Juan Li', role: 'Scientific Research Lead', photoName: 'Li_Juan' },
+      { name: 'Trishala Karmacharya', role: 'Research Assistant', photoName: 'Karmacharya_Trishala' },
       // { name: 'Open Position!', role: 'Research Technician' },
       
     ],

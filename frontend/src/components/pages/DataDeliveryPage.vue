@@ -141,7 +141,7 @@
         </p>
         <div class="md-subheading">BAM files</div>
         <p>
-          Beginning July 1, 2022, BAM files will be part of the deliverable for RNA-Seq projects. They will be deposited in the directory /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline. We plan to gradually expand BAM delivery to other experiment types.
+          Beginning July 1, 2022, BAM files will be part of the deliverable for human and mouse RNA-Seq projects. They will be deposited in the directory /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline. We plan to gradually expand BAM delivery to other experiment types.
         </p> 
         <p>
           BAMs are generated in Dragen v3.10 with a command like:
@@ -163,16 +163,15 @@
           The reference genomes are: <a href="https://support.illumina.com/sequencing/sequencing_software/dragen-bio-it-platform/product_files.html" target="_blank">hg38-alt-masked-v2 for human</a> or <a href="https://useast.ensembl.org/Mus_musculus/Info/Index" target="_blank">GRCm39 for mouse</a>. GTF files for human come from <a href="https://gencodegenes.org/human" target="_blank">Gencode</a>; for mouse we use the same Ensembl link above. For more information on the accuracy of DRAGEN compared to BWA-MEM see <a href="https://gatk.broadinstitute.org/hc/en-us/articles/4410953761563-Introducing-DRAGMAP-the-new-genome-mapper-in-DRAGEN-GATK" target="_blank">Introducing DRAGMAP, the new genome mapper in DRAGEN-GATK</a> and <a href="https://www.illumina.com/science/genomics-research/articles/dragen-demystifying-reference-genomes.html" target="_blank">Demystifying the Versions of GRCh38/hg38 Reference Genomes, How They are Used in Dragen and Their Impact on Accuracy</a>.
         </p>
         <p>
-          BAM files are guaranteed in your share drive for 6 months; after that they are subject to deletion to save space. After that time, they can be regenerated using the "Regeneration of FASTQ, BAM, or pipeline files" form under Post-processing services in iLab for a charge.
+          BAM files are guaranteed in your share drive for 6 months; after that they are subject to deletion to save space. After expiration, they can be regenerated using the "Regeneration of FASTQ, BAM, or pipeline files" form under Post-processing services in iLab for a charge.
         </p>
         <div class="md-subheading">FAST5 files</div>
         <p>
-          FAST5 is the raw data output of the Oxford Nanopore long-read sequencer. An advantage to saving your FAST5 files is that you may be able to re-analyze them if improvements to the base-calling algorithm are made. The files are very large, so while they are an option for delivery, IGO will delete them after <b>30 days</b>. Basecalling to FASTQ files is part of the ONT sequencing service, and those files will be treated like all other IGO FASTQs.
+          FAST5 is the raw data output of the Oxford Nanopore long-read sequencer. An advantage to saving your FAST5 files is that you may be able to re-analyze them if improvements to the base-calling algorithm are made. The files are very large, so while they are an option for delivery, IGO will delete them after <b>30 days</b>. Basecalling to FASTQ files is part of the ONT sequencing service, and those files will be treated like all other IGO FASTQs. <b>FAST5 files cannot be recovered after deletion!</b>
         </p>
         <div class="md-subheading">Cell Ranger, Space Ranger, and Tapestri</div>
         <p>
-          For quality control purposes, IGO runs Cell Ranger (10X scRNA-Seq, VDJ, & Multiome), Space Ranger (10X Visium), and the Tapestri pipeline
-          (MissionBio) on data from projects initiated in IGO. We deliver output from those analytic pipelines to /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline along with FASTQ files by default. Because of size constraints, pipeline data will remain available for
+          For quality control purposes, IGO runs Cell Ranger (10X scRNA-Seq, VDJ, Feature Barcoding, Cell Hashing, & Multiome), Space Ranger (10X Visium), and the Tapestri pipeline (MissionBio) on data from projects initiated in IGO. We deliver output from those analytic pipelines to /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline along with FASTQ files by default. Because of size constraints, pipeline data will remain available for
           <strong>3 months</strong> before being deleted. To request regeneration of older pipeline files, submit a request <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">in iLab</a> using the "Regeneration of FASTQ, BAM, or pipeline files" form under Post-processing services. There is a charge for regeneration.
         </p>
         <p>
@@ -185,7 +184,7 @@
           Insights file (LOOM), alignment files (BAM), mapped reads by barcode (TXT), variant information (VCF)
         </p>
         <p>
-          Please note that Cell Ranger count output will not take feature barcoding or cell hashing information into account.
+          Please note that Cell Ranger count output will not take feature barcoding or cell hashing information into account. Cell Ranger multi output, which <i>does</i> consider FB/CH information, can be found in the pipeline folder associated with the FB portion of your 10X project.
         </p>
         <div class="md-subheading">CRISPresso</div>
         <p>

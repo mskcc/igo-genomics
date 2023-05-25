@@ -2,7 +2,7 @@
   <div id="job-descriptions">
     <career-banner />
 
-    <md-card class="career-card">
+    <!-- <md-card class="career-card">
       <md-card-header>
         <div class="md-title">Project Assistant</div>
         <router-link :to="{ name: 'team', params: { id: 3 } }">Sample & Project Management</router-link>
@@ -12,19 +12,7 @@
         <md-button @click="showJobDescriptionSPMPA = true" class="md-accent">Learn More</md-button>
         <md-button href="https://careers.mskcc.org/vacancies/2023-68434-project-assistant/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
-    </md-card>
-
-    <md-card class="career-card">
-      <md-card-header>
-        <div class="md-title">Supervisor</div>
-        <router-link :to="{ name: 'team', params: { id: 3 } }">Sample & Project Management</router-link>
-        <div class="md-body">Open!</div>
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionSPMSup = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2023-67400-supervisor-core-facility/" target="_blank" class="md-primary">Apply</md-button>
-      </md-card-actions>
-    </md-card>
+    </md-card> -->
     
     <!-- <md-dialog :md-active.sync="showJobDescriptionAA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -415,7 +403,7 @@ export default {
   components: { CareerBanner },
   data: function() {
     return {
-      showJobDescriptionSPMPA: false,
+      // showJobDescriptionSPMPA: false,
       // showJobDescriptionNARA: false,
       // showJobDescriptionEXPANDRA: false,
       // showJobDescriptionSeqRA: false,
@@ -429,7 +417,7 @@ export default {
       // showJobDescriptionSCRA: false,
       // showJobDescriptionRnDRT: false,
       // showJobDescriptionNASup: false,
-      showJobDescriptionSPMSup: false,
+      // showJobDescriptionSPMSup: false,
     };
   },
 };
