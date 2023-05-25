@@ -4,7 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        HemePACT and EPIC Methyl Capture Seq have been discontinued in 2023. We will replace the former with IMPACT-Heme, and several methylation profiling options are being evaluated in lieu of EPIC.
+        Coming soon to IGO: IMPACT-Heme, Methyl Capture Sequencing, and Nanostring CosMx!
       </span>
     </div>
 
