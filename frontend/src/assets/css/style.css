@@ -866,3 +866,7 @@ a.generic-button:hover {
 .how-to-video {
   margin: 0 auto;
 }
+.how-to-video video {
+  width: 75%;
+  height: auto;
+}
