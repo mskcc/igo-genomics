@@ -5,9 +5,7 @@
       <md-card-content>
         <md-card-header>
           <div class="how-to-video">
-            <video controls>
-              <source type="video/mp4" src="../../assets/howToSubmit_v1.mp4/#!"/>
-            </video>
+            <vue-core-video-player src="../../assets/howToSubmit_v1.mp4"></vue-core-video-player>
           </div>
           <div class="md-subheading">
             <p>If this is your first time submitting, please see our detailed instructions below.</p>
