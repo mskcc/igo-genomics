@@ -103,17 +103,18 @@
       </md-table-row>
       <md-table-row>
         <md-table-cell>Oxford Nanopore WGS</md-table-cell>
-        <md-table-cell>gDNA</md-table-cell>
-        <md-table-cell class="pass">2&#181;g</md-table-cell>
-        <md-table-cell class="try" rowspan="2">500ng</md-table-cell>
-        <md-table-cell rowspan="3" class="pass">DIN > 8, 260/280 = 1.8, 260/230 = 2-2.2, size > 25kb<sup>d<md-tooltip v-if="footnotes.d" md-direction="right">{{ footnotes.d }}</md-tooltip></sup></md-table-cell>
-        <md-table-cell rowspan="3" class="fail">No try range</md-table-cell>
+        <md-table-cell>hmwDNA</md-table-cell>
+        <md-table-cell class="pass">3&#181;g</md-table-cell>
+        <md-table-cell class="try">1&#181;g</md-table-cell>
+        <md-table-cell rowspan="3" class="pass">260/280 > 1.8, 260/230 > 1.5, size > 20kb<sup>d<md-tooltip v-if="footnotes.d" md-direction="right">{{ footnotes.d }}</md-tooltip></sup></md-table-cell>
+        <md-table-cell rowspan="3" class="try">260/280 &lt; 1.8; 260/230 &lt; 1.5</md-table-cell>
         <md-table-cell rowspan="3">50&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell rowspan="2">Oxford Nanopore WGS (Multiplexed)</md-table-cell>
         <md-table-cell>2-4 barcodes</md-table-cell>
         <md-table-cell class="pass">1&#181;g</md-table-cell>
+        <md-table-cell class="try">500ng</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>>4 barcodes</md-table-cell>
@@ -211,7 +212,7 @@ export default {
         a: 'For samples that are clonal, non-lymphoid, or with fewer than 100K T cells, survey is appropriate. For detection of rare clones or peripheral immune repertoire in samples with 100-200K T cells, deep resolution can be used. For 500-600K T cells, choose ultradeep.',
         b: "CRISPRSeq samples are not QC'd by IGO. Mass requirements are based on investigator QC.",
         c: 'Requirements also apply to custom capture projects.',
-        d: 'Samples that do not pass quality requirements may be rescued with a gDNA cleanup or short fragment removal ($20/sample).',
+        d: 'Samples that do not pass quality requirements may in some cases be rescued with a gDNA cleanup or short fragment removal ($20/sample).',
       },
     };
   },

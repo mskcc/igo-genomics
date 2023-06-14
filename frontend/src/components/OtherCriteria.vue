@@ -56,6 +56,14 @@
         <md-table-cell>&GreaterEqual;20&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
+        <md-table-cell>Oxford Nanopore</md-table-cell>
+        <md-table-cell>hmwDNA Libraries</md-table-cell>
+        <md-table-cell class="pass">40fmoles</md-table-cell>
+        <md-table-cell class="try">15fmoles</md-table-cell>
+        <md-table-cell colspan="2">No quality measurements</md-table-cell>
+        <md-table-cell>35&#181;L</md-table-cell>
+      </md-table-row>
+      <md-table-row>
         <md-table-cell>PDX/xenograft-derived samples</md-table-cell>
         <md-table-cell></md-table-cell>
         <md-table-cell class="pass">20ng</md-table-cell>
