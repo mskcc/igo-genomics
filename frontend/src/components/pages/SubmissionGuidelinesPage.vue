@@ -5,8 +5,8 @@
       <md-card-content>
         <md-card-header>
           <div class="how-to-video">
-            <video>
-              <source type="video/mp4" src="../../assets/howToSubmit_v1.mp4"/>
+            <video controls>
+              <source type="video/mp4" src="../../assets/howToSubmit_v1.mp4/#!"/>
             </video>
           </div>
           <div class="md-subheading">
