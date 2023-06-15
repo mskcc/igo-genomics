@@ -862,11 +862,3 @@ a.generic-button:hover {
 .spacer-30 {
   margin-top:30px;
 }
-
-.how-to-video {
-  margin: 0 auto;
-}
-.how-to-video video {
-  width: 75%;
-  height: auto;
-}
