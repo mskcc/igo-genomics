@@ -4,11 +4,9 @@
     <md-card class="data-delivery-card">
       <md-card-content>
         <md-card-header>
-          <div class="how-to-video">
-            <vue-core-video-player src="https://igo.mskcc.org/media/howToSubmit_v1.mp4" :autoplay="false"></vue-core-video-player>
-          </div>
           <div class="md-subheading">
             <p>If this is your first time submitting, please see our detailed instructions below.</p>
+            <p>Need more help? Please take a look at our <router-link :to="{ name: 'show video', params: { name: 'howToSubmit_v1' } }">How to Submit Samples video</router-link></p>
           </div>
         </md-card-header>
         <div>
