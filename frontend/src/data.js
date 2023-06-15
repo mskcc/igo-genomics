@@ -843,7 +843,13 @@ export const tutorials = [
     date: 'May 5, 2020',
     screenshot: 'ilab_sample_submission',
   },
-  // { slug: "cellranger", title: "Data Analysis with CellRanger", speakers: "Sarah Parsons from 10X Genomics", date: "May 7, 2020" },
+  {
+    slug: 'howToSubmit_v1',
+    title: 'How to Submit Samples',
+    speakers: '',
+    date: 'June 15, 2023',
+    screenshot: 'submit_samples_howto',
+  },
   {
     slug: 'splunk_webinar',
     title: 'Splunk: a Data Visualization Tool used for Operational Insight',
