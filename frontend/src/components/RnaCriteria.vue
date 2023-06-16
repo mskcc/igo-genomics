@@ -76,7 +76,7 @@
         <md-table-cell class="pass">RIN &gt; 6</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell rowspan="3">Oxford Nanopore RNA-Seq</md-table-cell>
+        <!-- <md-table-cell rowspan="3">Oxford Nanopore RNA-Seq</md-table-cell>
         <md-table-cell>total RNA</md-table-cell>
         <md-table-cell class="pass">5&#181;g</md-table-cell>
         <md-table-cell class="try">3&#181;g</md-table-cell>
@@ -93,7 +93,7 @@
         <md-table-cell>cDNA</md-table-cell>
         <md-table-cell class="pass">DIN > 8, 260/280 = 1.8, 260/230 = 2-2.2</md-table-cell>
       </md-table-row>
-      <md-table-row>
+      <md-table-row> -->
         <md-table-cell>RNASeq-PolyA</md-table-cell>
         <md-table-cell>Frozen</md-table-cell>
         <md-table-cell class="pass">500ng</md-table-cell>

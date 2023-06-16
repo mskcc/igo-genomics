@@ -78,17 +78,12 @@
         <md-table-cell>1-5mL</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell rowspan="2">Direct Library Prep (DLP)</md-table-cell>
-        <md-table-cell>Single cell suspension</md-table-cell>
+        <md-table-cell>Direct Library Prep (DLP)</md-table-cell>
+        <md-table-cell>Single nuclei suspension</md-table-cell>
         <md-table-cell>PBS + 0.04% BSA</md-table-cell>
-        <md-table-cell rowspan="2">Cryovial</md-table-cell>
+        <md-table-cell>Cryovial</md-table-cell>
         <md-table-cell>4&deg;C</md-table-cell>
-        <md-table-cell rowspan="2">> 100K cells</md-table-cell>
-      </md-table-row>
-      <md-table-row>
-        <md-table-cell>Viably frozen cells</md-table-cell>
-        <md-table-cell>10% DMSO/DMEM</md-table-cell>
-        <md-table-cell>-80&deg;C</md-table-cell>
+        <md-table-cell>> 100K nuclei</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell rowspan="12">DNA extraction</md-table-cell>
@@ -154,25 +149,8 @@
       </md-table-row>
       <md-table-row>
         <md-table-cell>Buccal swabs</md-table-cell>
-        <md-table-cell rowspan="4">1.5mL Eppendorf tube</md-table-cell>
+        <md-table-cell>1.5mL Eppendorf tube</md-table-cell>
         <md-table-cell>1-5mL</md-table-cell>
-      </md-table-row>
-      <md-table-row>
-        <md-table-cell rowspan="2">MissionBio Tapestri</md-table-cell>
-        <md-table-cell rowspan="3">Single cell suspension</md-table-cell>
-        <md-table-cell>PBS + 0.04% BSA</md-table-cell>
-        <md-table-cell>4&deg;C</md-table-cell>
-        <md-table-cell rowspan="2">100K cells</md-table-cell>
-      </md-table-row>
-      <md-table-row>
-        <md-table-cell>10% DMSO</md-table-cell>
-        <md-table-cell>-20&deg;C</md-table-cell>
-      </md-table-row>
-      <md-table-row>
-        <md-table-cell>MissionBio DNA + Protein</md-table-cell>
-        <md-table-cell>PBS + 0.04% BSA</md-table-cell>
-        <md-table-cell>4&deg;C</md-table-cell>
-        <md-table-cell>2M cells</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>PlateSeq</md-table-cell>

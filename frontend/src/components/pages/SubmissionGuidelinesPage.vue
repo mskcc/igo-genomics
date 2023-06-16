@@ -86,9 +86,8 @@
                         <ul>
                           <li>Single Cell Library Prep + Sequencing</li>
                           <li>Direct Library Prep</li>
-                          <li>Mission Bio Prep + Sequencing</li>
                         </ul></li>
-                      <li><strong>If submitting fresh cells for 10X Genomics, DLP, or MissionBio:</strong>
+                      <li><strong>If submitting fresh cells for 10X Genomics or nuclei for DLP</strong>
                         <ul>
                           <li><a :href="scCalendar" target="__blank">Make a reservation</a> for a time to bring your samples</li>
                         </ul></li>
@@ -103,15 +102,13 @@
                           <li>10X_Genomics-GeneExpression-3</li>
                           <li>10X_Genomics_Multiome</li>
                           <li>DLP</li>
-                          <li>MissionBio-THS</li>
-                          <li>MissionBio-Custom</li>
                         </ul></li>
                       <li><strong>If submitting nuclei for 10X Multiome: </strong>
                         <ul>
                           <li><a href="mailto:zzPDL_SKI_IGO_NA_team@mskcc.org?subject=Nuclei buffer">Contact us</a> to get an aliquot of nuclei
                         preservation buffer</li>
                         </ul></li>
-                      <li><strong>If submitting viably frozen cells for DLP or MissionBio or frozen cells for PlateSeq:</strong>
+                      <li><strong>If submitting frozen cells for PlateSeq:</strong>
                         <ul>
                           <li>Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a></li>
                         </ul></li>
