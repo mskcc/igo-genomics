@@ -12,7 +12,7 @@
         <div>
           <div class="md-subheading">Prepare submission:</div>
           <ol>
-            <li><a href="https://my.ilabsolutions.com/account/saml/mskcc" target="__blank">Submit an iLabs request</a> for the desired application.</li>
+            <li><a href="https://my.ilabsolutions.com/account/saml/mskcc" target="__blank">Submit an iLab request</a> for the desired application.</li>
             <li>If submitting DNA, RNA, library, amplicons, FFPE curls, or cells/tissue in Eppendorf tubes, schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to pick up a plate, micronic barcoded tubes, AutoLys tubes, or Eppendorf barcodes.</li>
             <li>Complete the <a href="https://igo.mskcc.org/sample-submission" target="__blank">sample submission form</a> indicating the sample specific information.</li>
           </ol>
@@ -44,10 +44,11 @@
                         <li>DNA/RNA Simultaneous Extraction</li>
                       </ul></li>
                       <li><strong>FFPE curls/punches only:</strong> Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request AutoLys tubes.</li>
+                      <li><strong>Tissue/cells in Eppendorf tubes only:</strong>Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request Eppendorf tube labels</li>
                       <li>Submit the sample webform, selecting your <strong>downstream application</strong> (the type of sequencing or analysis you’ll eventually need)</li>
                       <li>Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>.</li>
                       <li>Wait for the e-mail from <a href="https://igo.mskcc.org/sample-qc">Sample QC</a> indicating your extraction and QC is complete</li>
-                      <li>Fill out an iLab form for your desired application (the one that you indicated on your sample webform), attaching the provided Excel document with the IGO IDs of the samples moving on after extraction</li>
+                      <li>Fill out an iLab form for your desired downstream application (the one that you indicated on your sample webform), attaching the provided Excel document with the IGO IDs of the samples moving on after extraction</li>
                       <li><a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Samples to be moved downstream"> Email SPM </a>to move your samples downstream</li>
                     </ol>
                   </md-list-item>
@@ -60,7 +61,8 @@
                   <md-list-item class="md-inset">Note: if you have never run ATAC-Seq on your cell type, please e-mail genomics@mskcc.org to discuss an optimization of the transposition conditions.</md-list-item>
                   <md-list-item class="md-inset">
                     <ol>
-                      <li>Fill out an iLab form for "ATAC Prep + Sequencing”</li>
+                      <li>Fill out an iLab request for "ATAC Library Prep + Sequencing”</li>
+                      <li><strong>If submitting viably frozen cells:</strong>Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request Eppendorf tube labels</li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> indicating that you are submitting "Cells" for "ATACSeq"</li>
                       <li><strong>If submitting fresh cells:</strong>
                         <ul>
@@ -86,12 +88,8 @@
                         <ul>
                           <li>Single Cell Library Prep + Sequencing</li>
                           <li>Direct Library Prep</li>
-                          <li>Mission Bio Prep + Sequencing</li>
                         </ul></li>
-                      <li><strong>If submitting fresh cells for 10X Genomics, DLP, or MissionBio:</strong>
-                        <ul>
-                          <li><a :href="scCalendar" target="__blank">Make a reservation</a> for a time to bring your samples</li>
-                        </ul></li>
+                      <li><a :href="scCalendar" target="__blank">Make a reservation</a> for a time to bring your samples</li>
                       <!-- <li><strong>If submitting sorted cells for PlateSeq:</strong>
                         <ul>
                           <li><a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Reagents for PlateSeq">Contact SPM</a> to get plates/reagents for sorting</li>
@@ -99,35 +97,30 @@
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting the appropriate application:
                         <ul>
                           <!-- <li>96Well_SmartSeq2</li> -->
-                          <li>10X_Genomics-GeneExpression-5</li>
-                          <li>10X_Genomics-GeneExpression-3</li>
+                          <li>10X_Genomics-GeneExpression-5 for 5' 10X, with or without VDJ/feature barcoding/cell hashing</li>
+                          <li>10X_Genomics-GeneExpression-3 for 3' 10X, with or without feature barcoding/cell hashing</li>
                           <li>10X_Genomics_Multiome</li>
                           <li>DLP</li>
-                          <li>MissionBio-THS</li>
-                          <li>MissionBio-Custom</li>
                         </ul></li>
-                      <li><strong>If submitting nuclei for 10X Multiome: </strong>
-                        <ul>
-                          <li><a href="mailto:zzPDL_SKI_IGO_NA_team@mskcc.org?subject=Nuclei buffer">Contact us</a> to get an aliquot of nuclei
-                        preservation buffer</li>
-                        </ul></li>
-                      <li><strong>If submitting viably frozen cells for DLP or MissionBio or frozen cells for PlateSeq:</strong>
-                        <ul>
-                          <li>Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a></li>
-                        </ul></li>
+                      <li><strong>If submitting nuclei for 10X Multiome:</strong> <a href="mailto:zzPDL_SKI_IGO_SingleCell@mskcc.org?subject=Nuclei buffer">Contact us</a> to get an aliquot of nuclei preservation buffer</li>
+                      <!-- <li><strong>If submitting frozen cells for PlateSeq:</strong> Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a></li> -->
                     </ol>
                   </md-list-item>
                 </md-list>
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text ">Tissue for 10X Visium spatial transcriptomics</span>
+                <span class="md-list-item-text ">Tissue for spatial transcriptomics</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset">
                     <ol>
-                      <li>Contact MCC to discuss your needs and to schedule your sample drop off</li>
-                      <li>Fill out an iLab form for “10X Genomics Visium”</li>
-                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> with “10X_Genomics-Visium” as your application</li>
+                      <li><a href="mailto:mccf@mskcc.org">Contact MCC</a> to discuss your sample preparation needs</li>
+                      <li>Fill out an iLab request for Spatial Transcriptomics</li>
+                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting the appropriate application:
+                        <ul>
+                          <li>10X_Genomics_Visium</li>
+                          <li>GeoMx</li>
+                        </ul></li>
                       <li>Drop off your sample at MCC at the agreed-upon time</li>
                     </ol>
                   </md-list-item>
@@ -135,21 +128,7 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
-                <span class="md-list-item-text ">Tissue for Nanostring GeoMx spatial transcriptomics</span>
-                <md-list slot="md-expand">
-                  <md-list-item class="md-inset">
-                    <ol>
-                      <li>Contact IGO to discuss your experimental goals</li>
-                      <li>Fill out an iLab form for “Nanostring GeoMx”</li>
-                      <li> Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> with “GeoMx” as your application</li>
-                      <li>Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a></li>
-                    </ol>
-                  </md-list-item>
-                </md-list>
-              </md-list-item>
-              <md-list-item md-expand>
-                <md-icon>add</md-icon>
-                <span class="md-list-item-text ">DNA for WES or Human/Mouse WGS</span>
+                <span class="md-list-item-text ">DNA for WES or Human/Mouse high-depth WGS</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset">
                     <ol>
@@ -179,20 +158,34 @@
                     <ol>
                       <li>Fill out an iLab request for the appropriate application
                         <ul>
-                          <li>ACCESS Capture + Sequencing</li>
+                          <li>ACCESS/CMO-CH & other UMI Library Prep for Capture</li>
                           <li>Amplicon Library Prep and Sequencing</li>
-                          <li>Bacterial/yeast Whole Genome Library Prep and Sequencing</li>
-                          <li>CRISPR Sequencing</li>
-                          <li>ChIP/CUT&RUN Library Prep + Sequencing</li>
+                          <li>Bacterial/yeast Whole Genome Library Prep and Sequencing for shotgun metagenomics or small-genome WGS</li>
+                          <li>CRISPR Sequencing for IGO's CRISPRSeq service</li>
+                          <li>ChIP/CUTandRUN Library Prep + Sequencing for library prep of immunoprecipitated DNA</li>
                           <li>IMPACT/Custom Capture and Sequencing</li>
-                          <li>Library Prep and Illumina Next-Gen Sequencing</li>
                           <li>Mouse-IMPACT</li>
                           <li>Shallow Whole Genome Sequencing for Copy Number</li>
                           <li>Cell Line Authentication & Fragment Analysis</li>
-                          <li>Long Read Whole Genome Sequencing</li>
+                          <li>Oxford Nanopore - Long Read DNA Seq</li>
                         </ul></li>
                       <li>Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request a plate.</li>
-                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
+                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting the appropriate application:
+                        <ul>
+                          <li>AmpliconSeq</li>
+                          <li>ChIPSeq</li>
+                          <li>CellLineAuthentication</li>
+                          <li>CRISPRSeq</li>
+                          <li>CustomCapture</li>
+                          <li>CustomFragmentAnalysis</li>
+                          <li>CMO-CH</li>
+                          <li>IMPACT505</li>
+                          <li>M-IMPACT_v2</li>
+                          <li>MSK-ACCESS_v1</li>
+                          <li>ShallowWGS</li>
+                          <li>WholeGenomeSequencing</li>
+                          <li>ONT-LongReadDNASeq</li>
+                        </ul></li>
                       <li>Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a></li>
                     </ol>
                   </md-list-item>
@@ -206,13 +199,25 @@
                     <ol>
                       <li>Fill out an iLab request for the appropriate application
                         <ul>
+                          <li>Archer Immunoverse</li>
                           <li>Archer Fusion</li>
                           <li>RNA Library Prep and Sequencing</li>
                           <li>TCRSeq-IGO</li>
-                          <li>Long Read cDNA Sequencing</li>
+                          <li>Oxford Nanopore - Long Read RNA/cDNA Sequencing</li>
                         </ul></li>
                       <li>Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request a plate.</li>
-                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a></li>
+                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting the appropriate application:
+                        <ul>
+                          <li>Archer-HemePanel</li>
+                          <li>Archer-SolidTumorPanel</li>
+                          <li>Archer-Immunoverse</li>
+                          <li>RNASeq_PolyA</li>
+                          <li>RNASeq_RiboDeplete</li>
+                          <li>SMARTerAmpSeq</li>
+                          <li>TCRSeq-IGO</li>
+                          <li>ONT-DirectRNASeq</li>
+                          <li>ONT-LongReadcDNASeq</li>
+                        </ul></li>
                       <li>Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a></li>
                     </ol>
                   </md-list-item>
@@ -227,7 +232,7 @@
                       <li><strong>If you are submitting for the first time or submitting a new construct:</strong> e-mail genomics@mskcc.org with your protocol, a link to your reference, your primer barcodes, or a schematic of your construct</li>
                       <li>Fill out an iLab request for "Investigator Prepared Libraries/Pools for Sequencing”</li>
                       <li>Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request a plate.</li>
-                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting “DNA Library” as your material</li>
+                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting “DNA Library” as your material and choosing the application that best describes your platform.</li>
                       <li>Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a></li>
                     </ol>
                   </md-list-item>
@@ -242,7 +247,7 @@
                       <li><strong>If you are submitting for the first time or submitting a new construct:</strong> e-mail genomics@mskcc.org with your protocol, a link to your reference, your primer barcodes, or a schematic of your construct</li>
                       <li>Fill out an iLab request for “Investigator Prepared Libraries/Pools for Sequencing”</li>
                       <li>Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request micronic barcoded tube(s) for your pool(s)</li>
-                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting “Pooled Library” as your material</li>
+                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting “Pooled Library” as your material and choosing the application that best describes your platform.</li>
                       <li>Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a></li>
                     </ol>
                   </md-list-item>

@@ -171,7 +171,7 @@
         </p>
         <div class="md-subheading">Cell Ranger, Space Ranger, and Tapestri</div>
         <p>
-          For quality control purposes, IGO runs Cell Ranger (10X scRNA-Seq, VDJ, Feature Barcoding, Cell Hashing, & Multiome), Space Ranger (10X Visium), and the Tapestri pipeline (MissionBio) on data from projects initiated in IGO. We deliver output from those analytic pipelines to /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline along with FASTQ files by default. Because of size constraints, pipeline data will remain available for
+          For quality control purposes, IGO runs Cell Ranger (10X scRNA-Seq, VDJ, Feature Barcoding, Cell Hashing, & Multiome) and Space Ranger (10X Visium) on data from projects initiated in IGO. We deliver output from those analytic pipelines to /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline along with FASTQ files by default. Because of size constraints, pipeline data will remain available for
           <strong>3 months</strong> before being deleted. To request regeneration of older pipeline files, submit a request <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">in iLab</a> using the "Regeneration of FASTQ, BAM, or pipeline files" form under Post-processing services. There is a charge for regeneration.
         </p>
         <p>
@@ -179,10 +179,10 @@
           applicable), Loupe Browser visualization files (cloupe), QC images and position information (JPG, PNG, CSV, JSON; Visium only),
           V(D)J analysis files (if applicable)
         </p>
-        <p>
+        <!-- <p>
           Deliverables for MissionBio Tapestri: QC and metadata files (TXT, TSV, INFO, YAML, CSV, JSON), CellFinder plot (PDF), Tapestri
           Insights file (LOOM), alignment files (BAM), mapped reads by barcode (TXT), variant information (VCF)
-        </p>
+        </p> -->
         <p>
           Please note that Cell Ranger count output will not take feature barcoding or cell hashing information into account. Cell Ranger multi output, which <i>does</i> consider FB/CH information, can be found in the pipeline folder associated with the FB portion of your 10X project.
         </p>
@@ -208,7 +208,7 @@
           BAM files will be available for <b>6 months</b>.
         </p>
         <p>
-          Cell Ranger, Space Ranger, Tapestri, and CRISPResso2 results will be available for <b>3 months</b>.
+          Cell Ranger, Space Ranger, and CRISPResso2 results will be available for <b>3 months</b>.
         </p>
         <p>
           FAST5 files will be maintained for <b>30 days</b>.

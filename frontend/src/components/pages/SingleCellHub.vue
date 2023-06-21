@@ -12,7 +12,7 @@
           <md-list-item class="indent" href="#scrnaseq">10X Genomics scRNA-Seq</md-list-item>
           <md-list-item class="indent" href="#plateseq">PlateSeq</md-list-item>
           <md-list-item class="indent" href="#multiome">10X Genomics Multiome</md-list-item>
-          <md-list-item class="indent" href="#mbtapestri">Mission Bio Tapestri</md-list-item>
+          <!-- <md-list-item class="indent" href="#mbtapestri">Mission Bio Tapestri</md-list-item> -->
           <md-list-item class="indent" href="#dlp">Direct Library Prep (DLP)</md-list-item>
           <md-list-item class="indent" href="#visium">10X Genomics Visium</md-list-item>
           <md-list-item class="indent" href="#geomx">Nanostring GeoMx</md-list-item>
@@ -129,7 +129,7 @@
 
         <md-divider></md-divider>
 
-        <div class="md-title" id="mbtapestri">MissionBio Tapestri</div>
+        <!-- <div class="md-title" id="mbtapestri">MissionBio Tapestri</div>
         <ul>
           <li>Input: Single cell or nuclei suspension</li>
           <li>Output: FASTQ, Tapestri pipeline output</li>
@@ -149,22 +149,21 @@
           </li>
         </ul>
 
-        <md-divider></md-divider>
+        <md-divider></md-divider> -->
 
         <div class="md-title" id="dlp">Direct Library Prep (DLP)</div>
         <ul>
-          <li>Input: Viably frozen cells (10% DMSO/DMEM)</li>
+          <li>Input: Single nuclei suspension</li>
           <li>Output: FASTQ</li>
           <li>
             Considerations:
             <ul>
               <li>
-                While we do accept fresh cells by appointment, viably frozen cells are preferred, and our experience so far is that they
-                perform just as well
+                Currently, we are only accepting nuclei suspensions for DLP, as whole-cell performance has been inconsistent.
               </li>
-              <li>At least 100K cells should be submitted for processing</li>
-              <li>We spot 800-1000 cells per experiment</li>
-              <li>Currently, DLP is offered on a collaborative basis only; please contact us if you are considering an experiment.</li>
+              <li>At least 100K nuclei should be submitted for processing</li>
+              <li>We spot 800-1600 nuclei per experiment</li>
+              <li>Currently, DLP is offered on a collaborative basis only; please <a href="mailto:genomics@mskcc.org">contact us</a> if you are considering an experiment.</li>
             </ul>
           </li>
         </ul>
@@ -197,7 +196,7 @@
 
         <div class="md-title" id="geomx">Nanostring GeoMx</div>
         <ul>
-          <li>Input: FFPE slides</li>
+          <li>Input: Frozen or FFPE blocks or slides</li>
           <li>Output: FASTQ + GeoMx pipeline</li>
           <li>Considerations:
             <ul>

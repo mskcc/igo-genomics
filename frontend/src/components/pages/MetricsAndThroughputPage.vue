@@ -105,6 +105,10 @@
           <td>NextSeq 500</td>
         </tr>
         <tr>
+          <td>AMELIE</td>
+          <td>NextSeq 1000</td>
+        </tr>
+        <tr>
           <td>PEPE</td>
           <td>NextSeq 2000</td>
         </tr>

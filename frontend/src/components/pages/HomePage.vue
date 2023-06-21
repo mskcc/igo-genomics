@@ -4,7 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        Coming soon to IGO: IMPACT-Heme, Methyl Capture Sequencing, and Nanostring CosMx!
+        Coming soon to IGO: Nanostring CosMx and 10X Genomics Xenium!
       </span>
     </div>
 

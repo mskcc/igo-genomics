@@ -19,7 +19,7 @@ export default new Vuex.Store({
       'Lab Support',
       'Automation',
       'SPM',
-      'EXPAnD',
+      'EXPAND',
       'Single Cell',
       'Library Prep',
       'Sequencing',
