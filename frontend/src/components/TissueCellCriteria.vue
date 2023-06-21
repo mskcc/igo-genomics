@@ -40,13 +40,13 @@
       </md-table-row>
       <md-table-row>
         <md-table-cell>Single nuclei suspension</md-table-cell>
-        <md-table-cell><a href="https://support.10xgenomics.com/single-cell-gene-expression/sample-prep/doc/demonstrated-protocol-single-cell-suspensions-from-cultured-cell-lines-for-single-cell-rna-sequencing" target="__blank">See protocol</a></md-table-cell>
+        <md-table-cell><a href="https://www.10xgenomics.com/support/single-cell-gene-expression/documentation/steps/sample-prep/isolation-of-nuclei-for-single-cell-rna-sequencing-and-tissues-for-single-cell-rna-sequencing" target="__blank">See protocol</a></md-table-cell>
         <md-table-cell>700-1200 nuclei/&mu;L in > 50&mu;L</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>10X Genomics Visium</md-table-cell>
-        <md-table-cell>Tissue</md-table-cell>
-        <md-table-cell colspan="4" class="center-page">Contact MCC for sample details</md-table-cell>
+        <md-table-cell>Frozen or FFPE Tissue</md-table-cell>
+        <md-table-cell colspan="4" class="center-page"><a href="mailto:mccf@mskcc.org">Contact MCC</a> for sample details</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell rowspan="2">ATAC-Seq</md-table-cell>
@@ -153,6 +153,11 @@
         <md-table-cell>1-5mL</md-table-cell>
       </md-table-row>
       <md-table-row>
+        <md-table-cell>Nanostring GeoMx</md-table-cell>
+        <md-table-cell>Frozen or FFPE Tissue</md-table-cell>
+        <md-table-cell colspan="4" class="center-page"><a href="mailto:mccf@mskcc.org">Contact MCC</a> for sample details</md-table-cell>
+      </md-table-row>
+      <md-table-row>
         <md-table-cell>PlateSeq</md-table-cell>
         <md-table-cell>Sorted cells</md-table-cell>
         <md-table-cell>Lysis buffer<sup>a<md-tooltip v-if="footnotes.a" md-direction="right">{{ footnotes.a }}</md-tooltip></sup></md-table-cell>
@@ -160,7 +165,6 @@
         <md-table-cell>-80&deg;C to -20&deg;C</md-table-cell>
         <md-table-cell>1 to 100 cells/well</md-table-cell>
       </md-table-row>
-
       <md-table-row>
         <md-table-cell rowspan="11">RNA extraction</md-table-cell>
       </md-table-row>

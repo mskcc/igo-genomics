@@ -162,8 +162,8 @@
                 Currently, we are only accepting nuclei suspensions for DLP, as whole-cell performance has been inconsistent.
               </li>
               <li>At least 100K nuclei should be submitted for processing</li>
-              <li>We spot 800-1600 cells per experiment</li>
-              <li>Currently, DLP is offered on a collaborative basis only; please contact us if you are considering an experiment.</li>
+              <li>We spot 800-1600 nuclei per experiment</li>
+              <li>Currently, DLP is offered on a collaborative basis only; please <a href="mailto:genomics@mskcc.org">contact us</a> if you are considering an experiment.</li>
             </ul>
           </li>
         </ul>
@@ -196,7 +196,7 @@
 
         <div class="md-title" id="geomx">Nanostring GeoMx</div>
         <ul>
-          <li>Input: FFPE slides</li>
+          <li>Input: Frozen or FFPE blocks or slides</li>
           <li>Output: FASTQ + GeoMx pipeline</li>
           <li>Considerations:
             <ul>

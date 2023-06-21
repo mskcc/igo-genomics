@@ -319,6 +319,7 @@ export const teams = [
       { name: 'Neeman Mohibullah', role: 'Director', photoName: 'Mohibullah_Neeman' },
       { name: 'Andrea Farina', role: 'Manager, EXPAND', photoName: 'Farina_Andrea' },
       { name: 'Angela Pepe-Caprio', role: 'Operations Manager', photoName: 'Pepe-Caprio_Angela' },
+      { name: 'Blaise Robin', role: 'Supervisor, SPM', photoName: 'Robin_Blaise' },
       { name: 'David Mcmanamon', role: 'Manager, Data', photoName: 'Mcmanamon_David' },
       { name: 'Liping Sun', role: 'Manager, Sequencing', photoName: 'Sun_Liping' },
       { name: 'Ruchi Patel', role: 'Manager, Single Cell & Library Prep', photoName: 'Patel_Ruchi' }, 
@@ -355,7 +356,7 @@ export const teams = [
     description:
       'The Sample & Project Management team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
     members: [
-      { name: 'Blaise Robin', role: 'Project Manager', photoName: 'Robin_Blaise' },
+      { name: 'Blaise Robin', role: 'Supervisor', photoName: 'Robin_Blaise' },
       { name: 'Emily Brennan', role: 'Senior Project Assistant', photoName: 'Brennan_Emily' },
       { name: 'Kyriakos Chatzis', role: 'Project Assistant', photoName: 'Chatzis_Kyriakos' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
@@ -365,14 +366,14 @@ export const teams = [
   },
   {
     id: 4,
-    name: 'EXPAnD',
+    name: 'EXPAND',
     description:
-      'EXPAnD stands for: Extraction, pathology, Archer DX, and digital droplet PCR, but also literally refers to their interest in integrating new platforms and advancing research technology to remain at the cutting edge for our users. The EXPAND team draws upon IGO’s philosophy of constant and open communication and aims to join you in detailed, scientific discussions about your projects, to meet your needs and to work together to advance science, building long-term, trusting relationships in the process.',
+      'The EXPAND team is the most diverse team in IGO -- responsible for integrating new platforms and advancing research technology to remain at the cutting edge for our users, they handle pathology, nucleic acid extraction, Archer Dx, digital droplet PCR, and spatial transcriptomics.',
     members: [
       { name: 'Andrea Farina', role: 'Manager, IGO', photoName: 'Farina_Andrea' },
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
       { name: 'Elijah Castro', role: 'Senior Research Technician', photoName: 'Castro_Elijah' },
-      { name: 'Lauren Walsh', role: 'Intern', photoName:'' },
+      { name: 'Lauren Walsh', role: 'Intern', photoName:'Walsh_Lauren' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
       { name: 'Mohamed Abdelbaset', role: 'Senior Research Technician', photoName: 'Abdelbaset_Mohamed' },
       { name: 'Phung Hyunh', role: 'Research Technician', photoName: 'Huynh_Phung' },
@@ -384,10 +385,10 @@ export const teams = [
     id: 5,
     name: 'Single Cell',
     description:
-      "The Single Cell team receives fresh and frozen samples for IGO's 10X Genomics, DLP, and MissionBio platforms. They use a mix of manual and automated techniques to help investigators achieve the best single cell data possible.",
+      "The Single Cell team receives fresh and frozen samples for IGO's 10X Genomics and DLP platforms. They use a mix of manual and automated techniques to help investigators achieve the best single cell data possible. Additionally, the Single Cell team has expanded their expertise to take on Oxford Nanopore long read library preparation.",
     members: [
       { name: 'Ruchi Patel', role: 'Manager, IGO', photoName: 'Patel_Ruchi' },
-      { name: 'Dooa Kim', role: 'Research Assistant', photoName:'' },
+      { name: 'Dooa Kim', role: 'Research Assistant', photoName:'Kim_Dooa' },
       { name: 'Justin Clarke', role: 'Senior Research Technician', photoName: 'Clarke_Justin' },
       { name: 'Ravi Shrivastav', role: 'Senior Research Technician', photoName: 'Shrivastav_Ravi' },
       { name: 'Satish Ramakrishnan', role: 'Senior Research Assistant', photoName: 'Ramakrishnan_Satish' },
@@ -415,7 +416,7 @@ export const teams = [
     id: 7,
     name: 'Sequencing',
     description:
-      "The Sequencing Team performs all activities related to Illumina sequencing, including quantity and quality assessment of libraries, pooling, and preparation for sequencing. The team is also responsible for the care & feeding of IGO's 8 sequencing instruments.",
+      "The Sequencing Team performs all activities related to Illumina and Oxford Nanopore sequencing, including quantity and quality assessment of libraries, pooling, and preparation for sequencing. The team is also responsible for the care & feeding of IGO's 9 sequencing instruments.",
     members: [
       { name: 'Liping Sun', role: 'Manager, IGO', photoName: 'Sun_Liping' },
       { name: 'Desmond Lambe', role: 'Research Technician', photoName: 'Lambe_Desmond' },
@@ -444,7 +445,7 @@ export const teams = [
     id: 9,
     name: 'R&D',
     description:
-      'The Researh & Development team develops, tests, and implements new genomics platforms for the MSKCC community. In addition to testing off-the-shelf assays, our group works with MSK investigators to bring customized platforms to IGO.',
+      'The Research & Development team develops, tests, and implements new genomics platforms for the MSKCC community. In addition to testing off-the-shelf assays, our group works with MSK investigators to bring customized platforms to IGO.',
     members: [
       { name: 'Stephanie Chrysanthou', role: 'Manager, IGO', photoName: 'Chrysanthou_Stephanie' },
       { name: 'Juan Li', role: 'Scientific Research Lead', photoName: 'Li_Juan' },
