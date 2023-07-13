@@ -18,7 +18,7 @@ export default {
   components: { JobDescriptions },
   data: function() {
     return {
-      noJobs: false,
+      noJobs: true,
     };
   },
 };
