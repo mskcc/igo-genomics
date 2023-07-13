@@ -1,5 +1,18 @@
 export const news = [
   {
+    title: "Archer Dx Platforms Discontinued",
+    date: 'July 13, 2023',
+    imgSource: 'IGO_210408_082',
+    categories: ['featured'],
+    body: `<p>
+    Effective immediately, Archer Dx products, including MSK Solid Tumor and Heme Fusion assays and Archer Immunoverse TCR and BCR sequencing, will no longer be processed in IGO.<br />
+    <br />
+    For fusion discovery, we will soon be debuting an RNA whole-transcriptome capture assay. For TCR sequencing, IGO's in-house assay provides data for both human and mouse samples.<br />
+    <br />
+    Investigators are also welcome to purchase Archer kits independently, and submit libraries to IGO for sequencing.
+    </p>`,
+  },
+  {
     title: "New at IGO: Cell Ranger multi",
     date: 'May 11, 2023',
     imgSource: 'Viale_190612_001',
@@ -29,7 +42,7 @@ export const news = [
     title: "Meet IGO's Scientific Liaison",
     date: 'April 3, 2023',
     imgSource: 'Cobbs, Cassidy-230324-01lr',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     Cassidy Cobbs, who many of you have exchanged e-mails with in their role as IGO's Scientific Liaison, was recently profiled on OneMSK for Transgender Day of Visibility. Check it out <a href="https://mskcc.sharepoint.com/SitePages/Transgender-Day-of-Visibility--Meet-Cassidy-Cobbs.aspx" target="__blank">here!</a>
     </p>`,
@@ -357,7 +370,7 @@ export const teams = [
       'The Sample & Project Management team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
     members: [
       { name: 'Blaise Robin', role: 'Supervisor', photoName: 'Robin_Blaise' },
-      { name: 'Emily Brennan', role: 'Senior Project Assistant', photoName: 'Brennan_Emily' },
+      { name: 'Allison Sexton', role: 'Project Assistant', photoName: 'Sexton_Allison' },
       { name: 'Kyriakos Chatzis', role: 'Project Assistant', photoName: 'Chatzis_Kyriakos' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
       // { name: 'Position Open!', role: 'Supervisor' },
@@ -407,6 +420,7 @@ export const teams = [
       { name: 'Kalliopi Chatzis', role: 'Research Assistant', photoName: 'Chatzis_Kalliopi' },
       { name: 'Katherine Allard', role: 'Senior Research Assistant', photoName: 'Allard_Katherine' },
       { name: 'Kiruthika Balasubramanian', role: 'Research Assistant', photoName: 'Balasubramanian_Kiruthika' },
+      { name: 'Magdalena Alioto Grace', role: 'Research Technician', photoName: 'Alioto_Grace_Magdalena' },
       { name: 'Sophia Rust', role: 'Research Technician', photoName: 'Rust_Sophia' },
       // { name: 'Open Position!', role: 'Supervisor' },
       // { name: 'Open Position!', role: 'Research Technician' },
@@ -523,7 +537,7 @@ export const bulkServices = [
     libraryChemistry: 'TruSeq stranded mRNA (polyA), TruSeq stranded total (Ribodepletion), SMART-Seq v4 + KAPA Hyper (SMARTer)',
     sequencingReadLength: 'PE100',
     sequencingCoverage: '10-100M+',
-    deliverable: 'FASTQ + BAM; analysis options from BIC at an additonal cost; pipeline analysis (Archer only)',
+    deliverable: 'FASTQ + BAM; analysis options from BIC at an additonal cost',
     tableHeaders: ['libraryType', 'readNumber', 'sampleCost'],
     table: [
       { libraryType: 'PolyA', readNumber: '10-20', sampleCost: 250 },
@@ -550,8 +564,6 @@ export const bulkServices = [
       { libraryType: 'SMARTer amplification', readNumber: '60-80', sampleCost: 625 },
       { libraryType: 'SMARTer amplification', readNumber: '80-100', sampleCost: 650 },
       { libraryType: 'SMARTer amplification', readNumber: '100+', sampleCost: 750 },
-      { libraryType: 'Archer Fusion Heme', readNumber: '', sampleCost: 480 },
-      { libraryType: 'Archer Fusion Solid Tumor', readNumber: '', sampleCost: 690 },
     ],
   },
   {
@@ -597,11 +609,10 @@ export const bulkServices = [
     id: 5,
     name: 'TCR Sequencing',
     description: 'Methods to enrich T-cell receptor sequences',
-    startingMaterial: 'RNA - 7 sample minimum (Archer), Cells (10X Genomics), RNA - IGO-TCR',
+    startingMaterial: 'Cells (10X Genomics), RNA (IGO-TCR)',
     deliverable: 'FASTQ + Pipeline output',
     tableHeaders: ['platform', 'sampleCost'],
     table: [
-      { platform: 'Archer immunoverse', sampleCost: 494 },
       { platform: '10X Genomics V(D)J Enrichment', sampleCost: 2368 },
       { platform: 'IGO-TCR', sampleCost: 300 },
     ],

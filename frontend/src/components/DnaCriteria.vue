@@ -57,7 +57,7 @@
       <md-table-row>
         <md-table-cell>gDNA</md-table-cell>
       </md-table-row>
-      <md-table-row>
+      <!-- <md-table-row>
         <md-table-cell rowspan="2">EPIC MethylCapture</md-table-cell>
         <md-table-cell>FFPE</md-table-cell>
         <md-table-cell class="pass">700ng</md-table-cell>
@@ -69,7 +69,7 @@
       <md-table-row>
         <md-table-cell>Frozen</md-table-cell>
         <md-table-cell class="pass">500ng</md-table-cell>
-      </md-table-row>
+      </md-table-row> -->
       <md-table-row>
         <md-table-cell rowspan="3">IMPACT<sup>c<md-tooltip v-if="footnotes.c" md-direction="right">{{ footnotes.c }}</md-tooltip></sup></md-table-cell>
         <md-table-cell>cfDNA</md-table-cell>

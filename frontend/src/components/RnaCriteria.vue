@@ -27,7 +27,7 @@
         <md-table-cell>Frozen</md-table-cell>
         <md-table-cell class="pass">RIN > 7</md-table-cell>
       </md-table-row>
-      <md-table-row>
+      <!-- <md-table-row>
         <md-table-cell rowspan="2">Archer FusionPlex</md-table-cell>
         <md-table-cell>FFPE</md-table-cell>
         <md-table-cell class="pass">250ng</md-table-cell>
@@ -54,7 +54,7 @@
         <md-table-cell>Other</md-table-cell>
         <md-table-cell class="pass">400ng</md-table-cell>
         <md-table-cell class="try">20ng</md-table-cell>
-      </md-table-row>
+      </md-table-row> -->
       <md-table-row>
         <md-table-cell rowspan="3">ddPCR (per assay)</md-table-cell>
         <md-table-cell>cDNA</md-table-cell>
@@ -76,24 +76,25 @@
         <md-table-cell class="pass">RIN &gt; 6</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <!-- <md-table-cell rowspan="3">Oxford Nanopore RNA-Seq</md-table-cell>
+      <md-table-cell rowspan="3">Oxford Nanopore cDNA-Seq</md-table-cell>
         <md-table-cell>total RNA</md-table-cell>
-        <md-table-cell class="pass">5&#181;g</md-table-cell>
-        <md-table-cell class="try">3&#181;g</md-table-cell>
-        <md-table-cell rowspan="2" class="pass">RIN > 7, 260/280 = 2, 260/230 = 2-2.2</md-table-cell>
-        <md-table-cell rowspan="3" class="fail">No try criteria</md-table-cell>
+        <md-table-cell class="pass">20&#181;g</md-table-cell>
+        <md-table-cell class="try">15&#181;g</md-table-cell>
+        <md-table-cell class="pass">RIN &GreaterEqual; 7, 260/230 & 260/280 &GreaterEqual; 1.7</md-table-cell>
+        <md-table-cell rowspan="3" class="try">260/230 & 260/280 &lt; 1.7<sup>a<md-tooltip v-if="footnotes.a" md-direction="right">{{ footnotes.a }}</md-tooltip></sup></md-table-cell>
         <md-table-cell rowspan="3">25&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>mRNA (polyadenylated)</md-table-cell>
         <md-table-cell rowspan="2" class="pass">200ng</md-table-cell>
-        <md-table-cell rowspan="2" class="try">100ng</md-table-cell>
+        <md-table-cell rowspan="2" class="try">80ng</md-table-cell>
+        <md-table-cell class="pass">260/230 & 260/280 &GreaterEqual; 1.7</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>cDNA</md-table-cell>
-        <md-table-cell class="pass">DIN > 8, 260/280 = 1.8, 260/230 = 2-2.2</md-table-cell>
+        <md-table-cell class="pass">DIN &GreaterEqual; 8, 260/230 & 260/280 &GreaterEqual; 1.7</md-table-cell>
       </md-table-row>
-      <md-table-row> -->
+      <md-table-row>
         <md-table-cell>RNASeq-PolyA</md-table-cell>
         <md-table-cell>Frozen</md-table-cell>
         <md-table-cell class="pass">500ng</md-table-cell>
@@ -145,12 +146,25 @@
         <md-table-cell>Non-lymphoid tissue</md-table-cell>
         <md-table-cell class="pass">1.2&#181;g</md-table-cell>
       </md-table-row>
+      <md-table-row>
+        <md-table-cell colspan="7">
+          <sup>a</sup>For ratios &lt; 1.7, cleanup can be attempted. If ratio is > 1.3 post-cleanup, we can go ahead.</md-table-cell>
+      </md-table-row>
     </md-table>
   </div>
 </template>
 
 <script>
-export default { name: 'RnaCriteria' };
+export default { 
+  name: 'RnaCriteria',
+  data: function() {
+    return {
+      footnotes: {
+        a: 'For ratios < 1.7, cleanup can be attempted. If ratio is > 1.3 post-cleanup, we can go ahead.',
+      },
+    };
+  },
+};
 </script>
 
 <style></style>
