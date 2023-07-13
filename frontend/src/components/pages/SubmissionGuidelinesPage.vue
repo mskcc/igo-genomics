@@ -199,8 +199,6 @@
                     <ol>
                       <li>Fill out an iLab request for the appropriate application
                         <ul>
-                          <li>Archer Immunoverse</li>
-                          <li>Archer Fusion</li>
                           <li>RNA Library Prep and Sequencing</li>
                           <li>TCRSeq-IGO</li>
                           <li>Oxford Nanopore - Long Read RNA/cDNA Sequencing</li>
@@ -208,9 +206,6 @@
                       <li>Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request a plate.</li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting the appropriate application:
                         <ul>
-                          <li>Archer-HemePanel</li>
-                          <li>Archer-SolidTumorPanel</li>
-                          <li>Archer-Immunoverse</li>
                           <li>RNASeq_PolyA</li>
                           <li>RNASeq_RiboDeplete</li>
                           <li>SMARTerAmpSeq</li>
