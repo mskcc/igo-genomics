@@ -1,9 +1,40 @@
 export const news = [
   {
+    title: "Remembering Tony Deblasio",
+    date: 'July 27, 2023',
+    imgSource: 'DSC_6969',
+    categories: ['featured'],
+    body: `<p align="left">
+    Anthony “Tony” DeBlasio, a respected senior researcher at Memorial Sloan Kettering Cancer Center, whose encyclopedic knowledge and intellectual curiosity inspired and amazed his colleagues and friends, died unexpectedly on July 16. He was 65.<br />
+    <br />
+    “Every single day was a discovery to him,” said Andrea Farina, DeBlasio’s supervisor in the IGO lab. “His knowledge was impressive and always connected with other elements. I discovered on a daily basis how much he knew and how enthusiastic he was about so many topics.”<br />
+    <br />
+    Farina said he admired DeBlasio’s vast scientific knowledge, and how he could take what could have been a dry subject and interweave it with theories that turned it into a fascinating discussion.<br />
+    <br />
+    “Tony had an open mind and was always willing to try new things,” he said. “I would always leave his desk feeling better than I was before.”
+    Agnes Viale, the director of Core Facilities at MSK, who hired Tony in 2013 in her then-role as IGO lab director, called him “a gentle soul who was so very smart.”<br />
+    <br />
+    “Tony was passionate about everything he did,” Viale said. “His mind was always working a mile a minute, and you could always count on Tony – there was nothing fake about him at all.”<br />
+    <br />
+    In his role in the IGO lab as a senior research assistant, DeBlasio specialized in RNA and DNA extraction. He had a special interest in working to help children and was particularly excited every Monday when the pediatric patient samples arrived at the lab for whole genome and RNA sequencing. “He was always so concerned about how he could work on the samples,” Farina said. “He wanted to make sure that the children were taken care of.”<br />
+    <br />
+    Cassidy Cobbs, a senior project manager who worked in the lab with DeBlasio, said he “enjoyed and was good at the physical work of making science happen.”
+    “Tony was the first line of the process (in working with pediatric patient samples),” Cobbs said. “He did the extraction no matter what the sample type – blood, bone marrow, tissue, fingernails, or buccal swabs.”<br />
+    <br />
+    His colleagues say that DeBlasio’s death has left an irreplaceable void in the IGO lab and MSK as an organization.<br />
+    <br />
+    “We have lost a major point of reference in the lab,” Farina said.<br />
+    <br />
+    DeBlasio was preceded in death by his parents. He is survived by his loving wife, Eun Hee Choi, his older brother, Dan, and his stepson, Sam Seok Jun Hwang.<br />
+    <br />
+    <small><i>Thanks to Cathy Cobbs for helping us memorialize Tony with an obituary.</i></small>
+    </p>`,
+  },
+  {
     title: "Archer Dx Platforms Discontinued",
     date: 'July 13, 2023',
     imgSource: 'IGO_210408_082',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     Effective immediately, Archer Dx products, including MSK Solid Tumor and Heme Fusion assays and Archer Immunoverse TCR and BCR sequencing, will no longer be processed in IGO.<br />
     <br />
@@ -16,7 +47,7 @@ export const news = [
     title: "New at IGO: Cell Ranger multi",
     date: 'May 11, 2023',
     imgSource: 'Viale_190612_001',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     Going forward, IGO will run the Cell Ranger multi pipeline as part of the QC of feature barcoding and cell hashing samples. As we do for gene expression and VDJ libraries, we will now deliver that pipeline output. Files will remain for 3 months.<br />
     <br />
@@ -27,7 +58,7 @@ export const news = [
     title: "Changes to IGO's Data Retention Policy",
     date: 'April 20, 2023',
     imgSource: 'IGO_210408_177',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     As sequencing-heavy applications such as Whole Genome Sequencing and 10X Genomics Single Cell Sequencing continue to grow and usage of the Oxford Nanopore long-read sequencing platform increases, storage space is an ongoing challenge for IGO. To accommodate newer platforms and in anticipation of the arrival of the NovaSeqX sequencing instrument later this year, we are tweaking our policies to ensure we have sufficient space.<br />
     <br />
@@ -373,6 +404,7 @@ export const teams = [
       { name: 'Allison Sexton', role: 'Project Assistant', photoName: 'Sexton_Allison' },
       { name: 'Kyriakos Chatzis', role: 'Project Assistant', photoName: 'Chatzis_Kyriakos' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
+      { name: 'Position Open!', role: 'Project Manager' },
       // { name: 'Position Open!', role: 'Supervisor' },
       // { name: 'Position Open!', role: 'Project Assistant' },
     ],
@@ -381,7 +413,7 @@ export const teams = [
     id: 4,
     name: 'EXPAND',
     description:
-      'The EXPAND team is the most diverse team in IGO -- responsible for integrating new platforms and advancing research technology to remain at the cutting edge for our users, they handle pathology, nucleic acid extraction, Archer Dx, digital droplet PCR, and spatial transcriptomics.',
+      'The EXPAND team is the most diverse team in IGO -- responsible for integrating new platforms and advancing research technology to remain at the cutting edge for our users, they handle pathology, nucleic acid extraction, digital droplet PCR, and spatial transcriptomics.',
     members: [
       { name: 'Andrea Farina', role: 'Manager, IGO', photoName: 'Farina_Andrea' },
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },

@@ -212,6 +212,7 @@
                           <li>TCRSeq-IGO</li>
                           <li>ONT-DirectRNASeq</li>
                           <li>ONT-LongReadcDNASeq</li>
+                          <li>RNA_Capture</li>
                         </ul></li>
                       <li>Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a></li>
                     </ol>
