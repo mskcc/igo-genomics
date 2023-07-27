@@ -27,34 +27,6 @@
         <md-table-cell>Frozen</md-table-cell>
         <md-table-cell class="pass">RIN > 7</md-table-cell>
       </md-table-row>
-      <!-- <md-table-row>
-        <md-table-cell rowspan="2">Archer FusionPlex</md-table-cell>
-        <md-table-cell>FFPE</md-table-cell>
-        <md-table-cell class="pass">250ng</md-table-cell>
-        <md-table-cell class="try">20ng</md-table-cell>
-        <md-table-cell rowspan="2" class="pass">RIN &gt; 6</md-table-cell>
-        <md-table-cell rowspan="2" class="try">No fail range</md-table-cell>
-        <md-table-cell rowspan="2">20&#181;L</md-table-cell>
-      </md-table-row>
-      <md-table-row>
-        <md-table-cell>Frozen</md-table-cell>
-        <md-table-cell class="pass">20ng</md-table-cell>
-        <md-table-cell class="fail">No try range</md-table-cell>
-      </md-table-row>
-      <md-table-row>
-        <md-table-cell rowspan="2">Archer Immunoverse</md-table-cell>
-        <md-table-cell>PBMCs</md-table-cell>
-        <md-table-cell class="pass">20ng</md-table-cell>
-        <md-table-cell class="fail">No try range</md-table-cell>
-        <md-table-cell rowspan="2" class="pass">RIN &gt; 7</md-table-cell>
-        <md-table-cell rowspan="2" class="try">RIN &gt; 5</md-table-cell>
-        <md-table-cell rowspan="2">20&#181;L</md-table-cell>
-      </md-table-row>
-      <md-table-row>
-        <md-table-cell>Other</md-table-cell>
-        <md-table-cell class="pass">400ng</md-table-cell>
-        <md-table-cell class="try">20ng</md-table-cell>
-      </md-table-row> -->
       <md-table-row>
         <md-table-cell rowspan="3">ddPCR (per assay)</md-table-cell>
         <md-table-cell>cDNA</md-table-cell>
@@ -95,11 +67,17 @@
         <md-table-cell class="pass">DIN &GreaterEqual; 8, 260/230 & 260/280 &GreaterEqual; 1.7</md-table-cell>
       </md-table-row>
       <md-table-row>
+        <md-table-cell>RNA Capture</md-table-cell>
+        <md-table-cell></md-table-cell>
+        <md-table-cell rowspan="2" class="pass">500ng</md-table-cell>
+        <md-table-cell rowspan="2" class="try">100ng</md-table-cell>
+        <md-table-cell rowspan="2" class="pass">RIN &GreaterEqual; 6</md-table-cell>
+        <md-table-cell class="try">No fail range</md-table-cell>
+        <md-table-cell>10&#181;L</md-table-cell>
+      </md-table-row>
+      <md-table-row>
         <md-table-cell>RNASeq-PolyA</md-table-cell>
         <md-table-cell>Frozen</md-table-cell>
-        <md-table-cell class="pass">500ng</md-table-cell>
-        <md-table-cell class="try">100ng</md-table-cell>
-        <md-table-cell class="pass">RIN &GreaterEqual; 6</md-table-cell>
         <md-table-cell class="fail">No try range</md-table-cell>
         <md-table-cell>50&#181;L</md-table-cell>
       </md-table-row>
