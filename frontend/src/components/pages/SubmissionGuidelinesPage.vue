@@ -152,6 +152,21 @@
               </md-list-item>
               <md-list-item md-expand>
                 <md-icon>add</md-icon>
+                <span class="md-list-item-text">Cells or DNA for Cell Line Authentication</span>
+                <md-list slot="md-expand">
+                  <md-list-item class="md-inset">
+                    <ol>
+                        <li>Fill out an iLab request for Cell Line Authentication & Fragment Analysis</li>
+                        <li><strong>For DNA:</strong> Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request a plate.</li>
+                        <li><strong>For cell pellets:</strong> Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request Eppendorf tube labels.</li>
+                        <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting "CellLineAuthentication" as your application</li>
+                        <li>Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a></li>
+                    </ol>
+                  </md-list-item>
+                </md-list>
+              </md-list-item>
+              <md-list-item md-expand>
+                <md-icon>add</md-icon>
                 <span class="md-list-item-text ">DNA for other applications</span>
                 <md-list slot="md-expand">
                   <md-list-item class="md-inset">
@@ -166,7 +181,6 @@
                           <li>IMPACT/Custom Capture and Sequencing</li>
                           <li>Mouse-IMPACT</li>
                           <li>Shallow Whole Genome Sequencing for Copy Number</li>
-                          <li>Cell Line Authentication & Fragment Analysis</li>
                           <li>Oxford Nanopore - Long Read DNA Seq</li>
                         </ul></li>
                       <li>Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request a plate.</li>
@@ -174,7 +188,6 @@
                         <ul>
                           <li>AmpliconSeq</li>
                           <li>ChIPSeq</li>
-                          <li>CellLineAuthentication</li>
                           <li>CRISPRSeq</li>
                           <li>CustomCapture</li>
                           <li>CustomFragmentAnalysis</li>
