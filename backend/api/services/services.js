@@ -6,6 +6,7 @@ const agent = new https.Agent({
   rejectUnauthorized: false,
 });
 // const req = require('request');
+require('dotenv').config();
 
 const LIMS_AUTH = {
   username: process.env.LIMS_USER,
