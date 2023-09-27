@@ -163,6 +163,10 @@
                         <th>Sequencing Cost:</th>
                         <td>{{ service.sequencingCost }}</td>
                       </tr>
+                      <tr v-if="service.runCost">
+                        <th>Run Cost:</th>
+                        <td>{{ service.runCost }}</td>
+                      </tr>
                       <tr v-if="service.cost">
                         <th>Cost:</th>
                         <td>{{ service.cost }}</td>

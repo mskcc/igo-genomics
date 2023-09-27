@@ -95,7 +95,7 @@
         <p>
           All of our sequencers have names to distinguish them from one another for our databases, their servers, and ease of communication
           among lab members. The run ID, therefore, is the sequencer name followed by the run number; each run ID is unique. MiSeqs: TOMS,
-          VIC, JOHNSAWYERS, AYYAN; NextSeq 500: SCOTT; NextSeq 1000: AMELIE; NextSeq 2000: PEPE; HiSeq 2500: MOMO, KIM; HiSeq 2000: BRAD, LIZ; HiSeq 4000: PITT, JAX; NovaSeq: MICHELLE, DIANA, RUTH.
+          VIC, JOHNSAWYERS, AYYAN; NextSeq 500: SCOTT; NextSeq 1000: AMELIE; NextSeq 2000: PEPE; HiSeq 2500: MOMO, KIM; HiSeq 2000: BRAD, LIZ; HiSeq 4000: PITT, JAX; NovaSeq 6000: MICHELLE, DIANA, RUTH; NovaSeq X: FAUCI.
         </p>
         <div class="md-subheading">Former Data Structure</div>
         <p>
@@ -114,7 +114,7 @@
         <br /><br />
         <div class="md-subheading">What Does This Mean?</div>
         <p>
-          For investigators that request analysis through CAS (IMPACT/HemePACT) or BIC, there will be no change aside from how you see your
+          For investigators that request analysis through CAS (IMPACT/IMPACT-Heme) or BIC, there will be no change aside from how you see your
           files in your drive. Lane splitting is an industry standard, and most pipelines for processing your data will be already set up to
           handle files in this structure. If you or your collaborator run a custom analysis, you may need to tweak it to accept files split
           by lane. Alternatively, you can concatenate your R1 & R2 files (see
@@ -131,7 +131,7 @@
         <div class="md-title" id="deliverables">Deliverables - FASTQ, BAM, & pipeline</div>
         <div class="md-subheading">FASTQ files</div>
         <p>
-          FASTQ files are our standard deliverable for all applications. We base our target output one of two ways: requested read number (RNA-Seq, ChIP seq, ATAC seq, shallow WGS, shotgun metagenomics, user libraries, UMI-based platforms) or coverage (WES, non-UMI targeted sequencing, WGS). Reads for 10X Genomics and coverage for MissionBio applications is calculated by their respective pipelines; we aim for the recommended numbers unless you request otherwise. <strong>Coverage for WES, WGS, IMPACT, HemePACT, or custom capture applications is calculated by DRAGEN v3.10 and may differ from coverages calculated with other algorithms.</strong>
+          FASTQ files are our standard deliverable for all applications. We base our target output one of two ways: requested read number (RNA-Seq, ChIP seq, ATAC seq, shallow WGS, shotgun metagenomics, user libraries, UMI-based platforms) or coverage (WES, non-UMI targeted sequencing, WGS). Reads per cell for 10X Genomics applications are calculated by their pipeline; we aim for the recommended numbers unless you request otherwise. <strong>Coverage for WES, WGS, IMPACT, or custom capture applications is calculated by DRAGEN v3.10 and may differ from coverages calculated with other algorithms.</strong>
         </p>
         <p>
           We always strive to meet or exceed read number or coverage requests, however sometimes samples are delivered under those targets, typically due to sample quality or quantity.
@@ -165,9 +165,9 @@
         <p>
           BAM files are guaranteed in your share drive for 6 months; after that they are subject to deletion to save space. After expiration, they can be regenerated using the "Regeneration of FASTQ, BAM, or pipeline files" form under Post-processing services in iLab for a charge.
         </p>
-        <div class="md-subheading">FAST5 files</div>
+        <div class="md-subheading">POD5 files</div>
         <p>
-          FAST5 is the raw data output of the Oxford Nanopore long-read sequencer. An advantage to saving your FAST5 files is that you may be able to re-analyze them if improvements to the base-calling algorithm are made. The files are very large, so while they are an option for delivery, IGO will delete them after <b>30 days</b>. Basecalling to FASTQ files is part of the ONT sequencing service, and those files will be treated like all other IGO FASTQs. <b>FAST5 files cannot be recovered after deletion!</b>
+          POD5 is the raw data output of the Oxford Nanopore long-read sequencer (replacing FAST5). An advantage to saving your POD5 files is that you may be able to re-analyze them if improvements to the base-calling algorithm are made. The files are very large, so while they are an option for delivery, IGO will delete them after <b>30 days</b>. Basecalling to FASTQ files is part of the ONT sequencing service, and those files will be treated like all other IGO FASTQs. <b>POD5 files cannot be recovered after deletion!</b>
         </p>
         <div class="md-subheading">Cell Ranger, Space Ranger, and Tapestri</div>
         <p>
