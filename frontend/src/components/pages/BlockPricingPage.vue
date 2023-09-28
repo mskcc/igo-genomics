@@ -59,8 +59,8 @@
           <ul>
             <li>PE100: $2.00/million reads</li>
             <li>PE150: $2.20/million reads</li>
-            <li>10X (28/10/10/88): $2.00/million reads</li>
-            <li>10X ATAC (50/8/16 or 24/48): $2.40/million reads</li>
+            <li>10X (28/10/10/88): $1.20/million reads</li>
+            <li>10X ATAC (50/8/16 or 50/24/48): $2.40/million reads</li>
           </ul>
         </md-list-item>
         <md-list-item style="font-style: italic;">10-20M reads/sample OR &gt;20M reads/pool minimum </md-list-item>
@@ -96,7 +96,7 @@
               <md-table-cell>400</md-table-cell>
               <md-table-cell colspan="3">$1375</md-table-cell>
               <md-table-cell>$2580</md-table-cell>
-              <md-table-cell>$4625</md-table-cell>
+              <md-table-cell>$3334</md-table-cell>
               <md-table-cell>N/A</md-table-cell>
             </md-table-row>
             <md-table-row>
