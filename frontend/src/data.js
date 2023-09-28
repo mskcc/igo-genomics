@@ -513,7 +513,7 @@ export const teams = [
       { name: 'Cuijie Lu', role: 'Bioinfo. Software Engineer I', photoName: 'Lu_Cuijie' },
       { name: 'Darrell Nabors', role: 'Bioinformatics Engineer V', photoName: 'Nabors_Darrell' },
       { name: 'Fahimeh Mirhaj', role: 'Bioinfo. Software Engineer II', photoName: 'Mirhaj_Fahimeh' },
-      { name: 'Stephanie DelBelso', role: 'Bioinfo. Software Engineer III', photoName: 'Delbelso_Stephanie' },
+      { name: 'Stephanie DelBelso', role: 'Bioinfo. Software Engineer III', photoName: 'DelBelso_Stephanie' },
       // { name: 'Open Position!', role: 'Bioinformatics Software Engineer II' },
     ],
   },
