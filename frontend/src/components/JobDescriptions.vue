@@ -4,13 +4,13 @@
 
     <md-card class="career-card">
       <md-card-header>
-        <div class="md-title">Project Manager</div>
-        <router-link :to="{ name: 'team', params: { id: 3 } }">Sample & Project Management</router-link>
+        <div class="md-title">Spatial Transcriptomics Supervisor</div>
+        <router-link :to="{ name: 'team', params: { id: 0 } }">Lab Leadership</router-link>
         <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescriptionSPMPM = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://internaltalent-mskcc.icims.com/jobs/70744/project-manager/job" target="_blank" class="md-primary">Apply</md-button>
+        <md-button @click="showJobDescriptionSTSup = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2023-72684-supervisor-core-facility/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
     </md-card>
 
@@ -404,6 +404,34 @@
       </md-dialog-actions>
     </md-dialog>
 
+    <md-dialog :md-active.sync="showJobDescriptionSTSup" :md-fullscreen="false" style="z-index: 400;">
+      <md-dialog-content md-dynamic-height>
+        <strong>As a Spatial Transcriptomics Supervisor in the EXPAND team, you will:</strong>
+        <ul>
+          <li>Work closely with investigators seeking to use the 10X Visium and Nanostring GeoMx platforms.</li>
+          <li>Assist in experimental design for investigator projects.</li>
+          <li>Train and mentor spatial transcriptomics technicians.</li>
+          <li>Supervise the team as well as participate in laboratory experiments to meet deadlines.</li>
+          <li>Work with the vendors and technical professionals to ensure high quality data is delivered to our scientists.</li>
+          <li>Help create an efficient and error-proof workflow.</li>
+          <li>Maintain the high-quality standards IGO has for its services.</li>
+          <li>Maintain and coordinate documentation for assay tracking and results for review/reporting through iLab and LIMS.</li>
+        </ul>
+        <strong>You have:</strong>
+        <ul>
+          <li>Molecular biology skill and experience with sharp focus, attention to detail, and good decision-making skills.</li>
+          <li>The ability to maintain detailed records of all experiments, drafts of technical procedures, and written summaries pertaining to research work.</li>
+          <li>Strong time management, multitasking, planning, and prioritization skills.</li>
+          <li>A strong background of mentorship, interest in the success of others, and willingness to evaluate performance and provide feedback as a supervisor.</li>
+          <li>Excellent interpersonal, written and oral communication skills.</li>
+          <li>A background in NGS and/or imaging is welcome.</li>
+        </ul>
+      </md-dialog-content>
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="showJobDescriptionSTSup = false">Close</md-button>
+      </md-dialog-actions>
+    </md-dialog>
+
   </div>
 </template>
 
@@ -428,8 +456,9 @@ export default {
       // showJobDescriptionSeqSRT: false,
       // showJobDescriptionSeqRA: false,
       // showJobDescriptionSPMPA: false,
-      showJobDescriptionSPMPM: false,
+      // showJobDescriptionSPMPM: false,
       // showJobDescriptionSPMSup: false,
+      showJobDescriptionSTSup: false,
     };
   },
 };

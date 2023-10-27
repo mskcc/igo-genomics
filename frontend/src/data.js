@@ -1,5 +1,16 @@
 export const news = [
   {
+    title: "Get ready for IGO's annual Open House!",
+    date: 'October 27, 2023',
+    imgSource: 'Open_House_Flyer',
+    categories: ['featured'],
+    body: `<p>
+    IGO will hold its annual Open House on Tuesday, October 31. As usual, we will celebrate both science and Halloween with candy, games, prizes, decorations, and costumes as well as lab tours, consultations, and sample prep tips.<br />
+    <br />
+    Visit our information stations to learn about Spatial Transcriptomics, Long-Read Sequencing, and RNA Capture, and consult with representatives from 10X Genomics, Oxford Nanopore, Takara, Illumina, Nanostring, and Element Biosciences!
+    </p>`,
+  },
+  {
     title: "New NovaSeq X in IGO means lower 10X sequencing prices",
     date: 'September 28, 2023',
     imgSource: 'novaseqx',
@@ -19,17 +30,6 @@ export const news = [
     <a href="https://docs.google.com/forms/d/e/1FAIpQLScvluWQgvs3o-1CqN-77HjlUoB-_fMxX17CJ_HEuW2wa2SdSQ/viewform">Register</a> to attend the Xenium In Situ: From simple workflow to powerful visualization webinar presented by 10X Genomics on October 10 from 3-4pm.<br />
     <br />
     The webinar will give an overview of the Xenium platform and explain how the workflow runs in IGO. You will also hear about the off-the-shelf and customizable panel options and see a demonstration of the Xenium Explorer software. Participants will also be able to apply for the MSKCC IGO Xenium Pilot Research Award to win a free project!
-    </p>`,
-  },
-  {
-    title: "Get ready for IGO's annual Open House!",
-    date: 'September 21, 2023',
-    imgSource: 'IMG_8508_2',
-    categories: ['featured'],
-    body: `<p>
-    IGO will hold its annual Open House on Tuesday, October 31. As usual, we will celebrate both science and Halloween with candy, games, prizes, decorations, and costumes as well as lab tours, consultations, and workshops.<br />
-    <br />
-    Watch this space for more details about this year's offerings and make sure to mark 10/31 on your lab's calendar!
     </p>`,
   },
   {
@@ -401,7 +401,7 @@ export const teams = [
       { name: 'Liping Sun', role: 'Manager, Sequencing', photoName: 'Sun_Liping' },
       { name: 'Ruchi Patel', role: 'Manager, Single Cell & Library Prep', photoName: 'Patel_Ruchi' }, 
       { name: 'Stephanie Chrysanthou', role: 'Manager, R&D', photoName: 'Chrysanthou_Stephanie' },
-      // { name: 'Position Open!', role: 'Operations Manager' },     
+      { name: 'Position Open!', role: 'Spatial Transcriptomics Supervisor' },     
     ],
   },
   {
