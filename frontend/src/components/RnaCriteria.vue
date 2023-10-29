@@ -50,8 +50,8 @@
       <md-table-row>
       <md-table-cell rowspan="3">Oxford Nanopore cDNA-Seq</md-table-cell>
         <md-table-cell>total RNA</md-table-cell>
-        <md-table-cell class="pass">20&#181;g</md-table-cell>
-        <md-table-cell class="try">15&#181;g</md-table-cell>
+        <md-table-cell class="pass">30&#181;g</md-table-cell>
+        <md-table-cell class="try">20&#181;g</md-table-cell>
         <md-table-cell class="pass">RIN &GreaterEqual; 7, 260/230 & 260/280 &GreaterEqual; 1.7</md-table-cell>
         <md-table-cell rowspan="3" class="try">260/230 & 260/280 &lt; 1.7<sup>a<md-tooltip v-if="footnotes.a" md-direction="right">{{ footnotes.a }}</md-tooltip></sup></md-table-cell>
         <md-table-cell rowspan="3">25&#181;L</md-table-cell>
