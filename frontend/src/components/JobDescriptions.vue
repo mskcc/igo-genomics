@@ -14,17 +14,17 @@
       </md-card-actions>
     </md-card>
 
-    <!-- <md-card class="career-card">
+    <md-card class="career-card">
       <md-card-header>
-        <div class="md-title">Project Manager</div>
-        <router-link :to="{ name: 'team', params: { id: 3 } }">Sample & Project Management</router-link>
+        <div class="md-title">Administrative Assistant</div>
+        <router-link :to="{ name: 'team', params: { id: 1 } }">Lab Support</router-link>
         <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescriptionSPMPM = true" class="md-accent">Learn More</md-button>
-        <md-button href="mailto:genomics@mskcc.org?subject=IGO Project Manager" class="md-primary">Inquire</md-button>
+        <md-button @click="showJobDescriptionAA = true" class="md-accent">Learn More</md-button>
+        <md-button href="mailto:genomics@mskcc.org?subject=IGO Admin Asst" class="md-primary">Inquire</md-button>
       </md-card-actions>
-    </md-card> -->
+    </md-card>
     
     <md-dialog :md-active.sync="showJobDescriptionAA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
@@ -443,7 +443,7 @@ export default {
   components: { CareerBanner },
   data: function() {
     return {      
-      // showJobDescriptionAA: false,
+      showJobDescriptionAA: false,
       // showJobDescriptionAE: false,
       // showJobDescriptionLM: false,
       // showJobDescriptionDataSEII: false,
