@@ -1,13 +1,17 @@
 export const news = [
   {
-    title: "Get ready for IGO's annual Open House!",
-    date: 'October 27, 2023',
+    title: "Congratulations to IGO's Open House Prize Winners!",
+    date: 'November 3, 2023',
     imgSource: 'Open_House_Flyer',
     categories: ['featured'],
     body: `<p>
-    IGO will hold its annual Open House on Tuesday, October 31. As usual, we will celebrate both science and Halloween with candy, games, prizes, decorations, and costumes as well as lab tours, consultations, and sample prep tips.<br />
+    Thanks to everyone who came to the Open House and played our games! Five lucky researchers have won $500 vouchers to apply to their next IGO service:<br />
     <br />
-    Visit our information stations to learn about Spatial Transcriptomics, Long-Read Sequencing, and RNA Capture, and consult with representatives from 10X Genomics, Oxford Nanopore, Takara, Illumina, Nanostring, and Element Biosciences!
+    Grittney Tam - CMO Innovation Lab <br />
+    Elias-Ramzey Karnoub - Iacobuzio Lab <br />
+    Hunter Green - Weigelt Lab <br />
+    Yuzhe Shi - Sadelain Lab <br />
+    Raina Fishkin - Kung Lab
     </p>`,
   },
   {
@@ -25,7 +29,7 @@ export const news = [
     title: "Xenium Webinar & Pilot Award Competition",
     date: 'September 27, 2023',
     imgSource: '10x_Genomics_Logo',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLScvluWQgvs3o-1CqN-77HjlUoB-_fMxX17CJ_HEuW2wa2SdSQ/viewform">Register</a> to attend the Xenium In Situ: From simple workflow to powerful visualization webinar presented by 10X Genomics on October 10 from 3-4pm.<br />
     <br />
@@ -410,10 +414,10 @@ export const teams = [
     description:
       'As a large, high-throughput facility constantly striving for technical excellence and exemplary customer service, IGO has several employees who work between and among teams and directly with investigators.',
     members: [      
-      { name: 'Andrea John', role: 'Administrative Assistant II', photoName: 'John_Andrea' },
+      { name: 'Andrea John', role: 'Billing & Procurement Assistant', photoName: 'John_Andrea' },
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
       { name: 'Meghanne Lomibao', role: 'Lab Manager', photoName: 'Lomibao_Meghanne' },
-      // { name: 'Open Position!', role: 'Administrative Assistant' },
+      { name: 'Open Position!', role: 'Administrative Assistant' },
       // { name: 'Open Position!', role: 'Lab Manager' },
     ],
   },
@@ -454,6 +458,7 @@ export const teams = [
       { name: 'Elijah Castro', role: 'Senior Research Technician', photoName: 'Castro_Elijah' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
       { name: 'Mohamed Abdelbaset', role: 'Senior Research Technician', photoName: 'Abdelbaset_Mohamed' },
+      { name: 'Qingyun Tian', role: 'Research Assistant', photoName: '' },
       // { name: 'Open Position!', role: 'Research Assistant' },
     ],
   },
