@@ -3,7 +3,7 @@
     <div class="md-display-1">Contact Us</div>
     <div class="team-image">
       <md-content class="md-elevation-24 lab-photo">
-        <img src="../../assets/images/lab/Viale_190612_150.jpg" alt="At the bench" />
+        <img src="../../assets/images/lab/DSC_2909.jpg" alt="At the bench" />
       </md-content>
     </div>
 
@@ -50,7 +50,7 @@
         </md-avatar> -->
         <md-icon class="md-primary">email</md-icon>
         <div class="md-list-item-text">
-          <span>Marisa Dunigan</span><span>Group Leader, Sample & Project Management</span><span>duniganm@mskcc.org</span>
+          <span>Blaise Robin</span><span>Group Leader, Sample & Project Management</span><span>robinb@mskcc.org</span>
         </div></md-list-item
       >
     </md-list>

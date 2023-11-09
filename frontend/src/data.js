@@ -405,7 +405,7 @@ export const teams = [
       { name: 'Liping Sun', role: 'Manager, Sequencing', photoName: 'Sun_Liping' },
       { name: 'Ruchi Patel', role: 'Manager, Single Cell & Library Prep', photoName: 'Patel_Ruchi' }, 
       { name: 'Stephanie Chrysanthou', role: 'Manager, R&D', photoName: 'Chrysanthou_Stephanie' },
-      { name: 'Position Open!', role: 'Spatial Transcriptomics Supervisor' },     
+      // { name: 'Position Open!', role: 'Spatial Transcriptomics Supervisor' },     
     ],
   },
   {
@@ -414,7 +414,7 @@ export const teams = [
     description:
       'As a large, high-throughput facility constantly striving for technical excellence and exemplary customer service, IGO has several employees who work between and among teams and directly with investigators.',
     members: [      
-      { name: 'Andrea John', role: 'Billing & Procurement Assistant', photoName: 'John_Andrea' },
+      { name: 'Andrea John', role: 'Billing/Procurement Associate', photoName: 'John_Andrea' },
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
       { name: 'Meghanne Lomibao', role: 'Lab Manager', photoName: 'Lomibao_Meghanne' },
       { name: 'Open Position!', role: 'Administrative Assistant' },
@@ -441,7 +441,7 @@ export const teams = [
       { name: 'Allison Sexton', role: 'Project Assistant', photoName: 'Sexton_Allison' },
       { name: 'Kyriakos Chatzis', role: 'Project Assistant', photoName: 'Chatzis_Kyriakos' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
-      { name: 'Position Open!', role: 'Project Manager' },
+      // { name: 'Position Open!', role: 'Project Manager' },
       // { name: 'Position Open!', role: 'Supervisor' },
       // { name: 'Position Open!', role: 'Project Assistant' },
     ],
@@ -458,7 +458,7 @@ export const teams = [
       { name: 'Elijah Castro', role: 'Senior Research Technician', photoName: 'Castro_Elijah' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
       { name: 'Mohamed Abdelbaset', role: 'Senior Research Technician', photoName: 'Abdelbaset_Mohamed' },
-      { name: 'Qingyun Tian', role: 'Research Assistant', photoName: '' },
+      { name: 'Qingyun Tian', role: 'Research Assistant', photoName: 'Tian_Qingyun' },
       // { name: 'Open Position!', role: 'Research Assistant' },
     ],
   },

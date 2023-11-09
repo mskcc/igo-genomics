@@ -48,9 +48,9 @@
                       <md-list slot="md-expand">
                         <md-list-item>
                           <div>
-                            An IGO Service ID is only generated when an iLabs request has been submitted. When creating an iLabs request,
-                            iLabs will display IGO-0[CID]. Once the request is submitted to the core, and there are no issues, an IGO
-                            Service ID will be generated.The IGO Service ID starts with “IGO-0” and then is followed by a 5-digit number.
+                            An IGO Service ID is only generated when an iLabs request has been submitted. When creating an iLab request,
+                            iLab will display IGO-0[CID]. Once the request is submitted to the core, and there are no issues, an iLab
+                            Service ID will be generated. The iLab Service ID starts with “IGO-0” and then is followed by a 5-digit number.
                             This is the number entered into Sample Submission.
                           </div>
                         </md-list-item>
@@ -64,9 +64,8 @@
                           <div>
                             This issue is most commonly associated with funding problems. Please contact your Research Fund Manager (RFM) to
                             ensure the selected cost center/fund number (cc/fn) are available to you under the selected PI. IGO is not able
-                            to help or accept samples without the iLabs submitted under the correct cc/fn.
-                            Note: whatever cc/fn is selected at the time of iLabs submission, will be the cc/fn used for billing. So please make sure that the samples are
-                            being submitted under the correct cc/fn in order to avoid delay of data and major funding issues downstream.
+                            to help or accept samples without the iLab request submitted under the correct cc/fn.
+                            Note: whatever cc/fn is selected at the time of iLab submission, will be the cc/fn used for billing. So please make sure that the samples are being submitted under the correct cc/fn in order to avoid delay of data and major funding issues downstream.
                           </div>
                         </md-list-item>
                       </md-list>
@@ -100,7 +99,7 @@
                             </ol><br>
                             If the patient has had <strong>cfDNA banked</strong>:
                             <ol>
-                              <li>E-mail Chintan Patel (patelc@mskcc.org) to inquire if a matching buffy coat has been stored in IGO</li>
+                              <li>E-mail the cfDNA lab (zzpdl_lab_cfdna_lab@mskcc.org) to inquire if a matching buffy coat has been banked.</li>
                             </ol>
                           </div>
                         </md-list-item>
@@ -125,7 +124,7 @@
                               </md-table-row>
                               <md-table-row>
                                 <md-table-cell rowspan="3">DMP Library</md-table-cell>
-                                <md-table-cell>IMPACT/HemePACT</md-table-cell>
+                                <md-table-cell>IMPACT/IMPACT-Heme</md-table-cell>
                                 <md-table-cell rowspan="2">475</md-table-cell>
                                 <md-table-cell rowpan="2">6</md-table-cell>
                                 <md-table-cell rowspan="9">5</md-table-cell>
@@ -140,11 +139,11 @@
                               </md-table-row>
                               <md-table-row>
                                 <md-table-cell rowspan="6">gDNA</md-table-cell>
-                                <md-table-cell>IMPACT/HemePACT (FFPE)</md-table-cell>
+                                <md-table-cell>IMPACT/IMPACT-Heme (FFPE)</md-table-cell>
                                 <md-table-cell>250</md-table-cell>
                               </md-table-row>
                               <md-table-row>
-                                <md-table-cell>IMPACT/HemePACT (non-FFPE)</md-table-cell>
+                                <md-table-cell>IMPACT/IMPACT-Heme (non-FFPE)</md-table-cell>
                                 <md-table-cell>150</md-table-cell>
                                 <md-table-cell>0.5</md-table-cell>
                               </md-table-row>

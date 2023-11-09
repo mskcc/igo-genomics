@@ -18,14 +18,8 @@ module.exports = [
     color: '#80ffbf',
   },
   {
-    name: "HemePACT: v4 (Nimblegen)",
-    start: '01-01-2020',
-    stop: '02-01-2023',
-    color: '#ffbf80',
-  },
-  {
-    name: "IMPACT-Heme: v4 (IDT)",
-    start: '05-05-2023',
+    name: 'IMPACT-Heme: v4 (IDT)',
+    start: '05-01-2023',
     stop: 'present',
     color: '#ffbf80',
   },
@@ -42,7 +36,7 @@ module.exports = [
     color: '#009490',
   },
   {
-    name: "Mouse IMPACT: v1 (Twist)",
+    name: "Mouse IMPACT: v2 (Twist)",
     start: '08-01-2021',
     stop: 'present',
     color: '#ff8080',
@@ -50,15 +44,21 @@ module.exports = [
   {
     name: "MSK-ACCESS: v1",
     start: '01-01-2020',
-    stop: 'present',
+    stop: '11-01-2023',
     color: '#bfff80',
   },
   {
-    name: 'Methylation: EPIC MethylSeq (Illumina)',
-    start: '01-01-2018',
-    stop: '02-01-2023',
-    color: '#c28cc0',
+    name: 'MSK-ACCESS: v2',
+    start: '11-01-2023',
+    stop: 'present',
+    color: '#bfff80',
   },
+  // {
+  //   name: 'Methylation: EPIC MethylSeq (Illumina)',
+  //   start: '01-01-2018',
+  //   stop: '02-01-2023',
+  //   color: '#c28cc0',
+  // },
   {
     name: 'RNA-Seq: TruSeq stranded mRNA/Total (Illumina)',
     start: '01-01-2015',

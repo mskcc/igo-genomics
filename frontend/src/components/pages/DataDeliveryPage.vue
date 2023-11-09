@@ -89,8 +89,7 @@
         <div class="md-subheading">Background</div>
         <p>
           Most of our Illumina sequencers run flow cells with multiple lanes, which allow us to load different pools of samples with
-          overlapping indices on the same run. Exceptions are the MiSeq, which is a single lane, and the NextSeq, which has 4 lanes that are
-          not able to be divided. Depending on the number of reads needed, a project may run on a single lane or across multiple lanes.
+          overlapping indices on the same run. Exceptions are the MiSeq and NextSeq, which have a single lane. Depending on the number of reads needed, a project may run on a single lane or across multiple lanes.
         </p>
         <p>
           All of our sequencers have names to distinguish them from one another for our databases, their servers, and ease of communication
@@ -131,7 +130,7 @@
         <div class="md-title" id="deliverables">Deliverables - FASTQ, BAM, & pipeline</div>
         <div class="md-subheading">FASTQ files</div>
         <p>
-          FASTQ files are our standard deliverable for all applications. We base our target output one of two ways: requested read number (RNA-Seq, ChIP seq, ATAC seq, shallow WGS, shotgun metagenomics, user libraries, UMI-based platforms) or coverage (WES, non-UMI targeted sequencing, WGS). Reads per cell for 10X Genomics applications are calculated by their pipeline; we aim for the recommended numbers unless you request otherwise. <strong>Coverage for WES, WGS, IMPACT, or custom capture applications is calculated by DRAGEN v3.10 and may differ from coverages calculated with other algorithms.</strong>
+          FASTQ files are our standard deliverable for all sequencing applications. We base our target output one of two ways: requested read number (RNA-Seq, ChIP seq, ATAC seq, shallow WGS, shotgun metagenomics, user libraries, UMI-based platforms) or coverage (WES, non-UMI targeted sequencing, WGS). Reads per cell for 10X Genomics applications are calculated by their pipeline; we aim for the recommended numbers unless you request otherwise. <strong>Coverage for WES, WGS, IMPACT, or custom capture applications is calculated by DRAGEN v3.10 and may differ from coverages calculated with other algorithms.</strong>
         </p>
         <p>
           We always strive to meet or exceed read number or coverage requests, however sometimes samples are delivered under those targets, typically due to sample quality or quantity.
@@ -177,7 +176,7 @@
         <p>
           Deliverables for Cell Ranger & Space Ranger: run summary metrics (HTML, CSV), alignment files (BAM), feature barcode matrices (if
           applicable), Loupe Browser visualization files (cloupe), QC images and position information (JPG, PNG, CSV, JSON; Visium only),
-          V(D)J analysis files (if applicable)
+          V(D)J analysis files (if applicable).
         </p>
         <!-- <p>
           Deliverables for MissionBio Tapestri: QC and metadata files (TXT, TSV, INFO, YAML, CSV, JSON), CellFinder plot (PDF), Tapestri
@@ -211,10 +210,10 @@
           Cell Ranger, Space Ranger, and CRISPResso2 results will be available for <b>3 months</b>.
         </p>
         <p>
-          FAST5 files will be maintained for <b>30 days</b>.
+          POD5 (formerly FAST5) files will be maintained for <b>30 days</b>.
         </p>
         <p>
-          All deliverables except for FAST5 can be recovered after their expiration date using the <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">"Regeneration of FASTQ, BAM, or pipeline files" form</a> under Post-processing services. There will be both a delay and a fee.
+          All deliverables except for POD5 can be recovered after their expiration date using the <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">"Regeneration of FASTQ, BAM, or pipeline files" form</a> under Post-processing services. There will be both a delay and a fee.
         </p>
         
       </md-app-content>

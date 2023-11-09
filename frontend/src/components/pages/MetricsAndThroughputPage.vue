@@ -28,7 +28,7 @@
         src="https://splunkp.mskcc.org/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Popular_Services_By_Samples&oid=o4VmfJsUe43A7tZgP0zC5TLtvgN9%5EmkG6vs5ValWcYHYGS1KDQ5ypXxA9pAqGKl%5E8NG9rtUwKbK%5EYDoY3sD9y5RNKMuw15rbvypW9FoAMZr64DVvNiVtGf8hkRmcZThXhWHa3TYmFobWF7Fwu2C58HZ963AgB1ML6dEvgf4BKYU93Sd2BKw0Co"
       ></iframe>
       <p>
-        Top request types by request number (left) and sample number (right), 2022
+        Top request types by request number (left) and sample number (right), 2023
       </p>
     </div>
 
@@ -53,15 +53,15 @@
       </div>
     </div>
 
-    <div class="wrap">
+    <!-- <div class="wrap">
       <iframe
         id="seq-capacity"
         frameborder="0"
         src="https://splunkp.mskcc.org/en-US/embed?s=%2FservicesNS%2Fnobody%2Fmsk_is_igo%2Fsaved%2Fsearches%2FIGO_Website_Sequencer_Capacity&oid=p80AzuaEWGzaBro%5EPGfxx6EfM1dukKgCiTOzJclOHXrqwLKNJY9mX36Q3v0cVnKEGbjH_F5HrSBv92MKHx98n28juEKlUVaeTQGNAapYpB83u3gYw7tRteKmeyfq_cU2axLR_Eb3w%5Eh%5EK0mYa23TjY6GfybKs9ZXAKYEo2AU"
       ></iframe>
-    </div>
+    </div> -->
 
-    <div>
+    <!-- <div>
       Sequencer occupancy -- each bar represents an interval of time that the named sequencer was in operation.<br /><br /><br />
       <table>
         <tr>
@@ -73,7 +73,7 @@
           <td>NovaSeq 6000</td>
         </tr>
         <tr>
-          <td>MICHELLE</td>
+          <td>MICHELLE (retired)</td>
           <td>NovaSeq 6000</td>
         </tr>
         <tr>
@@ -129,7 +129,7 @@
           <td>MiSeq</td>
         </tr>
       </table>
-    </div>
+    </div> -->
   </div>
 </template>
 
