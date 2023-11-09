@@ -2,7 +2,7 @@
   <div id="job-descriptions">
     <career-banner />
 
-    <md-card class="career-card">
+    <!-- <md-card class="career-card">
       <md-card-header>
         <div class="md-title">Spatial Transcriptomics Supervisor</div>
         <router-link :to="{ name: 'team', params: { id: 0 } }">Lab Leadership</router-link>
@@ -12,7 +12,7 @@
         <md-button @click="showJobDescriptionSTSup = true" class="md-accent">Learn More</md-button>
         <md-button href="https://careers.mskcc.org/vacancies/2023-72684-supervisor-core-facility/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
-    </md-card>
+    </md-card> -->
 
     <md-card class="career-card">
       <md-card-header>
@@ -458,7 +458,7 @@ export default {
       // showJobDescriptionSPMPA: false,
       // showJobDescriptionSPMPM: false,
       // showJobDescriptionSPMSup: false,
-      showJobDescriptionSTSup: false,
+      // showJobDescriptionSTSup: false,
     };
   },
 };
