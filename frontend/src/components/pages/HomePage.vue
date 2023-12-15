@@ -4,7 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        Coming soon to IGO: Nanostring CosMx and 10X Genomics Xenium!
+        IGO will be closed for sample submission and processing 12/25-1/1. We will reopen 1/2.
       </span>
     </div>
 

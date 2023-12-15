@@ -1,5 +1,17 @@
 export const news = [
   {
+    title: "Holiday Schedule",
+    date: 'December 13, 2023',
+    imgSource: 'IGO_210408_044',
+    categories: ['featured'],
+    body: `<p>
+    IGO will be closed 12/25 and 1/1 for the Christmas and New Year holidays.<br />
+    <br />
+    During the 12/26-12/29 week, the lab will be open for inquiries but will not be accepting samples. You can reach us at genomics@mskcc.org.<br />
+    <br />
+    </p>`,
+  },
+  {
     title: "Congratulations to IGO's Open House Prize Winners!",
     date: 'November 3, 2023',
     imgSource: 'Open_House_Flyer',
@@ -416,9 +428,8 @@ export const teams = [
     members: [      
       { name: 'Andrea John', role: 'Billing/Procurement Associate', photoName: 'John_Andrea' },
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
-      { name: 'Meghanne Lomibao', role: 'Lab Manager', photoName: 'Lomibao_Meghanne' },
       { name: 'Open Position!', role: 'Administrative Assistant' },
-      // { name: 'Open Position!', role: 'Lab Manager' },
+      { name: 'Open Position!', role: 'Lab Manager' },
     ],
   },
   {
@@ -439,11 +450,11 @@ export const teams = [
     members: [
       { name: 'Blaise Robin', role: 'Supervisor', photoName: 'Robin_Blaise' },
       { name: 'Allison Sexton', role: 'Project Assistant', photoName: 'Sexton_Allison' },
-      { name: 'Kyriakos Chatzis', role: 'Project Assistant', photoName: 'Chatzis_Kyriakos' },
+      { name: 'Rachel Tessier', role: 'Project Manager', photoName: '' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
       // { name: 'Position Open!', role: 'Project Manager' },
       // { name: 'Position Open!', role: 'Supervisor' },
-      // { name: 'Position Open!', role: 'Project Assistant' },
+      { name: 'Position Open!', role: 'Project Assistant' },
     ],
   },
   {
@@ -452,14 +463,14 @@ export const teams = [
     description:
       'The EXPAND team is the most diverse team in IGO -- responsible for integrating new platforms and advancing research technology to remain at the cutting edge for our users, they handle pathology, nucleic acid extraction, digital droplet PCR, and spatial transcriptomics.',
     members: [
-      { name: 'Andrea Farina', role: 'Manager, IGO', photoName: 'Farina_Andrea' },
+      { name: 'Andrea Farina', role: 'Manager', photoName: 'Farina_Andrea' },
       { name: 'Christian Mccauley', role: 'Senior Research Technician', photoName: 'Mccauley_Christian' },
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
-      { name: 'Elijah Castro', role: 'Senior Research Technician', photoName: 'Castro_Elijah' },
+      { name: 'Jinghui Song', role: 'Supervisor, Spatial Transcriptomics', photoName: 'Song_Jinghui' },
       { name: 'Matthew Solowsky', role: 'Senior Research Technician', photoName: 'Solowsky_Matthew' },
       { name: 'Mohamed Abdelbaset', role: 'Senior Research Technician', photoName: 'Abdelbaset_Mohamed' },
-      { name: 'Qingyun Tian', role: 'Research Assistant', photoName: 'Tian_Qingyun' },
-      // { name: 'Open Position!', role: 'Research Assistant' },
+      { name: 'Qingyun Tian', role: 'Senior Research Assistant', photoName: 'Tian_Qingyun' },
+      { name: 'Open Position!', role: 'Research Technician' },
     ],
   },
   {
@@ -468,7 +479,7 @@ export const teams = [
     description:
       "The Single Cell team receives fresh and frozen samples for IGO's 10X Genomics and DLP platforms. They use a mix of manual and automated techniques to help investigators achieve the best single cell data possible. Additionally, the Single Cell team has expanded their expertise to take on Oxford Nanopore long read library preparation.",
     members: [
-      { name: 'Ruchi Patel', role: 'Manager, IGO', photoName: 'Patel_Ruchi' },
+      { name: 'Ruchi Patel', role: 'Manager', photoName: 'Patel_Ruchi' },
       { name: 'Dooa Kim', role: 'Research Assistant', photoName:'Kim_Dooa' },
       { name: 'Iris Parke', role: 'Research Technician', photoName: 'Parke_Iris' },
       { name: 'Ravi Shrivastav', role: 'Senior Research Technician', photoName: 'Shrivastav_Ravi' },
@@ -483,7 +494,7 @@ export const teams = [
     description:
       "The Library Preparation team handles the bulk of IGO's sample processing, utilizing liquid-handling robots to automate many platforms.",
     members: [
-      { name: 'Ruchi Patel', role: 'Manager, IGO', photoName: 'Patel_Ruchi' },
+      { name: 'Ruchi Patel', role: 'Manager', photoName: 'Patel_Ruchi' },
       { name: 'Kalliopi Chatzis', role: 'Research Assistant', photoName: 'Chatzis_Kalliopi' },
       { name: 'Katherine Allard', role: 'Senior Research Assistant', photoName: 'Allard_Katherine' },
       { name: 'Kiruthika Balasubramanian', role: 'Research Assistant', photoName: 'Balasubramanian_Kiruthika' },
@@ -499,7 +510,7 @@ export const teams = [
     description:
       "The Sequencing Team performs all activities related to Illumina and Oxford Nanopore sequencing, including quantity and quality assessment of libraries, pooling, and preparation for sequencing. The team is also responsible for the care & feeding of IGO's 9 sequencing instruments.",
     members: [
-      { name: 'Liping Sun', role: 'Manager, IGO', photoName: 'Sun_Liping' },
+      { name: 'Liping Sun', role: 'Manager', photoName: 'Sun_Liping' },
       { name: 'Desmond Lambe', role: 'Research Technician', photoName: 'Lambe_Desmond' },
       { name: 'Jim Chen', role: 'Research Assistant', photoName: 'Chen_Jim' },
       { name: 'Keumsil Hwang', role: 'Senior Research Assistant', photoName: 'Hwang_Keumsil' },
@@ -514,7 +525,7 @@ export const teams = [
     description:
       "The IGO Data Team is a group of bioinformaticians, software engineers, and computer scientists.  They work closely with IGO's investigators and wet-lab technicians to write multiple software applications from sample receiving and LIMS processing to post-sequencing stats tracking and data delivery.",
     members: [
-      { name: 'David Mcmanamon', role: 'Manager, IGO', photoName: 'Mcmanamon_David' },
+      { name: 'David Mcmanamon', role: 'Manager', photoName: 'Mcmanamon_David' },
       { name: 'Cuijie Lu', role: 'Bioinfo. Software Engineer I', photoName: 'Lu_Cuijie' },
       { name: 'Darrell Nabors', role: 'Bioinformatics Engineer V', photoName: 'Nabors_Darrell' },
       { name: 'Fahimeh Mirhaj', role: 'Bioinfo. Software Engineer II', photoName: 'Mirhaj_Fahimeh' },
@@ -528,7 +539,7 @@ export const teams = [
     description:
       'The Research & Development team develops, tests, and implements new genomics platforms for the MSKCC community. In addition to testing off-the-shelf assays, our group works with MSK investigators to bring customized platforms to IGO.',
     members: [
-      { name: 'Stephanie Chrysanthou', role: 'Manager, IGO', photoName: 'Chrysanthou_Stephanie' },
+      { name: 'Stephanie Chrysanthou', role: 'Manager', photoName: 'Chrysanthou_Stephanie' },
       { name: 'Juan Li', role: 'Scientific Research Lead', photoName: 'Li_Juan' },
       { name: 'Trishala Karmacharya', role: 'Research Assistant', photoName: 'Karmacharya_Trishala' },
       // { name: 'Open Position!', role: 'Research Technician' },
