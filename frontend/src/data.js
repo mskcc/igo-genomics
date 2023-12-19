@@ -450,7 +450,7 @@ export const teams = [
     members: [
       { name: 'Blaise Robin', role: 'Supervisor', photoName: 'Robin_Blaise' },
       { name: 'Allison Sexton', role: 'Project Assistant', photoName: 'Sexton_Allison' },
-      { name: 'Rachel Tessier', role: 'Project Manager', photoName: '' },
+      { name: 'Rachel Tessier', role: 'Project Manager', photoName: 'Tessier_Rachel' },
       { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
       // { name: 'Position Open!', role: 'Project Manager' },
       // { name: 'Position Open!', role: 'Supervisor' },
