@@ -2,17 +2,17 @@
   <div id="job-descriptions">
     <career-banner />
 
-    <!-- <md-card class="career-card">
+    <md-card class="career-card">
       <md-card-header>
-        <div class="md-title">Spatial Transcriptomics Supervisor</div>
-        <router-link :to="{ name: 'team', params: { id: 0 } }">Lab Leadership</router-link>
+        <div class="md-title">Lab Manager</div>
+        <router-link :to="{ name: 'team', params: { id: 1 } }">Lab Support</router-link>
         <div class="md-body">Open!</div>
       </md-card-header>
       <md-card-actions>
-        <md-button @click="showJobDescriptionSTSup = true" class="md-accent">Learn More</md-button>
-        <md-button href="https://careers.mskcc.org/vacancies/2023-72684-supervisor-core-facility/" target="_blank" class="md-primary">Apply</md-button>
+        <md-button @click="showJobDescriptionLM = true" class="md-accent">Learn More</md-button>
+        <md-button href="https://careers.mskcc.org/vacancies/2023-74244-lab-manager/" target="_blank" class="md-primary">Apply</md-button>
       </md-card-actions>
-    </md-card> -->
+    </md-card>
 
     <md-card class="career-card">
       <md-card-header>
@@ -23,6 +23,30 @@
       <md-card-actions>
         <md-button @click="showJobDescriptionAA = true" class="md-accent">Learn More</md-button>
         <md-button href="mailto:genomics@mskcc.org?subject=IGO Admin Asst" class="md-primary">Inquire</md-button>
+      </md-card-actions>
+    </md-card>
+
+    <md-card class="career-card">
+      <md-card-header>
+        <div class="md-title">Project Assistant</div>
+        <router-link :to="{ name: 'team', params: { id: 3 } }">Sample & Project Management</router-link>
+        <div class="md-body">Open!</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionSPMPA = true" class="md-accent">Learn More</md-button>
+        <md-button href="mailto:genomics@mskcc.org?subject=IGO Project Asst" class="md-primary">Inquire</md-button>
+      </md-card-actions>
+    </md-card>
+
+    <md-card class="career-card">
+      <md-card-header>
+        <div class="md-title">Research Technician</div>
+        <router-link :to="{ name: 'team', params: { id: 4 } }">EXPAND</router-link>
+        <div class="md-body">Open!</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionEXPANDRT = true" class="md-accent">Learn More</md-button>
+        <md-button href="mailto:genomics@mskcc.org?subject=IGO Research Tech" class="md-primary">Inquire</md-button>
       </md-card-actions>
     </md-card>
     
@@ -80,7 +104,7 @@
 
     <md-dialog :md-active.sync="showJobDescriptionLM" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
-        <strong>As a Lab Manager in IGO, you must be:</strong>
+        <strong>As a Lab Manager in IGO, you will:</strong>
         <ul>
           <li>Handle day-to-day activities such as ensuring operation of essential equimpment, making sure adequate supplies are available for routine procedures, and reviewing budgets</li>
           <li>Act as liaison between the lab and MSK safety and regulatory offices to ensure compliance with all applicable regulations</li>
@@ -142,12 +166,38 @@
         <strong>You have:</strong>
         <ul>
           <li>Bachelor's degree in a relevant field and 5-7 years of work experience in a biological laboratory environment or Masters degree in a science and 3-5 years of shown experience.</li>
-          <li>Previous exposure to purifying nucleic acids for NGS platform, knowledge of digital PCR and experience with cells and FFPE samples is preferable.</li>
+          <li>Previous exposure to purifying nucleic acids for NGS platforms, knowledge of digital PCR and experience with cells and FFPE samples is preferable.</li>
           <li>Strong organizational, prioritization and time management skills.</li>
         </ul>
       </md-dialog-content>
       <md-dialog-actions>
         <md-button class="md-primary" @click="showJobDescriptionEXPANDRA = false">Close</md-button>
+      </md-dialog-actions>
+    </md-dialog>
+
+    <md-dialog :md-active.sync="showJobDescriptionEXPANDRT" :md-fullscreen="false" style="z-index: 400;">
+      <md-dialog-content md-dynamic-height>
+        <strong>As a Research Technician in the EXPAND Team, you will:</strong>
+        <ul>
+          <li>Extract nucleic acids from a variety of biomaterial (fresh frozen and formalin-fixed paraffin embedded tissue, cell line, blood, plasma, serum, saliva, nails, etc)</li>
+          <li>Perform quality assurance and quality control of extracted material</li>
+          <li>Process samples for droplet digital PCR projects. This includes assays design and optimization, sample processing and data curation.</li>
+          <li>Prepare DNA libraries for NGS following established SOPs</li>
+          <li>Work with your team to create workflow following LEAN principles.</li>
+          <li>Communicate with vendor technical support and sales representatives.</li>
+          <li>Operate liquid handlers and robotic instrument for high throughput processing</li>
+          <li>Maintain accurate and detailed records in a Laboratory Information Management System (Examplar Sapio LIMS)</li>
+          <li>Use iLab for billing purposes</li>
+        </ul>
+        <strong>You have:</strong>
+        <ul>
+          <li>A Bachelor’s Degree in a biology, chemistry, or science related field.</li>
+          <li>Previous exposure to purifying nucleic acids or NGS is preferable.</li>
+          <li>Strong organizational, prioritization, and time management skills.</li>
+        </ul>
+      </md-dialog-content>
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="showJobDescriptionEXPANDRT = false">Close</md-button>
       </md-dialog-actions>
     </md-dialog>
 
@@ -445,9 +495,10 @@ export default {
     return {      
       showJobDescriptionAA: false,
       // showJobDescriptionAE: false,
-      // showJobDescriptionLM: false,
+      showJobDescriptionLM: false,
       // showJobDescriptionDataSEII: false,
       // showJobDescriptionEXPANDRA: false,
+      showJobDescriptionEXPANDRT: false,
       // showJobDescriptionNART: false,
       // showJobDescriptionNARA: false,
       // showJobDescriptionNASup: false,
@@ -455,7 +506,7 @@ export default {
       // showJobDescriptionSCRA: false,
       // showJobDescriptionSeqSRT: false,
       // showJobDescriptionSeqRA: false,
-      // showJobDescriptionSPMPA: false,
+      showJobDescriptionSPMPA: false,
       // showJobDescriptionSPMPM: false,
       // showJobDescriptionSPMSup: false,
       // showJobDescriptionSTSup: false,
