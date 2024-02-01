@@ -172,7 +172,7 @@
 
         <div class="md-title" id="visium">10X Genomics Visium</div>
         <ul>
-          <li>Input: Frozen or FFPE blocks</li>
+          <li>Input: Frozen (for v1 or CytAssist), FFPE (CytAssist or HD), or PFA Fixed Frozen (CytAssist) tissue</li>
           <li>Output: FASTQ, Space Ranger count output</li>
           <li>
             Considerations:
@@ -189,6 +189,76 @@
             </ul>
           </li>
         </ul>
+        <md-table md-card>
+          <md-table-row>
+            <md-table-cell></md-table-cell>
+            <md-table-cell>v1</md-table-cell>
+            <md-table-cell colspan="3" class="center-page">CytAssist</md-table-cell>
+            <md-table-cell>Protein Co-detection</md-table-cell>
+            <md-table-cell>HD</md-table-cell>
+          </md-table-row>
+          <md-table-row>
+            <md-table-cell>Sample Type</md-table-cell>
+            <md-table-cell colspan="2" class="center-page">Fresh Frozen</md-table-cell>
+            <md-table-cell>Fixed Frozen</md-table-cell>
+            <md-table-cell colspan="3" class="center-page">FFPE</md-table-cell>
+          </md-table-row>
+          <md-table-row>
+            <md-table-cell>QC Requirements</md-table-cell>
+            <md-table-cell>RIN &GreaterEqual; 7</md-table-cell>
+            <md-table-cell>RIN &GreaterEqual; 4</md-table-cell>
+            <md-table-cell>DV200 > 50%</md-table-cell>
+            <md-table-cell colspan="3">DV200 > 30%</md-table-cell>
+          </md-table-row>
+          <md-table-row>
+            <md-table-cell>Section Size</md-table-cell>
+            <md-table-cell colspan="3" class="center-page">10 &micro;m</md-table-cell>
+            <md-table-cell colspan="3" class="center-page">5 &micro;m</md-table-cell>
+          </md-table-row>
+          <md-table-row>
+            <md-table-cell>Enrichment</md-table-cell>
+            <md-table-cell>PolyA</md-table-cell>
+            <md-table-cell colspan="5" class="center-page">Probes (v2)</md-table-cell>
+          </md-table-row>
+          <md-table-row>
+            <md-table-cell rowspan="2">Capture Area</md-table-cell>
+            <md-table-cell>6.5mm&sup2; (5K spots)</md-table-cell>
+            <md-table-cell colspan="4" class="center-page">6.5mm&sup2; (5K spots) or 11mm&sup2; (14K spots)</md-table-cell>
+            <md-table-cell>6.5mm&sup2; (10M+ spots)</md-table-cell>
+          </md-table-row>
+          <md-table-row>
+            <md-table-cell>4 capture areas/slide</md-table-cell>
+            <md-table-cell colspan="5" class="center-page">2 capture areas/slide</md-table-cell>
+          </md-table-row>
+          <md-table-row>
+            <md-table-cell>Spot Size</md-table-cell>
+            <md-table-cell colspan="5" class="center-page">55&micro;m diameter</md-table-cell>
+            <md-table-cell>2&micro;m&sup2;</md-table-cell>
+          </md-table-row>
+          <md-table-row>
+            <md-table-cell>Resolution</md-table-cell>
+            <md-table-cell colspan="5" class="center-page">1-10 cells</md-table-cell>
+            <md-table-cell>single cell</md-table-cell>
+          </md-table-row>
+          <md-table-row>
+            <md-table-cell>10X Kit Price</md-table-cell>
+            <md-table-cell>$5,450/slide</md-table-cell>
+            <md-table-cell colspan="3" class="center-page">$7,100/2 6.5mm&sup2; slides or $7,300/11mm&sup2; slide</md-table-cell>
+            <md-table-cell>CytAssist price + $1,995/slide</md-table-cell>
+            <md-table-cell>$12,400/2 slides</md-table-cell>
+          </md-table-row>
+          <md-table-row>
+            <md-table-cell>IGO Processing Costs</md-table-cell>
+            <md-table-cell>$1,100/slide</md-table-cell>
+            <md-table-cell colspan="5" class="center-page">$700/slide</md-table-cell>
+          </md-table-row>
+          <md-table-row>
+            <md-table-cell>Sequencing Requirements</md-table-cell>
+            <md-table-cell>50K reads/spot</md-table-cell>
+            <md-table-cell colspan="4" class="center-page">25K reads/spot</md-table-cell>
+            <md-table-cell>20K reads/spot</md-table-cell>
+          </md-table-row>
+        </md-table>
 
         <ten-x-table />
 

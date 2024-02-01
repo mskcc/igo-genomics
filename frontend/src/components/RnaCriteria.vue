@@ -16,15 +16,23 @@
         <md-table-head>Maximum Submission Volume</md-table-head>
       </md-table-row>
       <md-table-row>
-        <md-table-cell rowspan="2">10X Genomics Visium</md-table-cell>
-        <md-table-cell>FFPE</md-table-cell>
-        <md-table-cell rowspan="2" colspan="2" class="pass center-page">No quantity requirements</md-table-cell>
-        <md-table-cell class="pass">DV200 > 50</md-table-cell>
-        <md-table-cell rowspan="2" class="fail">No try range</md-table-cell>
-        <md-table-cell rowspan="2">N/A</md-table-cell>
+        <md-table-cell rowspan="4">10X Genomics Visium</md-table-cell>
+        <md-table-cell>FFPE (CytAssist/HD)</md-table-cell>
+        <md-table-cell rowspan="4" colspan="2" class="center-page">No quantity requirements</md-table-cell>
+        <md-table-cell class="pass">DV200 > 30</md-table-cell>
+        <md-table-cell rowspan="4" class="fail">No try range</md-table-cell>
+        <md-table-cell rowspan="4">N/A</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell>Frozen</md-table-cell>
+        <md-table-cell>Fixed Frozen (CytAssist)</md-table-cell>
+        <md-table-cell class="pass">DV200 > 50</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell>Frozen (CytAssist)</md-table-cell>
+        <md-table-cell class="pass">RIN > 4</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell>Frozen (v1)</md-table-cell>
         <md-table-cell class="pass">RIN > 7</md-table-cell>
       </md-table-row>
       <md-table-row>
@@ -50,8 +58,8 @@
       <md-table-row>
       <md-table-cell rowspan="3">Oxford Nanopore cDNA-Seq</md-table-cell>
         <md-table-cell>total RNA</md-table-cell>
-        <md-table-cell class="pass">30&#181;g</md-table-cell>
-        <md-table-cell class="try">20&#181;g</md-table-cell>
+        <md-table-cell class="pass">30,000ng | 30&#181;g</md-table-cell>
+        <md-table-cell class="try">20,000ng | 20&#181;g</md-table-cell>
         <md-table-cell class="pass">RIN &GreaterEqual; 7, 260/230 & 260/280 &GreaterEqual; 1.7</md-table-cell>
         <md-table-cell rowspan="3" class="try">260/230 & 260/280 &lt; 1.7<sup>a<md-tooltip v-if="footnotes.a" md-direction="right">{{ footnotes.a }}</md-tooltip></sup></md-table-cell>
         <md-table-cell rowspan="3">25&#181;L</md-table-cell>
@@ -92,14 +100,14 @@
       </md-table-row>
       <md-table-row>
         <md-table-cell>Frozen</md-table-cell>
-        <md-table-cell class="pass">1&#181;g</md-table-cell>
+        <md-table-cell class="pass">1,000ng | 1&#181;g</md-table-cell>
         <md-table-cell class="pass">DV200 &gt; 50</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell rowspan="2">RNASeq-SMARTer</md-table-cell>
         <md-table-cell>Frozen</md-table-cell>
         <md-table-cell class="pass">2ng</md-table-cell>
-        <md-table-cell class="try">100pg</md-table-cell>
+        <md-table-cell class="try">0.1ng | 100pg</md-table-cell>
         <md-table-cell class="pass">RIN &gt; 8</md-table-cell>
         <md-table-cell class="fail">No try range</md-table-cell>
         <md-table-cell>9.5&#181;L</md-table-cell>
@@ -122,7 +130,7 @@
       </md-table-row>
       <md-table-row>
         <md-table-cell>Non-lymphoid tissue</md-table-cell>
-        <md-table-cell class="pass">1.2&#181;g</md-table-cell>
+        <md-table-cell class="pass">1,200ng | 1.2&#181;g</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell colspan="7">

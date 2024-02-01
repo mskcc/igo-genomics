@@ -194,7 +194,7 @@
         </p>
         <div class="md-subheading">Customization</div>
         <p>
-          IGO does <b>not</b> provide custom alignment or pipeline runs. We provide these files as a courtesy to our investigators because we generate them for QC purposes. If you need experiment-specific, more complex, or additional downstream analysis, you should reach out to MSK's <a href="http://bic.mskcc.org/bic/" target="_blank">Bioinformatics Core</a>.
+          IGO does <b>not</b> provide custom alignment or pipeline runs. We provide these files as a courtesy to our investigators because we generate them for QC purposes. If you need experiment-specific, more complex, or additional downstream analysis, you should reach out to MSK's <a href="https://bic.mskcc.org/bic/" target="_blank">Bioinformatics Core</a>.
         </p>
         <md-divider></md-divider>
 
