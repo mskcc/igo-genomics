@@ -4,7 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        IGO will be closed for sample submission and processing 12/25-1/1. We will reopen 1/2.
+        Coming soon: Walk-up sequencing on Element Aviti!
       </span>
     </div>
 

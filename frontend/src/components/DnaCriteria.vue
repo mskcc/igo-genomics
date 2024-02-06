@@ -36,7 +36,7 @@
       <md-table-row>
         <md-table-cell><a href="https://my.ilabsolutions.com/service_center/3276/?tab=services" target="__blank">CRISPRSeq</a></md-table-cell>
         <md-table-cell></md-table-cell>
-        <md-table-cell class="pass">1&#181;g<sup>b<md-tooltip v-if="footnotes.b" md-direction="right">{{ footnotes.b }}</md-tooltip></sup></md-table-cell>
+        <md-table-cell class="pass">1&#181;g<sup>a<md-tooltip v-if="footnotes.a" md-direction="right">{{ footnotes.a }}</md-tooltip></sup></md-table-cell>
         <md-table-cell class="try">400ng</md-table-cell>
         <md-table-cell class="pass">200-280bp</md-table-cell>
         <md-table-cell class="fail">No try range</md-table-cell>
@@ -71,7 +71,7 @@
         <md-table-cell class="pass">500ng</md-table-cell>
       </md-table-row> -->
       <md-table-row>
-        <md-table-cell rowspan="3">IMPACT<sup>c<md-tooltip v-if="footnotes.c" md-direction="right">{{ footnotes.c }}</md-tooltip></sup></md-table-cell>
+        <md-table-cell rowspan="3">IMPACT/IMPACT-Heme<sup>b<md-tooltip v-if="footnotes.b" md-direction="right">{{ footnotes.b }}</md-tooltip></sup></md-table-cell>
         <md-table-cell>cfDNA</md-table-cell>
         <md-table-cell class="pass">100ng</md-table-cell>
         <md-table-cell class="try">5ng</md-table-cell>
@@ -104,8 +104,8 @@
       <md-table-row>
         <md-table-cell>Oxford Nanopore WGS</md-table-cell>
         <md-table-cell>hmwDNA</md-table-cell>
-        <md-table-cell class="pass">3&#181;g</md-table-cell>
-        <md-table-cell class="try">1&#181;g</md-table-cell>
+        <md-table-cell class="pass">3,000ng | 3&#181;g<sup>c<md-tooltip v-if="footnotes.c" md-direction="right">{{ footnotes.c }}</md-tooltip></sup></md-table-cell>
+        <md-table-cell class="try">1,000ng | 1&#181;g</md-table-cell>
         <md-table-cell rowspan="3" class="pass">260/280 > 1.8, 260/230 > 1.5, size > 20kb<sup>d<md-tooltip v-if="footnotes.d" md-direction="right">{{ footnotes.d }}</md-tooltip></sup></md-table-cell>
         <md-table-cell rowspan="3" class="try">260/280 &lt; 1.8; 260/230 &lt; 1.5</md-table-cell>
         <md-table-cell rowspan="3">50&#181;L</md-table-cell>
@@ -113,13 +113,22 @@
       <md-table-row>
         <md-table-cell rowspan="2">Oxford Nanopore WGS (Multiplexed)</md-table-cell>
         <md-table-cell>2-4 barcodes</md-table-cell>
-        <md-table-cell class="pass">1&#181;g</md-table-cell>
+        <md-table-cell class="pass">1,000ng | 1&#181;g</md-table-cell>
         <md-table-cell class="try">500ng</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>>4 barcodes</md-table-cell>
         <md-table-cell class="pass">400ng</md-table-cell>
         <md-table-cell class="try">200ng</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell>Oxford Nanopore (short read)</md-table-cell>
+        <md-table-cell></md-table-cell>
+        <md-table-cell class="pass">500ng</md-table-cell>
+        <md-table-cell class="try">100ng</md-table-cell>
+        <md-table-cell class="pass">260/280 > 1.8, 260/230 > 1.5, size > 200bp</md-table-cell>
+        <md-table-cell class="try">260/280 > 1.2, 260/230 > 1.2</md-table-cell>
+        <md-table-cell>50&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>STR Analysis</md-table-cell>
@@ -209,9 +218,9 @@ export default {
   data: function() {
     return {
       footnotes: {
-        a: 'For samples that are clonal, non-lymphoid, or with fewer than 100K T cells, survey is appropriate. For detection of rare clones or peripheral immune repertoire in samples with 100-200K T cells, deep resolution can be used. For 500-600K T cells, choose ultradeep.',
-        b: "CRISPRSeq samples are not QC'd by IGO. Mass requirements are based on investigator QC.",
-        c: 'Requirements also apply to custom capture projects.',
+        a: "CRISPRSeq samples are not QC'd by IGO. Mass requirements are based on investigator QC.",
+        b: 'Requirements also apply to custom capture projects.',
+        c: 'Requirements apply to 30-40X projects; 2X material is required for 60-80X coverage.',
         d: 'Samples that do not pass quality requirements may in some cases be rescued with a gDNA cleanup or short fragment removal ($20/sample).',
       },
     };
