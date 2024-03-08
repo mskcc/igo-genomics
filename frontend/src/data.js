@@ -451,11 +451,11 @@ export const teams = [
     members: [
       { name: 'Blaise Robin', role: 'Supervisor', photoName: 'Robin_Blaise' },
       { name: 'Allison Sexton', role: 'Project Assistant', photoName: 'Sexton_Allison' },
+      { name: 'Kenzie Chen', role: 'Project Assistant', photoName: 'Chen_Kenzie' },
       { name: 'Rachel Tessier', role: 'Project Manager', photoName: 'Tessier_Rachel' },
-      { name: 'Tressa Octave', role: 'Senior Project Assistant', photoName: 'Octave_Tressa' },
+      { name: 'Tressa Octave', role: 'Project Coordinator', photoName: 'Octave_Tressa' },
       // { name: 'Position Open!', role: 'Project Manager' },
       // { name: 'Position Open!', role: 'Supervisor' },
-      { name: 'Position Open!', role: 'Project Assistant' },
     ],
   },
   {
@@ -468,6 +468,7 @@ export const teams = [
       { name: 'Christian Mccauley', role: 'Senior Research Technician', photoName: 'Mccauley_Christian' },
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
       { name: 'Jinghui Song', role: 'Supervisor, Spatial Transcriptomics', photoName: 'Song_Jinghui' },
+      { name: 'Keumsil Hwang', role: 'Research Specialist', photoName: 'Hwang_Keumsil' },
       { name: 'Matthew Solowsky', role: 'Research Assistant', photoName: 'Solowsky_Matthew' },
       { name: 'Mohamed Abdelbaset', role: 'Senior Research Technician', photoName: 'Abdelbaset_Mohamed' },
       { name: 'Qingyun Tian', role: 'Senior Research Assistant', photoName: 'Tian_Qingyun' },
@@ -485,7 +486,7 @@ export const teams = [
       { name: 'Iris Parke', role: 'Research Technician', photoName: 'Parke_Iris' },
       { name: 'Ravi Shrivastav', role: 'Senior Research Technician', photoName: 'Shrivastav_Ravi' },
       { name: 'Satish Ramakrishnan', role: 'Senior Research Assistant', photoName: 'Ramakrishnan_Satish' },
-      { name: 'Yushi Wu', role: 'Research Assistant', photoName: 'Wu_Yushi' },   
+      { name: 'Yushi Wu', role: 'Senior Research Assistant', photoName: 'Wu_Yushi' },   
       // { name: 'Open Position!', role: 'Research Assistant' },
     ],
   },
@@ -514,7 +515,6 @@ export const teams = [
       { name: 'Liping Sun', role: 'Manager', photoName: 'Sun_Liping' },
       { name: 'Desmond Lambe', role: 'Research Technician', photoName: 'Lambe_Desmond' },
       { name: 'Jim Chen', role: 'Research Assistant', photoName: 'Chen_Jim' },
-      { name: 'Keumsil Hwang', role: 'Senior Research Assistant', photoName: 'Hwang_Keumsil' },
       { name: 'Medhini Mankale', role: 'Research Technician', photoName: 'Mankale_Medhini' },
       { name: 'Mingqiang Zhuang', role: 'Research Assistant', photoName: 'Zhuang_Mingqiang' },
       // { name: 'Open Position!', role: 'Research Assistant', },
@@ -757,7 +757,7 @@ export const singleServices = [
   },
   {
     id: 4,
-    name: 'PlateSeq',
+    name: 'SmartSeq',
     description:
       'A single- or low-cell Smart-Seq v3 method to accommodate projects without enough cells for 10X Genomics, or users interested in capturing the entire body of the gene.',
     startingMaterial: 'Sorted cells',

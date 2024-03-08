@@ -4,18 +4,6 @@
 
     <md-card class="career-card">
       <md-card-header>
-        <div class="md-title">Project Assistant</div>
-        <router-link :to="{ name: 'team', params: { id: 3 } }">Sample & Project Management</router-link>
-        <div class="md-body">Open!</div>
-      </md-card-header>
-      <md-card-actions>
-        <md-button @click="showJobDescriptionSPMPA = true" class="md-accent">Learn More</md-button>
-        <md-button href="mailto:genomics@mskcc.org?subject=IGO Project Asst" class="md-primary">Inquire</md-button>
-      </md-card-actions>
-    </md-card>
-
-    <md-card class="career-card">
-      <md-card-header>
         <div class="md-title">Research Technician</div>
         <router-link :to="{ name: 'team', params: { id: 4 } }">EXPAND</router-link>
         <div class="md-body">Open!</div>
@@ -23,6 +11,18 @@
       <md-card-actions>
         <md-button @click="showJobDescriptionEXPANDRT = true" class="md-accent">Learn More</md-button>
         <md-button href="mailto:genomics@mskcc.org?subject=IGO Research Tech" class="md-primary">Inquire</md-button>
+      </md-card-actions>
+    </md-card>
+
+    <md-card class="career-card">
+      <md-card-header>
+        <div class="md-title">Bioinformatics Engineer</div>
+        <router-link :to="{ name: 'team', params: { id: 8 } }">Data</router-link>
+        <div class="md-body">Open!</div>
+      </md-card-header>
+      <md-card-actions>
+        <md-button @click="showJobDescriptionDataSEII = true" class="md-accent">Learn More</md-button>
+        <md-button href="mailto:genomics@mskcc.org?subject=IGO Software Engineer" class="md-primary">Inquire</md-button>
       </md-card-actions>
     </md-card>
     
@@ -472,7 +472,7 @@ export default {
       // showJobDescriptionAA: false,
       // showJobDescriptionAE: false,
       // showJobDescriptionLM: false,
-      // showJobDescriptionDataSEII: false,
+      showJobDescriptionDataSEII: false,
       // showJobDescriptionEXPANDRA: false,
       showJobDescriptionEXPANDRT: false,
       // showJobDescriptionNART: false,
@@ -482,7 +482,7 @@ export default {
       // showJobDescriptionSCRA: false,
       // showJobDescriptionSeqSRT: false,
       // showJobDescriptionSeqRA: false,
-      showJobDescriptionSPMPA: false,
+      // showJobDescriptionSPMPA: false,
       // showJobDescriptionSPMPM: false,
       // showJobDescriptionSPMSup: false,
       // showJobDescriptionSTSup: false,
