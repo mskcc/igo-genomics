@@ -66,14 +66,32 @@
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> indicating that you are submitting "Cells" for "ATACSeq"</li>
                       <li><strong>If submitting fresh cells:</strong>
                         <ul>
-                          <li><a :href="spmCalendar" target="__blank">Make a reservation</a> to bring your samples (Thursdays only)</li>
-                          <li>Bring 50K live cells suspended in 300-350&mu;L PBS or their favored medium in a 1.5mL <strong>V-bottom</strong> Eppendorf tube</li>
+                          <li><a :href="spmCalendar" target="__blank">Make a reservation</a> to bring your samples (Mondays only)</li>
+                          <li>Bring 50-100K live cells suspended in 300-350&mu;L PBS or their favored medium in a 1.5mL <strong>V-bottom</strong> Eppendorf tube</li>
                         </ul></li>
                       <li><strong>If submitting viably frozen cells:</strong>
                         <ul>
                           <li>Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a></li>
-                          <li>Freeze your 50K cells in 300-500&mu;L 10% DMSO in a 1.5mL Eppendorf tube</li>
+                          <li>Freeze your 50-100K cells in 300-500&mu;L 10% DMSO in a 1.5mL Eppendorf tube</li>
                         </ul></li>
+                    </ol>
+                  </md-list-item>
+                </md-list>
+              </md-list-item>
+              <md-list-item md-expand>
+                <md-icon>add</md-icon>
+                <span class="md-list-item-text">Sorted cells for RNASeq-SMARTer</span>
+                <md-list slot="md-expand">
+                  <md-list-item class="md-inset">
+                    <ol>
+                      <li>Fill out an iLab request for:
+                        <ul>
+                          <li>RNA Library Prep + Sequencing</li>
+                        </ul></li>
+                      <li>Schedule a <a :href="spmCalendar" target="__blank">'Sample Container Pick Up' appointment</a> to request a plate and reagents for your sort </li>
+                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting the appropriate application:
+                        <ul>SMARTerAmpSeq</ul></li>
+                      <li>Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a></li>
                     </ol>
                   </md-list-item>
                 </md-list>
@@ -90,10 +108,10 @@
                           <li>Direct Library Prep</li>
                         </ul></li>
                       <li><a :href="scCalendar" target="__blank">Make a reservation</a> for a time to bring your samples</li>
-                      <!-- <li><strong>If submitting sorted cells for PlateSeq:</strong>
+                      <li><strong>If submitting sorted cells for SmartSeq:</strong>
                         <ul>
-                          <li><a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Reagents for PlateSeq">Contact SPM</a> to get plates/reagents for sorting</li>
-                        </ul></li> -->
+                          <li><a href="mailto:zzPDL_SKI_IGO_Sample_and_Project_Management@mskcc.org?subject=Reagents for PlateSeq">Contact SPM</a> to get 384-plates/reagents for sorting</li>
+                        </ul></li>
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting the appropriate application:
                         <ul>
                           <!-- <li>96Well_SmartSeq2</li> -->
@@ -101,9 +119,10 @@
                           <li>10X_Genomics-GeneExpression-3 for 3' 10X, with or without feature barcoding/cell hashing</li>
                           <li>10X_Genomics_Multiome</li>
                           <li>DLP</li>
+                          <li>SmartSeq</li>
                         </ul></li>
                       <li><strong>If submitting nuclei for 10X Multiome:</strong> <a href="mailto:zzPDL_SKI_IGO_SingleCell@mskcc.org?subject=Nuclei buffer">Contact us</a> to get an aliquot of nuclei preservation buffer</li>
-                      <!-- <li><strong>If submitting frozen cells for PlateSeq:</strong> Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a></li> -->
+                      <li><strong>If submitting frozen cells for SmartSeq:</strong> Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a></li>
                     </ol>
                   </md-list-item>
                 </md-list>
