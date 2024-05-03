@@ -1,9 +1,21 @@
 export const news = [
   {
+    title: "IGO is now located in Schwartz on floor 7",
+    date: 'May 3, 2024',
+    imgSource: '',
+    categories: ['featured'],
+    body: `<p>
+    IGO is moving operations from the 3rd floor of Zuckerman to the 7th floor of Schwartz (1250 1st Avenue).<br />
+    <br />
+    Beginning <b>Monday, May 6</b> all samples for drop off should come to Schwartz-7. For questions, please email igosampleprojmgmt@mskcc.org or call 212-639-2953.<br />
+    <br />
+    </p>`,
+  },
+  {
     title: "Holiday Schedule",
     date: 'December 13, 2023',
     imgSource: 'IGO_210408_044',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     IGO will be closed 12/25 and 1/1 for the Christmas and New Year holidays.<br />
     <br />

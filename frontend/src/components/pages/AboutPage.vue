@@ -16,7 +16,7 @@
               IGO offers a comprehensive inventory of genomic platforms. We house a full range of Illumina NGS instruments, maximizing our
               flexibility for many sequencing applications. For more specific information, please check out the Platforms & Prices tab to
               learn more about the various platforms currently supported by IGO. We comprise seven main groups, under the leadership of Dr.
-              Neeman Mohibullah. We are located on the 3rd floor of the Zuckerman Building.
+              Neeman Mohibullah. We are located on the 7th floor of the Schwartz Building.
             </p>
           </div>
           <div class="about-image-container">
