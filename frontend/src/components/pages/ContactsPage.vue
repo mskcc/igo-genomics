@@ -19,7 +19,7 @@
       </md-list-item>
       <md-list-item>
         <md-icon class="md-primary">phone</md-icon>
-        <span class="md-list-item-text">(646) 888-3856</span>
+        <span class="md-list-item-text">(212) 639-2986</span>
       </md-list-item>
     </md-list>
 

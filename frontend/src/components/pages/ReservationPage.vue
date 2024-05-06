@@ -23,7 +23,7 @@
                 <!-- <md-select v-model="requestType" name="requestType" id="requestType" :disabled="daySelected"> -->
                 <md-select v-model="requestType" name="requestType" id="requestType" :disabled="dateSelected ? true : false">
                   <md-option value="10xGenomics">10X Genomics single cell</md-option>
-                  <md-option value="atacSeq">ATAC Seq (Thursdays only)</md-option>
+                  <md-option value="atacSeq">ATAC Seq (Mondays only)</md-option>
                   <md-option value="missionBio" disabled>MissionBio</md-option>
                   <md-option value="spm">All Others</md-option>
                 </md-select>

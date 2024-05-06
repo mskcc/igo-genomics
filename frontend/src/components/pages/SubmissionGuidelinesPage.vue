@@ -21,7 +21,7 @@
           <div class="md-subheading">Ready to drop off samples:</div>
           <ol>
             <li>Schedule a sample drop off time on the <a :href="spmCalendar" target="__blank">Sample Receiving & Project Management Calendar</a>.</li>
-            <li>Bring your samples to the 3rd floor of Zuckerman at your scheduled time and place them in the marked area. Wait with the samples while IGO staff confirms the sample set. If you are running late and a lab member is no longer at the receiving desk, please refrain from entering the lab and call 646-888-3856 to notify us of your arrival.<br /><br />Any follow-up inquiries will be handled by e-mail or phone.</li>
+            <li>Bring your samples to the 7th floor of Schwartz at your scheduled time and place them in the marked area. Wait with the samples while IGO staff confirms the sample set. If you are running late and a lab member is no longer at the receiving desk, please refrain from entering the lab and call 212-639-2953 (212-639-2986 for fresh single cell) to notify us of your arrival.<br /><br />Any follow-up inquiries will be handled by e-mail or phone.</li>
             <div></div>
           </ol>
         </div>
