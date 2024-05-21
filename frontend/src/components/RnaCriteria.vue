@@ -124,17 +124,22 @@
         <md-table-cell rowspan="2">TCR-Seq (IGO)</md-table-cell>
         <md-table-cell>Blood/PBMCs/Lymphoid Tissue</md-table-cell>
         <md-table-cell class="pass">100ng</md-table-cell>
-        <md-table-cell class="fail" rowspan="2">No try range</md-table-cell>
-        <md-table-cell rowspan="2" colspan="2" class="center-page">No quality requirements</md-table-cell>
+        <md-table-cell class="try">No fail range</md-table-cell>
+        <md-table-cell class="pass">RIN > 7</md-table-cell>
+        <md-table-cell class="try">No fail range</md-table-cell>
         <md-table-cell rowspan="2">10&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>Non-lymphoid tissue</md-table-cell>
-        <md-table-cell class="pass">1,200ng | 1.2&#181;g</md-table-cell>
+        <md-table-cell class="try">1,200ng | 1.2&#181;g<sup>b<md-tooltip v-if="footnotes.b" md-direction="right">{{ footnotes.b }}</md-tooltip></sup></md-table-cell>
+        <md-table-cell class="fail">No try range</md-table-cell>
+        <md-table-cell colspan="2" class="center-page">No quality requirements</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell colspan="7">
-          <sup>a</sup>For ratios &lt; 1.7, cleanup can be attempted. If ratio is > 1.3 post-cleanup, we can go ahead.</md-table-cell>
+          <sup>a</sup>For ratios &lt; 1.7, cleanup can be attempted. If ratio is > 1.3 post-cleanup, we can go ahead.
+          <sup>b</sup>Success is based on the number of T cells in the sample, which is unknown for non-lymphoid tissue.
+        </md-table-cell>
       </md-table-row>
     </md-table>
   </div>
@@ -147,6 +152,7 @@ export default {
     return {
       footnotes: {
         a: 'For ratios < 1.7, cleanup can be attempted. If ratio is > 1.3 post-cleanup, we can go ahead.',
+        b: 'Success is based on the number of T cells in the sample, which is unknown for non-lymphoid tissue',
       },
     };
   },

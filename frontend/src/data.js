@@ -1,5 +1,27 @@
 export const news = [
   {
+    title: "Changes to IGO Sample Submission",
+    date: 'May 21, 2024',
+    imgSource: 'IGO_210408_177',
+    categories: ['featured'],
+    body: `<p>
+    In an effort to standardize our internal metadata and simplify sample submission for investigators, changes to both iLab and the Sample Submission webform are now live. In iLab:<br />
+    <ul>
+    <li>Simplified service categories, with most forms contained in "IGO Services"</li>
+    <li>Consolidated forms to make it easier to find the one you need</li>
+    <li>Phasing out of the separation of extraction and downstream sequencing -- you can now request DNA or RNA extraction directly on your sequencing request</li></ul>
+    <br />
+    On the sample webform:<br />
+    <ul>
+    <li>Expanded Material and Preservation fields to cover all sample types coming into IGO</li>
+    <li>Simplified Sample Origin and Specimen Type fields to collect only information needed for our processing</li>
+    <li>Easy-to-read options in the Application dropdown to make it easier to find your platform</li></ul>
+    <br />
+    If you have questions, comments, or encounter any bugs, please email genomics@mskcc.org or call 212-639-2890.<br />
+    <br />
+    </p>`,
+  },
+  {
     title: "IGO is now located in Schwartz on floor 7",
     date: 'May 3, 2024',
     imgSource: '',
@@ -27,7 +49,7 @@ export const news = [
     title: "Congratulations to IGO's Open House Prize Winners!",
     date: 'November 3, 2023',
     imgSource: 'Open_House_Flyer',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     Thanks to everyone who came to the Open House and played our games! Five lucky researchers have won $500 vouchers to apply to their next IGO service:<br />
     <br />
@@ -884,6 +906,7 @@ export const otherServices = [
     tableHeaders: ['serviceType', 'serviceSubType', 'price'],
     table: [
       { serviceType: 'QC Service', serviceSubType: 'BioAnalyzer or TapeStation QC', price: '$11/sample' },
+      { serviceType: 'QC Service', serviceSubType: 'QC of DMP DNA or Libraries for External Use', price: '$100/sample' },
       { serviceType: 'QC Service', serviceSubType: 'Qubit/Quant-it', price: '$6.50/sample' },
       { serviceType: 'QC Service', serviceSubType: '%Human for PDX', price: '$12/sample' },
       { serviceType: 'QC Service', serviceSubType: 'Cell Line Authentication', price: '$30/sample' },
