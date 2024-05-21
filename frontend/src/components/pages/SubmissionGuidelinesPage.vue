@@ -37,7 +37,7 @@
                   <md-list-item class="md-inset">
                     <ol>
                       <li><router-link :to="{ name: 'tissue' }">Check</router-link> our accepted preservation types and recommendations for DNA & RNA extraction</li>
-                      <li>Fill out an iLab request for Nucleic Acid Extraction</li>
+                      <li>Fill out an iLab request for Nucleic Acid Extraction -- please note that you can now submit your material directly for most applications and select the extraction option on the iLab form, so extraction requests should only be used when you are picking up the material, testing yield or quality, have a dual extraction, are unsure of the downstream application, or plan to batch samples extracted at different times</li>
                       <li><strong>FFPE curls/punches only:</strong> Schedule a <a :href="spmCalendar" target="__blank">Sample Container Pick Up appointment</a> to request AutoLys tubes.</li>
                       <li><strong>Tissue/cells in Eppendorf tubes only:</strong> Schedule a <a :href="spmCalendar" target="__blank">Sample Container Pick Up appointment</a> to request Eppendorf tube labels</li>
                       <li>Submit the sample webform, selecting your <strong>downstream application</strong> (the type of sequencing or analysis you’ll eventually need) if you know it. If you do not know your downstream application, do not have a downstream application, or have multiple downstream applications, select the appropriate application:
