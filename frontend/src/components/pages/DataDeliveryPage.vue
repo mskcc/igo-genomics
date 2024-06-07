@@ -204,16 +204,13 @@
           FASTQ files will be linked to the project folder for <b>3 years</b>.
         </p>
         <p>
-          BAM files will be available for <b>6 months</b>.
-        </p>
-        <p>
-          Cell Ranger, Space Ranger, and CRISPResso2 results will be available for <b>3 months</b>.
+          BAM, Cell Ranger, Space Ranger, and CRISPResso2 results will be available for <b>3 months</b>.
         </p>
         <p>
           POD5 (formerly FAST5) files will be maintained for <b>30 days</b>.
         </p>
         <p>
-          All deliverables except for POD5 can be recovered after their expiration date using the <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">"Regeneration of FASTQ, BAM, or pipeline files" form</a> under Post-processing services. There will be both a delay and a fee.
+          All deliverables except for POD5 can be recovered after their expiration date using the <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">"Regeneration of FASTQ, BAM, or pipeline files" form</a> under Pre- or Post-Processing Services. There will be both a delay and a fee.
         </p>
         
       </md-app-content>

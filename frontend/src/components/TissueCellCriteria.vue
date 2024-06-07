@@ -30,7 +30,7 @@
         <md-table-cell>Diluted nuclei buffer<sup>a<md-tooltip v-if="footnotes.a" md-direction="right">{{ footnotes.a }}</md-tooltip></sup></md-table-cell>
         <md-table-cell rowspan="3">1.5mL Eppendorf tube</md-table-cell>
         <md-table-cell rowspan="3">4&deg;C</md-table-cell>
-        <md-table-cell>3230-8060 nuclei/&mu;L in 50&mu;L</md-table-cell>
+        <md-table-cell>3230-8060 nuclei/&mu;L in 12&mu;L</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell rowspan="2">10X Genomics scRNA-Seq</md-table-cell>
