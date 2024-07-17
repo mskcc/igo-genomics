@@ -1,5 +1,18 @@
 export const news = [
   {
+    title: "Now Available: Walk-up Sequencing on the Element Aviti",
+    date: 'July 17, 2024',
+    imgSource: 'aviti',
+    categories: ['featured'],
+    body: `<p>
+    Does your lab want to take control of your own sequencing? Now you can sequence at your own convenience, with our walk-up service on the Element Aviti.<br />
+    <br />
+    IGO will train you on how to load the sequencer (training sessions can be booked through iLab for $400), and then you can bring your own samples and reagents for just a $35 maintenance fee per run.<br />
+    <br />
+    For more information about the instrument, you can visit <a href="https://www.elementbiosciences.com/products/aviti" target="__blank">Element's website</a>. For more information about the service, please email us at genomics@mskcc.org.
+    </p>`,
+  },
+  {
     title: "Changes to IGO Sample Submission",
     date: 'May 21, 2024',
     imgSource: 'IGO_210408_177',
@@ -64,7 +77,7 @@ export const news = [
     title: "New NovaSeq X in IGO means lower 10X sequencing prices",
     date: 'September 28, 2023',
     imgSource: 'novaseqx',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     With the inclusion of the NovaSeq X (designated FAUCI) to IGO's sequencing fleet, we are able to decrease standard pricing for 10X Genomics sequencing for IGO samples and user libraries (including those submitted through SAIL) 60%, to $1.20/M reads.<br />
     <br />
@@ -537,6 +550,7 @@ export const teams = [
       { name: 'Katherine Allard', role: 'Senior Research Assistant', photoName: 'Allard_Katherine' },
       { name: 'Kiruthika Balasubramanian', role: 'Research Assistant', photoName: 'Balasubramanian_Kiruthika' },
       { name: 'Magdalena Alioto Grace', role: 'Research Technician', photoName: 'Alioto_Grace_Magdalena' },
+      { name: 'Sonia Rodriguez', role: 'Senior Research Technician', photoName: '' },
       { name: 'Sophia Rust', role: 'Research Technician', photoName: 'Rust_Sophia' },
       // { name: 'Open Position!', role: 'Supervisor' },
       // { name: 'Open Position!', role: 'Research Technician' },
@@ -551,7 +565,6 @@ export const teams = [
       { name: 'Liping Sun', role: 'Manager', photoName: 'Sun_Liping' },
       { name: 'Desmond Lambe', role: 'Research Technician', photoName: 'Lambe_Desmond' },
       { name: 'Jim Chen', role: 'Research Assistant', photoName: 'Chen_Jim' },
-      { name: 'Medhini Mankale', role: 'Research Technician', photoName: 'Mankale_Medhini' },
       { name: 'Mingqiang Zhuang', role: 'Research Assistant', photoName: 'Zhuang_Mingqiang' },
       // { name: 'Open Position!', role: 'Research Assistant', },
     ],
