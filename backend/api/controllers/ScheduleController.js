@@ -55,7 +55,7 @@ exports.bookTime = [
           end: end,
           // summary: '10x Sample Dropoff',
           summary: `${form.requestType} Sample Dropoff`,
-          location: 'ZRC 320',
+          location: 'Schwartz 7th floor',
           description: "Please don't be late.",
           organizer:
             'zzPDL_SKI_IGO_Pathextrdasdadaaction <zzPDL_SKI_IGO_Pathextdasdadaraction@mskcc.org>',

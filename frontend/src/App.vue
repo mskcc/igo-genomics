@@ -130,8 +130,8 @@
         <img src="./assets/svg/msk-logo.svg" alt="MSK logo" />
         <div class="md-body-2">
           Sample receiving hours:<br />
-          Mon-Fri 8:30a-3:30p by appt <br />ZRC-320 North<br />
-          Tel: 646-888-3856
+          Mon-Fri 8:30a-3:30p by appt <br />Schwartz 7th floor<br />
+          Tel: 212-636-2953
         </div>
       </div>
     </div>
