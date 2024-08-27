@@ -131,7 +131,7 @@
         <div class="md-body-2">
           Sample receiving hours:<br />
           Mon-Fri 8:30a-3:30p by appt <br />Schwartz 7th floor<br />
-          Tel: 212-636-2953
+          Tel: 212-639-2953
         </div>
       </div>
     </div>
