@@ -56,23 +56,13 @@
         <md-table-cell class="pass">RIN &gt; 6</md-table-cell>
       </md-table-row>
       <md-table-row>
-      <md-table-cell rowspan="3">Oxford Nanopore cDNA-Seq</md-table-cell>
+      <md-table-cell>Oxford Nanopore cDNA-Seq</md-table-cell>
         <md-table-cell>total RNA</md-table-cell>
-        <md-table-cell class="pass">30,000ng | 30&#181;g</md-table-cell>
-        <md-table-cell class="try">20,000ng | 20&#181;g</md-table-cell>
+        <md-table-cell class="pass">2,000ng | 2&#181;g</md-table-cell>
+        <md-table-cell class="try">1,000ng | 1&#181;g</md-table-cell>
         <md-table-cell class="pass">RIN &GreaterEqual; 7, 260/230 & 260/280 &GreaterEqual; 1.7</md-table-cell>
-        <md-table-cell rowspan="3" class="try">260/230 & 260/280 &lt; 1.7<sup>a<md-tooltip v-if="footnotes.a" md-direction="right">{{ footnotes.a }}</md-tooltip></sup></md-table-cell>
-        <md-table-cell rowspan="3">25&#181;L</md-table-cell>
-      </md-table-row>
-      <md-table-row>
-        <md-table-cell>mRNA (polyadenylated)</md-table-cell>
-        <md-table-cell rowspan="2" class="pass">200ng</md-table-cell>
-        <md-table-cell rowspan="2" class="try">80ng</md-table-cell>
-        <md-table-cell class="pass">260/230 & 260/280 &GreaterEqual; 1.7</md-table-cell>
-      </md-table-row>
-      <md-table-row>
-        <md-table-cell>cDNA</md-table-cell>
-        <md-table-cell class="pass">DIN &GreaterEqual; 8, 260/230 & 260/280 &GreaterEqual; 1.7</md-table-cell>
+        <md-table-cell class="try">RIN &GreaterEqual; 6, 260/230 & 260/280 &lt; 1.7<sup>a<md-tooltip v-if="footnotes.a" md-direction="right">{{ footnotes.a }}</md-tooltip></sup></md-table-cell>
+        <md-table-cell>10&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>RNA Capture</md-table-cell>

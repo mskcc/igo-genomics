@@ -110,6 +110,13 @@
               <md-table-cell>N/A</md-table-cell>
             </md-table-row>
             <md-table-row>
+              <md-table-cell>1200</md-table-cell>
+              <md-table-cell colspan="3">$3660</md-table-cell>
+              <md-table-cell>$4470</md-table-cell>
+              <md-table-cell>$5045</md-table-cell>
+              <md-table-cell colspan="2">N/A</md-table-cell>
+            </md-table-row>
+            <md-table-row>
               <md-table-cell>1600</md-table-cell>
               <md-table-cell colspan="3">$4995</md-table-cell>
               <md-table-cell>$6015</md-table-cell>

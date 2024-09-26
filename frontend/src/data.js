@@ -1,5 +1,16 @@
 export const news = [
   {
+    title: "Now Available: Bionano Optical Genome Mapping",
+    date: 'September 25, 2024',
+    imgSource: 'bionano',
+    categories: ['featured'],
+    body: `<p>
+    In collaboration with the Molecular Cytology Core Facility, IGO is now offering Optical Genome Mapping on the Bionano Saphyr system. Samples can be submitted to IGO for ultra-high molecular weight DNA extraction and labeling. IGO will then transfer the samples seamlessly to MCCF for scanning.<br />
+    <br />
+    For more information about the service, please email us at genomics@mskcc.org or MCCF at tippingm@mskcc.org.
+    </p>`,
+  },
+  {
     title: "Now Available: Walk-up Sequencing on the Element Aviti",
     date: 'July 17, 2024',
     imgSource: 'aviti',
@@ -38,7 +49,7 @@ export const news = [
     title: "IGO is now located in Schwartz on floor 7",
     date: 'May 3, 2024',
     imgSource: '',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     IGO is moving operations from the 3rd floor of Zuckerman to the 7th floor of Schwartz (1250 1st Avenue).<br />
     <br />
@@ -474,7 +485,7 @@ export const teams = [
       'As a large, high-throughput facility constantly striving for technical excellence and exemplary customer service, IGO has several employees who work between and among teams and directly with investigators.',
     members: [      
       { name: 'Andrea John', role: 'Billing/Procurement Associate', photoName: 'John_Andrea' },
-      { name: 'Ayat Yaseen', role: 'Lab Manager', photoName: '' },
+      { name: 'Ayat Yaseen', role: 'Lab Manager', photoName: 'Yaseen_Ayat' },
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
       { name: 'Shauna Tuso', role: 'Admin Assistant', photoName: 'Tuso_Shauna' },
       // { name: 'Open Position!', role: 'Administrative Assistant' },
@@ -517,8 +528,8 @@ export const teams = [
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
       { name: 'Gretchen Mack', role: 'Research Technician', photoName: 'Mack_Gretchen' },
       { name: 'Jinghui Song', role: 'Supervisor, Spatial Transcriptomics', photoName: 'Song_Jinghui' },
+      { name: 'Jonathan Kunkel-Jure', role: 'Senior Research Technician', photoName: 'Kunkel-Jure_Jonathan' },
       { name: 'Keumsil Hwang', role: 'Research Specialist', photoName: 'Hwang_Keumsil' },
-      { name: 'Lauren Walsh', role: 'Intern', photoName: 'Walsh_Lauren' },
       { name: 'Matthew Solowsky', role: 'Research Assistant', photoName: 'Solowsky_Matthew' },
       { name: 'Qingyun Tian', role: 'Senior Research Assistant', photoName: 'Tian_Qingyun' },
       // { name: 'Open Position!', role: 'Research Technician' },
@@ -550,8 +561,7 @@ export const teams = [
       { name: 'Katherine Allard', role: 'Senior Research Assistant', photoName: 'Allard_Katherine' },
       { name: 'Kiruthika Balasubramanian', role: 'Research Assistant', photoName: 'Balasubramanian_Kiruthika' },
       { name: 'Magdalena Alioto Grace', role: 'Research Technician', photoName: 'Alioto_Grace_Magdalena' },
-      { name: 'Sonia Rodriguez', role: 'Senior Research Technician', photoName: '' },
-      { name: 'Sophia Rust', role: 'Research Technician', photoName: 'Rust_Sophia' },
+      { name: 'Sonia Rodriguez', role: 'Senior Research Technician', photoName: 'Rodriguez_Sonia' },
       // { name: 'Open Position!', role: 'Supervisor' },
       // { name: 'Open Position!', role: 'Research Technician' },
     ],
@@ -563,7 +573,8 @@ export const teams = [
       "The Sequencing Team performs all activities related to Illumina and Oxford Nanopore sequencing, including quantity and quality assessment of libraries, pooling, and preparation for sequencing. The team is also responsible for the care & feeding of IGO's 9 sequencing instruments.",
     members: [
       { name: 'Liping Sun', role: 'Manager', photoName: 'Sun_Liping' },
-      { name: 'Desmond Lambe', role: 'Research Technician', photoName: 'Lambe_Desmond' },
+      { name: 'Desmond Lambe', role: 'Senior Research Technician', photoName: 'Lambe_Desmond' },
+      { name: 'Grace Chung', role: 'Research Assistant', photoName: 'Chung_Grace' },
       { name: 'Jim Chen', role: 'Research Assistant', photoName: 'Chen_Jim' },
       { name: 'Mingqiang Zhuang', role: 'Research Assistant', photoName: 'Zhuang_Mingqiang' },
       // { name: 'Open Position!', role: 'Research Assistant', },
@@ -579,7 +590,7 @@ export const teams = [
       { name: 'Cuijie Lu', role: 'Bioinfo. Software Engineer II', photoName: 'Lu_Cuijie' },
       { name: 'Darrell Nabors', role: 'Bioinformatics Engineer V', photoName: 'Nabors_Darrell' },
       { name: 'Fahimeh Mirhaj', role: 'Bioinfo. Software Engineer III', photoName: 'Mirhaj_Fahimeh' },
-      { name: 'Joon Park', role: 'Intern', photoName: '' },
+      { name: 'Ojasvi Patel', role: 'Bioinfo. Software Engineer II', photoName: 'Patel_Ojasvi' },
       // { name: 'Open Position!', role: 'Bioinformatics Software Engineer II' },
     ],
   },
