@@ -24,7 +24,7 @@
                     <i class="fas fa-vials reservations-button-icon"></i>
                 </div>
                 <div class="md-title">
-                    Sample Drop Off
+                    Sample Drop Off (<i>not</i> 10X Genomics)
                 </div>
             </a>
         </div>
@@ -34,7 +34,7 @@
                     <i class="fas fa-vial reservations-button-icon"></i>
                 </div>
                 <div class="md-title">
-                    Fresh Single Cell
+                    Fresh Single Cell (includes 10X Genomics scRNA-Seq and Multiome)
                 </div>
             </a>
         </div>
@@ -44,10 +44,10 @@
         <md-dialog-content md-dynamic-height>
             Sample drop offs cannot be scheduled until the following forms have been submitted:
             <ol>
-                <li><a href="https://my.ilabsolutions.com/account/saml/mskcc" target="__blank">iLabs request</a></li>
+                <li><a href="https://my.ilabsolutions.com/account/saml/mskcc" target="__blank">iLab request</a></li>
                 <li><a href="https://igo.mskcc.org/sample-submission" target="__blank">Sample Submission form</a></li>
             </ol>
-            For more information please see our <router-link :to="{ name: 'submission guidelines' }">submission guidelines</router-link>
+            For more information please see our <router-link :to="{ name: 'submission guidelines' }">submission guidelines</router-link>. Please note that this calendar for all sample drop off <i>except</i> fresh single cell/nuclei samples for 10X Genomics processing.
         </md-dialog-content>
         <md-dialog-actions>
           <md-button class="md-primary" :href="spmCalendar">Yes</md-button>
@@ -59,7 +59,7 @@
         <md-dialog-content md-dynamic-height>
             Sample drop offs cannot be scheduled until the following forms have been submitted:
             <ol>
-                <li><a href="https://my.ilabsolutions.com/account/saml/mskcc" target="__blank">iLabs request</a></li>
+                <li><a href="https://my.ilabsolutions.com/account/saml/mskcc" target="__blank">iLab request</a></li>
                 <li><a href="https://igo.mskcc.org/sample-submission" target="__blank">Sample Submission form</a></li>
             </ol>
             For more information please see our <router-link :to="{ name: 'submission guidelines' }">submission guidelines</router-link>
