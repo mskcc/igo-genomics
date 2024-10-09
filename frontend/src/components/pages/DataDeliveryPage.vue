@@ -166,7 +166,7 @@
         </p>
         <div class="md-subheading">POD5 files</div>
         <p>
-          POD5 is the raw data output of the Oxford Nanopore long-read sequencer (replacing FAST5). An advantage to saving your POD5 files is that you may be able to re-analyze them if improvements to the base-calling algorithm are made. The files are very large, so while they are an option for delivery, IGO will delete them after <b>30 days</b>. Basecalling to FASTQ files is part of the ONT sequencing service, and those files will be treated like all other IGO FASTQs. <b>POD5 files cannot be recovered after deletion!</b>
+          POD5 is the raw data output of the Oxford Nanopore long-read sequencer (replacing FAST5). An advantage to saving your POD5 files is that you may be able to re-analyze them if improvements to the base-calling algorithm are made. The files are very large, so while they are an option for delivery, IGO will delete them after <b>7 days</b>. Basecalling to FASTQ files is part of the ONT sequencing service, and those files will be treated like all other IGO FASTQs. <b>POD5 files cannot be recovered after deletion!</b>
         </p>
         <div class="md-subheading">Cell Ranger, Space Ranger, and Tapestri</div>
         <p>
@@ -207,7 +207,7 @@
           BAM, Cell Ranger, Space Ranger, and CRISPResso2 results will be available for <b>3 months</b>.
         </p>
         <p>
-          POD5 (formerly FAST5) files will be maintained for <b>30 days</b>.
+          POD5 (formerly FAST5) files will be maintained for <b>7 days</b>.
         </p>
         <p>
           All deliverables except for POD5 can be recovered after their expiration date using the <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">"Regeneration of FASTQ, BAM, or pipeline files" form</a> under Pre- or Post-Processing Services. There will be both a delay and a fee.
