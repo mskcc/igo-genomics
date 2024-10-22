@@ -1,5 +1,18 @@
 export const news = [
   {
+    title: "IGO's Annual Halloween Open House",
+    date: 'October 22, 2024',
+    imgSource: 'openhouse24',
+    categories: ['featured'],
+    body: `<p>
+    Come visit IGO in our new home on Schwartz 7 on Thursday, October 31 between 11am and 3pm! Tour the new lab, play games for prizes, meet with vendors, submit your cell phone for Swab & Seq, and more!<br />
+    <br />
+    New this year, MSKCC Research Facilities is sponsoring a costume contest -- wear your best, bring your labmates, and come take your picture in the Open House photo booth to enter!<br />
+    <br />
+    Sign up <a href="https://outlook.office365.com/owa/calendar/HalloweenOpenHouse@mskcc.onmicrosoft.com/bookings/">here</a> for workshops on sample submission, spatial transcriptomics, long read sequencing, or making your own libraries to sequence. You can also book a 1:1 meeting with one of our experts.
+    </p>`,
+  },
+  {
     title: "Now Available: Bionano Optical Genome Mapping",
     date: 'September 25, 2024',
     imgSource: 'bionano',
@@ -27,7 +40,7 @@ export const news = [
     title: "Changes to IGO Sample Submission",
     date: 'May 21, 2024',
     imgSource: 'IGO_210408_177',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     In an effort to standardize our internal metadata and simplify sample submission for investigators, changes to both iLab and the Sample Submission webform are now live. In iLab:<br />
     <ul>
@@ -637,12 +650,12 @@ export const bulkServices = [
     deliverable: 'FASTQ; Pipeline analysis options available from CMO or BIC with additional charges',
     tableHeaders: ['sampleCoverage', 'sampleCostFrozen', 'sampleCostFfpe'],
     table: [
-      { sampleCoverage: 30, sampleCostFrozen: 230, sampleCostFfpe: 458 },
-      { sampleCoverage: 70, sampleCostFrozen: 289, sampleCostFfpe: 580 },
-      { sampleCoverage: 100, sampleCostFrozen: 334, sampleCostFfpe: 668 },
-      { sampleCoverage: 150, sampleCostFrozen: 408, sampleCostFfpe: 808 },
-      { sampleCoverage: 200, sampleCostFrozen: 482, sampleCostFfpe: 966 },
-      { sampleCoverage: 250, sampleCostFrozen: 556, sampleCostFfpe: 1106 },
+      { sampleCoverage: 30, sampleCostFrozen: 230, sampleCostFfpe: 335 },
+      { sampleCoverage: 70, sampleCostFrozen: 289, sampleCostFfpe: 415 },
+      { sampleCoverage: 100, sampleCostFrozen: 334, sampleCostFfpe: 480 },
+      { sampleCoverage: 150, sampleCostFrozen: 408, sampleCostFfpe: 585 },
+      { sampleCoverage: 200, sampleCostFrozen: 482, sampleCostFfpe: 690 },
+      { sampleCoverage: 250, sampleCostFrozen: 556, sampleCostFfpe: 790 },
     ],
   },
   {
@@ -817,6 +830,18 @@ export const singleServices = [
     tissueOptimizationCost: '$1,150 (once/tissue; frozen only)',
     libraryCost: 'v1: $7,500 slide; CytAssist (6.5mm): $4,500/slide; CytAssist (11mm): $8,750/slide',
     sequencingCost: '$24-1,300/slide (average $310/slide)',
+  },
+  {
+    id: 3,
+    name: '10X Genomics Visium HD',
+    description: 'Single cell resolution on the Visium platform',
+    startingMaterial: 'FFPE tissue',
+    libraryChemistry: 'Visium probe set v2',
+    sequencingReadLength: 'custom',
+    sequencingCoverage: '>50% sequencing saturation',
+    deliverable: 'FASTQ, Space Ranger output',
+    libraryCost: '$7,750/2 slides',
+    sequencingCost: '$2-3,000/2 slides (dependent on both capture area and logistics)',
   },
   {
     id: 4,
