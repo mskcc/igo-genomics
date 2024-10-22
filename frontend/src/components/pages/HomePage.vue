@@ -4,7 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        Coming soon: Optical Genome Mapping with the bionano system in collaboration with the Molecular Cytology Core Facility
+        Now available: 10X Genomics Visium HD
       </span>
     </div>
 
