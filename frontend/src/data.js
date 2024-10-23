@@ -1026,20 +1026,20 @@ export const archerFusionGenes = [
 ];
 
 export const tutorials = [
-  {
-    slug: 'ilabs_sample_sub',
-    title: 'IGO’s iLab and Sample Submission Process',
-    speakers: 'Marisa Dunigan and Lisa Wagner',
-    date: 'May 5, 2020',
-    screenshot: 'ilab_sample_submission',
-  },
-  {
-    slug: 'howToSubmit_v1',
-    title: 'How to Submit Samples',
-    speakers: '',
-    date: 'June 15, 2023',
-    screenshot: 'submit_samples_howto',
-  },
+  // {
+  //   slug: 'ilabs_sample_sub',
+  //   title: 'IGO’s iLab and Sample Submission Process',
+  //   speakers: 'Marisa Dunigan and Lisa Wagner',
+  //   date: 'May 5, 2020',
+  //   screenshot: 'ilab_sample_submission',
+  // },
+  // {
+  //   slug: 'howToSubmit_v1',
+  //   title: 'How to Submit Samples',
+  //   speakers: '',
+  //   date: 'June 15, 2023',
+  //   screenshot: 'submit_samples_howto',
+  // },
   {
     slug: 'splunk_webinar',
     title: 'Splunk: a Data Visualization Tool used for Operational Insight',
