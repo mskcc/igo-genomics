@@ -89,6 +89,15 @@
         <md-table-cell class="try">20ng</md-table-cell>
       </md-table-row>
       <md-table-row>
+        <md-table-cell>Methyl Capture Seq</md-table-cell>
+        <md-table-cell></md-table-cell>
+        <md-table-cell class="pass">200ng</md-table-cell>
+        <md-table-cell class="try">50ng</md-table-cell>
+        <md-table-cell class="pass">DIN > 5</md-table-cell>
+        <md-table-cell class="try"> DIN > 3</md-table-cell>
+        <md-table-cell>50&#181;L</md-table-cell>
+      </md-table-row>
+      <md-table-row>
         <md-table-cell rowspan="2">MSK-ACCESS</md-table-cell>
         <md-table-cell>cfDNA</md-table-cell>
         <md-table-cell class="pass">20ng</md-table-cell>
