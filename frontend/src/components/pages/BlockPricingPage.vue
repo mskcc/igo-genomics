@@ -99,7 +99,7 @@
               <md-table-cell colspan="3">$1,040</md-table-cell>
               <md-table-cell>$1,185</md-table-cell>
               <md-table-cell>$1,265</md-table-cell>
-              <md-table-cell colspan="2">N/A</md-table-cell>
+              <md-table-cell colspan="2">$3,000</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>800M</md-table-cell>
