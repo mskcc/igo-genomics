@@ -55,13 +55,13 @@
 
       <md-list-item md-expand>
         <md-icon>add</md-icon>
-        <span class="md-list-item-text md-title">I need &gt; 20M reads & my run type is PE100, PE150, or 10X Genomics </span>
+        <span class="md-list-item-text md-title">I need &gt; 20M reads & my run type is PE100, PE150, or 10x Genomics </span>
         <md-list slot="md-expand">
         <md-list-item>
           <ul>
-            <li>PE100 or PE150: $2.00/million reads</li>
-            <li>10X (28/10/10/88): $1.20/million reads</li>
-            <li>10X ATAC (50/8/16 or 50/24/48): $2.40/million reads</li>
+            <li>PE100 or PE150: $2.30/million reads</li>
+            <li>10x (28/10/10/88): $1.40/million reads</li>
+            <li>10x ATAC (50/8/16/50 or 50/8/24/50): $2.80/million reads</li>
           </ul>
         </md-list-item>
         <md-list-item style="font-style: italic;">10-20M reads/sample OR &gt;20M reads/pool minimum </md-list-item>

@@ -278,7 +278,7 @@
       <div>other prices</div> -->
     </div>
     <span class="md-caption" style="text-align: right;">
-      Prices indicated on this webpage are an estimation and can be adjusted (higher or lower) at any point in time based on changes in sequencing reagent cost, labor cost, etc. Note that prices do not include QC. Coverage is calculated based on DRAGEN v3.10 metrics and may not reflect coverage from other alignments or algorithms.
+      Prices indicated on this webpage are an estimation and can be adjusted (higher or lower) at any point in time based on changes in sequencing reagent cost, labor cost, etc. Note that prices do not include QC. Coverage is calculated based on DRAGEN v3.10 metrics and may not reflect coverage from other alignments or algorithms. Contact us for information on bulk (more than 300 samples) projects.
     </span>
   </div>
 </template>
