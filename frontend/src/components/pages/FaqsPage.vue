@@ -72,6 +72,17 @@
                     </md-list-item>
                     <md-list-item md-expand class="md-inset">
                       <md-icon>add</md-icon>
+                      <span class="md-list-item-text">Does IGO do bulk pricing for large requests?</span>
+                      <md-list slot="md-expand">
+                        <md-list-item>
+                          <div>
+                            IGO services are priced for bulk and automated processing to provide the best price for projects of most sizes. However, if you have over 300 samples, please contact us for information about potentially lower prices.
+                          </div>
+                        </md-list-item>
+                      </md-list>
+                    </md-list-item>
+                    <md-list-item md-expand class="md-inset">
+                      <md-icon>add</md-icon>
                       <span class="md-list-item-text">I want to sequence a tumor sample for a patient. How do I know if there is a normal available?</span>
                       <md-list slot="md-expand">
                         <md-list-item>
@@ -422,7 +433,8 @@
                               <li>The sample was not suspended in the correct RNA-preserving solution</li>
                               <li>A necrotic region of tumor was biopsied</li>
                               <li>
-                                Tissue dissection was not done in RNase-free conditions or on dry iceSample accidentally thawed and refrozen
+                                Tissue dissection was not done in RNase-free conditions or on dry ice</li>
+                                <li>Sample accidentally thawed and refrozen
                               </li>
                               <li>
                                 Sample remained at room temperature for too long before freezing
@@ -562,7 +574,7 @@
                       <md-list slot="md-expand">
                         <md-list-item>
                           <div>
-                            Currently we will leave FASTQ files linked to the project folder for <b>5 years</b>. After that time, we will be able to regenerate FASTQ files upon request, but there will be a charge and a processing delay. BAM files and pipeline output are kept for 3 months.
+                            Currently we will leave FASTQ files linked to the project folder for <b>3 years</b>. After that time, we will be able to regenerate FASTQ files upon request, but there will be a charge and a processing delay. BAM files and pipeline output are kept for 3 months.
                           </div>
                         </md-list-item>
                       </md-list>

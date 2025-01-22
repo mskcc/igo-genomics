@@ -842,7 +842,7 @@ export const singleServices = [
     sequencingReadLength: 'custom',
     sequencingCoverage: '>50% sequencing saturation',
     deliverable: 'FASTQ, Space Ranger output',
-    libraryCost: '$7,750/2 slides',
+    libraryCost: '$7,750 slide',
     sequencingCost: '$2-3,000/2 slides (dependent on both capture area and logistics)',
   },
   {
@@ -897,7 +897,7 @@ export const singleServices = [
     sequencingCoverage: 'N/A',
     deliverable: 'Analysis with Xenium Ranger',
     startingMaterial: 'FFPE or FF',
-    runCost: '$1,000/2 slides (labor) + panel and reagent costs (inquire at genomics@mskcc.org)',
+    runCost: '$1,580/2 slides for v1 or $1,720/2 slides for Prime 5K (labor) + panel and reagent costs (inquire at genomics@mskcc.org)',
   },
 ];
 
@@ -933,7 +933,7 @@ export const otherServices = [
       { startingMaterial: 'FFPE', extractionOutput: 'RNA', sampleCost: 48 },
       { startingMaterial: 'Non-FFPE', extractionOutput: 'DNA + RNA (simultaneous extraction)', sampleCost: 67 },
       { startingMaterial: 'FFPE', extractionOutput: 'DNA + RNA (simultaneous extraction)', sampleCost: 55 },
-      { startingMaterial: 'Cells/tissue', extractionOutput: 'ultra hmwDNA + Bionano labeling', sampleCost: 275 },
+      { startingMaterial: 'Cells/tissue', extractionOutput: 'ultra hmwDNA + Bionano labeling', sampleCost: 180 },
       { startingMaterial: 'Special processing', extractionOutput: 'DNA/RNA', sampleCost: 15 },
     ],
   },
