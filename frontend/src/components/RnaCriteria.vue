@@ -117,7 +117,7 @@
         <md-table-cell class="try">No fail range</md-table-cell>
         <md-table-cell class="try">RIN > 7</md-table-cell>
         <md-table-cell class="try">No fail range</md-table-cell>
-        <md-table-cell rowspan="2">10&#181;L</md-table-cell>
+        <md-table-cell>10&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell colspan="7">
