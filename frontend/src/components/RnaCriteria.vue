@@ -24,11 +24,11 @@
         <md-table-cell rowspan="4">N/A</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell>Fixed Frozen (CytAssist)</md-table-cell>
+        <md-table-cell>Fixed Frozen (CytAssist/HD)</md-table-cell>
         <md-table-cell class="pass">DV200 > 50</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell>Frozen (CytAssist)</md-table-cell>
+        <md-table-cell>Frozen (CytAssist/HD)</md-table-cell>
         <md-table-cell class="pass">RIN > 4</md-table-cell>
       </md-table-row>
       <md-table-row>

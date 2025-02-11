@@ -837,7 +837,7 @@ export const singleServices = [
     id: 3,
     name: '10X Genomics Visium HD',
     description: 'Single cell resolution on the Visium platform',
-    startingMaterial: 'FFPE tissue',
+    startingMaterial: 'FFPE, fresh frozen, or fixed frozen tissue',
     libraryChemistry: 'Visium probe set v2',
     sequencingReadLength: 'custom',
     sequencingCoverage: '>50% sequencing saturation',
