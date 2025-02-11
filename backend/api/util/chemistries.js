@@ -32,6 +32,12 @@ module.exports = [
   {
     name: 'Library Prep: KAPA Hyper',
     start: '01-01-2014',
+    stop: '01-01-2025',
+    color: '#009490',
+  },
+  {
+    name: 'Library Prep: KAPA EvoPrep',
+    start: '01-01-2025',
     stop: 'present',
     color: '#009490',
   },

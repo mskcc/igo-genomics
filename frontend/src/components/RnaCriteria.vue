@@ -24,11 +24,11 @@
         <md-table-cell rowspan="4">N/A</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell>Fixed Frozen (CytAssist)</md-table-cell>
+        <md-table-cell>Fixed Frozen (CytAssist/HD)</md-table-cell>
         <md-table-cell class="pass">DV200 > 50</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell>Frozen (CytAssist)</md-table-cell>
+        <md-table-cell>Frozen (CytAssist/HD)</md-table-cell>
         <md-table-cell class="pass">RIN > 4</md-table-cell>
       </md-table-row>
       <md-table-row>
@@ -117,7 +117,7 @@
         <md-table-cell class="try">No fail range</md-table-cell>
         <md-table-cell class="try">RIN > 7</md-table-cell>
         <md-table-cell class="try">No fail range</md-table-cell>
-        <md-table-cell rowspan="2">10&#181;L</md-table-cell>
+        <md-table-cell>10&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell colspan="7">
