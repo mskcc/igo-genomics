@@ -152,11 +152,6 @@
         <md-table-cell>1-5mL</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell>Nanostring GeoMx</md-table-cell>
-        <md-table-cell>Frozen or FFPE Tissue</md-table-cell>
-        <md-table-cell colspan="4" class="center-page"><a href="mailto:mccf@mskcc.org">Contact MCC</a> for sample details</md-table-cell>
-      </md-table-row>
-      <md-table-row>
         <md-table-cell rowspan="11">RNA extraction</md-table-cell>
       </md-table-row>
       <md-table-row>

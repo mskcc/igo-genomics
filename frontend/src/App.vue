@@ -31,8 +31,7 @@
             <md-button :md-ripple="false" :to="{ name: 'faqs' }">FAQs</md-button>
             <md-button :md-ripple="false" :to="{ name: 'careers' }">Careers</md-button>
             <md-button :md-ripple="false" :to="{ name: 'contact us' }">Contact Us</md-button>
-            <a href="https://twitter.com/genomics212?lang=en" target="_blank"><i class="fab fa-twitter fa-1x"></i></a>
-            <a href="https://www.instagram.com/genomics212/" target="_blank"><i class="fab fa-instagram fa-1x"></i></a>
+            <a href="https://linkedin.com/company/igo-mskcc/" target="_blank"><i class="fab fa-linkedin fa-1x"></i></a>
             <div class="search-form">
               <!-- <form>
                 <md-field md-inline>
