@@ -3,7 +3,7 @@ export const news = [
     title: "IGO's Annual Halloween Open House",
     date: 'October 22, 2024',
     imgSource: 'openhouse24',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     Come visit IGO in our new home on Schwartz 7 on Thursday, October 31 between 11am and 3pm! Tour the new lab, play games for prizes, meet with vendors, submit your cell phone for Swab & Seq, and more!<br />
     <br />
@@ -640,14 +640,14 @@ export const teams = [
 export const bulkServices = [
   {
     id: 0,
-    name: 'Whole Exome Sequencing',
+    name: 'Whole Exome Sequencing & MSK-NeoQual',
     description: 'A capture-based assay to assess the entire exome.',
     startingMaterial: 'DNA or DMP Library',
     libraryChemistry: 'KAPA EvoPrep',
     captureChemistry: 'xGen v2.0 from IDT (human); SinglePlex Mouse Exome from Twist (mouse)',
     sequencingReadLength: 'PE100',
     sequencingCoverage: 'Varies (see below)',
-    deliverable: 'FASTQ; Pipeline analysis options available from CMO or BIC with additional charges',
+    deliverable: 'FASTQ; NeoQual pipeline analysis (human); Pipeline analysis options available from CMO or BIC with additional charges',
     tableHeaders: ['sampleCoverage', 'sampleCostFrozen', 'sampleCostFfpe'],
     table: [
       { sampleCoverage: 30, sampleCostFrozen: 230, sampleCostFfpe: 335 },
@@ -770,7 +770,7 @@ export const bulkServices = [
     tableHeaders: ['platform', 'sampleCost'],
     table: [
       { platform: '10X Genomics V(D)J Enrichment', sampleCost: 2368 },
-      { platform: 'IGO-TCR', sampleCost: 300 },
+      { platform: 'IGO-TCR', sampleCost: 335 },
     ],
   },
   {

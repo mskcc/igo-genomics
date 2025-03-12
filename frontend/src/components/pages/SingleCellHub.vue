@@ -10,12 +10,10 @@
           <md-list-item class="indent" href="#overview">Overview</md-list-item>
           <md-list-item class="indent" href="#sample-types">SC/ST Platforms and Supported Sample Types</md-list-item>
           <md-list-item class="indent" href="#scrnaseq">10X Genomics scRNA-Seq</md-list-item>
-          <md-list-item class="indent" href="#plateseq">PlateSeq</md-list-item>
+          <md-list-item class="indent" href="#plateseq">SmartSeq v3 (384-well)</md-list-item>
           <md-list-item class="indent" href="#multiome">10X Genomics Multiome</md-list-item>
-          <!-- <md-list-item class="indent" href="#mbtapestri">Mission Bio Tapestri</md-list-item> -->
           <md-list-item class="indent" href="#dlp">Direct Library Prep (DLP)</md-list-item>
-          <md-list-item class="indent" href="#visium">10X Genomics Visium</md-list-item>
-          <md-list-item class="indent" href="#geomx">Nanostring GeoMx</md-list-item>
+          <md-list-item class="indent" href="#visium">10X Genomics Visium HD</md-list-item>
           <md-list-item :to="{ name: 'platforms & pricing' }">Pricing</md-list-item>
           <md-list-item :to="{ name: 'submission guidelines' }">How to submit samples</md-list-item>
           <md-list-item><a :href="scCalendar" target="__blank">Make a reservation for sample drop off</a></md-list-item>
@@ -37,7 +35,7 @@
           <li>Input: Single cell suspension</li>
           <li>Output: FASTQ, Cell Ranger pipeline output</li>
           <li>
-            Information type: Single-cell resolution of gene expression (either 3'-mRNA or 5'-mRNA-based) with optional TCR enrichment (5'
+            Information type: Single-cell resolution of gene expression (either 3'-mRNA or 5'-mRNA-based) with optional TCR or BCR enrichment (5'
             only). Protein data can also be recovered with Feature Barcoding technology.
           </li>
           <li>
@@ -66,28 +64,30 @@
               </li>
               <li>Please bring your cells in at least 50uL of 800-1200 cells/&mu;L PBS + 0.04% BSA</li>
               <li>Lo-bind tubes are recommended for best results</li>
-              <li>Recovery of 10K cells for analysis can never be guaranteed</li>
+              <li>Recovery of 20K cells for analysis can never be guaranteed</li>
             </ul>
           </li>
+          <li>If you are interested in 10x Genomics Flex for fixed or FFPE samples or scRNA-Seq with on-chip multiplexing, please contact us at genomics@mskcc.org.</li>
         </ul>
 
         <md-divider></md-divider>
 
-        <div class="md-title" id="plateseq">PlateSeq</div>
+        <div class="md-title" id="plateseq">SmartSeq v3 (384-well)</div>
         <ul>
-          <li>Input: 96-well plate with 1-100 sorted cells/well</li>
+          <li>Input: 384-well plate with 1-100 sorted cells/well</li>
           <li>Output: FASTQ</li>
           <li>
             Considerations:
             <ul>
-              <li>PlateSeq is an in-house-developed, SMART-Seq-based, single- or low-cell RNA Sequencing platform</li>
+              <li>SmartSeq v3 (384-well) is an in-house-developed, SMART-Seq-based, single- or low-cell RNA Sequencing platform</li>
               <li>
-                10X Genomics is a more cost effective platform with higher throughput, but PlateSeq is a better choice for primarily a)
+                10X Genomics is a more cost effective platform with higher throughput, but plate-based SmartSeq is a better choice for primarily a)
                 investigators who do not have 50K cells to work with and need something that is tolerant of low throughput or b) investigators
                 who require full-length cDNA, which is not available with 10X Genomics' methods
               </li>
               <li>After sorting, plates can be frozen, so immediate processing by IGO is not required</li>
               <li>1-5M reads/cell recommended for good saturation</li>
+              <li>Investigators with only a handful of samples and 100-1000 cells/sample (who do not want to use a full 384-well plate) could use our standard SMARTer RNA-Seq chemistry starting with cells as input on a 96-well plate</li>
             </ul>
           </li>
         </ul>
@@ -129,28 +129,6 @@
 
         <md-divider></md-divider>
 
-        <!-- <div class="md-title" id="mbtapestri">MissionBio Tapestri</div>
-        <ul>
-          <li>Input: Single cell or nuclei suspension</li>
-          <li>Output: FASTQ, Tapestri pipeline output</li>
-          <li>
-            Considerations:
-            <ul>
-              <li>DNA-based gene enrichment single cell platform for SNV, indel, CNV, LOH, and translocation interrogation</li>
-              <li>
-                IGO offers the Tumor Hotspot panel in stock, but can also process other off-the-shelf or custom DNA panels from MissionBio
-              </li>
-              <li>If you are using a custom panel, please provide IGO with the panel BED file from MissionBio at sample submission</li>
-              <li>DNA+Protein available using TotalSeq-D antibodies from BioLegend</li>
-              <li>Up to 10K cells analyzed</li>
-              <li>IGO requests 100K (for DNA only) or 2M (for DNA+Protein) cells for processing</li>
-              <li>For DNA+Protein, IGO will handle antibody staining</li>
-            </ul>
-          </li>
-        </ul>
-
-        <md-divider></md-divider> -->
-
         <div class="md-title" id="dlp">Direct Library Prep (DLP)</div>
         <ul>
           <li>Input: Single nuclei suspension</li>
@@ -170,21 +148,18 @@
 
         <md-divider></md-divider>
 
-        <div class="md-title" id="visium">10X Genomics Visium</div>
+        <div class="md-title" id="visium">10X Genomics Visium & Visium HD</div>
         <ul>
           <li>Input: Frozen (for v1 or CytAssist), FFPE (CytAssist or HD), or PFA Fixed Frozen (CytAssist) tissue</li>
           <li>Output: FASTQ, Space Ranger count output</li>
           <li>
             Considerations:
             <ul>
-              <li>Each slide has four squares available for tissue sections, each 6.5x6.5mm -- we recommend tissues are processed in duplicate, at two samples per slide</li>
-              <ul>
-                <li>Note: Investigators can choose to buy slides in packs of 1 (4 reactions) or 4 (16 reactions). They will be billed at project initiation for those reagents, and have at least 3 months to use them.</li>
-              </ul>
+              <li>Each slide has two squares available for tissue sections, each 6.5x6.5mm or 11x11mm (Visium CytAssist only)</li>
               <li>We strongly recommend test stainings to ensure structures are visible and cells of interest are part of the usable section.</li>
               <li>IGO works in collaboration with MCC to prepare these samples and MCC bills services separately from IGO.</li>
-              <li>Permeabilization optimization is only necessary with frozen tissue.</li>
-              <li>From frozen tissue, all polyadenylated mRNA can be captured by the poly-dT primers; for FFPE a whole transcriptome (human or mouse) probeset is used to capture RNA.</li>
+              <li>Permeabilization optimization is only necessary with frozen tissue for Visium -- there is no tissue optimization step for Visium HD, even if tissue samples are frozen.</li>
+              <li>From frozen tissue for Visium, all polyadenylated mRNA can be captured by the poly-dT primers; for FFPE and Visium HD, a whole transcriptome (human or mouse) probeset is used to capture RNA.</li>
               <li>FFPE requires about half the reads of frozen, so sequencing costs will be reduced for FFPE (see below for a cost breakdown).</li>
             </ul>
           </li>
@@ -259,26 +234,6 @@
             <md-table-cell>20K reads/spot</md-table-cell>
           </md-table-row>
         </md-table>
-
-        <ten-x-table />
-
-        <md-divider></md-divider>
-
-        <div class="md-title" id="geomx">Nanostring GeoMx</div>
-        <ul>
-          <li>Input: Frozen or FFPE blocks or slides</li>
-          <li>Output: FASTQ + GeoMx pipeline</li>
-          <li>Considerations:
-            <ul>
-              <li>We require that slides be test-stained and visualized before beginning a GeoMx experiment, to ensure that regions of interest are distinct and present</li>
-              <li>While Nanostring-validated morphological staining panels need little optimization, custom panels likely will</li>
-              <li>If selected regions are too small and not enough RNA can be collected, library prep will fail, so we have a 200 micron minimum for ROI circumference</li>
-              <li>ROI size may need to be increased if the targeted cell type (CD45+, for instance) is rarer in the region</li>
-              <li>Multiple areas of interest can be harvested from a single region: for example, from a single ROI, CD45+, tumor, and TME cells can be separately harvested for 3 AOIs</li>
-              <li>Sequencing depth is based on Nanostring recommendations for each panel, but experimental needs can vary</li>
-            </ul>
-          </li>
-        </ul>
       </md-app-content>
     </md-app>
   </div>
@@ -286,11 +241,10 @@
 
 <script>
 import SingleCellTable from '../SingleCellTable.vue';
-import TenXTable from '../TenXTable.vue';
 import { SC_CALENDAR } from './../../config.js';
 
 export default {
-  components: { SingleCellTable, TenXTable },
+  components: { SingleCellTable },
   data: function() {
     return {
       scCalendar: SC_CALENDAR,

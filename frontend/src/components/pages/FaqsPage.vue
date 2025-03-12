@@ -112,6 +112,7 @@
                             <ol>
                               <li>E-mail the cfDNA lab (zzpdl_lab_cfdna_lab@mskcc.org) to inquire if a matching buffy coat has been banked.</li>
                             </ol>
+                            Please note that only tumors and normals sequenced with both the same version of the IMPACT panel and the on the same model of sequencing instrument can be processed through the pipeline together -- therefore older clinical normals may need to be reprocessed to be compatible with current tumor samples.
                           </div>
                         </md-list-item>
                       </md-list>

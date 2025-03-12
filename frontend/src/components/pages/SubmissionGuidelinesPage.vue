@@ -133,7 +133,8 @@
                       <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a>, selecting the appropriate application:
                         <ul>
                           <li>Visium</li>
-                          <li>GeoMx</li>
+                          <li>Visium HD</li>
+                          <li>Xenium</li>
                         </ul></li>
                       <li>Drop off your sample at MCC at the agreed-upon time</li>
                     </ol>

@@ -2,6 +2,12 @@ module.exports = [
   {
     name: "10X Genomics: Next GEM v2 (5')/v3.1 (3')",
     start: '01-01-2021',
+    stop: '11-01-2024',
+    color: '#ff80bf',
+  },
+  {
+    name: "10x Genomics: GEM-X",
+    start: '07-01-2024',
     stop: 'present',
     color: '#ff80bf',
   },
@@ -32,7 +38,7 @@ module.exports = [
   {
     name: 'Library Prep: KAPA Hyper',
     start: '01-01-2014',
-    stop: '01-01-2025',
+    stop: 'present',
     color: '#009490',
   },
   {
@@ -68,6 +74,12 @@ module.exports = [
   {
     name: 'RNA-Seq: TruSeq stranded mRNA/Total (Illumina)',
     start: '01-01-2015',
+    stop: '03-01-2025',
+    color: '#bf80ff',
+  },
+  {
+    name: 'RNA-Seq: Watchmaker total RNA w/ Polaris Depletion/mRNA',
+    start: '03-01-2025',
     stop: 'present',
     color: '#bf80ff',
   },
