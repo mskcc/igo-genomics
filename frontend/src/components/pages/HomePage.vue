@@ -4,7 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        Please note that PE100 sequencing will soon transition from the NovaSeq 6000 to the NovaSeq X.
+        Please note that PE100 sequencing has transitioned from the NovaSeq 6000 to the NovaSeq X.
       </span>
     </div>
 
