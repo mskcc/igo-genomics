@@ -272,8 +272,6 @@
                   <md-list-item class="md-inset">
                     <ol>
                       <li>Fill out an iLab request for “Digital PCR Assay Design”, listing the assay(s) needed and/or attaching the appropriate design file</li>
-                      <li>Schedule a <a :href="spmCalendar" target="__blank">Sample Container Pick Up appointment</a> to request a micronic barcoded tube(s) for your positive control(s).</li>
-                      <li>Submit the <a href="https://igo.mskcc.org/sample-submission">sample webform</a> for your positive control</li>
                       <li>E-mail farinaa@mskcc.org to coordinate sample drop off for your assay optimization</li>
                       <li>Follow the instructions under “DNA or RNA for ddPCR” <strong>or</strong> “Tissue, cells, slides, or other material for nucleic acid extraction”</li>
                     </ol>
