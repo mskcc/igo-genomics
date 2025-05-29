@@ -43,6 +43,10 @@
           <li>On lilac-xfer01.mskcc.org, navigate to /igo/delivery/share/[LABNAME]</li>
           <li>Rsync the data to its final destination -- your command should look like: rsync --copy-links -avz [SOURCE] [DEST]</li>
         </ul>
+        <div class="md-subheading">On Iris:</div>
+        <ul>
+          <li>Navigate to /ifs/datadelivery/igo_core/share/[LABNAME]/</li>
+        </ul>
         <p>
           If you need to grant access to a collaborator or data analyst (internal or external) or an MSKCC core,
           please see the section below on data sharing.
@@ -75,12 +79,7 @@
         <p>
           We encourage investigators to share FASTQ files via Box (accounts can be requested through The Spot), as the sharing is then entirely under your control. There is a 50GB file size limit, which is sufficient for almost all sequencing requests.
 
-          For larger requests or when an HPC approach is preferred, files can be transferred via QBio:
-          <ul>
-            <li>Fill out <a href="https://thespot.mskcc.org/esc/esc?id=sc_cat_item&sys_id=18c2aeeddbbd1110b4d51619139619f5&sysparm_category=3b10ff451bb86510e6f0106fbd4bcb2b&catalog_id=e0d08b13c3330100c8b837659bba8fb4">this Spot request</a></li>
-            <li>Answer "Yes" to the question "Is IGO managing your data share?"</li>
-            <li>If you're unsure of the amount of data to share, please contact us</li>
-          </ul>
+          For larger requests or when an HPC approach is preferred, contact us to transfer via GoAnywhere:
         </p>
         
         <md-divider></md-divider>
@@ -94,7 +93,7 @@
         <p>
           All of our sequencers have names to distinguish them from one another for our databases, their servers, and ease of communication
           among lab members. The run ID, therefore, is the sequencer name followed by the run number; each run ID is unique. MiSeqs: TOMS,
-          VIC, JOHNSAWYERS, AYYAN; NextSeq 500: SCOTT; NextSeq 1000: AMELIE; NextSeq 2000: PEPE; HiSeq 2500: MOMO, KIM; HiSeq 2000: BRAD, LIZ; HiSeq 4000: PITT, JAX; NovaSeq 6000: MICHELLE, DIANA, RUTH; NovaSeq X: FAUCI.
+          VIC, JOHNSAWYERS, AYYAN; NextSeq 500: SCOTT; NextSeq 1000: AMELIE; NextSeq 2000: PEPE; HiSeq 2500: MOMO, KIM; HiSeq 2000: BRAD, LIZ; HiSeq 4000: PITT, JAX; NovaSeq 6000: MICHELLE, DIANA, RUTH; NovaSeq X: FAUCI, FAUCI2, BONO.
         </p>
         <div class="md-subheading">Former Data Structure</div>
         <p>
@@ -136,7 +135,7 @@
           We always strive to meet or exceed read number or coverage requests, however sometimes samples are delivered under those targets, typically due to sample quality or quantity.
         </p>
         <p>
-          We will maintain links to FASTQ files in your share drive for <b>3 years</b>. After that time, links will be deactivated and files will be moved into "cold" storage. <b>Nothing will be permanently deleted</b>. However, there will be both a delay and a charge to recover archived files.
+          We will maintain links to FASTQ files in your share drive for <b>2 years</b>. After that time, links will be deactivated and files will be moved into "cold" storage. <b>Nothing will be permanently deleted</b>. However, there will be both a delay and a charge to recover archived files.
         </p>
         <div class="md-subheading">BAM files</div>
         <p>
@@ -187,7 +186,7 @@
         </p>
         <div class="md-subheading">CRISPresso</div>
         <p>
-          CRISPResso2 output is delivered for CRISPRSeq projects that have selected that option. We run with default parameters and the information provided in iLab, so the pipeline isn't necessarily tailored for your experiment. You can learn more about CRISPResso2, the available parameters, and run your FASTQ files yourself by visiting <a href="http://crispresso.pinellolab.org/submission" target="_blank">crispresso.pinellolab.org</a>.
+          CRISPResso2 output is delivered for CRISPRSeq projects that have selected that option and submitted a valid template. We run with default parameters and the information provided in iLab, so the pipeline isn't necessarily tailored for your experiment. You can learn more about CRISPResso2, the available parameters, and run your FASTQ files yourself by visiting <a href="http://crispresso.pinellolab.org/submission" target="_blank">crispresso.pinellolab.org</a>.
         </p>
         <p>
           CRISPResso2 data will remain available for <strong>3 months</strong> before being subject to deletion. To request regeneration of older files, submit a request <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">in iLab</a> using the "Regeneration of FASTQ, BAM, or pipeline files" form under Post-processing services. There is a charge for regeneration.
@@ -201,7 +200,7 @@
         <div class="md-title" id="data-storage">Data Storage</div>
         <div class="md-subheading">How long does IGO keep FASTQ files?</div>
         <p>
-          FASTQ files will be linked to the project folder for <b>3 years</b>.
+          FASTQ files will be linked to the project folder for <b>2 years</b>.
         </p>
         <p>
           BAM, Cell Ranger, Space Ranger, and CRISPResso2 results will be available for <b>3 months</b>.
