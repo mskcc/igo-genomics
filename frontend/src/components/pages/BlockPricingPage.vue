@@ -90,50 +90,51 @@
             </md-table-row>
             <md-table-row>
               <md-table-cell>100M</md-table-cell>
-              <md-table-cell colspan="3">$825</md-table-cell>
+              <md-table-cell colspan="3">$930</md-table-cell>
               <md-table-cell colspan="2">$1,350</md-table-cell>
-              <md-table-cell colspan="2">$1,740</md-table-cell>
+              <md-table-cell colspan="2">$2,020</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>400M</md-table-cell>
               <md-table-cell colspan="3">$1,040</md-table-cell>
               <md-table-cell>$1,185</md-table-cell>
-              <md-table-cell>$1,265</md-table-cell>
-              <md-table-cell colspan="2">$3,000</md-table-cell>
+              <md-table-cell>$1,640</md-table-cell>
+              <md-table-cell colspan="2">$3,100</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>800M</md-table-cell>
-              <md-table-cell colspan="3">$2,325</md-table-cell>
-              <md-table-cell>$2,926</md-table-cell>
-              <md-table-cell>$3,579</md-table-cell>
-              <md-table-cell>$5,500</md-table-cell>
+              <md-table-cell colspan="3">$2,480</md-table-cell>
+              <md-table-cell>$3,255</md-table-cell>
+              <md-table-cell>$3,805</md-table-cell>
+              <md-table-cell>$7,500</md-table-cell>
               <md-table-cell>N/A</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>1.2B</md-table-cell>
-              <md-table-cell colspan="3">$1,915</md-table-cell>
+              <md-table-cell colspan="3">$1,600</md-table-cell>
               <md-table-cell>$2,340</md-table-cell>
               <md-table-cell>$2,450</md-table-cell>
               <md-table-cell colspan="2">N/A</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>1.6B</md-table-cell>
-              <md-table-cell colspan="3">$3,820</md-table-cell>
-              <md-table-cell>$4,810</md-table-cell>
-              <md-table-cell>$4,270</md-table-cell>
+              <md-table-cell colspan="3">$1,830</md-table-cell>
+              <md-table-cell>$2,705</md-table-cell>
+              <md-table-cell>$3,000</md-table-cell>
               <md-table-cell colspan="2">N/A</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>3.8B</md-table-cell>
-              <md-table-cell colspan="3">$7,261</md-table-cell>
-              <md-table-cell>$8,974</md-table-cell>
-              <md-table-cell>$9,561</md-table-cell>
+              <md-table-cell colspan="3">$8,690</md-table-cell>
+              <md-table-cell>$10,700</md-table-cell>
+              <md-table-cell>$11,000</md-table-cell>
               <md-table-cell colspan="2">N/A</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>10B</md-table-cell>
               <md-table-cell colspan="3">$8,000</md-table-cell>
-              <md-table-cell colspan="2">$10,000</md-table-cell>
+              <md-table-cell>$10,000</md-table-cell>
+              <md-table-cell>$12,000</md-table-cell>
               <md-table-cell colspan="2">N/A</md-table-cell>
             </md-table-row>
             <md-table-row>
