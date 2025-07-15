@@ -2,7 +2,7 @@
   <div id="job-descriptions">
     <career-banner />
 
-    <md-card class="career-card">
+    <!-- <md-card class="career-card">
       <md-card-header>
         <div class="md-title">Research Technician</div>
         <router-link :to="{ name: 'team', params: { id: 4 } }">EXPAND</router-link>
@@ -12,9 +12,9 @@
         <md-button @click="showJobDescriptionEXPANDRT = true" class="md-accent">Learn More</md-button>
         <md-button href="mailto:genomics@mskcc.org?subject=IGO Research Tech" class="md-primary">Inquire</md-button>
       </md-card-actions>
-    </md-card>
+    </md-card> -->
 
-    <md-card class="career-card">
+    <!-- <md-card class="career-card">
       <md-card-header>
         <div class="md-title">Bioinformatics Engineer</div>
         <router-link :to="{ name: 'team', params: { id: 8 } }">Data</router-link>
@@ -24,7 +24,7 @@
         <md-button @click="showJobDescriptionDataSEII = true" class="md-accent">Learn More</md-button>
         <md-button href="mailto:genomics@mskcc.org?subject=IGO Software Engineer" class="md-primary">Inquire</md-button>
       </md-card-actions>
-    </md-card>
+    </md-card> -->
     
     <md-dialog :md-active.sync="showJobDescriptionAA" :md-fullscreen="false" style="z-index: 400;">
       <md-dialog-content md-dynamic-height>
