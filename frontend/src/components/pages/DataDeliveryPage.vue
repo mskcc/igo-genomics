@@ -45,7 +45,8 @@
         </ul>
         <div class="md-subheading">On Iris:</div>
         <ul>
-          <li>Navigate to /ifs/datadelivery/igo_core/share/[LABNAME]/</li>
+          <li>On isxfer01, navigate to /ifs/datadelivery/igo_core/share/[LABNAME]/</li>
+          <li>Rsync the data to its final destination -- your command should look like: rsync --copy-links -avz [SOURCE] [DEST]</li>
         </ul>
         <p>
           If you need to grant access to a collaborator or data analyst (internal or external) or an MSKCC core,

@@ -1,5 +1,26 @@
 export const news = [
   {
+    title: "Multiplex without barcoding antibodies using 10x Genomics' On-Chip Multiplexing",
+    date: 'July 14, 2025',
+    imgSource: '10xOCM',
+    categories: ['featured'],
+    body: `<p>
+    Want to multiplex samples without using cell surface antibodies? 10x's On-chip multiplexing technology for 3' and 5' GEX assays is now available in IGO, allowing submission of 4 individual samples for ~5K cells/sample without the hassle of upstream labeling.<br />
+    <br />
+    <a href="https://my.ilabsolutions.com/account/saml/mskcc">Submit now</a> for Single Cell Sequencing and select the OCM option. The library prep cost for 4 samples is $3,000. Contact us at genomics@mskcc.org with any questions!
+    </p>`,
+  },{
+    title: "Track T cell clones with MSK CloneTrack",
+    date: 'June 30.2025',
+    imgSource: '',
+    categories: [''],
+    body: `<p>
+    IGO's TCR sequencing platform has included T cell clonotype analysis reports since its inception, but researchers can now use a new mathematical tool to identify and track clones across timepoints.<br />
+    <br />
+    CloneTrack, an offering of the Olayan Center for Cancer Vaccines, is available at <a href="https://occv.mskcc.org/CloneTrack">occv.mskcc.org/CloneTrack</a>. Users can upload analysis files from IGO TCR-Seq or Adaptive TCR-Seq in order to visualize clonotype frequency and diversity.
+    </p>`,
+  },
+  {
     title: "IGO's Annual Halloween Open House",
     date: 'October 22, 2024',
     imgSource: 'openhouse24',
@@ -484,9 +505,9 @@ export const teams = [
       { name: 'Andrea Farina', role: 'Manager, EXPAND', photoName: 'Farina_Andrea' },
       { name: 'Angela Pepe-Caprio', role: 'Operations Manager', photoName: 'Pepe-Caprio_Angela' },
       { name: 'Blaise Robin', role: 'Supervisor, SPM', photoName: 'Robin_Blaise' },
-      { name: 'David Mcmanamon', role: 'Manager, Data', photoName: 'Mcmanamon_David' },
       { name: 'Liping Sun', role: 'Manager, Sequencing', photoName: 'Sun_Liping' },
-      { name: 'Ruchi Patel', role: 'Manager, Single Cell & Library Prep', photoName: 'Patel_Ruchi' }, 
+      { name: 'Rajiev Timal', role: 'Manager, Data', photoName: '' },
+      { name: 'Ruchi Patel', role: 'Senior Manager, Single Cell & Library Prep', photoName: 'Patel_Ruchi' }, 
       { name: 'Stephanie Chrysanthou', role: 'Manager, R&D', photoName: 'Chrysanthou_Stephanie' },
       // { name: 'Position Open!', role: 'Spatial Transcriptomics Supervisor' },     
     ],
@@ -522,7 +543,6 @@ export const teams = [
       'The Sample & Project Management team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
     members: [
       { name: 'Blaise Robin', role: 'Supervisor', photoName: 'Robin_Blaise' },
-      { name: 'Allison Sexton', role: 'Project Assistant', photoName: 'Sexton_Allison' },
       { name: 'Kenzie Chen', role: 'Project Assistant', photoName: 'Chen_Kenzie' },
       { name: 'Rachel Tessier', role: 'Project Manager', photoName: 'Tessier_Rachel' },
       { name: 'Tressa Octave', role: 'Project Coordinator', photoName: 'Octave_Tressa' },
@@ -553,10 +573,9 @@ export const teams = [
     description:
       "The Single Cell team receives fresh and frozen samples for IGO's 10X Genomics and DLP platforms. They use a mix of manual and automated techniques to help investigators achieve the best single cell data possible. Additionally, the Single Cell team has expanded their expertise to take on Oxford Nanopore long read library preparation.",
     members: [
-      { name: 'Ruchi Patel', role: 'Manager', photoName: 'Patel_Ruchi' },
+      { name: 'Ruchi Patel', role: 'Senior Manager', photoName: 'Patel_Ruchi' },
       { name: 'Dooa Kim', role: 'Research Assistant', photoName:'Kim_Dooa' },
       { name: 'Iris Parke', role: 'Research Technician', photoName: 'Parke_Iris' },
-      { name: 'Margaux Scandura', role: 'Intern', photoname: '' },
       { name: 'Ravi Shrivastav', role: 'Senior Research Technician', photoName: 'Shrivastav_Ravi' },
       { name: 'Satish Ramakrishnan', role: 'Senior Research Assistant', photoName: 'Ramakrishnan_Satish' },
       { name: 'Yushi Wu', role: 'Senior Research Assistant', photoName: 'Wu_Yushi' },   
@@ -569,10 +588,10 @@ export const teams = [
     description:
       "The Library Preparation team handles the bulk of IGO's sample processing, utilizing liquid-handling robots to automate many platforms.",
     members: [
-      { name: 'Ruchi Patel', role: 'Manager', photoName: 'Patel_Ruchi' },
+      { name: 'Ruchi Patel', role: 'Senior Manager', photoName: 'Patel_Ruchi' },
       { name: 'Kalliopi Chatzis', role: 'Research Assistant', photoName: 'Chatzis_Kalliopi' },
       { name: 'Katherine Allard', role: 'Senior Research Assistant', photoName: 'Allard_Katherine' },
-      { name: 'Kiruthika Balasubramanian', role: 'Research Assistant', photoName: 'Balasubramanian_Kiruthika' },
+      { name: 'Kiruthika Balasubramanian', role: 'Senior Research Assistant', photoName: 'Balasubramanian_Kiruthika' },
       { name: 'Qingyun Tian', role: 'Senior Research Assistant', photoName: 'Tian_Qingyun' },
       { name: 'Sonia Rodriguez', role: 'Senior Research Technician', photoName: 'Rodriguez_Sonia' },
       // { name: 'Open Position!', role: 'Supervisor' },
@@ -599,7 +618,7 @@ export const teams = [
     description:
       "The IGO Data Team is a group of bioinformaticians, software engineers, and computer scientists.  They work closely with IGO's investigators and wet-lab technicians to write multiple software applications from sample receiving and LIMS processing to post-sequencing stats tracking and data delivery.",
     members: [
-      { name: 'David Mcmanamon', role: 'Manager', photoName: 'Mcmanamon_David' },
+      { name: 'Rajiev Timal', role: 'Manager', photoName: '' },
       { name: 'Cuijie Lu', role: 'Bioinfo. Software Engineer II', photoName: 'Lu_Cuijie' },
       { name: 'Darrell Nabors', role: 'Bioinformatics Engineer V', photoName: 'Nabors_Darrell' },
       { name: 'Fahimeh Mirhaj', role: 'Bioinfo. Software Engineer III', photoName: 'Mirhaj_Fahimeh' },
@@ -804,6 +823,7 @@ export const singleServices = [
     tableHeaders: ['xGenomicsPlatform', 'sampleCostLibrary', 'cellCostSequencing'],
     table: [
       { xGenomicsPlatform: '5′ OR 3′ Gene Expression', sampleCostLibrary: 2068, cellCostSequencing: '$0.028' },
+      { xGenomicsPlatform: '5′ OR 3′ Gene Expression with On-Chip Multiplexing (4 samples)', sampleCostLibrary: 3000, cellCostSequencing: '$0.028' },
       { xGenomicsPlatform: 'V(D)J Enrichment', sampleCostLibrary: 300, cellCostSequencing: '$0.007' },
       { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 300, cellCostSequencing: '$0.007' },
     ],
