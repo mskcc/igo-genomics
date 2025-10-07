@@ -10,6 +10,8 @@
         <li>Large tissue samples that require additional dissection may incur a $15 extra processing charge and additional turnaround time.</li>
         <li>Submissions of &gt;1M cells for RNA extraction will be downsampled and processed as multiple extractions.</li>
         <li>RNA yield can not be guaranteed from &lt;200K cells or tissue sections/pieces smaller than recommended.</li>
+        <li>Samples should be submitted in tubes compatible with freeze/thaw, centrifugation, liquid nitrogen, Trizol, chloroform, etc. We use Eppendorf LoBind tubes (cat# 022431021 or 022431048, also available from USA Scientific)</li>
+        <li>Please see our <a href="https://genomics.mskcc.org/faq">FAQ section</a> for any questions not answered here!</li>
       </ul>
     </div>
     <br />
@@ -150,6 +152,41 @@
         <md-table-cell>Buccal swabs</md-table-cell>
         <md-table-cell>1.5mL Eppendorf tube</md-table-cell>
         <md-table-cell>1-5mL</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+      <md-table-cell rowspan="7">Dual extraction</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell rowspan="2">Cells</md-table-cell>
+        <md-table-cell>Frozen pellet</md-table-cell>
+        <md-table-cell>1.5mL Eppendorf tube</md-table-cell>
+        <md-table-cell rowspan="2">-80&deg;C to -20&deg;C</md-table-cell>
+        <md-table-cell rowspan="2">200K-1M cells</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell>DMSO/DMEM</md-table-cell>
+        <md-table-cell>1.5mL Eppendorf or cryovial</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell rowspan="4">Tissue</md-table-cell>
+        <md-table-cell>Frozen</md-table-cell>
+        <md-table-cell>80&deg;C to -20&deg;C</md-table-cell>
+        <md-table-cell rowspan="2">10-15mg</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell>OCT</md-table-cell>
+        <md-table-cell>-20&deg;C</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell>FFPE slides or blocks</md-table-cell>
+        <md-table-cell>Slides or blocks</md-table-cell>
+        <md-table-cell>RT</md-table-cell>
+        <md-table-cell rowspan="2">5-8 sections of 10mm; 10-15 sections of 5-10mm; 20-25 sections of &lt;5mm; 10&mu;m thick</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell>FFPE curls/punches</md-table-cell>
+        <md-table-cell>AutoLys tubes</md-table-cell>
+        <md-table-cell>4&deg;C</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell rowspan="11">RNA extraction</md-table-cell>

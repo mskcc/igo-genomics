@@ -271,6 +271,8 @@
                             <li>Blood in Streck tubes for cfDNA extraction: 4.5mL</li>
                             <li>Blood in PAXgene tubes for RNA extraction: 10mL</li>
                           </ul>
+
+                          For other types of blood tubes (such as CPT), cell layers such as PBMCs can be separated and submitted frozen but we cannot work with the tubes themselves.
                           </div>
                         </md-list-item>
                       </md-list>
@@ -300,6 +302,8 @@
                               <li>OCT tissue</li>
                               <li>FFPE tissue (slides, curls, or punches)</li>
                             </ul>
+
+                            Note that we cannot perform simultaneous extraction from whole blood.
                           </div>
                         </md-list-item>
                       </md-list>

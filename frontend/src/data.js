@@ -1,5 +1,14 @@
 export const news = [
   {
+    title: "Annual Open House on Friday, October 31",
+    date: 'October 7, 2025',
+    imgSource: 'openhouse2025',
+    categories: ['featured'],
+    body: `<p>
+    Join us at our annual IGO Open House on Friday, October 31 between 11am and 3pm on the 7th floor of Schwartz for tours of the lab, treats, games, a photo booth, costume contest, and swag!
+    </p>`,
+  },
+  {
     title: "Multiplex without barcoding antibodies using 10x Genomics' On-Chip Multiplexing",
     date: 'July 14, 2025',
     imgSource: '10xOCM',
@@ -9,7 +18,8 @@ export const news = [
     <br />
     <a href="https://my.ilabsolutions.com/account/saml/mskcc">Submit now</a> for Single Cell Sequencing and select the OCM option. The library prep cost for 4 samples is $3,000. Contact us at genomics@mskcc.org with any questions!
     </p>`,
-  },{
+  },
+  {
     title: "Track T cell clones with MSK CloneTrack",
     date: 'June 30.2025',
     imgSource: '',
@@ -546,6 +556,7 @@ export const teams = [
       { name: 'Kenzie Chen', role: 'Project Assistant', photoName: 'Chen_Kenzie' },
       { name: 'Rachel Tessier', role: 'Project Manager', photoName: 'Tessier_Rachel' },
       { name: 'Tressa Octave', role: 'Project Coordinator', photoName: 'Octave_Tressa' },
+      { name: 'Vincent Tem', role: 'Senior Research Technician', photoName: '' },
       // { name: 'Position Open!', role: 'Project Manager' },
       // { name: 'Position Open!', role: 'Supervisor' },
     ],
@@ -578,6 +589,7 @@ export const teams = [
       { name: 'Iris Parke', role: 'Research Technician', photoName: 'Parke_Iris' },
       { name: 'Ravi Shrivastav', role: 'Senior Research Technician', photoName: 'Shrivastav_Ravi' },
       { name: 'Satish Ramakrishnan', role: 'Senior Research Assistant', photoName: 'Ramakrishnan_Satish' },
+      { name: 'Vincent Tem', role: 'Senior Research Technician', photoName: '' },
       { name: 'Yushi Wu', role: 'Senior Research Assistant', photoName: 'Wu_Yushi' },   
       // { name: 'Open Position!', role: 'Research Assistant' },
     ],
@@ -606,7 +618,6 @@ export const teams = [
     members: [
       { name: 'Liping Sun', role: 'Manager', photoName: 'Sun_Liping' },
       { name: 'Desmond Lambe', role: 'Senior Research Technician', photoName: 'Lambe_Desmond' },
-      { name: 'Grace Chung', role: 'Research Assistant', photoName: 'Chung_Grace' },
       { name: 'Jim Chen', role: 'Research Assistant', photoName: 'Chen_Jim' },
       { name: 'Mingqiang Zhuang', role: 'Research Assistant', photoName: 'Zhuang_Mingqiang' },
       // { name: 'Open Position!', role: 'Research Assistant', },
@@ -818,13 +829,15 @@ export const singleServices = [
     startingMaterial: 'Single cell or nuclei suspension',
     libraryChemistry: 'Chromium GEM-X',
     sequencingReadLength: 'PE28/88',
-    sequencingCoverage: '20K reads/cell (GEX), 5K reads/cell (V(D)J & cell hashing)',
+    sequencingCoverage: '20K reads/cell (standard GEX), 10K reads/cell (Flex), 5K reads/cell (V(D)J & cell hashing)',
     deliverable: 'FASTQ, Cell Ranger output',
     tableHeaders: ['xGenomicsPlatform', 'sampleCostLibrary', 'cellCostSequencing'],
     table: [
       { xGenomicsPlatform: '5′ OR 3′ Gene Expression', sampleCostLibrary: 2068, cellCostSequencing: '$0.028' },
-      { xGenomicsPlatform: '5′ OR 3′ Gene Expression with On-Chip Multiplexing (4 samples)', sampleCostLibrary: 3000, cellCostSequencing: '$0.028' },
-      { xGenomicsPlatform: 'V(D)J Enrichment', sampleCostLibrary: 300, cellCostSequencing: '$0.007' },
+      { xGenomicsPlatform: '5′ OR 3′ Gene Expression with On-Chip Multiplexing (4 samples)', sampleCostLibrary: 2400, cellCostSequencing: '$0.028' },
+      { xGenomicsPlatform: '5′ OR 3′ Flex Gene Expression with Flex (single sample)', sampleCostLibrary: 2000, cellCostSequencing: '$0.014' },
+      { xGenomicsPlatform: '5′ OR 3′ Flex Gene Expression with Flex (up to 4 multiplexed samples)', sampleCostLibrary: 6000, cellCostSequencing: '$0.014' },
+      { xGenomicsPlatform: 'V(D)J Enrichment (TCR or BCR)', sampleCostLibrary: 300, cellCostSequencing: '$0.007' },
       { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 300, cellCostSequencing: '$0.007' },
     ],
   },
@@ -837,7 +850,7 @@ export const singleServices = [
     sequencingReadLength: 'PE 28/88 (GEX), PE50 (ATAC)',
     sequencingCoverage: '20K reads/cell (GEX), 25K reads/cell (ATAC)',
     deliverable: 'FASTQ, Cell Ranger output',
-    libraryCost: '$3,000/sample',
+    libraryCost: '$3,200/sample',
     sequencingCost: '$0.098/nucleus',
   },
   {
@@ -875,7 +888,7 @@ export const singleServices = [
     sequencingReadLength: 'PE100',
     sequencingCoverage: '~20K reads/cell',
     deliverable: 'FASTQ',
-    libraryCost: '$1,600/plate',
+    libraryCost: '$1,800/plate',
     sequencingCost: 'included',
   },
   {
@@ -998,14 +1011,14 @@ export const otherServices = [
     deliverable: 'POD5 + FASTQ',
     tableHeaders: ['serviceType', 'service', 'sampleCost'],
     table: [
-      { serviceType: 'Library Prep', service: 'ONT cDNA-Seq Library', sampleCost: '315' },
+      { serviceType: 'Library Prep', service: 'ONT cDNA-Seq Library', sampleCost: '450' },
       // { serviceType: 'Library Prep', service: 'ONT cDNA-Seq Library (Multiplexed)', sampleCost: '285' },
-      { serviceType: 'Library Prep', service: 'ONT WGS Library', sampleCost: '235' },
+      { serviceType: 'Library Prep', service: 'ONT WGS Library', sampleCost: '275' },
       // { serviceType: 'Library Prep', service: 'ONT WGS Library (Multiplexed)', sampleCost: '210' },
-      { serviceType: 'Sequencing', service: 'ONT - PromethION (100Gb)', sampleCost: '1200' },
-      { serviceType: 'Lib + Seq', service: 'Long Read cDNA-Seq 30-40M reads', sampleCost: '1715' },
-      { serviceType: 'Lib + Seq', service: 'Long Read WGS 30-40X', sampleCost: '1640' },
-      { serviceType: 'Lib + Seq', service: 'Long Read WGS 60-80X', sampleCost: '3000' },
+      { serviceType: 'Sequencing', service: 'ONT - PromethION (100Gb)', sampleCost: '1360' },
+      { serviceType: 'Lib + Seq', service: 'Long Read cDNA-Seq 30-40M reads', sampleCost: '1980' },
+      { serviceType: 'Lib + Seq', service: 'Long Read WGS 30-40X', sampleCost: '1800' },
+      { serviceType: 'Lib + Seq', service: 'Long Read WGS 60-80X', sampleCost: '3400' },
       { serviceType: 'Analysis', service: 'Adaptive Sampling', sampleCost: '50' },
       { serviceType: 'Analysis', service: 'Methylation Basecalling', sampleCost: '50' },
     ],
