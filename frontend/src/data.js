@@ -3,7 +3,7 @@ export const news = [
     title: "Annual Open House on Friday, October 31",
     date: 'October 7, 2025',
     imgSource: 'openhouse2025',
-    categories: ['featured'],
+    categories: [''],
     body: `<p>
     Join us at our annual IGO Open House on Friday, October 31 between 11am and 3pm on the 7th floor of Schwartz for tours of the lab, treats, games, a photo booth, costume contest, and swag!
     </p>`,
@@ -930,7 +930,7 @@ export const singleServices = [
     sequencingCoverage: 'N/A',
     deliverable: 'Analysis with Xenium Ranger',
     startingMaterial: 'FFPE or FF',
-    runCost: '$1,580/2 slides for v1 or $1,720/2 slides for Prime 5K (labor) + panel and reagent costs (inquire at genomics@mskcc.org)',
+    runCost: '$1,580/2 slides for v1, $1,720/2 slides for Prime 5K, or $1,950/2 slides for Protein (labor) + panel and reagent costs (inquire at genomics@mskcc.org)',
   },
 ];
 
