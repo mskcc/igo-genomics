@@ -43,7 +43,7 @@
         <md-table-cell></md-table-cell>
       </md-table-row> -->
       <md-table-row>
-        <md-table-cell rowspan="2">Libraries for Sequencing</md-table-cell>
+        <md-table-cell rowspan="3">Libraries for Sequencing</md-table-cell>
         <md-table-cell>Individual Libraries</md-table-cell>
         <md-table-cell rowspan="2" class="pass">1.5nM</md-table-cell>
         <md-table-cell rowspan="2" class="try">1nM</md-table-cell>
@@ -55,6 +55,14 @@
         <md-table-cell>Pooled Libraries</md-table-cell>
         <md-table-cell>&GreaterEqual;20&#181;L</md-table-cell>
       </md-table-row>
+      <!-- <md-table-row>
+        <md-table-cell>ONT Libraries</md-table-cell>
+        <md-table-cell></md-table-cell>
+        <md-table-cell></md-table-cell>
+        <md-table-cell></md-table-cell>
+        <md-table-cell></md-table-cell>
+        <md-table-cell>&GreaterEqual;30&#181;L</md-table-cell>
+      </md-table-row> -->
       <md-table-row>
         <md-table-cell>Oxford Nanopore</md-table-cell>
         <md-table-cell>hmwDNA Libraries</md-table-cell>
