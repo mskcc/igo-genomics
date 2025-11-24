@@ -57,19 +57,6 @@
       <md-table-row>
         <md-table-cell>gDNA</md-table-cell>
       </md-table-row>
-      <!-- <md-table-row>
-        <md-table-cell rowspan="2">EPIC MethylCapture</md-table-cell>
-        <md-table-cell>FFPE</md-table-cell>
-        <md-table-cell class="pass">700ng</md-table-cell>
-        <md-table-cell class="try" rowspan="2">200ng</md-table-cell>
-        <md-table-cell class="pass" rowspan="2">DIN > 2</md-table-cell>
-        <md-table-cell class="fail" rowspan="2">No try range</md-table-cell>
-        <md-table-cell rowspan="2">50&#181;L</md-table-cell>
-      </md-table-row>
-      <md-table-row>
-        <md-table-cell>Frozen</md-table-cell>
-        <md-table-cell class="pass">500ng</md-table-cell>
-      </md-table-row> -->
       <md-table-row>
         <md-table-cell rowspan="3">IMPACT/IMPACT-Heme<sup>b<md-tooltip v-if="footnotes.b" md-direction="right">{{ footnotes.b }}</md-tooltip></sup></md-table-cell>
         <md-table-cell>cfDNA</md-table-cell>
@@ -163,7 +150,7 @@
         <md-table-cell rowspan="2">Whole Genome Sequencing (deep, PCR+)</md-table-cell>
         <md-table-cell>FFPE</md-table-cell>
         <md-table-cell class="pass" rowspan="2">500ng</md-table-cell>
-        <md-table-cell class="try">300ng</md-table-cell>
+        <md-table-cell class="try">100ng</md-table-cell>
         <md-table-cell colspan="2" rowspan="2" class="center-page">No quality requirements</md-table-cell>
         <md-table-cell rowspan="2">45&#181;L</md-table-cell>
       </md-table-row>

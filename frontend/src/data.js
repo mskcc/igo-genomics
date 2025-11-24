@@ -516,7 +516,7 @@ export const teams = [
       { name: 'Angela Pepe-Caprio', role: 'Operations Manager', photoName: 'Pepe-Caprio_Angela' },
       { name: 'Blaise Robin', role: 'Supervisor, SPM', photoName: 'Robin_Blaise' },
       { name: 'Liping Sun', role: 'Manager, Sequencing', photoName: 'Sun_Liping' },
-      { name: 'Rajiev Timal', role: 'Manager, Data', photoName: '' },
+      { name: 'Rajiev Timal', role: 'Manager, Data', photoName: 'Timal_Rajiev' },
       { name: 'Ruchi Patel', role: 'Senior Manager, Single Cell & Library Prep', photoName: 'Patel_Ruchi' }, 
       { name: 'Stephanie Chrysanthou', role: 'Manager, R&D', photoName: 'Chrysanthou_Stephanie' },
       // { name: 'Position Open!', role: 'Spatial Transcriptomics Supervisor' },     
@@ -531,7 +531,6 @@ export const teams = [
       { name: 'Andrea John', role: 'Billing/Procurement Associate', photoName: 'John_Andrea' },
       { name: 'Ayat Yaseen', role: 'Lab Manager', photoName: 'Yaseen_Ayat' },
       { name: 'Cassidy Cobbs', role: 'Scientific Liaison', photoName: 'Cobbs_Cassidy' },
-      { name: 'Shauna Tuso', role: 'Admin Assistant', photoName: 'Tuso_Shauna' },
       // { name: 'Open Position!', role: 'Administrative Assistant' },
       // { name: 'Open Position!', role: 'Lab Manager' },
     ],
@@ -601,7 +600,6 @@ export const teams = [
       "The Library Preparation team handles the bulk of IGO's sample processing, utilizing liquid-handling robots to automate many platforms.",
     members: [
       { name: 'Ruchi Patel', role: 'Senior Manager', photoName: 'Patel_Ruchi' },
-      { name: 'Kalliopi Chatzis', role: 'Research Assistant', photoName: 'Chatzis_Kalliopi' },
       { name: 'Katherine Allard', role: 'Senior Research Assistant', photoName: 'Allard_Katherine' },
       { name: 'Kiruthika Balasubramanian', role: 'Senior Research Assistant', photoName: 'Balasubramanian_Kiruthika' },
       { name: 'Qingyun Tian', role: 'Senior Research Assistant', photoName: 'Tian_Qingyun' },
@@ -629,7 +627,7 @@ export const teams = [
     description:
       "The IGO Data Team is a group of bioinformaticians, software engineers, and computer scientists.  They work closely with IGO's investigators and wet-lab technicians to write multiple software applications from sample receiving and LIMS processing to post-sequencing stats tracking and data delivery.",
     members: [
-      { name: 'Rajiev Timal', role: 'Manager', photoName: '' },
+      { name: 'Rajiev Timal', role: 'Manager', photoName: 'Timal_Rajiev' },
       { name: 'Cuijie Lu', role: 'Bioinfo. Software Engineer II', photoName: 'Lu_Cuijie' },
       { name: 'Darrell Nabors', role: 'Bioinformatics Engineer V', photoName: 'Nabors_Darrell' },
       { name: 'Fahimeh Mirhaj', role: 'Bioinfo. Software Engineer III', photoName: 'Mirhaj_Fahimeh' },
@@ -795,12 +793,12 @@ export const bulkServices = [
     id: 5,
     name: 'TCR Sequencing',
     description: 'Methods to enrich T-cell receptor sequences',
-    startingMaterial: 'Cells (10X Genomics), RNA (IGO-TCR)',
+    startingMaterial: 'Cells (10X Genomics), RNA (IGO-TCR (human) or Cellecta AIR (mouse))',
     deliverable: 'FASTQ + Pipeline output',
     tableHeaders: ['platform', 'sampleCost'],
     table: [
       { platform: '10X Genomics V(D)J Enrichment', sampleCost: 2368 },
-      { platform: 'IGO-TCR', sampleCost: 335 },
+      { platform: 'Bulk TCR', sampleCost: 335 },
     ],
   },
   {
