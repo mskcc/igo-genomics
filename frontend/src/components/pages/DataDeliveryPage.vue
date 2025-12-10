@@ -74,7 +74,7 @@
         <div class="md-subheading">Internal collaborators:</div>
         <ul>
           <li>Include mskcc.org e-mail addresses in the "Data Access" field in iLab </li>
-          <li>After data delivery, request retrospective access <a href="https://my.ilabsolutions.com/service_center/3276/?tab=services">in iLab</a> under the "Post-processing services" heading</li>
+          <li>After data delivery, request retrospective access <a href="https://mskcc.ilab.agilent.com/sc/3276/integrated-genomics-operation-igo?tab=services">in iLab</a> under the "Post-processing services" heading</li>
         </ul>
         <div class="md-subheading">External collaborators:</div>
         <p>
@@ -171,7 +171,7 @@
         <div class="md-subheading">Cell Ranger, Space Ranger, and Tapestri</div>
         <p>
           For quality control purposes, IGO runs Cell Ranger (10X scRNA-Seq, VDJ, Feature Barcoding, Cell Hashing, & Multiome) and Space Ranger (10X Visium) on data from projects initiated in IGO. We deliver output from those analytic pipelines to /igo/delivery/share/[LABNAME]/[PROJECTID]/pipeline along with FASTQ files by default. Because of size constraints, pipeline data will remain available for
-          <strong>3 months</strong> before being deleted. To request regeneration of older pipeline files, submit a request <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">in iLab</a> using the "Regeneration of FASTQ, BAM, or pipeline files" form under Post-processing services. There is a charge for regeneration.
+          <strong>3 months</strong> before being deleted. To request regeneration of older pipeline files, submit a request <a href="https://mskcc.ilab.agilent.com/sc/3276/integrated-genomics-operation-igo?tab=services">in iLab</a> using the "Regeneration of FASTQ, BAM, or pipeline files" form under Post-processing services. There is a charge for regeneration.
         </p>
         <p>
           Deliverables for Cell Ranger & Space Ranger: run summary metrics (HTML, CSV), alignment files (BAM), feature barcode matrices (if
@@ -190,7 +190,7 @@
           CRISPResso2 output is delivered for CRISPRSeq projects that have selected that option and submitted a valid template. We run with default parameters and the information provided in iLab, so the pipeline isn't necessarily tailored for your experiment. You can learn more about CRISPResso2, the available parameters, and run your FASTQ files yourself by visiting <a href="http://crispresso.pinellolab.org/submission" target="_blank">crispresso.pinellolab.org</a>.
         </p>
         <p>
-          CRISPResso2 data will remain available for <strong>3 months</strong> before being subject to deletion. To request regeneration of older files, submit a request <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">in iLab</a> using the "Regeneration of FASTQ, BAM, or pipeline files" form under Post-processing services. There is a charge for regeneration.
+          CRISPResso2 data will remain available for <strong>3 months</strong> before being subject to deletion. To request regeneration of older files, submit a request <a href="https://mskcc.ilab.agilent.com/sc/3276/integrated-genomics-operation-igo?tab=services">in iLab</a> using the "Regeneration of FASTQ, BAM, or pipeline files" form under Post-processing services. There is a charge for regeneration.
         </p>
         <div class="md-subheading">Customization</div>
         <p>
@@ -210,7 +210,7 @@
           POD5 (formerly FAST5) files will be maintained for <b>7 days</b>.
         </p>
         <p>
-          All deliverables except for POD5 can be recovered after their expiration date using the <a href="https://my.ilabsolutions.com/sc/3276/integrated-genomics-operation?tab=services">"Regeneration of FASTQ, BAM, or pipeline files" form</a> under Pre- or Post-Processing Services. There will be both a delay and a fee.
+          All deliverables except for POD5 can be recovered after their expiration date using the <a href="https://mskcc.ilab.agilent.com/sc/3276/integrated-genomics-operation-igo?tab=services">"Regeneration of FASTQ, BAM, or pipeline files" form</a> under Pre- or Post-Processing Services. There will be both a delay and a fee.
         </p>
         
       </md-app-content>

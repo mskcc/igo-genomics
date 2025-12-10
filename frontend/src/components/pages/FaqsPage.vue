@@ -537,7 +537,7 @@
                           <div>
                             Please see our <router-link :to="{ name: 'data & delivery' }">data access instructions</router-link>.
                             <br />
-                            If you cannot log in or need access for a collaborator or data analyst, please fill out the "Data Access Request" <a href="https://my.ilabsolutions.com/service_center/3276/?tab=services">iLab form</a>
+                            If you cannot log in or need access for a collaborator or data analyst, please fill out the "Data Access Request" <a href="https://mskcc.ilab.agilent.com/sc/3276/integrated-genomics-operation-igo?tab=services">iLab form</a>
                           </div>
                         </md-list-item>
                       </md-list>

@@ -16,7 +16,7 @@ export const news = [
     body: `<p>
     Want to multiplex samples without using cell surface antibodies? 10x's On-chip multiplexing technology for 3' and 5' GEX assays is now available in IGO, allowing submission of 4 individual samples for ~5K cells/sample without the hassle of upstream labeling.<br />
     <br />
-    <a href="https://my.ilabsolutions.com/account/saml/mskcc">Submit now</a> for Single Cell Sequencing and select the OCM option. The library prep cost for 4 samples is $3,000. Contact us at genomics@mskcc.org with any questions!
+    <a href="https://mskcc.ilab.agilent.com/sc/3276/integrated-genomics-operation-igo?tab=services">Submit now</a> for Single Cell Sequencing and select the OCM option. The library prep cost for 4 samples is $3,000. Contact us at genomics@mskcc.org with any questions!
     </p>`,
   },
   {
