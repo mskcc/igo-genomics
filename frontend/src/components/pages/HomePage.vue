@@ -4,7 +4,7 @@
       <!-- <span class="material-icons"> priority_high </span> -->
       <span class="material-icons"> notifications_active </span>
       <span class="announcement-content">
-        Please note that PE100 sequencing has transitioned from the NovaSeq 6000 to the NovaSeq X.
+        IGO will be closed <b>December 25-26</b> and <b>January 1-2</b>. There will be no sample dropoffs on those dates.
       </span>
     </div>
 

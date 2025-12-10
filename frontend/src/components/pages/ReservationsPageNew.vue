@@ -44,7 +44,7 @@
         <md-dialog-content md-dynamic-height>
             Sample drop offs cannot be scheduled until the following forms have been submitted:
             <ol>
-                <li><a href="https://my.ilabsolutions.com/account/saml/mskcc" target="__blank">iLab request</a></li>
+                <li><a href="https://ilab.mskcc.org" target="__blank">iLab request</a></li>
                 <li><a href="https://igo.mskcc.org/sample-submission" target="__blank">Sample Submission form</a></li>
             </ol>
             For more information please see our <router-link :to="{ name: 'submission guidelines' }">submission guidelines</router-link>. Please note that this calendar for all sample drop off <i>except</i> fresh single cell/nuclei samples for 10X Genomics processing.
@@ -59,7 +59,7 @@
         <md-dialog-content md-dynamic-height>
             Sample drop offs cannot be scheduled until the following forms have been submitted:
             <ol>
-                <li><a href="https://my.ilabsolutions.com/account/saml/mskcc" target="__blank">iLab request</a></li>
+                <li><a href="https://ilab.mskcc.org" target="__blank">iLab request</a></li>
                 <li><a href="https://igo.mskcc.org/sample-submission" target="__blank">Sample Submission form</a></li>
             </ol>
             For more information please see our <router-link :to="{ name: 'submission guidelines' }">submission guidelines</router-link>

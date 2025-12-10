@@ -34,7 +34,7 @@
         <md-table-cell>45&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell><a href="https://my.ilabsolutions.com/service_center/3276/?tab=services" target="__blank">CRISPRSeq</a></md-table-cell>
+        <md-table-cell><a href="https://mskcc.ilab.agilent.com/sc/3276/integrated-genomics-operation-igo?tab=services" target="__blank">CRISPRSeq</a></md-table-cell>
         <md-table-cell></md-table-cell>
         <md-table-cell class="pass">1&#181;g<sup>a<md-tooltip v-if="footnotes.a" md-direction="right">{{ footnotes.a }}</md-tooltip></sup></md-table-cell>
         <md-table-cell class="try">400ng</md-table-cell>
