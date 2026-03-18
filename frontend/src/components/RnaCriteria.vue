@@ -83,7 +83,7 @@
         <md-table-cell rowspan="2" class="try">500ng</md-table-cell>
         <md-table-cell class="try">No pass range</md-table-cell>
         <md-table-cell rowspan="2" class="try">DV200 &gt; 30</md-table-cell>
-        <md-table-cell rowspan="2">10&#181;L</md-table-cell>
+        <md-table-cell rowspan="2">18&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>Frozen</md-table-cell>
@@ -114,7 +114,7 @@
         <md-table-cell class="try">No fail range</md-table-cell>
         <md-table-cell class="try">RIN > 7</md-table-cell>
         <md-table-cell class="try">No fail range</md-table-cell>
-        <md-table-cell>10&#181;L</md-table-cell>
+        <md-table-cell>14&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell colspan="7">

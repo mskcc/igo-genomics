@@ -514,7 +514,6 @@ export const teams = [
       { name: 'Neeman Mohibullah', role: 'Director', photoName: 'Mohibullah_Neeman' },
       { name: 'Andrea Farina', role: 'Manager, EXPAND', photoName: 'Farina_Andrea' },
       { name: 'Angela Pepe-Caprio', role: 'Operations Manager', photoName: 'Pepe-Caprio_Angela' },
-      { name: 'Blaise Robin', role: 'Supervisor, SPM', photoName: 'Robin_Blaise' },
       { name: 'Liping Sun', role: 'Manager, Sequencing', photoName: 'Sun_Liping' },
       { name: 'Rajiev Timal', role: 'Manager, Data', photoName: 'Timal_Rajiev' },
       { name: 'Ruchi Patel', role: 'Senior Manager, Single Cell & Library Prep', photoName: 'Patel_Ruchi' }, 
@@ -551,7 +550,6 @@ export const teams = [
     description:
       'The Sample & Project Management team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
     members: [
-      { name: 'Blaise Robin', role: 'Supervisor', photoName: 'Robin_Blaise' },
       { name: 'Kenzie Chen', role: 'Project Assistant', photoName: 'Chen_Kenzie' },
       { name: 'Rachel Tessier', role: 'Project Manager', photoName: 'Tessier_Rachel' },
       { name: 'Tressa Octave', role: 'Project Coordinator', photoName: 'Octave_Tressa' },
@@ -604,6 +602,9 @@ export const teams = [
       { name: 'Kiruthika Balasubramanian', role: 'Senior Research Assistant', photoName: 'Balasubramanian_Kiruthika' },
       { name: 'Qingyun Tian', role: 'Senior Research Assistant', photoName: 'Tian_Qingyun' },
       { name: 'Sonia Rodriguez', role: 'Senior Research Technician', photoName: 'Rodriguez_Sonia' },
+      { name: 'Tianjie Pu', role: 'Research Technician', photoName: '' },
+
+
       // { name: 'Open Position!', role: 'Supervisor' },
       // { name: 'Open Position!', role: 'Research Technician' },
     ],
@@ -618,6 +619,10 @@ export const teams = [
       { name: 'Desmond Lambe', role: 'Senior Research Technician', photoName: 'Lambe_Desmond' },
       { name: 'Jim Chen', role: 'Research Assistant', photoName: 'Chen_Jim' },
       { name: 'Mingqiang Zhuang', role: 'Research Assistant', photoName: 'Zhuang_Mingqiang' },
+      { name: 'Yangtsho Gyaltshen', role: 'Research Technician', photoName: '' },
+
+
+
       // { name: 'Open Position!', role: 'Research Assistant', },
     ],
   },
@@ -833,8 +838,8 @@ export const singleServices = [
     table: [
       { xGenomicsPlatform: '5′ OR 3′ Gene Expression', sampleCostLibrary: 2068, cellCostSequencing: '$0.028' },
       { xGenomicsPlatform: '5′ OR 3′ Gene Expression with On-Chip Multiplexing (4 samples)', sampleCostLibrary: 2400, cellCostSequencing: '$0.028' },
-      { xGenomicsPlatform: '5′ OR 3′ Flex Gene Expression with Flex (single sample)', sampleCostLibrary: 2000, cellCostSequencing: '$0.014' },
-      { xGenomicsPlatform: '5′ OR 3′ Flex Gene Expression with Flex (up to 4 multiplexed samples)', sampleCostLibrary: 6000, cellCostSequencing: '$0.014' },
+      { xGenomicsPlatform: 'Flex Gene Expression with Flex (single sample)', sampleCostLibrary: 2000, cellCostSequencing: '$0.014' },
+      { xGenomicsPlatform: 'Flex Gene Expression with Flex (up to 4 multiplexed samples)', sampleCostLibrary: 6000, cellCostSequencing: '$0.014' },
       { xGenomicsPlatform: 'V(D)J Enrichment (TCR or BCR)', sampleCostLibrary: 300, cellCostSequencing: '$0.007' },
       { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 300, cellCostSequencing: '$0.007' },
     ],

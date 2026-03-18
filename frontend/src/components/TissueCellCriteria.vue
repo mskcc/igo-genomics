@@ -259,6 +259,19 @@
         <md-table-cell>1 to 100 cells/well</md-table-cell>
       </md-table-row>
       <md-table-row>
+        <md-table-cell rowspan="2">Ultra HMW DNA extraction (OGM)</md-table-cell>
+        <md-table-cell>Cells</md-table-cell>
+        <md-table-cell>DMSO/DMEM</md-table-cell>
+        <md-table-cell rowspan="2">1.5mL Eppendorf tube</md-table-cell>
+        <md-table-cell rowspan="2">-80&deg;C</md-table-cell>
+        <md-table-cell>&GreaterEqual; 1.5M, > 70% viable</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell>Tissue</md-table-cell>
+        <md-table-cell>Frozen</md-table-cell>
+        <md-table-cell>5-20mg (multiple aliquots of 5mg preferred)</md-table-cell>
+      </md-table-row>
+      <md-table-row>
         <md-table-cell colspan="6"><sup>a</sup>Provided by IGO in advance. <sup>b</sup>If multiple tubes are submitted for one sample, multiple extractions will be charged. <sup>b</sup>Samples with insufficient cell number or low viability will be dropped before library prep.<sup>c</sup>Max volume for one blood extraction is 400&mu;L; higher volumes (up to 2mL) will incur additional charges. <sup>d</sup>Max volume for one buffy coat extraction is 200&mu;L. <sup>e</sup>A $15 charge will be added for topping up TRIzol volume. <sup>f</sup>A $15 charge will be added for adjusting TRIzol LS:PBS ratio. </md-table-cell>
       </md-table-row>
     </md-table>
