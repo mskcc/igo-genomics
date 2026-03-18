@@ -6,10 +6,12 @@
         <md-card-header>
           <div class="md-subheading">
             <p>If this is your first time submitting, please see our detailed instructions below.</p>
+            <p>For all<b> Single Cell submissions</b>, visit our <a href="/single-cell-hub">Single Cell Hub</a> for more information.</p>
             <!-- <p>Need more help? Please take a look at our <router-link :to="{ name: 'show video', params: { name: 'howToSubmit_v1' } }">How to Submit Samples video</router-link></p> -->
           </div>
         </md-card-header>
         <div>
+<div class="md-subheading">For all other submissions:</div>
           <div class="md-subheading">Prepare submission:</div>
           <ol>
             <li><a href="https://ilab.mskcc.org" target="__blank">Submit an iLab request</a> for the desired application.</li>
@@ -96,6 +98,7 @@
                   <md-list-item class="md-inset">
                     <ul>
                       <li>Fill out an iLab request for <strong>Single Cell Library Prep</strong></li>
+                     
                       <li><strong>For 10X Genomics scRNASeq:</strong>
                         <ol>
                           <li><a :href="scCalendar" target="__blank">Make a reservation</a> for a time to bring your samples</li>

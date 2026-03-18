@@ -94,7 +94,7 @@
         <p>
           All of our sequencers have names to distinguish them from one another for our databases, their servers, and ease of communication
           among lab members. The run ID, therefore, is the sequencer name followed by the run number; each run ID is unique. MiSeqs: TOMS,
-          VIC, JOHNSAWYERS, AYYAN; NextSeq 500: SCOTT; NextSeq 1000: AMELIE; NextSeq 2000: PEPE; HiSeq 2500: MOMO, KIM; HiSeq 2000: BRAD, LIZ; HiSeq 4000: PITT, JAX; NovaSeq 6000: MICHELLE, DIANA, RUTH; NovaSeq X: FAUCI, FAUCI2, BONO.
+          VIC, JOHNSAWYERS, AYYAN; MiSeq i100 Plus: BOWIE; NextSeq 500: SCOTT; NextSeq 1000: AMELIE; NextSeq 2000: PEPE; HiSeq 2500: MOMO, KIM; HiSeq 2000: BRAD, LIZ; HiSeq 4000: PITT, JAX; NovaSeq 6000: MICHELLE, DIANA, RUTH; NovaSeq X: FAUCI, FAUCI2, BONO.
         </p>
         <div class="md-subheading">Former Data Structure</div>
         <p>
