@@ -27,15 +27,22 @@
       </md-table-row>
 
       <md-table-row>
+        <md-table-cell>10x Genomics Flex</md-table-cell>
+        <md-table-cell>Fixed cells</md-table-cell>
+        <md-table-cell><a href="https://www.10xgenomics.com/support/flex-gene-expression/documentation/steps/sample-prep/fixation-of-cells-and-nuclei-for-gem-x-flex-gene-expression" target="__blank">See protocol</a></md-table-cell>
+        <md-table-cell rowspan="5">1.5mL Eppendorf tube</md-table-cell>
+        <md-table-cell>-80&deg;C</md-table-cell>
+        <md-table-cell>25K-10M cells</md-table-cell>
+      </md-table-row>
+      <md-table-row>
         <md-table-cell>10X Genomics Multiome</md-table-cell>
         <md-table-cell>Single nuclei suspension</md-table-cell>
         <md-table-cell>Diluted nuclei buffer<sup>a<md-tooltip v-if="footnotes.a" md-direction="right">{{ footnotes.a }}</md-tooltip></sup></md-table-cell>
-        <md-table-cell rowspan="3">1.5mL Eppendorf tube</md-table-cell>
-        <md-table-cell rowspan="3">4&deg;C</md-table-cell>
+        <md-table-cell rowspan="4">4&deg;C</md-table-cell>
         <md-table-cell>3230-8060 nuclei/&mu;L in 12&mu;L</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell rowspan="2">10X Genomics scRNA-Seq</md-table-cell>
+        <md-table-cell rowspan="2">10X Genomics scRNA-Seq (standard)</md-table-cell>
         <md-table-cell>Single cell suspension</md-table-cell>
         <md-table-cell>PBS + 0.04% BSA</md-table-cell>
         <md-table-cell>700-1200 cells/&mu;L in > 50&mu;L</md-table-cell>
@@ -44,6 +51,12 @@
         <md-table-cell>Single nuclei suspension</md-table-cell>
         <md-table-cell><a href="https://www.10xgenomics.com/support/single-cell-gene-expression/documentation/steps/sample-prep/isolation-of-nuclei-for-single-cell-rna-sequencing-and-tissues-for-single-cell-rna-sequencing" target="__blank">See protocol</a></md-table-cell>
         <md-table-cell>700-1200 nuclei/&mu;L in > 50&mu;L</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell>10x Genomics scRNA-Seq On-Chip Multiplexing</md-table-cell>
+        <md-table-cell>Single cell suspension</md-table-cell>
+        <md-table-cell>PBS + 0.04% BSA</md-table-cell>
+        <md-table-cell>1000-1600 cells/&mu;L in > 50&mu;</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>10X Genomics Visium</md-table-cell>

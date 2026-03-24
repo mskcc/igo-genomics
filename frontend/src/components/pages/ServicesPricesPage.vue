@@ -159,6 +159,10 @@
                         <th>Library Cost:</th>
                         <td>{{ service.libraryCost }}</td>
                       </tr>
+                      <tr v-if="service.samplePrepCost">
+                        <th>Sample Prep Cost:</th>
+                        <td>{{ service.samplePrepCost }}</td>
+                      </tr>
                       <tr v-if="service.sequencingCost">
                         <th>Sequencing Cost:</th>
                         <td>{{ service.sequencingCost }}</td>
