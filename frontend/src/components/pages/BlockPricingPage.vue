@@ -53,10 +53,10 @@
               <md-table-cell>$1,075</md-table-cell>
             </md-table-row>
             <md-table-row>
-              <md-table-row>50M</md-table-row>
-              <md-table-row>$715</md-table-row>
-              <md-table-row colspan="2">$1,045</md-table-row>
-              <md-table-row>$1,380</md-table-row>
+              <md-table-cell>50M</md-table-cell>
+              <md-table-cell>$715</md-table-cell>
+              <md-table-cell colspan="2">$1,045</md-table-cell>
+              <md-table-cell>$1,380</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>100M</md-table-cell>
