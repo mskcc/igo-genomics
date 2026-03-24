@@ -11,50 +11,6 @@
       </md-list-item>
       <md-list-item md-expand>
         <md-icon>add</md-icon>
-        <span class="md-list-item-text md-title">I need &le; 20M reads</span>
-        <md-list slot="md-expand">
-          <md-list-item class="md-inset">
-            <md-table md-card>
-              <md-table-row>
-                <md-table-head></md-table-head>
-                <md-table-head colspan="8">Block Price</md-table-head>
-              </md-table-row>
-              <md-table-row>
-                <md-table-head>Reads Block (M)</md-table-head>
-                <md-table-head>SR50/75</md-table-head>
-                <md-table-head>PE50/75</md-table-head>
-                <md-table-head>SR100/150</md-table-head>
-                <md-table-head>10X</md-table-head>
-                <md-table-head>PE100</md-table-head>
-                <md-table-head>PE150</md-table-head>
-                <md-table-head>PE250</md-table-head>
-                <md-table-head>PE300</md-table-head>
-              </md-table-row>
-              <md-table-row>
-                <md-table-cell>1</md-table-cell>
-                <md-table-cell colspan="6">$300</md-table-cell>
-                <md-table-cell>$360</md-table-cell>
-                <md-table-cell>N/A</md-table-cell>
-              </md-table-row>
-              <md-table-row>
-                <md-table-cell>4</md-table-cell>
-                <md-table-cell colspan="6">$470</md-table-cell>
-                <md-table-cell colspan="2">N/A</md-table-cell>
-              </md-table-row>
-              <md-table-row>
-                <md-table-cell>20</md-table-cell>
-                <md-table-cell>$1,160</md-table-cell>
-                <md-table-cell colspan="3">$1,200</md-table-cell>
-                <md-table-cell colspan="2">$2,450</md-table-cell>
-                <md-table-cell colspan="2">$2,645</md-table-cell>
-              </md-table-row>
-            </md-table>
-          </md-list-item>
-        </md-list>
-      </md-list-item>
-
-      <md-list-item md-expand>
-        <md-icon>add</md-icon>
         <span class="md-list-item-text md-title">I need &gt; 20M reads & my run type is PE100, PE150, or 10x Genomics </span>
         <md-list slot="md-expand">
         <md-list-item>
@@ -70,7 +26,7 @@
 
       <md-list-item md-expand>
         <md-icon>add</md-icon>
-        <span class="md-list-item-text md-title">I need &gt; 20M reads & my run type is custom, I need a custom primer, or I need a custom demux</span>
+        <span class="md-list-item-text md-title">I need &lt; 20M reads or my run type is custom, I need a custom primer, or I need a custom demux</span>
         <md-list slot="md-expand">
         <md-list-item>
           <md-table md-card>
@@ -80,67 +36,66 @@
             </md-table-row>
             <md-table-row>
               <md-table-head>Reads Block</md-table-head>
-              <md-table-head>SR50</md-table-head>
-              <md-table-head>SR100/PE50</md-table-head>
-              <md-table-head>10X</md-table-head>
-              <md-table-head>PE100</md-table-head>
-              <md-table-head>PE150</md-table-head>
-              <md-table-head>PE250</md-table-head>
-              <md-table-head>PE300</md-table-head>
+              <md-table-head>100 cycles</md-table-head>
+              <md-table-head>200 cycles</md-table-head>
+              <md-table-head>300 cycles</md-table-head>
+              <md-table-head>600 cycles</md-table-head>
+            </md-table-row>
+            <md-table-row>
+              <md-table-cell>5M</md-table-cell>
+              <md-table-cell colspan="3">$410</md-table-cell>
+              <md-table-cell>$635</md-table-cell>
+            </md-table-row>
+            <md-table-row>
+              <md-table-cell>20M</md-table-cell>
+              <md-table-cell>$540</md-table-cell>
+              <md-table-cell colspan="2">$880</md-table-cell>
+              <md-table-cell>$1,075</md-table-cell>
+            </md-table-row>
+            <md-table-row>
+              <md-table-cell>50M</md-table-cell>
+              <md-table-cell>$715</md-table-cell>
+              <md-table-cell colspan="2">$1,045</md-table-cell>
+              <md-table-cell>$1,380</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>100M</md-table-cell>
-              <md-table-cell colspan="3">$930</md-table-cell>
+              <md-table-cell>$930</md-table-cell>
               <md-table-cell colspan="2">$1,350</md-table-cell>
-              <md-table-cell colspan="2">$2,020</md-table-cell>
+              <md-table-cell>$2,020</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>400M</md-table-cell>
-              <md-table-cell colspan="3">$1,040</md-table-cell>
+              <md-table-cell>$1,040</md-table-cell>
               <md-table-cell>$1,185</md-table-cell>
               <md-table-cell>$1,640</md-table-cell>
-              <md-table-cell colspan="2">$3,100</md-table-cell>
-            </md-table-row>
-            <md-table-row>
-              <md-table-cell>800M</md-table-cell>
-              <md-table-cell colspan="3">$2,480</md-table-cell>
-              <md-table-cell>$3,255</md-table-cell>
-              <md-table-cell>$3,805</md-table-cell>
-              <md-table-cell>$7,500</md-table-cell>
-              <md-table-cell>N/A</md-table-cell>
+              <md-table-cell>$3,100</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>1.2B</md-table-cell>
-              <md-table-cell colspan="3">$1,600</md-table-cell>
+              <md-table-cell>$1,600</md-table-cell>
               <md-table-cell>$2,340</md-table-cell>
               <md-table-cell>$2,450</md-table-cell>
-              <md-table-cell colspan="2">N/A</md-table-cell>
+              <md-table-cell>N/A</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>1.6B</md-table-cell>
-              <md-table-cell colspan="3">$1,830</md-table-cell>
+              <md-table-cell>$1,830</md-table-cell>
               <md-table-cell>$2,705</md-table-cell>
               <md-table-cell>$3,000</md-table-cell>
-              <md-table-cell colspan="2">N/A</md-table-cell>
-            </md-table-row>
-            <md-table-row>
-              <md-table-cell>3.8B</md-table-cell>
-              <md-table-cell colspan="3">$8,690</md-table-cell>
-              <md-table-cell>$10,700</md-table-cell>
-              <md-table-cell>$11,000</md-table-cell>
-              <md-table-cell colspan="2">N/A</md-table-cell>
+              <md-table-cell>N/A</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>10B</md-table-cell>
-              <md-table-cell colspan="3">$8,000</md-table-cell>
+              <md-table-cell>$8,000</md-table-cell>
               <md-table-cell>$10,000</md-table-cell>
               <md-table-cell>$12,000</md-table-cell>
-              <md-table-cell colspan="2">N/A</md-table-cell>
+              <md-table-cell>N/A</md-table-cell>
             </md-table-row>
             <md-table-row>
               <md-table-cell>25B</md-table-cell>
-              <md-table-cell colspan="5">$17,000</md-table-cell>
-              <md-table-cell colspan="2">N/A</md-table-cell>
+              <md-table-cell colspan="3">$17,000</md-table-cell>
+              <md-table-cell>N/A</md-table-cell>
             </md-table-row>
           </md-table>
         </md-list-item>

@@ -512,7 +512,7 @@ export const teams = [
       'The leadership team oversees over 40 full-time staff from entry-level research technicians to senior experts. They not only ensure that everyone is working in concert to process thousands of projects each year, but also continue to bring on new technologies to keep IGO on the cutting edge of genome science.',
     members: [
       { name: 'Neeman Mohibullah', role: 'Director', photoName: 'Mohibullah_Neeman' },
-      { name: 'Andrea Farina', role: 'Manager, EXPAND', photoName: 'Farina_Andrea' },
+      { name: 'Andrea Farina', role: 'Senior Manager, EXPAND', photoName: 'Farina_Andrea' },
       { name: 'Angela Pepe-Caprio', role: 'Operations Manager', photoName: 'Pepe-Caprio_Angela' },
       { name: 'Liping Sun', role: 'Manager, Sequencing', photoName: 'Sun_Liping' },
       { name: 'Rajiev Timal', role: 'Manager, Data', photoName: 'Timal_Rajiev' },
@@ -550,6 +550,7 @@ export const teams = [
     description:
       'The Sample & Project Management team works with investigators to quickly and correctly accession and QC all samples that come into IGO, including helping with navigation of iLab, easing sample webform submissions, facilitating smooth processing, and providing updates to investigators.',
     members: [
+      { name: 'Cassidy Cobbs', role: 'Senior Project Manager', photoName: 'Cobbs_Cassidy' },
       { name: 'Kenzie Chen', role: 'Project Assistant', photoName: 'Chen_Kenzie' },
       { name: 'Rachel Tessier', role: 'Project Manager', photoName: 'Tessier_Rachel' },
       { name: 'Tressa Octave', role: 'Project Coordinator', photoName: 'Octave_Tressa' },
@@ -564,10 +565,10 @@ export const teams = [
     description:
       'The EXPAND team is the most diverse team in IGO -- responsible for integrating new platforms and advancing research technology to remain at the cutting edge for our users, they handle pathology, nucleic acid extraction, digital droplet PCR, and spatial transcriptomics.',
     members: [
-      { name: 'Andrea Farina', role: 'Manager', photoName: 'Farina_Andrea' },
+      { name: 'Andrea Farina', role: 'Senior Manager', photoName: 'Farina_Andrea' },
       { name: 'Christian Mccauley', role: 'Senior Research Technician', photoName: 'Mccauley_Christian' },
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
-      { name: 'Gretchen Mack', role: 'Research Technician', photoName: 'Mack_Gretchen' },
+      { name: 'Gretchen Mack', role: 'Senior Research Technician', photoName: 'Mack_Gretchen' },
       { name: 'Jinghui Song', role: 'Supervisor, Spatial Transcriptomics', photoName: 'Song_Jinghui' },
       { name: 'Jonathan Kunkel-Jure', role: 'Senior Research Technician', photoName: 'Kunkel-Jure_Jonathan' },
       { name: 'Keumsil Hwang', role: 'Research Specialist', photoName: 'Hwang_Keumsil' },
@@ -602,7 +603,7 @@ export const teams = [
       { name: 'Kiruthika Balasubramanian', role: 'Senior Research Assistant', photoName: 'Balasubramanian_Kiruthika' },
       { name: 'Qingyun Tian', role: 'Senior Research Assistant', photoName: 'Tian_Qingyun' },
       { name: 'Sonia Rodriguez', role: 'Senior Research Technician', photoName: 'Rodriguez_Sonia' },
-      { name: 'Tianjie Pu', role: 'Research Technician', photoName: '' },
+      { name: 'Tianjie Pu', role: 'Research Assistant', photoName: '' },
 
 
       // { name: 'Open Position!', role: 'Supervisor' },
@@ -619,7 +620,7 @@ export const teams = [
       { name: 'Desmond Lambe', role: 'Senior Research Technician', photoName: 'Lambe_Desmond' },
       { name: 'Jim Chen', role: 'Research Assistant', photoName: 'Chen_Jim' },
       { name: 'Mingqiang Zhuang', role: 'Research Assistant', photoName: 'Zhuang_Mingqiang' },
-      { name: 'Yangtsho Gyaltshen', role: 'Research Technician', photoName: '' },
+      { name: 'Yangtsho Gyaltshen', role: 'Research Assistant', photoName: '' },
 
 
 
@@ -633,7 +634,7 @@ export const teams = [
       "The IGO Data Team is a group of bioinformaticians, software engineers, and computer scientists.  They work closely with IGO's investigators and wet-lab technicians to write multiple software applications from sample receiving and LIMS processing to post-sequencing stats tracking and data delivery.",
     members: [
       { name: 'Rajiev Timal', role: 'Manager', photoName: 'Timal_Rajiev' },
-      { name: 'Cuijie Lu', role: 'Bioinfo. Software Engineer II', photoName: 'Lu_Cuijie' },
+      { name: 'Andy Zheng', role: 'Bioinfo. Software Engineer II', photoName: '' },
       { name: 'Darrell Nabors', role: 'Bioinformatics Engineer V', photoName: 'Nabors_Darrell' },
       { name: 'Fahimeh Mirhaj', role: 'Bioinfo. Software Engineer III', photoName: 'Mirhaj_Fahimeh' },
       { name: 'Ojasvi Patel', role: 'Bioinfo. Software Engineer II', photoName: 'Patel_Ojasvi' },
@@ -803,7 +804,7 @@ export const bulkServices = [
     tableHeaders: ['platform', 'sampleCost'],
     table: [
       { platform: '10X Genomics V(D)J Enrichment', sampleCost: 2368 },
-      { platform: 'Bulk TCR', sampleCost: 335 },
+      { platform: 'Bulk TCR', sampleCost: 400 },
     ],
   },
   {
@@ -827,7 +828,7 @@ export const bulkServices = [
 export const singleServices = [
   {
     id: 0,
-    name: '10x Genomics Single Cell',
+    name: '10x Genomics Single Cell (Universal)',
     description: 'Single-cell platforms to interrogate gene expression, immune repertoire, and/or protein expression.',
     startingMaterial: 'Single cell or nuclei suspension',
     libraryChemistry: 'Chromium GEM-X',
@@ -836,16 +837,27 @@ export const singleServices = [
     deliverable: 'FASTQ, Cell Ranger output',
     tableHeaders: ['xGenomicsPlatform', 'sampleCostLibrary', 'cellCostSequencing'],
     table: [
-      { xGenomicsPlatform: '5′ OR 3′ Gene Expression', sampleCostLibrary: 2068, cellCostSequencing: '$0.028' },
-      { xGenomicsPlatform: '5′ OR 3′ Gene Expression with On-Chip Multiplexing (4 samples)', sampleCostLibrary: 2400, cellCostSequencing: '$0.028' },
-      { xGenomicsPlatform: 'Flex Gene Expression with Flex (single sample)', sampleCostLibrary: 2000, cellCostSequencing: '$0.014' },
-      { xGenomicsPlatform: 'Flex Gene Expression with Flex (up to 4 multiplexed samples)', sampleCostLibrary: 6000, cellCostSequencing: '$0.014' },
+      { xGenomicsPlatform: '5′ OR 3′ Universal Gene Expression', sampleCostLibrary: 2068, cellCostSequencing: '$0.028' },
+      { xGenomicsPlatform: '5′ OR 3′ Universal Gene Expression with On-Chip Multiplexing (4 samples)', sampleCostLibrary: 2400, cellCostSequencing: '$0.028' },
       { xGenomicsPlatform: 'V(D)J Enrichment (TCR or BCR)', sampleCostLibrary: 300, cellCostSequencing: '$0.007' },
       { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 300, cellCostSequencing: '$0.007' },
     ],
   },
   {
     id: 1,
+    name: '10x Genomics Flex',
+    description: 'Single Cell RNA-Seq from fixed or FFPE samples',
+    startingMaterial: 'Viably frozen cells, fixed cells or nuclei',
+    libraryChemistry: 'Chromium Flex v2',
+    sequencingReadLength: 'PE54/50',
+    sequencingCoverage: '10K reads/cell',
+    deliverable: 'FASTQ, Cell Ranger output',
+    samplePrepCost: '$350/sample',
+    libraryCost: '$750/pool',
+    sequencingCost: '$0.014/cell',
+  },
+  {
+    id: 2,
     name: '10x Genomics Multiome',
     description: 'Single-cell ATAC-Seq + RNA-Seq from the same nucleus.',
     startingMaterial: 'Single nuclei suspension',
@@ -857,7 +869,7 @@ export const singleServices = [
     sequencingCost: '$0.098/nucleus',
   },
   {
-    id: 2,
+    id: 3,
     name: '10x Genomics Visium',
     description: 'Transcriptome sequencing of 1-10 cells along with spatial information.',
     startingMaterial: 'Frozen, Fixed Frozen, or FFPE tissue',
@@ -870,19 +882,19 @@ export const singleServices = [
     sequencingCost: '$24-1,300/slide (average $310/slide)',
   },
   {
-    id: 3,
+    id: 4,
     name: '10X Genomics Visium HD',
     description: 'Single cell resolution on the Visium platform',
     startingMaterial: 'FFPE, fresh frozen, or fixed frozen tissue',
-    libraryChemistry: 'Visium probe set v2',
-    sequencingReadLength: 'custom',
+    libraryChemistry: 'Probe set v2 or polyA-based',
+    sequencingReadLength: 'PE44/50',
     sequencingCoverage: '>50% sequencing saturation',
     deliverable: 'FASTQ, Space Ranger output',
-    libraryCost: '$7,750/slide',
+    libraryCost: '6.5mm: $7,750/slide; 11mm (polyA only): $10.350/slide ',
     sequencingCost: '$1,500-3,000/slide (dependent on both capture area and logistics)',
   },
   {
-    id: 4,
+    id: 5,
     name: 'SmartSeq',
     description:
       'A single- or low-cell Smart-Seq v3 method to accommodate projects without enough cells for 10X Genomics, or users interested in capturing the entire body of the gene.',
@@ -895,7 +907,7 @@ export const singleServices = [
     sequencingCost: 'included',
   },
   {
-    id: 5,
+    id: 6,
     name: 'DLP',
     description: 'A method to detect CNV in single cells.',
     startingMaterial: 'Single nuclei suspension',
