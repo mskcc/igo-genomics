@@ -9,6 +9,15 @@ export const news = [
     </p>`,
   },
   {
+    title: "Price decrease in 10x Genomics sequencing!",
+    date: 'April 17, 2026',
+    imgSource: 'novaseqx',
+    categories: ['featured'],
+    body: `<p>
+    The charge for sequencing 10x Genomics libraries (IGO prepared or user prepared) is now $9/10M reads! This puts the sequencing charge for a 20K-cell sample at $360, which is a $200 savings.
+    </p>`,
+  },
+  {
     title: "Multiplex without barcoding antibodies using 10x Genomics' On-Chip Multiplexing",
     date: 'July 14, 2025',
     imgSource: '10xOCM',
@@ -825,6 +834,8 @@ export const bulkServices = [
   },
 ];
 
+//note that per cell sequencing calculation is 10x standard sequencing divided by 500 for GEX or 2000 for VDJ/FB
+
 export const singleServices = [
   {
     id: 0,
@@ -837,10 +848,10 @@ export const singleServices = [
     deliverable: 'FASTQ, Cell Ranger output',
     tableHeaders: ['xGenomicsPlatform', 'sampleCostLibrary', 'cellCostSequencing'],
     table: [
-      { xGenomicsPlatform: '5′ OR 3′ Universal Gene Expression', sampleCostLibrary: 2068, cellCostSequencing: '$0.028' },
-      { xGenomicsPlatform: '5′ OR 3′ Universal Gene Expression with On-Chip Multiplexing (4 samples)', sampleCostLibrary: 2400, cellCostSequencing: '$0.028' },
-      { xGenomicsPlatform: 'V(D)J Enrichment (TCR or BCR)', sampleCostLibrary: 300, cellCostSequencing: '$0.007' },
-      { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 300, cellCostSequencing: '$0.007' },
+      { xGenomicsPlatform: '5′ OR 3′ Universal Gene Expression', sampleCostLibrary: 2068, cellCostSequencing: '$0.018' },
+      { xGenomicsPlatform: '5′ OR 3′ Universal Gene Expression with On-Chip Multiplexing (4 samples)', sampleCostLibrary: 2400, cellCostSequencing: '$0.018' },
+      { xGenomicsPlatform: 'V(D)J Enrichment (TCR or BCR)', sampleCostLibrary: 300, cellCostSequencing: '$0.005' },
+      { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 300, cellCostSequencing: '$0.005' },
     ],
   },
   {
@@ -854,7 +865,7 @@ export const singleServices = [
     deliverable: 'FASTQ, Cell Ranger output',
     samplePrepCost: '$350/sample',
     libraryCost: '$750/pool',
-    sequencingCost: '$0.014/cell',
+    sequencingCost: 'per flow cell',
   },
   {
     id: 2,
@@ -866,7 +877,7 @@ export const singleServices = [
     sequencingCoverage: '20K reads/cell (GEX), 25K reads/cell (ATAC)',
     deliverable: 'FASTQ, Cell Ranger output',
     libraryCost: '$3,200/sample',
-    sequencingCost: '$0.098/nucleus',
+    sequencingCost: '$0.088/nucleus',
   },
   {
     id: 3,
