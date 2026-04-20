@@ -56,7 +56,7 @@
         <md-table-cell>10x Genomics scRNA-Seq On-Chip Multiplexing</md-table-cell>
         <md-table-cell>Single cell suspension</md-table-cell>
         <md-table-cell>PBS + 0.04% BSA</md-table-cell>
-        <md-table-cell>1000-1600 cells/&mu;L in > 50&mu;</md-table-cell>
+        <md-table-cell>1000-1200 cells/&mu;L in > 25&mu;</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>10X Genomics Visium</md-table-cell>

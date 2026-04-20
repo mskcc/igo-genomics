@@ -16,7 +16,7 @@
         <md-list-item>
           <ul>
             <li>PE100 or PE150: $2.30/million reads</li>
-            <li>10x (28/10/10/88): $1.40/million reads</li>
+            <li>10x (28/10/10/88): $0.90/million reads</li>
             <li>10x ATAC (50/8/16/50 or 50/8/24/50): $2.80/million reads</li>
           </ul>
         </md-list-item>
