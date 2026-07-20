@@ -1,6 +1,12 @@
 <template>
   <div>
     <!-- <div class="md-display-1">Submitting a Project</div> -->
+    <div class="announcement-bubble">
+      <span class="material-icons"> priority_high </span>
+      <span class="announcement-content">
+        <b><span style="color: red;">ATTENTION</span>:</b> We are currently experiencing issues with our booking calendar. You may receive an error message when submitting an appointment request. However, your request has likely been received successfully. If you are unsure whether your appointment request was submitted, please contact us at <a href="mailto:igosampleprojmgmt@mskcc.org">igosampleprojmgmt@mskcc.org</a>, and we will be happy to confirm its status.
+      </span>
+    </div>
     <md-card class="data-delivery-card">
       <md-card-content>
         <md-card-header>
