@@ -1,10 +1,9 @@
 <template>
   <div>
-    <div v-if="announcement" class="announcement-bubble">
-      <!-- <span class="material-icons"> priority_high </span> -->
-      <span class="material-icons"> notifications_active </span>
+    <div class="announcement-bubble">
+      <span class="material-icons"> priority_high </span>
       <span class="announcement-content">
-        IGO will be closed <b>December 25-26</b> and <b>January 1-2</b>. There will be no sample dropoffs on those dates.
+        <b><span style="color: red;">ATTENTION</span>:</b> We are currently experiencing issues with our booking calendar. You may receive an error message when submitting an appointment request. However, your request has likely been received successfully. If you are unsure whether your appointment request was submitted, please contact us at <a href="mailto:igosampleprojmgmt@mskcc.org">igosampleprojmgmt@mskcc.org</a>, and we will be happy to confirm its status.
       </span>
     </div>
 
@@ -46,7 +45,6 @@ export default {
     return {
       igoDescription:
         'The Integrated Genomics Operation (IGO) core enables basic, clinical, and translational science by providing a broad range of services and expertise to investigators interested in evaluating gene expression, chromosome structure, and nucleotide sequence. Our services are comprehensive, rapid, and user-friendly. Through the centralized management of all sequencing activities at MSK, the core empowers scientists with an array of technological options and the most efficient and cost-effective means of performing high-throughput genomics.',
-      announcement: true,
       spmCalendar: SPM_CALENDAR,
       scCalendar: SC_CALENDAR,
     };
