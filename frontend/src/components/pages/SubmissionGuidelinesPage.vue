@@ -4,7 +4,9 @@
     <div class="announcement-bubble">
       <span class="material-icons"> priority_high </span>
       <span class="announcement-content">
-        <b><span style="color: red;">ATTENTION</span>:</b> We are currently experiencing issues with our booking calendar. You may receive an error message when submitting an appointment request. However, your request has likely been received successfully. If you are unsure whether your appointment request was submitted, please contact us at <a href="mailto:igosampleprojmgmt@mskcc.org">igosampleprojmgmt@mskcc.org</a>, and we will be happy to confirm its status.
+        <b><span style="color: red;">ATTENTION</span>:</b> Due to technical issues with our previous booking calendar, we have updated our appointment booking link. Please use the new booking calendar to schedule your appointment: <a href="https://outlook.office.com/book/IGOSampleDropOffJuly2026@bookings.mskcc.org/?ismsaljsauthenabled" target="_blank">https://outlook.office.com/book/IGOSampleDropOffJuly2026@bookings.mskcc.org/?ismsaljsauthenabled</a>.
+        <br><br>
+        If you experience any issues or are unsure whether your appointment request was submitted successfully, please contact us at <a href="mailto:igosampleprojmgmt@mskcc.org">igosampleprojmgmt@mskcc.org</a>, and we will be happy to assist you.
       </span>
     </div>
     <md-card class="data-delivery-card">

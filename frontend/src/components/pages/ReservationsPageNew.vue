@@ -4,9 +4,9 @@
     <div class="announcement-bubble reservation-announcement">
       <span class="material-icons"> priority_high </span>
       <span class="announcement-content">
-        <b><span style="color: red;">ATTENTION</span>:</b> We are currently experiencing issues with our booking calendar. You may receive an error message when submitting an appointment request. However, your request has likely been received successfully.
+        <b><span style="color: red;">ATTENTION</span>:</b> Due to technical issues with our previous booking calendar, we have updated our appointment booking link. Please use the new booking calendar to schedule your appointment: <a href="https://outlook.office.com/book/IGOSampleDropOffJuly2026@bookings.mskcc.org/?ismsaljsauthenabled" target="_blank">https://outlook.office.com/book/IGOSampleDropOffJuly2026@bookings.mskcc.org/?ismsaljsauthenabled</a>.
         <br><br>
-        If you are unsure whether your appointment request was submitted, please contact us at <a href="mailto:igosampleprojmgmt@mskcc.org">igosampleprojmgmt@mskcc.org</a>, and we will be happy to confirm its status.
+        If you experience any issues or are unsure whether your appointment request was submitted successfully, please contact us at <a href="mailto:igosampleprojmgmt@mskcc.org">igosampleprojmgmt@mskcc.org</a>, and we will be happy to assist you.
       </span>
     </div>
     <div class="announcement-bubble reservation-announcement">
@@ -56,7 +56,7 @@
                 <li><a href="https://igo.mskcc.org/sample-submission" target="__blank">Sample Submission form</a></li>
             </ol>
             For more information please see our <router-link :to="{ name: 'submission guidelines' }">submission guidelines</router-link>. Please note that this calendar for all sample drop off <i>except</i> fresh single cell/nuclei samples for 10X Genomics processing.
-            <p><b><span style="color: red;">ATTENTION</span>:</b> We are currently experiencing issues with our booking calendar. You may receive an error message when submitting an appointment request. However, your request has likely been received successfully. If you are unsure whether your appointment request was submitted, please contact us at <a href="mailto:igosampleprojmgmt@mskcc.org">igosampleprojmgmt@mskcc.org</a>, and we will be happy to confirm its status.</p>
+            <p><b><span style="color: red;">ATTENTION</span>:</b> Due to technical issues with our previous booking calendar, we have updated our appointment booking link. Please use the new booking calendar to schedule your appointment: <a href="https://outlook.office.com/book/IGOSampleDropOffJuly2026@bookings.mskcc.org/?ismsaljsauthenabled" target="_blank">https://outlook.office.com/book/IGOSampleDropOffJuly2026@bookings.mskcc.org/?ismsaljsauthenabled</a>.<br><br>If you experience any issues or are unsure whether your appointment request was submitted successfully, please contact us at <a href="mailto:igosampleprojmgmt@mskcc.org">igosampleprojmgmt@mskcc.org</a>, and we will be happy to assist you.</p>
         </md-dialog-content>
         <md-dialog-actions>
           <md-button class="md-primary" :href="spmCalendar">Yes</md-button>
@@ -72,7 +72,6 @@
                 <li><a href="https://igo.mskcc.org/sample-submission" target="__blank">Sample Submission form</a></li>
             </ol>
             For more information please see our <router-link :to="{ name: 'submission guidelines' }">submission guidelines</router-link>
-            <p><b><span style="color: red;">ATTENTION</span>:</b> We are currently experiencing issues with our booking calendar. You may receive an error message when submitting an appointment request. However, your request has likely been received successfully. If you are unsure whether your appointment request was submitted, please contact us at <a href="mailto:igosampleprojmgmt@mskcc.org">igosampleprojmgmt@mskcc.org</a>, and we will be happy to confirm its status.</p>
         </md-dialog-content>
         <md-dialog-actions>
           <md-button class="md-primary" :href="scCalendar">Yes</md-button>
