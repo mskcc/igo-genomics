@@ -141,7 +141,7 @@
         <md-table-cell>Whole Genome Sequencing (deep, PCR-free)</md-table-cell>
         <md-table-cell>Frozen</md-table-cell>
         <md-table-cell class="pass">500ng</md-table-cell>
-        <md-table-cell class="try">300ng</md-table-cell>
+        <md-table-cell class="try">100ng</md-table-cell>
         <md-table-cell class="pass">DIN > 7</md-table-cell>
         <md-table-cell class="try">DIN > 6</md-table-cell>
         <md-table-cell>45&#181;L</md-table-cell>
@@ -151,7 +151,8 @@
         <md-table-cell>FFPE</md-table-cell>
         <md-table-cell class="pass" rowspan="2">500ng</md-table-cell>
         <md-table-cell class="try">100ng</md-table-cell>
-        <md-table-cell colspan="2" rowspan="2" class="center-page">No quality requirements</md-table-cell>
+        <md-table-cell class="pass" rowspan="2">DIN > 5</md-table-cell>
+        <md-table-cell class="try" rowspan="2">No fail range</md-table-cell>
         <md-table-cell rowspan="2">45&#181;L</md-table-cell>
       </md-table-row>
       <md-table-row>
