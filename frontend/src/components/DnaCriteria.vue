@@ -160,7 +160,7 @@
         <md-table-cell class="try">100ng</md-table-cell>
       </md-table-row>
       <md-table-row>
-        <md-table-cell rowspan="3">Whole Genome Sequencing (shallow, bacteria, yeast)</md-table-cell>
+        <md-table-cell rowspan="3">Shallow Whole Genome Sequencing</md-table-cell>
         <md-table-cell>cfDNA</md-table-cell>
         <md-table-cell class="pass">100ng</md-table-cell>
         <md-table-cell class="try">5ng</md-table-cell>
@@ -173,6 +173,24 @@
         <md-table-cell class="try">100ng</md-table-cell>
         <md-table-cell class="pass" rowspan="2">DIN > 5</md-table-cell>
         <md-table-cell class="try" rowspan="2">DIN > 3</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell>Frozen</md-table-cell>
+        <md-table-cell class="pass">100ng</md-table-cell>
+        <md-table-cell class="try">20ng</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell rowspan="3">Metagenomic Whole Genome Sequencing</md-table-cell>
+        <md-table-cell>cfDNA</md-table-cell>
+        <md-table-cell class="pass">100ng</md-table-cell>
+        <md-table-cell class="try">5ng</md-table-cell>
+        <md-table-cell colspan="2" rowspan="3" class="center-page">No quality requirements</md-table-cell>
+        <md-table-cell rowspan="3">45&#181;L</md-table-cell>
+      </md-table-row>
+      <md-table-row>
+        <md-table-cell>FFPE</md-table-cell>
+        <md-table-cell class="pass">200ng</md-table-cell>
+        <md-table-cell class="try">100ng</md-table-cell>
       </md-table-row>
       <md-table-row>
         <md-table-cell>Frozen</md-table-cell>
