@@ -526,8 +526,8 @@ export const teams = [
       { name: 'Liping Sun', role: 'Manager, Sequencing', photoName: 'Sun_Liping' },
       { name: 'Rajiev Timal', role: 'Manager, Data', photoName: 'Timal_Rajiev' },
       { name: 'Ruchi Patel', role: 'Senior Manager, Single Cell & Library Prep', photoName: 'Patel_Ruchi' }, 
-      { name: 'Stephanie Chrysanthou', role: 'Manager, R&D', photoName: 'Chrysanthou_Stephanie' },
-      // { name: 'Position Open!', role: 'Spatial Transcriptomics Supervisor' },     
+      { name: 'Open Position!', role: 'Manager, R&D' },
+      // { name: 'Position Open!', role: 'Spatial Transcriptomics Supervisor' },
     ],
   },
   {
@@ -562,6 +562,7 @@ export const teams = [
       { name: 'Cassidy Cobbs', role: 'Senior Project Manager', photoName: 'Cobbs_Cassidy' },
       { name: 'Kenzie Chen', role: 'Project Assistant', photoName: 'Chen_Kenzie' },
       { name: 'Rachel Tessier', role: 'Project Manager', photoName: 'Tessier_Rachel' },
+      { name: 'Rohan Puppala', role: 'Research Assistant', photoName: '' },
       { name: 'Tressa Octave', role: 'Project Coordinator', photoName: 'Octave_Tressa' },
       { name: 'Vincent Tem', role: 'Senior Research Technician', photoName: '' },
       // { name: 'Position Open!', role: 'Project Manager' },
@@ -575,11 +576,10 @@ export const teams = [
       'The EXPAND team is the most diverse team in IGO -- responsible for integrating new platforms and advancing research technology to remain at the cutting edge for our users, they handle pathology, nucleic acid extraction, digital droplet PCR, and spatial transcriptomics.',
     members: [
       { name: 'Andrea Farina', role: 'Senior Manager', photoName: 'Farina_Andrea' },
-      { name: 'Christian Mccauley', role: 'Senior Research Technician', photoName: 'Mccauley_Christian' },
       { name: 'Dorothy Guzowski', role: 'Senior Research Assistant', photoName: 'Guzowski_Dorothy' },
+      { name: 'Emily Adler', role: 'Senior Research Technician', photoName: '' },
       { name: 'Gretchen Mack', role: 'Senior Research Technician', photoName: 'Mack_Gretchen' },
       { name: 'Jinghui Song', role: 'Supervisor, Spatial Transcriptomics', photoName: 'Song_Jinghui' },
-      { name: 'Jonathan Kunkel-Jure', role: 'Senior Research Technician', photoName: 'Kunkel-Jure_Jonathan' },
       { name: 'Keumsil Hwang', role: 'Research Specialist', photoName: 'Hwang_Keumsil' },
       { name: 'Matthew Solowsky', role: 'Research Assistant', photoName: 'Solowsky_Matthew' },
       // { name: 'Open Position!', role: 'Research Technician' },
@@ -656,7 +656,7 @@ export const teams = [
     description:
       'The Research & Development team develops, tests, and implements new genomics platforms for the MSKCC community. In addition to testing off-the-shelf assays, our group works with MSK investigators to bring customized platforms to IGO.',
     members: [
-      { name: 'Stephanie Chrysanthou', role: 'Manager', photoName: 'Chrysanthou_Stephanie' },
+      { name: 'Open Position!', role: 'Manager' },
       { name: 'Juan Li', role: 'Scientific Research Lead', photoName: 'Li_Juan' },
       { name: 'Trishala Karmacharya', role: 'Research Assistant', photoName: 'Karmacharya_Trishala' },
       // { name: 'Open Position!', role: 'Research Technician' },
