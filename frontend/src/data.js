@@ -848,10 +848,10 @@ export const singleServices = [
     deliverable: 'FASTQ, Cell Ranger output',
     tableHeaders: ['xGenomicsPlatform', 'sampleCostLibrary', 'cellCostSequencing'],
     table: [
-      { xGenomicsPlatform: '5′ OR 3′ Universal Gene Expression', sampleCostLibrary: 2068, cellCostSequencing: '$0.018' },
-      { xGenomicsPlatform: '5′ OR 3′ Universal Gene Expression with On-Chip Multiplexing (4 samples)', sampleCostLibrary: 2400, cellCostSequencing: '$0.018' },
-      { xGenomicsPlatform: 'V(D)J Enrichment (TCR or BCR)', sampleCostLibrary: 300, cellCostSequencing: '$0.005' },
-      { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 300, cellCostSequencing: '$0.005' },
+      { xGenomicsPlatform: '5′ OR 3′ Universal Gene Expression', sampleCostLibrary: 2068, cellCostSequencing: '$0.016' },
+      { xGenomicsPlatform: '5′ OR 3′ Universal Gene Expression with On-Chip Multiplexing (4 samples)', sampleCostLibrary: 2400, cellCostSequencing: '$0.016' },
+      { xGenomicsPlatform: 'V(D)J Enrichment (TCR or BCR)', sampleCostLibrary: 300, cellCostSequencing: '$0.004' },
+      { xGenomicsPlatform: 'Feature Barcoding/Cell Hash Add-on', sampleCostLibrary: 300, cellCostSequencing: '$0.004' },
     ],
   },
   {
@@ -865,7 +865,7 @@ export const singleServices = [
     deliverable: 'FASTQ, Cell Ranger output',
     samplePrepCost: '$350/sample',
     libraryCost: '$750/pool',
-    sequencingCost: 'per flow cell',
+    sequencingCost: '$0.008/cell',
   },
   {
     id: 2,
@@ -877,7 +877,7 @@ export const singleServices = [
     sequencingCoverage: '20K reads/cell (GEX), 25K reads/cell (ATAC)',
     deliverable: 'FASTQ, Cell Ranger output',
     libraryCost: '$3,200/sample',
-    sequencingCost: '$0.088/nucleus',
+    sequencingCost: '$0.0535/nucleus',
   },
   {
     id: 3,
@@ -927,7 +927,7 @@ export const singleServices = [
     sequencingCoverage: '2M reads/cell',
     deliverable: 'FASTQ',
     libraryCost: '$2,300/up to 800 nuclei',
-    sequencingCost: '$2/nuclei',
+    sequencingCost: '$1.50/cell',
   },
   // {
   //   id: 6,
