@@ -110,7 +110,7 @@
                       <md-menu-item>
                         <md-button href="https://igo.mskcc.org/swabnseq" target="_blank">
                           <i class="far fa-barcode-read"></i>
-                          Swab 'n Seq Results
+                          Open House
                         </md-button>
                       </md-menu-item>
                     </md-menu-content>
