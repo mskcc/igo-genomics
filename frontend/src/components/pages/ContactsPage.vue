@@ -50,7 +50,7 @@
         </md-avatar> -->
         <md-icon class="md-primary">email</md-icon>
         <div class="md-list-item-text">
-          <span>Blaise Robin</span><span>Group Leader, Sample & Project Management</span><span>robinb@mskcc.org</span>
+          <span>Rachel Tessier</span><span>Supervisor, Sample & Project Management</span><span>tessierr@mskcc.org</span>
         </div></md-list-item
       >
     </md-list>
